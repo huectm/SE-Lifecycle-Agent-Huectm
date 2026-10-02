@@ -734,6 +734,13 @@ Diagrams MUST be semantically correct according to the applicable notation.
 
 A visually plausible but semantically incorrect UML/BPMN diagram is unacceptable.
 
+### 19.1 Use Case Diagram Association Direction Policy (Karl Wiegers Convention)
+
+In Use Case diagrams, relationships between actors and use cases MUST follow the directed communication convention (Karl Wiegers & Joy Beatty, *Software Requirements*, 3rd Edition):
+- **Primary Actor &rarr; Use Case:** A directed solid association arrow pointing from the primary actor to the use case (`Primary Actor` &rarr; `Use Case`). This indicates that the primary actor initiates the use case and triggers communication with the system.
+- **Use Case &rarr; Secondary / Support Actor:** A directed solid association arrow pointing from the use case to the secondary or supporting actor (`Use Case` &rarr; `Support Actor`). This indicates that the system/use case initiates communication with an external system, gateway, or supporting service (e.g., Auth Provider, SMS/OTP Gateway, Payment Gateway, Shipping Carrier), or outputs information to a secondary recipient.
+- **Association Line Style:** Associations between actors and use cases MUST always be solid lines (never dashed). Dashed lines are strictly reserved for `<<include>>` and `<<extend>>` relationships between use cases, or dependencies.
+
 ---
 
 # 20. Skill Architecture

@@ -65,6 +65,19 @@ Never renumber baselined requirements. If a requirement is deprecated, mark it `
 - Preserve existing sections, headings, tables, and conventions. Do not create parallel, unapproved SRS documents.
 - RTM sheet in `/templates/Requirements_Traceability_Matrix_Simplified.xlsx` must be updated with all approved requirement IDs.
 
+### 8.1 Use Case Diagram Modeling and Directed Association Rules (Karl Wiegers Convention)
+In accordance with Karl Wiegers & Joy Beatty (*Software Requirements*, 3rd Edition), Use Case diagrams MUST follow these association rules:
+1. **Actor-to-Use Case Associations:**
+   - Associations between actors and use cases MUST be solid lines (never dashed).
+   - **Primary Actor &rarr; Use Case:** Solid line with an arrowhead pointing from the Primary Actor to the Use Case (`Primary Actor` &rarr; `Use Case`). This represents the primary actor initiating the interaction.
+   - **Use Case &rarr; Support / Secondary Actor:** Solid line with an arrowhead pointing from the Use Case to the Support Actor (`Use Case` &rarr; `Support Actor`). This represents the system/use case sending requests, data, or invoking external services (e.g., Auth Provider, SMS Gateway, Payment Gateway).
+2. **Use Case Relationships:**
+   - `<<extend>>`: Dashed line with an open arrowhead pointing from the **Extension Use Case** to the **Base Use Case** (`Extension UC` &dash;&dash;&gt; `Base UC`).
+   - `<<include>>`: Dashed line with an open arrowhead pointing from the **Base Use Case** to the **Included Use Case** (`Base UC` &dash;&dash;&gt; `Included UC`).
+3. **Actor Generalization:**
+   - Solid line with a hollow triangle arrowhead (`endArrow=block;endFill=0;`) pointing from the specialized actor to the generalized actor.
+
+
 ## 9. Verification Checklist
 Every requirements increment MUST be statically verified against:
 - `/checklists/d2_Checklist_SRS Review.xls`
