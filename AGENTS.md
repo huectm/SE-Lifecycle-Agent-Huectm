@@ -111,6 +111,22 @@ If a conflict is detected, report it and perform impact analysis. Do NOT silentl
 
 ---
 
+## 2.5 Mandatory English Language Policy for Specification and Design
+
+All formal engineering artifacts across Requirements Engineering, Analysis Modeling, Software Design, Database Design, Implementation, and Testing MUST be specified in **English**.
+
+This includes:
+- Business Requirements, Business Rules, User Requirements, Functional Requirements, Non-Functional Requirements, and Data Dictionary;
+- Use Case descriptions, Actor names, Use Case diagrams, Activity diagrams, and BPMN models;
+- Analysis models (BCE classes, VOPC, Analysis Sequence Diagrams, State Machines);
+- High-Level Architecture, Subsystems, Components, Packages, Design Class Diagrams, Design Sequence Diagrams, Detailed Class Specifications;
+- Database schemas, table/column names, data types, constraints, and ERD diagrams;
+- Source code, code comments, API specifications, and Test Cases.
+
+While conversational interactions with the user/stakeholders can be conducted in Vietnamese (or the user's preferred language), all deliverables, baselines, diagrams, and technical documentation MUST strictly use English.
+
+---
+
 # 3. Source-of-Truth Priority
 
 For project content, use the following priority:

@@ -101,6 +101,16 @@ The Agent may propose a candidate format but MUST NOT treat it as an approved pr
 
 ---
 
+# 4.1 Mandatory English Language Policy for Deliverables
+
+All formal engineering artifacts across Requirements, Analysis, High-Level Architecture, Detailed Design, and Database Design MUST be authored in English:
+- **Requirements & Specifications:** Business requirements, user requirements, functional requirements, quality attributes, constraints, business rules, acceptance criteria, and structured use case descriptions.
+- **Visual Models & Diagrams:** BPMN diagrams, Use Case diagrams, Activity diagrams, Class/VOPC diagrams, Sequence diagrams, State Machine diagrams, Component diagrams, Architecture diagrams, and ERDs.
+- **Design Elements & Code Artifacts:** Class names, interface names, method signatures, parameters, properties, design pattern names, DB tables, columns, indexes, and constraints.
+- **Bilingual Boundary:** Human-to-agent interactions, discussions, elicitation interviews, feedback, and notes MAY be conducted in Vietnamese according to user preference, but all baselined and formal engineering deliverables MUST strictly be in English.
+
+---
+
 # 5. Approved Template Inventory
 
 ## 5.1 Master Requirements–Analysis–Design Specification

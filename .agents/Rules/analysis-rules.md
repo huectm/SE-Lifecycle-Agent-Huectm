@@ -86,3 +86,6 @@ Before Design:
 4. Record defects/issues.
 5. Correct and re-review.
 6. Obtain approval from the responsible System Analyst / Architect / project approver.
+
+## 14. Mandatory English Language Policy
+- All analysis artifacts, class names (Boundary, Control, Entity), attributes, responsibilities, VOPC models, Analysis Sequence Diagrams, State Machine states, events, guards, and actions MUST be specified in **English**.

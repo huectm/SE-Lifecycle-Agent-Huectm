@@ -92,3 +92,7 @@ Verify:
 Requirements ↔ Analysis ↔ Architecture ↔ Detailed Design.
 
 Design MUST be approved before implementation proceeds beyond explicitly authorized prototypes/spikes.
+
+## 15. Mandatory English Language Policy
+- All software design artifacts, architecture descriptions, subsystem/component/package names, Design Sequence Diagrams, Detailed Design Class Diagrams, class specifications, attributes, method signatures, parameters, return types, interfaces, design patterns, and deployment diagrams MUST be specified in **English**.
+

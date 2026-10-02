@@ -77,3 +77,8 @@ Report all defects, ambiguities, conflicting requirements, and TBD items.
 - Requirements MUST NOT proceed to Analysis or Detailed Design without explicit approval from the Business Analyst, Product Owner, and authorized approvers.
 - Once approved, the document forms the **Requirements Baseline**.
 - Any downstream change to requirements must trigger Change Impact Analysis and formal re-baselining.
+
+## 11. Mandatory English Language Policy
+- All requirements engineering artifacts (Business Requirements, Objectives, Business Rules, User Classes, User Requirements, Functional Requirements, Quality Attributes, Constraints, External Interfaces, Data Dictionaries, Use Case descriptions, and BPMN/Activity diagrams) MUST be written in **English**.
+- If source materials, user interviews, or stakeholder inputs are provided in Vietnamese or another language, the Agent MUST accurately translate, synthesize, and formalize them into professional, unambiguous technical English.
+- Identifiers, actor names, use case names, and diagram labels MUST strictly use English terminology.

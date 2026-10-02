@@ -57,3 +57,11 @@ Before database baseline:
 - review security/privacy;
 - review migration implications;
 - obtain approval from responsible design/database roles.
+
+## 12. Mandatory English Language Policy
+All database design artifacts MUST be written in English:
+- **Conceptual & Logical Data Models (ERDs):** Entity names, attribute names, relationships, cardinality annotations, and constraint notes MUST be in English.
+- **Physical Schemas & DDL:** Table names, column names, primary/foreign key constraint names, indexes, triggers, stored procedures, and migration scripts MUST use standard English naming conventions (e.g., snake_case or PascalCase as approved by project technical stack).
+- **Data Dictionaries & Mapping Catalogs:** Descriptions, data types, validation rules, and notes MUST be specified in English.
+- *Note:* Interactions and discussions with stakeholders may occur in Vietnamese, but the formal database specification and schema artifacts MUST remain strictly in English.
+
