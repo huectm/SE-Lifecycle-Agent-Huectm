@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-02T15:00:00.000Z" agent="SE-Lifecycle-Agent" version="21.0.0" type="device">
+  <diagram id="store-management-diag" name="Store Management &amp; Operations Use Cases">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Header / Diagram Title -->
+        <mxCell id="m_title" value="USE CASE DIAGRAM — STORE MANAGEMENT &amp;amp; OPERATIONS SUBSYSTEM&#10;(BIỂU ĐỒ USE CASE PHÂN HỆ QUẢN TRỊ &amp;amp; VẬN HÀNH CỬA HÀNG FRESHFOOD)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontStyle=1;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="15" width="960" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- System Boundary -->
+        <mxCell id="m_boundary" value="FreshFood System — Store Management &amp;amp; Operations Subsystem (Phân hệ Vận hành &amp;amp; Quản trị)" style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=14;fontStyle=1;fillColor=#F8F9FA;strokeColor=#1565C0;strokeWidth=2.2;spacingTop=12;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="70" width="810" height="1030" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= PRIMARY ACTORS (LEFT) ================= -->
+        <!-- Sale Staff Actor -->
+        <mxCell id="act_sale" value="&amp;lt;&amp;lt;Primary Actor&amp;gt;&amp;gt;&#10;Sale Staff&#10;(NV Bán hàng)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#BBDEFB;strokeColor=#1976D2;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="210" width="55" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Warehouse Staff Actor -->
+        <mxCell id="act_wh" value="&amp;lt;&amp;lt;Primary Actor&amp;gt;&amp;gt;&#10;WH Staff&#10;(NV Quản lý Kho)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFE0B2;strokeColor=#F57C00;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="580" width="55" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Store Owner Staff Actor -->
+        <mxCell id="act_owner" value="&amp;lt;&amp;lt;Primary Actor&amp;gt;&amp;gt;&#10;Store Owner Staff&#10;(Chủ cửa hàng)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFCDD2;strokeColor=#D32F2F;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="930" width="55" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Generalization: Store Owner inherits Sale Staff -->
+        <mxCell id="gen_owner_sale" value="&amp;lt;&amp;lt;generalizes&amp;gt;&amp;gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;strokeColor=#D32F2F;strokeWidth=1.8;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#D32F2F;" edge="1" parent="1" source="act_owner" target="act_sale">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="980"/>
+              <mxPoint x="40" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Generalization: Store Owner inherits WH Staff -->
+        <mxCell id="gen_owner_wh" value="&amp;lt;&amp;lt;generalizes&amp;gt;&amp;gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;strokeColor=#D32F2F;strokeWidth=1.8;fontSize=10;fontColor=#D32F2F;" edge="1" parent="1" source="act_owner" target="act_wh">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SUPPORT ACTORS (RIGHT) ================= -->
+        <!-- Thermal / A4 Printer Hardware Actor -->
+        <mxCell id="act_printer" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;Thermal / A4 Printer&#10;(Máy in hóa đơn)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="200" width="55" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= USE CASES INSIDE BOUNDARY ================= -->
+        <!-- SECTION 1: SALES & FULFILLMENT -->
+        <mxCell id="grp_sales" value="Sales &amp;amp; Order Fulfillment Module (Bán hàng &amp;amp; Xử lý đơn hàng)" style="shape=rect;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#90CAF9;strokeWidth=1;fontSize=11;fontStyle=2;align=left;spacingLeft=10;verticalAlign=top;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="100" width="770" height="300" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m01" value="UC-M01: Process &amp;amp; Confirm Orders&#10;(Tiếp nhận &amp;amp; Gọi xác nhận đơn hàng)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#0D47A1;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="130" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m02" value="UC-M02: Print Invoice &amp;amp; Packing Slip&#10;(In phiếu giao hàng &amp;amp; Hóa đơn đóng gói)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#0D47A1;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="215" width="260" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m03" value="UC-M03: Dispatch &amp;amp; Update Delivery&#10;(Điều phối &amp;amp; Cập nhật tiến độ giao)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#0D47A1;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="305" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m10" value="UC-M10: Publish Articles &amp;amp; News&#10;(Biên tập bài viết &amp;amp; Tin tức tiếp thị)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#8E24AA;fontColor=#4A148C;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="215" width="240" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- SECTION 2: WAREHOUSE & INVENTORY -->
+        <mxCell id="grp_wh" value="Warehouse &amp;amp; Inventory Module (Quản lý Kho &amp;amp; Nhập xuất hàng hóa)" style="shape=rect;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FFE0B2;strokeWidth=1;fontSize=11;fontStyle=2;align=left;spacingLeft=10;verticalAlign=top;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="420" width="770" height="390" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m04" value="UC-M04: Manage Product Categories&#10;(Quản lý danh mục loại sản phẩm)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;fontColor=#E65100;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="450" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m05" value="UC-M05: Manage Products&#10;(Quản lý thông tin sản phẩm)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;fontColor=#E65100;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="535" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m06" value="UC-M06: Manage Suppliers&#10;(Quản lý nhà cung cấp thực phẩm)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;fontColor=#E65100;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="620" width="250" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m07" value="UC-M07: Manage Goods Receipts&#10;(Quản lý hóa đơn &amp;amp; Phiếu nhập kho)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;fontColor=#E65100;fontSize=12.5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="710" width="260" height="68" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m08" value="UC-M08: Manage Batch Inventory &amp;amp; Pricing&#10;(Quản lý tồn kho &amp;amp; Giảm giá theo lô hàng)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;fontColor=#E65100;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="480" width="265" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m09" value="UC-M09: Dispose Expired Stock&#10;(Lập phiếu xử lý &amp;amp; Hủy hàng hết hạn)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFE0B2;strokeColor=#F57C00;fontColor=#E65100;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="585" width="260" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m11" value="UC-M11: Generate Business Reports&#10;(Báo cáo doanh thu &amp;amp; Thống kê kho)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#1B5E20;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="685" width="260" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- SECTION 3: ADMIN, SECURITY & AUDIT -->
+        <mxCell id="grp_admin" value="Administration, Security &amp;amp; Audit Module (Quản trị hệ thống, Phân quyền &amp;amp; Kiểm toán)" style="shape=rect;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#FFCDD2;strokeWidth=1;fontSize=11;fontStyle=2;align=left;spacingLeft=10;verticalAlign=top;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="830" width="770" height="250" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m12" value="UC-M12: Staff Login &amp;amp; Security&#10;(Đăng nhập hệ thống &amp;amp; Đổi mật khẩu)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#8E24AA;fontColor=#4A148C;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="860" width="260" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m13" value="UC-M13: Manage Staff Accounts&#10;(Quản lý tài khoản nhân viên &amp;amp; Phân quyền)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#D32F2F;fontColor=#B71C1C;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="960" width="265" height="70" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="uc_m14" value="UC-M14: View Audit Logs (FE-19)&#10;(Tra cứu nhật ký kiểm toán giao dịch)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#D32F2F;fontColor=#B71C1C;fontSize=12.5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="710" y="960" width="265" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= DIRECTED ASSOCIATIONS (KARL WIEGERS CONVENTION) ================= -->
+        <!-- SALE STAFF ASSOCIATIONS -->
+        <mxCell id="e_sale_m01" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#1976D2;" edge="1" parent="1" source="act_sale" target="uc_m01">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_sale_m02" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#1976D2;" edge="1" parent="1" source="act_sale" target="uc_m02">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_sale_m03" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#1976D2;" edge="1" parent="1" source="act_sale" target="uc_m03">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_sale_m10" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#1976D2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_sale" target="uc_m10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="270"/>
+              <mxPoint x="200" y="380"/>
+              <mxPoint x="670" y="380"/>
+              <mxPoint x="670" y="248"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Sale Staff assists WH in Imports (Small store flexibility) -->
+        <mxCell id="e_sale_m07_assist" value="&amp;lt;&amp;lt;khi hỗ trợ kho&amp;gt;&amp;gt;" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.5;strokeColor=#1976D2;dashed=1;fontSize=10;fontColor=#1565C0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_sale" target="uc_m07">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="290"/>
+              <mxPoint x="180" y="744"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- WAREHOUSE STAFF ASSOCIATIONS -->
+        <mxCell id="e_wh_m04" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;" edge="1" parent="1" source="act_wh" target="uc_m04">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_wh_m05" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;" edge="1" parent="1" source="act_wh" target="uc_m05">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_wh_m06" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;" edge="1" parent="1" source="act_wh" target="uc_m06">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_wh_m07" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;" edge="1" parent="1" source="act_wh" target="uc_m07">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_wh_m08" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_wh" target="uc_m08">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="650"/>
+              <mxPoint x="220" y="515"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_wh_m09" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_wh" target="uc_m09">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="660"/>
+              <mxPoint x="210" y="618"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_wh_m11" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#F57C00;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_wh" target="uc_m11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="680"/>
+              <mxPoint x="210" y="718"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- STORE OWNER EXCLUSIVE ASSOCIATIONS -->
+        <mxCell id="e_owner_m13" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=2;strokeColor=#D32F2F;" edge="1" parent="1" source="act_owner" target="uc_m13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_owner_m14" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=2;strokeColor=#D32F2F;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_owner" target="uc_m14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="1000"/>
+              <mxPoint x="250" y="995"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ALL STAFF -> LOGIN -->
+        <mxCell id="e_sale_login" style="endArrow=classic;endSize=7;html=1;rounded=0;strokeWidth=1.5;strokeColor=#7B1FA2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_sale" target="uc_m12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="250"/>
+              <mxPoint x="160" y="880"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_wh_login" style="endArrow=classic;endSize=7;html=1;rounded=0;strokeWidth=1.5;strokeColor=#7B1FA2;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="act_wh" target="uc_m12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="620"/>
+              <mxPoint x="170" y="895"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_owner_login" style="endArrow=classic;endSize=7;html=1;rounded=0;strokeWidth=1.5;strokeColor=#7B1FA2;" edge="1" parent="1" source="act_owner" target="uc_m12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- USE CASE -> SUPPORT ACTOR (PRINT INVOICE) -->
+        <mxCell id="e_m02_printer" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_m02" target="act_printer">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= EXPLANATORY NOTE BOX ================= -->
+        <mxCell id="m_note" value="&amp;lt;b&amp;gt;Quy chuẩn Mô hình hóa Vận hành Cửa hàng (Karl Wiegers):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;1. &amp;lt;b&amp;gt;Directed Association (Nét liền có mũi tên):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - &amp;lt;b&amp;gt;Primary Actor &amp;rarr; Use Case:&amp;lt;/b&amp;gt; Nhân viên chủ động khởi phát giao dịch.&amp;lt;br&amp;gt;   - &amp;lt;b&amp;gt;Use Case &amp;rarr; Support Actor:&amp;lt;/b&amp;gt; Ca sử dụng gửi dữ liệu ra máy in hóa đơn.&amp;lt;br&amp;gt;2. &amp;lt;b&amp;gt;Kế thừa Tác nhân (Store Owner Generalization):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - Chủ cửa hàng kế thừa toàn bộ quyền của &amp;lt;b&amp;gt;Sale Staff&amp;lt;/b&amp;gt; và &amp;lt;b&amp;gt;WH Staff&amp;lt;/b&amp;gt; (thực hiện thay nhân viên khi bận/vắng mặt).&amp;lt;br&amp;gt;3. &amp;lt;b&amp;gt;Linh hoạt cửa hàng nhỏ (Cross-role support):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - Nhân viên bán hàng có liên kết hỗ trợ lập phiếu nhập kho (&amp;lt;i&amp;gt;UC-M07&amp;lt;/i&amp;gt;) khi được cấp quyền.&amp;lt;br&amp;gt;4. &amp;lt;b&amp;gt;Kiểm soát &amp;amp; Kiểm toán (FE-19):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - Mọi thao tác sửa/xóa kho và đơn hàng đều tự động ghi log để Chủ cửa hàng tra cứu tại &amp;lt;b&amp;gt;UC-M14&amp;lt;/b&amp;gt;." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF9C4;strokeColor=#FBC02D;fontSize=10.5;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="30" y="730" width="265" height="180" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
