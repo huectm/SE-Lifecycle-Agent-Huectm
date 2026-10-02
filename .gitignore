@@ -17,3 +17,5 @@ obj/
 node_modules/
 *.tmp
 *.log
+~$*
+scratch/
