@@ -4480,7 +4480,7 @@
         </mxCell>
         
         
-        <mxCell id="c_act_oauth" value="&amp;lt;&amp;lt;Secondary Actor&amp;gt;&amp;gt;&#10;Google / Facebook&#10;(Auth Provider)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="c_act_oauth" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;Google / Facebook&#10;(Auth Provider)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
           
           
           <mxGeometry x="1120" y="125" width="55" height="95" as="geometry"/>
@@ -4489,10 +4489,10 @@
         </mxCell>
         
         
-        <mxCell id="c_act_sms" value="&amp;lt;&amp;lt;Secondary Actor&amp;gt;&amp;gt;&#10;Dịch vụ SMS / OTP&#10;(Telecom Gateway)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="c_act_sms" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;SMS / OTP Service&#10;(Telecom Gateway)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
           
           
-          <mxGeometry x="1120" y="330" width="55" height="95" as="geometry"/>
+          <mxGeometry x="1120" y="270" width="55" height="95" as="geometry"/>
           
         
         </mxCell>
@@ -4660,7 +4660,7 @@
         </mxCell>
         
         
-        <mxCell id="e_oauth_link" style="endArrow=classic;endSize=7;html=1;rounded=0;strokeWidth=1.5;strokeColor=#616161;dashed=1;" edge="1" parent="1" source="uc_ext_oauth" target="c_act_oauth">
+        <mxCell id="e_oauth_link" value="" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_ext_oauth" target="c_act_oauth">
           
           
           <mxGeometry relative="1" as="geometry"/>
@@ -4669,7 +4669,7 @@
         </mxCell>
         
         
-        <mxCell id="e_sms_link" style="endArrow=classic;endSize=7;html=1;rounded=0;strokeWidth=1.5;strokeColor=#616161;dashed=1;" edge="1" parent="1" source="uc_ext_verify" target="c_act_sms">
+        <mxCell id="e_sms_link" value="" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_ext_verify" target="c_act_sms">
           
           
           <mxGeometry relative="1" as="geometry"/>
@@ -4678,10 +4678,19 @@
         </mxCell>
         
         
-        <mxCell id="c_note_extend" value="&amp;lt;b&amp;gt;Quy chuẩn Mô hình hóa &amp;lt;&amp;lt;extend&amp;gt;&amp;gt;:&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;1. &amp;lt;b&amp;gt;Base Use Cases:&amp;lt;/b&amp;gt; &amp;lt;i&amp;gt;Đăng nhập, Đăng xuất, Xem thông tin cá nhân&amp;lt;/i&amp;gt; là các ca sử dụng độc lập, hoàn chỉnh, kết nối trực tiếp với tác nhân &amp;lt;b&amp;gt;User&amp;lt;/b&amp;gt;.&amp;lt;br&amp;gt;2. &amp;lt;b&amp;gt;Extension Use Cases:&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;- &amp;lt;b&amp;gt;Quên mật khẩu&amp;lt;/b&amp;gt; extend từ &amp;lt;b&amp;gt;Đăng nhập&amp;lt;/b&amp;gt; (khi người dùng không nhớ mật khẩu tại form login).&amp;lt;br&amp;gt;- &amp;lt;b&amp;gt;Cập nhật thông tin&amp;lt;/b&amp;gt; và &amp;lt;b&amp;gt;Đổi mật khẩu&amp;lt;/b&amp;gt; extend từ &amp;lt;b&amp;gt;Xem thông tin cá nhân&amp;lt;/b&amp;gt; (chỉ kích hoạt tùy chọn tại màn hình hồ sơ).&amp;lt;br&amp;gt;3. &amp;lt;b&amp;gt;Hướng mũi tên:&amp;lt;/b&amp;gt; Chuẩn UML nét đứt từ Extension UC trỏ về Base UC." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF9C4;strokeColor=#FBC02D;fontSize=11;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+        <mxCell id="e_forgot_sms_link" value="" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_ext_forgot" target="c_act_sms">
           
           
-          <mxGeometry x="40" y="740" width="270" height="145" as="geometry"/>
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="c_note_extend" value="&amp;lt;b&amp;gt;Quy chuẩn Mối quan hệ trong Biểu đồ (Karl Wiegers):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;1. &amp;lt;b&amp;gt;Association (Đường nét liền):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;- &amp;lt;b&amp;gt;Primary Actor &amp;rarr; Use Case:&amp;lt;/b&amp;gt; Mũi tên từ tác nhân chính trỏ đến ca sử dụng (User khởi tạo Login, Logout, View Profile).&amp;lt;br&amp;gt;- &amp;lt;b&amp;gt;Use Case &amp;rarr; Support Actor:&amp;lt;/b&amp;gt; Mũi tên từ ca sử dụng trỏ đến tác nhân hỗ trợ bên thứ ba (OAuth Login &amp;rarr; Auth Provider; Verify Phone &amp;amp; Forgot Password &amp;rarr; SMS/OTP Service).&amp;lt;br&amp;gt;2. &amp;lt;b&amp;gt;Generalization (Thừa kế tác nhân):&amp;lt;/b&amp;gt; Customer, Sale Staff, WH Staff kế thừa User; Store Owner Staff kế thừa Sale Staff &amp;amp; WH Staff.&amp;lt;br&amp;gt;3. &amp;lt;b&amp;gt;&amp;lt;&amp;lt;extend&amp;gt;&amp;gt; (Đường nét đứt):&amp;lt;/b&amp;gt; Mũi tên từ Extension Use Case trỏ về Base Use Case." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF9C4;strokeColor=#FBC02D;fontSize=10.5;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          
+          
+          <mxGeometry x="40" y="735" width="275" height="150" as="geometry"/>
           
         
         </mxCell>
