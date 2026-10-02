@@ -4705,4 +4705,193 @@
   </diagram>
   
 
+  <diagram id="customer-storefront-diag" name="6. Phan he Khach hang (Storefront)">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="1020" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Header / Diagram Title -->
+        <mxCell id="c_title" value="USE CASE DIAGRAM — CUSTOMER STOREFRONT SUBSYSTEM&#10;(BIỂU ĐỒ USE CASE TỔNG QUÁT — PHÂN HỆ KHÁCH HÀNG FRESHFOOD)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=17;fontStyle=1;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="220" y="15" width="910" height="45" as="geometry"/>
+        </mxCell>
+
+        <!-- System Boundary -->
+        <mxCell id="c_boundary" value="FreshFood System — Customer Storefront Subsystem (Phân hệ Khách hàng)" style="shape=rect;whiteSpace=wrap;html=1;verticalAlign=top;fontSize=14;fontStyle=1;fillColor=#F1F8E9;strokeColor=#2E7D32;strokeWidth=2.2;spacingTop=12;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="310" y="70" width="760" height="910" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= PRIMARY ACTORS (LEFT) ================= -->
+        <!-- Guest Actor -->
+        <mxCell id="act_guest" value="&amp;lt;&amp;lt;Primary Actor&amp;gt;&amp;gt;&#10;Guest&#10;(Khách vãng lai)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#E8F5E9;strokeColor=#43A047;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="210" width="55" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Registered Customer Actor -->
+        <mxCell id="act_customer" value="&amp;lt;&amp;lt;Primary Actor&amp;gt;&amp;gt;&#10;Customer&#10;(Khách hàng thành viên)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#C8E6C9;strokeColor=#2E7D32;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="85" y="560" width="55" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Actor Generalization: Customer specializes Guest -->
+        <mxCell id="gen_customer_guest" value="&amp;lt;&amp;lt;generalizes&amp;gt;&amp;gt;" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;strokeColor=#2E7D32;strokeWidth=1.8;edgeStyle=orthogonalEdgeStyle;fontSize=10;fontColor=#2E7D32;" edge="1" parent="1" source="act_customer" target="act_guest">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SUPPORT / SECONDARY ACTORS (RIGHT) ================= -->
+        <!-- Auth Provider (Google / Facebook) -->
+        <mxCell id="act_oauth" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;Google / Facebook&#10;(OAuth 2.0 Provider)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="360" width="55" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- Telecom SMS / OTP Gateway -->
+        <mxCell id="act_sms" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;SMS / OTP Gateway&#10;(Dịch vụ Viễn thông)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="490" width="55" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- Payment Gateway (SePay / Banking QR) -->
+        <mxCell id="act_payment" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;SePay / Banking QR&#10;(Cổng thanh toán QR)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="630" width="55" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- Mailing Notification System -->
+        <mxCell id="act_mail" value="&amp;lt;&amp;lt;Support Actor&amp;gt;&amp;gt;&#10;Mailing Service&#10;(Hệ thống gửi Email)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F5F5F5;strokeColor=#616161;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="770" width="55" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= MAIN USE CASES (INSIDE BOUNDARY) ================= -->
+        <!-- UC-C07: Read Articles & News -->
+        <mxCell id="uc_news" value="UC-C07: Read Articles &amp;amp; News&#10;(Đọc tin tức &amp;amp; Bài viết dinh dưỡng)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#DCEDC8;strokeColor=#689F38;fontColor=#1B5E20;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="105" width="230" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- UC-C01: Browse & Search Products -->
+        <mxCell id="uc_browse" value="UC-C01: Browse &amp;amp; Search Products&#10;(Tìm kiếm &amp;amp; Duyệt sản phẩm theo nhóm)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#1B5E20;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="210" width="240" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- UC-C02: Manage Shopping Cart -->
+        <mxCell id="uc_cart" value="UC-C02: Manage Shopping Cart&#10;(Quản lý giỏ hàng mua sắm)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#1B5E20;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="325" width="230" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- UC-C06: Customer Authentication -->
+        <mxCell id="uc_auth" value="UC-C06: Customer Authentication&#10;(Đăng nhập qua mạng xã hội)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#8E24AA;fontColor=#4A148C;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="440" width="230" height="68" as="geometry"/>
+        </mxCell>
+
+        <!-- Extension UC: First-time Phone Verification via OTP -->
+        <mxCell id="uc_ext_verify" value="Verify Phone via SMS OTP&#10;(Xác thực SĐT lần đầu đăng nhập)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#AB47BC;fontColor=#4A148C;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="442" width="220" height="64" as="geometry"/>
+        </mxCell>
+
+        <!-- UC-C03: Checkout & Order Placement -->
+        <mxCell id="uc_checkout" value="UC-C03: Checkout &amp;amp; Order Placement&#10;(Đặt hàng &amp;amp; Thanh toán trực tuyến)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#A5D6A7;strokeColor=#2E7D32;fontColor=#1B5E20;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="570" width="250" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- UC-C04: Manage My Orders -->
+        <mxCell id="uc_orders" value="UC-C04: Manage My Orders&#10;(Quản lý đơn hàng cá nhân)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#1B5E20;fontSize=12.5;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="720" width="230" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Extension UC: Cancel Order -->
+        <mxCell id="uc_ext_cancel" value="Cancel Undelivered Order&#10;(Hủy đơn hàng chưa giao)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#43A047;fontColor=#1B5E20;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="660" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- Extension UC: Feedback & Review -->
+        <mxCell id="uc_ext_feedback" value="Rate &amp;amp; Review Order&#10;(Đánh giá &amp;amp; Phản hồi đơn hàng)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#43A047;fontColor=#1B5E20;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="735" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- Extension UC: Reorder Items -->
+        <mxCell id="uc_ext_reorder" value="Re-order From Past Order&#10;(Đặt lại hàng từ đơn cũ)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#43A047;fontColor=#1B5E20;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="810" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- UC-C05: Manage Profile & Addresses -->
+        <mxCell id="uc_profile" value="UC-C05: Manage Profile &amp;amp; Addresses&#10;(Quản lý thông tin &amp;amp; Sổ địa chỉ nhận hàng)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#1B5E20;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="370" y="870" width="250" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= DIRECTED ASSOCIATIONS (KARL WIEGERS CONVENTION) ================= -->
+        <!-- Primary Actor (Guest) -> Use Cases -->
+        <mxCell id="e_guest_news" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#2E7D32;" edge="1" parent="1" source="act_guest" target="uc_news">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_guest_browse" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#2E7D32;" edge="1" parent="1" source="act_guest" target="uc_browse">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_guest_cart" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#2E7D32;" edge="1" parent="1" source="act_guest" target="uc_cart">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_guest_auth" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#2E7D32;" edge="1" parent="1" source="act_guest" target="uc_auth">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Primary Actor (Customer) -> Use Cases -->
+        <mxCell id="e_cust_checkout" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=2;strokeColor=#1B5E20;" edge="1" parent="1" source="act_customer" target="uc_checkout">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_cust_orders" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=2;strokeColor=#1B5E20;" edge="1" parent="1" source="act_customer" target="uc_orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_cust_profile" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=2;strokeColor=#1B5E20;" edge="1" parent="1" source="act_customer" target="uc_profile">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Use Cases -> Support Actors (Directed solid lines) -->
+        <mxCell id="e_auth_oauth" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_auth" target="act_oauth">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_verify_sms" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_ext_verify" target="act_sms">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_checkout_payment" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_checkout" target="act_payment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_checkout_mail" style="endArrow=classic;endSize=8;html=1;rounded=0;strokeWidth=1.8;strokeColor=#424242;" edge="1" parent="1" source="uc_checkout" target="act_mail">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= USE CASE RELATIONSHIPS (INCLUDE & EXTEND) ================= -->
+        <!-- Checkout includes Customer Authentication -->
+        <mxCell id="inc_checkout_auth" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endSize=8;dashed=1;rounded=0;strokeColor=#8E24AA;strokeWidth=1.5;fontSize=11;fontColor=#4A148C;" edge="1" parent="1" source="uc_checkout" target="uc_auth">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Verify OTP extends Customer Authentication -->
+        <mxCell id="ext_verify_auth" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;&#10;(First-time login)" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endSize=8;dashed=1;rounded=0;strokeColor=#8E24AA;strokeWidth=1.4;fontSize=10;fontColor=#4A148C;" edge="1" parent="1" source="uc_ext_verify" target="uc_auth">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Extensions for Manage My Orders -->
+        <mxCell id="ext_cancel_orders" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endSize=8;dashed=1;rounded=0;strokeColor=#2E7D32;strokeWidth=1.4;fontSize=10;fontColor=#1B5E20;" edge="1" parent="1" source="uc_ext_cancel" target="uc_orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ext_feedback_orders" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endSize=8;dashed=1;rounded=0;strokeColor=#2E7D32;strokeWidth=1.4;fontSize=10;fontColor=#1B5E20;" edge="1" parent="1" source="uc_ext_feedback" target="uc_orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="ext_reorder_orders" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endSize=8;dashed=1;rounded=0;strokeColor=#2E7D32;strokeWidth=1.4;fontSize=10;fontColor=#1B5E20;" edge="1" parent="1" source="uc_ext_reorder" target="uc_orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= EXPLANATORY NOTE BOX ================= -->
+        <mxCell id="c_note_conventions" value="&amp;lt;b&amp;gt;Quy chuẩn Mô hình hóa (Karl Wiegers Convention):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;1. &amp;lt;b&amp;gt;Directed Association (Đường nét liền):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - &amp;lt;b&amp;gt;Primary Actor &amp;rarr; Use Case:&amp;lt;/b&amp;gt; Mũi tên từ tác nhân chính trỏ đến ca sử dụng (Guest/Customer chủ động khởi phát giao dịch).&amp;lt;br&amp;gt;   - &amp;lt;b&amp;gt;Use Case &amp;rarr; Support Actor:&amp;lt;/b&amp;gt; Mũi tên từ ca sử dụng trỏ đến hệ thống hỗ trợ bên thứ ba (OAuth Provider, SMS Gateway, Cổng QR SePay, Mail Service).&amp;lt;br&amp;gt;2. &amp;lt;b&amp;gt;Generalization (Thừa kế tác nhân):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - Customer kế thừa Guest (Customer có đầy đủ quyền xem, tìm kiếm, giỏ hàng của Guest, đồng thời có thêm quyền Đặt hàng, Xem đơn, Hồ sơ).&amp;lt;br&amp;gt;3. &amp;lt;b&amp;gt;Mối quan hệ giữa các Use Case (Nét đứt):&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;   - &amp;lt;b&amp;gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;:&amp;lt;/b&amp;gt; Đặt hàng (Checkout) bắt buộc bao gồm Đăng nhập xác thực.&amp;lt;br&amp;gt;   - &amp;lt;b&amp;gt;&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;:&amp;lt;/b&amp;gt; Mũi tên từ Ca sử dụng mở rộng trỏ về Ca sử dụng cơ sở." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF9C4;strokeColor=#FBC02D;fontSize=10.5;align=left;spacingLeft=8;spacingRight=8;" vertex="1" parent="1">
+          <mxGeometry x="30" y="760" width="260" height="210" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
