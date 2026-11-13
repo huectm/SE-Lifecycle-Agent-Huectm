@@ -1,0 +1,148 @@
+{
+  "status": "Draft for Design Review",
+  "date": "2026-10-31",
+  "use_cases": 5,
+  "classifiers": 181,
+  "transition_classes": 24,
+  "masters": 7,
+  "pages": 61,
+  "static_checks": [
+    {
+      "check": "Frontend classes use ordinary concrete associations and no injection constructors or DI interfaces",
+      "status": "PASS"
+    },
+    {
+      "check": "Architectural View ownership remains mapped outside the diagram",
+      "status": "PASS"
+    },
+    {
+      "check": "Detailed class relationships distinguish association, usage dependency and realization",
+      "status": "PASS"
+    },
+    {
+      "check": "All 48 participating VOPC classes have explicit solution-aware realizations",
+      "status": "PASS"
+    },
+    {
+      "check": "Every use-case realization is connected and contains all mapped VOPC participants",
+      "status": "PASS"
+    },
+    {
+      "check": "No duplicate classifier relationship in realization views",
+      "status": "PASS"
+    },
+    {
+      "check": "All backend signatures match Node runtime rather than .NET types",
+      "status": "PASS"
+    },
+    {
+      "check": "Exact VND amounts use bigint value semantics, never binary floating-point money",
+      "status": "PASS"
+    },
+    {
+      "check": "Selected Repository/Adapter/FEFO and distance solutions have concrete classes",
+      "status": "PASS"
+    },
+    {
+      "check": "Exactly the five approved customer use cases are in scope",
+      "status": "PASS"
+    },
+    {
+      "check": "Every classifier is represented in an editable diagram",
+      "status": "PASS"
+    },
+    {
+      "check": "Each existing state-machine transition maps to exactly one distinct concrete class",
+      "status": "PASS"
+    },
+    {
+      "check": "No invented PendingUnpaid to PendingPaid transition",
+      "status": "PASS"
+    },
+    {
+      "check": "Every handler has guard and execution signatures",
+      "status": "PASS"
+    },
+    {
+      "check": "Each transition class realizes IStateTransition",
+      "status": "PASS"
+    },
+    {
+      "check": "Every shown interface operation has a matching implementation signature",
+      "status": "PASS"
+    },
+    {
+      "check": "Repositories and entities never reference API-owned DTOs",
+      "status": "PASS"
+    },
+    {
+      "check": "Controllers depend on service interfaces, not implementation/repository classes",
+      "status": "PASS"
+    },
+    {
+      "check": "Every business service exposes constructor injection",
+      "status": "PASS"
+    },
+    {
+      "check": "Payment callback entry is absent from customer controller and API clients",
+      "status": "PASS"
+    },
+    {
+      "check": "Payment notice routes through service interface rather than CheckoutController",
+      "status": "PASS"
+    },
+    {
+      "check": "Structural collaborator associations are backed by owned reference attributes",
+      "status": "PASS"
+    },
+    {
+      "check": "Every non-entity-to-entity relationship is a usage dependency",
+      "status": "PASS"
+    },
+    {
+      "check": "All co-present DTO usages have explicit relationships",
+      "status": "PASS"
+    },
+    {
+      "check": "Repository query results are not modeled as retained collaborator fields",
+      "status": "PASS"
+    },
+    {
+      "check": "Each first-page use-case realization explicitly includes DTOs and usage dependencies",
+      "status": "PASS"
+    },
+    {
+      "check": "All DI registration rows belong to backend implementations",
+      "status": "PASS"
+    },
+    {
+      "check": "All seven Draw.io masters exist",
+      "status": "PASS"
+    },
+    {
+      "check": "All routes are orthogonal and avoid unrelated class boxes",
+      "status": "PASS"
+    },
+    {
+      "check": "RTM original sheets and formulas preserved",
+      "status": "PASS"
+    },
+    {
+      "check": "No Excel formula error cells introduced",
+      "status": "PASS"
+    },
+    {
+      "check": "Every PNG matches its recorded rendered output",
+      "status": "PASS"
+    }
+  ],
+  "rendering_hashes_finalized": true,
+  "not_proven": [
+    "Compiled implementation",
+    "Runtime DI container execution",
+    "Detailed design sequence diagrams",
+    "Provider payout",
+    "Concurrency/end-to-end functional tests"
+  ],
+  "gate": "Architect/Technical Lead approval required before baseline and implementation"
+}

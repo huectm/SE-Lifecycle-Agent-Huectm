@@ -1,0 +1,1634 @@
+{
+  "UTM-073-TC008": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D01",
+    "conditionTrace": {
+      "(await myOrdersRepository.FindOwnedAsync(customer, signal)).SingleOrDefault(o => o.OrderId == orderId)": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC009": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D01",
+    "conditionTrace": {
+      "(await myOrdersRepository.FindOwnedAsync(customer, signal)).SingleOrDefault(o => o.OrderId == orderId)": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC010": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D02",
+    "conditionTrace": {
+      "o.OrderId == orderId": "False"
+    }
+  },
+  "UTM-073-TC011": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D02",
+    "conditionTrace": {
+      "o.OrderId == orderId": "True"
+    }
+  },
+  "UTM-073-TC012": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D03",
+    "conditionTrace": {
+      "receipt is null": "False",
+      "refund is null": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC013": {
+    "data": {
+      "Receipt": false,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D03",
+    "conditionTrace": {
+      "receipt is null": "True",
+      "refund is null": "False"
+    }
+  },
+  "UTM-073-TC014": {
+    "data": {
+      "Receipt": false,
+      "Refund": false,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D03",
+    "conditionTrace": {
+      "receipt is null": "True",
+      "refund is null": "True"
+    }
+  },
+  "UTM-073-TC015": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000",
+      "Failure": false
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D04",
+    "conditionTrace": {
+      "order.Failure": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC016": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000",
+      "Failure": true
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D04",
+    "conditionTrace": {
+      "order.Failure": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC017": {
+    "data": {
+      "Receipt": false,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D05",
+    "conditionTrace": {
+      "receipt": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC018": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D05",
+    "conditionTrace": {
+      "receipt": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC019": {
+    "data": {
+      "Receipt": true,
+      "Refund": false,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D06",
+    "conditionTrace": {
+      "refund": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC020": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D06",
+    "conditionTrace": {
+      "refund": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC021": {
+    "data": {
+      "Receipt": true,
+      "Refund": false,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D07",
+    "conditionTrace": {
+      "refund?.GoodsAmount.ToWire()": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC022": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D07",
+    "conditionTrace": {
+      "refund?.GoodsAmount.ToWire()": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC023": {
+    "data": {
+      "Receipt": true,
+      "Refund": false,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D08",
+    "conditionTrace": {
+      "refund": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC024": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D08",
+    "conditionTrace": {
+      "refund": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC025": {
+    "data": {
+      "Receipt": true,
+      "Refund": false,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D09",
+    "conditionTrace": {
+      "refund?.ShippingAmount.ToWire()": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC026": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D09",
+    "conditionTrace": {
+      "refund?.ShippingAmount.ToWire()": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC027": {
+    "data": {
+      "Receipt": true,
+      "Refund": false,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D10",
+    "conditionTrace": {
+      "refund": "NE: short-circuited"
+    }
+  },
+  "UTM-073-TC028": {
+    "data": {
+      "Receipt": true,
+      "Refund": true,
+      "GoodsAmount": "20000",
+      "ShippingAmount": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-073-D10",
+    "conditionTrace": {
+      "refund": "NE: short-circuited"
+    }
+  },
+  "UTM-076-TC010": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 0,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "RATING_OUT_OF_RANGE",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D01",
+    "conditionTrace": {
+      "request.Rating is >= 1": "False",
+      "request.Rating is <= 5": "NE: short-circuited"
+    }
+  },
+  "UTM-076-TC011": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 6,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "RATING_OUT_OF_RANGE",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D01",
+    "conditionTrace": {
+      "request.Rating is >= 1": "True",
+      "request.Rating is <= 5": "False"
+    }
+  },
+  "UTM-076-TC012": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 5,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D01",
+    "conditionTrace": {
+      "request.Rating is >= 1": "True",
+      "request.Rating is <= 5": "True"
+    }
+  },
+  "UTM-076-TC013": {
+    "data": {
+      "OrderStatus": "Shipping",
+      "Rating": 5,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "REVIEW_REQUIRES_DELIVERED",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D02",
+    "conditionTrace": {
+      "order.OrderStatus == OrderStatus.Delivered": "False"
+    }
+  },
+  "UTM-076-TC014": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 5,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D02",
+    "conditionTrace": {
+      "order.OrderStatus == OrderStatus.Delivered": "True"
+    }
+  },
+  "UTM-076-TC015": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 5,
+      "SaveReviewOnce": false,
+      "Comment": "Great"
+    },
+    "exception": "REVIEW_ALREADY_EXISTS",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D03",
+    "conditionTrace": {
+      "await myOrdersRepository.SaveReviewOnceAsync(new() { OrderId = request.OrderId, CustomerId = customer, Rating = request.Rating, Comment = request.Comment ?? \"\" }, ct)": "False"
+    }
+  },
+  "UTM-076-TC016": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 5,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D03",
+    "conditionTrace": {
+      "await myOrdersRepository.SaveReviewOnceAsync(new() { OrderId = request.OrderId, CustomerId = customer, Rating = request.Rating, Comment = request.Comment ?? \"\" }, ct)": "True"
+    }
+  },
+  "UTM-076-TC017": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 5,
+      "SaveReviewOnce": true,
+      "Comment": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D04",
+    "conditionTrace": {
+      "request.Comment": "NE: short-circuited"
+    }
+  },
+  "UTM-076-TC018": {
+    "data": {
+      "OrderStatus": "Delivered",
+      "Rating": 5,
+      "SaveReviewOnce": true,
+      "Comment": "Great"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-076-D04",
+    "conditionTrace": {
+      "request.Comment": "NE: short-circuited"
+    }
+  },
+  "UTM-082-TC004": {
+    "data": {
+      "HasSnapshot": true
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-082-D01",
+    "conditionTrace": {
+      "snapshot is null": "False"
+    }
+  },
+  "UTM-082-TC005": {
+    "data": {
+      "HasSnapshot": false
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-082-D01",
+    "conditionTrace": {
+      "snapshot is null": "True"
+    }
+  },
+  "UTM-083-TC004": {
+    "data": {
+      "Region": "fulfillment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "initial"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D01",
+    "conditionTrace": {}
+  },
+  "UTM-083-TC005": {
+    "data": {
+      "Region": "payment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "pay_initial"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D02",
+    "conditionTrace": {}
+  },
+  "UTM-083-TC006": {
+    "data": {
+      "Region": "refund",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "refund_initial"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D03",
+    "conditionTrace": {}
+  },
+  "UTM-083-TC007": {
+    "data": {
+      "Region": "fulfillment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "initial"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D04",
+    "conditionTrace": {
+      "s.FulfillmentCompleted": "False"
+    }
+  },
+  "UTM-083-TC008": {
+    "data": {
+      "Region": "fulfillment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": true,
+      "Workflow": "initial",
+      "StateExpected": "final_pending_unpaid"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D04",
+    "conditionTrace": {
+      "s.FulfillmentCompleted": "True"
+    }
+  },
+  "UTM-083-TC009": {
+    "data": {
+      "Region": "fulfillment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "OTHER",
+      "StateExpected": "pending_unpaid"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D05",
+    "conditionTrace": {
+      "s.WorkflowNode is \"initial\"": "False",
+      "s.WorkflowNode is \"payment_choice\"": "False"
+    }
+  },
+  "UTM-083-TC010": {
+    "data": {
+      "Region": "fulfillment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "payment_choice",
+      "StateExpected": "payment_choice"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D05",
+    "conditionTrace": {
+      "s.WorkflowNode is \"initial\"": "False",
+      "s.WorkflowNode is \"payment_choice\"": "True"
+    }
+  },
+  "UTM-083-TC011": {
+    "data": {
+      "Region": "fulfillment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "initial"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D05",
+    "conditionTrace": {
+      "s.WorkflowNode is \"initial\"": "True",
+      "s.WorkflowNode is \"payment_choice\"": "NE: short-circuited"
+    }
+  },
+  "UTM-083-TC012": {
+    "data": {
+      "Region": "payment",
+      "Initial": false,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "unpaid"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D06",
+    "conditionTrace": {
+      "s.Initial": "False",
+      "!s.PaymentInitialized": "NE: short-circuited"
+    }
+  },
+  "UTM-083-TC013": {
+    "data": {
+      "Region": "payment",
+      "Initial": true,
+      "PaymentInitialized": true,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "unpaid"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D06",
+    "conditionTrace": {
+      "s.Initial": "True",
+      "!s.PaymentInitialized": "False"
+    }
+  },
+  "UTM-083-TC014": {
+    "data": {
+      "Region": "payment",
+      "Initial": true,
+      "PaymentInitialized": false,
+      "Completed": false,
+      "Workflow": "initial",
+      "StateExpected": "pay_initial"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-083-D06",
+    "conditionTrace": {
+      "s.Initial": "True",
+      "!s.PaymentInitialized": "True"
+    }
+  },
+  "UTM-084-TC004": {
+    "data": {
+      "Guard": "always",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D01",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC005": {
+    "data": {
+      "Guard": "unpaid",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D02",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC006": {
+    "data": {
+      "Guard": "paid",
+      "GuardExpected": false,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D03",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC007": {
+    "data": {
+      "Guard": "initialPayment",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D04",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC008": {
+    "data": {
+      "Guard": "ownedCustomer",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D05",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC009": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D06",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC010": {
+    "data": {
+      "Guard": "_",
+      "GuardExpected": false,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D07",
+    "conditionTrace": {}
+  },
+  "UTM-084-TC011": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": false,
+      "Quantity": 0,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D08",
+    "conditionTrace": {
+      "l.Quantity > 0": "False"
+    }
+  },
+  "UTM-084-TC012": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D08",
+    "conditionTrace": {
+      "l.Quantity > 0": "True"
+    }
+  },
+  "UTM-084-TC013": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": false,
+      "Quantity": 0,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D09",
+    "conditionTrace": {
+      "s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock)": "False"
+    }
+  },
+  "UTM-084-TC014": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D09",
+    "conditionTrace": {
+      "s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock)": "True"
+    }
+  },
+  "UTM-084-TC015": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": false,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "99"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D10",
+    "conditionTrace": {
+      "b.BatchId == g.Key": "False",
+      "g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock": "NE: short-circuited"
+    }
+  },
+  "UTM-084-TC016": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": false,
+      "Quantity": 2,
+      "Available": 0,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D10",
+    "conditionTrace": {
+      "b.BatchId == g.Key": "True",
+      "g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock": "False"
+    }
+  },
+  "UTM-084-TC017": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D10",
+    "conditionTrace": {
+      "b.BatchId == g.Key": "True",
+      "g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock": "True"
+    }
+  },
+  "UTM-084-TC018": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": false,
+      "Quantity": 0,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D11",
+    "conditionTrace": {
+      "guard switch\r\n    {\r\n        \"always\" => true,\r\n        \"unpaid\" => !s.VerifiedPayment,\r\n        \"paid\" => s.VerifiedPayment,\r\n        \"initialPayment\" => s.Order.OrderStatus is OrderStatus.PendingUnpaid or OrderStatus.PendingPaid,\r\n        \"ownedCustomer\" => s.ActorId == s.CustomerId && s.Order.CustomerId == s.CustomerId,\r\n        \"plannedStock\" => s.ActorId == s.CustomerId && s.Order.Details.Count > 0 && s.Order.Details.All(l => l.Quantity > 0)\r\n            && s.Order.Details.GroupBy(l => l.BatchId).All(g => s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock)),\r\n        _ => false\r\n    }": "False"
+    }
+  },
+  "UTM-084-TC019": {
+    "data": {
+      "Guard": "plannedStock",
+      "GuardExpected": true,
+      "Quantity": 2,
+      "Available": 7,
+      "BatchId": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-084-D11",
+    "conditionTrace": {
+      "guard switch\r\n    {\r\n        \"always\" => true,\r\n        \"unpaid\" => !s.VerifiedPayment,\r\n        \"paid\" => s.VerifiedPayment,\r\n        \"initialPayment\" => s.Order.OrderStatus is OrderStatus.PendingUnpaid or OrderStatus.PendingPaid,\r\n        \"ownedCustomer\" => s.ActorId == s.CustomerId && s.Order.CustomerId == s.CustomerId,\r\n        \"plannedStock\" => s.ActorId == s.CustomerId && s.Order.Details.Count > 0 && s.Order.Details.All(l => l.Quantity > 0)\r\n            && s.Order.Details.GroupBy(l => l.BatchId).All(g => s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock)),\r\n        _ => false\r\n    }": "True"
+    }
+  },
+  "UTM-087-TC007": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D01",
+    "conditionTrace": {
+      "message.AggregateId != context.AggregateId": "False"
+    }
+  },
+  "UTM-087-TC008": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": true,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "AGGREGATE_MISMATCH",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D01",
+    "conditionTrace": {
+      "message.AggregateId != context.AggregateId": "True"
+    }
+  },
+  "UTM-087-TC009": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D02",
+    "conditionTrace": {
+      "string.IsNullOrWhiteSpace(message.Event)": "False",
+      "message.Event.StartsWith(\"__\", StringComparison.Ordinal)": "False"
+    }
+  },
+  "UTM-087-TC010": {
+    "data": {
+      "Event": "__completion",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "INVALID_STATE_EVENT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D02",
+    "conditionTrace": {
+      "string.IsNullOrWhiteSpace(message.Event)": "False",
+      "message.Event.StartsWith(\"__\", StringComparison.Ordinal)": "True"
+    }
+  },
+  "UTM-087-TC011": {
+    "data": {
+      "Event": "",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "INVALID_STATE_EVENT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D02",
+    "conditionTrace": {
+      "string.IsNullOrWhiteSpace(message.Event)": "True",
+      "message.Event.StartsWith(\"__\", StringComparison.Ordinal)": "NE: short-circuited"
+    }
+  },
+  "UTM-087-TC012": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D03",
+    "conditionTrace": {
+      "snapshot is not null": "False",
+      "snapshot.AggregateId != context.AggregateId": "NE: short-circuited",
+      "snapshot.CustomerId != context.CustomerId": "NE: short-circuited"
+    }
+  },
+  "UTM-087-TC013": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": true,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D03",
+    "conditionTrace": {
+      "snapshot is not null": "True",
+      "snapshot.AggregateId != context.AggregateId": "False",
+      "snapshot.CustomerId != context.CustomerId": "False"
+    }
+  },
+  "UTM-087-TC014": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": true,
+      "DifferentAggregate": false,
+      "DifferentCustomer": true
+    },
+    "exception": "STATE_MACHINE_AGGREGATE_MISMATCH",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D03",
+    "conditionTrace": {
+      "snapshot is not null": "True",
+      "snapshot.AggregateId != context.AggregateId": "False",
+      "snapshot.CustomerId != context.CustomerId": "True"
+    }
+  },
+  "UTM-087-TC015": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": true,
+      "DifferentAggregate": true,
+      "DifferentCustomer": false
+    },
+    "exception": "STATE_MACHINE_AGGREGATE_MISMATCH",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D03",
+    "conditionTrace": {
+      "snapshot is not null": "True",
+      "snapshot.AggregateId != context.AggregateId": "True",
+      "snapshot.CustomerId != context.CustomerId": "NE: short-circuited"
+    }
+  },
+  "UTM-087-TC016": {
+    "data": {
+      "Event": "acceptOrder",
+      "AggregateMismatch": false,
+      "ExistingSnapshot": false,
+      "DifferentAggregate": false,
+      "DifferentCustomer": false,
+      "RecordEventOnce": false
+    },
+    "exception": "INCONSISTENT_TRANSITION_EVIDENCE",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-087-D04",
+    "conditionTrace": {}
+  },
+  "UTM-090-TC009": {
+    "data": {
+      "Email": "bad"
+    },
+    "exception": "INVALID_EMAIL",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-090-D01",
+    "conditionTrace": {
+      "string.IsNullOrEmpty(request.Email)": "False",
+      "Regex.IsMatch(request.Email, @\"^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$\", RegexOptions.None, TimeSpan.FromMilliseconds(100))": "False"
+    }
+  },
+  "UTM-090-TC010": {
+    "data": {
+      "Email": "tester@example.com"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-090-D01",
+    "conditionTrace": {
+      "string.IsNullOrEmpty(request.Email)": "False",
+      "Regex.IsMatch(request.Email, @\"^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$\", RegexOptions.None, TimeSpan.FromMilliseconds(100))": "True"
+    }
+  },
+  "UTM-090-TC011": {
+    "data": {
+      "Email": ""
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-090-D01",
+    "conditionTrace": {
+      "string.IsNullOrEmpty(request.Email)": "True",
+      "Regex.IsMatch(request.Email, @\"^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$\", RegexOptions.None, TimeSpan.FromMilliseconds(100))": "NE: short-circuited"
+    }
+  },
+  "UTM-090-TC013": {
+    "data": {
+      "Email": "tester@example.com"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-090-D03",
+    "conditionTrace": {
+      "string.IsNullOrEmpty(request.Email)": "False"
+    }
+  },
+  "UTM-090-TC014": {
+    "data": {
+      "Email": ""
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-090-D03",
+    "conditionTrace": {
+      "string.IsNullOrEmpty(request.Email)": "True"
+    }
+  },
+  "UTM-091-TC010": {
+    "data": {
+      "Phone": "bad",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "INVALID_PHONE",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D01",
+    "conditionTrace": {
+      "Regex.IsMatch(phone, @\"^\\+?[0-9]{9,15}$\", RegexOptions.None, TimeSpan.FromMilliseconds(100))": "False"
+    }
+  },
+  "UTM-091-TC011": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D01",
+    "conditionTrace": {
+      "Regex.IsMatch(phone, @\"^\\+?[0-9]{9,15}$\", RegexOptions.None, TimeSpan.FromMilliseconds(100))": "True"
+    }
+  },
+  "UTM-091-TC013": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 91,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "INVALID_ADDRESS_COORDINATES",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D03",
+    "conditionTrace": {
+      "Math.Abs(geo.Latitude) <= 90": "False",
+      "Math.Abs(geo.Longitude) <= 180": "NE: short-circuited"
+    }
+  },
+  "UTM-091-TC014": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 181,
+      "IsDefault": null
+    },
+    "exception": "INVALID_ADDRESS_COORDINATES",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D03",
+    "conditionTrace": {
+      "Math.Abs(geo.Latitude) <= 90": "True",
+      "Math.Abs(geo.Longitude) <= 180": "False"
+    }
+  },
+  "UTM-091-TC015": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D03",
+    "conditionTrace": {
+      "Math.Abs(geo.Latitude) <= 90": "True",
+      "Math.Abs(geo.Longitude) <= 180": "True"
+    }
+  },
+  "UTM-091-TC016": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D04",
+    "conditionTrace": {
+      "!string.IsNullOrEmpty(request.AddressId)": "False",
+      "!(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == request.AddressId)": "NE: short-circuited"
+    }
+  },
+  "UTM-091-TC017": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": "2",
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D04",
+    "conditionTrace": {
+      "!string.IsNullOrEmpty(request.AddressId)": "True",
+      "!(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == request.AddressId)": "False"
+    }
+  },
+  "UTM-091-TC018": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": "99",
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "NOT_FOUND",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D04",
+    "conditionTrace": {
+      "!string.IsNullOrEmpty(request.AddressId)": "True",
+      "!(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == request.AddressId)": "True"
+    }
+  },
+  "UTM-091-TC019": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D05",
+    "conditionTrace": {
+      "a.AddressId == request.AddressId": "False"
+    }
+  },
+  "UTM-091-TC020": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D05",
+    "conditionTrace": {
+      "a.AddressId == request.AddressId": "True"
+    }
+  },
+  "UTM-091-TC021": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D06",
+    "conditionTrace": {
+      "request.AddressId": "NE: short-circuited"
+    }
+  },
+  "UTM-091-TC022": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D06",
+    "conditionTrace": {
+      "request.AddressId": "NE: short-circuited"
+    }
+  },
+  "UTM-091-TC023": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": null
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D07",
+    "conditionTrace": {
+      "request.IsDefault": "NE: short-circuited"
+    }
+  },
+  "UTM-091-TC024": {
+    "data": {
+      "Phone": "123456789",
+      "AddressId": null,
+      "Latitude": 10,
+      "Longitude": 105,
+      "IsDefault": true
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-091-D07",
+    "conditionTrace": {
+      "request.IsDefault": "NE: short-circuited"
+    }
+  },
+  "UTM-096-TC011": {
+    "data": {
+      "value": "abc"
+    },
+    "exception": "INVALID_ID",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-096-D01",
+    "conditionTrace": {
+      "long.TryParse(value, out var n)": "False",
+      "n > 0": "NE: short-circuited"
+    }
+  },
+  "UTM-096-TC012": {
+    "data": {
+      "value": "0"
+    },
+    "exception": "INVALID_ID",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-096-D01",
+    "conditionTrace": {
+      "long.TryParse(value, out var n)": "True",
+      "n > 0": "False"
+    }
+  },
+  "UTM-096-TC013": {
+    "data": {
+      "value": "1"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-096-D01",
+    "conditionTrace": {
+      "long.TryParse(value, out var n)": "True",
+      "n > 0": "True"
+    }
+  },
+  "UTM-097-TC009": {
+    "data": {
+      "value": " "
+    },
+    "exception": "INVALID_REFERENCE",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-097-D01",
+    "conditionTrace": {
+      "!string.IsNullOrWhiteSpace(value)": "False",
+      "value.Length <= 128": "NE: short-circuited"
+    }
+  },
+  "UTM-097-TC010": {
+    "data": {
+      "value": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+    },
+    "exception": "INVALID_REFERENCE",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-097-D01",
+    "conditionTrace": {
+      "!string.IsNullOrWhiteSpace(value)": "True",
+      "value.Length <= 128": "False"
+    }
+  },
+  "UTM-097-TC011": {
+    "data": {
+      "value": "k"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-097-D01",
+    "conditionTrace": {
+      "!string.IsNullOrWhiteSpace(value)": "True",
+      "value.Length <= 128": "True"
+    }
+  },
+  "UTM-103-TC010": {
+    "data": {
+      "quantity": 1,
+      "CurrentStock": 10,
+      "ReservedStock": 3
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-103-D01",
+    "conditionTrace": {
+      "quantity <= 0": "False",
+      "CurrentStock - ReservedStock < quantity": "False"
+    }
+  },
+  "UTM-103-TC011": {
+    "data": {
+      "quantity": 8,
+      "CurrentStock": 10,
+      "ReservedStock": 3
+    },
+    "exception": "INSUFFICIENT_STOCK",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-103-D01",
+    "conditionTrace": {
+      "quantity <= 0": "False",
+      "CurrentStock - ReservedStock < quantity": "True"
+    }
+  },
+  "UTM-103-TC012": {
+    "data": {
+      "quantity": 0,
+      "CurrentStock": 10,
+      "ReservedStock": 3
+    },
+    "exception": "INSUFFICIENT_STOCK",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-103-D01",
+    "conditionTrace": {
+      "quantity <= 0": "True",
+      "CurrentStock - ReservedStock < quantity": "NE: short-circuited"
+    }
+  },
+  "UTM-104-TC010": {
+    "data": {
+      "quantity": 1,
+      "CurrentStock": 10,
+      "ReservedStock": 3
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-104-D01",
+    "conditionTrace": {
+      "quantity <= 0": "False",
+      "ReservedStock < quantity": "False"
+    }
+  },
+  "UTM-104-TC011": {
+    "data": {
+      "quantity": 4,
+      "CurrentStock": 10,
+      "ReservedStock": 3
+    },
+    "exception": "RESERVATION_INCONSISTENT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-104-D01",
+    "conditionTrace": {
+      "quantity <= 0": "False",
+      "ReservedStock < quantity": "True"
+    }
+  },
+  "UTM-104-TC012": {
+    "data": {
+      "quantity": 0,
+      "CurrentStock": 10,
+      "ReservedStock": 3
+    },
+    "exception": "RESERVATION_INCONSISTENT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-104-D01",
+    "conditionTrace": {
+      "quantity <= 0": "True",
+      "ReservedStock < quantity": "NE: short-circuited"
+    }
+  },
+  "UTM-110-TC011": {
+    "data": {
+      "RetailPrice": "10000",
+      "DiscountRate": 0
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D01",
+    "conditionTrace": {
+      "rate != 0": "False",
+      "rate < 10": "NE: short-circuited",
+      "rate > 50": "NE: short-circuited",
+      "decimal.Round(rate, 2) != rate": "NE: short-circuited"
+    }
+  },
+  "UTM-110-TC012": {
+    "data": {
+      "RetailPrice": "10000",
+      "DiscountRate": 10
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D01",
+    "conditionTrace": {
+      "rate != 0": "True",
+      "rate < 10": "False",
+      "rate > 50": "False",
+      "decimal.Round(rate, 2) != rate": "False"
+    }
+  },
+  "UTM-110-TC013": {
+    "data": {
+      "RetailPrice": "10000",
+      "DiscountRate": 10.001
+    },
+    "exception": "INVALID_DISCOUNT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D01",
+    "conditionTrace": {
+      "rate != 0": "True",
+      "rate < 10": "False",
+      "rate > 50": "False",
+      "decimal.Round(rate, 2) != rate": "True"
+    }
+  },
+  "UTM-110-TC014": {
+    "data": {
+      "RetailPrice": "10000",
+      "DiscountRate": 51
+    },
+    "exception": "INVALID_DISCOUNT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D01",
+    "conditionTrace": {
+      "rate != 0": "True",
+      "rate < 10": "False",
+      "rate > 50": "True",
+      "decimal.Round(rate, 2) != rate": "NE: short-circuited"
+    }
+  },
+  "UTM-110-TC015": {
+    "data": {
+      "RetailPrice": "10000",
+      "DiscountRate": 9
+    },
+    "exception": "INVALID_DISCOUNT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D01",
+    "conditionTrace": {
+      "rate != 0": "True",
+      "rate < 10": "True",
+      "rate > 50": "NE: short-circuited",
+      "decimal.Round(rate, 2) != rate": "NE: short-circuited"
+    }
+  },
+  "UTM-110-TC016": {
+    "data": {
+      "RetailPrice": "10000",
+      "DiscountRate": 10
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D02",
+    "conditionTrace": {
+      "decimal.Truncate(amount) != amount": "False"
+    }
+  },
+  "UTM-110-TC017": {
+    "data": {
+      "RetailPrice": "101",
+      "DiscountRate": 10
+    },
+    "exception": "ROUNDING_POLICY_TBD",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-110-D02",
+    "conditionTrace": {
+      "decimal.Truncate(amount) != amount": "True"
+    }
+  },
+  "UTM-111-TC012": {
+    "data": {
+      "distanceKm": -0.001
+    },
+    "exception": "OUTSIDE_DELIVERY_AREA",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-111-D01",
+    "conditionTrace": {}
+  },
+  "UTM-111-TC013": {
+    "data": {
+      "distanceKm": 0.5
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-111-D02",
+    "conditionTrace": {}
+  },
+  "UTM-111-TC014": {
+    "data": {
+      "distanceKm": 2
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-111-D03",
+    "conditionTrace": {}
+  },
+  "UTM-111-TC015": {
+    "data": {
+      "distanceKm": 5
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-111-D04",
+    "conditionTrace": {}
+  },
+  "UTM-113-TC010": {
+    "data": {
+      "units": "10000"
+    },
+    "exception": "",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-113-D01",
+    "conditionTrace": {
+      "units < 0": "False",
+      "units > 999999999999999999m": "False",
+      "decimal.Truncate(units) != units": "False"
+    }
+  },
+  "UTM-113-TC011": {
+    "data": {
+      "units": "0.5"
+    },
+    "exception": "INVALID_VND_AMOUNT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-113-D01",
+    "conditionTrace": {
+      "units < 0": "False",
+      "units > 999999999999999999m": "False",
+      "decimal.Truncate(units) != units": "True"
+    }
+  },
+  "UTM-113-TC012": {
+    "data": {
+      "units": "1000000000000000000"
+    },
+    "exception": "INVALID_VND_AMOUNT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-113-D01",
+    "conditionTrace": {
+      "units < 0": "False",
+      "units > 999999999999999999m": "True",
+      "decimal.Truncate(units) != units": "NE: short-circuited"
+    }
+  },
+  "UTM-113-TC013": {
+    "data": {
+      "units": "-1"
+    },
+    "exception": "INVALID_VND_AMOUNT",
+    "basis": "Concrete witness derived from the approved domain limits; no production seam or requirement change.",
+    "originalDecision": "UTM-113-D01",
+    "conditionTrace": {
+      "units < 0": "True",
+      "units > 999999999999999999m": "NE: short-circuited",
+      "decimal.Truncate(units) != units": "NE: short-circuited"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "decision": "Two independent initial states, no parent or transition between them",
+  "documents": [
+    {
+      "document": "artifacts/Requirements_Analysis_Design_Specification.docx",
+      "text_replacements": 11,
+      "replaced_images": 5
+    },
+    {
+      "document": "artifacts/requirements/Software_Requirements_Specification.docx",
+      "text_replacements": 6,
+      "replaced_images": 4
+    }
+  ],
+  "database_checks": 20,
+  "later_payment_policy": "TBD - Stakeholder confirmation required.",
+  "diagram_checks": [
+    "No parent Pending",
+    "Independent states share root parent",
+    "Initial choice has both guarded branches",
+    "No transition between pending states"
+  ],
+  "rendered_review_pages": [
+    "scratch\\order-policy-render\\pending-review-85.png",
+    "scratch\\order-policy-render\\pending-review-86.png"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "backend_classifiers": 156,
+  "modeled_operations": 251,
+  "test_cases": 57,
+  "passed": 57,
+  "failed": 0,
+  "coverage": {
+    "CatalogService.js": {
+      "line_percent": 100.0,
+      "branch_percent": 94.74,
+      "function_percent": 100.0
+    },
+    "CartService.js": {
+      "line_percent": 100.0,
+      "branch_percent": 90.91,
+      "function_percent": 100.0
+    },
+    "ProfileService.js": {
+      "line_percent": 100.0,
+      "branch_percent": 94.74,
+      "function_percent": 100.0
+    },
+    "CheckoutService.js": {
+      "line_percent": 100.0,
+      "branch_percent": 96.15,
+      "function_percent": 100.0
+    },
+    "MyOrdersService.js": {
+      "line_percent": 100.0,
+      "branch_percent": 87.5,
+      "function_percent": 100.0
+    },
+    "all files": {
+      "line_percent": 92.95,
+      "branch_percent": 89.82,
+      "function_percent": 43.16
+    }
+  },
+  "node": "v24.22.1",
+  "scope": "Local unit/module/native HTTP tests with test doubles; no live PostgreSQL/Google Maps/SePay tests",
+  "production_ready": false
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "Reference": "normal",
+    "Hash": "acdd864d073d69a6b2d7011a6cf5dd3ce9608700b27c6630bcaed90e3913e741"
+  },
+  {
+    "Reference": "A\u000b B",
+    "Hash": "85856301cc117b4c1a6de0f6372a6606b4fe4d818252be3321277970be9d3dee"
+  },
+  {
+    "Reference": "unicode-Đơn-hàng",
+    "Hash": "879c7d4abd368422b92a3413d5b772a608a309221c56822fbca69fde82ffa579"
+  },
+  {
+    "Reference": "emoji-🍏",
+    "Hash": "ea32b21311a8a83c0063fff5bcb94f747b90305a3fdd7a9950bd5cd5856e4312"
+  },
+  {
+    "Reference": "quote-\"\\\n",
+    "Hash": "a43e8edb509c1333be3e5cfca413683ea204dc37c66e93c3f918ac0bb2a73dd9"
+  }
+]

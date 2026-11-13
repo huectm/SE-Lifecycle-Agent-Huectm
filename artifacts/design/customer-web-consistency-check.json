@@ -1,0 +1,14 @@
+{
+  "subsystems": 5,
+  "customer_channels": [
+    "FreshFood-Customer-Web",
+    "FreshFood-App"
+  ],
+  "diagram_obstacle_crossings": [],
+  "rtm_customer_requirement_links": 8,
+  "master_embedded_architecture_image_matches_source_png": true,
+  "approval_status": "Pending architecture review",
+  "context_data_flows_preserved": 19,
+  "context_images_match_source_png_in_both_documents": true,
+  "document_heading_hierarchies_preserved": true
+}

@@ -1,0 +1,4989 @@
+{
+  "date": "2026-11-03",
+  "scope": "Five customer use cases; backend C# source. Frontend messages are checked against design only because frontend implementations remain scaffolds.",
+  "status": "INCONSISTENCIES_FOUND",
+  "method": "Roslyn-bound current source plus direct Draw.io XML inspection; name, arity, parameter/return types, property shape and source call reachability. Not dynamic flow proof.",
+  "summary": {
+    "backendClassifiers": 132,
+    "sourceTypes": 135,
+    "compiledSourceErrors": 0,
+    "workspaceDiagnostics": 0,
+    "sourceInvocations": 620,
+    "classSignatureMismatches": 5,
+    "parameterNameDifferences": 2,
+    "missingSourceTypes": 0,
+    "additionalPublicSourceMethods": 4,
+    "classesWithPropertyDifferences": 2,
+    "classModelToDrawioOperationDifferences": 0,
+    "sequenceTraceToDrawioDifferences": 0,
+    "backendSequenceCallsChecked": 172,
+    "backendMessageSignatureMismatches": 5,
+    "boundInterObjectCallsMatched": 138,
+    "interObjectCallPairsRequiringReview": 3
+  },
+  "class_signature_mismatches": [
+    {
+      "class": "PostgreSqlSession",
+      "design": {
+        "text": "+ QueryAsync(sql: string, parameters: Object[], signal: CancellationToken): Task<List<T>>",
+        "name": "QueryAsync",
+        "arity": 0,
+        "parameters": [
+          {
+            "name": "sql",
+            "type": "string"
+          },
+          {
+            "name": "parameters",
+            "type": "Object[]"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken"
+          }
+        ],
+        "returnType": "Task<List<T>>",
+        "visibility": "+"
+      },
+      "sourceCandidates": [],
+      "source": "src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs",
+      "line": 6
+    },
+    {
+      "class": "CartController",
+      "design": {
+        "text": "+ GetCartAsync(identity: CartIdentityDto, signal: CancellationToken): Task<CartResultDto>",
+        "name": "GetCartAsync",
+        "arity": 0,
+        "parameters": [
+          {
+            "name": "identity",
+            "type": "CartIdentityDto"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken"
+          }
+        ],
+        "returnType": "Task<CartResultDto>",
+        "visibility": "+"
+      },
+      "sourceCandidates": [
+        {
+          "name": "GetCartAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 10
+        }
+      ],
+      "source": "src/FreshFood-API/Controllers/CartController.cs",
+      "line": 6
+    },
+    {
+      "class": "CartController",
+      "design": {
+        "text": "+ ChangeQuantityAsync(request: CartChangeDto, signal: CancellationToken): Task<CartResultDto>",
+        "name": "ChangeQuantityAsync",
+        "arity": 0,
+        "parameters": [
+          {
+            "name": "request",
+            "type": "CartChangeDto"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken"
+          }
+        ],
+        "returnType": "Task<CartResultDto>",
+        "visibility": "+"
+      },
+      "sourceCandidates": [
+        {
+          "name": "ChangeQuantityAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "productId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "CartChangeDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 15
+        }
+      ],
+      "source": "src/FreshFood-API/Controllers/CartController.cs",
+      "line": 6
+    },
+    {
+      "class": "MyOrdersController",
+      "design": {
+        "text": "+ CancelOrderAsync(request: CancelOrderDto, signal: CancellationToken): Task<OperationResultDto>",
+        "name": "CancelOrderAsync",
+        "arity": 0,
+        "parameters": [
+          {
+            "name": "request",
+            "type": "CancelOrderDto"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken"
+          }
+        ],
+        "returnType": "Task<OperationResultDto>",
+        "visibility": "+"
+      },
+      "sourceCandidates": [
+        {
+          "name": "CancelOrderAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "orderId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "CancelOrderDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<OperationResultDto>",
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 21
+        }
+      ],
+      "source": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+      "line": 6
+    },
+    {
+      "class": "MyOrdersController",
+      "design": {
+        "text": "+ SubmitReviewAsync(request: OrderReviewDto, signal: CancellationToken): Task<OperationResultDto>",
+        "name": "SubmitReviewAsync",
+        "arity": 0,
+        "parameters": [
+          {
+            "name": "request",
+            "type": "OrderReviewDto"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken"
+          }
+        ],
+        "returnType": "Task<OperationResultDto>",
+        "visibility": "+"
+      },
+      "sourceCandidates": [
+        {
+          "name": "SubmitReviewAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "orderId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "OrderReviewDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<OperationResultDto>",
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 32
+        }
+      ],
+      "source": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+      "line": 6
+    }
+  ],
+  "parameter_name_differences": [
+    {
+      "class": "IOrderStateMachine",
+      "method": "ProcessEventAsync",
+      "designParameters": [
+        {
+          "name": "snapshot",
+          "type": "TransitionSnapshot"
+        },
+        {
+          "name": "event",
+          "type": "StateMachineEvent"
+        },
+        {
+          "name": "signal",
+          "type": "CancellationToken"
+        }
+      ],
+      "sourceParameters": [
+        {
+          "name": "snapshot",
+          "type": "TransitionSnapshot",
+          "optional": false,
+          "refKind": "None"
+        },
+        {
+          "name": "message",
+          "type": "StateMachineEvent",
+          "optional": false,
+          "refKind": "None"
+        },
+        {
+          "name": "signal",
+          "type": "CancellationToken",
+          "optional": false,
+          "refKind": "None"
+        }
+      ],
+      "source": "src/FreshFood-API/Services/IOrderStateMachine.cs",
+      "line": 5
+    },
+    {
+      "class": "OrderStateMachine",
+      "method": "ProcessEventAsync",
+      "designParameters": [
+        {
+          "name": "snapshot",
+          "type": "TransitionSnapshot"
+        },
+        {
+          "name": "event",
+          "type": "StateMachineEvent"
+        },
+        {
+          "name": "signal",
+          "type": "CancellationToken"
+        }
+      ],
+      "sourceParameters": [
+        {
+          "name": "context",
+          "type": "TransitionSnapshot",
+          "optional": false,
+          "refKind": "None"
+        },
+        {
+          "name": "message",
+          "type": "StateMachineEvent",
+          "optional": false,
+          "refKind": "None"
+        },
+        {
+          "name": "signal",
+          "type": "CancellationToken",
+          "optional": false,
+          "refKind": "None"
+        }
+      ],
+      "source": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+      "line": 89
+    }
+  ],
+  "missing_source_types": [],
+  "additional_public_source_methods": [
+    {
+      "class": "UnitOfWork",
+      "method": {
+        "name": "ExecuteAsync",
+        "arity": 1,
+        "accessibility": "Public",
+        "isStatic": false,
+        "isConstructor": false,
+        "parameters": [
+          {
+            "name": "work",
+            "type": "Func<CancellationToken, Task<T>>",
+            "optional": false,
+            "refKind": "None"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken",
+            "optional": false,
+            "refKind": "None"
+          }
+        ],
+        "returnType": "Task<T>",
+        "file": "src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs",
+        "line": 7
+      }
+    },
+    {
+      "class": "PostgreSqlSession",
+      "method": {
+        "name": "QueryAsync",
+        "arity": 1,
+        "accessibility": "Public",
+        "isStatic": false,
+        "isConstructor": false,
+        "parameters": [
+          {
+            "name": "sql",
+            "type": "string",
+            "optional": false,
+            "refKind": "None"
+          },
+          {
+            "name": "parameters",
+            "type": "object?[]",
+            "optional": false,
+            "refKind": "None"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken",
+            "optional": false,
+            "refKind": "None"
+          }
+        ],
+        "returnType": "Task<List<T>>",
+        "file": "src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs",
+        "line": 35
+      }
+    },
+    {
+      "class": "ProfileController",
+      "method": {
+        "name": "UpdateAddressAsync",
+        "arity": 0,
+        "accessibility": "Public",
+        "isStatic": false,
+        "isConstructor": false,
+        "parameters": [
+          {
+            "name": "addressId",
+            "type": "string",
+            "optional": false,
+            "refKind": "None"
+          },
+          {
+            "name": "request",
+            "type": "AddressInputDto",
+            "optional": false,
+            "refKind": "None"
+          },
+          {
+            "name": "signal",
+            "type": "CancellationToken",
+            "optional": false,
+            "refKind": "None"
+          }
+        ],
+        "returnType": "Task<AddressDto>",
+        "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+        "line": 26
+      }
+    },
+    {
+      "class": "VndAmount",
+      "method": {
+        "name": "ToString",
+        "arity": 0,
+        "accessibility": "Public",
+        "isStatic": false,
+        "isConstructor": false,
+        "parameters": [],
+        "returnType": "string",
+        "file": "src/FreshFood.Reposistory/Entities/VndAmount.cs",
+        "line": 16
+      }
+    }
+  ],
+  "property_differences": [
+    {
+      "class": "OrderDetail",
+      "source": "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+      "differences": [
+        {
+          "property": "ProductId",
+          "kind": "source-only property",
+          "source": {
+            "name": "ProductId",
+            "type": "string",
+            "accessibility": "Public",
+            "setter": "Public",
+            "isReadOnly": false,
+            "file": "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+            "line": 49
+          }
+        },
+        {
+          "property": "ProductName",
+          "kind": "source-only property",
+          "source": {
+            "name": "ProductName",
+            "type": "string",
+            "accessibility": "Public",
+            "setter": "Public",
+            "isReadOnly": false,
+            "file": "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+            "line": 50
+          }
+        }
+      ]
+    },
+    {
+      "class": "TransitionSnapshot",
+      "source": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+      "differences": [
+        {
+          "property": "WorkflowNode",
+          "kind": "property type/access/setter differs",
+          "design": "+ WorkflowNode: string {get; set;}",
+          "source": {
+            "name": "WorkflowNode",
+            "type": "string?",
+            "accessibility": "Internal",
+            "setter": "Internal",
+            "isReadOnly": false,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 16
+          }
+        },
+        {
+          "property": "AggregateId",
+          "kind": "property type/access/setter differs",
+          "design": "+ AggregateId: string {get; set;}",
+          "source": {
+            "name": "AggregateId",
+            "type": "string",
+            "accessibility": "Public",
+            "setter": null,
+            "isReadOnly": true,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 11
+          }
+        },
+        {
+          "property": "CheckoutReference",
+          "kind": "design-only property",
+          "design": "+ CheckoutReference: string? {get; set;}"
+        },
+        {
+          "property": "CustomerId",
+          "kind": "property type/access/setter differs",
+          "design": "+ CustomerId: string {get; set;}",
+          "source": {
+            "name": "CustomerId",
+            "type": "string",
+            "accessibility": "Public",
+            "setter": null,
+            "isReadOnly": true,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 12
+          }
+        },
+        {
+          "property": "AddressId",
+          "kind": "design-only property",
+          "design": "+ AddressId: string? {get; set;}"
+        },
+        {
+          "property": "PaymentMethod",
+          "kind": "design-only property",
+          "design": "+ PaymentMethod: PaymentMethod? {get; set;}"
+        },
+        {
+          "property": "PlannedLines",
+          "kind": "design-only property",
+          "design": "+ PlannedLines: List<CheckoutLineDto> {get; set;}"
+        },
+        {
+          "property": "FulfillmentState",
+          "kind": "design-only property",
+          "design": "+ FulfillmentState: string {get; set;}"
+        },
+        {
+          "property": "PaymentState",
+          "kind": "design-only property",
+          "design": "+ PaymentState: string {get; set;}"
+        },
+        {
+          "property": "RefundState",
+          "kind": "design-only property",
+          "design": "+ RefundState: string? {get; set;}"
+        },
+        {
+          "property": "ActorId",
+          "kind": "property type/access/setter differs",
+          "design": "+ ActorId: string {get; set;}",
+          "source": {
+            "name": "ActorId",
+            "type": "string",
+            "accessibility": "Public",
+            "setter": null,
+            "isReadOnly": true,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 13
+          }
+        },
+        {
+          "property": "GuardFacts",
+          "kind": "design-only property",
+          "design": "+ GuardFacts: GuardFactsDto {get; set;}"
+        },
+        {
+          "property": "Order",
+          "kind": "source-only property",
+          "source": {
+            "name": "Order",
+            "type": "Order",
+            "accessibility": "Internal",
+            "setter": null,
+            "isReadOnly": true,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 14
+          }
+        },
+        {
+          "property": "Batches",
+          "kind": "source-only property",
+          "source": {
+            "name": "Batches",
+            "type": "List<BatchInventory>",
+            "accessibility": "Internal",
+            "setter": null,
+            "isReadOnly": true,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 15
+          }
+        },
+        {
+          "property": "PaymentInitialized",
+          "kind": "source-only property",
+          "source": {
+            "name": "PaymentInitialized",
+            "type": "bool",
+            "accessibility": "Internal",
+            "setter": "Internal",
+            "isReadOnly": false,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 17
+          }
+        },
+        {
+          "property": "Initial",
+          "kind": "source-only property",
+          "source": {
+            "name": "Initial",
+            "type": "bool",
+            "accessibility": "Internal",
+            "setter": null,
+            "isReadOnly": true,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 18
+          }
+        },
+        {
+          "property": "FulfillmentCompleted",
+          "kind": "source-only property",
+          "source": {
+            "name": "FulfillmentCompleted",
+            "type": "bool",
+            "accessibility": "Internal",
+            "setter": "Internal",
+            "isReadOnly": false,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 19
+          }
+        },
+        {
+          "property": "VerifiedPayment",
+          "kind": "source-only property",
+          "source": {
+            "name": "VerifiedPayment",
+            "type": "bool",
+            "accessibility": "Internal",
+            "setter": "Internal",
+            "isReadOnly": false,
+            "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+            "line": 20
+          }
+        }
+      ]
+    }
+  ],
+  "class_drawio_differences": [],
+  "sequence_trace_differences": [],
+  "message_signature_mismatches": [
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 3,
+      "sender": "CartApiClient",
+      "receiver": "CartController",
+      "message": "HTTPS GetCartAsync(identity); server supplies signal",
+      "method": "GetCartAsync",
+      "arguments": [
+        "identity"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCandidates": [
+        {
+          "name": "GetCartAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 10
+        }
+      ],
+      "reason": "receiver has no matching method/argument count"
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 3,
+      "sender": "CartApiClient",
+      "receiver": "CartController",
+      "message": "HTTPS ChangeQuantityAsync(request); server supplies signal",
+      "method": "ChangeQuantityAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCandidates": [
+        {
+          "name": "ChangeQuantityAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "productId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "CartChangeDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 15
+        }
+      ],
+      "reason": "receiver has no matching method/argument count"
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "Mobile entry refinement",
+      "number": 4,
+      "sender": "CartApiModel",
+      "receiver": "CartController",
+      "message": "HTTPS GetCartAsync(identity); server supplies signal",
+      "method": "GetCartAsync",
+      "arguments": [
+        "identity"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 4,
+      "sourceCandidates": [
+        {
+          "name": "GetCartAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 10
+        }
+      ],
+      "reason": "receiver has no matching method/argument count"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS CancelOrderAsync(request); server supplies signal",
+      "method": "CancelOrderAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCandidates": [
+        {
+          "name": "CancelOrderAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "orderId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "CancelOrderDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<OperationResultDto>",
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 21
+        }
+      ],
+      "reason": "receiver has no matching method/argument count"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS SubmitReviewAsync(request); server supplies signal",
+      "method": "SubmitReviewAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCandidates": [
+        {
+          "name": "SubmitReviewAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "orderId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "OrderReviewDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<OperationResultDto>",
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 32
+        }
+      ],
+      "reason": "receiver has no matching method/argument count"
+    }
+  ],
+  "source_call_pairs_requiring_review": [
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "callerMethodContext": "SaveAddressAsync",
+      "reason": "no bound source call found in the corresponding method or same-class helpers"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "callerMethodContext": "DeleteAddressAsync",
+      "reason": "no bound source call found in the corresponding method or same-class helpers"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "CreatePaymentQr",
+      "number": 7,
+      "sender": "CheckoutService",
+      "receiver": "SePayPaymentAdapter",
+      "message": "CreateQrAsync(reference, amount, signal)",
+      "method": "CreateQrAsync",
+      "arguments": [
+        "reference",
+        "amount",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 3,
+      "callerMethodContext": "CreatePaymentQrAsync",
+      "reason": "no bound source call found in the corresponding method or same-class helpers"
+    }
+  ],
+  "checked_sequence_calls": [
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetCatalog",
+      "number": 3,
+      "sender": "CatalogApiClient",
+      "receiver": "CatalogController",
+      "message": "HTTPS GetCatalogAsync(query); server supplies signal",
+      "method": "GetCatalogAsync",
+      "arguments": [
+        "query"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetCatalog",
+      "number": 4,
+      "sender": "CatalogController",
+      "receiver": "CatalogService",
+      "message": "GetCatalogAsync(query, signal)",
+      "method": "GetCatalogAsync",
+      "arguments": [
+        "query",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCatalogAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CatalogController.cs",
+          "line": 12,
+          "expression": "service.GetCatalogAsync(query, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetCatalog",
+      "number": 5,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "FindActiveAsync(keyword, categoryId, clearanceOnly, signal)",
+      "method": "FindActiveAsync",
+      "arguments": [
+        "keyword",
+        "categoryId",
+        "clearanceOnly",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCatalogAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 24,
+          "expression": "catalogRepository.FindActiveAsync(query.Keyword, category, query.ClearanceOnly, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetCatalog",
+      "number": 7,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "GetCategoriesAsync(signal)",
+      "method": "GetCategoriesAsync",
+      "arguments": [
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCatalogAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 28,
+          "expression": "catalogRepository.GetCategoriesAsync(signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetCatalog",
+      "number": 9,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "GetSellableBatchesAsync(productIds, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "productIds",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCatalogAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 7,
+          "expression": "catalogRepository.GetSellableBatchesAsync(products.Select(p => p.ProductId).ToList(), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetCatalog",
+      "number": 11,
+      "sender": "CatalogService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCatalogAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 17,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Search",
+      "number": 3,
+      "sender": "CatalogApiClient",
+      "receiver": "CatalogController",
+      "message": "HTTPS SearchAsync(query); server supplies signal",
+      "method": "SearchAsync",
+      "arguments": [
+        "query"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Search",
+      "number": 4,
+      "sender": "CatalogController",
+      "receiver": "CatalogService",
+      "message": "SearchAsync(query, signal)",
+      "method": "SearchAsync",
+      "arguments": [
+        "query",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SearchAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CatalogController.cs",
+          "line": 17,
+          "expression": "service.SearchAsync(query, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Search",
+      "number": 5,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "FindActiveAsync(keyword, categoryId, clearanceOnly, signal)",
+      "method": "FindActiveAsync",
+      "arguments": [
+        "keyword",
+        "categoryId",
+        "clearanceOnly",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SearchAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 24,
+          "expression": "catalogRepository.FindActiveAsync(query.Keyword, category, query.ClearanceOnly, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Search",
+      "number": 7,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "GetSellableBatchesAsync(productIds, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "productIds",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SearchAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 7,
+          "expression": "catalogRepository.GetSellableBatchesAsync(products.Select(p => p.ProductId).ToList(), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Search",
+      "number": 9,
+      "sender": "CatalogService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SearchAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 17,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetProductDetails",
+      "number": 3,
+      "sender": "CatalogApiClient",
+      "receiver": "CatalogController",
+      "message": "HTTPS GetProductDetailsAsync(productId); server supplies signal",
+      "method": "GetProductDetailsAsync",
+      "arguments": [
+        "productId"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetProductDetails",
+      "number": 4,
+      "sender": "CatalogController",
+      "receiver": "CatalogService",
+      "message": "GetProductDetailsAsync(productId, signal)",
+      "method": "GetProductDetailsAsync",
+      "arguments": [
+        "productId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProductDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CatalogController.cs",
+          "line": 27,
+          "expression": "service.GetProductDetailsAsync(productId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetProductDetails",
+      "number": 5,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "GetProductAsync(productId, signal)",
+      "method": "GetProductAsync",
+      "arguments": [
+        "productId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProductDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 36,
+          "expression": "catalogRepository.GetProductAsync(ServiceRules.Id(productId), signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetProductDetails",
+      "number": 7,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "GetSellableBatchesAsync(productIds, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "productIds",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProductDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 38,
+          "expression": "catalogRepository.GetSellableBatchesAsync([productId], signal)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 7,
+          "expression": "catalogRepository.GetSellableBatchesAsync(products.Select(p => p.ProductId).ToList(), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetProductDetails",
+      "number": 9,
+      "sender": "CatalogService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProductDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 39,
+          "expression": "pricing.Quote(b, DateTimeOffset.UtcNow)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 17,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetClearance",
+      "number": 3,
+      "sender": "CatalogApiClient",
+      "receiver": "CatalogController",
+      "message": "HTTPS GetClearanceAsync(query); server supplies signal",
+      "method": "GetClearanceAsync",
+      "arguments": [
+        "query"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetClearance",
+      "number": 4,
+      "sender": "CatalogController",
+      "receiver": "CatalogService",
+      "message": "GetClearanceAsync(query, signal)",
+      "method": "GetClearanceAsync",
+      "arguments": [
+        "query",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetClearanceAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CatalogController.cs",
+          "line": 22,
+          "expression": "service.GetClearanceAsync(query, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetClearance",
+      "number": 5,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "FindActiveAsync(keyword, categoryId, clearanceOnly, signal)",
+      "method": "FindActiveAsync",
+      "arguments": [
+        "keyword",
+        "categoryId",
+        "clearanceOnly",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetClearanceAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 24,
+          "expression": "catalogRepository.FindActiveAsync(query.Keyword, category, query.ClearanceOnly, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetClearance",
+      "number": 7,
+      "sender": "CatalogService",
+      "receiver": "CatalogRepository",
+      "message": "GetSellableBatchesAsync(productIds, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "productIds",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetClearanceAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 7,
+          "expression": "catalogRepository.GetSellableBatchesAsync(products.Select(p => p.ProductId).ToList(), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "GetClearance",
+      "number": 9,
+      "sender": "CatalogService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetClearanceAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CatalogService.cs",
+          "line": 17,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Mobile entry refinement",
+      "number": 4,
+      "sender": "CatalogApiModel",
+      "receiver": "CatalogController",
+      "message": "HTTPS GetCatalogAsync(query); server supplies signal",
+      "method": "GetCatalogAsync",
+      "arguments": [
+        "query"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C01",
+      "pageTitle": "Mobile entry refinement",
+      "number": 5,
+      "sender": "CatalogController",
+      "receiver": "CatalogService",
+      "message": "GetCatalogAsync(query, signal)",
+      "method": "GetCatalogAsync",
+      "arguments": [
+        "query",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCatalogAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CatalogController.cs",
+          "line": 12,
+          "expression": "service.GetCatalogAsync(query, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 3,
+      "sender": "CartApiClient",
+      "receiver": "CartController",
+      "message": "HTTPS GetCartAsync(identity); server supplies signal",
+      "method": "GetCartAsync",
+      "arguments": [
+        "identity"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 4,
+      "sender": "CartController",
+      "receiver": "CartService",
+      "message": "GetCartAsync(identity, signal)",
+      "method": "GetCartAsync",
+      "arguments": [
+        "identity",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 12,
+          "expression": "service.GetCartAsync(new CartIdentityDto(), signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 5,
+      "sender": "CartService",
+      "receiver": "CurrentCustomer",
+      "message": "GetCartIdentity()",
+      "method": "GetCartIdentity",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 5,
+          "expression": "currentCustomer.GetCartIdentity()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 7,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetAsync(customerId, sessionId, signal)",
+      "method": "GetAsync",
+      "arguments": [
+        "customerId",
+        "sessionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 5,
+          "expression": "cartRepository.GetAsync(identity.CustomerId, identity.SessionId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 9,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetProductsAsync(ids, signal)",
+      "method": "GetProductsAsync",
+      "arguments": [
+        "ids",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 9,
+          "expression": "cartRepository.GetProductsAsync(ids, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 11,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetSellableBatchesAsync(ids, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "ids",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 9,
+          "expression": "cartRepository.GetSellableBatchesAsync(ids, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "GetCart",
+      "number": 13,
+      "sender": "CartService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 15,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 3,
+      "sender": "CartApiClient",
+      "receiver": "CartController",
+      "message": "HTTPS ChangeQuantityAsync(request); server supplies signal",
+      "method": "ChangeQuantityAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 4,
+      "sender": "CartController",
+      "receiver": "CartService",
+      "message": "ChangeQuantityAsync(request, signal)",
+      "method": "ChangeQuantityAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 17,
+          "expression": "service.ChangeQuantityAsync(new CartChangeDto { ProductId = productId, Quantity = request.Quantity }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 5,
+      "sender": "CartService",
+      "receiver": "CurrentCustomer",
+      "message": "GetCartIdentity()",
+      "method": "GetCartIdentity",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 5,
+          "expression": "currentCustomer.GetCartIdentity()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 7,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetAsync(customerId, sessionId, signal)",
+      "method": "GetAsync",
+      "arguments": [
+        "customerId",
+        "sessionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 5,
+          "expression": "cartRepository.GetAsync(identity.CustomerId, identity.SessionId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 9,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetProductsAsync(ids, signal)",
+      "method": "GetProductsAsync",
+      "arguments": [
+        "ids",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 28,
+          "expression": "cartRepository.GetProductsAsync([request.ProductId], ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 9,
+          "expression": "cartRepository.GetProductsAsync(ids, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 11,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetSellableBatchesAsync(ids, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "ids",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 30,
+          "expression": "cartRepository.GetSellableBatchesAsync([request.ProductId], ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 9,
+          "expression": "cartRepository.GetSellableBatchesAsync(ids, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 13,
+      "sender": "CartService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 15,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 15,
+      "sender": "CartService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 26,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            var cart = await Load(ct); var products = await cartRepository.GetProductsAsync([request.ProductId], ct);\n            ServiceRules.Require(products.Any(p => p.IsActive), \"PRODUCT_UNAVAILABLE\", 422);\n            var stock = await cartRepository.GetSellableBatchesAsync([request.ProductId], ct);\n            var available = stock.Where(ServiceRules.Sellable).Sum(b => b.CurrentStock - b.ReservedStock);\n            ServiceRules.Require(available > 0, \"OUT_OF_STOCK\", 422); var actual = Math.Min(request.Quantity, available);\n            cart.ChangeQuantity(request.ProductId, actual); await cartRepository.SaveAsync(cart, ct);\n            var result = await Result(cart, ct); if (actual < request.Quantity) result.Warnings.Add(\"QUANTITY_CLAMPED:\" + request.ProductId); return result;\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "ChangeQuantity",
+      "number": 17,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "SaveAsync(cart, signal)",
+      "method": "SaveAsync",
+      "arguments": [
+        "cart",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ChangeQuantityAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 33,
+          "expression": "cartRepository.SaveAsync(cart, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 3,
+      "sender": "CartApiClient",
+      "receiver": "CartController",
+      "message": "HTTPS RemoveItemAsync(productId); server supplies signal",
+      "method": "RemoveItemAsync",
+      "arguments": [
+        "productId"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 4,
+      "sender": "CartController",
+      "receiver": "CartService",
+      "message": "RemoveItemAsync(productId, signal)",
+      "method": "RemoveItemAsync",
+      "arguments": [
+        "productId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 22,
+          "expression": "service.RemoveItemAsync(productId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 5,
+      "sender": "CartService",
+      "receiver": "CurrentCustomer",
+      "message": "GetCartIdentity()",
+      "method": "GetCartIdentity",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 5,
+          "expression": "currentCustomer.GetCartIdentity()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 7,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetAsync(customerId, sessionId, signal)",
+      "method": "GetAsync",
+      "arguments": [
+        "customerId",
+        "sessionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 5,
+          "expression": "cartRepository.GetAsync(identity.CustomerId, identity.SessionId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 9,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetProductsAsync(ids, signal)",
+      "method": "GetProductsAsync",
+      "arguments": [
+        "ids",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 9,
+          "expression": "cartRepository.GetProductsAsync(ids, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 11,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "GetSellableBatchesAsync(ids, signal)",
+      "method": "GetSellableBatchesAsync",
+      "arguments": [
+        "ids",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 9,
+          "expression": "cartRepository.GetSellableBatchesAsync(ids, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 13,
+      "sender": "CartService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 15,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 15,
+      "sender": "CartService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 40,
+          "expression": "unitOfWork.ExecuteAsync(async ct => { var cart = await Load(ct); cart.RemoveItem(productId); await cartRepository.SaveAsync(cart, ct); return await Result(cart, ct); }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "RemoveItem",
+      "number": 17,
+      "sender": "CartService",
+      "receiver": "CartRepository",
+      "message": "SaveAsync(cart, signal)",
+      "method": "SaveAsync",
+      "arguments": [
+        "cart",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "RemoveItemAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CartService.cs",
+          "line": 40,
+          "expression": "cartRepository.SaveAsync(cart, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "Mobile entry refinement",
+      "number": 4,
+      "sender": "CartApiModel",
+      "receiver": "CartController",
+      "message": "HTTPS GetCartAsync(identity); server supplies signal",
+      "method": "GetCartAsync",
+      "arguments": [
+        "identity"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C03",
+      "pageTitle": "Mobile entry refinement",
+      "number": 5,
+      "sender": "CartController",
+      "receiver": "CartService",
+      "message": "GetCartAsync(identity, signal)",
+      "method": "GetCartAsync",
+      "arguments": [
+        "identity",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetCartAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CartController.cs",
+          "line": 12,
+          "expression": "service.GetCartAsync(new CartIdentityDto(), signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "GetProfile",
+      "number": 3,
+      "sender": "ProfileApiClient",
+      "receiver": "ProfileController",
+      "message": "HTTPS GetProfileAsync(); server supplies signal",
+      "method": "GetProfileAsync",
+      "arguments": [],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "GetProfile",
+      "number": 4,
+      "sender": "ProfileController",
+      "receiver": "ProfileService",
+      "message": "GetProfileAsync(signal)",
+      "method": "GetProfileAsync",
+      "arguments": [
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 13,
+          "expression": "service.GetProfileAsync(signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "GetProfile",
+      "number": 5,
+      "sender": "ProfileService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 9,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "GetProfile",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 9,
+          "expression": "profileRepository.GetCustomerAsync(id, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "GetProfile",
+      "number": 9,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetAddressesAsync(customerId, signal)",
+      "method": "GetAddressesAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 10,
+          "expression": "profileRepository.GetAddressesAsync(id, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 3,
+      "sender": "ProfileApiClient",
+      "receiver": "ProfileController",
+      "message": "HTTPS UpdateProfileAsync(request); server supplies signal",
+      "method": "UpdateProfileAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 4,
+      "sender": "ProfileController",
+      "receiver": "ProfileService",
+      "message": "UpdateProfileAsync(request, signal)",
+      "method": "UpdateProfileAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "UpdateProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 18,
+          "expression": "service.UpdateProfileAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 5,
+      "sender": "ProfileService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "UpdateProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 14,
+          "expression": "currentCustomer.RequireCustomerId()"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 9,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "UpdateProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 16,
+          "expression": "profileRepository.GetCustomerAsync(id, ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 9,
+          "expression": "profileRepository.GetCustomerAsync(id, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 9,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetAddressesAsync(customerId, signal)",
+      "method": "GetAddressesAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "UpdateProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 10,
+          "expression": "profileRepository.GetAddressesAsync(id, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 11,
+      "sender": "ProfileService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "UpdateProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 16,
+          "expression": "unitOfWork.ExecuteAsync(async ct => { var c = await profileRepository.GetCustomerAsync(id, ct); c.FullName = name; c.Email = string.IsNullOrEmpty(request.Email) ? null : request.Email; await profileRepository.SaveCustomerAsync(c, ct); }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "UpdateProfile",
+      "number": 13,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "SaveCustomerAsync(customer, signal)",
+      "method": "SaveCustomerAsync",
+      "arguments": [
+        "customer",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "UpdateProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 16,
+          "expression": "profileRepository.SaveCustomerAsync(c, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 3,
+      "sender": "ProfileApiClient",
+      "receiver": "ProfileController",
+      "message": "HTTPS SaveAddressAsync(request); server supplies signal",
+      "method": "SaveAddressAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 4,
+      "sender": "ProfileController",
+      "receiver": "ProfileService",
+      "message": "SaveAddressAsync(request, signal)",
+      "method": "SaveAddressAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 23,
+          "expression": "service.SaveAddressAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 5,
+      "sender": "ProfileService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 21,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "manual review required",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": []
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 9,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetAddressesAsync(customerId, signal)",
+      "method": "GetAddressesAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 27,
+          "expression": "profileRepository.GetAddressesAsync(id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 11,
+      "sender": "ProfileService",
+      "receiver": "GoogleMapsGeocodingAdapter",
+      "message": "ResolveAsync(address, signal)",
+      "method": "ResolveAsync",
+      "arguments": [
+        "address",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 23,
+          "expression": "geocodingGateway.ResolveAsync(street, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 13,
+      "sender": "ProfileService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 25,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            if (!string.IsNullOrEmpty(request.AddressId) && !(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == request.AddressId)) throw new DomainException(\"NOT_FOUND\", 404);\n            var entity = new CustomerAddress { AddressId = request.AddressId ?? \"\", CustomerId = id, RecipientName = name, RecipientPhone = phone, StreetAddress = street, Latitude = geo.Latitude, Longitude = geo.Longitude, IsDefault = request.IsDefault };\n            await profileRepository.SaveAddressAsync(entity, ct); return ServiceRules.Address(entity);\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SaveAddress",
+      "number": 15,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "SaveAddressAsync(address, signal)",
+      "method": "SaveAddressAsync",
+      "arguments": [
+        "address",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SaveAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 29,
+          "expression": "profileRepository.SaveAddressAsync(entity, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 3,
+      "sender": "ProfileApiClient",
+      "receiver": "ProfileController",
+      "message": "HTTPS SetDefaultAddressAsync(addressId); server supplies signal",
+      "method": "SetDefaultAddressAsync",
+      "arguments": [
+        "addressId"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 4,
+      "sender": "ProfileController",
+      "receiver": "ProfileService",
+      "message": "SetDefaultAddressAsync(addressId, signal)",
+      "method": "SetDefaultAddressAsync",
+      "arguments": [
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SetDefaultAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 34,
+          "expression": "service.SetDefaultAddressAsync(addressId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 5,
+      "sender": "ProfileService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SetDefaultAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 34,
+          "expression": "currentCustomer.RequireCustomerId()"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 9,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SetDefaultAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 9,
+          "expression": "profileRepository.GetCustomerAsync(id, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 9,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetAddressesAsync(customerId, signal)",
+      "method": "GetAddressesAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SetDefaultAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 35,
+          "expression": "profileRepository.GetAddressesAsync(id, ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 10,
+          "expression": "profileRepository.GetAddressesAsync(id, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 11,
+      "sender": "ProfileService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SetDefaultAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 35,
+          "expression": "unitOfWork.ExecuteAsync(async ct => { var a = (await profileRepository.GetAddressesAsync(id, ct)).SingleOrDefault(a => a.AddressId == addressId) ?? throw new DomainException(\"NOT_FOUND\", 404); a.IsDefault = true; await profileRepository.SaveAddressAsync(a, ct); }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "SetDefaultAddress",
+      "number": 13,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "SaveAddressAsync(address, signal)",
+      "method": "SaveAddressAsync",
+      "arguments": [
+        "address",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SetDefaultAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 35,
+          "expression": "profileRepository.SaveAddressAsync(a, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 3,
+      "sender": "ProfileApiClient",
+      "receiver": "ProfileController",
+      "message": "HTTPS DeleteAddressAsync(addressId); server supplies signal",
+      "method": "DeleteAddressAsync",
+      "arguments": [
+        "addressId"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 4,
+      "sender": "ProfileController",
+      "receiver": "ProfileService",
+      "message": "DeleteAddressAsync(addressId, signal)",
+      "method": "DeleteAddressAsync",
+      "arguments": [
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 39,
+          "expression": "service.DeleteAddressAsync(addressId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 5,
+      "sender": "ProfileService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 40,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 7,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetCustomerAsync(customerId, signal)",
+      "method": "GetCustomerAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "manual review required",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": []
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 9,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "GetAddressesAsync(customerId, signal)",
+      "method": "GetAddressesAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 43,
+          "expression": "profileRepository.GetAddressesAsync(id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 11,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "HasActiveOrderAsync(customerId, addressId, signal)",
+      "method": "HasActiveOrderAsync",
+      "arguments": [
+        "customerId",
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 44,
+          "expression": "profileRepository.HasActiveOrderAsync(id, addressId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 13,
+      "sender": "ProfileService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 41,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            ServiceRules.Require((await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == addressId), \"NOT_FOUND\", 404);\n            ServiceRules.Require(!await profileRepository.HasActiveOrderAsync(id, addressId, ct), \"ADDRESS_USED_BY_ACTIVE_ORDER\", 409);\n            await profileRepository.DeleteAddressAsync(id, addressId, ct);\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "DeleteAddress",
+      "number": 15,
+      "sender": "ProfileService",
+      "receiver": "ProfileRepository",
+      "message": "DeleteAddressAsync(customerId, addressId, signal)",
+      "method": "DeleteAddressAsync",
+      "arguments": [
+        "customerId",
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "DeleteAddressAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/ProfileService.cs",
+          "line": 45,
+          "expression": "profileRepository.DeleteAddressAsync(id, addressId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "Mobile entry refinement",
+      "number": 4,
+      "sender": "ProfileApiModel",
+      "receiver": "ProfileController",
+      "message": "HTTPS GetProfileAsync(); server supplies signal",
+      "method": "GetProfileAsync",
+      "arguments": [],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C05",
+      "pageTitle": "Mobile entry refinement",
+      "number": 5,
+      "sender": "ProfileController",
+      "receiver": "ProfileService",
+      "message": "GetProfileAsync(signal)",
+      "method": "GetProfileAsync",
+      "arguments": [
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetProfileAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 13,
+          "expression": "service.GetProfileAsync(signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 3,
+      "sender": "CheckoutApiClient",
+      "receiver": "CheckoutController",
+      "message": "HTTPS PrepareCheckoutAsync(request); server supplies signal",
+      "method": "PrepareCheckoutAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 4,
+      "sender": "CheckoutController",
+      "receiver": "CheckoutService",
+      "message": "PrepareCheckoutAsync(request, signal)",
+      "method": "PrepareCheckoutAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CheckoutController.cs",
+          "line": 13,
+          "expression": "service.PrepareCheckoutAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 5,
+      "sender": "CheckoutService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 14,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 7,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "GetCheckoutCartAsync(customerId, signal)",
+      "method": "GetCheckoutCartAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 15,
+          "expression": "checkoutRepository.GetCheckoutCartAsync(customer, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 9,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "GetOwnedAddressAsync(customerId, addressId, signal)",
+      "method": "GetOwnedAddressAsync",
+      "arguments": [
+        "customerId",
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 16,
+          "expression": "checkoutRepository.GetOwnedAddressAsync(customer, addressId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 11,
+      "sender": "CheckoutService",
+      "receiver": "DistanceCalculator",
+      "message": "CalculateAsync(addressId, signal)",
+      "method": "CalculateAsync",
+      "arguments": [
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 17,
+          "expression": "distanceCalculator.CalculateAsync(address.AddressId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PrepareCheckout",
+      "number": 13,
+      "sender": "CheckoutService",
+      "receiver": "DeliveryFeePolicy",
+      "message": "Quote(distanceKm)",
+      "method": "Quote",
+      "arguments": [
+        "distanceKm"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 18,
+          "expression": "deliveryFeePolicy.Quote(distance)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 3,
+      "sender": "CheckoutApiClient",
+      "receiver": "CheckoutController",
+      "message": "HTTPS PlaceOrderAsync(request); server supplies signal",
+      "method": "PlaceOrderAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 4,
+      "sender": "CheckoutController",
+      "receiver": "CheckoutService",
+      "message": "PlaceOrderAsync(request, signal)",
+      "method": "PlaceOrderAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CheckoutController.cs",
+          "line": 18,
+          "expression": "service.PlaceOrderAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 5,
+      "sender": "CheckoutService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 74,
+          "expression": "currentCustomer.RequireCustomerId()"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 14,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 7,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "GetCheckoutCartAsync(customerId, signal)",
+      "method": "GetCheckoutCartAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 84,
+          "expression": "checkoutRepository.GetCheckoutCartAsync(customer, ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 15,
+          "expression": "checkoutRepository.GetCheckoutCartAsync(customer, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 9,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "GetOwnedAddressAsync(customerId, addressId, signal)",
+      "method": "GetOwnedAddressAsync",
+      "arguments": [
+        "customerId",
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 86,
+          "expression": "checkoutRepository.GetOwnedAddressAsync(customer, request.AddressId, ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 16,
+          "expression": "checkoutRepository.GetOwnedAddressAsync(customer, addressId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 11,
+      "sender": "CheckoutService",
+      "receiver": "DistanceCalculator",
+      "message": "CalculateAsync(addressId, signal)",
+      "method": "CalculateAsync",
+      "arguments": [
+        "addressId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 17,
+          "expression": "distanceCalculator.CalculateAsync(address.AddressId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 13,
+      "sender": "CheckoutService",
+      "receiver": "DeliveryFeePolicy",
+      "message": "Quote(distanceKm)",
+      "method": "Quote",
+      "arguments": [
+        "distanceKm"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 18,
+          "expression": "deliveryFeePolicy.Quote(distance)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 15,
+      "sender": "CheckoutService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 79,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            var claim = (CheckoutClaim)await checkoutRepository.ClaimCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, RequestHash(request), ct);\n            if (claim.Replay) return (Confirmation: JsonSerializer.Deserialize<OrderConfirmationDto>(claim.Response!, ApiJson.Options)!, Replay: true);\n            if (preparationError is not null) System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(preparationError).Throw();\n            var p = preparation!; var cart = await checkoutRepository.GetCheckoutCartAsync(customer, ct);\n            ServiceRules.Require(cart.Items.Count > 0, \"EMPTY_CART\", 422);\n            var address = await checkoutRepository.GetOwnedAddressAsync(customer, request.AddressId, ct);\n            ServiceRules.Require(address.StreetAddress == p.Address.StreetAddress && address.Latitude == p.Address.Latitude && address.Longitude == p.Address.Longitude, \"CHECKOUT_ADDRESS_CHANGED\", 409);\n            var a = await Allocate(cart, ct);\n            var order = new Order\r\n            {\r\n                OrderNumber = Guid.NewGuid().ToString(),\r\n                CustomerId = customer,\r\n                DeliveryAddressId = address.AddressId,\r\n                OrderDate = DateTimeOffset.UtcNow,\n                SubTotal = new(a.Total),\r\n                DeliveryDistance = p.Distance,\r\n                ShippingFee = p.Fee,\r\n                TotalAmount = new(a.Total + p.Fee.Units),\r\n                PaymentMethod = request.PaymentMethod,\r\n                PaymentStatus = PaymentStatus.Unpaid,\r\n                Details = a.Lines\r\n            };\n            var aggregate = \"checkout:\" + customer + \":\" + request.CheckoutReference;\n            await orderStateMachine.ProcessEventAsync(new(aggregate, customer, order, a.Batches, true), new() { Event = \"acceptOrder\", AggregateId = aggregate, EventId = request.IdempotencyKey }, ct);\n            await checkoutRepository.SaveOrderAsync(order, ct); await checkoutRepository.ClearCartAsync(cart.CartId, ct);\n            var confirmation = new OrderConfirmationDto { OrderId = order.OrderId, OrderNumber = order.OrderNumber, Status = order.OrderStatus, PaymentStatus = order.PaymentStatus, Total = order.TotalAmount.ToWire() };\n            // Persist the same string-enum wire representation returned by ASP.NET.\n            await checkoutRepository.CompleteCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, JsonSerializer.SerializeToElement(confirmation, ApiJson.Options), ct);\n            return (Confirmation: confirmation, Replay: false);\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 17,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "ClaimCheckoutAsync(customerId, reference, key, requestHash, signal)",
+      "method": "ClaimCheckoutAsync",
+      "arguments": [
+        "customerId",
+        "reference",
+        "key",
+        "requestHash",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 81,
+          "expression": "checkoutRepository.ClaimCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, RequestHash(request), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 19,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "GetCheckoutCartAsync(customerId, signal)",
+      "method": "GetCheckoutCartAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 84,
+          "expression": "checkoutRepository.GetCheckoutCartAsync(customer, ct)"
+        },
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 15,
+          "expression": "checkoutRepository.GetCheckoutCartAsync(customer, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 21,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "LockFefoBatchesAsync(productIds, signal)",
+      "method": "LockFefoBatchesAsync",
+      "arguments": [
+        "productIds",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 22,
+          "expression": "checkoutRepository.LockFefoBatchesAsync(cart.Items.Select(i => i.ProductId).ToList(), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 23,
+      "sender": "CheckoutService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 30,
+          "expression": "pricing.Quote(b, DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 25,
+      "sender": "CheckoutService",
+      "receiver": "OrderStateMachine",
+      "message": "ProcessEventAsync(snapshot, acceptOrderEvent, signal)",
+      "method": "ProcessEventAsync",
+      "arguments": [
+        "snapshot",
+        "acceptOrderEvent",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 104,
+          "expression": "orderStateMachine.ProcessEventAsync(new(aggregate, customer, order, a.Batches, true), new() { Event = \"acceptOrder\", AggregateId = aggregate, EventId = request.IdempotencyKey }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 27,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "SaveOrderAsync(order, signal)",
+      "method": "SaveOrderAsync",
+      "arguments": [
+        "order",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 105,
+          "expression": "checkoutRepository.SaveOrderAsync(order, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 29,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "ClearCartAsync(cartId, signal)",
+      "method": "ClearCartAsync",
+      "arguments": [
+        "cartId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 105,
+          "expression": "checkoutRepository.ClearCartAsync(cart.CartId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 31,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "CompleteCheckoutAsync(customerId, reference, key, response, signal)",
+      "method": "CompleteCheckoutAsync",
+      "arguments": [
+        "customerId",
+        "reference",
+        "key",
+        "response",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 108,
+          "expression": "checkoutRepository.CompleteCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, JsonSerializer.SerializeToElement(confirmation, ApiJson.Options), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "PlaceOrder",
+      "number": 36,
+      "sender": "CheckoutService",
+      "receiver": "NotificationAdapter",
+      "message": "PublishAsync(message, signal)",
+      "method": "PublishAsync",
+      "arguments": [
+        "message",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 112,
+          "expression": "notificationGateway.PublishAsync(new() { OrderId = result.Confirmation.OrderId, EventCode = \"ORDER_ACCEPTED\" }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "CreatePaymentQr",
+      "number": 3,
+      "sender": "CheckoutApiClient",
+      "receiver": "CheckoutController",
+      "message": "HTTPS CreatePaymentQrAsync(request); server supplies signal",
+      "method": "CreatePaymentQrAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "CreatePaymentQr",
+      "number": 4,
+      "sender": "CheckoutController",
+      "receiver": "CheckoutService",
+      "message": "CreatePaymentQrAsync(request, signal)",
+      "method": "CreatePaymentQrAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CreatePaymentQrAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CheckoutController.cs",
+          "line": 23,
+          "expression": "service.CreatePaymentQrAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "CreatePaymentQr",
+      "number": 5,
+      "sender": "CheckoutService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CreatePaymentQrAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 117,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "CreatePaymentQr",
+      "number": 7,
+      "sender": "CheckoutService",
+      "receiver": "SePayPaymentAdapter",
+      "message": "CreateQrAsync(reference, amount, signal)",
+      "method": "CreateQrAsync",
+      "arguments": [
+        "reference",
+        "amount",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "manual review required",
+      "callerMethodContext": "CreatePaymentQrAsync",
+      "sourceCalls": []
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Mobile entry refinement",
+      "number": 4,
+      "sender": "CheckoutApiModel",
+      "receiver": "CheckoutController",
+      "message": "HTTPS PrepareCheckoutAsync(request); server supplies signal",
+      "method": "PrepareCheckoutAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Mobile entry refinement",
+      "number": 5,
+      "sender": "CheckoutController",
+      "receiver": "CheckoutService",
+      "message": "PrepareCheckoutAsync(request, signal)",
+      "method": "PrepareCheckoutAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PrepareCheckoutAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CheckoutController.cs",
+          "line": 13,
+          "expression": "service.PrepareCheckoutAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Verified payment webhook",
+      "number": 1,
+      "sender": "SePay",
+      "receiver": "PaymentNoticeHandler",
+      "message": "HandleAsync(notice, signal)",
+      "method": "HandleAsync",
+      "arguments": [
+        "notice",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Verified payment webhook",
+      "number": 2,
+      "sender": "PaymentNoticeHandler",
+      "receiver": "CheckoutService",
+      "message": "HandleVerifiedPaymentAsync(notice, signal)",
+      "method": "HandleVerifiedPaymentAsync",
+      "arguments": [
+        "notice",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "HandleAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/Gateways.cs",
+          "line": 36,
+          "expression": "checkout.HandleVerifiedPaymentAsync(notice, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Verified payment webhook",
+      "number": 3,
+      "sender": "CheckoutService",
+      "receiver": "SePayPaymentAdapter",
+      "message": "VerifyNoticeAsync(notice, signal)",
+      "method": "VerifyNoticeAsync",
+      "arguments": [
+        "notice",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "HandleVerifiedPaymentAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 120,
+          "expression": "paymentGateway.VerifyNoticeAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "OrderStateMachine acceptance",
+      "number": 1,
+      "sender": "CheckoutService",
+      "receiver": "OrderStateMachine",
+      "message": "ProcessEventAsync(snapshot, acceptOrderEvent, signal)",
+      "method": "ProcessEventAsync",
+      "arguments": [
+        "snapshot",
+        "acceptOrderEvent",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": null,
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 104,
+          "expression": "orderStateMachine.ProcessEventAsync(new(aggregate, customer, order, a.Batches, true), new() { Event = \"acceptOrder\", AggregateId = aggregate, EventId = request.IdempotencyKey }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "OrderStateMachine acceptance",
+      "number": 2,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderStateMachine",
+      "message": "CurrentState()",
+      "method": "CurrentState",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "self message; method existence checked"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "OrderStateMachine acceptance",
+      "number": 4,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "RecordEventOnceAsync(aggregateId, eventId, transitionId, signal)",
+      "method": "RecordEventOnceAsync",
+      "arguments": [
+        "aggregateId",
+        "eventId",
+        "transitionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 84,
+          "expression": "repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "OrderStateMachine acceptance",
+      "number": 7,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "RecordEventOnceAsync(aggregateId, eventId, transitionId, signal)",
+      "method": "RecordEventOnceAsync",
+      "arguments": [
+        "aggregateId",
+        "eventId",
+        "transitionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 84,
+          "expression": "repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "OrderStateMachine acceptance",
+      "number": 10,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "RecordEventOnceAsync(aggregateId, eventId, transitionId, signal)",
+      "method": "RecordEventOnceAsync",
+      "arguments": [
+        "aggregateId",
+        "eventId",
+        "transitionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 84,
+          "expression": "repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "OrderStateMachine acceptance",
+      "number": 13,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderStateMachine",
+      "message": "CurrentState()",
+      "method": "CurrentState",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "self message; method existence checked"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Idempotent checkout replay",
+      "number": 3,
+      "sender": "CheckoutApiClient",
+      "receiver": "CheckoutController",
+      "message": "HTTPS PlaceOrderAsync(request); server supplies signal",
+      "method": "PlaceOrderAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Idempotent checkout replay",
+      "number": 4,
+      "sender": "CheckoutController",
+      "receiver": "CheckoutService",
+      "message": "PlaceOrderAsync(request, signal)",
+      "method": "PlaceOrderAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/CheckoutController.cs",
+          "line": 18,
+          "expression": "service.PlaceOrderAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Idempotent checkout replay",
+      "number": 5,
+      "sender": "CheckoutService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 79,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            var claim = (CheckoutClaim)await checkoutRepository.ClaimCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, RequestHash(request), ct);\n            if (claim.Replay) return (Confirmation: JsonSerializer.Deserialize<OrderConfirmationDto>(claim.Response!, ApiJson.Options)!, Replay: true);\n            if (preparationError is not null) System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(preparationError).Throw();\n            var p = preparation!; var cart = await checkoutRepository.GetCheckoutCartAsync(customer, ct);\n            ServiceRules.Require(cart.Items.Count > 0, \"EMPTY_CART\", 422);\n            var address = await checkoutRepository.GetOwnedAddressAsync(customer, request.AddressId, ct);\n            ServiceRules.Require(address.StreetAddress == p.Address.StreetAddress && address.Latitude == p.Address.Latitude && address.Longitude == p.Address.Longitude, \"CHECKOUT_ADDRESS_CHANGED\", 409);\n            var a = await Allocate(cart, ct);\n            var order = new Order\r\n            {\r\n                OrderNumber = Guid.NewGuid().ToString(),\r\n                CustomerId = customer,\r\n                DeliveryAddressId = address.AddressId,\r\n                OrderDate = DateTimeOffset.UtcNow,\n                SubTotal = new(a.Total),\r\n                DeliveryDistance = p.Distance,\r\n                ShippingFee = p.Fee,\r\n                TotalAmount = new(a.Total + p.Fee.Units),\r\n                PaymentMethod = request.PaymentMethod,\r\n                PaymentStatus = PaymentStatus.Unpaid,\r\n                Details = a.Lines\r\n            };\n            var aggregate = \"checkout:\" + customer + \":\" + request.CheckoutReference;\n            await orderStateMachine.ProcessEventAsync(new(aggregate, customer, order, a.Batches, true), new() { Event = \"acceptOrder\", AggregateId = aggregate, EventId = request.IdempotencyKey }, ct);\n            await checkoutRepository.SaveOrderAsync(order, ct); await checkoutRepository.ClearCartAsync(cart.CartId, ct);\n            var confirmation = new OrderConfirmationDto { OrderId = order.OrderId, OrderNumber = order.OrderNumber, Status = order.OrderStatus, PaymentStatus = order.PaymentStatus, Total = order.TotalAmount.ToWire() };\n            // Persist the same string-enum wire representation returned by ASP.NET.\n            await checkoutRepository.CompleteCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, JsonSerializer.SerializeToElement(confirmation, ApiJson.Options), ct);\n            return (Confirmation: confirmation, Replay: false);\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C06",
+      "pageTitle": "Idempotent checkout replay",
+      "number": 7,
+      "sender": "CheckoutService",
+      "receiver": "CheckoutRepository",
+      "message": "ClaimCheckoutAsync(customerId, reference, key, requestHash, signal)",
+      "method": "ClaimCheckoutAsync",
+      "arguments": [
+        "customerId",
+        "reference",
+        "key",
+        "requestHash",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "PlaceOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+          "line": 81,
+          "expression": "checkoutRepository.ClaimCheckoutAsync(customer, request.CheckoutReference, request.IdempotencyKey, RequestHash(request), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrders",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS GetOrdersAsync(); server supplies signal",
+      "method": "GetOrdersAsync",
+      "arguments": [],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrders",
+      "number": 4,
+      "sender": "MyOrdersController",
+      "receiver": "MyOrdersService",
+      "message": "GetOrdersAsync(signal)",
+      "method": "GetOrdersAsync",
+      "arguments": [
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrdersAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 13,
+          "expression": "service.GetOrdersAsync(signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrders",
+      "number": 5,
+      "sender": "MyOrdersService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrdersAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 6,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrders",
+      "number": 7,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "FindOwnedAsync(customerId, signal)",
+      "method": "FindOwnedAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 1,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrdersAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 6,
+          "expression": "myOrdersRepository.FindOwnedAsync(currentCustomer.RequireCustomerId(), signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrderDetails",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS GetOrderDetailsAsync(orderId); server supplies signal",
+      "method": "GetOrderDetailsAsync",
+      "arguments": [
+        "orderId"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrderDetails",
+      "number": 4,
+      "sender": "MyOrdersController",
+      "receiver": "MyOrdersService",
+      "message": "GetOrderDetailsAsync(orderId, signal)",
+      "method": "GetOrderDetailsAsync",
+      "arguments": [
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrderDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 18,
+          "expression": "service.GetOrderDetailsAsync(orderId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrderDetails",
+      "number": 5,
+      "sender": "MyOrdersService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrderDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 9,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrderDetails",
+      "number": 7,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "FindOwnedAsync(customerId, signal)",
+      "method": "FindOwnedAsync",
+      "arguments": [
+        "customerId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrderDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 10,
+          "expression": "myOrdersRepository.FindOwnedAsync(customer, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrderDetails",
+      "number": 9,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "GetReturnReceiptAsync(orderId, signal)",
+      "method": "GetReturnReceiptAsync",
+      "arguments": [
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrderDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 11,
+          "expression": "myOrdersRepository.GetReturnReceiptAsync(orderId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "GetOrderDetails",
+      "number": 11,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "GetRefundAsync(orderId, signal)",
+      "method": "GetRefundAsync",
+      "arguments": [
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 2,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrderDetailsAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 11,
+          "expression": "myOrdersRepository.GetRefundAsync(orderId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS CancelOrderAsync(request); server supplies signal",
+      "method": "CancelOrderAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 4,
+      "sender": "MyOrdersController",
+      "receiver": "MyOrdersService",
+      "message": "CancelOrderAsync(request, signal)",
+      "method": "CancelOrderAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CancelOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 24,
+          "expression": "service.CancelOrderAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 5,
+      "sender": "MyOrdersService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CancelOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 31,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 7,
+      "sender": "MyOrdersService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CancelOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 32,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            var order = await myOrdersRepository.LockOwnedAsync(customer, request.OrderId, ct);\n            if (order.OrderStatus == OrderStatus.Cancelled) return false;\n            try { return (await orderStateMachine.ProcessEventAsync(new(order.OrderId, customer, order), new() { Event = \"cancelOrder\", AggregateId = order.OrderId, EventId = \"cancel:\" + order.OrderId, Reason = reason }, ct)).Applied; }\n            catch (DomainException e) when (e.Code is \"STATE_EVENT_NOT_ALLOWED\" or \"STATE_GUARD_REJECTED\") { throw new DomainException(\"CANCELLATION_NOT_ALLOWED\", 409); }\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 9,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "LockOwnedAsync(customerId, orderId, signal)",
+      "method": "LockOwnedAsync",
+      "arguments": [
+        "customerId",
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CancelOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 34,
+          "expression": "myOrdersRepository.LockOwnedAsync(customer, request.OrderId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 11,
+      "sender": "MyOrdersService",
+      "receiver": "OrderStateMachine",
+      "message": "ProcessEventAsync(snapshot, cancelOrderEvent, signal)",
+      "method": "ProcessEventAsync",
+      "arguments": [
+        "snapshot",
+        "cancelOrderEvent",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CancelOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 36,
+          "expression": "orderStateMachine.ProcessEventAsync(new(order.OrderId, customer, order), new() { Event = \"cancelOrder\", AggregateId = order.OrderId, EventId = \"cancel:\" + order.OrderId, Reason = reason }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "CancelOrder",
+      "number": 16,
+      "sender": "MyOrdersService",
+      "receiver": "NotificationAdapter",
+      "message": "PublishAsync(message, signal)",
+      "method": "PublishAsync",
+      "arguments": [
+        "message",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 3,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "CancelOrderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 40,
+          "expression": "notificationGateway.PublishAsync(new() { OrderId = request.OrderId, EventCode = \"ORDER_CANCELLED\" }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS ReorderAsync(orderId); server supplies signal",
+      "method": "ReorderAsync",
+      "arguments": [
+        "orderId"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 4,
+      "sender": "MyOrdersController",
+      "receiver": "MyOrdersService",
+      "message": "ReorderAsync(orderId, signal)",
+      "method": "ReorderAsync",
+      "arguments": [
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 29,
+          "expression": "service.ReorderAsync(orderId, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 5,
+      "sender": "MyOrdersService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 46,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 7,
+      "sender": "MyOrdersService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 47,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            var order = await myOrdersRepository.LockOwnedAsync(customer, orderId, ct);\n            var all = await myOrdersRepository.GetCurrentBatchesAsync(order.Details.Select(l => l.ProductId).Distinct().ToList(), ct);\n            var result = new CartResultDto(); decimal total = 0;\n            foreach (var group in order.Details.GroupBy(l => l.ProductId))\n            {\n                var stock = ServiceRules.Fefo(all.Where(b => b.ProductId == group.Key)); var available = stock.Sum(b => b.CurrentStock - b.ReservedStock);\n                if (available == 0) { result.Warnings.Add(\"UNAVAILABLE:\" + group.Key); continue; }\n                var wanted = group.Sum(l => l.Quantity); var qty = Math.Min(wanted, available); var price = pricing.Quote(stock[0], DateTimeOffset.UtcNow).Units; total += price * qty;\n                result.Lines.Add(new() { ProductId = group.Key, Quantity = qty, AvailableQuantity = available, CurrentPrice = ServiceRules.Money(price), LineTotal = ServiceRules.Money(price * qty) });\n                if (qty < wanted) result.Warnings.Add(\"QUANTITY_CLAMPED:\" + group.Key);\n            }\n            await myOrdersRepository.SaveCartAsync(new() { CustomerId = customer, Items = result.Lines.Select(l => new CartItem { ProductId = l.ProductId, Quantity = l.Quantity }).ToList() }, ct);\n            result.SubTotal = ServiceRules.Money(total); result.CanCheckout = result.Lines.Count > 0; return result;\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 9,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "LockOwnedAsync(customerId, orderId, signal)",
+      "method": "LockOwnedAsync",
+      "arguments": [
+        "customerId",
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 49,
+          "expression": "myOrdersRepository.LockOwnedAsync(customer, orderId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 11,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "GetCurrentBatchesAsync(productIds, signal)",
+      "method": "GetCurrentBatchesAsync",
+      "arguments": [
+        "productIds",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 50,
+          "expression": "myOrdersRepository.GetCurrentBatchesAsync(order.Details.Select(l => l.ProductId).Distinct().ToList(), ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 13,
+      "sender": "MyOrdersService",
+      "receiver": "BatchPricingPolicy",
+      "message": "Quote(batch, asOf)",
+      "method": "Quote",
+      "arguments": [
+        "batch",
+        "asOf"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 56,
+          "expression": "pricing.Quote(stock[0], DateTimeOffset.UtcNow)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Reorder",
+      "number": 15,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "SaveCartAsync(cart, signal)",
+      "method": "SaveCartAsync",
+      "arguments": [
+        "cart",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 4,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ReorderAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 60,
+          "expression": "myOrdersRepository.SaveCartAsync(new() { CustomerId = customer, Items = result.Lines.Select(l => new CartItem { ProductId = l.ProductId, Quantity = l.Quantity }).ToList() }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 3,
+      "sender": "MyOrdersApiClient",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS SubmitReviewAsync(request); server supplies signal",
+      "method": "SubmitReviewAsync",
+      "arguments": [
+        "request"
+      ],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 4,
+      "sender": "MyOrdersController",
+      "receiver": "MyOrdersService",
+      "message": "SubmitReviewAsync(request, signal)",
+      "method": "SubmitReviewAsync",
+      "arguments": [
+        "request",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SubmitReviewAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 35,
+          "expression": "service.SubmitReviewAsync(request, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 5,
+      "sender": "MyOrdersService",
+      "receiver": "CurrentCustomer",
+      "message": "RequireCustomerId()",
+      "method": "RequireCustomerId",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SubmitReviewAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 66,
+          "expression": "currentCustomer.RequireCustomerId()"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 7,
+      "sender": "MyOrdersService",
+      "receiver": "UnitOfWork",
+      "message": "ExecuteAsync(work, signal)",
+      "method": "ExecuteAsync",
+      "arguments": [
+        "work",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SubmitReviewAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 67,
+          "expression": "unitOfWork.ExecuteAsync(async ct =>\r\n        {\n            var order = await myOrdersRepository.LockOwnedAsync(customer, request.OrderId, ct);\n            ServiceRules.Require(order.OrderStatus == OrderStatus.Delivered, \"REVIEW_REQUIRES_DELIVERED\", 409);\n            ServiceRules.Require(await myOrdersRepository.SaveReviewOnceAsync(new() { OrderId = request.OrderId, CustomerId = customer, Rating = request.Rating, Comment = request.Comment ?? \"\" }, ct), \"REVIEW_ALREADY_EXISTS\", 409);\n            return new OperationResultDto { Success = true, MessageCode = \"REVIEW_SAVED\" };\n        }, signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 9,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "LockOwnedAsync(customerId, orderId, signal)",
+      "method": "LockOwnedAsync",
+      "arguments": [
+        "customerId",
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SubmitReviewAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 69,
+          "expression": "myOrdersRepository.LockOwnedAsync(customer, request.OrderId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "SubmitReview",
+      "number": 11,
+      "sender": "MyOrdersService",
+      "receiver": "MyOrdersRepository",
+      "message": "SaveReviewOnceAsync(review, signal)",
+      "method": "SaveReviewOnceAsync",
+      "arguments": [
+        "review",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 5,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "SubmitReviewAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 71,
+          "expression": "myOrdersRepository.SaveReviewOnceAsync(new() { OrderId = request.OrderId, CustomerId = customer, Rating = request.Rating, Comment = request.Comment ?? \"\" }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Mobile entry refinement",
+      "number": 4,
+      "sender": "MyOrdersApiModel",
+      "receiver": "MyOrdersController",
+      "message": "HTTPS GetOrdersAsync(); server supplies signal",
+      "method": "GetOrdersAsync",
+      "arguments": [],
+      "httpBoundary": true,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "HTTP boundary/design-only frontend"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "Mobile entry refinement",
+      "number": 5,
+      "sender": "MyOrdersController",
+      "receiver": "MyOrdersService",
+      "message": "GetOrdersAsync(signal)",
+      "method": "GetOrdersAsync",
+      "arguments": [
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 6,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "GetOrdersAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+          "line": 13,
+          "expression": "service.GetOrdersAsync(signal)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 1,
+      "sender": "MyOrdersService",
+      "receiver": "OrderStateMachine",
+      "message": "ProcessEventAsync(snapshot, cancelOrderEvent, signal)",
+      "method": "ProcessEventAsync",
+      "arguments": [
+        "snapshot",
+        "cancelOrderEvent",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": null,
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+          "line": 36,
+          "expression": "orderStateMachine.ProcessEventAsync(new(order.OrderId, customer, order), new() { Event = \"cancelOrder\", AggregateId = order.OrderId, EventId = \"cancel:\" + order.OrderId, Reason = reason }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 2,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderStateMachine",
+      "message": "CurrentState()",
+      "method": "CurrentState",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "self message; method existence checked"
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 4,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "RecordEventOnceAsync(aggregateId, eventId, transitionId, signal)",
+      "method": "RecordEventOnceAsync",
+      "arguments": [
+        "aggregateId",
+        "eventId",
+        "transitionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 84,
+          "expression": "repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 6,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "LockReservedBatchesAsync(orderId, signal)",
+      "method": "LockReservedBatchesAsync",
+      "arguments": [
+        "orderId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 54,
+          "expression": "repository.LockReservedBatchesAsync(s.Order.OrderId, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 9,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "SaveBatchesAsync(batches, signal)",
+      "method": "SaveBatchesAsync",
+      "arguments": [
+        "batches",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 59,
+          "expression": "repository.SaveBatchesAsync(batches, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 11,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "SaveAsync(order, signal)",
+      "method": "SaveAsync",
+      "arguments": [
+        "order",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 60,
+          "expression": "repository.SaveAsync(s.Order, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 13,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "AppendAuditAsync(audit, signal)",
+      "method": "AppendAuditAsync",
+      "arguments": [
+        "audit",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 61,
+          "expression": "repository.AppendAuditAsync(new AuditLog\r\n                {\r\n                    CustomerId = s.CustomerId,\r\n                    RecordIdentifier = s.Order.OrderId,\n                    OldValues = JsonSerializer.Serialize(new { order_status = Canonical(previous.ToString()).ToUpperInvariant() }),\n                    NewValues = JsonSerializer.Serialize(new { order_status = \"CANCELLED\", cancellation_reason = message.Reason })\r\n                }, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 16,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderLifecycleRepository",
+      "message": "RecordEventOnceAsync(aggregateId, eventId, transitionId, signal)",
+      "method": "RecordEventOnceAsync",
+      "arguments": [
+        "aggregateId",
+        "eventId",
+        "transitionId",
+        "signal"
+      ],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "bound source call found",
+      "callerMethodContext": "ProcessEventAsync",
+      "sourceCalls": [
+        {
+          "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 84,
+          "expression": "repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)"
+        }
+      ]
+    },
+    {
+      "useCase": "UC-C07",
+      "pageTitle": "OrderStateMachine cancellation",
+      "number": 18,
+      "sender": "OrderStateMachine",
+      "receiver": "OrderStateMachine",
+      "message": "CurrentState()",
+      "method": "CurrentState",
+      "arguments": [],
+      "httpBoundary": false,
+      "master": "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio",
+      "page": 7,
+      "sourceCallCheck": "self message; method existence checked"
+    }
+  ],
+  "master_sha256": {
+    "artifacts/diagrams/class/shared-di-design-classes.drawio": "c2783101640480c168678db39530135be42eb5371fc633da5b05696a292e75dc",
+    "artifacts/diagrams/class/state-transitions-design-classes.drawio": "d5a27e3cb508d272e1db9aaac68b540e0ba5bcde7eca8a4c8c4504e312af4bba",
+    "artifacts/diagrams/class/uc-c01-browse-search-design-classes.drawio": "2bf1a541eb21ee43210617482ba64e10e1a893ebfdb7690891d70d4a21f23022",
+    "artifacts/diagrams/class/uc-c03-manage-cart-design-classes.drawio": "4b8f31087b266804a809160e14c1997595ecf26afb374c099b098c345b0be2c4",
+    "artifacts/diagrams/class/uc-c05-profile-addresses-design-classes.drawio": "b4fc02af9c7397a5ffe71a823735d6d93df1eaa238f77cdfa1427bb01e5a33b3",
+    "artifacts/diagrams/class/uc-c06-checkout-design-classes.drawio": "9dca4d7b1e1d1f2ae90bb9083d9799bd0f0e644fddae65dbfb6d1c410c61749b",
+    "artifacts/diagrams/class/uc-c07-my-orders-design-classes.drawio": "40316e1357e24157a505a7b24572401d032bbfcef5ee17433ab2ee9f964012be",
+    "artifacts/diagrams/sequence/uc-c01-browse-search-design-sequence.drawio": "c5279f85e6b97a26b1b380c0bf85de0eec8928238335ca3b2fa68240cb97325e",
+    "artifacts/diagrams/sequence/uc-c03-manage-cart-design-sequence.drawio": "84654c5ea0f8d5051a940888feaf1e0cc4bb2584333a748de9bb9a492f05ec75",
+    "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio": "563016c6a92ada5a526e6616235e13b57f74704e0c0ed4cdbfc755087a6b7ea2",
+    "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio": "5af850f196b46b90a376a0a8a5bba55b0d2edd583a2f156725006c8c2c8db542",
+    "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio": "8910749387d62675326340dde716b06f961a206b505018383c4f5bf9df86aa93"
+  }
+}

@@ -1,0 +1,933 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="SE-Lifecycle-Agent" version="24.7.17">
+  <diagram id="uc-c01-browse-search-design-classes-1" name="01 VOPC to Detailed Design Realization">
+    <mxGraphModel grid="1" page="1" pageWidth="6860" pageHeight="3807" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C01 - VOPC to Detailed Design Realization&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="6780" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="6780" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogPage" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CatalogPage&lt;/b&gt;&lt;br&gt;VOPC: CatalogView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- api: CatalogApiClient&lt;br&gt;- state: CatalogResultDto?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Render(): View&lt;br&gt;+ OnGetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogView" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CatalogView&lt;/b&gt;&lt;br&gt;VOPC: CatalogView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- model: CatalogViewModel&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Build(): View&lt;br&gt;+ OnGetCatalog(query: CatalogQueryDto): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="855" width="500" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogApiClient" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CatalogApiClient&lt;/b&gt;&lt;br&gt;VOPC: CatalogView&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1140" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogViewModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;viewmodel&amp;gt;&amp;gt;&lt;br&gt;CatalogViewModel&lt;/b&gt;&lt;br&gt;VOPC: CatalogView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- api: CatalogApiModel&lt;br&gt;- state: CatalogResultDto?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1140" y="855" width="500" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogApiModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CatalogApiModel&lt;/b&gt;&lt;br&gt;VOPC: CatalogView&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1140" y="1540" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CatalogController&lt;/b&gt;&lt;br&gt;VOPC: CatalogController&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- service: ICatalogService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CatalogController(service:&lt;br&gt;ICatalogService)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2160" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="ICatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICatalogService&lt;/b&gt;&lt;br&gt;VOPC: CatalogService&lt;br&gt;Design: Backend DI contract&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2160" y="855" width="500" height="295" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;CatalogService&lt;/b&gt;&lt;br&gt;VOPC: CatalogService&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- catalogRepository: ICatalogRepository&lt;br&gt;- pricing: IBatchPricingPolicy&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CatalogService(catalogRepository:&lt;br&gt;ICatalogRepository, pricing:&lt;br&gt;IBatchPricingPolicy)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto):&lt;br&gt;CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2160" y="1470" width="500" height="385" as="geometry" />
+        </mxCell>
+        <mxCell id="ICatalogRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICatalogRepository&lt;/b&gt;&lt;br&gt;VOPC: CatalogService&lt;br&gt;Design: Repository&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ FindActiveAsync(keyword: Text?,&lt;br&gt;categoryId: Integer?, clearanceOnly:&lt;br&gt;Boolean): Sequence&amp;lt;Product&amp;gt;&lt;br&gt;+ GetCategoriesAsync():&lt;br&gt;Sequence&amp;lt;ProductCategory&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="3180" y="190" width="500" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;CatalogRepository&lt;/b&gt;&lt;br&gt;VOPC: CatalogService&lt;br&gt;Design: Repository&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- session: IRepositorySession&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CatalogRepository(session:&lt;br&gt;IRepositorySession)&lt;br&gt;+ FindActiveAsync(keyword: Text?,&lt;br&gt;categoryId: Integer?, clearanceOnly:&lt;br&gt;Boolean): Sequence&amp;lt;Product&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="3180" y="825" width="500" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductCategory" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;ProductCategory&lt;/b&gt;&lt;br&gt;VOPC: ProductCategory&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CategoryId: Integer&lt;br&gt;+ CategoryCode: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="4200" y="190" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="Product" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Product&lt;/b&gt;&lt;br&gt;VOPC: Product&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProductId: Text&lt;br&gt;+ CategoryId: Integer&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="4200" y="765" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchInventory" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;BatchInventory&lt;/b&gt;&lt;br&gt;VOPC: BatchInventory&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ BatchId: Text&lt;br&gt;+ ProductId: Text&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Reserve(quantity: Integer): Void&lt;br&gt;+ ReleaseReservation(quantity: Integer):&lt;br&gt;Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="4200" y="1340" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="IBatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IBatchPricingPolicy&lt;/b&gt;&lt;br&gt;VOPC: CatalogService&lt;br&gt;Design: DI / pricing domain policy&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Quote(batch: BatchInventory, asOf:&lt;br&gt;DateTime): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="5220" y="190" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;policy&amp;gt;&amp;gt;&lt;br&gt;BatchPricingPolicy&lt;/b&gt;&lt;br&gt;VOPC: CatalogService&lt;br&gt;Design: Domain policy&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Quote(batch: BatchInventory, asOf:&lt;br&gt;DateTime): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="5220" y="765" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogQueryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CatalogQueryDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Keyword: Text?&lt;br&gt;+ CategoryId: Text?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="190" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CatalogResultDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Items: Sequence&amp;lt;ProductSummaryDto&amp;gt;&lt;br&gt;+ Categories: Sequence&amp;lt;CategoryDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="770" width="500" height="286" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductDetailsDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProductDetailsDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Product: ProductSummaryDto&lt;br&gt;+ Description: Text?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="1376" width="500" height="286" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductSummaryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProductSummaryDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProductId: Text&lt;br&gt;+ Name: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="1982" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CategoryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CategoryDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CategoryId: Text&lt;br&gt;+ Name: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="2557" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchOfferDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;BatchOfferDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ BatchId: Text&lt;br&gt;+ ExpiryDate: Date&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="3132" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CatalogPage" target="CatalogApiClient" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="276.25" />
+              <mxPoint x="652" y="362.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CatalogApiClient" target="CatalogController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="259.0" />
+              <mxPoint x="1672" y="362.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CatalogController" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2326.6666666666665" y="823" />
+              <mxPoint x="2410.0" y="823" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CatalogView" target="CatalogViewModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="956.6666666666666" />
+              <mxPoint x="652" y="1037.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="CatalogViewModel" target="CatalogApiModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390.0" y="1508" />
+              <mxPoint x="1306.6666666666667" y="1508" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="CatalogApiModel" target="CatalogController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.6666666666666666;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1473.3333333333333" y="1508" />
+              <mxPoint x="2128" y="1508" />
+              <mxPoint x="2128" y="567" />
+              <mxPoint x="2493.3333333333335" y="567" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="CatalogService" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2326.6666666666665" y="1182" />
+              <mxPoint x="2410.0" y="1182" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="CatalogRepository" target="ICatalogRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.25;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3430.0" y="537" />
+              <mxPoint x="3305.0" y="537" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="CatalogService" target="ICatalogRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2493.3333333333335" y="1438" />
+              <mxPoint x="3148" y="1438" />
+              <mxPoint x="3148" y="533" />
+              <mxPoint x="3430.0" y="533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="CatalogService" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.125;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2692" y="1518.125" />
+              <mxPoint x="2692" y="1210" />
+              <mxPoint x="5188" y="1210" />
+              <mxPoint x="5188" y="317.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="ProductCategory" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="Product" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.25;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4450.0" y="1308" />
+              <mxPoint x="4325.0" y="1308" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="BatchPricingPolicy" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.3333333333333333;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5470.0" y="477" />
+              <mxPoint x="5386.666666666667" y="477" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" source="CatalogRepository" target="ProductCategory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3712" y="916.25" />
+              <mxPoint x="3712" y="253.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" edge="1" parent="1" source="CatalogRepository" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="1007.5" />
+              <mxPoint x="4168" y="828.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="" edge="1" parent="1" source="CatalogRepository" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3712" y="1098.75" />
+              <mxPoint x="3712" y="1455.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="" edge="1" parent="1" source="CatalogPage" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.1111111111111111;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="362.5" />
+              <mxPoint x="652" y="477" />
+              <mxPoint x="1108" y="477" />
+              <mxPoint x="1108" y="158" />
+              <mxPoint x="6208" y="158" />
+              <mxPoint x="6208" y="218.88888888888889" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="" edge="1" parent="1" source="CatalogPage" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.125;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="448.75" />
+              <mxPoint x="1080" y="739" />
+              <mxPoint x="6208" y="739" />
+              <mxPoint x="6208" y="805.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="" edge="1" parent="1" source="CatalogView" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.2222222222222222;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1108" y="1058.3333333333333" />
+              <mxPoint x="1108" y="589" />
+              <mxPoint x="6208" y="589" />
+              <mxPoint x="6208" y="247.77777777777777" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="" edge="1" parent="1" source="CatalogApiClient" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.4;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2128" y="328.0" />
+              <mxPoint x="2128" y="145" />
+              <mxPoint x="6180" y="145" />
+              <mxPoint x="6180" y="276.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="" edge="1" parent="1" source="CatalogApiClient" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="397.0" />
+              <mxPoint x="1672" y="738" />
+              <mxPoint x="6180" y="738" />
+              <mxPoint x="6180" y="841.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="" edge="1" parent="1" source="CatalogApiClient" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8;entryX=0;entryY=0.125;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2100" y="466.0" />
+              <mxPoint x="2100" y="1316" />
+              <mxPoint x="6208" y="1316" />
+              <mxPoint x="6208" y="1411.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="" edge="1" parent="1" source="CatalogViewModel" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.4444444444444444;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2072" y="946.25" />
+              <mxPoint x="2072" y="593" />
+              <mxPoint x="6180" y="593" />
+              <mxPoint x="6180" y="305.55555555555554" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="" edge="1" parent="1" source="CatalogViewModel" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.375;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="1037.5" />
+              <mxPoint x="1672" y="1220" />
+              <mxPoint x="6208" y="1220" />
+              <mxPoint x="6208" y="877.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="" edge="1" parent="1" source="CatalogViewModel" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2072" y="1128.75" />
+              <mxPoint x="2072" y="1306" />
+              <mxPoint x="6180" y="1306" />
+              <mxPoint x="6180" y="1447.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="" edge="1" parent="1" source="CatalogApiModel" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.5555555555555556;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="1626.25" />
+              <mxPoint x="1672" y="1222" />
+              <mxPoint x="6152" y="1222" />
+              <mxPoint x="6152" y="334.44444444444446" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="" edge="1" parent="1" source="CatalogApiModel" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2044" y="1712.5" />
+              <mxPoint x="2044" y="1224" />
+              <mxPoint x="6180" y="1224" />
+              <mxPoint x="6180" y="913.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" value="" edge="1" parent="1" source="CatalogApiModel" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.375;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="1798.75" />
+              <mxPoint x="1672" y="1887" />
+              <mxPoint x="6208" y="1887" />
+              <mxPoint x="6208" y="1483.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" value="" edge="1" parent="1" source="CatalogController" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2692" y="276.25" />
+              <mxPoint x="2692" y="538" />
+              <mxPoint x="5864" y="538" />
+              <mxPoint x="5864" y="363.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" value="" edge="1" parent="1" source="CatalogController" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.625;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3120" y="362.5" />
+              <mxPoint x="3120" y="737" />
+              <mxPoint x="6124" y="737" />
+              <mxPoint x="6124" y="948.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" value="" edge="1" parent="1" source="CatalogController" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3092" y="448.75" />
+              <mxPoint x="3092" y="1304" />
+              <mxPoint x="6152" y="1304" />
+              <mxPoint x="6152" y="1519.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e32" value="" edge="1" parent="1" source="ICatalogService" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.7777777777777778;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2692" y="928.75" />
+              <mxPoint x="2692" y="561" />
+              <mxPoint x="6124" y="561" />
+              <mxPoint x="6124" y="392.22222222222223" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" value="" edge="1" parent="1" source="ICatalogService" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3120" y="1002.5" />
+              <mxPoint x="3120" y="1232" />
+              <mxPoint x="6124" y="1232" />
+              <mxPoint x="6124" y="984.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" value="" edge="1" parent="1" source="ICatalogService" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.625;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3064" y="1076.25" />
+              <mxPoint x="3064" y="1294" />
+              <mxPoint x="6124" y="1294" />
+              <mxPoint x="6124" y="1554.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" value="" edge="1" parent="1" source="CatalogService" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2692" y="1566.25" />
+              <mxPoint x="2692" y="1570.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" value="" edge="1" parent="1" source="CatalogService" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.375;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4140" y="1614.375" />
+              <mxPoint x="4140" y="892.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" value="" edge="1" parent="1" source="CatalogService" target="ProductCategory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4112" y="1662.5" />
+              <mxPoint x="4112" y="317.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" value="" edge="1" parent="1" source="CatalogService" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.625;entryX=0;entryY=0.8888888888888888;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6096" y="1710.625" />
+              <mxPoint x="6096" y="421.1111111111111" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" value="" edge="1" parent="1" source="CatalogService" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.875;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5864" y="1758.75" />
+              <mxPoint x="5864" y="1020.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40" value="" edge="1" parent="1" source="CatalogService" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.875;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6180" y="1806.875" />
+              <mxPoint x="6180" y="1590.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" value="" edge="1" parent="1" source="ICatalogRepository" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3555.0" y="537" />
+              <mxPoint x="4732" y="537" />
+              <mxPoint x="4732" y="1308" />
+              <mxPoint x="4450.0" y="1308" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" value="" edge="1" parent="1" source="ICatalogRepository" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4084" y="295.0" />
+              <mxPoint x="4084" y="956.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e43" value="" edge="1" parent="1" source="ICatalogRepository" target="ProductCategory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="400.0" />
+              <mxPoint x="4168" y="381.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" value="" edge="1" parent="1" source="IBatchPricingPolicy" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.75;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5553.333333333333" y="733" />
+              <mxPoint x="4760" y="733" />
+              <mxPoint x="4760" y="1288" />
+              <mxPoint x="4575.0" y="1288" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45" value="" edge="1" parent="1" source="BatchPricingPolicy" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4788" y="892.5" />
+              <mxPoint x="4788" y="1512.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e46" value="" edge="1" parent="1" source="CatalogResultDto" target="CategoryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6406.666666666667" y="1088" />
+              <mxPoint x="6772" y="1088" />
+              <mxPoint x="6772" y="2525" />
+              <mxPoint x="6490.0" y="2525" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e47" value="" edge="1" parent="1" source="CatalogResultDto" target="ProductSummaryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6573.333333333333" y="1354" />
+              <mxPoint x="6800" y="1354" />
+              <mxPoint x="6800" y="1950" />
+              <mxPoint x="6406.666666666667" y="1950" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e48" value="" edge="1" parent="1" source="ProductDetailsDto" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.875;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4816" y="1626.25" />
+              <mxPoint x="4816" y="823" />
+              <mxPoint x="4788" y="823" />
+              <mxPoint x="4788" y="892.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e49" value="" edge="1" parent="1" source="ProductDetailsDto" target="BatchOfferDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6406.666666666667" y="1950" />
+              <mxPoint x="6208" y="1950" />
+              <mxPoint x="6208" y="3100" />
+              <mxPoint x="6490.0" y="3100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50" value="" edge="1" parent="1" source="ProductDetailsDto" target="ProductSummaryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1857.0" y="384.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label6" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1964.0" y="1022.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label11" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="4472.0" y="654.0" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label12" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="4472.0" y="1149.0" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication. VOPC origin and applied solution are tagged on each classifier; full attributes/operations are in subsequent detail views." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="3717" width="6740" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c01-browse-search-design-classes-2" name="02 Web View Classes">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1622" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C01 - Web View Classes&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogPage" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CatalogPage&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- api: CatalogApiClient&lt;br&gt;- state: CatalogResultDto?&lt;br&gt;- isBusy: Boolean&lt;br&gt;- errorCode: Text?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Render(): View&lt;br&gt;+ OnGetCatalogAsync(query: CatalogQueryDto): Void&lt;br&gt;+ OnSearchAsync(query: CatalogQueryDto): Void&lt;br&gt;+ OnGetProductDetailsAsync(productId: EntityId): Void&lt;br&gt;+ OnGetClearanceAsync(query: CatalogQueryDto): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="392" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CatalogController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICatalogService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogController(service: ICatalogService)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogApiClient" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CatalogApiClient&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: EntityId): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="902" width="680" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ICatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICatalogService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="902" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CatalogPage" target="CatalogApiClient" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CatalogApiClient" target="CatalogController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1052.0" />
+              <mxPoint x="832" y="351.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CatalogController" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="854.0" y="686.75" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1532" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c01-browse-search-design-classes-3" name="03 Mobile View Classes">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1622" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C01 - Mobile View Classes&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogView" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CatalogView&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- model: CatalogViewModel&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Build(): View&lt;br&gt;+ OnGetCatalog(query: CatalogQueryDto): Void&lt;br&gt;+ OnSearch(query: CatalogQueryDto): Void&lt;br&gt;+ OnGetProductDetails(productId: EntityId): Void&lt;br&gt;+ OnGetClearance(query: CatalogQueryDto): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogViewModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;viewmodel&amp;gt;&amp;gt;&lt;br&gt;CatalogViewModel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- api: CatalogApiModel&lt;br&gt;- state: CatalogResultDto?&lt;br&gt;- isBusy: Boolean&lt;br&gt;- errorCode: Text?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: EntityId): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogApiModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CatalogApiModel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: EntityId): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="879" width="680" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CatalogController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICatalogService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogController(service: ICatalogService)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="879" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CatalogView" target="CatalogViewModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="351.5" />
+              <mxPoint x="832" y="313.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CatalogViewModel" target="CatalogApiModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="436.0" />
+              <mxPoint x="1128" y="979.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CatalogApiModel" target="CatalogController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1079.0" />
+              <mxPoint x="832" y="1040.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="937.0" y="988.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1532" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c01-browse-search-design-classes-4" name="04 Application Services and Constructor Injection">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="2334" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C01 - Application Services and Constructor Injection&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CatalogController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICatalogService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogController(service: ICatalogService)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="ICatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICatalogService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;CatalogService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- catalogRepository: ICatalogRepository&lt;br&gt;- pricing: IBatchPricingPolicy&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogService(catalogRepository: ICatalogRepository, pricing:&lt;br&gt;IBatchPricingPolicy)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="833" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="ICatalogRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICatalogRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ FindActiveAsync(keyword: Text?, categoryId: Integer?,&lt;br&gt;clearanceOnly: Boolean): Sequence&amp;lt;Product&amp;gt;&lt;br&gt;+ GetCategoriesAsync(): Sequence&amp;lt;ProductCategory&amp;gt;&lt;br&gt;+ GetProductAsync(productId: Text): Product?&lt;br&gt;+ GetSellableBatchesAsync(productIds: Sequence&amp;lt;Text&amp;gt;):&lt;br&gt;Sequence&amp;lt;BatchInventory&amp;gt;&lt;br&gt;+ GetPopularAsync(limit: Integer): Sequence&amp;lt;Product&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="833" width="680" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;CatalogRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- session: IRepositorySession&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogRepository(session: IRepositorySession)&lt;br&gt;+ FindActiveAsync(keyword: Text?, categoryId: Integer?,&lt;br&gt;clearanceOnly: Boolean): Sequence&amp;lt;Product&amp;gt;&lt;br&gt;+ GetCategoriesAsync(): Sequence&amp;lt;ProductCategory&amp;gt;&lt;br&gt;+ GetProductAsync(productId: Text): Product?&lt;br&gt;+ GetSellableBatchesAsync(productIds: Sequence&amp;lt;Text&amp;gt;):&lt;br&gt;Sequence&amp;lt;BatchInventory&amp;gt;&lt;br&gt;+ GetPopularAsync(limit: Integer): Sequence&amp;lt;Product&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1522" width="680" height="392" as="geometry" />
+        </mxCell>
+        <mxCell id="IBatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IBatchPricingPolicy&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Quote(batch: BatchInventory, asOf: DateTime): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1522" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CatalogController" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="351.5" />
+              <mxPoint x="832" y="272.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CatalogService" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="925.25" />
+              <mxPoint x="832" y="354.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CatalogRepository" target="ICatalogRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1718.0" />
+              <mxPoint x="832" y="938.3333333333334" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CatalogService" target="ICatalogRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="1017.5" />
+              <mxPoint x="1128" y="1043.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="CatalogService" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="1109.75" />
+              <mxPoint x="1128" y="1611.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2244" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c01-browse-search-design-classes-5" name="05 Participating Entities 1">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1845" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C01 - Participating Entities 1&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductCategory" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;ProductCategory&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CategoryId: Integer&lt;br&gt;+ CategoryCode: Text&lt;br&gt;+ CategoryName: Text&lt;br&gt;+ Description: Text&lt;br&gt;+ IsActive: Boolean&lt;br&gt;+ Products: Sequence&amp;lt;Product&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="Product" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Product&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProductId: Text&lt;br&gt;+ CategoryId: Integer&lt;br&gt;+ Sku: Text&lt;br&gt;+ ProductName: Text&lt;br&gt;+ UnitOfMeasure: Text&lt;br&gt;+ Description: Text&lt;br&gt;+ ImageUrl: Text&lt;br&gt;+ IsActive: Boolean&lt;br&gt;+ CreatedAt: DateTime&lt;br&gt;+ Batches: Sequence&amp;lt;BatchInventory&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="385" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchInventory" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;BatchInventory&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ BatchId: Text&lt;br&gt;+ ProductId: Text&lt;br&gt;+ ReceiptId: Text&lt;br&gt;+ BatchNumber: Text&lt;br&gt;+ ManufactureDate: Date&lt;br&gt;+ ExpiryDate: Date&lt;br&gt;+ ImportQuantity: Integer&lt;br&gt;+ CurrentStock: Integer&lt;br&gt;+ ReservedStock: Integer&lt;br&gt;+ ImportPrice: VndAmount&lt;br&gt;+ RetailPrice: VndAmount&lt;br&gt;+ DiscountRate: Decimal&lt;br&gt;+ SaleStatus: Text&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Reserve(quantity: Integer): Void&lt;br&gt;+ ReleaseReservation(quantity: Integer): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="895" width="680" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="ProductCategory" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="336.5" />
+              <mxPoint x="832" y="318.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="Product" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="446.66666666666663" />
+              <mxPoint x="1128" y="1160.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="951.0" y="266.3333333333333" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label2" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1150.0" y="788.3333333333333" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1755" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c01-browse-search-design-classes-6" name="06 DTO Contracts and Usage 1">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2113" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C01 - DTO Contracts and Usage 1&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CatalogController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICatalogService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogController(service: ICatalogService)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="ICatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICatalogService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;CatalogService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- catalogRepository: ICatalogRepository&lt;br&gt;- pricing: IBatchPricingPolicy&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CatalogService(catalogRepository: ICatalogRepository, pricing:&lt;br&gt;IBatchPricingPolicy)&lt;br&gt;+ GetCatalogAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ SearchAsync(query: CatalogQueryDto): CatalogResultDto&lt;br&gt;+ GetProductDetailsAsync(productId: Text): ProductDetailsDto&lt;br&gt;+ GetClearanceAsync(query: CatalogQueryDto): CatalogResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogQueryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CatalogQueryDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Keyword: Text?&lt;br&gt;+ CategoryId: Text?&lt;br&gt;+ ClearanceOnly: Boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="879" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="CatalogResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CatalogResultDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Items: Sequence&amp;lt;ProductSummaryDto&amp;gt;&lt;br&gt;+ Categories: Sequence&amp;lt;CategoryDto&amp;gt;&lt;br&gt;+ Alternatives: Sequence&amp;lt;ProductSummaryDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="879" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductDetailsDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProductDetailsDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Product: ProductSummaryDto&lt;br&gt;+ Description: Text?&lt;br&gt;+ AvailableBatches: Sequence&amp;lt;BatchOfferDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="879" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="ProductSummaryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProductSummaryDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProductId: Text&lt;br&gt;+ Name: Text&lt;br&gt;+ Unit: Text&lt;br&gt;+ AvailableQuantity: Integer&lt;br&gt;+ CurrentPrice: VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1423" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="CategoryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CategoryDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CategoryId: Text&lt;br&gt;+ Name: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1423" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchOfferDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;BatchOfferDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ BatchId: Text&lt;br&gt;+ ExpiryDate: Date&lt;br&gt;+ Price: Text&lt;br&gt;+ Clearance: Boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="1423" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CatalogController" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="270.75" />
+              <mxPoint x="832" y="272.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CatalogService" target="ICatalogService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.25;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="282.25" />
+              <mxPoint x="2168" y="272.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CatalogController" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CatalogController" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="351.5" />
+              <mxPoint x="832" y="953.6666666666666" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="CatalogController" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="432.25" />
+              <mxPoint x="1128" y="847" />
+              <mxPoint x="2168" y="847" />
+              <mxPoint x="2168" y="935.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ICatalogService" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="354.66666666666663" />
+              <mxPoint x="860" y="1135" />
+              <mxPoint x="832" y="1135" />
+              <mxPoint x="832" y="953.6666666666666" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="ICatalogService" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="ICatalogService" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="354.66666666666663" />
+              <mxPoint x="1872" y="991.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="CatalogService" target="CatalogQueryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="374.5" />
+              <mxPoint x="2168" y="819" />
+              <mxPoint x="888" y="819" />
+              <mxPoint x="888" y="1028.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="CatalogService" target="CatalogResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.75;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1900" y="466.75" />
+              <mxPoint x="1900" y="1135" />
+              <mxPoint x="1872" y="1135" />
+              <mxPoint x="1872" y="991.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="CatalogService" target="ProductDetailsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="CatalogResultDto" target="CategoryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="CatalogResultDto" target="ProductSummaryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="1028.3333333333333" />
+              <mxPoint x="1128" y="1513.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" source="ProductDetailsDto" target="BatchOfferDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" edge="1" parent="1" source="ProductDetailsDto" target="ProductSummaryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.75;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="1047.0" />
+              <mxPoint x="2168" y="1656" />
+              <mxPoint x="832" y="1656" />
+              <mxPoint x="832" y="1603.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2023" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

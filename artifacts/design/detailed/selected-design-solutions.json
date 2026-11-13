@@ -1,0 +1,19 @@
+{
+  "state_machine": "table-driven",
+  "decision_date": "2026-11-02",
+  "source": "Explicit stakeholder selection: replace individual transition classes with OrderStateMachine",
+  "public_operations": [
+    "ProcessEventAsync",
+    "CurrentState"
+  ],
+  "backend_runtime": {
+    "framework": "ASP.NET Core 10",
+    "language": "C#",
+    "database_driver": "Npgsql 10.0.3",
+    "dependency_injection": "ASP.NET Core built-in constructor DI",
+    "basis": "Explicit stakeholder request, 2026-11-02"
+  },
+  "detailed_model_level": "PIM",
+  "pim_to_source_mapping": "pim-to-code-mapping.json",
+  "pim_decision_date": "2026-11-03"
+}

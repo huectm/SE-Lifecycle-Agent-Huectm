@@ -1,0 +1,222 @@
+[
+  {
+    "id": "MX-LG-001",
+    "title": "Login page exposes the intended main form",
+    "steps": "Open the login URL; inspect the visible main form and links.",
+    "expected": "One main login form; identifier/password and submit visible; reset and registration links visible.",
+    "fixture": "",
+    "basis": "Live form DOM",
+    "technique": "Use case",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-002",
+    "title": "Password is masked",
+    "steps": "Inspect the visible password field type.",
+    "expected": "Input type is password; input enabled.",
+    "fixture": "",
+    "basis": "Live form DOM",
+    "technique": "Use case",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-003",
+    "title": "Both required fields empty",
+    "steps": "Load fixture; fill fields; click Login.",
+    "expected": "Browser blocks submission; specified field has valueMissing=true, nonempty validationMessage and focus; login URL retained.",
+    "fixture": "empty_both",
+    "basis": "Live form DOM",
+    "technique": "Equivalence partition / empty boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-004",
+    "title": "Identifier empty",
+    "steps": "Load fixture; fill fields; click Login.",
+    "expected": "Browser blocks submission; specified field has valueMissing=true, nonempty validationMessage and focus; login URL retained.",
+    "fixture": "empty_identifier",
+    "basis": "Live form DOM",
+    "technique": "Equivalence partition / empty boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-005",
+    "title": "Password empty",
+    "steps": "Load fixture; fill fields; click Login.",
+    "expected": "Browser blocks submission; specified field has valueMissing=true, nonempty validationMessage and focus; login URL retained.",
+    "fixture": "empty_password",
+    "basis": "Live form DOM",
+    "technique": "Equivalence partition / empty boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-006",
+    "title": "Email identifier entry",
+    "steps": "Type fixture value into main identifier; read it back; do not submit.",
+    "expected": "The typed value is preserved. This tests input handling, not authentication or account validity.",
+    "fixture": "email",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-007",
+    "title": "Username identifier entry",
+    "steps": "Type fixture value into main identifier; read it back; do not submit.",
+    "expected": "The typed value is preserved. This tests input handling, not authentication or account validity.",
+    "fixture": "username",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-008",
+    "title": "Phone identifier entry",
+    "steps": "Type fixture value into main identifier; read it back; do not submit.",
+    "expected": "The typed value is preserved. This tests input handling, not authentication or account validity.",
+    "fixture": "phone",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-009",
+    "title": "Unicode identifier entry",
+    "steps": "Type fixture value into main identifier; read it back; do not submit.",
+    "expected": "The typed value is preserved. This tests input handling, not authentication or account validity.",
+    "fixture": "unicode_identifier",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-010",
+    "title": "One-character identifier entry",
+    "steps": "Type fixture value into main identifier; read it back; do not submit.",
+    "expected": "The typed value is preserved. This tests input handling, not authentication or account validity.",
+    "fixture": "one_identifier",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-011",
+    "title": "256-character identifier entry",
+    "steps": "Type fixture value into main identifier; read it back; do not submit.",
+    "expected": "The typed value is preserved. This tests input handling, not authentication or account validity.",
+    "fixture": "long_identifier",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-012",
+    "title": "Special and Unicode password entry",
+    "steps": "Type synthetic password fixture; read back; do not submit.",
+    "expected": "Typed value preserved and field remains type=password. No length policy inferred.",
+    "fixture": "special_password",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-013",
+    "title": "One-character password entry",
+    "steps": "Type synthetic password fixture; read back; do not submit.",
+    "expected": "Typed value preserved and field remains type=password. No length policy inferred.",
+    "fixture": "one_password",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-014",
+    "title": "256-character password entry",
+    "steps": "Type synthetic password fixture; read back; do not submit.",
+    "expected": "Typed value preserved and field remains type=password. No length policy inferred.",
+    "fixture": "long_password",
+    "basis": "Live form DOM",
+    "technique": "Input equivalence / exploratory boundary",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-015",
+    "title": "Keyboard focus sequence",
+    "steps": "Focus identifier; press Tab; press Tab again.",
+    "expected": "Focus moves to main password and then main submit button.",
+    "fixture": "",
+    "basis": "Live form DOM",
+    "technique": "Use case / keyboard",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-016",
+    "title": "Forgot password navigation",
+    "steps": "Click the main form reset link; wait for destination.",
+    "expected": "URL is https://mathx.vn/quen-mat-khau.html and destination has a visible input; do not submit reset.",
+    "fixture": "",
+    "basis": "Observed href",
+    "technique": "Use case",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-017",
+    "title": "Registration navigation",
+    "steps": "Click the main form registration link; wait for destination.",
+    "expected": "URL is https://mathx.vn/dang-ky.html and destination has a visible input; do not create an account.",
+    "fixture": "",
+    "basis": "Observed href",
+    "technique": "Use case",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-018",
+    "title": "Invalid credentials rejected by button",
+    "steps": "Fill synthetic reserved-domain credentials; submit once using button.",
+    "expected": "Login form remains visible and main region shows explicit invalid-credentials feedback. No successful authentication. Exact message is TBD; proposed rejection regex is documented.",
+    "fixture": "invalid_button",
+    "basis": "Proposed rejection oracle; requires approval",
+    "technique": "Negative equivalence / submission path",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-019",
+    "title": "Invalid credentials rejected by Enter",
+    "steps": "Fill synthetic reserved-domain credentials; submit once using Enter.",
+    "expected": "Login form remains visible and main region shows explicit invalid-credentials feedback. No successful authentication. Exact message is TBD; proposed rejection regex is documented.",
+    "fixture": "invalid_enter",
+    "basis": "Proposed rejection oracle; requires approval",
+    "technique": "Negative equivalence / submission path",
+    "status": "PASS"
+  },
+  {
+    "id": "MX-LG-020",
+    "title": "Successful login using registered email",
+    "steps": "Supply an authorized dedicated account and approved post-login oracle; submit credentials.",
+    "expected": "Authenticated account identity and destination match approved expectations. TBD – Stakeholder confirmation required.",
+    "fixture": "valid_account",
+    "basis": "UI label advertises identifier types; account not supplied",
+    "technique": "Use case",
+    "status": "SKIP"
+  },
+  {
+    "id": "MX-LG-021",
+    "title": "Successful login using registered username",
+    "steps": "Supply an authorized dedicated account and approved post-login oracle; submit credentials.",
+    "expected": "Authenticated account identity and destination match approved expectations. TBD – Stakeholder confirmation required.",
+    "fixture": "valid_account",
+    "basis": "UI label advertises identifier types; account not supplied",
+    "technique": "Use case",
+    "status": "SKIP"
+  },
+  {
+    "id": "MX-LG-022",
+    "title": "Successful login using registered phone",
+    "steps": "Supply an authorized dedicated account and approved post-login oracle; submit credentials.",
+    "expected": "Authenticated account identity and destination match approved expectations. TBD – Stakeholder confirmation required.",
+    "fixture": "valid_account",
+    "basis": "UI label advertises identifier types; account not supplied",
+    "technique": "Use case",
+    "status": "SKIP"
+  }
+]

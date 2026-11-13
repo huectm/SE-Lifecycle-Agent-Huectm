@@ -1,0 +1,2468 @@
+[
+  {
+    "use_case": "UC-C01",
+    "title": "Browse & Search Products",
+    "master": "artifacts\\diagrams\\sequence\\uc-c01-browse-search-sequence.drawio",
+    "master_sha256": "860e902a679187e598276345e397b40727c71c034f6c8c32e9ab55f600095198",
+    "pages": [
+      {
+        "page": 1,
+        "name": "01 Catalog and search",
+        "basis": "Normal 1-6; E4.1",
+        "participants": [
+          "Shopper",
+          "CatalogView",
+          "CatalogController",
+          "CatalogService",
+          "ProductCategory",
+          "Product",
+          "BatchInventory"
+        ],
+        "messages": 20,
+        "width": 2410,
+        "height": 2530,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CatalogView",
+            "caller": "Shopper",
+            "start": 450,
+            "end": 942,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CatalogController",
+            "caller": "CatalogView",
+            "start": 532,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CatalogService",
+            "caller": "CatalogController",
+            "start": 614,
+            "end": 860,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                860
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "ProductCategory",
+            "caller": "CatalogService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "CatalogView",
+            "caller": "Shopper",
+            "start": 1024,
+            "end": 2248,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                1024,
+                2248
+              ]
+            ]
+          },
+          {
+            "message": 9,
+            "participant": "CatalogController",
+            "caller": "CatalogView",
+            "start": 1106,
+            "end": 2248,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1106,
+                2248
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "CatalogService",
+            "caller": "CatalogController",
+            "start": 1188,
+            "end": 2166,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1188,
+                2166
+              ]
+            ]
+          },
+          {
+            "message": 11,
+            "participant": "Product",
+            "caller": "CatalogService",
+            "start": 1270,
+            "end": 1352,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1270,
+                1352
+              ]
+            ]
+          },
+          {
+            "message": 13,
+            "participant": "BatchInventory",
+            "caller": "CatalogService",
+            "start": 1554,
+            "end": 1636,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1554,
+                1636
+              ]
+            ]
+          },
+          {
+            "message": 17,
+            "participant": "Product",
+            "caller": "CatalogService",
+            "start": 2002,
+            "end": 2084,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                2002,
+                2084
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c01-browse-search-sequence-01.png",
+        "png_sha256": "66d4459c5effdbddec67c6cf806c17411c942e319486f68e35d6e8888ca64c4d",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 2,
+        "name": "02 Details and clearance",
+        "basis": "A3.1; A3.2",
+        "participants": [
+          "Shopper",
+          "CatalogView",
+          "CatalogController",
+          "CatalogService",
+          "Product",
+          "BatchInventory"
+        ],
+        "messages": 16,
+        "width": 2080,
+        "height": 2082,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CatalogView",
+            "caller": "Shopper",
+            "start": 450,
+            "end": 1106,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CatalogController",
+            "caller": "CatalogView",
+            "start": 532,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CatalogService",
+            "caller": "CatalogController",
+            "start": 614,
+            "end": 1024,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1024
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "Product",
+            "caller": "CatalogService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "BatchInventory",
+            "caller": "CatalogService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "CatalogView",
+            "caller": "Shopper",
+            "start": 1308,
+            "end": 1800,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                1308,
+                1800
+              ]
+            ]
+          },
+          {
+            "message": 11,
+            "participant": "CatalogController",
+            "caller": "CatalogView",
+            "start": 1390,
+            "end": 1800,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1390,
+                1800
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "CatalogService",
+            "caller": "CatalogController",
+            "start": 1472,
+            "end": 1718,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1472,
+                1718
+              ]
+            ]
+          },
+          {
+            "message": 13,
+            "participant": "BatchInventory",
+            "caller": "CatalogService",
+            "start": 1554,
+            "end": 1636,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1554,
+                1636
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c01-browse-search-sequence-02.png",
+        "png_sha256": "3eb8096b112c45ca09dac9f9d569a6305d8294f44d8abfd066a7bea57372c296",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      }
+    ]
+  },
+  {
+    "use_case": "UC-C03",
+    "title": "Manage Shopping Cart",
+    "master": "artifacts\\diagrams\\sequence\\uc-c03-manage-cart-sequence.drawio",
+    "master_sha256": "a14f7a65b70d0cd17edbbe0c94b40445d8f15a7655036d8df67fb53d28d486ab",
+    "pages": [
+      {
+        "page": 1,
+        "name": "01 View cart",
+        "basis": "Normal 1-5; E3.1",
+        "participants": [
+          "Shopper",
+          "CartView",
+          "CartController",
+          "CartService",
+          "Cart",
+          "CartItem",
+          "Product",
+          "BatchInventory"
+        ],
+        "messages": 16,
+        "width": 2740,
+        "height": 2202,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CartView",
+            "caller": "Shopper",
+            "start": 450,
+            "end": 1920,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1920
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CartController",
+            "caller": "CartView",
+            "start": 532,
+            "end": 1920,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1920
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CartService",
+            "caller": "CartController",
+            "start": 614,
+            "end": 1838,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1838
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "Cart",
+            "caller": "CartService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "CartItem",
+            "caller": "CartService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "Product",
+            "caller": "CartService",
+            "start": 1024,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1024,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "BatchInventory",
+            "caller": "CartService",
+            "start": 1188,
+            "end": 1270,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1188,
+                1270
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "CartService",
+            "caller": "CartService",
+            "start": 1500,
+            "end": 1542,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                1500,
+                1542
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c03-manage-cart-sequence-01.png",
+        "png_sha256": "854ca9760b5929d3996725ee012f9a4e2e666696f33f66f55870bfc153ac54d4",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 2,
+        "name": "02 Add or update quantity",
+        "basis": "A1.1; A4.1; E2.1",
+        "participants": [
+          "Shopper",
+          "CartView",
+          "CartController",
+          "CartService",
+          "BatchInventory",
+          "CartItem"
+        ],
+        "messages": 12,
+        "width": 2080,
+        "height": 1994,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CartView",
+            "caller": "Shopper",
+            "start": 450,
+            "end": 1712,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1712
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CartController",
+            "caller": "CartView",
+            "start": 532,
+            "end": 1712,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1712
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CartService",
+            "caller": "CartController",
+            "start": 614,
+            "end": 1630,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1630
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "BatchInventory",
+            "caller": "CartService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "CartItem",
+            "caller": "CartService",
+            "start": 980,
+            "end": 1062,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                980,
+                1062
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "CartItem",
+            "caller": "CartService",
+            "start": 1264,
+            "end": 1346,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1264,
+                1346
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "CartService",
+            "caller": "CartService",
+            "start": 1576,
+            "end": 1618,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                1576,
+                1618
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c03-manage-cart-sequence-02.png",
+        "png_sha256": "208e6cd280d99d3e1e3fb656c9b8de1e48c1cd0e873143261dc875dcb6d18eeb",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 3,
+        "name": "03 Remove item",
+        "basis": "A4.2",
+        "participants": [
+          "Shopper",
+          "CartView",
+          "CartController",
+          "CartService",
+          "CartItem"
+        ],
+        "messages": 10,
+        "width": 1750,
+        "height": 1470,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CartView",
+            "caller": "Shopper",
+            "start": 450,
+            "end": 562,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                562
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CartView",
+            "caller": "CartView",
+            "start": 560,
+            "end": 602,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 0,
+            "spans": [
+              [
+                560,
+                602
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CartView",
+            "caller": "Shopper",
+            "start": 614,
+            "end": 1188,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1188
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "CartController",
+            "caller": "CartView",
+            "start": 696,
+            "end": 1188,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                1188
+              ]
+            ]
+          },
+          {
+            "message": 5,
+            "participant": "CartService",
+            "caller": "CartController",
+            "start": 778,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                778,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "CartItem",
+            "caller": "CartService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "CartService",
+            "caller": "CartService",
+            "start": 1052,
+            "end": 1094,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                1052,
+                1094
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c03-manage-cart-sequence-03.png",
+        "png_sha256": "299fcc53b1c3a351449820b1e5f30aed14108ee0fd467fbe550d09ca2faa6def",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      }
+    ]
+  },
+  {
+    "use_case": "UC-C05",
+    "title": "Manage Profile & Addresses",
+    "master": "artifacts\\diagrams\\sequence\\uc-c05-profile-addresses-sequence.drawio",
+    "master_sha256": "6630e19d65fe738eafcaa8d69fb8ffc57a6a1623225b9b46180c5437534b1cc5",
+    "pages": [
+      {
+        "page": 1,
+        "name": "01 View and update profile",
+        "basis": "Normal 1-3; A2.1",
+        "participants": [
+          "Customer actor",
+          "ProfileAddressView",
+          "ProfileController",
+          "ProfileService",
+          "Customer",
+          "CustomerAddress"
+        ],
+        "messages": 16,
+        "width": 2080,
+        "height": 2082,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "ProfileAddressView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 1106,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "ProfileController",
+            "caller": "ProfileAddressView",
+            "start": 532,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "ProfileService",
+            "caller": "ProfileController",
+            "start": 614,
+            "end": 1024,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1024
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "Customer",
+            "caller": "ProfileService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "CustomerAddress",
+            "caller": "ProfileService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "ProfileAddressView",
+            "caller": "Customer actor",
+            "start": 1308,
+            "end": 1800,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                1308,
+                1800
+              ]
+            ]
+          },
+          {
+            "message": 11,
+            "participant": "ProfileController",
+            "caller": "ProfileAddressView",
+            "start": 1390,
+            "end": 1800,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1390,
+                1800
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "ProfileService",
+            "caller": "ProfileController",
+            "start": 1472,
+            "end": 1718,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1472,
+                1718
+              ]
+            ]
+          },
+          {
+            "message": 13,
+            "participant": "Customer",
+            "caller": "ProfileService",
+            "start": 1554,
+            "end": 1636,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1554,
+                1636
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c05-profile-addresses-sequence-01.png",
+        "png_sha256": "ef381b2e3443cff9a97b4272e9249588fad246c6062888487a0f6ead6b6b0d13",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 2,
+        "name": "02 Add or edit address",
+        "basis": "A3.1; A3.2; E3.1; E3.2",
+        "participants": [
+          "Customer actor",
+          "ProfileAddressView",
+          "ProfileController",
+          "ProfileService",
+          "GeocodingBoundary",
+          "Google Maps",
+          "CustomerAddress"
+        ],
+        "messages": 16,
+        "width": 2410,
+        "height": 2562,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "ProfileAddressView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 2078,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                2078
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "ProfileController",
+            "caller": "ProfileAddressView",
+            "start": 532,
+            "end": 2078,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                2078
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "ProfileService",
+            "caller": "ProfileController",
+            "start": 614,
+            "end": 1996,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1996
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "GeocodingBoundary",
+            "caller": "ProfileService",
+            "start": 1100,
+            "end": 1346,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1100,
+                1346
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "CustomerAddress",
+            "caller": "ProfileService",
+            "start": 1548,
+            "end": 1630,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1548,
+                1630
+              ]
+            ]
+          },
+          {
+            "message": 16,
+            "participant": "ProfileAddressView",
+            "caller": "ProfileAddressView",
+            "start": 2308,
+            "end": 2326,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 0,
+            "spans": [
+              [
+                2308,
+                2326
+              ]
+            ]
+          },
+          {
+            "message": 16,
+            "participant": "ProfileAddressView",
+            "caller": null,
+            "start": 2272,
+            "end": 2320,
+            "kind": "continuation",
+            "reason": "continuation of an analysis responsibility; no new incoming call inferred",
+            "depth": 0,
+            "spans": [
+              [
+                2272,
+                2320
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c05-profile-addresses-sequence-02.png",
+        "png_sha256": "a35bfab654823b3abd5358456ba50d8e0301c14be29dd0dd1702a615af584403",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 3,
+        "name": "03 Delete saved address",
+        "basis": "A3.3",
+        "participants": [
+          "Customer actor",
+          "ProfileAddressView",
+          "ProfileController",
+          "ProfileService",
+          "Order",
+          "CustomerAddress"
+        ],
+        "messages": 9,
+        "width": 2080,
+        "height": 1388,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "ProfileAddressView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 1106,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "ProfileController",
+            "caller": "ProfileAddressView",
+            "start": 532,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "ProfileService",
+            "caller": "ProfileController",
+            "start": 614,
+            "end": 1024,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1024
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "Order",
+            "caller": "ProfileService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "CustomerAddress",
+            "caller": "ProfileService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c05-profile-addresses-sequence-03.png",
+        "png_sha256": "c623e67f44b2340a11e12bdfc78d832520e56501ae4dec028cba11ec5b8c3e5b",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      }
+    ]
+  },
+  {
+    "use_case": "UC-C06",
+    "title": "Checkout & Place Order",
+    "master": "artifacts\\diagrams\\sequence\\uc-c06-checkout-sequence.drawio",
+    "master_sha256": "5506a64f5f798314269715b4f445aee8c31b41802405878254dd8330308da967",
+    "pages": [
+      {
+        "page": 1,
+        "name": "01 Prepare delivery and totals",
+        "basis": "Normal 1-6; A2.1; E4.1",
+        "participants": [
+          "Customer actor",
+          "CheckoutView",
+          "CheckoutController",
+          "CheckoutService",
+          "CustomerAddress",
+          "Cart",
+          "DistanceBoundary",
+          "Google Maps"
+        ],
+        "messages": 21,
+        "width": 2740,
+        "height": 2852,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CheckoutView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 1106,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CheckoutController",
+            "caller": "CheckoutView",
+            "start": 532,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CheckoutService",
+            "caller": "CheckoutController",
+            "start": 614,
+            "end": 1024,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1024
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "CustomerAddress",
+            "caller": "CheckoutService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "Cart",
+            "caller": "CheckoutService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "CheckoutView",
+            "caller": "Customer actor",
+            "start": 1308,
+            "end": 2570,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                1308,
+                2570
+              ]
+            ]
+          },
+          {
+            "message": 11,
+            "participant": "CheckoutController",
+            "caller": "CheckoutView",
+            "start": 1390,
+            "end": 2570,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1390,
+                2570
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "CheckoutService",
+            "caller": "CheckoutController",
+            "start": 1472,
+            "end": 2488,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1472,
+                2488
+              ]
+            ]
+          },
+          {
+            "message": 13,
+            "participant": "DistanceBoundary",
+            "caller": "CheckoutService",
+            "start": 1674,
+            "end": 1920,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1674,
+                1920
+              ]
+            ]
+          },
+          {
+            "message": 17,
+            "participant": "CheckoutService",
+            "caller": "CheckoutService",
+            "start": 2150,
+            "end": 2192,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                2150,
+                2192
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c06-checkout-sequence-01.png",
+        "png_sha256": "db73898547db8cb9932e3e6b07cd5320f42550f94a30d07f24325910d366d471",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 2,
+        "name": "02 Submit COD order",
+        "basis": "Normal 7-9; E8.1; postconditions",
+        "participants": [
+          "Customer actor",
+          "CheckoutView",
+          "CheckoutController",
+          "CheckoutService",
+          "BatchInventory",
+          "Order",
+          "OrderDetail",
+          "CartItem",
+          "NotificationBoundary"
+        ],
+        "messages": 22,
+        "width": 3070,
+        "height": 2694,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CheckoutView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 2412,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                2412
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CheckoutController",
+            "caller": "CheckoutView",
+            "start": 532,
+            "end": 2412,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                2412
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CheckoutService",
+            "caller": "CheckoutController",
+            "start": 614,
+            "end": 2330,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                2330
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "BatchInventory",
+            "caller": "CheckoutService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "BatchInventory",
+            "caller": "CheckoutService",
+            "start": 980,
+            "end": 1062,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                980,
+                1062
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "Order",
+            "caller": "CheckoutService",
+            "start": 1144,
+            "end": 1226,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1144,
+                1226
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "OrderDetail",
+            "caller": "CheckoutService",
+            "start": 1308,
+            "end": 1390,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1308,
+                1390
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "CartItem",
+            "caller": "CheckoutService",
+            "start": 1472,
+            "end": 1554,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1472,
+                1554
+              ]
+            ]
+          },
+          {
+            "message": 14,
+            "participant": "CheckoutService",
+            "caller": "CheckoutService",
+            "start": 1664,
+            "end": 1706,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                1664,
+                1706
+              ]
+            ]
+          },
+          {
+            "message": 15,
+            "participant": "NotificationBoundary",
+            "caller": "CheckoutService",
+            "start": 1718,
+            "end": 1766,
+            "kind": "A",
+            "reason": "asynchronous handler through last related interaction",
+            "depth": 0,
+            "spans": [
+              [
+                1718,
+                1766
+              ]
+            ]
+          },
+          {
+            "message": 18,
+            "participant": "CheckoutService",
+            "caller": "CheckoutService",
+            "start": 2112,
+            "end": 2154,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                2112,
+                2154
+              ]
+            ]
+          },
+          {
+            "message": 19,
+            "participant": "CartItem",
+            "caller": "CheckoutService",
+            "start": 2166,
+            "end": 2248,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                2166,
+                2248
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c06-checkout-sequence-02.png",
+        "png_sha256": "018fd0c213f37eae8780263f6a8dc6f041fee79b1bcad988c8f1dbf375b58e0e",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 3,
+        "name": "03 VietQR and payment confirmation",
+        "basis": "A6.1; BR-ORD-03; payment postconditions",
+        "participants": [
+          "Customer actor",
+          "CheckoutView",
+          "CheckoutController",
+          "CheckoutService",
+          "Order",
+          "PaymentBoundary",
+          "SePay",
+          "NotificationBoundary"
+        ],
+        "messages": 19,
+        "width": 2740,
+        "height": 2328,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "CheckoutView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 1270,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                1270
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "CheckoutController",
+            "caller": "CheckoutView",
+            "start": 532,
+            "end": 1270,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                1270
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "CheckoutService",
+            "caller": "CheckoutController",
+            "start": 614,
+            "end": 1188,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1188
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "Order",
+            "caller": "CheckoutService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "PaymentBoundary",
+            "caller": "CheckoutService",
+            "start": 860,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 13,
+            "participant": "PaymentBoundary",
+            "caller": "SePay",
+            "start": 1554,
+            "end": 1668,
+            "kind": "A",
+            "reason": "asynchronous handler through last related interaction",
+            "depth": 0,
+            "spans": [
+              [
+                1554,
+                1668
+              ]
+            ]
+          },
+          {
+            "message": 14,
+            "participant": "CheckoutService",
+            "caller": "PaymentBoundary",
+            "start": 1636,
+            "end": 2078,
+            "kind": "A",
+            "reason": "asynchronous handler through last related interaction",
+            "depth": 0,
+            "spans": [
+              [
+                1636,
+                2078
+              ]
+            ]
+          },
+          {
+            "message": 15,
+            "participant": "CheckoutService",
+            "caller": "CheckoutService",
+            "start": 1746,
+            "end": 1788,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                1746,
+                1788
+              ]
+            ]
+          },
+          {
+            "message": 16,
+            "participant": "Order",
+            "caller": "CheckoutService",
+            "start": 1800,
+            "end": 1882,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1800,
+                1882
+              ]
+            ]
+          },
+          {
+            "message": 18,
+            "participant": "CheckoutView",
+            "caller": "CheckoutService",
+            "start": 1964,
+            "end": 2012,
+            "kind": "A",
+            "reason": "asynchronous handler through last related interaction",
+            "depth": 0,
+            "spans": [
+              [
+                1964,
+                2012
+              ]
+            ]
+          },
+          {
+            "message": 19,
+            "participant": "NotificationBoundary",
+            "caller": "CheckoutService",
+            "start": 2046,
+            "end": 2094,
+            "kind": "A",
+            "reason": "asynchronous handler through last related interaction",
+            "depth": 0,
+            "spans": [
+              [
+                2046,
+                2094
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c06-checkout-sequence-03.png",
+        "png_sha256": "52edff7bb92a080bb4e074ded62808a4350b1c477515fe17107875ebf4f5c8c9",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      }
+    ]
+  },
+  {
+    "use_case": "UC-C07",
+    "title": "Manage My Orders",
+    "master": "artifacts\\diagrams\\sequence\\uc-c07-my-orders-sequence.drawio",
+    "master_sha256": "9f0b38f1f6c2e8f0909e887944505bd51feda97b6c9648bda66d45808d2352ff",
+    "pages": [
+      {
+        "page": 1,
+        "name": "01 Order history and details",
+        "basis": "Normal 1-5",
+        "participants": [
+          "Customer actor",
+          "MyOrdersView",
+          "MyOrdersController",
+          "MyOrdersService",
+          "Order",
+          "OrderDetail",
+          "CustomerAddress"
+        ],
+        "messages": 16,
+        "width": 2410,
+        "height": 1962,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 942,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "MyOrdersController",
+            "caller": "MyOrdersView",
+            "start": 532,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "MyOrdersService",
+            "caller": "MyOrdersController",
+            "start": 614,
+            "end": 860,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                860
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "Order",
+            "caller": "MyOrdersService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 1024,
+            "end": 1680,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                1024,
+                1680
+              ]
+            ]
+          },
+          {
+            "message": 9,
+            "participant": "MyOrdersController",
+            "caller": "MyOrdersView",
+            "start": 1106,
+            "end": 1680,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1106,
+                1680
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "MyOrdersService",
+            "caller": "MyOrdersController",
+            "start": 1188,
+            "end": 1598,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1188,
+                1598
+              ]
+            ]
+          },
+          {
+            "message": 11,
+            "participant": "OrderDetail",
+            "caller": "MyOrdersService",
+            "start": 1270,
+            "end": 1352,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1270,
+                1352
+              ]
+            ]
+          },
+          {
+            "message": 13,
+            "participant": "CustomerAddress",
+            "caller": "MyOrdersService",
+            "start": 1434,
+            "end": 1516,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1434,
+                1516
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c07-my-orders-sequence-01.png",
+        "png_sha256": "d71180de1fed2fd7cc51af8f1c56ab176891ae0f51f96a1c23c70dc3cff8c4fb",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 2,
+        "name": "02 Cancel order",
+        "basis": "A3.1; E1.1",
+        "participants": [
+          "Customer actor",
+          "MyOrdersView",
+          "MyOrdersController",
+          "MyOrdersService",
+          "Order",
+          "BatchInventory",
+          "AuditLog",
+          "OrderNotificationBoundary"
+        ],
+        "messages": 16,
+        "width": 2740,
+        "height": 2202,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 562,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                562
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "MyOrdersView",
+            "caller": "MyOrdersView",
+            "start": 560,
+            "end": 602,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 0,
+            "spans": [
+              [
+                560,
+                602
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 614,
+            "end": 1920,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1920
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "MyOrdersController",
+            "caller": "MyOrdersView",
+            "start": 696,
+            "end": 1920,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                1920
+              ]
+            ]
+          },
+          {
+            "message": 5,
+            "participant": "MyOrdersService",
+            "caller": "MyOrdersController",
+            "start": 778,
+            "end": 1838,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                778,
+                1838
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "Order",
+            "caller": "MyOrdersService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "Order",
+            "caller": "MyOrdersService",
+            "start": 1144,
+            "end": 1214,
+            "kind": "C",
+            "reason": "reply omitted; completion before caller resumes",
+            "depth": 0,
+            "spans": [
+              [
+                1144,
+                1214
+              ]
+            ]
+          },
+          {
+            "message": 9,
+            "participant": "BatchInventory",
+            "caller": "MyOrdersService",
+            "start": 1226,
+            "end": 1296,
+            "kind": "C",
+            "reason": "reply omitted; completion before caller resumes",
+            "depth": 0,
+            "spans": [
+              [
+                1226,
+                1296
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "AuditLog",
+            "caller": "MyOrdersService",
+            "start": 1308,
+            "end": 1378,
+            "kind": "C",
+            "reason": "reply omitted; completion before caller resumes",
+            "depth": 0,
+            "spans": [
+              [
+                1308,
+                1378
+              ]
+            ]
+          },
+          {
+            "message": 11,
+            "participant": "MyOrdersService",
+            "caller": "MyOrdersService",
+            "start": 1418,
+            "end": 1460,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 1,
+            "spans": [
+              [
+                1418,
+                1460
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "OrderNotificationBoundary",
+            "caller": "MyOrdersService",
+            "start": 1472,
+            "end": 1520,
+            "kind": "A",
+            "reason": "asynchronous handler through last related interaction",
+            "depth": 0,
+            "spans": [
+              [
+                1472,
+                1520
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c07-my-orders-sequence-02.png",
+        "png_sha256": "ce36ba99b913889403ed07a1cbc490a6885d9dedfae84ffbc908c3e6c32d6757",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 3,
+        "name": "03 Re-order",
+        "basis": "A5.1; E2.1",
+        "participants": [
+          "Customer actor",
+          "MyOrdersView",
+          "MyOrdersController",
+          "MyOrdersService",
+          "OrderDetail",
+          "Product",
+          "BatchInventory",
+          "Cart",
+          "CartItem"
+        ],
+        "messages": 16,
+        "width": 3070,
+        "height": 2322,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 2040,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                2040
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "MyOrdersController",
+            "caller": "MyOrdersView",
+            "start": 532,
+            "end": 2040,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                532,
+                2040
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "MyOrdersService",
+            "caller": "MyOrdersController",
+            "start": 614,
+            "end": 1838,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1838
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "OrderDetail",
+            "caller": "MyOrdersService",
+            "start": 696,
+            "end": 778,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                778
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "Product",
+            "caller": "MyOrdersService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "BatchInventory",
+            "caller": "MyOrdersService",
+            "start": 1024,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1024,
+                1106
+              ]
+            ]
+          },
+          {
+            "message": 10,
+            "participant": "Cart",
+            "caller": "MyOrdersService",
+            "start": 1188,
+            "end": 1270,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1188,
+                1270
+              ]
+            ]
+          },
+          {
+            "message": 12,
+            "participant": "CartItem",
+            "caller": "MyOrdersService",
+            "start": 1352,
+            "end": 1434,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1352,
+                1434
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c07-my-orders-sequence-03.png",
+        "png_sha256": "b5d20897a8afa9d4c52121cf2ca3bc9cd17c6031dacba5aa2f3027e5118cb8dd",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      },
+      {
+        "page": 4,
+        "name": "04 Submit review",
+        "basis": "A5.2",
+        "participants": [
+          "Customer actor",
+          "MyOrdersView",
+          "MyOrdersController",
+          "MyOrdersService",
+          "Order",
+          "OrderReview"
+        ],
+        "messages": 11,
+        "width": 2080,
+        "height": 1552,
+        "visual_review": "Representative revised pages visually inspected; activation continuity and image integrity checked for all 15 pages",
+        "executions": [
+          {
+            "message": 1,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 450,
+            "end": 562,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                450,
+                562
+              ]
+            ]
+          },
+          {
+            "message": 2,
+            "participant": "MyOrdersView",
+            "caller": "MyOrdersView",
+            "start": 560,
+            "end": 602,
+            "kind": "C",
+            "reason": "self-call completes before next interaction",
+            "depth": 0,
+            "spans": [
+              [
+                560,
+                602
+              ]
+            ]
+          },
+          {
+            "message": 3,
+            "participant": "MyOrdersView",
+            "caller": "Customer actor",
+            "start": 614,
+            "end": 1270,
+            "kind": "C",
+            "reason": "UI execution completes at received result; no reply to actor",
+            "depth": 0,
+            "spans": [
+              [
+                614,
+                1270
+              ]
+            ]
+          },
+          {
+            "message": 4,
+            "participant": "MyOrdersController",
+            "caller": "MyOrdersView",
+            "start": 696,
+            "end": 1270,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                696,
+                1270
+              ]
+            ]
+          },
+          {
+            "message": 5,
+            "participant": "MyOrdersService",
+            "caller": "MyOrdersController",
+            "start": 778,
+            "end": 1188,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                778,
+                1188
+              ]
+            ]
+          },
+          {
+            "message": 6,
+            "participant": "Order",
+            "caller": "MyOrdersService",
+            "start": 860,
+            "end": 942,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                860,
+                942
+              ]
+            ]
+          },
+          {
+            "message": 8,
+            "participant": "OrderReview",
+            "caller": "MyOrdersService",
+            "start": 1024,
+            "end": 1106,
+            "kind": "C",
+            "reason": "explicit reply; continuous execution across combined fragments",
+            "depth": 0,
+            "spans": [
+              [
+                1024,
+                1106
+              ]
+            ]
+          }
+        ],
+        "png": "artifacts\\diagrams\\images\\uc-c07-my-orders-sequence-04.png",
+        "png_sha256": "f6aff870f57aa94e66adc5fccb8be7594c8cc2fbd58906ab3c670c2b2d452d07",
+        "activation_continuity": "PASS - exactly one rectangle for each execution occurrence; no fragment-boundary cuts"
+      }
+    ]
+  }
+]

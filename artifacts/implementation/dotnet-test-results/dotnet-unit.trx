@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="b24e0a06-37f8-4335-b2c2-9697995bf22a" name="huect@LAPTOP-6SN65NCS 2026-11-02 12:10:08" runUser="LAPTOP-6SN65NCS\huect" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-02T12:10:08.4404314+07:00" queuing="2026-11-02T12:10:08.4404318+07:00" start="2026-11-02T12:10:04.3837006+07:00" finish="2026-11-02T12:10:08.7129231+07:00" />
+  <TestSettings name="default" id="525fbbcf-e50f-4d8d-bbd2-f366fd56356e">
+    <Deployment runDeploymentRoot="huect_LAPTOP-6SN65NCS_2026-11-02_12_10_08" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e59d6358-b880-4343-8c1d-34bc0b1ec39e" testId="bfb3333c-bf72-2fa0-aebb-f4f8db99726d" testName="FreshFood.Api.Tests.BackendTests.Discount(rate: 50, expected: 5000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0004846" startTime="2026-11-02T12:10:08.4139419+07:00" endTime="2026-11-02T12:10:08.4140396+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e59d6358-b880-4343-8c1d-34bc0b1ec39e" />
+    <UnitTestResult executionId="931f3546-f3f2-4a6b-ac25-74619fe8ffbd" testId="6f100005-abd7-1166-34bb-4f3660ec415c" testName="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 2.999, expected: 20000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0003932" startTime="2026-11-02T12:10:08.3979113+07:00" endTime="2026-11-02T12:10:08.3981768+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="931f3546-f3f2-4a6b-ac25-74619fe8ffbd" />
+    <UnitTestResult executionId="05c73edc-bec0-4b59-8f1a-8d78487c4068" testId="9962e458-d2e3-23e9-21d7-6b02750c35ea" testName="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 10, expected: 30000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000062" startTime="2026-11-02T12:10:08.3987029+07:00" endTime="2026-11-02T12:10:08.3987797+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05c73edc-bec0-4b59-8f1a-8d78487c4068" />
+    <UnitTestResult executionId="4b9cb193-313f-4d0c-a9ec-b99e957710ac" testId="6461bf4d-30a5-0578-bad6-cd452a7903f0" testName="FreshFood.Api.Tests.BackendTests.CancelOutsideAllowedStatesFails(state: Shipping)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0005811" startTime="2026-11-02T12:10:08.5468849+07:00" endTime="2026-11-02T12:10:08.5469962+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4b9cb193-313f-4d0c-a9ec-b99e957710ac" />
+    <UnitTestResult executionId="8c4b30a8-e133-4b48-8bc3-5247f2dd704f" testId="d698ccdf-ff0c-e4cb-f475-b1e027507c62" testName="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 0, expected: 10000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000047" startTime="2026-11-02T12:10:08.4132617+07:00" endTime="2026-11-02T12:10:08.4133682+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8c4b30a8-e133-4b48-8bc3-5247f2dd704f" />
+    <UnitTestResult executionId="14268917-c5f9-4ac5-a49f-bf5f3289aaa7" testId="03c92cdc-4146-4ea4-819f-2c88a5651830" testName="FreshFood.Api.Tests.BackendTests.CartClampsToAvailableAndIgnoresClientIdentity" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0132393" startTime="2026-11-02T12:10:08.3800685+07:00" endTime="2026-11-02T12:10:08.3932633+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14268917-c5f9-4ac5-a49f-bf5f3289aaa7" />
+    <UnitTestResult executionId="148a8c3f-158e-4a6e-a15c-76ebf52ae905" testId="2f7fcc86-6cb7-cbab-6e8a-586e029c3c5f" testName="FreshFood.Api.Tests.BackendTests.InvalidDiscount(rate: 50.01)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0005207" startTime="2026-11-02T12:10:08.6091688+07:00" endTime="2026-11-02T12:10:08.6092873+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="148a8c3f-158e-4a6e-a15c-76ebf52ae905" />
+    <UnitTestResult executionId="56e909da-3486-4aee-91e8-72f8f4478043" testId="129455ba-b32b-b633-8d49-ea52c56dd10b" testName="FreshFood.Api.Tests.BackendTests.ShippingOutsideArea(distance: 10.001)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0080611" startTime="2026-11-02T12:10:08.5982673+07:00" endTime="2026-11-02T12:10:08.6064145+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="56e909da-3486-4aee-91e8-72f8f4478043" />
+    <UnitTestResult executionId="650d7b35-ded5-4011-bfec-7930ffb42463" testId="96d252cd-9ec8-8937-9247-6c76ab5f4e1f" testName="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 0.999, expected: 10000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000124" startTime="2026-11-02T12:10:08.3984156+07:00" endTime="2026-11-02T12:10:08.3985487+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="650d7b35-ded5-4011-bfec-7930ffb42463" />
+    <UnitTestResult executionId="9359d4b6-62f4-46e4-b9a9-ba732cc2d54a" testId="4b65711d-f2a8-f541-03ec-b3d089870682" testName="FreshFood.Api.Tests.BackendTests.StateMachineRejectsAggregateMismatch" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0090811" startTime="2026-11-02T12:10:08.4145363+07:00" endTime="2026-11-02T12:10:08.4146390+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9359d4b6-62f4-46e4-b9a9-ba732cc2d54a" />
+    <UnitTestResult executionId="bea8dc46-c1a4-4c97-979d-1b12c700f4aa" testId="2e85a252-648b-573a-7cc7-e7388f3c4a7e" testName="FreshFood.Api.Tests.BackendTests.AcceptOrderTraversesOneInitialBranchAndInitialPayment" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0749071" startTime="2026-11-02T12:10:08.4151774+07:00" endTime="2026-11-02T12:10:08.4837833+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bea8dc46-c1a4-4c97-979d-1b12c700f4aa" />
+    <UnitTestResult executionId="5db92f59-c96f-4ba3-abf8-fcf11632fb24" testId="cca7d18f-615c-ba96-e143-480797e409d9" testName="FreshFood.Api.Tests.BackendTests.WireEnumsAreStringsAndRejectIntegers" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0468366" startTime="2026-11-02T12:10:08.4841387+07:00" endTime="2026-11-02T12:10:08.5308250+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5db92f59-c96f-4ba3-abf8-fcf11632fb24" />
+    <UnitTestResult executionId="1f0cb3b5-2a85-46c5-8ae9-0484b7c019e1" testId="a2ad3580-3f1a-016f-9090-2fb3f92a66e7" testName="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 1, expected: 20000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0032605" startTime="2026-11-02T12:10:08.3946624+07:00" endTime="2026-11-02T12:10:08.3977154+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f0cb3b5-2a85-46c5-8ae9-0484b7c019e1" />
+    <UnitTestResult executionId="0b785f78-8d8a-4fde-9193-99c04b5bcec9" testId="a74aeb40-7706-02fd-e787-7bff44ff5a28" testName="FreshFood.Api.Tests.BackendTests.InvalidDiscount(rate: 10.001)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0007768" startTime="2026-11-02T12:10:08.6067941+07:00" endTime="2026-11-02T12:10:08.6073099+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b785f78-8d8a-4fde-9193-99c04b5bcec9" />
+    <UnitTestResult executionId="c6dca5fe-8429-42b2-b425-30748b51a868" testId="60ef15e9-61ed-0969-33c8-c9c2fc507bed" testName="FreshFood.Api.Tests.BackendTests.ReserveReleaseInvariant" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0020349" startTime="2026-11-02T12:10:08.3790542+07:00" endTime="2026-11-02T12:10:08.3798395+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6dca5fe-8429-42b2-b425-30748b51a868" />
+    <UnitTestResult executionId="af801ea8-e033-4398-bdb6-7a89d64f19c1" testId="1e9075fb-3779-3b03-b1eb-831a6e749af5" testName="FreshFood.Api.Tests.BackendTests.FractionalMoneyDoesNotInventRounding" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0010634" startTime="2026-11-02T12:10:08.3936987+07:00" endTime="2026-11-02T12:10:08.3943768+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af801ea8-e033-4398-bdb6-7a89d64f19c1" />
+    <UnitTestResult executionId="a8740f4a-aca6-4ae9-af2c-dd0e2ac9d561" testId="097360f4-249d-2a90-a4c0-8af74537f3cd" testName="FreshFood.Api.Tests.BackendTests.ShippingOutsideArea(distance: -0.001)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0004468" startTime="2026-11-02T12:10:08.5980286+07:00" endTime="2026-11-02T12:10:08.5981179+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8740f4a-aca6-4ae9-af2c-dd0e2ac9d561" />
+    <UnitTestResult executionId="c53c0e23-cfc2-4130-948c-65588044d3f7" testId="a2fed8a0-22ce-f108-0ee6-8def9fd663a6" testName="FreshFood.Api.Tests.BackendTests.CancelOutsideAllowedStatesFails(state: Packing)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000810" startTime="2026-11-02T12:10:08.5471813+07:00" endTime="2026-11-02T12:10:08.5472727+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c53c0e23-cfc2-4130-948c-65588044d3f7" />
+    <UnitTestResult executionId="b6741c36-55f8-47f2-a9cc-798250fcd12c" testId="0580584a-8ebd-f938-1cf1-273f55cab47c" testName="FreshFood.Api.Tests.BackendTests.CancelReleasesOnceAndPreservesPayment(state: PendingPaid, payment: Paid)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0028358" startTime="2026-11-02T12:10:08.5885708+07:00" endTime="2026-11-02T12:10:08.5910870+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6741c36-55f8-47f2-a9cc-798250fcd12c" />
+    <UnitTestResult executionId="2a28d995-b85d-4f99-b284-11010d9f3bb0" testId="e750ebb0-6d76-0b32-1df4-ebf44d5aa3e5" testName="FreshFood.Api.Tests.BackendTests.ProfileRejectsInvalidEmailWithoutWrite" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0061104" startTime="2026-11-02T12:10:08.5921154+07:00" endTime="2026-11-02T12:10:08.5976682+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a28d995-b85d-4f99-b284-11010d9f3bb0" />
+    <UnitTestResult executionId="5f367293-6112-42f5-ad2e-d7b90228f444" testId="6807086c-98e8-cb52-6a7d-b5130c17be8b" testName="FreshFood.Api.Tests.BackendTests.CartUsesAbsoluteQuantity" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0017212" startTime="2026-11-02T12:10:08.6097788+07:00" endTime="2026-11-02T12:10:08.6098734+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f367293-6112-42f5-ad2e-d7b90228f444" />
+    <UnitTestResult executionId="6f86af54-83db-4f30-bd5f-8574be9b5ca4" testId="0312f68d-7f1e-d13c-796f-e104bbd01d97" testName="FreshFood.Api.Tests.BackendTests.CancelReleasesOnceAndPreservesPayment(state: Confirmed, payment: Paid)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0453121" startTime="2026-11-02T12:10:08.5475003+07:00" endTime="2026-11-02T12:10:08.5881885+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f86af54-83db-4f30-bd5f-8574be9b5ca4" />
+    <UnitTestResult executionId="3d49c331-2ebc-4c0e-ba2c-5ea1fb27f3f6" testId="cd7d4162-0ff5-23e1-d5bd-8c6b3cef2bcb" testName="FreshFood.Api.Tests.BackendTests.CancelOutsideAllowedStatesFails(state: Delivered)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0108180" startTime="2026-11-02T12:10:08.5313131+07:00" endTime="2026-11-02T12:10:08.5417979+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d49c331-2ebc-4c0e-ba2c-5ea1fb27f3f6" />
+    <UnitTestResult executionId="58f36254-857d-4fb7-99da-a1addc80b046" testId="2a2a000b-af7e-7ceb-8e89-ed2a088c640f" testName="FreshFood.Api.Tests.BackendTests.MoneyPreservesLargeIntegerString" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0613181" startTime="2026-11-02T12:10:08.3138178+07:00" endTime="2026-11-02T12:10:08.3436681+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="58f36254-857d-4fb7-99da-a1addc80b046" />
+    <UnitTestResult executionId="8e4c205b-8c4e-4259-be58-898f0cb68c0a" testId="4b7c615e-6e00-d300-fe88-881b92600a1d" testName="FreshFood.Api.Tests.BackendTests.CancelReleasesOnceAndPreservesPayment(state: PendingUnpaid, payment: Unpaid)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0002219" startTime="2026-11-02T12:10:08.5913722+07:00" endTime="2026-11-02T12:10:08.5917669+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e4c205b-8c4e-4259-be58-898f0cb68c0a" />
+    <UnitTestResult executionId="668bc976-7f97-4187-8973-9e36c3547c56" testId="60ee4e6d-e223-ef67-a630-e5199ae3217a" testName="FreshFood.Api.Tests.BackendTests.Discount(rate: 0, expected: 10000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0003970" startTime="2026-11-02T12:10:08.4136154+07:00" endTime="2026-11-02T12:10:08.4137358+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="668bc976-7f97-4187-8973-9e36c3547c56" />
+    <UnitTestResult executionId="0d92d2d4-6de0-4a86-9e36-dbebcbbc9cd4" testId="20d18344-3c08-abf0-9e70-772a75e04847" testName="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 3, expected: 30000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000049" startTime="2026-11-02T12:10:08.4129082+07:00" endTime="2026-11-02T12:10:08.4130396+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d92d2d4-6de0-4a86-9e36-dbebcbbc9cd4" />
+    <UnitTestResult executionId="1afb57c8-969d-4b34-92d7-00c477aa0dde" testId="b789c859-dd31-8608-2c6c-f6e57e785280" testName="FreshFood.Api.Tests.BackendTests.CatalogFiltersInactiveAndTotalsAvailableStock" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0333554" startTime="2026-11-02T12:10:08.3657582+07:00" endTime="2026-11-02T12:10:08.3777410+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1afb57c8-969d-4b34-92d7-00c477aa0dde" />
+    <UnitTestResult executionId="6d932928-3ea7-414e-97b3-8e2212717e8a" testId="ce79beeb-10de-0333-af5e-dec4e16f58e7" testName="FreshFood.Api.Tests.BackendTests.InvalidDiscount(rate: 9.99)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000258" startTime="2026-11-02T12:10:08.6094639+07:00" endTime="2026-11-02T12:10:08.6095562+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d932928-3ea7-414e-97b3-8e2212717e8a" />
+    <UnitTestResult executionId="cfc1440e-0d83-4ba9-b179-1fb5f15764a0" testId="6c4fad7e-c958-c785-3433-87fe2628fcf4" testName="FreshFood.Api.Tests.BackendTests.Discount(rate: 10, expected: 9000)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0000289" startTime="2026-11-02T12:10:08.4142029+07:00" endTime="2026-11-02T12:10:08.4142937+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cfc1440e-0d83-4ba9-b179-1fb5f15764a0" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 0.999, expected: 10000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="96d252cd-9ec8-8937-9247-6c76ab5f4e1f">
+      <Execution id="650d7b35-ded5-4011-bfec-7930ffb42463" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingBoundary" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.AcceptOrderTraversesOneInitialBranchAndInitialPayment" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="2e85a252-648b-573a-7cc7-e7388f3c4a7e">
+      <Execution id="bea8dc46-c1a4-4c97-979d-1b12c700f4aa" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="AcceptOrderTraversesOneInitialBranchAndInitialPayment" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CancelOutsideAllowedStatesFails(state: Delivered)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="cd7d4162-0ff5-23e1-d5bd-8c6b3cef2bcb">
+      <Execution id="3d49c331-2ebc-4c0e-ba2c-5ea1fb27f3f6" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CancelOutsideAllowedStatesFails" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CatalogFiltersInactiveAndTotalsAvailableStock" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="b789c859-dd31-8608-2c6c-f6e57e785280">
+      <Execution id="1afb57c8-969d-4b34-92d7-00c477aa0dde" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CatalogFiltersInactiveAndTotalsAvailableStock" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 2.999, expected: 20000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="6f100005-abd7-1166-34bb-4f3660ec415c">
+      <Execution id="931f3546-f3f2-4a6b-ac25-74619fe8ffbd" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingBoundary" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CancelOutsideAllowedStatesFails(state: Shipping)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="6461bf4d-30a5-0578-bad6-cd452a7903f0">
+      <Execution id="4b9cb193-313f-4d0c-a9ec-b99e957710ac" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CancelOutsideAllowedStatesFails" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 0, expected: 10000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="d698ccdf-ff0c-e4cb-f475-b1e027507c62">
+      <Execution id="8c4b30a8-e133-4b48-8bc3-5247f2dd704f" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingBoundary" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.WireEnumsAreStringsAndRejectIntegers" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="cca7d18f-615c-ba96-e143-480797e409d9">
+      <Execution id="5db92f59-c96f-4ba3-abf8-fcf11632fb24" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="WireEnumsAreStringsAndRejectIntegers" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CartClampsToAvailableAndIgnoresClientIdentity" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="03c92cdc-4146-4ea4-819f-2c88a5651830">
+      <Execution id="14268917-c5f9-4ac5-a49f-bf5f3289aaa7" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CartClampsToAvailableAndIgnoresClientIdentity" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.InvalidDiscount(rate: 50.01)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="2f7fcc86-6cb7-cbab-6e8a-586e029c3c5f">
+      <Execution id="148a8c3f-158e-4a6e-a15c-76ebf52ae905" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="InvalidDiscount" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CartUsesAbsoluteQuantity" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="6807086c-98e8-cb52-6a7d-b5130c17be8b">
+      <Execution id="5f367293-6112-42f5-ad2e-d7b90228f444" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CartUsesAbsoluteQuantity" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CancelReleasesOnceAndPreservesPayment(state: PendingPaid, payment: Paid)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="0580584a-8ebd-f938-1cf1-273f55cab47c">
+      <Execution id="b6741c36-55f8-47f2-a9cc-798250fcd12c" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CancelReleasesOnceAndPreservesPayment" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingOutsideArea(distance: 10.001)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="129455ba-b32b-b633-8d49-ea52c56dd10b">
+      <Execution id="56e909da-3486-4aee-91e8-72f8f4478043" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingOutsideArea" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 3, expected: 30000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="20d18344-3c08-abf0-9e70-772a75e04847">
+      <Execution id="0d92d2d4-6de0-4a86-9e36-dbebcbbc9cd4" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingBoundary" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 10, expected: 30000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="9962e458-d2e3-23e9-21d7-6b02750c35ea">
+      <Execution id="05c73edc-bec0-4b59-8f1a-8d78487c4068" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingBoundary" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.MoneyPreservesLargeIntegerString" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="2a2a000b-af7e-7ceb-8e89-ed2a088c640f">
+      <Execution id="58f36254-857d-4fb7-99da-a1addc80b046" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="MoneyPreservesLargeIntegerString" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.Discount(rate: 10, expected: 9000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="6c4fad7e-c958-c785-3433-87fe2628fcf4">
+      <Execution id="cfc1440e-0d83-4ba9-b179-1fb5f15764a0" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="Discount" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.InvalidDiscount(rate: 10.001)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="a74aeb40-7706-02fd-e787-7bff44ff5a28">
+      <Execution id="0b785f78-8d8a-4fde-9193-99c04b5bcec9" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="InvalidDiscount" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CancelOutsideAllowedStatesFails(state: Packing)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="a2fed8a0-22ce-f108-0ee6-8def9fd663a6">
+      <Execution id="c53c0e23-cfc2-4130-948c-65588044d3f7" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CancelOutsideAllowedStatesFails" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ProfileRejectsInvalidEmailWithoutWrite" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="e750ebb0-6d76-0b32-1df4-ebf44d5aa3e5">
+      <Execution id="2a28d995-b85d-4f99-b284-11010d9f3bb0" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ProfileRejectsInvalidEmailWithoutWrite" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingBoundary(distance: 1, expected: 20000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="a2ad3580-3f1a-016f-9090-2fb3f92a66e7">
+      <Execution id="1f0cb3b5-2a85-46c5-8ae9-0484b7c019e1" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingBoundary" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.StateMachineRejectsAggregateMismatch" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="4b65711d-f2a8-f541-03ec-b3d089870682">
+      <Execution id="9359d4b6-62f4-46e4-b9a9-ba732cc2d54a" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="StateMachineRejectsAggregateMismatch" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.InvalidDiscount(rate: 9.99)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="ce79beeb-10de-0333-af5e-dec4e16f58e7">
+      <Execution id="6d932928-3ea7-414e-97b3-8e2212717e8a" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="InvalidDiscount" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.FractionalMoneyDoesNotInventRounding" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="1e9075fb-3779-3b03-b1eb-831a6e749af5">
+      <Execution id="af801ea8-e033-4398-bdb6-7a89d64f19c1" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="FractionalMoneyDoesNotInventRounding" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ShippingOutsideArea(distance: -0.001)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="097360f4-249d-2a90-a4c0-8af74537f3cd">
+      <Execution id="a8740f4a-aca6-4ae9-af2c-dd0e2ac9d561" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ShippingOutsideArea" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CancelReleasesOnceAndPreservesPayment(state: PendingUnpaid, payment: Unpaid)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="4b7c615e-6e00-d300-fe88-881b92600a1d">
+      <Execution id="8e4c205b-8c4e-4259-be58-898f0cb68c0a" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CancelReleasesOnceAndPreservesPayment" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.ReserveReleaseInvariant" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="60ef15e9-61ed-0969-33c8-c9c2fc507bed">
+      <Execution id="c6dca5fe-8429-42b2-b425-30748b51a868" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="ReserveReleaseInvariant" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.Discount(rate: 50, expected: 5000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="bfb3333c-bf72-2fa0-aebb-f4f8db99726d">
+      <Execution id="e59d6358-b880-4343-8c1d-34bc0b1ec39e" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="Discount" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.CancelReleasesOnceAndPreservesPayment(state: Confirmed, payment: Paid)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="0312f68d-7f1e-d13c-796f-e104bbd01d97">
+      <Execution id="6f86af54-83db-4f30-bd5f-8574be9b5ca4" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="CancelReleasesOnceAndPreservesPayment" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.BackendTests.Discount(rate: 0, expected: 10000)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="60ee4e6d-e223-ef67-a630-e5199ae3217a">
+      <Execution id="668bc976-7f97-4187-8973-9e36c3547c56" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.BackendTests" name="Discount" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="bfb3333c-bf72-2fa0-aebb-f4f8db99726d" executionId="e59d6358-b880-4343-8c1d-34bc0b1ec39e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6f100005-abd7-1166-34bb-4f3660ec415c" executionId="931f3546-f3f2-4a6b-ac25-74619fe8ffbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9962e458-d2e3-23e9-21d7-6b02750c35ea" executionId="05c73edc-bec0-4b59-8f1a-8d78487c4068" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6461bf4d-30a5-0578-bad6-cd452a7903f0" executionId="4b9cb193-313f-4d0c-a9ec-b99e957710ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d698ccdf-ff0c-e4cb-f475-b1e027507c62" executionId="8c4b30a8-e133-4b48-8bc3-5247f2dd704f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="03c92cdc-4146-4ea4-819f-2c88a5651830" executionId="14268917-c5f9-4ac5-a49f-bf5f3289aaa7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f7fcc86-6cb7-cbab-6e8a-586e029c3c5f" executionId="148a8c3f-158e-4a6e-a15c-76ebf52ae905" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="129455ba-b32b-b633-8d49-ea52c56dd10b" executionId="56e909da-3486-4aee-91e8-72f8f4478043" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96d252cd-9ec8-8937-9247-6c76ab5f4e1f" executionId="650d7b35-ded5-4011-bfec-7930ffb42463" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b65711d-f2a8-f541-03ec-b3d089870682" executionId="9359d4b6-62f4-46e4-b9a9-ba732cc2d54a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2e85a252-648b-573a-7cc7-e7388f3c4a7e" executionId="bea8dc46-c1a4-4c97-979d-1b12c700f4aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cca7d18f-615c-ba96-e143-480797e409d9" executionId="5db92f59-c96f-4ba3-abf8-fcf11632fb24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2ad3580-3f1a-016f-9090-2fb3f92a66e7" executionId="1f0cb3b5-2a85-46c5-8ae9-0484b7c019e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a74aeb40-7706-02fd-e787-7bff44ff5a28" executionId="0b785f78-8d8a-4fde-9193-99c04b5bcec9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60ef15e9-61ed-0969-33c8-c9c2fc507bed" executionId="c6dca5fe-8429-42b2-b425-30748b51a868" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1e9075fb-3779-3b03-b1eb-831a6e749af5" executionId="af801ea8-e033-4398-bdb6-7a89d64f19c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="097360f4-249d-2a90-a4c0-8af74537f3cd" executionId="a8740f4a-aca6-4ae9-af2c-dd0e2ac9d561" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2fed8a0-22ce-f108-0ee6-8def9fd663a6" executionId="c53c0e23-cfc2-4130-948c-65588044d3f7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0580584a-8ebd-f938-1cf1-273f55cab47c" executionId="b6741c36-55f8-47f2-a9cc-798250fcd12c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e750ebb0-6d76-0b32-1df4-ebf44d5aa3e5" executionId="2a28d995-b85d-4f99-b284-11010d9f3bb0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6807086c-98e8-cb52-6a7d-b5130c17be8b" executionId="5f367293-6112-42f5-ad2e-d7b90228f444" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0312f68d-7f1e-d13c-796f-e104bbd01d97" executionId="6f86af54-83db-4f30-bd5f-8574be9b5ca4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd7d4162-0ff5-23e1-d5bd-8c6b3cef2bcb" executionId="3d49c331-2ebc-4c0e-ba2c-5ea1fb27f3f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2a2a000b-af7e-7ceb-8e89-ed2a088c640f" executionId="58f36254-857d-4fb7-99da-a1addc80b046" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4b7c615e-6e00-d300-fe88-881b92600a1d" executionId="8e4c205b-8c4e-4259-be58-898f0cb68c0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60ee4e6d-e223-ef67-a630-e5199ae3217a" executionId="668bc976-7f97-4187-8973-9e36c3547c56" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="20d18344-3c08-abf0-9e70-772a75e04847" executionId="0d92d2d4-6de0-4a86-9e36-dbebcbbc9cd4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b789c859-dd31-8608-2c6c-f6e57e785280" executionId="1afb57c8-969d-4b34-92d7-00c477aa0dde" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce79beeb-10de-0333-af5e-dec4e16f58e7" executionId="6d932928-3ea7-414e-97b3-8e2212717e8a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c4fad7e-c958-c785-3433-87fe2628fcf4" executionId="cfc1440e-0d83-4ba9-b179-1fb5f15764a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="30" executed="30" passed="30" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:01.81]   Discovering: FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:01.91]   Discovered:  FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:01.97]   Starting:    FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:02.36]   Finished:    FreshFood.Api.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

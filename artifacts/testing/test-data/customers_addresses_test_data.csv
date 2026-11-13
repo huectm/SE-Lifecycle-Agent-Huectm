@@ -1,0 +1,14 @@
+address_id,customer_id,customer_name,recipient_phone,street_address,ward,district,city,latitude,longitude,distance_km,distance_tier,expected_shipping_fee,is_default,is_within_service_radius,test_scenario
+ADDR-001,CUST-001,Nguyễn Văn An,0901234567,120 Hai Bà Trưng,Bến Nghé,Quận 1,TP. Hồ Chí Minh,10.7798,106.6990,0.85,Tier 1 (< 1 km),10000,True,True,Valid close address - Tier 1 shipping fee 10k VND
+ADDR-002,CUST-001,Nguyễn Văn An,0901234567,45 Đinh Tiên Hoàng,Đa Kao,Quận 1,TP. Hồ Chí Minh,10.7915,106.6995,1.80,Tier 2 (1 to <3 km),20000,False,True,Valid medium address - Tier 2 shipping fee 20k VND
+ADDR-003,CUST-002,Trần Thị Mai,0987654321,78 Nguyễn Thị Minh Khai,Phường 6,Quận 3,TP. Hồ Chí Minh,10.7780,106.6910,1.20,Tier 2 (1 to <3 km),20000,True,True,Valid address in District 3 - Default address
+ADDR-004,CUST-002,Trần Thị Mai,0987654321,250 Hoàng Diệu,Phường 6,Quận 4,TP. Hồ Chí Minh,10.7620,106.7020,2.10,Tier 2 (1 to <3 km),20000,False,True,Secondary address in District 4
+ADDR-005,CUST-003,Lê Hoàng Nam,0912345678,15 Song Hành,An Phú,TP. Thủ Đức,TP. Hồ Chí Minh,10.8010,106.7450,6.20,Tier 3 (3 to 10 km),30000,True,True,Valid far address in Thu Duc - Tier 3 shipping fee 30k VND
+ADDR-006,CUST-003,Lê Hoàng Nam,0912345678,99 Đường số 7,Bình Trị Đông B,Bình Tân,TP. Hồ Chí Minh,10.7510,106.6080,10.00,Boundary (Exactly 10.0 km),30000,False,True,Boundary test - Exactly 10.0 km limit (BR-DEL-01 allowed)
+ADDR-007,CUST-004,Phạm Quốc Huy,0933445566,12 Đường số 1,Tân Tạo,Bình Tân,TP. Hồ Chí Minh,10.7480,106.5980,10.20,Out of boundary (>10 km),0,False,False,Boundary failure - 10.2 km (>10 km) - Order blocked
+ADDR-008,CUST-004,Phạm Quốc Huy,0933445566,550 Nguyễn Văn Linh,Tân Phú,Quận 7,TP. Hồ Chí Minh,10.7290,106.7210,7.50,Tier 3 (3 to 10 km),30000,True,True,Valid address in District 7
+ADDR-009,CUST-005,Võ Minh Tâm,0944556677,Khu Công nghệ cao,Long Thạnh Mỹ,TP. Thủ Đức,TP. Hồ Chí Minh,10.8520,106.7910,14.50,Out of boundary (>10 km),0,True,False,Out of radius - 14.5 km - Checkout blocked per BR-DEL-01
+ADDR-010,CUST-001,Nguyễn Văn An,0901234,120 Hai Bà Trưng,Bến Nghé,Quận 1,TP. Hồ Chí Minh,10.7798,106.6990,0.85,Invalid,0,False,True,Negative test - Invalid phone number (7 digits)
+ADDR-011,CUST-001,Nguyễn Văn An,090123456789,120 Hai Bà Trưng,Bến Nghé,Quận 1,TP. Hồ Chí Minh,10.7798,106.6990,0.85,Invalid,0,False,True,Negative test - Invalid phone number (12 digits)
+ADDR-012,CUST-001,Nguyễn Văn An,090123ABCD,120 Hai Bà Trưng,Bến Nghé,Quận 1,TP. Hồ Chí Minh,10.7798,106.6990,0.85,Invalid,0,False,True,Negative test - Phone with alphabetic characters
+ADDR-013,CUST-006,Lý Thu Thảo,0966778899,Địa chỉ ảo không tồn tại trên bản đồ,Unknown,Unknown,TP. Hồ Chí Minh,0.0,0.0,0.0,Geocoding Error,0,True,False,Negative test - Google Maps geocoding fails to resolve address

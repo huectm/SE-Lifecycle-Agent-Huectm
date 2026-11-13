@@ -1,0 +1,29 @@
+﻿Use Case,Analysis Page,Message,Source Interaction,Design Contract,Design Operation,Source Flows,Status
+UC-C01,01 Catalog and search,3,Prepare catalog,ICatalogService,GetCatalogAsync,Normal 1-6; E4.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C01,01 Catalog and search,10,Search active products,ICatalogService,SearchAsync,Normal 1-6; E4.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C01,02 Details and clearance,3,Get product details,ICatalogService,GetProductDetailsAsync,A3.1; A3.2,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C01,02 Details and clearance,12,Filter active clearance batches,ICatalogService,GetClearanceAsync,A3.1; A3.2,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C03,01 View cart,3,Load current basket,ICartService,GetCartAsync,Normal 1-5; E3.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C03,01 View cart,12,Calculate line totals and subtotal,ICartService,GetCartAsync,Normal 1-5; E3.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C03,02 Add or update quantity,3,Validate cart change,ICartService,ChangeQuantityAsync,A1.1; A4.1; E2.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C03,02 Add or update quantity,10,Recalculate totals and subtotal,ICartService,GetCartAsync,A1.1; A4.1; E2.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C03,03 Remove item,5,Apply removal,ICartService,RemoveItemAsync,A4.2,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C03,03 Remove item,8,Recalculate subtotal,ICartService,GetCartAsync,A4.2,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C05,01 View and update profile,3,Load authenticated profile,IProfileService,GetProfileAsync,Normal 1-3; A2.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C05,01 View and update profile,12,Validate email and update profile,IProfileService,UpdateProfileAsync,Normal 1-3; A2.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C05,02 Add or edit address,3,Validate recipient and address,IProfileService,SaveAddressAsync,A3.1; A3.2; E3.1; E3.2,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C05,03 Delete saved address,3,Check address deletion eligibility,IProfileService,DeleteAddressAsync,A3.3,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,01 Prepare delivery and totals,3,Prepare checkout,ICheckoutService,PrepareCheckoutAsync,Normal 1-6; A2.1; E4.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,01 Prepare delivery and totals,12,Re-evaluate delivery address,ICheckoutService,PrepareCheckoutAsync,Normal 1-6; A2.1; E4.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,01 Prepare delivery and totals,17,Calculate tiered fee and FEFO-priced summary,ICheckoutService,PrepareCheckoutAsync,Normal 1-6; A2.1; E4.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,02 Submit COD order,3,Place COD order,ICheckoutService,PlaceOrderAsync,Normal 7-9; E8.1; postconditions,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,02 Submit COD order,14,"Commit order, stock, lines and cart together",ICheckoutService,PlaceOrderAsync,Normal 7-9; E8.1; postconditions,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,02 Submit COD order,18,Roll back attempted order changes,ICheckoutService,PlaceOrderAsync,Normal 7-9; E8.1; postconditions,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,03 VietQR and payment confirmation,3,Place order through shared atomic submission,ICheckoutService,PlaceOrderAsync,A6.1; BR-ORD-03; payment postconditions,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C06,03 VietQR and payment confirmation,15,Verify authenticity and matching order/amount,ICheckoutService,HandleVerifiedPaymentAsync,A6.1; BR-ORD-03; payment postconditions,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C07,01 Order history and details,3,Load orders for authenticated customer,IMyOrdersService,GetOrdersAsync,Normal 1-5,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C07,01 Order history and details,10,Load owned order details,IMyOrdersService,GetOrderDetailsAsync,Normal 1-5,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C07,02 Cancel order,5,Cancel owned order if eligible,IMyOrdersService,CancelOrderAsync,A3.1; E1.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C07,02 Cancel order,11,"Commit cancellation, release and audit together",IMyOrdersService,CancelOrderAsync,A3.1; E1.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C07,03 Re-order,3,Copy items at current availability and prices,IMyOrdersService,ReorderAsync,A5.1; E2.1,Proposed responsibility mapping; existing analysis sequence not silently redrawn
+UC-C07,04 Submit review,5,Validate owned Delivered order and 1-5 rating,IMyOrdersService,SubmitReviewAsync,A5.2,Proposed responsibility mapping; existing analysis sequence not silently redrawn

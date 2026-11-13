@@ -1,0 +1,3016 @@
+﻿{
+    "paging":  {
+                   "pageIndex":  1,
+                   "pageSize":  500,
+                   "total":  122
+               },
+    "baseComponent":  {
+                          "id":  "AaDSj93G8cH_KW6IC0xW",
+                          "key":  "huectm_SE-Lifecycle-Agent",
+                          "name":  "SE-Lifecycle-Agent",
+                          "qualifier":  "TRK",
+                          "measures":  [
+
+                                       ]
+                      },
+    "components":  [
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l_",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/AddressDto.cs",
+                           "name":  "AddressDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/AddressDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "11"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l2",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/AddressInputDto.cs",
+                           "name":  "AddressInputDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/AddressInputDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "3",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mn",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/ApiCompositionRoot.cs",
+                           "name":  "ApiCompositionRoot.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/ApiCompositionRoot.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "22"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mk",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/ApiJson.cs",
+                           "name":  "ApiJson.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/ApiJson.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ml",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/AssemblyInfo.cs",
+                           "name":  "AssemblyInfo.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/AssemblyInfo.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "2"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k-",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/AuditLog.cs",
+                           "name":  "AuditLog.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/AuditLog.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "15"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lO",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/BatchCriteria.cs",
+                           "name":  "BatchCriteria.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/BatchCriteria.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kq",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/BatchInventory.cs",
+                           "name":  "BatchInventory.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/BatchInventory.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "17"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lq",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/BatchOfferDto.cs",
+                           "name":  "BatchOfferDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/BatchOfferDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lg",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CancelOrderDto.cs",
+                           "name":  "CancelOrderDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CancelOrderDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kv",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/Cart.cs",
+                           "name":  "Cart.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/Cart.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lk",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CartChangeDto.cs",
+                           "name":  "CartChangeDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CartChangeDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mc",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Controllers/CartController.cs",
+                           "name":  "CartController.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Controllers/CartController.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "22"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l3",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CartIdentityDto.cs",
+                           "name":  "CartIdentityDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CartIdentityDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1ky",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/CartItem.cs",
+                           "name":  "CartItem.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/CartItem.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1le",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CartLineDto.cs",
+                           "name":  "CartLineDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CartLineDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lB",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs",
+                           "name":  "CartRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "80.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "80.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l7",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CartResultDto.cs",
+                           "name":  "CartResultDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CartResultDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mK",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/CartService.cs",
+                           "name":  "CartService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/CartService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "92.6",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "92.6",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "41"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mg",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Controllers/CatalogController.cs",
+                           "name":  "CatalogController.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Controllers/CatalogController.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "27"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "5",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mB",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CatalogQueryDto.cs",
+                           "name":  "CatalogQueryDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CatalogQueryDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lH",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs",
+                           "name":  "CatalogRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "66.7",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "66.7",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ln",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CatalogResultDto.cs",
+                           "name":  "CatalogResultDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CatalogResultDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mE",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/CatalogService.cs",
+                           "name":  "CatalogService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/CatalogService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "68.4",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "68.4",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "40"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "6",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lw",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CategoryDto.cs",
+                           "name":  "CategoryDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CategoryDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mh",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Controllers/CheckoutController.cs",
+                           "name":  "CheckoutController.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Controllers/CheckoutController.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "23"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lt",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CheckoutInputDto.cs",
+                           "name":  "CheckoutInputDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CheckoutInputDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lx",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CheckoutLineDto.cs",
+                           "name":  "CheckoutLineDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CheckoutLineDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lG",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs",
+                           "name":  "CheckoutRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "93.9",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "93.9",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "55"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mJ",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/CheckoutService.cs",
+                           "name":  "CheckoutService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "86.8",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "86.8",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "119"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "9",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ly",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/CheckoutSummaryDto.cs",
+                           "name":  "CheckoutSummaryDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/CheckoutSummaryDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mF",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/CurrentCustomer.cs",
+                           "name":  "CurrentCustomer.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/CurrentCustomer.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "6.7",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "6.7",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "27"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "14",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kn",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/Customer.cs",
+                           "name":  "Customer.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/Customer.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "13"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k8",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/CustomerAddress.cs",
+                           "name":  "CustomerAddress.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/CustomerAddress.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k5",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/DeliveryAgent.cs",
+                           "name":  "DeliveryAgent.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/DeliveryAgent.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "3",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k_",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/DeliveryFailure.cs",
+                           "name":  "DeliveryFailure.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/DeliveryFailure.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "13"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "5",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k6",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+                           "name":  "DomainBehavior.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "91.4",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "91.4",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "74"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "3",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lI",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/Errors.cs",
+                           "name":  "Errors.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/Errors.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mG",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/Gateways.cs",
+                           "name":  "Gateways.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/Gateways.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "16.7",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "16.7",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "34"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "10",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lz",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/GeoPointDto.cs",
+                           "name":  "GeoPointDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/GeoPointDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lY",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/GlobalUsings.cs",
+                           "name":  "GlobalUsings.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/GlobalUsings.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mj",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/GlobalUsings.cs",
+                           "name":  "GlobalUsings.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/GlobalUsings.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ll",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/GuardFactsDto.cs",
+                           "name":  "GuardFactsDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/GuardFactsDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "3",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kx",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/IBatchPricingPolicy.cs",
+                           "name":  "IBatchPricingPolicy.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/IBatchPricingPolicy.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lR",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/ICartRepository.cs",
+                           "name":  "ICartRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/ICartRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mZ",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/ICartService.cs",
+                           "name":  "ICartService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/ICartService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lV",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/ICatalogRepository.cs",
+                           "name":  "ICatalogRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/ICatalogRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mN",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/ICatalogService.cs",
+                           "name":  "ICatalogService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/ICatalogService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lN",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/ICheckoutRepository.cs",
+                           "name":  "ICheckoutRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/ICheckoutRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mO",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/ICheckoutService.cs",
+                           "name":  "ICheckoutService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/ICheckoutService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mQ",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/ICurrentCustomer.cs",
+                           "name":  "ICurrentCustomer.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/ICurrentCustomer.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kw",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/IDeliveryFeePolicy.cs",
+                           "name":  "IDeliveryFeePolicy.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/IDeliveryFeePolicy.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mP",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IDistanceCalculator.cs",
+                           "name":  "IDistanceCalculator.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IDistanceCalculator.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mX",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IDistanceGateway.cs",
+                           "name":  "IDistanceGateway.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IDistanceGateway.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lU",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/IFefoBatchSpecification.cs",
+                           "name":  "IFefoBatchSpecification.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/IFefoBatchSpecification.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mS",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IGeocodingGateway.cs",
+                           "name":  "IGeocodingGateway.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IGeocodingGateway.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lM",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/IMyOrdersRepository.cs",
+                           "name":  "IMyOrdersRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/IMyOrdersRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "11"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mU",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IMyOrdersService.cs",
+                           "name":  "IMyOrdersService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IMyOrdersService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mR",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/INotificationGateway.cs",
+                           "name":  "INotificationGateway.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/INotificationGateway.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mV",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/INotificationPublisher.cs",
+                           "name":  "INotificationPublisher.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/INotificationPublisher.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lS",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/IOrderLifecycleRepository.cs",
+                           "name":  "IOrderLifecycleRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/IOrderLifecycleRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "17"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mY",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IOrderStateMachine.cs",
+                           "name":  "IOrderStateMachine.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IOrderStateMachine.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ma",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IPaymentGateway.cs",
+                           "name":  "IPaymentGateway.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IPaymentGateway.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mT",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IPayoutPort.cs",
+                           "name":  "IPayoutPort.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IPayoutPort.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lP",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/IProfileRepository.cs",
+                           "name":  "IProfileRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/IProfileRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mW",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/IProfileService.cs",
+                           "name":  "IProfileService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/IProfileService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lT",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/IRepositorySession.cs",
+                           "name":  "IRepositorySession.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/IRepositorySession.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lQ",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/IUnitOfWork.cs",
+                           "name":  "IUnitOfWork.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/IUnitOfWork.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mf",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Controllers/MyOrdersController.cs",
+                           "name":  "MyOrdersController.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Controllers/MyOrdersController.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "35"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "8",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lE",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs",
+                           "name":  "MyOrdersRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "57.1",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "57.1",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "21"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "6",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mD",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+                           "name":  "MyOrdersService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/MyOrdersService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "43.9",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "43.9",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "74"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "23",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lm",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/NotificationDto.cs",
+                           "name":  "NotificationDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/NotificationDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lj",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OperationResultDto.cs",
+                           "name":  "OperationResultDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OperationResultDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kt",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/Order.cs",
+                           "name":  "Order.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/Order.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "31"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lh",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderConfirmationDto.cs",
+                           "name":  "OrderConfirmationDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderConfirmationDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kz",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/OrderDetail.cs",
+                           "name":  "OrderDetail.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/OrderDetail.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l5",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderDetailsDto.cs",
+                           "name":  "OrderDetailsDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderDetailsDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lW",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/OrderLifecycleRecords.cs",
+                           "name":  "OrderLifecycleRecords.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/OrderLifecycleRecords.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lJ",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs",
+                           "name":  "OrderLifecycleRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "69.2",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "69.2",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "38"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "8",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1la",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderLineDto.cs",
+                           "name":  "OrderLineDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderLineDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l9",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderListDto.cs",
+                           "name":  "OrderListDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderListDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1ks",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/OrderPayment.cs",
+                           "name":  "OrderPayment.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/OrderPayment.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "15"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "5",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k2",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/OrderReview.cs",
+                           "name":  "OrderReview.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/OrderReview.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lc",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderReviewDto.cs",
+                           "name":  "OrderReviewDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderReviewDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mH",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+                           "name":  "OrderStateMachine.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "96.8",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "96.8",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "100"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l0",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderStateSnapshot.cs",
+                           "name":  "OrderStateSnapshot.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderStateSnapshot.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1k0",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/OrderStatus.cs",
+                           "name":  "OrderStatus.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/OrderStatus.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "2"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l8",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/OrderSummaryDto.cs",
+                           "name":  "OrderSummaryDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/OrderSummaryDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k9",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/PaymentMethod.cs",
+                           "name":  "PaymentMethod.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/PaymentMethod.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "2"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mA",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/PaymentNoticeDto.cs",
+                           "name":  "PaymentNoticeDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/PaymentNoticeDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "3",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ld",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/PaymentQrDto.cs",
+                           "name":  "PaymentQrDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/PaymentQrDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1ls",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/PaymentQrRequestDto.cs",
+                           "name":  "PaymentQrRequestDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/PaymentQrRequestDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "5"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lr",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/PaymentResultDto.cs",
+                           "name":  "PaymentResultDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/PaymentResultDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1ko",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/PaymentStatus.cs",
+                           "name":  "PaymentStatus.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/PaymentStatus.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "2"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1md",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Controllers/PaymentWebhookController.cs",
+                           "name":  "PaymentWebhookController.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Controllers/PaymentWebhookController.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "13"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "5",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l-",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/PayoutOutcomeDto.cs",
+                           "name":  "PayoutOutcomeDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/PayoutOutcomeDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l6",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/PlaceOrderDto.cs",
+                           "name":  "PlaceOrderDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/PlaceOrderDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lD",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs",
+                           "name":  "PostgreSqlSession.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "95.2",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "95.2",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "72"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1k1",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/Product.cs",
+                           "name":  "Product.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/Product.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "14"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kp",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/ProductCategory.cs",
+                           "name":  "ProductCategory.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/ProductCategory.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1li",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/ProductDetailsDto.cs",
+                           "name":  "ProductDetailsDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/ProductDetailsDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "7"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "1",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lf",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/ProductSummaryDto.cs",
+                           "name":  "ProductSummaryDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/ProductSummaryDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1me",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Controllers/ProfileController.cs",
+                           "name":  "ProfileController.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Controllers/ProfileController.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "39"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "8",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lK",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs",
+                           "name":  "ProfileRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "30.8",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "30.8",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "20"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "9",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l1",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/ProfileResultDto.cs",
+                           "name":  "ProfileResultDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/ProfileResultDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mI",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/ProfileService.cs",
+                           "name":  "ProfileService.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/ProfileService.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "29.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "29.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "47"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "22",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1l4",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/ProfileUpdateDto.cs",
+                           "name":  "ProfileUpdateDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/ProfileUpdateDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "6"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mm",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Program.cs",
+                           "name":  "Program.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Program.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "91.9",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "91.9",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "48"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "3",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k3",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/Refund.cs",
+                           "name":  "Refund.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/Refund.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "14"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "6",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1km",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/ReturnInspection.cs",
+                           "name":  "ReturnInspection.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/ReturnInspection.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k7",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/ReturnReceipt.cs",
+                           "name":  "ReturnReceipt.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/ReturnReceipt.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1k4",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/ReturnReceiptItem.cs",
+                           "name":  "ReturnReceiptItem.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/ReturnReceiptItem.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "5",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lv",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/ReturnSummaryDto.cs",
+                           "name":  "ReturnSummaryDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/ReturnSummaryDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "10"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "2",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1mL",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/ServiceRules.cs",
+                           "name":  "ServiceRules.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/Services/Implements/ServiceRules.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "13"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1ku",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/ShippingFeeSettlement.cs",
+                           "name":  "ShippingFeeSettlement.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/ShippingFeeSettlement.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "13"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "5",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lC",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/SqlRepository.cs",
+                           "name":  "SqlRepository.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/SqlRepository.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "80.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "80.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "41"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "6",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lu",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/StateMachineEvent.cs",
+                           "name":  "StateMachineEvent.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/StateMachineEvent.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "8"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lp",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/StateMachineResult.cs",
+                           "name":  "StateMachineResult.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/StateMachineResult.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lo",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+                           "name":  "TransitionSnapshot.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "19"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lF",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs",
+                           "name":  "UnitOfWork.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "100.0",
+                                                "bestValue":  true
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "12"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "0",
+                                                "bestValue":  true
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqingPcVI_0Jmw1lb",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/DTOs/VerifiedPaymentDto.cs",
+                           "name":  "VerifiedPaymentDto.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood-API/DTOs/VerifiedPaymentDto.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "0.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "9"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "4",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "AaGbqinfPcVI_0Jmw1kr",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood.Reposistory/Entities/VndAmount.cs",
+                           "name":  "VndAmount.cs",
+                           "qualifier":  "FIL",
+                           "path":  "src/FreshFood.Reposistory/Entities/VndAmount.cs",
+                           "language":  "cs",
+                           "measures":  [
+                                            {
+                                                "metric":  "coverage",
+                                                "value":  "40.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "line_coverage",
+                                                "value":  "40.0",
+                                                "bestValue":  false
+                                            },
+                                            {
+                                                "metric":  "ncloc",
+                                                "value":  "22"
+                                            },
+                                            {
+                                                "metric":  "uncovered_lines",
+                                                "value":  "6",
+                                                "bestValue":  false
+                                            }
+                                        ]
+                       }
+                   ]
+}

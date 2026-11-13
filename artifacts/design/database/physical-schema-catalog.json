@@ -1,0 +1,1316 @@
+[
+  {
+    "name": "suppliers",
+    "columns": [
+      {
+        "name": "supplier_id",
+        "type": "SERIAL / INT",
+        "constraint": "PRIMARY KEY",
+        "description": "Unique internal identifier for supplier"
+      },
+      {
+        "name": "supplier_code",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Human-readable business code (e.g. `SUP-DALAT-01`)"
+      },
+      {
+        "name": "supplier_name",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL",
+        "description": "Registered trading name"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL",
+        "description": "Business hotline / contact number"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(100)",
+        "constraint": "NULL",
+        "description": "Business contact email"
+      },
+      {
+        "name": "address",
+        "type": "VARCHAR(255)",
+        "constraint": "NULL",
+        "description": "Office / farm physical location"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT TRUE",
+        "description": "Active partnership status"
+      }
+    ]
+  },
+  {
+    "name": "product_categories",
+    "columns": [
+      {
+        "name": "category_id",
+        "type": "SERIAL / INT",
+        "constraint": "PRIMARY KEY",
+        "description": "Category identifier"
+      },
+      {
+        "name": "category_code",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Unique code (e.g. `VEG_LEAF`, `FRUIT_CITRUS`)"
+      },
+      {
+        "name": "category_name",
+        "type": "VARCHAR(100)",
+        "constraint": "NOT NULL",
+        "description": "Display name (e.g. \"Rau l\u00e1 h\u1eefu c\u01a1\")"
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Category details and preservation guidelines"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT TRUE",
+        "description": "Category visibility flag"
+      }
+    ]
+  },
+  {
+    "name": "products",
+    "columns": [
+      {
+        "name": "product_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Catalog product identifier"
+      },
+      {
+        "name": "category_id",
+        "type": "INT",
+        "constraint": "NOT NULL, FK -> product_categories",
+        "description": "Owning category"
+      },
+      {
+        "name": "sku",
+        "type": "VARCHAR(50)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Stock Keeping Unit code"
+      },
+      {
+        "name": "product_name",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL",
+        "description": "Commercial product name"
+      },
+      {
+        "name": "unit_of_measure",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL",
+        "description": "Standard selling unit (`kg`, `pack_500g`, `bunch`)"
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Nutritional benefits and sourcing description"
+      },
+      {
+        "name": "image_url",
+        "type": "VARCHAR(500)",
+        "constraint": "NULL",
+        "description": "High-resolution product image CDN URL"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT TRUE",
+        "description": "Commercial listing status"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Initial listing timestamp"
+      }
+    ]
+  },
+  {
+    "name": "goods_receipts",
+    "columns": [
+      {
+        "name": "receipt_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Goods receipt identifier"
+      },
+      {
+        "name": "receipt_number",
+        "type": "VARCHAR(50)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Formal docket number (e.g. `GR-20261019-001`)"
+      },
+      {
+        "name": "supplier_id",
+        "type": "INT",
+        "constraint": "NOT NULL, FK -> suppliers",
+        "description": "Sourcing supplier"
+      },
+      {
+        "name": "created_by_staff_id",
+        "type": "INT",
+        "constraint": "NOT NULL, FK -> staff_accounts",
+        "description": "Receiving warehouse staff"
+      },
+      {
+        "name": "receipt_date",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Physical docking and inspection timestamp"
+      },
+      {
+        "name": "total_amount",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (total_amount >= 0)",
+        "description": "Total docket valuation in VND"
+      },
+      {
+        "name": "notes",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Inspection observations / delivery temperature"
+      }
+    ]
+  },
+  {
+    "name": "batch_inventory",
+    "columns": [
+      {
+        "name": "batch_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Physical batch identifier"
+      },
+      {
+        "name": "product_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> products",
+        "description": "Reference catalog product"
+      },
+      {
+        "name": "receipt_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> goods_receipts",
+        "description": "Inbound goods receipt reference"
+      },
+      {
+        "name": "batch_number",
+        "type": "VARCHAR(60)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Traceable batch number (e.g. `BATCH-DALAT-261019-A`)"
+      },
+      {
+        "name": "manufacture_date",
+        "type": "DATE",
+        "constraint": "NOT NULL",
+        "description": "Harvest / packaging date"
+      },
+      {
+        "name": "expiry_date",
+        "type": "DATE",
+        "constraint": "NOT NULL, CHECK (expiry_date >= manufacture_date + 3)",
+        "description": "Expiry threshold date"
+      },
+      {
+        "name": "import_quantity",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (import_quantity > 0)",
+        "description": "Received physical units"
+      },
+      {
+        "name": "current_stock",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (current_stock >= 0)",
+        "description": "Unsold physical inventory balance"
+      },
+      {
+        "name": "reserved_stock",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (reserved_stock <= current_stock AND reserved_stock >= 0)",
+        "description": "Locked units in pending checkout"
+      },
+      {
+        "name": "import_price",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (import_price >= 0)",
+        "description": "Inbound unit cost (VND)"
+      },
+      {
+        "name": "retail_price",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (retail_price >= 0)",
+        "description": "Selling retail price (VND)"
+      },
+      {
+        "name": "discount_rate",
+        "type": "DECIMAL(5,2)",
+        "constraint": "NOT NULL, DEFAULT 0.00, CHECK (discount_rate BETWEEN 0 AND 100)",
+        "description": "Near-expiry discount percentage"
+      },
+      {
+        "name": "sale_status",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL, DEFAULT 'ACTIVE'",
+        "description": "ACTIVE`, `DISCOUNTED`, `EXPIRED`, `DISPOSED"
+      }
+    ]
+  },
+  {
+    "name": "stock_disposal_records",
+    "columns": [
+      {
+        "name": "disposal_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Write-off log identifier"
+      },
+      {
+        "name": "batch_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> batch_inventory",
+        "description": "Condemned inventory batch"
+      },
+      {
+        "name": "inspected_by_staff_id",
+        "type": "INT",
+        "constraint": "NOT NULL, FK -> staff_accounts",
+        "description": "Quality inspector staff"
+      },
+      {
+        "name": "approved_by_owner_id",
+        "type": "INT",
+        "constraint": "NULL, FK -> staff_accounts",
+        "description": "Store owner sign-off (required if loss > 5M VND)"
+      },
+      {
+        "name": "disposal_date",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Destruction / write-off timestamp"
+      },
+      {
+        "name": "disposal_quantity",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (disposal_quantity > 0)",
+        "description": "Disposed physical unit count"
+      },
+      {
+        "name": "disposal_reason",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL",
+        "description": "Reason (`EXPIRED`, `ROTTEN`, `DAMAGED_IN_TRANSIT`)"
+      },
+      {
+        "name": "financial_loss",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (financial_loss >= 0)",
+        "description": "Cost valuation of discarded inventory (VND)"
+      }
+    ]
+  },
+  {
+    "name": "customers",
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Customer unique identifier"
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(150)",
+        "constraint": "NOT NULL",
+        "description": "Customer display name"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Registered mobile number (primary login ID)"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(150)",
+        "constraint": "NULL",
+        "description": "Electronic invoice & notification email"
+      },
+      {
+        "name": "auth_provider",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL, DEFAULT 'LOCAL'",
+        "description": "LOCAL`, `GOOGLE`, `FACEBOOK`, `ZALO"
+      },
+      {
+        "name": "provider_user_id",
+        "type": "VARCHAR(255)",
+        "constraint": "NULL",
+        "description": "Third-party OAuth subject identifier"
+      },
+      {
+        "name": "is_phone_verified",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT FALSE",
+        "description": "SMS OTP verification flag"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Account registration timestamp"
+      }
+    ]
+  },
+  {
+    "name": "customer_addresses",
+    "columns": [
+      {
+        "name": "address_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Delivery address identifier"
+      },
+      {
+        "name": "customer_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> customers ON DELETE CASCADE",
+        "description": "Owning customer"
+      },
+      {
+        "name": "recipient_name",
+        "type": "VARCHAR(150)",
+        "constraint": "NOT NULL",
+        "description": "Consignee contact name"
+      },
+      {
+        "name": "recipient_phone",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL",
+        "description": "Delivery contact phone"
+      },
+      {
+        "name": "street_address",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL",
+        "description": "Full address (House no, Ward, District, City)"
+      },
+      {
+        "name": "latitude",
+        "type": "DECIMAL(10,6)",
+        "constraint": "NULL",
+        "description": "Geocoded latitude for distance computation"
+      },
+      {
+        "name": "longitude",
+        "type": "DECIMAL(10,6)",
+        "constraint": "NULL",
+        "description": "Geocoded longitude for distance computation"
+      },
+      {
+        "name": "is_default",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT FALSE",
+        "description": "Default selection flag"
+      }
+    ]
+  },
+  {
+    "name": "carts",
+    "columns": [
+      {
+        "name": "cart_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Shopping cart identifier"
+      },
+      {
+        "name": "customer_id",
+        "type": "BIGINT",
+        "constraint": "NULL, FK -> customers ON DELETE CASCADE",
+        "description": "Registered owner (NULL for anonymous guest)"
+      },
+      {
+        "name": "session_id",
+        "type": "VARCHAR(100)",
+        "constraint": "NULL, UNIQUE",
+        "description": "Anonymous visitor browser tracking token"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Basket creation timestamp"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Last cart modification timestamp"
+      }
+    ]
+  },
+  {
+    "name": "cart_items",
+    "columns": [
+      {
+        "name": "cart_item_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Basket item identifier"
+      },
+      {
+        "name": "cart_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> carts ON DELETE CASCADE",
+        "description": "Containing cart"
+      },
+      {
+        "name": "product_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> products",
+        "description": "Catalog product"
+      },
+      {
+        "name": "quantity",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (quantity > 0)",
+        "description": "Selected item count"
+      },
+      {
+        "name": "added_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Addition timestamp"
+      }
+    ]
+  },
+  {
+    "name": "orders",
+    "columns": [
+      {
+        "name": "order_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Order identifier"
+      },
+      {
+        "name": "order_number",
+        "type": "VARCHAR(50)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Invoice code (e.g. `ORD-20261019-8921`)"
+      },
+      {
+        "name": "customer_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> customers",
+        "description": "Purchasing customer"
+      },
+      {
+        "name": "delivery_address_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> customer_addresses",
+        "description": "Snapshot delivery destination"
+      },
+      {
+        "name": "processed_by_staff_id",
+        "type": "INT",
+        "constraint": "NULL, FK -> staff_accounts",
+        "description": "Warehouse packing / dispatch staff"
+      },
+      {
+        "name": "order_date",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Order checkout submission timestamp"
+      },
+      {
+        "name": "sub_total",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (sub_total >= 0)",
+        "description": "Net items valuation before shipping (VND)"
+      },
+      {
+        "name": "delivery_distance",
+        "type": "DECIMAL(5,2)",
+        "constraint": "NOT NULL, CHECK (delivery_distance >= 0)",
+        "description": "Computed delivery distance in kilometers"
+      },
+      {
+        "name": "shipping_fee",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (shipping_fee >= 0)",
+        "description": "Calculated shipping charge (VND)"
+      },
+      {
+        "name": "total_amount",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (total_amount >= 0)",
+        "description": "Final payable grand total (VND)"
+      },
+      {
+        "name": "payment_method",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL",
+        "description": "COD`, `VIETQR"
+      },
+      {
+        "name": "payment_status",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL, DEFAULT 'UNPAID'",
+        "description": "UNPAID`, `PAID`, `PARTIALLY_REFUNDED`, `REFUNDED"
+      },
+      {
+        "name": "order_status",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL, DEFAULT 'PENDING_UNPAID'",
+        "description": "PENDING_UNPAID, PENDING_PAID, CONFIRMED, PACKING, SHIPPING, DELIVERED, CANCELLED, DELIVERY_FAILED, RETURNED"
+      },
+      {
+        "name": "is_first_order",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT FALSE",
+        "description": "Snapshot of whether this is the first order; mandatory phone confirmation only while goods payment is unpaid"
+      },
+      {
+        "name": "delivery_agent_id",
+        "type": "BIGINT",
+        "constraint": "REFERENCES delivery_agents(delivery_agent_id)",
+        "description": "Assigned courier/payee"
+      },
+      {
+        "name": "phone_confirmation_status",
+        "type": "VARCHAR(24)",
+        "constraint": "NOT NULL DEFAULT 'NOT_CONTACTED'",
+        "description": "NOT_CONTACTED, CONFIRMED or UNCONFIRMED; mandatory only for first unpaid order"
+      },
+      {
+        "name": "phone_contacted_by_staff_id",
+        "type": "INT",
+        "constraint": "REFERENCES staff_accounts(staff_id)",
+        "description": "Store staff performing phone confirmation"
+      },
+      {
+        "name": "phone_contacted_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "Actual contact/attempt timestamp"
+      },
+      {
+        "name": "phone_confirmation_note",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Result/reason; no invented retry count or timeout"
+      },
+      {
+        "name": "cancellation_reason",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Customer/staff cancellation reason"
+      }
+    ]
+  },
+  {
+    "name": "order_details",
+    "columns": [
+      {
+        "name": "order_detail_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Line item identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> orders ON DELETE CASCADE",
+        "description": "Parent order reference"
+      },
+      {
+        "name": "batch_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> batch_inventory",
+        "description": "Exact physical batch fulfilling this line item"
+      },
+      {
+        "name": "quantity",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (quantity > 0)",
+        "description": "Allocated item count"
+      },
+      {
+        "name": "unit_price",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (unit_price >= 0)",
+        "description": "Price at transaction time (VND)"
+      },
+      {
+        "name": "discount_amount",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, DEFAULT 0, CHECK (discount_amount >= 0)",
+        "description": "Near-expiry / promotional discount (VND)"
+      },
+      {
+        "name": "line_total",
+        "type": "DECIMAL(18,0)",
+        "constraint": "NOT NULL, CHECK (line_total >= 0)",
+        "description": "Final line total `(quantity * unit_price) - discount_amount"
+      }
+    ]
+  },
+  {
+    "name": "order_reviews",
+    "columns": [
+      {
+        "name": "review_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Review identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, UNIQUE, FK -> orders",
+        "description": "Evaluated order (1:1 constraint)"
+      },
+      {
+        "name": "customer_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL, FK -> customers",
+        "description": "Submitting customer"
+      },
+      {
+        "name": "rating",
+        "type": "INT",
+        "constraint": "NOT NULL, CHECK (rating BETWEEN 1 AND 5)",
+        "description": "Star score rating (1 to 5)"
+      },
+      {
+        "name": "comment",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Customer feedback and comments"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Submission timestamp"
+      }
+    ]
+  },
+  {
+    "name": "staff_accounts",
+    "columns": [
+      {
+        "name": "staff_id",
+        "type": "SERIAL / INT",
+        "constraint": "PRIMARY KEY",
+        "description": "Staff identifier"
+      },
+      {
+        "name": "username",
+        "type": "VARCHAR(50)",
+        "constraint": "NOT NULL, UNIQUE",
+        "description": "Login username"
+      },
+      {
+        "name": "password_hash",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL",
+        "description": "Argon2id / bcrypt hashed credential"
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(150)",
+        "constraint": "NOT NULL",
+        "description": "Employee full name"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL",
+        "description": "Contact mobile number"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(100)",
+        "constraint": "NULL",
+        "description": "Enterprise email"
+      },
+      {
+        "name": "role",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL",
+        "description": "Discriminator: `WAREHOUSE_STAFF`, `SALE_STAFF`, `STORE_OWNER"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT TRUE",
+        "description": "Active employment status"
+      },
+      {
+        "name": "token_revoked_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "Invalidation cutoff for active JWT tokens (`BR-SEC-03`)"
+      },
+      {
+        "name": "warehouse_zone",
+        "type": "VARCHAR(50)",
+        "constraint": "NULL",
+        "description": "Assigned zone (WarehouseStaff only)"
+      },
+      {
+        "name": "shift_schedule",
+        "type": "VARCHAR(100)",
+        "constraint": "NULL",
+        "description": "Assigned shift (SaleStaff only)"
+      },
+      {
+        "name": "business_license",
+        "type": "VARCHAR(100)",
+        "constraint": "NULL",
+        "description": "Registered tax/business license (StoreOwner only)"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Account onboarding timestamp"
+      }
+    ]
+  },
+  {
+    "name": "articles",
+    "columns": [
+      {
+        "name": "article_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Content article identifier"
+      },
+      {
+        "name": "author_staff_id",
+        "type": "INT",
+        "constraint": "NOT NULL, FK -> staff_accounts",
+        "description": "Author staff reference"
+      },
+      {
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "constraint": "NOT NULL",
+        "description": "Editorial title"
+      },
+      {
+        "name": "content",
+        "type": "TEXT",
+        "constraint": "NOT NULL",
+        "description": "Full HTML/Markdown editorial content"
+      },
+      {
+        "name": "thumbnail_url",
+        "type": "VARCHAR(500)",
+        "constraint": "NULL",
+        "description": "Cover image CDN URL"
+      },
+      {
+        "name": "is_hidden",
+        "type": "BOOLEAN",
+        "constraint": "NOT NULL, DEFAULT FALSE",
+        "description": "Publication visibility flag"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Publication timestamp"
+      }
+    ]
+  },
+  {
+    "name": "audit_logs",
+    "columns": [
+      {
+        "name": "log_id",
+        "type": "BIGSERIAL / BIGINT",
+        "constraint": "PRIMARY KEY",
+        "description": "Audit log entry identifier"
+      },
+      {
+        "name": "staff_id",
+        "type": "INT",
+        "constraint": "NULL, FK -> staff_accounts",
+        "description": "Responsible actor (`NULL` for automated system tasks)"
+      },
+      {
+        "name": "action_type",
+        "type": "VARCHAR(20)",
+        "constraint": "NOT NULL",
+        "description": "INSERT`, `UPDATE`, `DELETE`, `LOGIN`, `REVOKE"
+      },
+      {
+        "name": "entity_name",
+        "type": "VARCHAR(100)",
+        "constraint": "NOT NULL",
+        "description": "Target table (e.g. `batch_inventory`, `orders`)"
+      },
+      {
+        "name": "record_identifier",
+        "type": "VARCHAR(100)",
+        "constraint": "NOT NULL",
+        "description": "Business identifier or PK of mutated record"
+      },
+      {
+        "name": "old_values",
+        "type": "JSONB",
+        "constraint": "NULL",
+        "description": "Snapshot of attributes before mutation"
+      },
+      {
+        "name": "new_values",
+        "type": "JSONB",
+        "constraint": "NULL",
+        "description": "Snapshot of attributes after mutation"
+      },
+      {
+        "name": "ip_address",
+        "type": "VARCHAR(45)",
+        "constraint": "NULL",
+        "description": "Client IPv4 / IPv6 address"
+      },
+      {
+        "name": "timestamp",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL, DEFAULT CURRENT_TIMESTAMP",
+        "description": "Immutably captured transaction timestamp"
+      }
+    ]
+  },
+  {
+    "name": "delivery_agents",
+    "columns": [
+      {
+        "name": "delivery_agent_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "display_name",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL",
+        "description": "Assigned delivery agent identity"
+      },
+      {
+        "name": "contact_phone",
+        "type": "VARCHAR(30)",
+        "constraint": "NULL",
+        "description": "Operational contact; nullable until known"
+      }
+    ]
+  },
+  {
+    "name": "order_payments",
+    "columns": [
+      {
+        "name": "payment_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES orders(order_id)",
+        "description": "Order whose receipt is allocated"
+      },
+      {
+        "name": "payment_channel",
+        "type": "VARCHAR(30)",
+        "constraint": "NOT NULL",
+        "description": "VIETQR, COD or SHIPPING_FEE_CASH"
+      },
+      {
+        "name": "provider_transaction_id",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL",
+        "description": "Verified receipt/cash evidence reference; deduplicated per channel"
+      },
+      {
+        "name": "goods_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "NOT NULL CHECK (goods_amount >= 0)",
+        "description": "Actual collected net goods amount in VND"
+      },
+      {
+        "name": "shipping_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "NOT NULL CHECK (shipping_amount >= 0)",
+        "description": "Actual collected delivery fee in VND"
+      },
+      {
+        "name": "unallocated_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "NOT NULL DEFAULT 0 CHECK (unallocated_amount>=0)",
+        "description": "Verified excess amount not assigned to goods/shipping; refund policy TBD"
+      },
+      {
+        "name": "captured_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "GENERATED ALWAYS AS (goods_amount + shipping_amount + unallocated_amount) STORED",
+        "description": "Derived total captured receipt; must match verified original payment evidence"
+      },
+      {
+        "name": "received_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL",
+        "description": "Confirmed collection time"
+      },
+      {
+        "name": "recorded_by_staff_id",
+        "type": "INT",
+        "constraint": "REFERENCES staff_accounts(staff_id)",
+        "description": "Staff recording cash evidence; gateway receipts may have no staff"
+      },
+      {
+        "name": "collected_by_delivery_agent_id",
+        "type": "BIGINT",
+        "constraint": "REFERENCES delivery_agents(delivery_agent_id)",
+        "description": "Actual delivery agent collecting cash; not a store staff role"
+      }
+    ]
+  },
+  {
+    "name": "delivery_failures",
+    "columns": [
+      {
+        "name": "failure_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE REFERENCES orders(order_id)",
+        "description": "One current failed-delivery record in the specified full-return scope"
+      },
+      {
+        "name": "failure_cause",
+        "type": "VARCHAR(40)",
+        "constraint": "NOT NULL DEFAULT 'UNCLASSIFIED'",
+        "description": "UNCLASSIFIED, PRODUCT_FAULT, CUSTOMER_INTENTIONAL_REFUSAL or OTHER"
+      },
+      {
+        "name": "reason",
+        "type": "TEXT",
+        "constraint": "NOT NULL CHECK (length(trim(reason))>0)",
+        "description": "Observed reason; no automatic inference of deliberate refusal"
+      },
+      {
+        "name": "reported_by_staff_id",
+        "type": "INT",
+        "constraint": "NOT NULL REFERENCES staff_accounts(staff_id)",
+        "description": "Sales Staff recording the delivery outcome"
+      },
+      {
+        "name": "reported_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Failure recording time"
+      },
+      {
+        "name": "cause_confirmed_by_staff_id",
+        "type": "INT",
+        "constraint": "REFERENCES staff_accounts(staff_id)",
+        "description": "Final cause decision identity; authority policy TBD"
+      },
+      {
+        "name": "cause_confirmed_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "Final cause decision time"
+      },
+      {
+        "name": "cause_evidence",
+        "type": "TEXT",
+        "constraint": "NULL",
+        "description": "Evidence for review; separate from warehouse quality decision"
+      }
+    ]
+  },
+  {
+    "name": "return_receipts",
+    "columns": [
+      {
+        "name": "return_receipt_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE REFERENCES orders(order_id)",
+        "description": "One full-return receipt obligation per order; partial facts remain draft"
+      },
+      {
+        "name": "receipt_status",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'DRAFT'",
+        "description": "DRAFT or COMPLETE; only complete line matching unlocks the full-return path"
+      },
+      {
+        "name": "created_by_staff_id",
+        "type": "INT",
+        "constraint": "NOT NULL REFERENCES staff_accounts(staff_id)",
+        "description": "Warehouse receiving staff"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Receipt creation time"
+      },
+      {
+        "name": "confirmed_by_staff_id",
+        "type": "INT",
+        "constraint": "REFERENCES staff_accounts(staff_id)",
+        "description": "Warehouse Staff confirming all goods physically received"
+      },
+      {
+        "name": "confirmed_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "Complete receipt confirmation time"
+      }
+    ]
+  },
+  {
+    "name": "return_receipt_items",
+    "columns": [
+      {
+        "name": "return_receipt_item_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "return_receipt_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL",
+        "description": "Receipt, with order ownership enforced by composite FK"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL",
+        "description": "Order ownership key; technical integrity support"
+      },
+      {
+        "name": "order_detail_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL",
+        "description": "Original order line and original batch reference"
+      },
+      {
+        "name": "quantity_received",
+        "type": "INT",
+        "constraint": "NOT NULL CHECK (quantity_received>0)",
+        "description": "Physical quantity actually received; incomplete totals do not mean complete"
+      }
+    ]
+  },
+  {
+    "name": "return_inspections",
+    "columns": [
+      {
+        "name": "inspection_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "return_receipt_item_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES return_receipt_items(return_receipt_item_id)",
+        "description": "Physical returned line being assessed"
+      },
+      {
+        "name": "inspected_by_staff_id",
+        "type": "INT",
+        "constraint": "NOT NULL REFERENCES staff_accounts(staff_id)",
+        "description": "Actual staff assessor; no automated quality classification"
+      },
+      {
+        "name": "inspected_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL",
+        "description": "Staff assessment timestamp"
+      },
+      {
+        "name": "quantity",
+        "type": "INT",
+        "constraint": "NOT NULL CHECK (quantity>0)",
+        "description": "Quantity subject to this handling decision"
+      },
+      {
+        "name": "disposition",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL",
+        "description": "RESTOCK, HOLD or DISPOSE under existing warehouse authority"
+      },
+      {
+        "name": "condition_notes",
+        "type": "TEXT",
+        "constraint": "NOT NULL",
+        "description": "Observed condition and staff reasoning"
+      },
+      {
+        "name": "inventory_applied_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "When authorized inventory movement was committed; not automatic at receipt"
+      }
+    ]
+  },
+  {
+    "name": "refunds",
+    "columns": [
+      {
+        "name": "refund_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE REFERENCES orders(order_id)",
+        "description": "One idempotent full failed-delivery return refund obligation in current scope"
+      },
+      {
+        "name": "return_receipt_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Complete physical receipt, with matching order FK"
+      },
+      {
+        "name": "goods_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "NOT NULL CHECK (goods_amount>=0)",
+        "description": "Actual collected goods amount refunded"
+      },
+      {
+        "name": "shipping_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "NOT NULL CHECK (shipping_amount>=0)",
+        "description": "Refund paid shipping only for confirmed product fault"
+      },
+      {
+        "name": "refund_status",
+        "type": "VARCHAR(16)",
+        "constraint": "NOT NULL DEFAULT 'PENDING'",
+        "description": "PENDING, PROCESSING, SUCCEEDED, FAILED or UNKNOWN; technical workflow"
+      },
+      {
+        "name": "idempotency_key",
+        "type": "VARCHAR(120)",
+        "constraint": "NOT NULL UNIQUE",
+        "description": "Technical guard against duplicate provider payout"
+      },
+      {
+        "name": "requested_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Automatic refund obligation creation time"
+      },
+      {
+        "name": "settled_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "Verified outgoing settlement completion time"
+      },
+      {
+        "name": "provider_refund_reference",
+        "type": "VARCHAR(160)",
+        "constraint": "UNIQUE",
+        "description": "Actual verified payout reference; provider integration TBD"
+      }
+    ]
+  },
+  {
+    "name": "shipping_fee_settlements",
+    "columns": [
+      {
+        "name": "shipping_settlement_id",
+        "type": "BIGINT",
+        "constraint": "GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY",
+        "description": "Technical surrogate identifier"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL UNIQUE REFERENCES orders(order_id)",
+        "description": "Failed-delivery fee obligation"
+      },
+      {
+        "name": "delivery_agent_id",
+        "type": "BIGINT",
+        "constraint": "NOT NULL REFERENCES delivery_agents(delivery_agent_id)",
+        "description": "Assigned payee; no new staff-account role is assumed"
+      },
+      {
+        "name": "customer_fee_due",
+        "type": "NUMERIC(18,0)",
+        "constraint": "CHECK (customer_fee_due>=0)",
+        "description": "Zero for product fault; original fee for deliberate refusal; NULL if unresolved"
+      },
+      {
+        "name": "collection_payment_id",
+        "type": "BIGINT",
+        "constraint": "REFERENCES order_payments(payment_id)",
+        "description": "Actual cash fee receipt if collected directly by agent"
+      },
+      {
+        "name": "compensation_due_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "CHECK (compensation_due_amount>=0)",
+        "description": "Agreed delivery-agent compensation; product-fault payer/rate is unspecified"
+      },
+      {
+        "name": "compensation_paid_amount",
+        "type": "NUMERIC(18,0)",
+        "constraint": "NOT NULL DEFAULT 0 CHECK (compensation_paid_amount>=0)",
+        "description": "Actual amount paid/retained as compensation, not presumed collected"
+      },
+      {
+        "name": "compensated_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL",
+        "description": "Actual compensation completion time"
+      },
+      {
+        "name": "settlement_reference",
+        "type": "VARCHAR(160)",
+        "constraint": "NULL",
+        "description": "Payout or direct cash-retention evidence"
+      }
+    ]
+  }
+]

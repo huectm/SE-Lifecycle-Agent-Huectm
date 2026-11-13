@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-21T15:30:00.000Z" agent="SE-Lifecycle-Agent" version="21.0.0" type="device">
+  <diagram id="uc-c07-activity" name="UC-C07 Manage My Orders Activity">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="1450" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="UML ACTIVITY DIAGRAM — USE CASE UC-C07: MANAGE MY ORDERS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="150" y="15" width="1050" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_cust" value="Customer&#10;[Primary Actor: Theo dõi, Hủy, Đặt lại &amp; Đánh giá]" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=40;horizontal=1;horizontalFlip=0;fillColor=#E8F5E9;strokeColor=#43A047;fontColor=#1B5E20;fontSize=12;fontStyle=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="55" width="380" height="1350" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_sys" value="Order &amp; Tracking Service&#10;[Core System Engine: Lifecycle States &amp; Tracking Timeline]" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=40;horizontal=1;horizontalFlip=0;fillColor=#E3F2FD;strokeColor=#1E88E5;fontColor=#0D47A1;fontSize=12;fontStyle=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="420" y="55" width="440" height="1350" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_inv" value="Inventory &amp; Feedback Engine&#10;[Domain Services: Reserved Stock Release, Cart Mapping &amp; Reviews]" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=40;horizontal=1;horizontalFlip=0;fillColor=#FFF8E1;strokeColor=#FFA000;fontColor=#E65100;fontSize=12;fontStyle=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="860" y="55" width="450" height="1350" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="" style="ellipse;fillColor=#1B5E20;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="218" y="110" width="24" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_open_orders" value="Step 1: Navigate to &quot;My Orders (Đơn hàng của tôi)&quot;&#10;[&lt;&lt;include&gt;&gt; UC-C07.1: View Order List]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="85" y="155" width="290" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_query_orders" value="Step 2: Query Order History&#10;SELECT orders WHERE customer_id = ? ORDER BY order_date DESC&#10;[FR-MYO-01, BR-AUTH-01]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="150" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_render_list" value="Step 3: Render Order History UI&#10;Display Order No, Date, Total, &amp; Status Badges&#10;(Pending, Confirmed, Packing, Shipping, Delivered, Cancelled)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="245" width="310" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_click_order" value="Step 4: Click on an Order Card to View Details&#10;[&lt;&lt;include&gt;&gt; UC-C07.2: View Order Details]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="85" y="340" width="290" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_render_details" value="Step 5: Render Full Order Details &amp; Timeline&#10;Display shipping destination, produce line items, batch tags,&#10;delivery fee, payment method/status, and tracking progress timeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="335" width="310" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_action" value="Customer&#10;Action?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;fontColor=#000000;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="435" width="110" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_req_cancel" value="Step A3.1: Click &quot;Cancel Order&quot; &amp; Provide Reason&#10;[&lt;&lt;extend&gt;&gt; UC-C07.3: Cancel Undelivered Order]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="85" y="535" width="290" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_cancel_status" value="Status in&#10;Pending/Confirmed?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;fontColor=#000000;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="580" y="530" width="130" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_err_cancel" value="Step E1.1: Prohibit Self-Cancellation&#10;Alert: &quot;Đơn hàng đang đóng gói hoặc giao hàng.&#10;Vui lòng liên hệ hotline cửa hàng để được hỗ trợ.&quot; [BR-ORD-04]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#E53935;fontColor=#B71C1C;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="85" y="615" width="290" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_do_cancel" value="Execute Cancellation ACID Transaction&#10;UPDATE orders SET status = &quot;Cancelled&quot;, cancelled_at = NOW()&#10;Log event into audit_logs and push alert to Sales Staff queue" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="620" width="310" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_release_stock" value="Atomically Release Reserved Batch Inventory&#10;UPDATE batch_inventory SET reserved_stock = reserved_stock - Q&#10;Restore physical sellable balance [BR-ORD-05]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#FFA000;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="930" y="620" width="320" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_click_reorder" value="Step A5.1: Click &quot;Re-Order (Đặt lại đơn này)&quot;&#10;On a completed (Delivered) order&#10;[&lt;&lt;extend&gt;&gt; UC-C07.5: Re-order]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="85" y="725" width="290" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_reorder_stock" value="Map Historical Produce Items to Active Cart&#10;Evaluate current active batch stock &amp; prevailing retail prices&#10;[FR-MYO-04, BR-RE-01]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#FFA000;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="930" y="720" width="320" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_reorder_avail" value="All Items&#10;Available?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;fontColor=#000000;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="815" width="110" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_err_reorder" value="Step E2.1: Alert Out-of-Stock / Price Change&#10;Add available produce items to cart&#10;Highlight out-of-stock items for customer notice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#E53935;fontColor=#B71C1C;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="815" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_redirect_cart" value="Populate Shopping Basket &amp; Redirect to Cart View&#10;Transition user to UC-C03: Manage Shopping Cart" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="905" width="310" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_click_review" value="Step A5.2: Click &quot;Rate &amp; Review (Đánh giá đơn hàng)&quot;&#10;Select 1-5 Star Rating &amp; input feedback comment&#10;[&lt;&lt;extend&gt;&gt; UC-C07.4: Submit Order Feedback]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="85" y="1000" width="290" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_save_review" value="Validate 1-5 Star Constraint &amp; Persist Feedback&#10;INSERT INTO order_reviews (1:1 with orders)&#10;Mark order reviewed &amp; display thank-you notification [BR-FB-01]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#FFA000;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="930" y="995" width="320" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="merge_refresh" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;" vertex="1" parent="1">
+          <mxGeometry x="625" y="1095" width="40" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="merge_exit" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1180" width="40" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="final_node" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#2E7D32;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1255" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;" edge="1" parent="1" source="init" target="act_open_orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="Fetch history" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_open_orders" target="act_query_orders">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="Return orders" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_query_orders" target="act_render_list">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="Select order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_render_list" target="act_click_order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="277"/>
+              <mxPoint x="460" y="367"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="Fetch details" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_click_order" target="act_render_details">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="Details ready" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_render_details" target="dec_action">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="415"/>
+              <mxPoint x="230" y="415"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="[Cancel Order]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_action" target="act_req_cancel">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="[Re-order]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_action" target="act_click_reorder">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="465"/>
+              <mxPoint x="60" y="752"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="[Rate &amp; Review]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_action" target="act_click_review">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="465"/>
+              <mxPoint x="50" y="1027"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="[Exit / Close View]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_action" target="merge_exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="465"/>
+              <mxPoint x="390" y="1197"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="Submit cancellation" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_req_cancel" target="dec_cancel_status">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e12" value="[Packing / Shipping (E1.1)]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_cancel_status" target="act_err_cancel">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="560"/>
+              <mxPoint x="450" y="645"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="Cancellation refused" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_err_cancel" target="merge_exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="645"/>
+              <mxPoint x="70" y="1197"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="[Pending / Confirmed]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_cancel_status" target="act_do_cancel">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e15" value="Trigger stock restore" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_do_cancel" target="act_release_stock">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e16" value="Reserved stock released" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_release_stock" target="merge_refresh">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="652"/>
+              <mxPoint x="1270" y="1112"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="Submit re-order request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_click_reorder" target="act_reorder_stock">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="act_reorder_stock" target="dec_reorder_avail">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e19" value="[Some items unavailable (E2.1)]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_reorder_avail" target="act_err_reorder">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e20" value="Proceed with available items" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_err_reorder" target="act_redirect_cart">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e21" value="[All available]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_reorder_avail" target="act_redirect_cart">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="932"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="Cart view opened" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_redirect_cart" target="merge_exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="932"/>
+              <mxPoint x="460" y="1197"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="Submit review &amp; rating" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_click_review" target="act_save_review">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e24" value="Review recorded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_save_review" target="merge_refresh">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="1112"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="Workflow complete" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="merge_refresh" target="merge_exit">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="merge_exit" target="final_node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

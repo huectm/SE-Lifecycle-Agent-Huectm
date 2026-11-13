@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.1 on win32)" generated="2026-10-28T16:16:19.937288" rpa="false" schemaversion="5">
+<suite id="s1" name="Tutorialsninja Register" source="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\functional\tutorialsninja_register.robot">
+<kw name="Open Registration Browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:20.119641" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo/index.php?route=account/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:16:20.119354" elapsed="2.719001"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:20.118675" elapsed="2.719821"/>
+</kw>
+<test id="s1-t1" name="REG-053 Proposed UC adjacent valid boundary firstname" line="120">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:16:22.839404" elapsed="0.017486"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:22.857367" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:16:22.857163" elapsed="0.152707"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.010143" elapsed="0.021620"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:22.839062" elapsed="0.193050"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:16:23.034452" level="INFO">{"id": "REG-053", "title": "Proposed UC adjacent valid boundary firstname", "field": "firstname", "value": "AAAAAAAAAAAAAAAAAAA", "expected": "success", "basis": "UC proposal; confirmation required", "technique": "BVA", "flow": "Appendix", "firstname": "AAAAAAAAAAAAAAAAAAA", "lastname": "Tester", "email": "rf1793178983034303400reg-053@example.com", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:16:23.034834" level="INFO">${row} = {'id': 'REG-053', 'title': 'Proposed UC adjacent valid boundary firstname', 'field': 'firstname', 'value': 'AAAAAAAAAAAAAAAAAAA', 'expected': 'success', 'basis': 'UC proposal; confirmation required', ...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:16:23.033260" elapsed="0.001647"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:23.035573" elapsed="0.000051"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:16:23.035100" elapsed="0.000609"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:23.035049" elapsed="0.000787"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:23.036454" elapsed="0.000041"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:23.036627" elapsed="0.000031"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:16:23.036742" elapsed="0.000050"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:16:23.035974" elapsed="0.000877"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:23.035937" elapsed="0.000961"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:23.037242" elapsed="0.000037"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:23.037411" elapsed="0.000041"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:23.037572" elapsed="0.000029"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:16:23.037670" elapsed="0.000036"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:16:23.036979" elapsed="0.000771"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:23.036948" elapsed="0.000891"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:16:23.038643" elapsed="0.000092"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:16:23.037974" elapsed="0.000837"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:23.037932" elapsed="0.000932"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.040784" level="INFO">Typing text 'AAAAAAAAAAAAAAAAAAA' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.040081" elapsed="0.075341"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:16:23.039867" elapsed="0.075705"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.116422" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.116018" elapsed="0.053340"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:16:23.115792" elapsed="0.053664"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.170134" level="INFO">Typing text 'rf1793178983034303400reg-053@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.169783" elapsed="0.065300"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:16:23.169617" elapsed="0.065694"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.236150" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.235728" elapsed="0.062849"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:16:23.235518" elapsed="0.063209"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.299569" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.299166" elapsed="0.058523"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:16:23.298960" elapsed="0.058843"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.358467" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.358154" elapsed="0.057392"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:16:23.357979" elapsed="0.057765"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:16:23.039565" elapsed="0.376295"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.416471" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.416158" elapsed="0.014121"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.431308" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.430956" elapsed="0.065274"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:23.430522" elapsed="0.065824"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:23.430475" elapsed="0.066017"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:23.039134" elapsed="0.457463"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:23.497351" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:23.497114" elapsed="1.408838"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:23.496818" elapsed="1.409266"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:24.906508" elapsed="0.535569"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:24.906250" elapsed="0.535953"/>
+</kw>
+<arg>REG-053</arg>
+<status status="PASS" start="2026-10-28T16:16:23.032839" elapsed="2.409413"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:16:25.442733" elapsed="0.138077"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:25.442500" elapsed="0.138470"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:16:22.838573" elapsed="2.742482"/>
+</test>
+<test id="s1-t2" name="REG-054 Proposed UC adjacent valid boundary lastname" line="122">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:16:25.582946" elapsed="0.022516"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:25.606042" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:16:25.605713" elapsed="0.164198"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:16:25.770164" elapsed="0.013652"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:25.582420" elapsed="0.201545"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:16:25.784832" level="INFO">{"id": "REG-054", "title": "Proposed UC adjacent valid boundary lastname", "field": "lastname", "value": "AAAAAAAAA", "expected": "success", "basis": "UC proposal; confirmation required", "technique": "BVA", "flow": "Appendix", "firstname": "Robot", "lastname": "AAAAAAAAA", "email": "rf1793178983034303400reg-054@example.com", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:16:25.784943" level="INFO">${row} = {'id': 'REG-054', 'title': 'Proposed UC adjacent valid boundary lastname', 'field': 'lastname', 'value': 'AAAAAAAAA', 'expected': 'success', 'basis': 'UC proposal; confirmation required', 'technique':...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:16:25.784660" elapsed="0.000318"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:25.785384" elapsed="0.000036"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:16:25.785079" elapsed="0.000384"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:25.785054" elapsed="0.000472"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:25.785849" elapsed="0.000037"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:25.785994" elapsed="0.000026"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786077" elapsed="0.000029"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:16:25.785595" elapsed="0.000542"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:25.785577" elapsed="0.000595"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786453" elapsed="0.000026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786580" elapsed="0.000022"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786701" elapsed="0.000019"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786772" elapsed="0.000020"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786234" elapsed="0.000589"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:25.786220" elapsed="0.000632"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:16:25.787201" elapsed="0.000033"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:16:25.786907" elapsed="0.000397"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:25.786895" elapsed="0.000443"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:25.788416" level="INFO">Typing text 'Robot' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:25.788116" elapsed="0.077861"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:16:25.787990" elapsed="0.078121"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:25.866866" level="INFO">Typing text 'AAAAAAAAA' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:25.866489" elapsed="0.083479"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:16:25.866298" elapsed="0.083816"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:25.950828" level="INFO">Typing text 'rf1793178983034303400reg-054@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:25.950505" elapsed="0.099475"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:16:25.950318" elapsed="0.099775"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:26.050718" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:26.050414" elapsed="0.071234"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:16:26.050261" elapsed="0.071551"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:26.122679" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:26.122265" elapsed="0.077636"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:16:26.122037" elapsed="0.077997"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:26.200912" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:26.200471" elapsed="0.072138"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:16:26.200225" elapsed="0.072561"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:16:25.787826" elapsed="0.485044"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:26.273438" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:16:26.273132" elapsed="0.014460"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:26.288608" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:26.288250" elapsed="0.075920"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:26.287838" elapsed="0.076450"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:26.287792" elapsed="0.076565"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:25.787533" elapsed="0.576889"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:26.365113" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:26.364887" elapsed="1.124076"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:26.364608" elapsed="1.124528"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:27.489693" elapsed="0.515216"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:27.489337" elapsed="0.515698"/>
+</kw>
+<arg>REG-054</arg>
+<status status="PASS" start="2026-10-28T16:16:25.784341" elapsed="2.220750"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:16:28.005606" elapsed="0.109521"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:28.005346" elapsed="0.109975"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:16:25.581691" elapsed="2.533705"/>
+</test>
+<test id="s1-t3" name="REG-055 Proposed UC adjacent valid boundary password" line="124">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.117138" elapsed="0.022373"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.139981" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.139716" elapsed="0.191848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.331818" elapsed="0.014216"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:28.116683" elapsed="0.229552"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:16:28.347283" level="INFO">{"id": "REG-055", "title": "Proposed UC adjacent valid boundary password", "field": "password", "value": "Abc123!xy", "expected": "success", "basis": "UC proposal; confirmation required", "technique": "BVA", "flow": "Appendix", "firstname": "Robot", "lastname": "Tester", "email": "rf1793178983034303400reg-055@example.com", "telephone": "0812345678", "password": "Abc123!xy", "confirm": "Abc123!xy", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:16:28.347438" level="INFO">${row} = {'id': 'REG-055', 'title': 'Proposed UC adjacent valid boundary password', 'field': 'password', 'value': 'Abc123!xy', 'expected': 'success', 'basis': 'UC proposal; confirmation required', 'technique':...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:16:28.347085" elapsed="0.000385"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:28.347827" elapsed="0.000059"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:16:28.347576" elapsed="0.000354"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:28.347550" elapsed="0.000420"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:28.348217" elapsed="0.000031"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:28.348370" elapsed="0.000030"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:16:28.348453" elapsed="0.000027"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:16:28.348020" elapsed="0.000498"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:28.348006" elapsed="0.000550"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:28.348850" elapsed="0.000034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:28.349002" elapsed="0.000028"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:16:28.349136" elapsed="0.000026"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:16:28.349215" elapsed="0.000025"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:16:28.348614" elapsed="0.000662"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:28.348599" elapsed="0.000741"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:16:28.349708" elapsed="0.000035"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:16:28.349409" elapsed="0.000385"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:28.349392" elapsed="0.000442"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.350894" level="INFO">Typing text 'Robot' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.350572" elapsed="0.072359"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:16:28.350425" elapsed="0.072695"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.423828" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.423499" elapsed="0.069327"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:16:28.423329" elapsed="0.069614"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.493741" level="INFO">Typing text 'rf1793178983034303400reg-055@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.493356" elapsed="0.098003"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:16:28.493148" elapsed="0.098338"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.592390" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.591975" elapsed="0.081166"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:16:28.591722" elapsed="0.081577"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.673976" level="INFO">Typing text 'Abc123!xy' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.673636" elapsed="0.073052"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:16:28.673477" elapsed="0.073412"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.748028" level="INFO">Typing text 'Abc123!xy' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.747466" elapsed="0.088762"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:16:28.747171" elapsed="0.089140"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:16:28.350270" elapsed="0.486080"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.836653" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.836478" elapsed="0.014341"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.851573" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.851315" elapsed="0.078129"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:28.851016" elapsed="0.078608"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:16:28.850983" elapsed="0.078719"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:28.350021" elapsed="0.579769"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:16:28.931163" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:16:28.930726" elapsed="1.712463"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:28.930200" elapsed="1.713225"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:30.644033" elapsed="0.484538"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:16:30.643651" elapsed="0.485094"/>
+</kw>
+<arg>REG-055</arg>
+<status status="PASS" start="2026-10-28T16:16:28.346678" elapsed="2.782145"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:16:31.129540" elapsed="0.128525"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:16:31.129173" elapsed="0.129055"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:16:28.115908" elapsed="3.142387"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-28T16:16:31.259212" elapsed="2.117991"/>
+</kw>
+<doc>UC-REG-01 keyword-driven UI tests. CSV is the authoritative dataset. Proposed UC constraints may fail pending clarification.</doc>
+<status status="PASS" start="2026-10-28T16:16:19.938318" elapsed="13.438999"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">data-driven</stat>
+<stat pass="3" fail="0" skip="0">functional</stat>
+<stat pass="3" fail="0" skip="0">registration</stat>
+</tag>
+<suite>
+<stat name="Tutorialsninja Register" id="s1" pass="3" fail="0" skip="0">Tutorialsninja Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

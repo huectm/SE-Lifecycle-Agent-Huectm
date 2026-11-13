@@ -1,0 +1,496 @@
+﻿SonarScanner for .NET 12.0
+Using the .NET Core version of the SonarScanner for .NET
+Post-processing started.
+10:42:38.986  Using Java found in Analysis Config: C:\Users\huect\.sonar\cache\2332c0b4cff6bed722da3567c91d5e47568bcba863fa4945d0a8d6fc76158628\OpenJDK21U-jre_x64_windows_hotspot_21.0.13_9.zip_extracted\jdk-21.0.13+9-jre\bin\java.exe
+10:42:39.645  INFO: Starting SonarScanner Engine...
+10:42:39.646  INFO: Java 21.0.13 Eclipse Adoptium (64-bit)
+10:42:40.469  INFO: Load global settings
+10:42:41.738  INFO: Load global settings (done) | time=1270ms
+10:42:41.744  INFO: Server id: 1BD809FA-AWHW8ct9-T_TB3XqouNu
+10:42:41.755  INFO: Inferred api base url 'https://api.sonarcloud.io' from host url 'https://sonarcloud.io'.
+10:42:42.201  INFO: Loading required plugins
+10:42:42.201  INFO: Load plugins index
+10:42:42.552  INFO: Load plugins index (done) | time=353ms
+10:42:42.666  INFO: Load/download plugins
+10:42:42.754  INFO: Load/download plugins (done) | time=83ms
+10:42:42.879  INFO: Loaded core extensions: sca, a3s, architecture
+10:42:43.290  INFO: Load project settings for component key: 'huectm_SE-Lifecycle-Agent'
+10:42:44.148  INFO: Load project settings for component key: 'huectm_SE-Lifecycle-Agent' (done) | time=856ms
+10:42:44.578  INFO: Process project properties
+10:42:44.659  INFO: Project key: huectm_SE-Lifecycle-Agent
+10:42:44.659  INFO: Base dir: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent
+10:42:44.660  INFO: Working dir: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\.sonarqube\out\.sonar
+10:42:44.708  INFO: Check ALM binding of project 'huectm_SE-Lifecycle-Agent'
+10:42:44.951  INFO: Detected project binding: BOUND
+10:42:44.951  INFO: Check ALM binding of project 'huectm_SE-Lifecycle-Agent' (done) | time=243ms
+10:42:44.957  INFO: Load branch configuration
+10:42:44.960  INFO: Load branch configuration (done) | time=2ms
+10:42:44.964  INFO: Create analysis
+10:42:45.549  INFO: Create analysis (done) | time=584ms
+10:42:46.367  INFO: Load quality profiles
+10:42:46.812  INFO: Load quality profiles (done) | time=444ms
+10:42:46.839  INFO: Load active rules
+10:42:47.709  INFO: Load active rules (done) | time=868ms
+10:42:48.083  INFO: Organization key: huectm
+10:42:48.123  INFO: Preprocessing files...
+10:42:48.530  INFO: 3 languages detected in 129 preprocessed files (done) | time=405ms
+10:42:48.531  INFO: 6 files ignored because of inclusion/exclusion patterns
+10:42:48.531  INFO: 0 files ignored because of scm ignore settings
+10:42:48.848  INFO: Update analysis
+10:42:49.377  INFO: Update analysis (done) | time=529ms
+10:42:49.392  INFO: Loading plugins for detected languages
+10:42:49.392  INFO: Load/download plugins
+10:42:49.579  INFO: Load/download plugins (done) | time=185ms
+10:42:49.961  INFO: Executing phase 2 project builders
+10:42:50.012  INFO: Executing phase 2 project builders (done) | time=52ms
+10:42:50.023  INFO: Load project repositories
+10:42:50.516  INFO: Load project repositories (done) | time=492ms
+10:42:50.572  INFO: Indexing files...
+10:42:50.572  INFO: Project configuration:
+10:42:50.573  INFO:   Included sources: src/FreshFood-API/**/*.cs, src/FreshFood.Reposistory/**/*.cs, src/FreshFood-API.Tests/**/*.cs
+10:42:50.573  INFO:   Excluded sources: **/bin/**, **/obj/**, **/build-wrapper-dump.json
+10:42:50.575  INFO: Indexing files of module 'FreshFood-API'
+10:42:50.578  INFO:   Base dir: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API
+10:42:50.581  INFO:   Source paths: ApiCompositionRoot.cs, ApiJson.cs, AssemblyInfo.cs, Controlle...
+10:42:50.581  INFO:   Included sources: src/FreshFood-API/**/*.cs, src/FreshFood.Reposistory/**/*.cs, src/FreshFood-API.Tests/**/*.cs
+10:42:50.581  INFO:   Excluded sources: **/bin/**, **/obj/**, **/build-wrapper-dump.json
+10:42:50.689  INFO: Indexing files of module 'FreshFood-API.Tests'
+10:42:50.690  INFO:   Base dir: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests
+10:42:50.690  INFO:   Test paths: BackendTests.cs, CurrentCustomerTests.cs, DesignMappingTests.cs...
+10:42:50.690  INFO:   Included sources: src/FreshFood-API/**/*.cs, src/FreshFood.Reposistory/**/*.cs, src/FreshFood-API.Tests/**/*.cs
+10:42:50.690  INFO:   Excluded sources: **/bin/**, **/obj/**, **/build-wrapper-dump.json
+10:42:50.701  INFO: Indexing files of module 'FreshFood.Reposistory'
+10:42:50.701  INFO:   Base dir: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory
+10:42:50.702  INFO:   Source paths: Entities/AuditLog.cs, Entities/BatchInventory.cs, Entities/Ca...
+10:42:50.702  INFO:   Included sources: src/FreshFood-API/**/*.cs, src/FreshFood.Reposistory/**/*.cs, src/FreshFood-API.Tests/**/*.cs
+10:42:50.702  INFO:   Excluded sources: **/bin/**, **/obj/**, **/build-wrapper-dump.json
+10:42:50.738  INFO: Indexing files of module 'huectm_SE-Lifecycle-Agent'
+10:42:50.739  INFO:   Base dir: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent
+10:42:50.739  INFO:   Included sources: src/FreshFood-API/**/*.cs, src/FreshFood.Reposistory/**/*.cs, src/FreshFood-API.Tests/**/*.cs
+10:42:50.739  INFO:   Excluded sources: **/bin/**, **/obj/**, **/build-wrapper-dump.json
+10:42:50.739  INFO: 129 files indexed (done) | time=167ms
+10:42:50.741  INFO: Quality profile for cs: Sonar way core
+10:42:50.741  INFO: Quality profile for json: Sonar way core
+10:42:50.741  INFO: Quality profile for plsql: Sonar way core
+10:42:51.228  INFO: Dependency analysis skipped
+10:42:51.229  INFO: ------------- Run sensors on module FreshFood.Reposistory
+10:42:51.372  INFO: Load metrics repository
+10:42:51.634  INFO: Load metrics repository (done) | time=262ms
+10:42:51.643  INFO: Sensor cache enabled
+10:42:51.652  INFO: Load sensor cache
+10:42:53.262  INFO: Load sensor cache (42 KB) | time=1610ms
+10:42:54.671  INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+10:42:54.681  INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=9ms
+10:42:54.681  INFO: Sensor C# Project Type Information [csharpenterprise]
+10:42:54.684  INFO: Sensor C# Project Type Information [csharpenterprise] (done) | time=3ms
+10:42:54.684  INFO: Sensor C# Analysis Log [csharpenterprise]
+10:42:54.692  INFO: Roslyn version: 5.9.0.0
+10:42:54.692  INFO: Language version: CSharp14
+10:42:54.692  INFO: Concurrent execution: enabled
+10:42:54.693  INFO: Sensor C# Analysis Log [csharpenterprise] (done) | time=8ms
+10:42:54.693  INFO: Sensor C# Method Declarations [csharpenterprise]
+10:42:54.694  INFO: Sensor C# Method Declarations [csharpenterprise] (done) | time=2ms
+10:42:54.694  INFO: Sensor C# Telemetry [csharpenterprise]
+10:42:54.696  INFO: Sensor C# Telemetry [csharpenterprise] (done) | time=1ms
+10:42:54.696  INFO: Sensor C# Telemetry Json [csharpenterprise]
+10:42:54.714  INFO: Sensor C# Telemetry Json [csharpenterprise] (done) | time=17ms
+10:42:54.714  INFO: Sensor C# Properties [csharpenterprise]
+10:42:54.716  INFO: Sensor C# Properties [csharpenterprise] (done) | time=1ms
+10:42:54.716  INFO: Sensor C# A3S Context Sensor [csharpenterprise]
+10:42:55.440  INFO: Sensor C# A3S Context Sensor [csharpenterprise] (done) | time=723ms
+10:42:55.441  INFO: Sensor IaC hadolint report Sensor [iac]
+10:42:55.442  INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=1ms
+10:42:55.442  INFO: Sensor Java Config Sensor [iac]
+10:42:55.447  INFO: There are no files to be analyzed for the Java language
+10:42:55.447  INFO: Sensor Java Config Sensor [iac] (done) | time=4ms
+10:42:55.447  INFO: Sensor IaC Docker Sensor [iac]
+10:42:55.452  INFO: There are no files to be analyzed for the Docker language
+10:42:55.452  INFO: Sensor IaC Docker Sensor [iac] (done) | time=4ms
+10:42:55.452  INFO: Sensor IaC GitHub Actions Sensor [iac]
+10:42:55.454  INFO: There are no files to be analyzed for the GitHub Actions language
+10:42:55.454  INFO: Sensor IaC GitHub Actions Sensor [iac] (done) | time=0ms
+10:42:55.454  INFO: Sensor IaC actionlint report Sensor [iac]
+10:42:55.454  INFO: Sensor IaC actionlint report Sensor [iac] (done) | time=0ms
+10:42:55.454  INFO: Sensor IaC Shell Sensor [iac]
+10:42:55.454  INFO: There are no files to be analyzed for the Shell language
+10:42:55.454  INFO: Sensor IaC Shell Sensor [iac] (done) | time=0ms
+10:42:55.455  INFO: Sensor CSharpModuleSecuritySensor [securitycsharpfrontend]
+10:42:55.455  INFO: Sensor CSharpModuleSecuritySensor [securitycsharpfrontend] (done) | time=0ms
+10:42:55.464  INFO: ------------- Run sensors on module FreshFood-API
+10:42:55.547  INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+10:42:55.548  INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=2ms
+10:42:55.549  INFO: Sensor C# Project Type Information [csharpenterprise]
+10:42:55.549  INFO: Sensor C# Project Type Information [csharpenterprise] (done) | time=0ms
+10:42:55.550  INFO: Sensor C# Analysis Log [csharpenterprise]
+10:42:55.552  INFO: Roslyn version: 5.9.0.0
+10:42:55.553  INFO: Language version: CSharp14
+10:42:55.553  INFO: Concurrent execution: enabled
+10:42:55.553  INFO: Sensor C# Analysis Log [csharpenterprise] (done) | time=3ms
+10:42:55.553  INFO: Sensor C# Method Declarations [csharpenterprise]
+10:42:55.554  INFO: Sensor C# Method Declarations [csharpenterprise] (done) | time=1ms
+10:42:55.555  INFO: Sensor C# Telemetry [csharpenterprise]
+10:42:55.556  INFO: Sensor C# Telemetry [csharpenterprise] (done) | time=1ms
+10:42:55.556  INFO: Sensor C# Telemetry Json [csharpenterprise]
+10:42:55.557  INFO: Sensor C# Telemetry Json [csharpenterprise] (done) | time=0ms
+10:42:55.558  INFO: Sensor C# Properties [csharpenterprise]
+10:42:55.559  INFO: Sensor C# Properties [csharpenterprise] (done) | time=1ms
+10:42:55.559  INFO: Sensor C# A3S Context Sensor [csharpenterprise]
+10:42:55.559  INFO: Sensor C# A3S Context Sensor [csharpenterprise] (done) | time=0ms
+10:42:55.560  INFO: Sensor IaC hadolint report Sensor [iac]
+10:42:55.560  INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+10:42:55.560  INFO: Sensor Java Config Sensor [iac]
+10:42:55.560  INFO: There are no files to be analyzed for the Java language
+10:42:55.560  INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+10:42:55.560  INFO: Sensor IaC Docker Sensor [iac]
+10:42:55.563  INFO: There are no files to be analyzed for the Docker language
+10:42:55.563  INFO: Sensor IaC Docker Sensor [iac] (done) | time=2ms
+10:42:55.563  INFO: Sensor IaC GitHub Actions Sensor [iac]
+10:42:55.563  INFO: There are no files to be analyzed for the GitHub Actions language
+10:42:55.563  INFO: Sensor IaC GitHub Actions Sensor [iac] (done) | time=0ms
+10:42:55.563  INFO: Sensor IaC actionlint report Sensor [iac]
+10:42:55.563  INFO: Sensor IaC actionlint report Sensor [iac] (done) | time=0ms
+10:42:55.563  INFO: Sensor IaC Shell Sensor [iac]
+10:42:55.564  INFO: There are no files to be analyzed for the Shell language
+10:42:55.564  INFO: Sensor IaC Shell Sensor [iac] (done) | time=0ms
+10:42:55.564  INFO: Sensor CSharpModuleSecuritySensor [securitycsharpfrontend]
+10:42:55.564  INFO: Sensor CSharpModuleSecuritySensor [securitycsharpfrontend] (done) | time=0ms
+10:42:55.565  INFO: ------------- Run sensors on module FreshFood-API.Tests
+10:42:55.644  INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+10:42:55.645  INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=1ms
+10:42:55.645  INFO: Sensor C# Project Type Information [csharpenterprise]
+10:42:55.646  INFO: Sensor C# Project Type Information [csharpenterprise] (done) | time=1ms
+10:42:55.646  INFO: Sensor C# Analysis Log [csharpenterprise]
+10:42:55.651  INFO: Roslyn version: 5.9.0.0
+10:42:55.651  INFO: Language version: CSharp14
+10:42:55.651  INFO: Concurrent execution: enabled
+10:42:55.651  INFO: Sensor C# Analysis Log [csharpenterprise] (done) | time=5ms
+10:42:55.651  INFO: Sensor C# Method Declarations [csharpenterprise]
+10:42:55.658  INFO: Sensor C# Method Declarations [csharpenterprise] (done) | time=7ms
+10:42:55.658  INFO: Sensor C# Telemetry [csharpenterprise]
+10:42:55.660  INFO: Sensor C# Telemetry [csharpenterprise] (done) | time=0ms
+10:42:55.660  INFO: Sensor C# Telemetry Json [csharpenterprise]
+10:42:55.661  INFO: Sensor C# Telemetry Json [csharpenterprise] (done) | time=0ms
+10:42:55.661  INFO: Sensor C# Properties [csharpenterprise]
+10:42:55.661  INFO: Sensor C# Properties [csharpenterprise] (done) | time=0ms
+10:42:55.661  INFO: Sensor C# A3S Context Sensor [csharpenterprise]
+10:42:55.662  INFO: Sensor C# A3S Context Sensor [csharpenterprise] (done) | time=0ms
+10:42:55.662  INFO: Sensor IaC CloudFormation Sensor [iac]
+10:42:55.662  INFO: There are no files to be analyzed for the CloudFormation language
+10:42:55.662  INFO: Sensor IaC CloudFormation Sensor [iac] (done) | time=0ms
+10:42:55.662  INFO: Sensor IaC cfn-lint report Sensor [iac]
+10:42:55.662  INFO: Sensor IaC cfn-lint report Sensor [iac] (done) | time=0ms
+10:42:55.662  INFO: Sensor IaC hadolint report Sensor [iac]
+10:42:55.662  INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+10:42:55.663  INFO: Sensor IaC Azure Resource Manager Sensor [iac]
+10:42:55.663  INFO: There are no files to be analyzed for the Azure Resource Manager language
+10:42:55.663  INFO: Sensor IaC Azure Resource Manager Sensor [iac] (done) | time=0ms
+10:42:55.663  INFO: Sensor Java Config Sensor [iac]
+10:42:55.663  INFO: There are no files to be analyzed for the Java language
+10:42:55.663  INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+10:42:55.663  INFO: Sensor IaC Docker Sensor [iac]
+10:42:55.663  INFO: There are no files to be analyzed for the Docker language
+10:42:55.664  INFO: Sensor IaC Docker Sensor [iac] (done) | time=1ms
+10:42:55.664  INFO: Sensor IaC spectral report Sensor [iac]
+10:42:55.665  INFO: Sensor IaC spectral report Sensor [iac] (done) | time=1ms
+10:42:55.665  INFO: Sensor IaC GitHub Actions Sensor [iac]
+10:42:55.665  INFO: There are no files to be analyzed for the GitHub Actions language
+10:42:55.665  INFO: Sensor IaC GitHub Actions Sensor [iac] (done) | time=0ms
+10:42:55.665  INFO: Sensor IaC actionlint report Sensor [iac]
+10:42:55.665  INFO: Sensor IaC actionlint report Sensor [iac] (done) | time=0ms
+10:42:55.665  INFO: Sensor IaC Azure Pipelines Sensor [iac]
+10:42:55.666  INFO: There are no files to be analyzed for the Azure Pipelines language
+10:42:55.666  INFO: Sensor IaC Azure Pipelines Sensor [iac] (done) | time=0ms
+10:42:55.666  INFO: Sensor IaC Shell Sensor [iac]
+10:42:55.666  INFO: There are no files to be analyzed for the Shell language
+10:42:55.666  INFO: Sensor IaC Shell Sensor [iac] (done) | time=0ms
+10:42:55.666  INFO: Sensor CSharpModuleSecuritySensor [securitycsharpfrontend]
+10:42:55.666  INFO: Sensor CSharpModuleSecuritySensor [securitycsharpfrontend] (done) | time=0ms
+10:42:55.666  INFO: Sensor IaC JSON Sensor [iac]
+10:42:55.667  INFO: Sensor for language "JSON" is disabled by a feature flag. You can enable it by setting "sonar.featureflag.cloud-security-enable-generic-yaml-and-json-analyzer" to true.
+10:42:55.667  INFO: Sensor IaC JSON Sensor [iac] (done) | time=0ms
+10:42:55.668  INFO: ------------- Run sensors on module huectm_SE-Lifecycle-Agent
+10:42:55.762  INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+10:42:55.762  INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=0ms
+10:42:55.762  INFO: Sensor C# Project Type Information [csharpenterprise]
+10:42:55.763  INFO: Sensor C# Project Type Information [csharpenterprise] (done) | time=0ms
+10:42:55.763  INFO: Sensor C# Analysis Log [csharpenterprise]
+10:42:55.763  INFO: Sensor C# Analysis Log [csharpenterprise] (done) | time=1ms
+10:42:55.763  INFO: Sensor C# Method Declarations [csharpenterprise]
+10:42:55.764  INFO: Sensor C# Method Declarations [csharpenterprise] (done) | time=0ms
+10:42:55.764  INFO: Sensor C# Properties [csharpenterprise]
+10:42:55.764  INFO: Sensor C# Properties [csharpenterprise] (done) | time=0ms
+10:42:55.764  INFO: Sensor IaC hadolint report Sensor [iac]
+10:42:55.764  INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+10:42:55.764  INFO: Sensor Java Config Sensor [iac]
+10:42:55.765  INFO: There are no files to be analyzed for the Java language
+10:42:55.765  INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+10:42:55.765  INFO: Sensor IaC Docker Sensor [iac]
+10:42:55.766  INFO: There are no files to be analyzed for the Docker language
+10:42:55.766  INFO: Sensor IaC Docker Sensor [iac] (done) | time=0ms
+10:42:55.766  INFO: Sensor IaC GitHub Actions Sensor [iac]
+10:42:55.766  INFO: There are no files to be analyzed for the GitHub Actions language
+10:42:55.766  INFO: Sensor IaC GitHub Actions Sensor [iac] (done) | time=0ms
+10:42:55.767  INFO: Sensor IaC actionlint report Sensor [iac]
+10:42:55.767  INFO: Sensor IaC actionlint report Sensor [iac] (done) | time=0ms
+10:42:55.767  INFO: Sensor IaC Shell Sensor [iac]
+10:42:55.767  INFO: There are no files to be analyzed for the Shell language
+10:42:55.767  INFO: Sensor IaC Shell Sensor [iac] (done) | time=0ms
+10:42:55.767  INFO: Sensor EnterpriseTextAndSecretsSensor [textenterprise]
+10:42:55.809  INFO: Available processors: 16
+10:42:55.809  INFO: Using 16 threads for analysis.
+10:42:56.591  INFO: The following rules are activated in the quality profile but will not raise any issue, because they are being rolled out progressively: secrets:S8135, secrets:S8136. You can enable it by setting: sonar.featureflag.cloud-security-enable-secrets-S8135, sonar.featureflag.cloud-security-enable-secrets-S8136 to true.
+10:42:56.593  INFO: The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+10:42:56.783  INFO: Start fetching files for the text and secrets analysis
+10:42:57.008  INFO: Using Git CLI to retrieve dirty files
+10:42:57.150  INFO: Retrieving language associated files and files included via "sonar.text.inclusions" that are tracked by git
+10:42:57.151  INFO: Starting the text and secrets analysis
+10:42:57.152  INFO: 129 source files to be analyzed for the text and secrets analysis
+10:42:57.304  INFO: 129/129 source files have been analyzed for the text and secrets analysis
+10:42:57.304  INFO: Skipped 7 file(s) in the secrets analysis due to automatic test file detection
+10:42:57.306  INFO: Start fetching files for the binary file analysis
+10:42:57.307  INFO: There are no files to be analyzed for the binary file analysis
+10:42:57.332  INFO: Sensor EnterpriseTextAndSecretsSensor [textenterprise] (done) | time=1564ms
+10:42:57.333  INFO: Sensor CSharpSecuritySensor [security]
+10:42:57.357  INFO: 27 taint analysis rules enabled.
+10:42:57.794  INFO: Analyzing 1003 UCFGs to detect vulnerabilities.
+10:42:58.426  INFO: All rules entry points : 12
+10:42:58.428  INFO: Retained UCFGs : 241
+10:42:58.480  INFO: 0 / 241 UCFGs simulated, memory usage: 83 MB
+10:42:58.950  INFO: 241 / 241 UCFGs simulated, memory usage: 110 MB
+10:42:58.968  INFO: csharp security sensor: Begin: 2026-11-04T03:42:57.345568Z, End: 2026-11-04T03:42:58.965866100Z, Duration: 00:00:01.620
+  Resolve files to analyze: Begin: 2026-11-04T03:42:57.357818400Z, End: 2026-11-04T03:42:57.359832200Z, Duration: 00:00:00.002
+  Load type hierarchy and UCFGs: Begin: 2026-11-04T03:42:57.359832200Z, End: 2026-11-04T03:42:57.792829500Z, Duration: 00:00:00.432
+    Load type hierarchy: Begin: 2026-11-04T03:42:57.359832200Z, End: 2026-11-04T03:42:57.446237800Z, Duration: 00:00:00.086
+    Load UCFGs: Begin: 2026-11-04T03:42:57.446237800Z, End: 2026-11-04T03:42:57.792829500Z, Duration: 00:00:00.346
+  Check cache: Begin: 2026-11-04T03:42:57.792829500Z, End: 2026-11-04T03:42:57.796338600Z, Duration: 00:00:00.003
+    Load cache: Begin: 2026-11-04T03:42:57.795338400Z, End: 2026-11-04T03:42:57.795338400Z, Duration: 00:00:00.000
+  Create runtime call graph: Begin: 2026-11-04T03:42:57.796338600Z, End: 2026-11-04T03:42:57.906351500Z, Duration: 00:00:00.110
+    Variable Type Analysis #1: Begin: 2026-11-04T03:42:57.797338900Z, End: 2026-11-04T03:42:57.867906600Z, Duration: 00:00:00.070
+      Create runtime type propagation graph: Begin: 2026-11-04T03:42:57.799493200Z, End: 2026-11-04T03:42:57.843227Z, Duration: 00:00:00.043
+      Run SCC (Tarjan) on 3264 nodes: Begin: 2026-11-04T03:42:57.843227Z, End: 2026-11-04T03:42:57.853059800Z, Duration: 00:00:00.009
+      Propagate runtime types to strongly connected components: Begin: 2026-11-04T03:42:57.853059800Z, End: 2026-11-04T03:42:57.867906600Z, Duration: 00:00:00.014
+    Variable Type Analysis #2: Begin: 2026-11-04T03:42:57.870357300Z, End: 2026-11-04T03:42:57.903111400Z, Duration: 00:00:00.032
+      Create runtime type propagation graph: Begin: 2026-11-04T03:42:57.870357300Z, End: 2026-11-04T03:42:57.894087800Z, Duration: 00:00:00.023
+      Run SCC (Tarjan) on 3264 nodes: Begin: 2026-11-04T03:42:57.894087800Z, End: 2026-11-04T03:42:57.897108800Z, Duration: 00:00:00.003
+      Propagate runtime types to strongly connected components: Begin: 2026-11-04T03:42:57.897108800Z, End: 2026-11-04T03:42:57.903111400Z, Duration: 00:00:00.006
+  Load config: Begin: 2026-11-04T03:42:57.906351500Z, End: 2026-11-04T03:42:58.387240400Z, Duration: 00:00:00.480
+  Compute entry points: Begin: 2026-11-04T03:42:58.388261600Z, End: 2026-11-04T03:42:58.426183600Z, Duration: 00:00:00.037
+  Slice call graph: Begin: 2026-11-04T03:42:58.426183600Z, End: 2026-11-04T03:42:58.431284200Z, Duration: 00:00:00.005
+  Live variable analysis: Begin: 2026-11-04T03:42:58.431791Z, End: 2026-11-04T03:42:58.470517800Z, Duration: 00:00:00.038
+  Taint analysis for csharp: Begin: 2026-11-04T03:42:58.471518400Z, End: 2026-11-04T03:42:58.949869Z, Duration: 00:00:00.478
+  Report issues: Begin: 2026-11-04T03:42:58.949869Z, End: 2026-11-04T03:42:58.955866100Z, Duration: 00:00:00.005
+  Store cache: Begin: 2026-11-04T03:42:58.957866400Z, End: 2026-11-04T03:42:58.964865400Z, Duration: 00:00:00.006
+10:42:58.968  INFO: csharp security sensor peak memory (pre-GC, max allocation pressure): 119 MB
+10:42:58.968  INFO: csharp security sensor peak memory (post-GC, max live footprint): 80 MB
+10:42:58.968  INFO: Sensor CSharpSecuritySensor [security] (done) | time=1634ms
+10:42:58.976  INFO: ------------- Run sensors on project
+10:42:59.549  INFO: Sensor BOMSensor [bom]
+10:42:59.549  INFO: Skipping BOMSensor: CBOM generation is not available
+10:42:59.549  INFO: Sensor BOMSensor [bom] (done) | time=1ms
+10:42:59.549  INFO: Sensor C# Telemetry processor [csharpenterprise]
+10:42:59.552  INFO: Sensor C# Telemetry processor [csharpenterprise] (done) | time=2ms
+10:42:59.553  INFO: Sensor C# Telemetry Json processor [csharpenterprise]
+10:42:59.563  INFO: Sensor C# Telemetry Json processor [csharpenterprise] (done) | time=10ms
+10:42:59.563  INFO: Sensor C# [csharpenterprise]
+10:43:00.086  INFO: Importing 3 Roslyn reports
+10:43:00.169  INFO: Found 3 MSBuild C# projects: 2 MAIN projects. 1 TEST project.
+10:43:00.169  INFO: Sensor C# [csharpenterprise] (done) | time=605ms
+10:43:00.169  INFO: Sensor Analysis Warnings import [csharpenterprise]
+10:43:00.170  INFO: Sensor Analysis Warnings import [csharpenterprise] (done) | time=1ms
+10:43:00.170  INFO: Sensor C# File Caching Sensor [csharpenterprise]
+10:43:00.196  INFO: Sensor C# File Caching Sensor [csharpenterprise] (done) | time=24ms
+10:43:00.196  INFO: Sensor C# Tests Coverage Report Import [csharpenterprise]
+10:43:00.198  INFO: Parsing the Visual Studio coverage XML report D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\.\artifacts\analysis\sonarqube\coverage.xml
+10:43:00.305  INFO: Adding this code coverage report to the cache for later reuse: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\.\artifacts\analysis\sonarqube\coverage.xml
+10:43:00.356  INFO: Coverage Report Statistics: 91 files, 86 main files, 86 main files with coverage, 5 test files, 0 project excluded files, 0 other language files.
+10:43:00.356  INFO: Sensor C# Tests Coverage Report Import [csharpenterprise] (done) | time=159ms
+10:43:00.356  INFO: Sensor C# A3S Context processor [csharpenterprise]
+10:43:00.356  INFO: A3S is disabled
+10:43:00.356  INFO: Sensor C# A3S Context processor [csharpenterprise] (done) | time=0ms
+10:43:00.356  INFO: Sensor csSecurityContextCollectorSensor [security]
+10:43:00.356  INFO: Sensor csSecurityContextCollectorSensor [security] (done) | time=0ms
+10:43:00.356  INFO: Sensor SQL Dialect Detection [dre]
+10:43:00.359  INFO: Starting SQL dialect detection for 1 file(s)
+10:43:00.490  INFO: Finished SQL dialect detection for 1 file(s) in 131 ms
+10:43:00.494  INFO: SQL dialect detected: postgres (1 file(s))
+10:43:00.494  INFO: Sensor SQL Dialect Detection [dre] (done) | time=137ms
+10:43:00.494  INFO: Sensor CveReachabilitySensor [cvereachability]
+10:43:00.494  INFO: Skipping CveReachabilitySensor: CVE reachability feature is not available.
+10:43:00.494  INFO: Sensor CveReachabilitySensor [cvereachability] (done) | time=0ms
+10:43:00.494  INFO: Sensor IaC Project Sensor [iac]
+10:43:00.495  INFO: Sensor IaC Project Sensor [iac] (done) | time=1ms
+10:43:00.495  INFO: Sensor CSharpArchitectureSensor [architecture]
+10:43:00.496  INFO: Architecture analysis is enabled.
+10:43:00.510  INFO: Found 1 potential Udg file location(s) for "cs" in "D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\.sonarqube\out"
+10:43:00.511  INFO: - D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\.sonarqube\out\architecture\cs
+10:43:00.717  INFO: * Protobuf reading starting | memory total=142 | free=42 | used=99 (MB)
+10:43:00.717  INFO: * Reading SonarArchitecture UDG data from "D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\.sonarqube\out\architecture\cs"
+10:43:00.837  INFO: * Files successfully loaded: "2" out of "2"
+10:43:00.837  INFO: * Purging externals (components not scanned) from graphs
+10:43:00.840  INFO: * Purging excluded nodes from graphs
+10:43:00.852  INFO: * Protobuf reading complete | memory total=142 | free=30 | used=111 (MB)
+10:43:00.918  INFO: * Build architecture.graph.cs.namespace_graph.default_perspective hierarchy graph complete (filtered=false) | memory total=142 | free=24 | used=117 (MB)
+10:43:01.069  INFO: No directives configured
+10:43:01.084  INFO: * No intended architecture defined or detected, using an empty model
+10:43:01.332  INFO: Boundary detection is disabled.
+10:43:01.358  INFO: Sensor CSharpArchitectureSensor [architecture] (done) | time=862ms
+10:43:01.359  INFO: Sensor Zero Coverage Sensor
+10:43:01.360  INFO: Sensor Zero Coverage Sensor (done) | time=2ms
+10:43:01.361  INFO: Sensor Architecture Telemetry [architecture]
+10:43:01.361  INFO: Sensor Architecture Telemetry [architecture] (done) | time=0ms
+10:43:01.362  INFO: ------------- Gather SCA dependencies on project
+10:43:01.367  INFO: CPD Executor 69 files had no CPD blocks
+10:43:01.367  INFO: CPD Executor Calculating CPD for 53 files
+10:43:01.390  INFO: CPD Executor CPD calculation finished (done) | time=22ms
+10:43:01.392  INFO: SCM Publisher SCM provider for this project is: git
+10:43:01.393  INFO: SCM Publisher 128 source files to be analyzed
+10:43:01.677  INFO: SCM Publisher 0/128 source files have been analyzed (done) | time=283ms
+10:43:01.677  WARNING: WARN: Missing blame information for the following files:
+10:43:01.678  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/ReturnInspection.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderLineDto.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/Customer.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API.Tests/DesignMappingTests.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/DTOs/VerifiedPaymentDto.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/PaymentStatus.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/ProductCategory.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/BatchInventory.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/Services/Implements/MyOrdersService.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderReviewDto.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/DTOs/PaymentQrDto.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/Services/ICatalogService.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/Services/Implements/CatalogService.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/Controllers/CartController.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood-API/Controllers/PaymentWebhookController.cs
+10:43:01.678  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/SqlRepository.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/DTOs/CartLineDto.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/Services/Implements/CurrentCustomer.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/DTOs/ProductSummaryDto.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/GlobalUsings.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/Services/Implements/Gateways.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/Services/ICheckoutService.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/VndAmount.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/OrderPayment.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/IMyOrdersRepository.cs
+10:43:01.679  WARNING: WARN:   * src/FreshFood-API/DTOs/CancelOrderDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Controllers/ProfileController.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/Order.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderConfirmationDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/ICheckoutRepository.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/DTOs/ProductDetailsDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Controllers/MyOrdersController.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/ShippingFeeSettlement.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/DTOs/OperationResultDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/DTOs/CartChangeDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Controllers/CatalogController.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Services/IDistanceCalculator.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Services/Implements/OrderStateMachine.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/DTOs/GuardFactsDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/BatchCriteria.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/DTOs/NotificationDto.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Services/Implements/ProfileService.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/Cart.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/IDeliveryFeePolicy.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood-API/Services/Implements/CheckoutService.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/IBatchPricingPolicy.cs
+10:43:01.680  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/IProfileRepository.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API.Tests/BackendTests.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/CatalogResultDto.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/CartItem.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/IUnitOfWork.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/TransitionSnapshot.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/OrderDetail.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/ICartRepository.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/StateMachineResult.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/BatchOfferDto.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/OrderStatus.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/Services/ICurrentCustomer.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/PaymentResultDto.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/Services/INotificationGateway.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/Product.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/Services/Implements/CartService.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/PaymentQrRequestDto.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/Services/IGeocodingGateway.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/CheckoutInputDto.cs
+10:43:01.681  WARNING: WARN:   * src/FreshFood-API/DTOs/StateMachineEvent.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/Services/IPayoutPort.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/Services/IMyOrdersService.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/ReturnSummaryDto.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/Services/INotificationPublisher.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/CategoryDto.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood.Reposistory/GlobalUsings.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/CheckoutLineDto.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/ApiJson.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/OrderReview.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/Services/IProfileService.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/CheckoutSummaryDto.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/GeoPointDto.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API.Tests/Fixtures/prerequisites.sql
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/Services/Implements/ServiceRules.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API.Tests/CurrentCustomerTests.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/Refund.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/ReturnReceiptItem.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderStateSnapshot.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/DTOs/ProfileResultDto.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood-API/Services/IDistanceGateway.cs
+10:43:01.682  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/DeliveryAgent.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/AddressInputDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/DomainBehavior.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/CartIdentityDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/ReturnReceipt.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API.Tests/HttpTests.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/IOrderLifecycleRepository.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/ProfileUpdateDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderDetailsDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/CustomerAddress.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/IRepositorySession.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/AssemblyInfo.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/Errors.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/IFefoBatchSpecification.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/Program.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/ApiCompositionRoot.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/PlaceOrderDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/CartResultDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderSummaryDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/PaymentMethod.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/AuditLog.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/ICatalogRepository.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/OrderListDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/PayoutOutcomeDto.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood.Reposistory/Entities/DeliveryFailure.cs
+10:43:01.683  WARNING: WARN:   * src/FreshFood-API/DTOs/AddressDto.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API/DTOs/PaymentNoticeDto.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API/Controllers/CheckoutController.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API/DTOs/CatalogQueryDto.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API/Services/IOrderStateMachine.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API/Services/ICartService.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API/Services/IPaymentGateway.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood.Reposistory/Repository/OrderLifecycleRecords.cs
+10:43:01.684  WARNING: WARN:   * src/FreshFood-API.Tests/PostgreSqlTests.cs
+10:43:01.684  WARNING: WARN: This may lead to missing/broken features in SonarCloud
+10:43:01.693  INFO: SCM revision ID 'dbcf0256ace737c86311b10dd90f50249c9bfe35'
+10:43:02.462  INFO: Analysis report generated in 766ms, dir size=541 KB
+10:43:02.755  INFO: Analysis report compressed in 292ms, zip size=263 KB
+10:43:04.200  INFO: Analysis report uploaded in 1445ms
+10:43:04.202  INFO: ANALYSIS SUCCESSFUL, you can find the results at: https://sonarcloud.io/dashboard?id=huectm_SE-Lifecycle-Agent
+10:43:04.202  INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+10:43:04.202  INFO: More about the report processing at https://sonarcloud.io/api/ce/task?id=AaGkpzcQSBSHRNPxmB-v
+10:43:04.203  INFO: ------------- Upload SCA dependency files
+10:43:07.395  INFO: Successfully sent architecture data
+10:43:08.940  INFO: Sensor cache published successfully
+10:43:09.804  INFO: Analysis total time: 30.143 s
+10:43:09.857  INFO: SonarScanner Engine completed successfully
+10:43:09.922  The scanner engine has finished successfully
+10:43:09.922  Post-processing succeeded.

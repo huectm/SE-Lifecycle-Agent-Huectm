@@ -1,0 +1,50 @@
+﻿Contract,Implementation,Lifetime,Composition Root,Status
+ICatalogService,CatalogService,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ICatalogRepository,CatalogRepository,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IBatchPricingPolicy,BatchPricingPolicy,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ICartService,CartService,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ICartRepository,CartRepository,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IProfileService,ProfileService,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IProfileRepository,ProfileRepository,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IGeocodingGateway,GoogleMapsGeocodingAdapter,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ICheckoutService,CheckoutService,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ICheckoutRepository,CheckoutRepository,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ITransitionExecutor,TransitionExecutor,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IDistanceGateway,GoogleMapsDistanceAdapter,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IPaymentGateway,SePayPaymentAdapter,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+INotificationGateway,NotificationAdapter,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IDeliveryFeePolicy,DeliveryFeePolicy,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IDistanceCalculator,DistanceCalculator,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IFefoBatchSpecification,FefoBatchSpecification,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IStateTransition,AcceptOrderTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,EnterPendingUnpaidTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,EnterPendingPaidTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,InitializeUnpaidPaymentTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,CaptureVerifiedPaymentTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IMyOrdersService,MyOrdersService,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IMyOrdersRepository,MyOrdersRepository,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IStateTransition,CancelPendingUnpaidTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,CancelPendingPaidTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,CancelConfirmedOrderTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IUnitOfWork,UnitOfWork,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IRepositorySession,PostgreSqlSession,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+ICurrentCustomer,CurrentCustomer,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IOrderLifecycleRepository,OrderLifecycleRepository,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+IStateTransition,ApprovePendingUnpaidTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,ApprovePendingPaidTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,StartPackingTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,DispatchOrderTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,DeliverOrderTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,FailDeliveryTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,ReceiveReturnedOrderTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,CompleteDeliveredFulfillmentTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,CompleteReturnedFulfillmentTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,CompleteCancelledFulfillmentTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,ObserveRefundCandidateTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,StartEligibleRefundTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,ConfirmRefundSettlementTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,RecordUncertainRefundTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,MarkPartialRefundTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IStateTransition,MarkFullRefundTransition,Scoped collection; unique transition Id; reject duplicate Id at startup,ApiCompositionRoot,Proposed; review required
+IPayoutPort,UnconfiguredPayoutAdapter,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required
+INotificationPublisher,ConfiguredNotificationPublisher,Scoped per API request / transaction,ApiCompositionRoot,Proposed; review required

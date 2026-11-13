@@ -1,0 +1,57 @@
+{
+  "empty_both": {
+    "identifier": "",
+    "password": "",
+    "missing": "e"
+  },
+  "empty_identifier": {
+    "identifier": "",
+    "password": "QaOnly!2026",
+    "missing": "e"
+  },
+  "empty_password": {
+    "identifier": "mathx.qa.20261026.5c93d7@example.invalid",
+    "password": "",
+    "missing": "p"
+  },
+  "email": {
+    "value": "mathx.qa.20261026.5c93d7@example.invalid"
+  },
+  "username": {
+    "value": "mathx_qa_20261026_5c93d7"
+  },
+  "phone": {
+    "value": "0900000000"
+  },
+  "unicode_identifier": {
+    "value": "Người_dùng_thử_nghiệm"
+  },
+  "one_identifier": {
+    "value": "a"
+  },
+  "long_identifier": {
+    "value": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq"
+  },
+  "special_password": {
+    "value": "Synthetic!@#  mật_khẩu_2026"
+  },
+  "one_password": {
+    "value": "x"
+  },
+  "long_password": {
+    "value": "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ"
+  },
+  "invalid_button": {
+    "identifier": "mathx.qa.20261026.5c93d7@example.invalid",
+    "password": "Synthetic-Not-An-Account!2026"
+  },
+  "invalid_enter": {
+    "identifier": "mathx.qa.20261026.5c93d7@example.invalid",
+    "password": "Synthetic-Not-An-Account!2026"
+  },
+  "valid_account": {
+    "identifier": null,
+    "password": null,
+    "source": "Not supplied by user; never store real credentials in fixtures."
+  }
+}

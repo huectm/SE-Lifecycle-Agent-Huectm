@@ -1,0 +1,506 @@
+{
+  "source": [
+    {
+      "sha256": "33DFA7890CF684EE81C493805EC1B36BE35FE4225F37AFD36EEBC4C90A8CF66F",
+      "path": "src\\FreshFood-API\\ApiCompositionRoot.cs"
+    },
+    {
+      "sha256": "AD38B7CE845C4B5981D1B16C96B6FA92E2BBDB6F3CF4606DDED6B87F1B2CF663",
+      "path": "src\\FreshFood-API\\ApiJson.cs"
+    },
+    {
+      "sha256": "7761322293A1F8473F7C585CB31086A6CCEED50FAB75B93CD3C0519FCB7D0A52",
+      "path": "src\\FreshFood-API\\AssemblyInfo.cs"
+    },
+    {
+      "sha256": "794A8377E4ADE1442034F5C83A41783F8116C75A1BB6C90A3F23041722C7DEEC",
+      "path": "src\\FreshFood-API\\GlobalUsings.cs"
+    },
+    {
+      "sha256": "C8851EEA36F11CF197C9C0802ABF5E4CE4BA0FF900DEC52DEB518E25BB4305D7",
+      "path": "src\\FreshFood-API\\Program.cs"
+    },
+    {
+      "sha256": "BF8DC20E468E4EDDD0F282C209AB28647AF329E45551D3DE6C94F66B4019D1E9",
+      "path": "src\\FreshFood-API\\Controllers\\CartController.cs"
+    },
+    {
+      "sha256": "8E55816CEF55957C9D1A185CE2DCFF145C31FF05132C4CAAF70AA1739491CBEE",
+      "path": "src\\FreshFood-API\\Controllers\\CatalogController.cs"
+    },
+    {
+      "sha256": "52319AEE5D40F8351FEE13CC6CDD363D127BF1FDE67EE6B8C24046C4326B53B2",
+      "path": "src\\FreshFood-API\\Controllers\\CheckoutController.cs"
+    },
+    {
+      "sha256": "D02E967362CB56C7BD9785A07E04BE7374DBC2E2CC9DD41E7C18B4E3BAF08860",
+      "path": "src\\FreshFood-API\\Controllers\\MyOrdersController.cs"
+    },
+    {
+      "sha256": "DA315EB155B29A9FCED7523A8282847FD36F01D4EFECBE2154907073DCF3567A",
+      "path": "src\\FreshFood-API\\Controllers\\PaymentNoticeModelBinder.cs"
+    },
+    {
+      "sha256": "A9CC20A232E2318AC4A861FBBDC0E325D0AD3493C25DF4EB0031442FD413454B",
+      "path": "src\\FreshFood-API\\Controllers\\PaymentWebhookController.cs"
+    },
+    {
+      "sha256": "B7DB6B47C332F296AA3BE9704ED6A710FE558FA0081E873DC6F93790C9BF1912",
+      "path": "src\\FreshFood-API\\Controllers\\ProfileController.cs"
+    },
+    {
+      "sha256": "AAFE34021D65A0F49AD330238DC32597E3AA06F6D66CAFF10BADF8C8016919E3",
+      "path": "src\\FreshFood-API\\DTOs\\AddressDto.cs"
+    },
+    {
+      "sha256": "8029B9AE33C668A4FFA948881029B6EB16CD4F83FBD1F21F3D468CF949F3C3FE",
+      "path": "src\\FreshFood-API\\DTOs\\AddressInputDto.cs"
+    },
+    {
+      "sha256": "B67993A6778759F4E7D92E231EF21E6EA8A86C8E47786C5D7BF06BFB993C6D1F",
+      "path": "src\\FreshFood-API\\DTOs\\BatchOfferDto.cs"
+    },
+    {
+      "sha256": "B9246F05EA9CA9B4F87C257259DFBB593F59428B4F0E2650ECC3D90E8F2D82BC",
+      "path": "src\\FreshFood-API\\DTOs\\CancelOrderDto.cs"
+    },
+    {
+      "sha256": "6A9B78F86CBAC07E723FFB8E0C4DE49188254289B6747CC6EC850A7DA35B2421",
+      "path": "src\\FreshFood-API\\DTOs\\CartChangeDto.cs"
+    },
+    {
+      "sha256": "6E58C16C53AB2AEFE6782DCE5AE44CA33DFCF095EC2E65A541E0A50C3B83E8A5",
+      "path": "src\\FreshFood-API\\DTOs\\CartIdentityDto.cs"
+    },
+    {
+      "sha256": "2262D11C5B39DFE39714EC76D363CE01A89E270269764FAAC4D27B954ED9106C",
+      "path": "src\\FreshFood-API\\DTOs\\CartLineDto.cs"
+    },
+    {
+      "sha256": "58E68B10523A97CC858A5C324F791E3E2D910C1C463CA980F6473BC306207273",
+      "path": "src\\FreshFood-API\\DTOs\\CartResultDto.cs"
+    },
+    {
+      "sha256": "4568F3B4A65042DCD8146D24F42BAAE19E8DADCD152B92932B7FD16DF5F785FB",
+      "path": "src\\FreshFood-API\\DTOs\\CatalogQueryDto.cs"
+    },
+    {
+      "sha256": "3C4F839547AAC9ABDC3F51B9B46A71A5C00A587806B7628838E457F73D00F5D9",
+      "path": "src\\FreshFood-API\\DTOs\\CatalogResultDto.cs"
+    },
+    {
+      "sha256": "3A7BB28FAADB44080CFCFB493B4C9077457A0F70B156013BEBF7971F1CDB85C4",
+      "path": "src\\FreshFood-API\\DTOs\\CategoryDto.cs"
+    },
+    {
+      "sha256": "2E94A1D1CB3E19D96092BE62CDAF5147BDEC39318165BCC98EC16EF6C019E903",
+      "path": "src\\FreshFood-API\\DTOs\\CheckoutInputDto.cs"
+    },
+    {
+      "sha256": "431DF47A87E9023600B28D5AD49950330BBA67625B40A5B2A769463080121621",
+      "path": "src\\FreshFood-API\\DTOs\\CheckoutLineDto.cs"
+    },
+    {
+      "sha256": "624DC38164F1F301BD74C9BC9CB36E2FC7D94ACB4D043EDF0AFDCE3E893FFB10",
+      "path": "src\\FreshFood-API\\DTOs\\CheckoutSummaryDto.cs"
+    },
+    {
+      "sha256": "A0545EC841DAC610691CD9E0467579F13FD75B61A158E6B0648CEA57BCDABB3E",
+      "path": "src\\FreshFood-API\\DTOs\\GeoPointDto.cs"
+    },
+    {
+      "sha256": "A351EF57B6552A18D14120AEE83D0FB66EDFCB7B2A6088A8D5426A670AD08EF1",
+      "path": "src\\FreshFood-API\\DTOs\\GuardFactsDto.cs"
+    },
+    {
+      "sha256": "E5B0682E950211384B30888E636E00B22039588AC5CD3E6BDF0928A004751FDD",
+      "path": "src\\FreshFood-API\\DTOs\\NotificationDto.cs"
+    },
+    {
+      "sha256": "95C8AB4B6B6425A017BEAF4F2BDDE173D472F2CB838D5677A3734F05D07E4EC4",
+      "path": "src\\FreshFood-API\\DTOs\\OperationResultDto.cs"
+    },
+    {
+      "sha256": "A81A3885975F12195CA886F393B37A8EBC295DFDE342B6EB054491953E4B30A6",
+      "path": "src\\FreshFood-API\\DTOs\\OrderConfirmationDto.cs"
+    },
+    {
+      "sha256": "39B5222532BDD4D930439ECDCFF7ED8933399936D5B931A9D4DF0A9B5C010DA6",
+      "path": "src\\FreshFood-API\\DTOs\\OrderDetailsDto.cs"
+    },
+    {
+      "sha256": "360D361672558A73F98A902B5767AA0DC52B1D1AFEF469024904E554A45B61A1",
+      "path": "src\\FreshFood-API\\DTOs\\OrderLineDto.cs"
+    },
+    {
+      "sha256": "69B4F63A6EBBFE5CDD5522D41459381B8420A01EDC6CC2ADCAA1CE50C104E346",
+      "path": "src\\FreshFood-API\\DTOs\\OrderListDto.cs"
+    },
+    {
+      "sha256": "241D7A3747EC2D09452EBEB2AE63DF5449F4219ACC6FF41069522FC7031071E0",
+      "path": "src\\FreshFood-API\\DTOs\\OrderReviewDto.cs"
+    },
+    {
+      "sha256": "4C38D41A6C9527C664F1B3A594181436FA2D082C7D4D1B3E62A88FFD57BF36A1",
+      "path": "src\\FreshFood-API\\DTOs\\OrderStateSnapshot.cs"
+    },
+    {
+      "sha256": "1B8B638A1E6E728127E0553648FFBE6CBA187639B84A5AE9B3D1E8062FE565FC",
+      "path": "src\\FreshFood-API\\DTOs\\OrderSummaryDto.cs"
+    },
+    {
+      "sha256": "453EBAD3AF7E2617E9DB89162840BCA0C0731CEF2706466F65C1CFA9FF27E64E",
+      "path": "src\\FreshFood-API\\DTOs\\PaymentNoticeDto.cs"
+    },
+    {
+      "sha256": "70ADF5679D619F4EC4CFAE273C43FB73AD798E6D41A25AA36410B1E41C02CD79",
+      "path": "src\\FreshFood-API\\DTOs\\PaymentQrDto.cs"
+    },
+    {
+      "sha256": "3C1D07D0C5B5A6D79013C6636FEB21A58D8278D5B60A1F3830BA98EFA097F564",
+      "path": "src\\FreshFood-API\\DTOs\\PaymentQrRequestDto.cs"
+    },
+    {
+      "sha256": "DF74E5B6C9429FEC9EB9ABD7E9E5344F0A9FBF26593A24F562A147EF6471155A",
+      "path": "src\\FreshFood-API\\DTOs\\PaymentResultDto.cs"
+    },
+    {
+      "sha256": "8C4D306A0B20649E07F0FDF6FCB5E51537BE9839A279C274329376B182537570",
+      "path": "src\\FreshFood-API\\DTOs\\PayoutOutcomeDto.cs"
+    },
+    {
+      "sha256": "9D5F0EBAFD0115A77CFB6DDE25F35EBFAFDCF8EC271D676F9D4AA306D25A7666",
+      "path": "src\\FreshFood-API\\DTOs\\PlaceOrderDto.cs"
+    },
+    {
+      "sha256": "32FB727CBE69F7D6313D92B0359231C25237F439B3510BFAB4CC21DDC1F1CD60",
+      "path": "src\\FreshFood-API\\DTOs\\ProductDetailsDto.cs"
+    },
+    {
+      "sha256": "8F820B9B4E4055E7D9F3A69C4E480F1D33E9978475C77BD8B5E2FCF0E0E26824",
+      "path": "src\\FreshFood-API\\DTOs\\ProductSummaryDto.cs"
+    },
+    {
+      "sha256": "192A9CF70F33D02E39B9B2AB86C856F4BB1E87EC68CC90E11C14BC818AAFB867",
+      "path": "src\\FreshFood-API\\DTOs\\ProfileResultDto.cs"
+    },
+    {
+      "sha256": "98270C718DDA1884BD808608161DD078285456E79E7946E4EB996B8CF3B6259C",
+      "path": "src\\FreshFood-API\\DTOs\\ProfileUpdateDto.cs"
+    },
+    {
+      "sha256": "C60B24E4309CB8E370DF689E28872D130C5FB189465CFD9DAB26F93A19F80759",
+      "path": "src\\FreshFood-API\\DTOs\\ReturnSummaryDto.cs"
+    },
+    {
+      "sha256": "2312E1D0E762D52796A608F9CB2C49784240D6C8CBEA2BCA1E2D764EF5A8A353",
+      "path": "src\\FreshFood-API\\DTOs\\StateMachineEvent.cs"
+    },
+    {
+      "sha256": "06836D487239D603541ED067D5865E0007D30B0AE316D72AF9994FC76823660F",
+      "path": "src\\FreshFood-API\\DTOs\\StateMachineResult.cs"
+    },
+    {
+      "sha256": "C32EEAF8B6170230C125DF8B63A9D14FDF46E629A74E5833668D9C5B8892B74F",
+      "path": "src\\FreshFood-API\\DTOs\\TransitionSnapshot.cs"
+    },
+    {
+      "sha256": "1189271123600E68541FC822534CF2C8D457C583F9C0994E0E2766BB814BA883",
+      "path": "src\\FreshFood-API\\DTOs\\VerifiedPaymentDto.cs"
+    },
+    {
+      "sha256": "792179D662CC926F9EC7587FDA5C4B453493BAB695210CA51980C83F27386B0B",
+      "path": "src\\FreshFood-API\\Services\\ICartService.cs"
+    },
+    {
+      "sha256": "F3180DDDFB9604BF08FD904DC691888AC3A34EA81D138DE46FE04949BA241304",
+      "path": "src\\FreshFood-API\\Services\\ICatalogService.cs"
+    },
+    {
+      "sha256": "06BE38C7238487403A70066A7282D2C8B3AB5F6E5EED9240010531D7D9161890",
+      "path": "src\\FreshFood-API\\Services\\ICheckoutService.cs"
+    },
+    {
+      "sha256": "D88C17AAF35559A1706B7506CA219854CDAF5B4C137B167FA5DCA18A60001A39",
+      "path": "src\\FreshFood-API\\Services\\ICurrentCustomer.cs"
+    },
+    {
+      "sha256": "6060D3AE3F402170623BA626636DC4FF689D8C0C71AC5F327AAE5B9DFDE76AA1",
+      "path": "src\\FreshFood-API\\Services\\IDistanceCalculator.cs"
+    },
+    {
+      "sha256": "914B2C691937335BDF81F4C8DD24D1736D71E70FAC7CD1FBAC0951AFCB90765B",
+      "path": "src\\FreshFood-API\\Services\\IDistanceGateway.cs"
+    },
+    {
+      "sha256": "5841764E0C1C31516B4BCC055886B8EB987F4946D369D24C410652104E856F13",
+      "path": "src\\FreshFood-API\\Services\\IGeocodingGateway.cs"
+    },
+    {
+      "sha256": "EBA2CC542116A5AC6EB6E70294510D3D07538CFCD0ADED1E6CE1FFB48B87ADC9",
+      "path": "src\\FreshFood-API\\Services\\IMyOrdersService.cs"
+    },
+    {
+      "sha256": "2F7B112C295D89F076D4F01EA6324CA815AC5FCD43EEEBDDBD305B2F11B025A0",
+      "path": "src\\FreshFood-API\\Services\\INotificationGateway.cs"
+    },
+    {
+      "sha256": "762D008854AC12FA24C1F33F05191B80E40451C017F0B190B6B444146866DBFF",
+      "path": "src\\FreshFood-API\\Services\\INotificationPublisher.cs"
+    },
+    {
+      "sha256": "157FFD5F7573BBB73DDE1119CF201CDA1329D1B83EA6DFADBC98786CAE4CF0FF",
+      "path": "src\\FreshFood-API\\Services\\IOrderStateMachine.cs"
+    },
+    {
+      "sha256": "59B36D97AD026D72EC8086EC701E10035D60C812B20FB14D7D6C0204EAC43C88",
+      "path": "src\\FreshFood-API\\Services\\IPaymentGateway.cs"
+    },
+    {
+      "sha256": "EF82383AA0D1FD0E146E1A7282B50F275393EB0DA8004787F20846B68D9FA5DF",
+      "path": "src\\FreshFood-API\\Services\\IPayoutPort.cs"
+    },
+    {
+      "sha256": "F33D24A7CB7A381E6C2B082D4C91EE0B2C4C8FE519C285E5360C47D2FE78B91C",
+      "path": "src\\FreshFood-API\\Services\\IProfileService.cs"
+    },
+    {
+      "sha256": "0457E8497F27E87594EF9795FD1C4D362938DAEE3B02C00DD8E2BCF763B884B9",
+      "path": "src\\FreshFood-API\\Services\\Implements\\CartService.cs"
+    },
+    {
+      "sha256": "BD49EADCFAD2B4187B2509B247E4FCACFCDCA0B419AAB4F06A5EBAB0907E91BA",
+      "path": "src\\FreshFood-API\\Services\\Implements\\CatalogService.cs"
+    },
+    {
+      "sha256": "8898D1286A2F1E0EF5EA2E1B95C86D0CBC3E5EB848E01C45302C39DCB023BCD3",
+      "path": "src\\FreshFood-API\\Services\\Implements\\CheckoutService.cs"
+    },
+    {
+      "sha256": "2BD93773C1031625C25C17ECF0AE9074219D8743757C9047DA110DB5A977A026",
+      "path": "src\\FreshFood-API\\Services\\Implements\\CurrentCustomer.cs"
+    },
+    {
+      "sha256": "5B4A2D96D9E0D62C9749032DC29BEE4C5DFB2199CC7A553B852BE4B2AB3FFF11",
+      "path": "src\\FreshFood-API\\Services\\Implements\\Gateways.cs"
+    },
+    {
+      "sha256": "131780FB48A3D0179FCC566C774A71C083DC7C1815AA13A895F9FF8CF3BA91A6",
+      "path": "src\\FreshFood-API\\Services\\Implements\\MyOrdersService.cs"
+    },
+    {
+      "sha256": "C9BA0281179E8BA7DADFFC7B4672F269A1F2974FCADC268438F53626EB8EF8EC",
+      "path": "src\\FreshFood-API\\Services\\Implements\\OrderStateMachine.cs"
+    },
+    {
+      "sha256": "FD176097443C5074D2E47AE0B2545B92A9ACB9DF3C5B40D797D67E7576C492A0",
+      "path": "src\\FreshFood-API\\Services\\Implements\\ProfileService.cs"
+    },
+    {
+      "sha256": "21BBCD475A9CC9555D3FD4416B47B91EFAD8E5E3927DBDA6F164158B2536892F",
+      "path": "src\\FreshFood-API\\Services\\Implements\\ServiceRules.cs"
+    },
+    {
+      "sha256": "FF73C2ACEB4973B29AE655C063F60EDFE66ACBE08490A77D9D1ECBFEE686AE6D",
+      "path": "src\\FreshFood.Reposistory\\GlobalUsings.cs"
+    },
+    {
+      "sha256": "1806CE98F8FB97D8AC0345DB2C25AB5E4A02C5C0004485FA0D4E35ACF274BB36",
+      "path": "src\\FreshFood.Reposistory\\Entities\\AuditLog.cs"
+    },
+    {
+      "sha256": "9F23E75272DB88CC3C57DD31F6C83717303F565982B9314DCF3CF28BBFDE72B9",
+      "path": "src\\FreshFood.Reposistory\\Entities\\BatchInventory.cs"
+    },
+    {
+      "sha256": "08080481E99D463944C2119221CFEA4E38743617F3DB628F4EEE4394F8EF335A",
+      "path": "src\\FreshFood.Reposistory\\Entities\\Cart.cs"
+    },
+    {
+      "sha256": "A8DFCD479D2987EBA125A581BC0E4222F721F860156537CB3D626DCC7B36C888",
+      "path": "src\\FreshFood.Reposistory\\Entities\\CartItem.cs"
+    },
+    {
+      "sha256": "7CFD30408CF4CAD30D169B517DBDE9A651ECB44EF81C3612B1E643F9A01E806A",
+      "path": "src\\FreshFood.Reposistory\\Entities\\Customer.cs"
+    },
+    {
+      "sha256": "D8462B24C235BDF08B70C560B867A3BE4AA6A2F073059F1914314750EE6EAE16",
+      "path": "src\\FreshFood.Reposistory\\Entities\\CustomerAddress.cs"
+    },
+    {
+      "sha256": "1D0EC607B042A3FF536B9A1FEC16CF5071F3124A7DEEAB363B9C7E279D914628",
+      "path": "src\\FreshFood.Reposistory\\Entities\\DeliveryAgent.cs"
+    },
+    {
+      "sha256": "58692F9F82CD9D3491D265753FC38A1B173B11698088971FA70D91AE095B2E21",
+      "path": "src\\FreshFood.Reposistory\\Entities\\DeliveryFailure.cs"
+    },
+    {
+      "sha256": "9B775D3632ADF3F0E1C0352A5CC6E72F604F9A1134FCAC31EB5F829AE47D68F9",
+      "path": "src\\FreshFood.Reposistory\\Entities\\DomainBehavior.cs"
+    },
+    {
+      "sha256": "4D14CB2FBF6DCC9131AA40606D1B3648F3C87B4539ADBACFB92BA1111EFD6B77",
+      "path": "src\\FreshFood.Reposistory\\Entities\\IBatchPricingPolicy.cs"
+    },
+    {
+      "sha256": "05F1F6BD8BC62684AF55D36069904E62E09740308C7EFDEC34DBE6D9FD29941F",
+      "path": "src\\FreshFood.Reposistory\\Entities\\IDeliveryFeePolicy.cs"
+    },
+    {
+      "sha256": "B6093915FED4E7B334F04597D8A05A076FDC4C56DD1FD9C912B18BA2289F2CDE",
+      "path": "src\\FreshFood.Reposistory\\Entities\\Order.cs"
+    },
+    {
+      "sha256": "D9317A13168C98BF3EFF87DF356C2086D8F0A48FA71355898A46548967454FD2",
+      "path": "src\\FreshFood.Reposistory\\Entities\\OrderDetail.cs"
+    },
+    {
+      "sha256": "0F0CAF5149E0C0C5C228BDBC4ADC8FA1419DF02805354AAC36CA8D27E333AAD8",
+      "path": "src\\FreshFood.Reposistory\\Entities\\OrderPayment.cs"
+    },
+    {
+      "sha256": "45F408F831622056192F70820D038C39736B24511AD20111676416F7429629C4",
+      "path": "src\\FreshFood.Reposistory\\Entities\\OrderReview.cs"
+    },
+    {
+      "sha256": "5D58E5FAB5C1C0B3F007FB9EF27A433C7A22DEC03684CE055D54B082B878D6F1",
+      "path": "src\\FreshFood.Reposistory\\Entities\\OrderStatus.cs"
+    },
+    {
+      "sha256": "3617FFA1661948B8D55E6FB28F725109D45CF99FB481A507487E2F94A6ABDCA3",
+      "path": "src\\FreshFood.Reposistory\\Entities\\PaymentMethod.cs"
+    },
+    {
+      "sha256": "F208CEAD1C2FDFA83D29840B12B2F0EBB26C8E6F21360AB37962EB47A02D77FE",
+      "path": "src\\FreshFood.Reposistory\\Entities\\PaymentStatus.cs"
+    },
+    {
+      "sha256": "C7F9AABF52F2651A1CD11DA2FCF50996EC28C53CDE7EF79AFC7A9A29A7839CA5",
+      "path": "src\\FreshFood.Reposistory\\Entities\\Product.cs"
+    },
+    {
+      "sha256": "0143F98F6A9F3B8E3999F74C285BB1F284DF9727703EEADA97A2FB4B5EE9E7C5",
+      "path": "src\\FreshFood.Reposistory\\Entities\\ProductCategory.cs"
+    },
+    {
+      "sha256": "26EB19FA132CD026BD53131016B49D205E3F47B36C19037F38C12BE5D0CB0AD8",
+      "path": "src\\FreshFood.Reposistory\\Entities\\Refund.cs"
+    },
+    {
+      "sha256": "5781DA118A5BDB9257AFC1DD9DF1DD59A2D2F82AF7A9F11316D7E1FF9E00A280",
+      "path": "src\\FreshFood.Reposistory\\Entities\\ReturnInspection.cs"
+    },
+    {
+      "sha256": "EC373EA51759421C226F847398810A20A905D0FC3693F05AE370673E6FB448DD",
+      "path": "src\\FreshFood.Reposistory\\Entities\\ReturnReceipt.cs"
+    },
+    {
+      "sha256": "D3AE50B8BC4C46C4403839DC12DF96E4297503B6A63C1A245A84F04CE2EB13DE",
+      "path": "src\\FreshFood.Reposistory\\Entities\\ReturnReceiptItem.cs"
+    },
+    {
+      "sha256": "7D29BA5C87452F18B9B1B97D2D8AED697D3CB617AF9FE977D9BBB783C06AD38A",
+      "path": "src\\FreshFood.Reposistory\\Entities\\ShippingFeeSettlement.cs"
+    },
+    {
+      "sha256": "71917E54A7962CDF9F7BF6E90B41AD337015713878088D6D8C02FA5BF25E7D2A",
+      "path": "src\\FreshFood.Reposistory\\Entities\\VndAmount.cs"
+    },
+    {
+      "sha256": "5A5DE863D89C95546921B0231A1668895C86F5D16992EC569B2438E4D9F8419F",
+      "path": "src\\FreshFood.Reposistory\\Repository\\BatchCriteria.cs"
+    },
+    {
+      "sha256": "283F01597BDB3FFA5E965C6917205552E241356C49BBB7F97B0615BC6803AEF2",
+      "path": "src\\FreshFood.Reposistory\\Repository\\ICartRepository.cs"
+    },
+    {
+      "sha256": "D53E762DEDB860A9997AAAC3A2ED087CA7C6BC556633BE6F4DB57ADF26510501",
+      "path": "src\\FreshFood.Reposistory\\Repository\\ICatalogRepository.cs"
+    },
+    {
+      "sha256": "AC494BDF3367EAAFFCD4AD369DC4FEF4F38126AFF4F9EB18E12E22F1C900D6A0",
+      "path": "src\\FreshFood.Reposistory\\Repository\\ICheckoutRepository.cs"
+    },
+    {
+      "sha256": "C4D80212C8E5AEE89DA688393553E3910E3D98A742519802B9F0CAE053182AB7",
+      "path": "src\\FreshFood.Reposistory\\Repository\\IFefoBatchSpecification.cs"
+    },
+    {
+      "sha256": "63E994F504EDC168EEBD44FB1555991C153BD1CF53710712B33091D6964EAA80",
+      "path": "src\\FreshFood.Reposistory\\Repository\\IMyOrdersRepository.cs"
+    },
+    {
+      "sha256": "44799C39B65527C4FA0324CF9F7A6A003EB92C0489A4768E58DC9484313E4E40",
+      "path": "src\\FreshFood.Reposistory\\Repository\\IOrderLifecycleRepository.cs"
+    },
+    {
+      "sha256": "3D7E1FCB149630C138EA9F9D2CBA4FF2D144EBC145DA35D79A30F64C6781533B",
+      "path": "src\\FreshFood.Reposistory\\Repository\\IProfileRepository.cs"
+    },
+    {
+      "sha256": "5E010BC337029E326F6A3EE8BC9CE21D0A8733CFE24E6BEF639A6C7655BB9370",
+      "path": "src\\FreshFood.Reposistory\\Repository\\IRepositorySession.cs"
+    },
+    {
+      "sha256": "AE21729095EBAFAD1AB72A286E22D018F05B9674461C62B117CA392BF172859A",
+      "path": "src\\FreshFood.Reposistory\\Repository\\IUnitOfWork.cs"
+    },
+    {
+      "sha256": "D1FA7F860C4478ED07DF0C07A8DE0CC56463E4DBA7462C045145B77EBEBFDE3A",
+      "path": "src\\FreshFood.Reposistory\\Repository\\OrderLifecycleRecords.cs"
+    },
+    {
+      "sha256": "5AF7DCD683193227E4A228596A5E46EF4CE8848B213A200A4D37E0DE8F50C0BE",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\CartRepository.cs"
+    },
+    {
+      "sha256": "B1F7018ACEB5C6FC425101936C3467C18169C53825CF82D6E4976032046C9E09",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\CatalogRepository.cs"
+    },
+    {
+      "sha256": "C0DBB439EB7FD5909C89F6F24EA8B9B7C373FFCCFC4F6C15D5702B0E963E7E64",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\CheckoutRepository.cs"
+    },
+    {
+      "sha256": "F68FEAC7D3DCC96D84E30BDC414B2766E54D26DA69100805ACB127E4569EF091",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\Errors.cs"
+    },
+    {
+      "sha256": "BA815BECE54B656509A1674DEEB26CCC305B0898B18938721A7F3423BE2AEA6A",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\MyOrdersRepository.cs"
+    },
+    {
+      "sha256": "67C8E8CCDAE64D747B9C987275E9C5B7876405EB15B0A1A8810B53CD791C50E0",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\OrderLifecycleRepository.cs"
+    },
+    {
+      "sha256": "E2A7A0C52F4FD7F9967A0C2CB354D7F2C9B96F8A7E14E5D2D068465E4B638BBE",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\PostgreSqlSession.cs"
+    },
+    {
+      "sha256": "B533D0163EF33E722566ADA342C27AD1FECC7643ABA3BB3E8B9E52A4377DF409",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\ProfileRepository.cs"
+    },
+    {
+      "sha256": "C1DC4284223FAB95FD179520C0B813A9E5C103514FD85C02E0F47CF22C54B232",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\SqlRepository.cs"
+    },
+    {
+      "sha256": "5F8AD7EF35BB75E14DC91B9DB3B43A1399EF8076C5835E3751330CCC6BAB2952",
+      "path": "src\\FreshFood.Reposistory\\Repository\\Implements\\UnitOfWork.cs"
+    }
+  ],
+  "projectKey": "huectm_SE-Lifecycle-Agent",
+  "scannerVersion": "12.0.0",
+  "qualityGate": "ERROR",
+  "analysisId": "af077057-bbb6-4582-88a8-8b5300225c8f",
+  "dashboard": "https://sonarcloud.io/dashboard?id=huectm_SE-Lifecycle-Agent",
+  "date": "2026-11-04",
+  "serverVersion": "8.0.0.115444",
+  "testExitCode": 0,
+  "approved_fix": "All remaining Sonar issues",
+  "tests_passed": 67
+}

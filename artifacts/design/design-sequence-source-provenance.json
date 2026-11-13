@@ -1,0 +1,7 @@
+{
+  "artifacts/design/detailed/detailed-class-model.json": "0e8045e308cbfd23a18e906fe28833f68cac7582a5acf3932b5782aac765a6c9",
+  "artifacts/requirements/customer-use-case-descriptions.md": "887d62642ef227ff789d5469313d37547503325d71ca55099d4b65ef0a765dc8",
+  "artifacts/requirements/reviews/order-payment-return-use-case-review.md": "0d8c70f896ad9c39570cb9fc40708a10263ee33b42cb1eaf3c7f59ec113a20b9",
+  "artifacts/analysis/sequence-traceability.csv": "57583342b914d45cd9d8533a67d947d12edfbfb30ad9abc471595bb33be49daf",
+  "templates/Template_Requirements_Analysis_Design_Specification.docx": "a06eddddd44e98b8aefc476d60134ae48ecb215ef31b800fbb1b2b50f2c91057"
+}

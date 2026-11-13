@@ -1,0 +1,9 @@
+{
+  "status": "Verified",
+  "defect": "UT-DEF-001",
+  "case": "UTM-087-TC003",
+  "result": "Passed",
+  "evidence": "final/final.trx",
+  "fixtureFailuresRetested": true,
+  "releaseGatePassed": false
+}

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="259a0f38-7c04-4ac9-b3b8-2c81cb4e3e1f" name="huect@LAPTOP-6SN65NCS 2026-11-04 10:40:11" runUser="LAPTOP-6SN65NCS\huect" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-04T10:40:11.5359916+07:00" queuing="2026-11-04T10:40:11.5359921+07:00" start="2026-11-04T10:40:08.5341107+07:00" finish="2026-11-04T10:40:11.5433480+07:00" />
+  <TestSettings name="default" id="6672b65c-329b-4582-88b3-16439cb9b10b">
+    <Deployment runDeploymentRoot="huect_LAPTOP-6SN65NCS_2026-11-04_10_40_11" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="a0e62074-53f2-4994-8b64-8a4dd62fae6f" testId="e849441c-430a-15c2-ebc6-b3e750e6baaf" testName="FreshFood.Api.Tests.CurrentCustomerTests.NewGuestCookieAlwaysRequiresHttps(scheme: &quot;http&quot;)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0006295" startTime="2026-11-04T10:40:11.4529986+07:00" endTime="2026-11-04T10:40:11.4530847+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a0e62074-53f2-4994-8b64-8a4dd62fae6f" />
+    <UnitTestResult executionId="0a2cb147-5aae-4c34-be1d-5f90e9535bdd" testId="317b8ae2-6402-fbf0-2ec6-f40ffb8bfa62" testName="FreshFood.Api.Tests.CurrentCustomerTests.NewGuestCookieAlwaysRequiresHttps(scheme: &quot;https&quot;)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0512084" startTime="2026-11-04T10:40:11.4095791+07:00" endTime="2026-11-04T10:40:11.4416934+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a2cb147-5aae-4c34-be1d-5f90e9535bdd" />
+    <UnitTestResult executionId="fa1141df-214e-416d-a170-3bc95b012fce" testId="e80716ae-e71a-5932-7877-83f33631d555" testName="FreshFood.Api.Tests.CurrentCustomerTests.GuestIdentityIsReusedOnlyWhenCookieIsValid(tampered: True)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0052244" startTime="2026-11-04T10:40:11.4544575+07:00" endTime="2026-11-04T10:40:11.4544985+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa1141df-214e-416d-a170-3bc95b012fce" />
+    <UnitTestResult executionId="aace646d-61c4-49a1-83e9-2d1ae1d500e4" testId="ab4d0d21-d2c0-4ae9-9838-2549758fbddc" testName="FreshFood.Api.Tests.CurrentCustomerTests.GuestIdentityIsReusedOnlyWhenCookieIsValid(tampered: False)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0021827" startTime="2026-11-04T10:40:11.4545912+07:00" endTime="2026-11-04T10:40:11.4546218+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aace646d-61c4-49a1-83e9-2d1ae1d500e4" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FreshFood.Api.Tests.CurrentCustomerTests.NewGuestCookieAlwaysRequiresHttps(scheme: &quot;http&quot;)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\release\net10.0\freshfood.api.tests.dll" id="e849441c-430a-15c2-ebc6-b3e750e6baaf">
+      <Execution id="a0e62074-53f2-4994-8b64-8a4dd62fae6f" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Release\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.CurrentCustomerTests" name="NewGuestCookieAlwaysRequiresHttps" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.CurrentCustomerTests.GuestIdentityIsReusedOnlyWhenCookieIsValid(tampered: True)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\release\net10.0\freshfood.api.tests.dll" id="e80716ae-e71a-5932-7877-83f33631d555">
+      <Execution id="fa1141df-214e-416d-a170-3bc95b012fce" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Release\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.CurrentCustomerTests" name="GuestIdentityIsReusedOnlyWhenCookieIsValid" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.CurrentCustomerTests.NewGuestCookieAlwaysRequiresHttps(scheme: &quot;https&quot;)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\release\net10.0\freshfood.api.tests.dll" id="317b8ae2-6402-fbf0-2ec6-f40ffb8bfa62">
+      <Execution id="0a2cb147-5aae-4c34-be1d-5f90e9535bdd" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Release\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.CurrentCustomerTests" name="NewGuestCookieAlwaysRequiresHttps" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Api.Tests.CurrentCustomerTests.GuestIdentityIsReusedOnlyWhenCookieIsValid(tampered: False)" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\release\net10.0\freshfood.api.tests.dll" id="ab4d0d21-d2c0-4ae9-9838-2549758fbddc">
+      <Execution id="aace646d-61c4-49a1-83e9-2d1ae1d500e4" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Release\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.CurrentCustomerTests" name="GuestIdentityIsReusedOnlyWhenCookieIsValid" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="e849441c-430a-15c2-ebc6-b3e750e6baaf" executionId="a0e62074-53f2-4994-8b64-8a4dd62fae6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="317b8ae2-6402-fbf0-2ec6-f40ffb8bfa62" executionId="0a2cb147-5aae-4c34-be1d-5f90e9535bdd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e80716ae-e71a-5932-7877-83f33631d555" executionId="fa1141df-214e-416d-a170-3bc95b012fce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ab4d0d21-d2c0-4ae9-9838-2549758fbddc" executionId="aace646d-61c4-49a1-83e9-2d1ae1d500e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="4" executed="4" passed="4" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:02.15]   Discovering: FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:02.22]   Discovered:  FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:02.26]   Starting:    FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:02.36]   Finished:    FreshFood.Api.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

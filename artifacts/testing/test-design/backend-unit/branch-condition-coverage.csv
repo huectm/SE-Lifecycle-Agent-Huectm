@@ -1,0 +1,255 @@
+﻿Method,Decision,Kind,Line,Expression,Atomic conditions,Required outcomes,Planned test cases,State
+UTM-001,UTM-001-D01,coalesce,10,"configuration.GetConnectionString(""FreshFood"")","configuration.GetConnectionString(""FreshFood"")",Null; Non-null,UTM-001-TC004; UTM-001-TC005,Planned; feasibility review required
+UTM-032,UTM-032-D01,coalesce,9,batches,batches,Null; Non-null,UTM-032-TC004; UTM-032-TC005,Planned; feasibility review required
+UTM-032,UTM-032-D02,conditional,9,initial,initial,True; False,UTM-032-TC006; UTM-032-TC007,Planned; feasibility review required
+UTM-035,UTM-035-D01,foreach,11,cart.Items,cart.Items,Empty; One item; Multiple items,UTM-035-TC004; UTM-035-TC005; UTM-035-TC006,Planned; feasibility review required
+UTM-035,UTM-035-D02,predicate,13,b.ProductId == item.ProductId,b.ProductId == item.ProductId,True; False,UTM-035-TC007; UTM-035-TC008,Planned; feasibility review required
+UTM-035,UTM-035-D03,conditional,14,products.Any(p => p.ProductId == item.ProductId && p.IsActive),products.Any(p => p.ProductId == item.ProductId && p.IsActive),True; False,UTM-035-TC009; UTM-035-TC010,Planned; feasibility review required
+UTM-035,UTM-035-D04,predicate,14,p.ProductId == item.ProductId && p.IsActive,p.ProductId == item.ProductId; p.IsActive,True; False,UTM-035-TC011; UTM-035-TC012; UTM-035-TC013,Planned; feasibility review required
+UTM-035,UTM-035-D05,conditional,15,stock.Count > 0,stock.Count > 0,True; False,UTM-035-TC014; UTM-035-TC015,Planned; feasibility review required
+UTM-035,UTM-035-D06,if,18,item.Quantity > available,item.Quantity > available,True; False,UTM-035-TC016; UTM-035-TC017,Planned; feasibility review required
+UTM-037,UTM-037-D01,guard,25,request.Quantity > 0,request.Quantity > 0,True; False,UTM-037-TC004; UTM-037-TC005,Planned; feasibility review required
+UTM-037,UTM-037-D02,guard,29,products.Any(p => p.IsActive),products.Any(p => p.IsActive),True; False,UTM-037-TC006; UTM-037-TC007,Planned; feasibility review required
+UTM-037,UTM-037-D03,predicate,29,p.IsActive,p.IsActive,True; False,UTM-037-TC008; UTM-037-TC009,Planned; feasibility review required
+UTM-037,UTM-037-D04,guard,32,available > 0,available > 0,True; False,UTM-037-TC010; UTM-037-TC011,Planned; feasibility review required
+UTM-037,UTM-037-D05,if,34,actual < request.Quantity,actual < request.Quantity,True; False,UTM-037-TC012; UTM-037-TC013,Planned; feasibility review required
+UTM-040,UTM-040-D01,predicate,8,p.IsActive,p.IsActive,True; False,UTM-040-TC004; UTM-040-TC005,Planned; feasibility review required
+UTM-040,UTM-040-D02,predicate,10,b.ProductId == p.ProductId,b.ProductId == p.ProductId,True; False,UTM-040-TC006; UTM-040-TC007,Planned; feasibility review required
+UTM-040,UTM-040-D03,conditional,17,stock.Count > 0,stock.Count > 0,True; False,UTM-040-TC008; UTM-040-TC009,Planned; feasibility review required
+UTM-041,UTM-041-D01,conditional,23,query.CategoryId is null,query.CategoryId is null,True; False,UTM-041-TC004; UTM-041-TC005,Planned; feasibility review required
+UTM-041,UTM-041-D02,coalesce,24,query.ClearanceOnly,query.ClearanceOnly,Null; Non-null,UTM-041-TC006; UTM-041-TC007,Planned; feasibility review required
+UTM-041,UTM-041-D03,conditional,29,products.Count > 0,products.Count > 0,True; False,UTM-041-TC008; UTM-041-TC009,Planned; feasibility review required
+UTM-044,UTM-044-D01,if,37,p is null || !p.IsActive,p is null; !p.IsActive,True; False,UTM-044-TC004; UTM-044-TC005; UTM-044-TC006,Planned; feasibility review required
+UTM-048,UTM-048-D01,guard,15,cart.Items.Count > 0,cart.Items.Count > 0,True; False,UTM-048-TC004; UTM-048-TC005,Planned; feasibility review required
+UTM-049,UTM-049-D01,foreach,24,cart.Items,cart.Items,Empty; One item; Multiple items,UTM-049-TC006; UTM-049-TC007; UTM-049-TC008,Planned; feasibility review required
+UTM-049,UTM-049-D02,guard,26,item.Quantity > 0,item.Quantity > 0,True; False,UTM-049-TC009; UTM-049-TC010,Planned; feasibility review required
+UTM-049,UTM-049-D03,foreach,27,batches.Where(b => b.ProductId == item.ProductId),batches.Where(b => b.ProductId == item.ProductId),Empty; One item; Multiple items,UTM-049-TC011; UTM-049-TC012; UTM-049-TC013,Planned; feasibility review required
+UTM-049,UTM-049-D04,predicate,27,b.ProductId == item.ProductId,b.ProductId == item.ProductId,True; False,UTM-049-TC014; UTM-049-TC015,Planned; feasibility review required
+UTM-049,UTM-049-D05,if,29,qty == 0,qty == 0,True; False,UTM-049-TC016; UTM-049-TC017,Planned; feasibility review required
+UTM-049,UTM-049-D06,if,32,remaining == 0,remaining == 0,True; False,UTM-049-TC018; UTM-049-TC019,Planned; feasibility review required
+UTM-049,UTM-049-D07,guard,34,remaining == 0,remaining == 0,True; False,UTM-049-TC020; UTM-049-TC021,Planned; feasibility review required
+UTM-052,UTM-052-D01,for,60,i < text.Length,i < text.Length,True; False,UTM-052-TC005; UTM-052-TC006,Planned; feasibility review required
+UTM-052,UTM-052-D02,switch-arm,63,"'""' => ""\\\""""",,"'""'",UTM-052-TC007,Planned; feasibility review required
+UTM-052,UTM-052-D03,switch-arm,63,"'\\' => ""\\\\""",,'\\',UTM-052-TC008,Planned; feasibility review required
+UTM-052,UTM-052-D04,switch-arm,63,"'\b' => ""\\b""",,'\b',UTM-052-TC009,Planned; feasibility review required
+UTM-052,UTM-052-D05,switch-arm,63,"'\f' => ""\\f""",,'\f',UTM-052-TC010,Planned; feasibility review required
+UTM-052,UTM-052-D06,switch-arm,63,"'\n' => ""\\n""",,'\n',UTM-052-TC011,Planned; feasibility review required
+UTM-052,UTM-052-D07,switch-arm,63,"'\r' => ""\\r""",,'\r',UTM-052-TC012,Planned; feasibility review required
+UTM-052,UTM-052-D08,switch-arm,63,"'\t' => ""\\t""",,'\t',UTM-052-TC013,Planned; feasibility review required
+UTM-052,UTM-052-D09,switch-arm,63,_ => null,,_,UTM-052-TC014,Planned; feasibility review required
+UTM-052,UTM-052-D10,if,64,escape is not null,escape is not null,True; False,UTM-052-TC015; UTM-052-TC016,Planned; feasibility review required
+UTM-052,UTM-052-D11,if,65,char.IsHighSurrogate(c) && i + 1 < text.Length && char.IsLowSurrogate(text[i + 1]),char.IsHighSurrogate(c); i + 1 < text.Length; char.IsLowSurrogate(text[i + 1]),True; False,UTM-052-TC017; UTM-052-TC018; UTM-052-TC019; UTM-052-TC020,Planned; feasibility review required
+UTM-052,UTM-052-D12,if,66,c < 32 || char.IsSurrogate(c),c < 32; char.IsSurrogate(c),True; False,UTM-052-TC021; UTM-052-TC022; UTM-052-TC023,Planned; feasibility review required
+UTM-053,UTM-053-D01,guard,73,Enum.IsDefined(request.PaymentMethod),Enum.IsDefined(request.PaymentMethod),True; False,UTM-053-TC009; UTM-053-TC010,Planned; feasibility review required
+UTM-053,UTM-053-D02,if,76,request.PaymentMethod == PaymentMethod.VietQr,request.PaymentMethod == PaymentMethod.VietQr,True; False,UTM-053-TC011; UTM-053-TC012,Planned; feasibility review required
+UTM-053,UTM-053-D03,catch,78,catch (Exception e) when (e is not OperationCanceledException) { preparationError = e; },,Exception,UTM-053-TC013,Planned; feasibility review required
+UTM-053,UTM-053-D04,catch-filter,78,e is not OperationCanceledException,e is not OperationCanceledException,True; False,UTM-053-TC014; UTM-053-TC015,Planned; feasibility review required
+UTM-053,UTM-053-D05,if,82,claim.Replay,claim.Replay,True; False,UTM-053-TC016; UTM-053-TC017,Planned; feasibility review required
+UTM-053,UTM-053-D06,if,83,preparationError is not null,preparationError is not null,True; False,UTM-053-TC018; UTM-053-TC019,Planned; feasibility review required
+UTM-053,UTM-053-D07,guard,85,cart.Items.Count > 0,cart.Items.Count > 0,True; False,UTM-053-TC020; UTM-053-TC021,Planned; feasibility review required
+UTM-053,UTM-053-D08,guard,87,address.StreetAddress == p.Address.StreetAddress && address.Latitude == p.Address.Latitude && address.Longitude == p.Address.Longitude,address.StreetAddress == p.Address.StreetAddress; address.Latitude == p.Address.Latitude; address.Longitude == p.Address.Longitude,True; False,UTM-053-TC022; UTM-053-TC023; UTM-053-TC024; UTM-053-TC025,Planned; feasibility review required
+UTM-053,UTM-053-D09,if,111,!result.Replay,!result.Replay,True; False,UTM-053-TC026; UTM-053-TC027,Planned; feasibility review required
+UTM-053,UTM-053-D10,catch,113,"catch (Exception e) { logger.LogWarning(e, ""Notification failed after committed order {OrderId}"", result.Confirmation.OrderId); }",,Exception,UTM-053-TC028,Planned; feasibility review required
+UTM-055,UTM-055-D01,guard,121,!string.IsNullOrEmpty(verified.ProviderReference) && !string.IsNullOrEmpty(verified.CheckoutReference),!string.IsNullOrEmpty(verified.ProviderReference); !string.IsNullOrEmpty(verified.CheckoutReference),True; False,UTM-055-TC004; UTM-055-TC005; UTM-055-TC006,Planned; feasibility review required
+UTM-057,UTM-057-D01,null-access,9,accessor.HttpContext,accessor.HttpContext,Null; Non-null,UTM-057-TC005; UTM-057-TC006,Planned; feasibility review required
+UTM-057,UTM-057-D02,conditional,10,user?.Identity?.IsAuthenticated == true,user?.Identity?.IsAuthenticated == true,True; False,UTM-057-TC007; UTM-057-TC008,Planned; feasibility review required
+UTM-057,UTM-057-D03,null-access,10,user,user,Null; Non-null,UTM-057-TC009; UTM-057-TC010,Planned; feasibility review required
+UTM-057,UTM-057-D04,null-access,10,.Identity,.Identity,Null; Non-null,UTM-057-TC011; UTM-057-TC012,Planned; feasibility review required
+UTM-057,UTM-057-D05,if,11,id is null,id is null,True; False,UTM-057-TC013; UTM-057-TC014,Planned; feasibility review required
+UTM-058,UTM-058-D01,coalesce,16,accessor.HttpContext,accessor.HttpContext,Null; Non-null,UTM-058-TC006; UTM-058-TC007,Planned; feasibility review required
+UTM-058,UTM-058-D02,if,17,context.User.Identity?.IsAuthenticated == true,context.User.Identity?.IsAuthenticated == true,True; False,UTM-058-TC008; UTM-058-TC009,Planned; feasibility review required
+UTM-058,UTM-058-D03,null-access,17,context.User.Identity,context.User.Identity,Null; Non-null,UTM-058-TC010; UTM-058-TC011,Planned; feasibility review required
+UTM-058,UTM-058-D04,if,20,"context.Request.Cookies.TryGetValue(""FreshFood.GuestCart"", out var cookie)","context.Request.Cookies.TryGetValue(""FreshFood.GuestCart"", out var cookie)",True; False,UTM-058-TC012; UTM-058-TC013,Planned; feasibility review required
+UTM-058,UTM-058-D05,catch,21,catch (System.Security.Cryptography.CryptographicException) { /* Invalid cookies never become cart identities. */ },,System.Security.Cryptography.CryptographicException,UTM-058-TC014,Planned; feasibility review required
+UTM-058,UTM-058-D06,if,22,session is null,session is null,True; False,UTM-058-TC015; UTM-058-TC016,Planned; feasibility review required
+UTM-073,UTM-073-D01,coalesce,10,"(await myOrdersRepository.FindOwnedAsync(customer, signal)).SingleOrDefault(o => o.OrderId == orderId)","(await myOrdersRepository.FindOwnedAsync(customer, signal)).SingleOrDefault(o => o.OrderId == orderId)",Null; Non-null,UTM-073-TC008; UTM-073-TC009,Planned; feasibility review required
+UTM-073,UTM-073-D02,predicate,10,o.OrderId == orderId,o.OrderId == orderId,True; False,UTM-073-TC010; UTM-073-TC011,Planned; feasibility review required
+UTM-073,UTM-073-D03,conditional,18,receipt is null && refund is null,receipt is null; refund is null,True; False,UTM-073-TC012; UTM-073-TC013; UTM-073-TC014,Planned; feasibility review required
+UTM-073,UTM-073-D04,null-access,20,order.Failure,order.Failure,Null; Non-null,UTM-073-TC015; UTM-073-TC016,Planned; feasibility review required
+UTM-073,UTM-073-D05,null-access,21,receipt,receipt,Null; Non-null,UTM-073-TC017; UTM-073-TC018,Planned; feasibility review required
+UTM-073,UTM-073-D06,null-access,22,refund,refund,Null; Non-null,UTM-073-TC019; UTM-073-TC020,Planned; feasibility review required
+UTM-073,UTM-073-D07,coalesce,23,refund?.GoodsAmount.ToWire(),refund?.GoodsAmount.ToWire(),Null; Non-null,UTM-073-TC021; UTM-073-TC022,Planned; feasibility review required
+UTM-073,UTM-073-D08,null-access,23,refund,refund,Null; Non-null,UTM-073-TC023; UTM-073-TC024,Planned; feasibility review required
+UTM-073,UTM-073-D09,coalesce,24,refund?.ShippingAmount.ToWire(),refund?.ShippingAmount.ToWire(),Null; Non-null,UTM-073-TC025; UTM-073-TC026,Planned; feasibility review required
+UTM-073,UTM-073-D10,null-access,24,refund,refund,Null; Non-null,UTM-073-TC027; UTM-073-TC028,Planned; feasibility review required
+UTM-074,UTM-074-D01,if,35,order.OrderStatus == OrderStatus.Cancelled,order.OrderStatus == OrderStatus.Cancelled,True; False,UTM-074-TC010; UTM-074-TC011,Planned; feasibility review required
+UTM-074,UTM-074-D02,catch,37,"catch (DomainException e) when (e.Code is ""STATE_EVENT_NOT_ALLOWED"" or ""STATE_GUARD_REJECTED"") { throw new DomainException(""CANCELLATION_NOT_ALLOWED"", 409); }",,DomainException,UTM-074-TC012,Planned; feasibility review required
+UTM-074,UTM-074-D03,catch-filter,37,"e.Code is ""STATE_EVENT_NOT_ALLOWED"" or ""STATE_GUARD_REJECTED""","e.Code is ""STATE_EVENT_NOT_ALLOWED""; e.Code is ""STATE_GUARD_REJECTED""",True; False,UTM-074-TC013; UTM-074-TC014; UTM-074-TC015,Planned; feasibility review required
+UTM-074,UTM-074-D04,if,39,applied,applied,True; False,UTM-074-TC016; UTM-074-TC017,Planned; feasibility review required
+UTM-074,UTM-074-D05,catch,41,"catch (Exception e) { logger.LogWarning(e, ""Notification failed after committed cancellation {OrderId}"", request.OrderId); }",,Exception,UTM-074-TC018,Planned; feasibility review required
+UTM-074,UTM-074-D06,conditional,42,applied,applied,True; False,UTM-074-TC019; UTM-074-TC020,Planned; feasibility review required
+UTM-075,UTM-075-D01,foreach,52,order.Details.GroupBy(l => l.ProductId),order.Details.GroupBy(l => l.ProductId),Empty; One item; Multiple items,UTM-075-TC006; UTM-075-TC007; UTM-075-TC008,Planned; feasibility review required
+UTM-075,UTM-075-D02,predicate,54,b.ProductId == group.Key,b.ProductId == group.Key,True; False,UTM-075-TC009; UTM-075-TC010,Planned; feasibility review required
+UTM-075,UTM-075-D03,if,55,available == 0,available == 0,True; False,UTM-075-TC011; UTM-075-TC012,Planned; feasibility review required
+UTM-075,UTM-075-D04,if,58,qty < wanted,qty < wanted,True; False,UTM-075-TC013; UTM-075-TC014,Planned; feasibility review required
+UTM-076,UTM-076-D01,guard,66,request.Rating is >= 1 and <= 5,request.Rating is >= 1; request.Rating is <= 5,True; False,UTM-076-TC010; UTM-076-TC011; UTM-076-TC012,Planned; feasibility review required
+UTM-076,UTM-076-D02,guard,70,order.OrderStatus == OrderStatus.Delivered,order.OrderStatus == OrderStatus.Delivered,True; False,UTM-076-TC013; UTM-076-TC014,Planned; feasibility review required
+UTM-076,UTM-076-D03,guard,71,"await myOrdersRepository.SaveReviewOnceAsync(new() { OrderId = request.OrderId, CustomerId = customer, Rating = request.Rating, Comment = request.Comment ?? """" }, ct)","await myOrdersRepository.SaveReviewOnceAsync(new() { OrderId = request.OrderId, CustomerId = customer, Rating = request.Rating, Comment = request.Comment ?? """" }, ct)",True; False,UTM-076-TC015; UTM-076-TC016,Planned; feasibility review required
+UTM-076,UTM-076-D04,coalesce,71,request.Comment,request.Comment,Null; Non-null,UTM-076-TC017; UTM-076-TC018,Planned; feasibility review required
+UTM-080,UTM-080-D01,if,16,rows.Select(r => r.Id).Distinct().Count() != rows.Length,rows.Select(r => r.Id).Distinct().Count() != rows.Length,True; False,UTM-080-TC005; UTM-080-TC006,Planned; feasibility review required
+UTM-082,UTM-082-D01,conditional,20,snapshot is null,snapshot is null,True; False,UTM-082-TC004; UTM-082-TC005,Planned; feasibility review required
+UTM-083,UTM-083-D01,switch-arm,29,"""fulfillment"" => s.FulfillmentCompleted ? ""final_"" + Canonical(s.Order.OrderStatus.ToString())
+            : s.WorkflowNode is ""initial"" or ""payment_choice"" ? s.WorkflowNode : Canonical(s.Order.OrderStatus.ToString())",,"""fulfillment""",UTM-083-TC004,Planned; feasibility review required
+UTM-083,UTM-083-D02,switch-arm,31,"""payment"" => s.Initial && !s.PaymentInitialized ? ""pay_initial"" : Canonical(s.Order.PaymentStatus.ToString())",,"""payment""",UTM-083-TC005,Planned; feasibility review required
+UTM-083,UTM-083-D03,switch-arm,32,"_ => ""refund_initial""",,_,UTM-083-TC006,Planned; feasibility review required
+UTM-083,UTM-083-D04,conditional,29,s.FulfillmentCompleted,s.FulfillmentCompleted,True; False,UTM-083-TC007; UTM-083-TC008,Planned; feasibility review required
+UTM-083,UTM-083-D05,conditional,30,"s.WorkflowNode is ""initial"" or ""payment_choice""","s.WorkflowNode is ""initial""; s.WorkflowNode is ""payment_choice""",True; False,UTM-083-TC009; UTM-083-TC010; UTM-083-TC011,Planned; feasibility review required
+UTM-083,UTM-083-D06,conditional,31,s.Initial && !s.PaymentInitialized,s.Initial; !s.PaymentInitialized,True; False,UTM-083-TC012; UTM-083-TC013; UTM-083-TC014,Planned; feasibility review required
+UTM-084,UTM-084-D01,switch-arm,36,"""always"" => true",,"""always""",UTM-084-TC004,Planned; feasibility review required
+UTM-084,UTM-084-D02,switch-arm,37,"""unpaid"" => !s.VerifiedPayment",,"""unpaid""",UTM-084-TC005,Planned; feasibility review required
+UTM-084,UTM-084-D03,switch-arm,38,"""paid"" => s.VerifiedPayment",,"""paid""",UTM-084-TC006,Planned; feasibility review required
+UTM-084,UTM-084-D04,switch-arm,39,"""initialPayment"" => s.Order.OrderStatus is OrderStatus.PendingUnpaid or OrderStatus.PendingPaid",,"""initialPayment""",UTM-084-TC007,Planned; feasibility review required
+UTM-084,UTM-084-D05,switch-arm,40,"""ownedCustomer"" => s.ActorId == s.CustomerId && s.Order.CustomerId == s.CustomerId",,"""ownedCustomer""",UTM-084-TC008,Planned; feasibility review required
+UTM-084,UTM-084-D06,switch-arm,41,"""plannedStock"" => s.ActorId == s.CustomerId && s.Order.Details.Count > 0 && s.Order.Details.All(l => l.Quantity > 0)
+            && s.Order.Details.GroupBy(l => l.BatchId).All(g => s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock))",,"""plannedStock""",UTM-084-TC009,Planned; feasibility review required
+UTM-084,UTM-084-D07,switch-arm,43,_ => false,,_,UTM-084-TC010,Planned; feasibility review required
+UTM-084,UTM-084-D08,predicate,41,l.Quantity > 0,l.Quantity > 0,True; False,UTM-084-TC011; UTM-084-TC012,Planned; feasibility review required
+UTM-084,UTM-084-D09,predicate,42,s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock),s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock),True; False,UTM-084-TC013; UTM-084-TC014,Planned; feasibility review required
+UTM-084,UTM-084-D10,predicate,42,b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock,b.BatchId == g.Key; g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock,True; False,UTM-084-TC015; UTM-084-TC016; UTM-084-TC017,Planned; feasibility review required
+UTM-084,UTM-084-D11,boolean-return,34,"guard switch
+    {
+        ""always"" => true,
+        ""unpaid"" => !s.VerifiedPayment,
+        ""paid"" => s.VerifiedPayment,
+        ""initialPayment"" => s.Order.OrderStatus is OrderStatus.PendingUnpaid or OrderStatus.PendingPaid,
+        ""ownedCustomer"" => s.ActorId == s.CustomerId && s.Order.CustomerId == s.CustomerId,
+        ""plannedStock"" => s.ActorId == s.CustomerId && s.Order.Details.Count > 0 && s.Order.Details.All(l => l.Quantity > 0)
+            && s.Order.Details.GroupBy(l => l.BatchId).All(g => s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock)),
+        _ => false
+    }","guard switch
+    {
+        ""always"" => true,
+        ""unpaid"" => !s.VerifiedPayment,
+        ""paid"" => s.VerifiedPayment,
+        ""initialPayment"" => s.Order.OrderStatus is OrderStatus.PendingUnpaid or OrderStatus.PendingPaid,
+        ""ownedCustomer"" => s.ActorId == s.CustomerId && s.Order.CustomerId == s.CustomerId,
+        ""plannedStock"" => s.ActorId == s.CustomerId && s.Order.Details.Count > 0 && s.Order.Details.All(l => l.Quantity > 0)
+            && s.Order.Details.GroupBy(l => l.BatchId).All(g => s.Batches.Any(b => b.BatchId == g.Key && g.Sum(l => l.Quantity) <= b.CurrentStock - b.ReservedStock)),
+        _ => false
+    }",True; False,UTM-084-TC018; UTM-084-TC019,Planned; feasibility review required
+UTM-085,UTM-085-D01,switch-case,49,"case ""accept"":",,"case ""accept"":",UTM-085-TC004,Planned; feasibility review required
+UTM-085,UTM-085-D02,switch-case,50,"case ""enterInitial"":",,"case ""enterInitial"":",UTM-085-TC005,Planned; feasibility review required
+UTM-085,UTM-085-D03,switch-case,51,"case ""initializePayment"":",,"case ""initializePayment"":",UTM-085-TC006,Planned; feasibility review required
+UTM-085,UTM-085-D04,switch-case,52,"case ""completeFulfillment"":",,"case ""completeFulfillment"":",UTM-085-TC007,Planned; feasibility review required
+UTM-085,UTM-085-D05,switch-case,53,"case ""cancel"":",,"case ""cancel"":",UTM-085-TC008,Planned; feasibility review required
+UTM-085,UTM-085-D06,switch-case,69,default:,,default:,UTM-085-TC009,Planned; feasibility review required
+UTM-085,UTM-085-D07,foreach,55,s.Order.Details,s.Order.Details,Empty; One item; Multiple items,UTM-085-TC010; UTM-085-TC011; UTM-085-TC012,Planned; feasibility review required
+UTM-085,UTM-085-D08,coalesce,56,batches.SingleOrDefault(b => b.BatchId == line.BatchId),batches.SingleOrDefault(b => b.BatchId == line.BatchId),Null; Non-null,UTM-085-TC013; UTM-085-TC014,Planned; feasibility review required
+UTM-085,UTM-085-D09,predicate,56,b.BatchId == line.BatchId,b.BatchId == line.BatchId,True; False,UTM-085-TC015; UTM-085-TC016,Planned; feasibility review required
+UTM-085,UTM-085-D10,coalesce,58,message.Reason,message.Reason,Null; Non-null,UTM-085-TC017; UTM-085-TC018,Planned; feasibility review required
+UTM-086,UTM-086-D01,predicate,75,"(region is null || r.Region == region) && r.Source == State(r.Region, s) && r.Events.Contains(message.Event)","region is null; r.Region == region; r.Source == State(r.Region, s); r.Events.Contains(message.Event)",True; False,UTM-086-TC004; UTM-086-TC005; UTM-086-TC006; UTM-086-TC007; UTM-086-TC008; UTM-086-TC009; UTM-086-TC010,Planned; feasibility review required
+UTM-086,UTM-086-D02,if,76,candidates.Count == 0,candidates.Count == 0,True; False,UTM-086-TC011; UTM-086-TC012,Planned; feasibility review required
+UTM-086,UTM-086-D03,if,77,"candidates.Any(r => r.Action == ""deferred"")","candidates.Any(r => r.Action == ""deferred"")",True; False,UTM-086-TC013; UTM-086-TC014,Planned; feasibility review required
+UTM-086,UTM-086-D04,predicate,77,"r.Action == ""deferred""","r.Action == ""deferred""",True; False,UTM-086-TC015; UTM-086-TC016,Planned; feasibility review required
+UTM-086,UTM-086-D05,predicate,78,"Guard(r.Guard, s)","Guard(r.Guard, s)",True; False,UTM-086-TC017; UTM-086-TC018,Planned; feasibility review required
+UTM-086,UTM-086-D06,if,79,selected.Count == 0,selected.Count == 0,True; False,UTM-086-TC019; UTM-086-TC020,Planned; feasibility review required
+UTM-086,UTM-086-D07,if,80,selected.GroupBy(r => r.Region).Any(g => g.Count() != 1),selected.GroupBy(r => r.Region).Any(g => g.Count() != 1),True; False,UTM-086-TC021; UTM-086-TC022,Planned; feasibility review required
+UTM-086,UTM-086-D08,predicate,80,g.Count() != 1,g.Count() != 1,True; False,UTM-086-TC023; UTM-086-TC024,Planned; feasibility review required
+UTM-086,UTM-086-D09,foreach,81,selected,selected,Empty; One item; Multiple items,UTM-086-TC025; UTM-086-TC026; UTM-086-TC027,Planned; feasibility review required
+UTM-086,UTM-086-D10,if,83,"!visited.Add(rule.Region + "":"" + rule.Source + "":"" + message.Event)","!visited.Add(rule.Region + "":"" + rule.Source + "":"" + message.Event)",True; False,UTM-086-TC028; UTM-086-TC029,Planned; feasibility review required
+UTM-086,UTM-086-D11,if,84,"!await repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)","!await repository.RecordEventOnceAsync(message.AggregateId, message.EventId, rule.Id, ct)",True; False,UTM-086-TC030; UTM-086-TC031,Planned; feasibility review required
+UTM-086,UTM-086-D12,foreach,86,rule.FollowUps,rule.FollowUps,Empty; One item; Multiple items,UTM-086-TC032; UTM-086-TC033; UTM-086-TC034,Planned; feasibility review required
+UTM-087,UTM-087-D01,if,91,message.AggregateId != context.AggregateId,message.AggregateId != context.AggregateId,True; False,UTM-087-TC007; UTM-087-TC008,Planned; feasibility review required
+UTM-087,UTM-087-D02,if,92,"string.IsNullOrWhiteSpace(message.Event) || message.Event.StartsWith(""__"", StringComparison.Ordinal)","string.IsNullOrWhiteSpace(message.Event); message.Event.StartsWith(""__"", StringComparison.Ordinal)",True; False,UTM-087-TC009; UTM-087-TC010; UTM-087-TC011,Planned; feasibility review required
+UTM-087,UTM-087-D03,if,93,snapshot is not null && (snapshot.AggregateId != context.AggregateId || snapshot.CustomerId != context.CustomerId),snapshot is not null; snapshot.AggregateId != context.AggregateId; snapshot.CustomerId != context.CustomerId,True; False,UTM-087-TC012; UTM-087-TC013; UTM-087-TC014; UTM-087-TC015,Planned; feasibility review required
+UTM-087,UTM-087-D04,catch,100,catch { snapshot = previous; throw; },,Any exception,UTM-087-TC016,Planned; feasibility review required
+UTM-090,UTM-090-D01,guard,17,"string.IsNullOrEmpty(request.Email) || Regex.IsMatch(request.Email, @""^[^\s@]+@[^\s@]+\.[^\s@]+$"", RegexOptions.None, TimeSpan.FromMilliseconds(100))","string.IsNullOrEmpty(request.Email); Regex.IsMatch(request.Email, @""^[^\s@]+@[^\s@]+\.[^\s@]+$"", RegexOptions.None, TimeSpan.FromMilliseconds(100))",True; False,UTM-090-TC009; UTM-090-TC010; UTM-090-TC011,Planned; feasibility review required
+UTM-090,UTM-090-D02,catch,19,"catch (RegexMatchTimeoutException)
+        {
+            throw new DomainException(""INVALID_EMAIL"");
+        }",,RegexMatchTimeoutException,UTM-090-TC012,Planned; feasibility review required
+UTM-090,UTM-090-D03,conditional,23,string.IsNullOrEmpty(request.Email),string.IsNullOrEmpty(request.Email),True; False,UTM-090-TC013; UTM-090-TC014,Planned; feasibility review required
+UTM-091,UTM-091-D01,guard,31,"Regex.IsMatch(phone, @""^\+?[0-9]{9,15}$"", RegexOptions.None, TimeSpan.FromMilliseconds(100))","Regex.IsMatch(phone, @""^\+?[0-9]{9,15}$"", RegexOptions.None, TimeSpan.FromMilliseconds(100))",True; False,UTM-091-TC010; UTM-091-TC011,Planned; feasibility review required
+UTM-091,UTM-091-D02,catch,33,"catch (RegexMatchTimeoutException)
+        {
+            throw new DomainException(""INVALID_PHONE"");
+        }",,RegexMatchTimeoutException,UTM-091-TC012,Planned; feasibility review required
+UTM-091,UTM-091-D03,guard,38,Math.Abs(geo.Latitude) <= 90 && Math.Abs(geo.Longitude) <= 180,Math.Abs(geo.Latitude) <= 90; Math.Abs(geo.Longitude) <= 180,True; False,UTM-091-TC013; UTM-091-TC014; UTM-091-TC015,Planned; feasibility review required
+UTM-091,UTM-091-D04,if,41,"!string.IsNullOrEmpty(request.AddressId) && !(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == request.AddressId)","!string.IsNullOrEmpty(request.AddressId); !(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == request.AddressId)",True; False,UTM-091-TC016; UTM-091-TC017; UTM-091-TC018,Planned; feasibility review required
+UTM-091,UTM-091-D05,predicate,41,a.AddressId == request.AddressId,a.AddressId == request.AddressId,True; False,UTM-091-TC019; UTM-091-TC020,Planned; feasibility review required
+UTM-091,UTM-091-D06,coalesce,42,request.AddressId,request.AddressId,Null; Non-null,UTM-091-TC021; UTM-091-TC022,Planned; feasibility review required
+UTM-091,UTM-091-D07,coalesce,42,request.IsDefault,request.IsDefault,Null; Non-null,UTM-091-TC023; UTM-091-TC024,Planned; feasibility review required
+UTM-092,UTM-092-D01,coalesce,49,"(await profileRepository.GetAddressesAsync(id, ct)).SingleOrDefault(a => a.AddressId == addressId)","(await profileRepository.GetAddressesAsync(id, ct)).SingleOrDefault(a => a.AddressId == addressId)",Null; Non-null,UTM-092-TC004; UTM-092-TC005,Planned; feasibility review required
+UTM-092,UTM-092-D02,predicate,49,a.AddressId == addressId,a.AddressId == addressId,True; False,UTM-092-TC006; UTM-092-TC007,Planned; feasibility review required
+UTM-093,UTM-093-D01,guard,57,"(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == addressId)","(await profileRepository.GetAddressesAsync(id, ct)).Any(a => a.AddressId == addressId)",True; False,UTM-093-TC005; UTM-093-TC006,Planned; feasibility review required
+UTM-093,UTM-093-D02,predicate,57,a.AddressId == addressId,a.AddressId == addressId,True; False,UTM-093-TC007; UTM-093-TC008,Planned; feasibility review required
+UTM-093,UTM-093-D03,guard,58,"!await profileRepository.HasActiveOrderAsync(id, addressId, ct)","!await profileRepository.HasActiveOrderAsync(id, addressId, ct)",True; False,UTM-093-TC009; UTM-093-TC010,Planned; feasibility review required
+UTM-094,UTM-094-D01,if,5,!test,!test,True; False,UTM-094-TC004; UTM-094-TC005,Planned; feasibility review required
+UTM-095,UTM-095-D01,guard,6,!string.IsNullOrWhiteSpace(value),!string.IsNullOrWhiteSpace(value),True; False,UTM-095-TC004; UTM-095-TC005,Planned; feasibility review required
+UTM-096,UTM-096-D01,guard,7,"long.TryParse(value, out var n) && n > 0","long.TryParse(value, out var n); n > 0",True; False,UTM-096-TC011; UTM-096-TC012; UTM-096-TC013,Planned; feasibility review required
+UTM-097,UTM-097-D01,guard,8,!string.IsNullOrWhiteSpace(value) && value.Length <= 128,!string.IsNullOrWhiteSpace(value); value.Length <= 128,True; False,UTM-097-TC009; UTM-097-TC010; UTM-097-TC011,Planned; feasibility review required
+UTM-098,UTM-098-D01,boolean-return,9,"b.SaleStatus is ""ACTIVE"" or ""DISCOUNTED"" && b.ExpiryDate >= DateOnly.FromDateTime(DateTime.UtcNow) && b.CurrentStock > b.ReservedStock","b.SaleStatus is ""ACTIVE""; b.SaleStatus is ""DISCOUNTED""; b.ExpiryDate >= DateOnly.FromDateTime(DateTime.UtcNow); b.CurrentStock > b.ReservedStock",True; False,UTM-098-TC004; UTM-098-TC005; UTM-098-TC006; UTM-098-TC007; UTM-098-TC008; UTM-098-TC009; UTM-098-TC010,Planned; feasibility review required
+UTM-103,UTM-103-D01,if,7,quantity <= 0 || CurrentStock - ReservedStock < quantity,quantity <= 0; CurrentStock - ReservedStock < quantity,True; False,UTM-103-TC010; UTM-103-TC011; UTM-103-TC012,Planned; feasibility review required
+UTM-104,UTM-104-D01,if,12,quantity <= 0 || ReservedStock < quantity,quantity <= 0; ReservedStock < quantity,True; False,UTM-104-TC010; UTM-104-TC011; UTM-104-TC012,Planned; feasibility review required
+UTM-105,UTM-105-D01,if,20,quantity <= 0,quantity <= 0,True; False,UTM-105-TC004; UTM-105-TC005,Planned; feasibility review required
+UTM-105,UTM-105-D02,predicate,21,i.ProductId == productId,i.ProductId == productId,True; False,UTM-105-TC006; UTM-105-TC007,Planned; feasibility review required
+UTM-105,UTM-105-D03,if,22,item is null,item is null,True; False,UTM-105-TC008; UTM-105-TC009,Planned; feasibility review required
+UTM-106,UTM-106-D01,predicate,25,i.ProductId == productId,i.ProductId == productId,True; False,UTM-106-TC004; UTM-106-TC005,Planned; feasibility review required
+UTM-107,UTM-107-D01,if,31,OrderStatus != expected,OrderStatus != expected,True; False,UTM-107-TC004; UTM-107-TC005,Planned; feasibility review required
+UTM-108,UTM-108-D01,if,36,PaymentStatus != expected,PaymentStatus != expected,True; False,UTM-108-TC004; UTM-108-TC005,Planned; feasibility review required
+UTM-109,UTM-109-D01,if,41,string.IsNullOrWhiteSpace(reason),string.IsNullOrWhiteSpace(reason),True; False,UTM-109-TC004; UTM-109-TC005,Planned; feasibility review required
+UTM-110,UTM-110-D01,if,57,"rate != 0 && (rate < 10 || rate > 50 || decimal.Round(rate, 2) != rate)","rate != 0; rate < 10; rate > 50; decimal.Round(rate, 2) != rate",True; False,UTM-110-TC011; UTM-110-TC012; UTM-110-TC013; UTM-110-TC014; UTM-110-TC015,Planned; feasibility review required
+UTM-110,UTM-110-D02,if,59,decimal.Truncate(amount) != amount,decimal.Truncate(amount) != amount,True; False,UTM-110-TC016; UTM-110-TC017,Planned; feasibility review required
+UTM-111,UTM-111-D01,switch-arm,67,"< 0 or > 10 => throw new DomainException(""OUTSIDE_DELIVERY_AREA"", 422)",,< 0 or > 10,UTM-111-TC012,Planned; feasibility review required
+UTM-111,UTM-111-D02,switch-arm,68,< 1 => new(10000),,< 1,UTM-111-TC013,Planned; feasibility review required
+UTM-111,UTM-111-D03,switch-arm,69,< 3 => new(20000),,< 3,UTM-111-TC014,Planned; feasibility review required
+UTM-111,UTM-111-D04,switch-arm,70,_ => new(30000),,_,UTM-111-TC015,Planned; feasibility review required
+UTM-113,UTM-113-D01,if,9,units < 0 || units > 999999999999999999m || decimal.Truncate(units) != units,units < 0; units > 999999999999999999m; decimal.Truncate(units) != units,True; False,UTM-113-TC010; UTM-113-TC011; UTM-113-TC012; UTM-113-TC013,Planned; feasibility review required
+UTM-118,UTM-118-D01,conditional,21,reader.TokenType == JsonTokenType.String,reader.TokenType == JsonTokenType.String,True; False,UTM-118-TC004; UTM-118-TC005,Planned; feasibility review required
+UTM-133,UTM-133-D01,coalesce,12,"await One<CustomerAddress>(""SELECT * FROM customer_addresses WHERE customer_id=$1 AND address_id=$2"" + Lock, signal, Id(customerId), Id(addressId))","await One<CustomerAddress>(""SELECT * FROM customer_addresses WHERE customer_id=$1 AND address_id=$2"" + Lock, signal, Id(customerId), Id(addressId))",Null; Non-null,UTM-133-TC004; UTM-133-TC005,Planned; feasibility review required
+UTM-135,UTM-135-D01,foreach,21,order.Details,order.Details,Empty; One item; Multiple items,UTM-135-TC004; UTM-135-TC005; UTM-135-TC006,Planned; feasibility review required
+UTM-135,UTM-135-D02,if,22,"(await Rows<BatchInventory>(""UPDATE batch_inventory SET reserved_stock=reserved_stock+$1 WHERE batch_id=$2 AND current_stock-reserved_stock >= $1 RETURNING batch_id"", signal, line.Quantity, Id(line.BatchId))).Count != 1","(await Rows<BatchInventory>(""UPDATE batch_inventory SET reserved_stock=reserved_stock+$1 WHERE batch_id=$2 AND current_stock-reserved_stock >= $1 RETURNING batch_id"", signal, line.Quantity, Id(line.BatchId))).Count != 1",True; False,UTM-135-TC007; UTM-135-TC008,Planned; feasibility review required
+UTM-135,UTM-135-D03,foreach,27,order.Details,order.Details,Empty; One item; Multiple items,UTM-135-TC009; UTM-135-TC010; UTM-135-TC011,Planned; feasibility review required
+UTM-138,UTM-138-D01,coalesce,42,"await One<ClaimRow>(""SELECT * FROM checkout_idempotency WHERE customer_id=$1 AND operation='PlaceOrder' AND idempotency_key=$2 FOR UPDATE"", signal, Id(customerId), key)","await One<ClaimRow>(""SELECT * FROM checkout_idempotency WHERE customer_id=$1 AND operation='PlaceOrder' AND idempotency_key=$2 FOR UPDATE"", signal, Id(customerId), key)",Null; Non-null,UTM-138-TC004; UTM-138-TC005,Planned; feasibility review required
+UTM-138,UTM-138-D02,if,44,saved.RequestHash != requestHash || saved.CheckoutReference != reference,saved.RequestHash != requestHash; saved.CheckoutReference != reference,True; False,UTM-138-TC006; UTM-138-TC007; UTM-138-TC008,Planned; feasibility review required
+UTM-138,UTM-138-D03,if,45,saved.Response is not null,saved.Response is not null,True; False,UTM-138-TC009; UTM-138-TC010,Planned; feasibility review required
+UTM-138,UTM-138-D04,if,46,inserted.Count == 0,inserted.Count == 0,True; False,UTM-138-TC011; UTM-138-TC012,Planned; feasibility review required
+UTM-139,UTM-139-D01,if,53,updated.Count != 1,updated.Count != 1,True; False,UTM-139-TC004; UTM-139-TC005,Planned; feasibility review required
+UTM-143,UTM-143-D01,if,9,"await One<Order>(""SELECT order_id FROM orders WHERE customer_id=$1 AND order_id=$2 FOR UPDATE"", signal, Id(customerId), Id(orderId)) is null","await One<Order>(""SELECT order_id FROM orders WHERE customer_id=$1 AND order_id=$2 FOR UPDATE"", signal, Id(customerId), Id(orderId)) is null",True; False,UTM-143-TC004; UTM-143-TC005,Planned; feasibility review required
+UTM-143,UTM-143-D02,predicate,10,o.OrderId == orderId,o.OrderId == orderId,True; False,UTM-143-TC006; UTM-143-TC007,Planned; feasibility review required
+UTM-145,UTM-145-D01,foreach,16,cart.Items,cart.Items,Empty; One item; Multiple items,UTM-145-TC004; UTM-145-TC005; UTM-145-TC006,Planned; feasibility review required
+UTM-150,UTM-150-D01,coalesce,6,"await One<Order>(""SELECT * FROM orders WHERE order_id=$1 FOR UPDATE"", signal, Id(orderId))","await One<Order>(""SELECT * FROM orders WHERE order_id=$1 FOR UPDATE"", signal, Id(orderId))",Null; Non-null,UTM-150-TC004; UTM-150-TC005,Planned; feasibility review required
+UTM-153,UTM-153-D01,conditional,13,"long.TryParse(aggregateId, out var n) && n > 0","long.TryParse(aggregateId, out var n); n > 0",True; False,UTM-153-TC004; UTM-153-TC005; UTM-153-TC006,Planned; feasibility review required
+UTM-160,UTM-160-D01,foreach,27,batches,batches,Empty; One item; Multiple items,UTM-160-TC004; UTM-160-TC005; UTM-160-TC006,Planned; feasibility review required
+UTM-161,UTM-161-D01,foreach,31,batches,batches,Empty; One item; Multiple items,UTM-161-TC004; UTM-161-TC005; UTM-161-TC006,Planned; feasibility review required
+UTM-162,UTM-162-D01,if,35,string.IsNullOrEmpty(audit.CustomerId),string.IsNullOrEmpty(audit.CustomerId),True; False,UTM-162-TC004; UTM-162-TC005,Planned; feasibility review required
+UTM-162,UTM-162-D02,if,37,rows.Count != 1,rows.Count != 1,True; False,UTM-162-TC006; UTM-162-TC007,Planned; feasibility review required
+UTM-164,UTM-164-D01,boolean-return,10,transaction is not null,transaction is not null,True; False,UTM-164-TC004; UTM-164-TC005,Planned; feasibility review required
+UTM-165,UTM-165-D01,if,13,connection is not null,connection is not null,True; False,UTM-165-TC004; UTM-165-TC005,Planned; feasibility review required
+UTM-165,UTM-165-D02,catch,16,catch { await connection.DisposeAsync(); connection = null; throw; },,Any exception,UTM-165-TC006,Planned; feasibility review required
+UTM-166,UTM-166-D01,if,20,transaction is null,transaction is null,True; False,UTM-166-TC004; UTM-166-TC005,Planned; feasibility review required
+UTM-167,UTM-167-D01,if,26,transaction is not null,transaction is not null,True; False,UTM-167-TC004; UTM-167-TC005,Planned; feasibility review required
+UTM-168,UTM-168-D01,if,31,transaction is not null,transaction is not null,True; False,UTM-168-TC004; UTM-168-TC005,Planned; feasibility review required
+UTM-168,UTM-168-D02,if,32,connection is not null,connection is not null,True; False,UTM-168-TC006; UTM-168-TC007,Planned; feasibility review required
+UTM-169,UTM-169-D01,coalesce,38,connection,connection,Null; Non-null,UTM-169-TC004; UTM-169-TC005,Planned; feasibility review required
+UTM-169,UTM-169-D02,foreach,42,parameters,parameters,Empty; One item; Multiple items,UTM-169-TC006; UTM-169-TC007; UTM-169-TC008,Planned; feasibility review required
+UTM-169,UTM-169-D03,coalesce,44,value,value,Null; Non-null,UTM-169-TC009; UTM-169-TC010,Planned; feasibility review required
+UTM-169,UTM-169-D04,if,45,value is null,value is null,True; False,UTM-169-TC011; UTM-169-TC012,Planned; feasibility review required
+UTM-169,UTM-169-D05,while,52,await reader.ReadAsync(signal),await reader.ReadAsync(signal),True; False,UTM-169-TC013; UTM-169-TC014,Planned; feasibility review required
+UTM-169,UTM-169-D06,for,55,i < reader.FieldCount,i < reader.FieldCount,True; False,UTM-169-TC015; UTM-169-TC016,Planned; feasibility review required
+UTM-169,UTM-169-D07,if,57,"reader.IsDBNull(i) || !props.TryGetValue(reader.GetName(i).Replace(""_"", """"), out var prop) || !prop.CanWrite","reader.IsDBNull(i); !props.TryGetValue(reader.GetName(i).Replace(""_"", """"), out var prop); !prop.CanWrite",True; False,UTM-169-TC017; UTM-169-TC018; UTM-169-TC019; UTM-169-TC020,Planned; feasibility review required
+UTM-169,UTM-169-D08,coalesce,59,Nullable.GetUnderlyingType(prop.PropertyType),Nullable.GetUnderlyingType(prop.PropertyType),Null; Non-null,UTM-169-TC021; UTM-169-TC022,Planned; feasibility review required
+UTM-169,UTM-169-D09,conditional,60,t == typeof(string),t == typeof(string),True; False,UTM-169-TC023; UTM-169-TC024,Planned; feasibility review required
+UTM-169,UTM-169-D10,conditional,61,t == typeof(VndAmount),t == typeof(VndAmount),True; False,UTM-169-TC025; UTM-169-TC026,Planned; feasibility review required
+UTM-169,UTM-169-D11,conditional,62,t == typeof(DateTimeOffset) && value is DateTime dt,t == typeof(DateTimeOffset); value is DateTime dt,True; False,UTM-169-TC027; UTM-169-TC028; UTM-169-TC029,Planned; feasibility review required
+UTM-169,UTM-169-D12,conditional,63,t == typeof(DateOnly) && value is DateOnly date,t == typeof(DateOnly); value is DateOnly date,True; False,UTM-169-TC030; UTM-169-TC031; UTM-169-TC032,Planned; feasibility review required
+UTM-169,UTM-169-D13,conditional,64,t.IsEnum,t.IsEnum,True; False,UTM-169-TC033; UTM-169-TC034,Planned; feasibility review required
+UTM-169,UTM-169-D14,if,72,leased,leased,True; False,UTM-169-TC035; UTM-169-TC036,Planned; feasibility review required
+UTM-171,UTM-171-D01,coalesce,5,"await One<Customer>(""SELECT * FROM customers WHERE customer_id=$1"" + Lock, signal, Id(customerId))","await One<Customer>(""SELECT * FROM customers WHERE customer_id=$1"" + Lock, signal, Id(customerId))",Null; Non-null,UTM-171-TC004; UTM-171-TC005,Planned; feasibility review required
+UTM-173,UTM-173-D01,boolean-return,7,"(await Rows<Order>(""SELECT order_id FROM orders WHERE customer_id=$1 AND delivery_address_id=$2 AND order_status NOT IN ('DELIVERED','CANCELLED','RETURNED') LIMIT 1"", signal, Id(customerId), Id(addressId))).Count > 0","(await Rows<Order>(""SELECT order_id FROM orders WHERE customer_id=$1 AND delivery_address_id=$2 AND order_status NOT IN ('DELIVERED','CANCELLED','RETURNED') LIMIT 1"", signal, Id(customerId), Id(addressId))).Count > 0",True; False,UTM-173-TC004; UTM-173-TC005,Planned; feasibility review required
+UTM-175,UTM-175-D01,if,13,address.IsDefault,address.IsDefault,True; False,UTM-175-TC004; UTM-175-TC005,Planned; feasibility review required
+UTM-175,UTM-175-D02,conditional,15,string.IsNullOrEmpty(address.AddressId),string.IsNullOrEmpty(address.AddressId),True; False,UTM-175-TC006; UTM-175-TC007,Planned; feasibility review required
+UTM-175,UTM-175-D03,coalesce,18,saved?.AddressId,saved?.AddressId,Null; Non-null,UTM-175-TC008; UTM-175-TC009,Planned; feasibility review required
+UTM-175,UTM-175-D04,null-access,18,saved,saved,Null; Non-null,UTM-175-TC010; UTM-175-TC011,Planned; feasibility review required
+UTM-178,UTM-178-D01,conditional,6,Session.Active,Session.Active,True; False,UTM-178-TC004; UTM-178-TC005,Planned; feasibility review required
+UTM-179,UTM-179-D01,conditional,7,"long.TryParse(value, out var id) && id > 0","long.TryParse(value, out var id); id > 0",True; False,UTM-179-TC011; UTM-179-TC012; UTM-179-TC013,Planned; feasibility review required
+UTM-180,UTM-180-D01,conditional,8,value is null,value is null,True; False,UTM-180-TC004; UTM-180-TC005,Planned; feasibility review required
+UTM-181,UTM-181-D01,conditional,9,value is PaymentMethod.VietQr,value is PaymentMethod.VietQr,True; False,UTM-181-TC008; UTM-181-TC009,Planned; feasibility review required
+UTM-184,UTM-184-D01,conditional,13,locked,locked,True; False,UTM-184-TC004; UTM-184-TC005,Planned; feasibility review required
+UTM-185,UTM-185-D01,if,16,customerId is null && string.IsNullOrEmpty(sessionId),customerId is null; string.IsNullOrEmpty(sessionId),True; False,UTM-185-TC004; UTM-185-TC005; UTM-185-TC006,Planned; feasibility review required
+UTM-185,UTM-185-D02,coalesce-assignment,18,cart,cart,Null; Non-null,UTM-185-TC007; UTM-185-TC008,Planned; feasibility review required
+UTM-185,UTM-185-D03,conditional,18,customerId is null,customerId is null,True; False,UTM-185-TC009; UTM-185-TC010,Planned; feasibility review required
+UTM-186,UTM-186-D01,if,22,!Session.Active,!Session.Active,True; False,UTM-186-TC004; UTM-186-TC005,Planned; feasibility review required
+UTM-187,UTM-187-D01,foreach,27,cart.Items,cart.Items,Empty; One item; Multiple items,UTM-187-TC004; UTM-187-TC005; UTM-187-TC006,Planned; feasibility review required
+UTM-188,UTM-188-D01,foreach,32,orders,orders,Empty; One item; Multiple items,UTM-188-TC004; UTM-188-TC005; UTM-188-TC006,Planned; feasibility review required
+UTM-193,UTM-193-D01,catch,11,catch { await session.RollbackAsync(CancellationToken.None); throw; },,Any exception,UTM-193-TC007,Planned; feasibility review required

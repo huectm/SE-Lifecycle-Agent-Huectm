@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-21T15:30:00.000Z" agent="SE-Lifecycle-Agent" version="21.0.0" type="device">
+  <diagram id="uc-c05-activity" name="UC-C05 Manage Profile and Addresses Activity">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="1450" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="UML ACTIVITY DIAGRAM — USE CASE UC-C05: MANAGE PROFILE &amp; ADDRESSES" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="150" y="15" width="1050" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_cust" value="Customer&#10;[Primary Actor: Quản lý thông tin &amp; sổ địa chỉ]" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=40;horizontal=1;horizontalFlip=0;fillColor=#E8F5E9;strokeColor=#43A047;fontColor=#1B5E20;fontSize=12;fontStyle=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="55" width="380" height="1350" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_sys" value="FreshFood Profile &amp; Address Service&#10;[Core System Engine: customers &amp; customer_addresses]" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=40;horizontal=1;horizontalFlip=0;fillColor=#E3F2FD;strokeColor=#1E88E5;fontColor=#0D47A1;fontSize=12;fontStyle=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="420" y="55" width="450" height="1350" as="geometry"/>
+        </mxCell>
+        <mxCell id="lane_ext" value="Google Maps Geocoding API&#10;[External Secondary Actor: Address Resolution &amp; Lat/Lng]" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=40;horizontal=1;horizontalFlip=0;fillColor=#FFF8E1;strokeColor=#FFA000;fontColor=#E65100;fontSize=12;fontStyle=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="870" y="55" width="420" height="1350" as="geometry"/>
+        </mxCell>
+        <mxCell id="init" value="" style="ellipse;fillColor=#1B5E20;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="218" y="110" width="24" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_nav" value="Step 1: Navigate to &quot;Account Settings / Address Book&quot;&#10;[&lt;&lt;include&gt;&gt; UC-C05.1: View Profile]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="90" y="155" width="280" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_load_profile" value="Step 2: Query Profile &amp; Delivery Address Book&#10;SELECT FROM customers &amp; customer_addresses&#10;Verify authentication token [BR-AUTH-01]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="150" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_render_profile" value="Step 3: Render Profile &amp; Saved Addresses UI&#10;Display Full Name, Phone (verified badge), Email,&#10;and Address list highlighting Default Address [BR-AUTH-03]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="245" width="310" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_op" value="Account&#10;Operation?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;fontColor=#000000;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="175" y="247" width="110" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_edit_prof" value="Step A2.1: Edit Full Name or Contact Email&#10;Click &quot;Save Changes&quot; [&lt;&lt;extend&gt;&gt; UC-C05.2: Update Profile]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="90" y="345" width="280" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_save_prof" value="Validate Email Syntax &amp; UPDATE customers&#10;Display confirmation toast notification" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="340" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_add_addr" value="Step A3.1: Click &quot;Add New Address&quot;&#10;Input Recipient Name, Phone, Street, Ward, District&#10;[&lt;&lt;extend&gt;&gt; UC-C05.3: Manage Addresses]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="90" y="440" width="280" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_phone" value="Phone valid?&#10;(10 digits)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;fontColor=#000000;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="595" y="437" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_err_phone" value="Step E3.1: Show Phone Validation Error&#10;&quot;Số điện thoại không hợp lệ (10 chữ số)&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#E53935;fontColor=#B71C1C;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="90" y="525" width="280" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_call_geo" value="Invoke Geocoding Request&#10;Pass structured street, ward, and district string" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE082;strokeColor=#FFA000;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="930" y="437" width="300" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="dec_geo" value="Geocode&#10;Resolved?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;fontColor=#000000;fontSize=10;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="530" width="100" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_err_geo" value="Step E3.2: Display Geocoding Alert&#10;&quot;Không thể xác định tọa độ chính xác. Vui lòng kiểm tra lại số nhà, tên đường.&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCDD2;strokeColor=#E53935;fontColor=#B71C1C;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="530" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_persist_addr" value="Insert Record into customer_addresses&#10;Save resolved latitude &amp; longitude coordinates&#10;If marked default: reset is_default on prior addresses [BR-AUTH-03]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="630" width="310" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_edit_addr" value="Step A3.2: Edit Saved Address&#10;Modify recipient, street, or default status&#10;[&lt;&lt;extend&gt;&gt; UC-C05.3: Manage Addresses]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="90" y="735" width="280" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_update_addr" value="Re-geocode Address &amp; UPDATE customer_addresses&#10;Update coordinates and refreshed default flag" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="730" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_del_addr" value="Step A3.3: Delete Address&#10;Click &quot;Delete&quot; on non-active destination&#10;[&lt;&lt;extend&gt;&gt; UC-C05.3: Manage Addresses]" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#388E3C;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="90" y="835" width="280" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="act_check_del" value="Verify Address Not Tied to Pending Active Orders&#10;DELETE FROM customer_addresses WHERE id = ?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;strokeColor=#1976D2;fontColor=#000000;fontSize=11;fontStyle=1;arcSize=25;" vertex="1" parent="1">
+          <mxGeometry x="490" y="830" width="310" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="merge_refresh" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;" vertex="1" parent="1">
+          <mxGeometry x="625" y="935" width="40" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="merge_exit" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#FBC02D;" vertex="1" parent="1">
+          <mxGeometry x="210" y="1040" width="40" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="final_node" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#2E7D32;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="215" y="1115" width="30" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;" edge="1" parent="1" source="init" target="act_nav">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="Request account data" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_nav" target="act_load_profile">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="Return profile &amp; addresses" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_load_profile" target="act_render_profile">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="Screen ready" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_render_profile" target="dec_op">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="[Update Profile Info]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_op" target="act_edit_prof">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="[Add New Address]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_op" target="act_add_addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="277"/>
+              <mxPoint x="60" y="467"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="[Edit Address]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_op" target="act_edit_addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="277"/>
+              <mxPoint x="50" y="760"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="[Delete Address]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_op" target="act_del_addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="277"/>
+              <mxPoint x="40" y="860"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="[Exit Settings]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_op" target="merge_exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="277"/>
+              <mxPoint x="390" y="1057"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="Submit updates" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_edit_prof" target="act_save_prof">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e11" value="Profile updated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_save_prof" target="merge_refresh">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="370"/>
+              <mxPoint x="820" y="952"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="Submit new address" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_add_addr" target="dec_phone">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e13" value="[Invalid phone]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_phone" target="act_err_phone">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="467"/>
+              <mxPoint x="400" y="467"/>
+              <mxPoint x="400" y="547"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="Re-enter phone" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_err_phone" target="act_add_addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="547"/>
+              <mxPoint x="70" y="480"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="[Phone format OK]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_phone" target="act_call_geo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="act_call_geo" target="dec_geo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e17" value="[Resolution failed (E3.2)]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_geo" target="act_err_geo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e18" value="Correct address string" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_err_geo" target="act_add_addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="560"/>
+              <mxPoint x="460" y="490"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="[Lat/Lng resolved]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="dec_geo" target="act_persist_addr">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="662"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="Address saved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_persist_addr" target="merge_refresh">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e21" value="Submit edited address" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_edit_addr" target="act_update_addr">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e22" value="Address updated" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_update_addr" target="merge_refresh">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="810" y="760"/>
+              <mxPoint x="810" y="952"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="Submit delete request" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_del_addr" target="act_check_del">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e24" value="Record deleted" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="act_check_del" target="merge_refresh">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="800" y="860"/>
+              <mxPoint x="800" y="952"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="Refresh screen state" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="merge_refresh" target="act_render_profile">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="952"/>
+              <mxPoint x="410" y="277"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="Finish modifications" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="merge_refresh" target="merge_exit">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="645" y="1057"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#37474F;strokeWidth=1.5;fontSize=10;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="merge_exit" target="final_node">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

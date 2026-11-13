@@ -1,0 +1,4115 @@
+[
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogRepository",
+    "UsedType": "ProductCategory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogRepository",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogPage",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogPage",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogView",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogApiClient",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogApiClient",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogApiClient",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogViewModel",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogViewModel",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogViewModel",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogApiModel",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogApiModel",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogApiModel",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogController",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogController",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogController",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICatalogService",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICatalogService",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICatalogService",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogService",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogService",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogService",
+    "UsedType": "ProductCategory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogService",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogService",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CatalogService",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICatalogRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICatalogRepository",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICatalogRepository",
+    "UsedType": "ProductCategory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IBatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "BatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProductDetailsDto",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CatalogController",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CatalogController",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CatalogController",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICatalogService",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICatalogService",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICatalogService",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CatalogService",
+    "UsedType": "CatalogQueryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CatalogService",
+    "UsedType": "CatalogResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C01",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CatalogService",
+    "UsedType": "ProductDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartRepository",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartRepository",
+    "UsedType": "CartItem",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartRepository",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartPage",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartPage",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartPage",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartView",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartView",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartApiClient",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartApiClient",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartApiClient",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartViewModel",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartViewModel",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartViewModel",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartApiModel",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartApiModel",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartApiModel",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartController",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartController",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartController",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICartService",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICartService",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICartService",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "CartItem",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CartService",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICartRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICartRepository",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICartRepository",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICurrentCustomer",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IBatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "BatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CartController",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CartController",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CartController",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICartService",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICartService",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICartService",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CartService",
+    "UsedType": "CartChangeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CartService",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C03",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CartService",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileRepository",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileRepository",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileRepository",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfilePage",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfilePage",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfilePage",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileAddressView",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileAddressView",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiClient",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiClient",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiClient",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiClient",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiClient",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileViewModel",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileViewModel",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileViewModel",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileViewModel",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileViewModel",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiModel",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiModel",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiModel",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiModel",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileApiModel",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileController",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileController",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileController",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileController",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileController",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileService",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileService",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileService",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileService",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileService",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ProfileService",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileRepository",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IProfileRepository",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileController",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileController",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileController",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileController",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IProfileService",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IProfileService",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IProfileService",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IProfileService",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileService",
+    "UsedType": "AddressDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileService",
+    "UsedType": "AddressInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileService",
+    "UsedType": "ProfileResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C05",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ProfileService",
+    "UsedType": "ProfileUpdateDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "CartItem",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutRepository",
+    "UsedType": "OrderDetail",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutPage",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutPage",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutPage",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutPage",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutPage",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutView",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutView",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutView",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutView",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiClient",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiClient",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiClient",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiClient",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiClient",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiClient",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutViewModel",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutViewModel",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutViewModel",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutViewModel",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutViewModel",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutViewModel",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiModel",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiModel",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiModel",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiModel",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiModel",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutApiModel",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutController",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutController",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutController",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutController",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutController",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutController",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "CartItem",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "OrderDetail",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "CheckoutService",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutRepository",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutRepository",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "ICheckoutRepository",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IPaymentGateway",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IPaymentGateway",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "SePayPaymentAdapter",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "SePayPaymentAdapter",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "PaymentNoticeHandler",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "PaymentNoticeHandler",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IBatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "BatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutController",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutController",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutController",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutController",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutController",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICheckoutService",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICheckoutService",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICheckoutService",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutService",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutService",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutService",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "CheckoutService",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "CheckoutController",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C06",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "CheckoutService",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "OrderDetail",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "CartItem",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "OrderReview",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersRepository",
+    "UsedType": "AuditLog",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersPage",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersPage",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersPage",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersView",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersView",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiClient",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiClient",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiClient",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiClient",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiClient",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiClient",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersViewModel",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersViewModel",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersViewModel",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersViewModel",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersViewModel",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersViewModel",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiModel",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiModel",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiModel",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiModel",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiModel",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersApiModel",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersController",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersController",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "AuditLog",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "CartItem",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "Customer",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "CustomerAddress",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderDetail",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderReview",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "Product",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "CartResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OperationResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersRepository",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersRepository",
+    "UsedType": "Cart",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersRepository",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IMyOrdersRepository",
+    "UsedType": "OrderReview",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "IBatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "BatchPricingPolicy",
+    "UsedType": "BatchInventory",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "VOPC to Detailed Design Realization",
+    "Consumer": "OrderDetailsDto",
+    "UsedType": "Order",
+    "UsedRole": "entity",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersController",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersService",
+    "UsedType": "CancelOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderListDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 1",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderReviewDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "MyOrdersController",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "IMyOrdersService",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "UC-C07",
+    "View": "DTO Contracts and Usage 2",
+    "Consumer": "MyOrdersService",
+    "UsedType": "OrderDetailsDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Transaction and Gateway Adapters",
+    "Consumer": "ICurrentCustomer",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Transaction and Gateway Adapters",
+    "Consumer": "CurrentCustomer",
+    "UsedType": "CartIdentityDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter geocoding",
+    "Consumer": "IGeocodingGateway",
+    "UsedType": "GeoPointDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter geocoding",
+    "Consumer": "GoogleMapsGeocodingAdapter",
+    "UsedType": "GeoPointDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "IPaymentGateway",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "IPaymentGateway",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "IPaymentGateway",
+    "UsedType": "VerifiedPaymentDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "SePayPaymentAdapter",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "SePayPaymentAdapter",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "SePayPaymentAdapter",
+    "UsedType": "VerifiedPaymentDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "PaymentNoticeHandler",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "PaymentNoticeHandler",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "CheckoutInputDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "CheckoutSummaryDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "OrderConfirmationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentNoticeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentQrDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentQrRequestDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PaymentResultDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter payment",
+    "Consumer": "ICheckoutService",
+    "UsedType": "PlaceOrderDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter notification",
+    "Consumer": "INotificationGateway",
+    "UsedType": "NotificationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "External Adapter notification",
+    "Consumer": "NotificationAdapter",
+    "UsedType": "NotificationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "State Transition Dispatch",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Transition Command and Trusted Snapshot",
+    "Consumer": "IPayoutPort",
+    "UsedType": "PayoutOutcomeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 1",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 2",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 3",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 4",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 5",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 6",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 7",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "IOrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineEvent",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "StateMachineResult",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "transitions",
+    "View": "One Class per Transition 8",
+    "Consumer": "OrderStateMachine",
+    "UsedType": "TransitionSnapshot",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Unresolved Provider and Notification Seams",
+    "Consumer": "IPayoutPort",
+    "UsedType": "PayoutOutcomeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Unresolved Provider and Notification Seams",
+    "Consumer": "UnconfiguredPayoutAdapter",
+    "UsedType": "PayoutOutcomeDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Unresolved Provider and Notification Seams",
+    "Consumer": "INotificationPublisher",
+    "UsedType": "NotificationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  },
+  {
+    "UseCase": "shared",
+    "View": "Unresolved Provider and Notification Seams",
+    "Consumer": "ConfiguredNotificationPublisher",
+    "UsedType": "NotificationDto",
+    "UsedRole": "DTO",
+    "Relation": "dependency",
+    "Basis": "operation signature / local entity responsibility"
+  }
+]

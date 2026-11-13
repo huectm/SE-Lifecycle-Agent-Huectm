@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FreshFood Organic — UI Prototypes for Prioritized Use Cases</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Meta Prototype Navigation Header (System & Priority Controller) -->
+  <header class="prototype-meta-bar">
+    <div class="prototype-meta-brand">
+      <span style="font-size: 20px;">🌿</span>
+      <div>
+        <h1>FreshFood Organic E-Commerce Platform</h1>
+        <div style="font-size: 11px; color: #94a3b8;">UI Prototypes & Verification — Karl Wiegers Prioritized Backlog</div>
+      </div>
+      <span class="badge-phase">Phase 05: Prototyping</span>
+    </div>
+
+    <nav class="prototype-meta-nav">
+      <button class="prototype-meta-btn active" data-screen="screen-priority-overview">
+        🎯 <span>Tổng quan Ưu tiên</span>
+      </button>
+      <button class="prototype-meta-btn" data-screen="screen-uc-c01">
+        <span class="priority-chip">#1</span> <span>UC-C01: Browse & Search</span>
+      </button>
+      <button class="prototype-meta-btn" data-screen="screen-uc-c05">
+        <span class="priority-chip">#2</span> <span>UC-C05: Profile & Address</span>
+      </button>
+      <button class="prototype-meta-btn" data-screen="screen-uc-c03">
+        <span class="priority-chip">#3</span> <span>UC-C03: Shopping Cart</span>
+      </button>
+      <button class="prototype-meta-btn" data-screen="screen-uc-c06">
+        <span class="priority-chip">#4</span> <span>UC-C06: Checkout & Order</span>
+      </button>
+      <button class="prototype-meta-btn" data-screen="screen-uc-c07">
+        <span class="priority-chip">#5</span> <span>UC-C07: Manage Orders</span>
+      </button>
+      <button class="prototype-meta-btn" data-screen="screen-uc-m08">
+        <span class="priority-chip">#6</span> <span>UC-M08: Goods Receipt (WH)</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- 2. Dynamic Context & Traceability Banner -->
+  <section class="uc-context-banner">
+    <div class="uc-context-inner">
+      <div class="uc-context-main">
+        <h2 id="ucTitle">🎯 Tổng quan Danh mục Prototype theo Độ ưu tiên Karl Wiegers</h2>
+        <p id="ucDesc">Bản đặc tả nguyên mẫu giao diện người dùng (UI Prototype) được cấu trúc và triển khai theo đúng thứ tự ưu tiên lượng hóa Karl Wiegers trong Software Requirements Specification.</p>
+      </div>
+      <div class="uc-context-badges">
+        <span class="tag-badge rank-badge" id="ucRankBadge">Toàn bộ 6 Use Cases</span>
+        <span class="tag-badge score-badge" id="ucScoreBadge">Prioritized Backlog</span>
+        <span class="tag-badge actor-badge" id="ucActorBadge">Guest, Customer & Warehouse Staff</span>
+        <span class="tag-badge rule-badge" id="ucRulesBadge">AGENTS.md §2.6, §2.7 | requirements-rules.md §7, §14</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Prototype App Shell -->
+  <main class="prototype-app-shell">
+
+    <!-- Storefront Simulated Header (Universal for Customer UCs) -->
+    <header class="storefront-header">
+      <div class="store-brand" onclick="switchScreen('screen-uc-c01')">
+        <div class="store-logo-icon">🌿</div>
+        <div class="store-brand-text">
+          <h3>FreshFood</h3>
+          <span>ORGANIC FARM TO TABLE</span>
+        </div>
+      </div>
+
+      <div class="store-search-bar">
+        <span class="store-search-icon">🔍</span>
+        <input type="text" id="storeSearchInput" placeholder="Tìm kiếm rau củ quả, nấm sạch, chứng nhận organic... (NFR-PERF-03)">
+      </div>
+
+      <div class="store-actions">
+        <div class="action-btn-circle" title="Giỏ hàng (UC-C03)" onclick="switchScreen('screen-uc-c03')">
+          🛒
+          <span class="cart-count-badge">0</span>
+        </div>
+        <div class="action-btn-circle" title="Đơn hàng của tôi (UC-C07)" onclick="switchScreen('screen-uc-c07')">
+          📦
+        </div>
+        <div class="user-profile-pill" title="Hồ sơ tài khoản (UC-C05)" onclick="switchScreen('screen-uc-c05')">
+          <div class="user-avatar-mini">NL</div>
+          <span class="user-profile-name" id="headerUserName">Nguyễn Thị Lan</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         SCREEN 0: PRIORITY OVERVIEW DASHBOARD
+         ==================================================================== -->
+    <section id="screen-priority-overview" class="prototype-screen active">
+      <div class="layout-card" style="background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%); border-left: 6px solid var(--primary-600);">
+        <h3 style="font-size: 20px; font-weight: 800; color: #064e3b; margin-bottom: 8px;">
+          📊 Mô hình Lượng hóa Độ ưu tiên Karl Wiegers & Lộ trình Triển khai UI Prototype
+        </h3>
+        <p style="font-size: 14px; color: #334155; line-height: 1.6; margin-bottom: 14px;">
+          Theo quy định tại <code>.agents/Rules/requirements-rules.md</code> §14 và <code>artifacts/requirements/requirements-prioritization.csv</code>, độ ưu tiên của các Use Case được tính toán dựa trên công thức chuẩn của Karl Wiegers:
+          <br>
+          <strong style="color: #059669;">Total Value = 2 × Benefit + Penalty</strong> &nbsp;|&nbsp;
+          <strong style="color: #059669;">Priority Score = Value% / (Cost% + Risk%)</strong>.
+          <br>
+          Dưới đây là danh sách 6 Use Case có bản đặc tả chi tiết (Use Case Description) được sắp xếp nghiêm ngặt theo thứ tự ưu tiên giảm dần:
+        </p>
+
+        <div class="priority-overview-grid">
+          <!-- Card 1 -->
+          <div class="priority-uc-card" onclick="switchScreen('screen-uc-c01')">
+            <div class="priority-uc-rank-stripe" style="background: #059669;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="tag-badge rank-badge">Ưu tiên Rank 1</span>
+              <span class="tag-badge score-badge">Điểm: 0.890 (High)</span>
+            </div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">UC-C01: Browse & Search Products</h4>
+            <p style="font-size: 12px; color: #64748b; margin-bottom: 10px;">Cổng khám phá chính cho khách hàng: lọc danh mục, tìm kiếm siêu tốc &le; 500ms, xem chứng nhận hữu cơ và nhãn giảm giá thanh lý cận hạn.</p>
+            <div style="font-size: 11px; color: #334155;"><strong>FR Traced:</strong> FR-BRW-01, FR-BRW-02, FR-BRW-03</div>
+            <div style="font-size: 11px; color: #334155; margin-bottom: 12px;"><strong>BR Traced:</strong> BR-CAT-02, BR-BAT-01, BR-BAT-04</div>
+            <button class="btn-primary" style="width: 100%; font-size: 12px; padding: 6px;">Mở Prototype UC-C01 →</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="priority-uc-card" onclick="switchScreen('screen-uc-c05')">
+            <div class="priority-uc-rank-stripe" style="background: #10b981;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="tag-badge rank-badge">Ưu tiên Rank 2</span>
+              <span class="tag-badge score-badge">Điểm: 0.774 (High)</span>
+            </div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">UC-C05: Manage Profile & Addresses</h4>
+            <p style="font-size: 12px; color: #64748b; margin-bottom: 10px;">Quản lý hồ sơ cá nhân và sổ địa chỉ giao hàng với cơ chế tự động mặc định địa chỉ theo đơn mua gần nhất và định vị tọa độ Google Maps.</p>
+            <div style="font-size: 11px; color: #334155;"><strong>FR Traced:</strong> FR-PRF-01, FR-PRF-02</div>
+            <div style="font-size: 11px; color: #334155; margin-bottom: 12px;"><strong>BR Traced:</strong> BR-AUTH-01, BR-AUTH-03</div>
+            <button class="btn-primary" style="width: 100%; font-size: 12px; padding: 6px;">Mở Prototype UC-C05 →</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="priority-uc-card" onclick="switchScreen('screen-uc-c03')">
+            <div class="priority-uc-rank-stripe" style="background: #3b82f6;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="tag-badge rank-badge">Ưu tiên Rank 3</span>
+              <span class="tag-badge score-badge">Điểm: 0.610 (High)</span>
+            </div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">UC-C03: Manage Shopping Cart</h4>
+            <p style="font-size: 12px; color: #64748b; margin-bottom: 10px;">Giỏ hàng tương tác đa thiết bị, điều chỉnh số lượng tự động đồng bộ tồn kho vật lý khả dụng của lô hàng và ngăn chặn bán khống.</p>
+            <div style="font-size: 11px; color: #334155;"><strong>FR Traced:</strong> FR-CRT-01, FR-CRT-02</div>
+            <div style="font-size: 11px; color: #334155; margin-bottom: 12px;"><strong>BR Traced:</strong> BR-BAT-01, BR-BAT-02, BR-ORD-01</div>
+            <button class="btn-primary" style="width: 100%; font-size: 12px; padding: 6px;">Mở Prototype UC-C03 →</button>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="priority-uc-card" onclick="switchScreen('screen-uc-c06')">
+            <div class="priority-uc-rank-stripe" style="background: #f59e0b;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="tag-badge rank-badge">Ưu tiên Rank 4</span>
+              <span class="tag-badge score-badge">Điểm: 0.610 (High)</span>
+            </div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">UC-C06: Checkout & Place Order</h4>
+            <p style="font-size: 12px; color: #64748b; margin-bottom: 10px;">Quy trình thanh toán cốt lõi: kiểm tra bán kính 10km, tính phí giao hàng 3 mức, trừ tồn kho FEFO nguyên tử và thanh toán COD / VietQR.</p>
+            <div style="font-size: 11px; color: #334155;"><strong>FR Traced:</strong> FR-PAY-01, FR-ORD-01..03, FR-PAY-02</div>
+            <div style="font-size: 11px; color: #334155; margin-bottom: 12px;"><strong>BR Traced:</strong> BR-DEL-01, BR-DEL-02, BR-ORD-01..03</div>
+            <button class="btn-primary" style="width: 100%; font-size: 12px; padding: 6px;">Mở Prototype UC-C06 →</button>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="priority-uc-card" onclick="switchScreen('screen-uc-c07')">
+            <div class="priority-uc-rank-stripe" style="background: #8b5cf6;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="tag-badge rank-badge">Ưu tiên Rank 5</span>
+              <span class="tag-badge score-badge">Điểm: 0.542 (Medium)</span>
+            </div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">UC-C07: Manage My Orders</h4>
+            <p style="font-size: 12px; color: #64748b; margin-bottom: 10px;">Theo dõi hành trình đơn hàng trực quan, cho phép hủy đơn chưa điều phối (tự động hoàn kho), mua lại 1 chạm và đánh giá sao.</p>
+            <div style="font-size: 11px; color: #334155;"><strong>FR Traced:</strong> FR-MYO-01, FR-MYO-02, FR-MYO-03, FR-MYO-04</div>
+            <div style="font-size: 11px; color: #334155; margin-bottom: 12px;"><strong>BR Traced:</strong> BR-ORD-04, BR-ORD-05, BR-RE-01, BR-FB-01</div>
+            <button class="btn-primary" style="width: 100%; font-size: 12px; padding: 6px;">Mở Prototype UC-C07 →</button>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="priority-uc-card" onclick="switchScreen('screen-uc-m08')">
+            <div class="priority-uc-rank-stripe" style="background: #64748b;"></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span class="tag-badge rank-badge">Ưu tiên Rank 6</span>
+              <span class="tag-badge score-badge">Điểm: 0.624 (Operations)</span>
+            </div>
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">UC-M08: Manage Goods Receipts</h4>
+            <p style="font-size: 12px; color: #64748b; margin-bottom: 10px;">Nghiệp vụ Thủ kho nhập hàng từ nhà cung cấp: kiểm soát chặt chẽ HSD &ge; 3 ngày, tự động tính tổng tiền và gắn cờ FEFO Delayed/Active.</p>
+            <div style="font-size: 11px; color: #334155;"><strong>FR Traced:</strong> FR-GR-01, FR-GR-02, FR-GR-03, FR-GR-04</div>
+            <div style="font-size: 11px; color: #334155; margin-bottom: 12px;"><strong>BR Traced:</strong> BR-GR-01, BR-GR-02, BR-GR-03, BR-BAT-03</div>
+            <button class="btn-primary" style="width: 100%; font-size: 12px; padding: 6px;">Mở Prototype UC-M08 →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 1: UC-C01: BROWSE & SEARCH PRODUCTS (RANK 1)
+         ==================================================================== -->
+    <section id="screen-uc-c01" class="prototype-screen">
+      <!-- Category Filter Pills & Clearance Toggle -->
+      <div class="category-filter-bar">
+        <div class="category-pills-list">
+          <button class="cat-pill active" data-cat="all">🌟 Tất cả sản phẩm</button>
+          <button class="cat-pill" data-cat="veg">🥬 Rau lá & Củ quả hữu cơ</button>
+          <button class="cat-pill" data-cat="fruit">🍓 Trái cây nhiệt đới</button>
+          <button class="cat-pill" data-cat="mushroom">🍄 Nấm sạch Bio</button>
+          <button class="cat-pill" data-cat="meat-egg">🥚 Thịt & Trứng sinh học</button>
+        </div>
+
+        <div class="filter-toggle-group">
+          <label class="filter-checkbox-label" title="Lọc các lô nông sản cận hạn áp dụng mức giảm 10% - 50% theo quy định BR-BAT-04">
+            <input type="checkbox" id="clearanceToggle">
+            <span>🔥 Giảm giá thanh lý cận hạn (BR-BAT-04)</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Curated Product Grid -->
+      <div class="section-title-wrap">
+        <div>
+          <h3 class="section-title">🌾 Nông Sản Hữu Cơ Tươi Mới Trong Ngày</h3>
+          <span class="section-subtitle">Cam kết 100% chứng nhận hữu cơ, xuất xứ nông trại rõ ràng, cập nhật tồn kho theo thời gian thực</span>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Empty State for Search / Filter -->
+      <div id="catalogEmptyState" style="display: none; text-align: center; padding: 50px 20px; background: #ffffff; border-radius: 16px; border: 1px dashed #cbd5e1; margin-bottom: 30px;">
+        <div style="font-size: 48px; margin-bottom: 12px;">🔍</div>
+        <h3 style="font-size: 18px; color: #0f172a; margin-bottom: 6px;">Không tìm thấy nông sản phù hợp với từ khóa!</h3>
+        <p style="font-size: 13px; color: #64748b; max-width: 460px; margin: 0 auto 16px auto;">Vui lòng thử từ khóa tìm kiếm khác hoặc nhấn vào danh mục bên dưới để tiếp tục khám phá các mặt hàng tươi ngon.</p>
+        <button class="btn-primary" onclick="document.getElementById('storeSearchInput').value=''; State.searchQuery=''; State.clearanceFilter=false; document.getElementById('clearanceToggle').checked=false; renderCatalog();">Xem toàn bộ danh mục</button>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 2: UC-C05: MANAGE PROFILE & ADDRESSES (RANK 2)
+         ==================================================================== -->
+    <section id="screen-uc-c05" class="prototype-screen">
+      <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 24px;">
+        <!-- Left: Profile Info -->
+        <div class="layout-card">
+          <div class="layout-card-header">
+            <h3 class="layout-card-title">👤 Thông Tin Cá Nhân</h3>
+            <span class="tag-badge rank-badge" id="profTierDisplay">Gold Member</span>
+          </div>
+          <form onsubmit="saveProfileInfo(event)">
+            <div class="form-group">
+              <label class="form-label required">Họ và tên</label>
+              <input type="text" id="profName" class="form-control" value="Nguyễn Thị Lan" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Số điện thoại (Đã xác minh OTP BR-AUTH-02)</label>
+              <input type="text" id="profPhone" class="form-control" value="0912345678" readonly style="background: #f1f5f9; cursor: not-allowed;">
+              <span class="form-text-help">✓ Số điện thoại liên kết tài khoản không thể chỉnh sửa trực tiếp.</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email liên hệ nhận hóa đơn</label>
+              <input type="email" id="profEmail" class="form-control" value="lan.nguyen@example.com">
+            </div>
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Lưu Thay Đổi Hồ Sơ</button>
+          </form>
+        </div>
+
+        <!-- Right: Address Book -->
+        <div class="layout-card">
+          <div class="layout-card-header">
+            <div>
+              <h3 class="layout-card-title">📍 Sổ Địa Chỉ Giao Hàng</h3>
+              <p style="font-size: 12px; color: #64748b; margin-top: 2px;">Tự động chọn làm địa chỉ giao hàng mặc định cho các đơn hàng sau (Quy tắc BR-AUTH-03)</p>
+            </div>
+            <button class="btn-primary" style="font-size: 12px; padding: 6px 12px;" onclick="openAddAddressModal()">+ Thêm Địa Chỉ Mới</button>
+          </div>
+
+          <div class="address-grid" id="addressGrid">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 3: UC-C03: MANAGE SHOPPING CART (RANK 3)
+         ==================================================================== -->
+    <section id="screen-uc-c03" class="prototype-screen">
+      <div class="layout-card">
+        <div class="layout-card-header">
+          <h3 class="layout-card-title">🛒 Giỏ Hàng Nông Sản Hữu Cơ</h3>
+          <button class="btn-secondary" style="font-size: 12px; color: #ef4444;" onclick="clearCart()">Xóa toàn bộ giỏ</button>
+        </div>
+
+        <!-- Empty Cart -->
+        <div id="cartEmptyView" style="display: none; text-align: center; padding: 60px 20px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🧺</div>
+          <h3 style="font-size: 18px; color: #0f172a; margin-bottom: 8px;">Giỏ hàng của bạn đang trống!</h3>
+          <p style="font-size: 13px; color: #64748b; margin-bottom: 16px;">Hãy khám phá các loại rau củ hữu cơ tươi non và thêm vào giỏ hàng.</p>
+          <button class="btn-primary" onclick="switchScreen('screen-uc-c01')">Tiếp tục mua hàng</button>
+        </div>
+
+        <!-- Active Cart -->
+        <div id="cartActiveView">
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th style="width: 45%;">Sản phẩm & Thông tin Lô</th>
+                <th style="width: 15%;">Đơn giá</th>
+                <th style="width: 15%;">Số lượng</th>
+                <th style="width: 15%;">Thành tiền</th>
+                <th style="width: 10%;">Xóa</th>
+              </tr>
+            </thead>
+            <tbody id="cartTableBody">
+              <!-- Rendered dynamically -->
+            </tbody>
+          </table>
+
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+            <div>
+              <button class="btn-secondary" onclick="switchScreen('screen-uc-c01')">← Tiếp tục chọn hàng</button>
+              <div style="font-size: 12px; color: #64748b; margin-top: 10px;">
+                💡 <strong>Lưu ý FEFO (BR-BAT-02):</strong> Số lượng được kiểm tra trực tiếp theo tồn kho khả dụng của lô sắp hết hạn nhất.
+              </div>
+            </div>
+
+            <div class="cart-summary-box">
+              <div class="cart-summary-row">
+                <span>Tạm tính giá gốc:</span>
+                <span id="cartSubtotal">0 ₫</span>
+              </div>
+              <div class="cart-summary-row" style="color: #059669;">
+                <span>Giảm giá thanh lý lô (BR-BAT-04):</span>
+                <span id="cartDiscount">-0 ₫</span>
+              </div>
+              <div class="cart-summary-row total-row">
+                <span>Tổng tiền hàng:</span>
+                <span id="cartTotal">0 ₫</span>
+              </div>
+              <button class="btn-primary" style="width: 100%; margin-top: 16px; padding: 12px; font-size: 14px;" onclick="switchScreen('screen-uc-c06')">
+                Tiến Hành Đặt Hàng (UC-C06) →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 4: UC-C06: CHECKOUT & PLACE ORDER (RANK 4)
+         ==================================================================== -->
+    <section id="screen-uc-c06" class="prototype-screen">
+      <div class="checkout-layout">
+        <!-- Left: Steps -->
+        <div>
+          <!-- Step 1: Address -->
+          <div class="checkout-step-box">
+            <h4 class="checkout-step-title">
+              <span class="step-num-badge">1</span>
+              Địa Chỉ Giao Hàng & Kiểm Tra Bán Kính Phục Vụ 10km (BR-DEL-01)
+            </h4>
+            
+            <div class="form-group">
+              <label class="form-label">Chọn địa chỉ nhận hàng:</label>
+              <select id="checkoutAddressSelect" class="form-control" onchange="onCheckoutAddressChange(this.value)">
+                <!-- Rendered dynamically -->
+              </select>
+            </div>
+
+            <div id="radiusCheckCard" class="radius-check-card">
+              <span id="radiusCheckMsg">✓ Đang đo lường khoảng cách Google Maps Distance Matrix...</span>
+            </div>
+          </div>
+
+          <!-- Step 2: Shipping Fee Policy -->
+          <div class="checkout-step-box">
+            <h4 class="checkout-step-title">
+              <span class="step-num-badge">2</span>
+              Biểu Phí Giao Hàng Lũy Tiến Theo Khoảng Cách (BR-DEL-02)
+            </h4>
+            <div style="font-size: 13px; color: #475569; line-height: 1.6;">
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 8px;">
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; text-align: center;">
+                  <div style="font-size: 11px; color: #64748b;">Khoảng cách &lt; 1 km</div>
+                  <div style="font-size: 15px; font-weight: 700; color: #059669;">10,000 ₫</div>
+                </div>
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; text-align: center;">
+                  <div style="font-size: 11px; color: #64748b;">Từ 1 km đến &lt; 3 km</div>
+                  <div style="font-size: 15px; font-weight: 700; color: #059669;">20,000 ₫</div>
+                </div>
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 10px; border-radius: 8px; text-align: center;">
+                  <div style="font-size: 11px; color: #64748b;">Từ 3 km đến 10 km</div>
+                  <div style="font-size: 15px; font-weight: 700; color: #059669;">30,000 ₫</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Payment Method -->
+          <div class="checkout-step-box">
+            <h4 class="checkout-step-title">
+              <span class="step-num-badge">3</span>
+              Phương Thức Thanh Toán
+            </h4>
+
+            <div class="payment-option-card selected" data-method="cod" onclick="selectPaymentMethod('cod')">
+              <input type="radio" name="payMethod" checked>
+              <div>
+                <strong>💵 Thanh toán tiền mặt khi nhận hàng (COD)</strong>
+                <div style="font-size: 12px; color: #64748b;">Khách hàng thanh toán tiền mặt trực tiếp cho nhân viên giao hàng sau khi kiểm tra nông sản.</div>
+              </div>
+            </div>
+
+            <div class="payment-option-card" data-method="vietqr" onclick="selectPaymentMethod('vietqr')">
+              <input type="radio" name="payMethod">
+              <div>
+                <strong>⚡ Chuyển khoản VietQR PRO (Tự động xác nhận qua SePay Webhook)</strong>
+                <div style="font-size: 12px; color: #64748b;">Quét mã QR bằng App mọi ngân hàng, hệ thống tự động xác nhận trong &le; 3.0s theo BR-ORD-03.</div>
+              </div>
+            </div>
+
+            <!-- VietQR Container -->
+            <div id="vietqrBox" class="vietqr-box">
+              <h5 style="font-size: 14px; font-weight: 700; color: #0f172a;">Quét mã VietQR bằng App Ngân hàng</h5>
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020101021238580010A000000727012600069704220112108876543210208QRIBFTTA530370454061450005802VN62170813FF-20261023-0896304" class="vietqr-img" alt="VietQR Dynamic Code">
+              <div class="vietqr-timer" id="vietqrTimerTxt">Hết hạn sau: 15:00</div>
+              <div style="font-size: 12px; color: #64748b; margin-top: 8px;">
+                Tự động kiểm tra qua Webhook SePay (BR-ORD-03)
+              </div>
+              <button class="btn-secondary" style="margin-top: 10px; font-size: 12px; background: #dbeafe; color: #1e40af; border-color: #bfdbfe;" onclick="simulateSePayWebhook()">
+                ⚡ Mô phỏng SePay Bắn Webhook Thành Công (2.0s)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Order Summary -->
+        <div>
+          <div class="layout-card">
+            <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 16px;">Tóm Tắt Đơn Hàng</h4>
+            
+            <div id="checkoutReviewItems" style="border-bottom: 1px solid #f1f5f9; padding-bottom: 12px; margin-bottom: 12px;">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <div style="font-size: 13px; color: #475569; margin-bottom: 8px; display: flex; justify-content: space-between;">
+              <span>Tạm tính:</span>
+              <span id="checkoutSubtotal">0 ₫</span>
+            </div>
+            <div style="font-size: 13px; color: #475569; margin-bottom: 14px; display: flex; justify-content: space-between;">
+              <span>Phí vận chuyển:</span>
+              <span id="checkoutShippingFee">0 ₫</span>
+            </div>
+
+            <div style="font-size: 18px; font-weight: 800; color: #059669; border-top: 2px dashed #e2e8f0; padding-top: 12px; margin-bottom: 20px; display: flex; justify-content: space-between;">
+              <span>Tổng thanh toán:</span>
+              <span id="checkoutGrandTotal">0 ₫</span>
+            </div>
+
+            <button id="btnSubmitOrder" class="btn-primary" style="width: 100%; padding: 14px; font-size: 15px;" onclick="submitOrder()">
+              Xác Nhận Đặt Hàng (Atomic FEFO Lock)
+            </button>
+            <div style="font-size: 11px; color: #94a3b8; text-align: center; margin-top: 8px;">
+              Khoá tồn kho nguyên tử &bull; Không bán khống (BR-ORD-01)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 5: UC-C07: MANAGE MY ORDERS (RANK 5)
+         ==================================================================== -->
+    <section id="screen-uc-c07" class="prototype-screen">
+      <div class="layout-card">
+        <div class="layout-card-header">
+          <h3 class="layout-card-title">📦 Lịch Sử & Theo Dõi Đơn Hàng Của Tôi</h3>
+        </div>
+
+        <div class="order-filter-tabs">
+          <button class="order-tab-btn active" data-tab="all" onclick="filterOrderTab('all')">Tất cả</button>
+          <button class="order-tab-btn" data-tab="pending" onclick="filterOrderTab('pending')">Chờ xác nhận</button>
+          <button class="order-tab-btn" data-tab="confirmed" onclick="filterOrderTab('confirmed')">Đã xác nhận</button>
+          <button class="order-tab-btn" data-tab="shipping" onclick="filterOrderTab('shipping')">Đang giao</button>
+          <button class="order-tab-btn" data-tab="delivered" onclick="filterOrderTab('delivered')">Thành công</button>
+          <button class="order-tab-btn" data-tab="cancelled" onclick="filterOrderTab('cancelled')">Đã hủy</button>
+        </div>
+
+        <div id="ordersListContainer">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SCREEN 6: UC-M08: MANAGE GOODS RECEIPTS (WAREHOUSE STAFF) (RANK 6)
+         ==================================================================== -->
+    <section id="screen-uc-m08" class="prototype-screen">
+      <div class="layout-card" style="border-top: 4px solid #0f172a;">
+        <div class="layout-card-header">
+          <div>
+            <h3 class="layout-card-title">📦 Lập Phiếu Nhập Kho & Quản Lý Lô Nông Sản Mới (BR-GR-01..04)</h3>
+            <span style="font-size: 12px; color: #64748b;">Dành riêng cho Nhân viên Kho (Warehouse Staff) tiếp nhận hàng từ Nhà cung cấp</span>
+          </div>
+          <span class="tag-badge actor-badge">Warehouse Staff Role</span>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label required">Nhà cung cấp đối tác (BR-SUP-01)</label>
+            <select id="whSupplierSelect" class="form-control">
+              <option value="Hợp tác xã Rau sạch Đà Lạt">Hợp tác xã Rau sạch Đà Lạt (Mã: SUP-DL01)</option>
+              <option value="Mộc Châu Organic Eco-Farm">Mộc Châu Organic Eco-Farm (Mã: SUP-MC02)</option>
+              <option value="Trang trại Sinh học Ba Vì">Trang trại Sinh học Ba Vì (Mã: SUP-BV03)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label required">Số hóa đơn / Chứng từ giao nhận</label>
+            <input type="text" id="whInvoiceNo" class="form-control" value="INV-DL-8892" placeholder="VD: INV-DL-8892">
+          </div>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label class="form-label required">Ngày lập phiếu nhập kho</label>
+            <input type="date" id="whReceiptDate" class="form-control" value="2026-10-23">
+          </div>
+          <div class="form-group" style="display: flex; align-items: center; gap: 10px; margin-top: 24px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+              <input type="checkbox" id="whDelayedToggle">
+              <span>Khởi tạo trạng thái lô "Delayed" (Chờ bán theo FEFO BR-BAT-03)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Receipt Line Items Table -->
+        <div style="margin-top: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <h4 style="font-size: 14px; font-weight: 700; color: #0f172a;">Danh mục Lô nông sản nhập kho:</h4>
+            <button class="btn-secondary" style="font-size: 12px; padding: 4px 10px;" onclick="addWhItemRow()">+ Thêm dòng sản phẩm</button>
+          </div>
+
+          <table class="wh-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Sản phẩm (SKU)</th>
+                <th style="width: 15%;">Mã Lô (Batch No)</th>
+                <th style="width: 12%;">Ngày SX (MFG)</th>
+                <th style="width: 14%;">Hạn Dùng (EXP)</th>
+                <th style="width: 10%;">Số Lượng</th>
+                <th style="width: 12%;">Đơn Giá Nhập</th>
+                <th style="width: 12%;">Thành Tiền</th>
+                <th style="width: 5%;">Xóa</th>
+              </tr>
+            </thead>
+            <tbody id="whReceiptItemsBody">
+              <tr>
+                <td>
+                  <select class="form-control wh-prod-select" onchange="recalcWhTotal()">
+                    <option value="1">FF-VEG-001 - Rau Xà Lách Romaine Hữu Cơ</option>
+                    <option value="2">FF-VEG-002 - Cà Chua Cherry Vàng Organic</option>
+                    <option value="3">FF-VEG-003 - Cải Bó Xôi Hữu Cơ (Spinach)</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="text" class="form-control" value="LOT-20261023-DL01">
+                </td>
+                <td>
+                  <input type="date" class="form-control wh-mfg" value="2026-10-22">
+                </td>
+                <td>
+                  <input type="date" class="form-control wh-exp" value="2026-10-28" onchange="validateWhDates(this)">
+                </td>
+                <td>
+                  <input type="number" class="form-control wh-qty" value="100" min="1" onchange="recalcWhTotal()">
+                </td>
+                <td>
+                  <input type="number" class="form-control wh-price" value="22000" min="1000" step="500" onchange="recalcWhTotal()">
+                </td>
+                <td class="wh-line-total" style="font-weight: 700; color: #059669; vertical-align: middle;">
+                  2,200,000 ₫
+                </td>
+                <td>
+                  <button class="btn-danger" style="padding: 4px 8px; font-size: 12px;" onclick="this.closest('tr').remove(); recalcWhTotal();">✕</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="display: flex; justify-content: flex-end; align-items: center; gap: 16px; margin-top: 16px;">
+            <div style="font-size: 15px; font-weight: 700;">
+              Tổng giá trị phiếu nhập kho: <span id="whGrandTotal" style="color: #059669; font-size: 18px;">2,200,000 ₫</span>
+            </div>
+            <button class="btn-primary" style="padding: 10px 20px;" onclick="submitGoodsReceipt()">
+              💾 Lưu Phiếu Nhập & In Biên Bản (BR-GR-01)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       MODALS SYSTEM
+       ==================================================================== -->
+  <!-- Product Detail Modal -->
+  <div id="productDetailModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Thông Tin Nông Sản & Chứng Nhận Hữu Cơ</h3>
+        <button class="modal-close-btn" onclick="closeModal('productDetailModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="productDetailBody">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit Address Modal -->
+  <div id="addressModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 id="addrModalTitle">Thêm Địa Chỉ Giao Hàng Mới</h3>
+        <button class="modal-close-btn" onclick="closeModal('addressModal')">&times;</button>
+      </div>
+      <form id="addrForm" onsubmit="saveAddress(event)">
+        <div class="modal-body">
+          <input type="hidden" id="addrIdInput">
+          <div class="form-group">
+            <label class="form-label required">Tên người nhận</label>
+            <input type="text" id="addrRecipient" class="form-control" required placeholder="VD: Nguyễn Thị Lan">
+          </div>
+          <div class="form-group">
+            <label class="form-label required">Số điện thoại liên hệ (10 chữ số)</label>
+            <input type="tel" id="addrPhone" class="form-control" required pattern="0[0-9]{9}" placeholder="VD: 0912345678">
+            <span class="form-text-help">Định dạng số điện thoại Việt Nam hợp lệ (E3.1).</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label required">Số nhà, tên đường, ngõ/ngách</label>
+            <input type="text" id="addrStreet" class="form-control" required placeholder="VD: Số 15 Liễu Giai">
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label required">Phường / Xã</label>
+              <input type="text" id="addrWard" class="form-control" required placeholder="VD: Phường Liễu Giai">
+            </div>
+            <div class="form-group">
+              <label class="form-label required">Quận / Huyện</label>
+              <input type="text" id="addrDistrict" class="form-control" required placeholder="VD: Quận Ba Đình">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label required">Tỉnh / Thành phố</label>
+            <input type="text" id="addrCity" class="form-control" value="Hà Nội" required>
+          </div>
+          <div class="form-group">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">
+              <input type="checkbox" id="addrIsDefault">
+              <span>Đặt làm địa chỉ nhận hàng mặc định (BR-AUTH-03)</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-secondary" onclick="closeModal('addressModal')">Hủy</button>
+          <button type="submit" class="btn-primary">Lưu Địa Chỉ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="orderConfirmationModal" class="modal-overlay">
+    <div class="modal-container" style="max-width: 500px; text-align: center;">
+      <div class="modal-body" style="padding: 36px 24px;">
+        <div style="width: 60px; height: 60px; border-radius: 50%; background: #d1fae5; color: #059669; font-size: 32px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto;">
+          ✓
+        </div>
+        <h3 style="font-size: 20px; font-weight: 800; color: #064e3b; margin-bottom: 6px;">ĐẶT HÀNG THÀNH CÔNG!</h3>
+        <p style="font-size: 13px; color: #64748b; margin-bottom: 20px;">Hệ thống đã tự động khóa tồn kho lô vật lý theo quy tắc FEFO và chuyển thông tin đến nhân viên bán hàng.</p>
+
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; text-align: left; font-size: 13px; margin-bottom: 20px;">
+          <div style="margin-bottom: 6px;">Mã đơn hàng: <strong id="confirmOrderId" style="color: #0f172a;"></strong></div>
+          <div style="margin-bottom: 6px;">Tổng thanh toán: <strong id="confirmOrderTotal" style="color: #059669;"></strong></div>
+          <div style="margin-bottom: 6px;">Phương thức: <span id="confirmOrderPayment"></span></div>
+          <div>Địa chỉ nhận hàng: <span id="confirmOrderAddress" style="color: #475569;"></span></div>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button class="btn-secondary" style="flex: 1;" onclick="closeModal('orderConfirmationModal'); switchScreen('screen-uc-c01');">Tiếp tục mua hàng</button>
+          <button class="btn-primary" style="flex: 1;" onclick="closeModal('orderConfirmationModal'); switchScreen('screen-uc-c07');">Theo dõi đơn hàng →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Detail & Timeline Modal -->
+  <div id="orderDetailModal" class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3>Hành Trình & Chi Tiết Đơn Hàng</h3>
+        <button class="modal-close-btn" onclick="closeModal('orderDetailModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="orderDetailBody">
+        <!-- Rendered dynamically -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('orderDetailModal')">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rating & Review Modal -->
+  <div id="reviewModal" class="modal-overlay">
+    <div class="modal-container" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3>Đánh Giá Chất Lượng Nông Sản Đã Giao (BR-FB-01)</h3>
+        <button class="modal-close-btn" onclick="closeModal('reviewModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="reviewOrderIdInput">
+        <input type="hidden" id="reviewStarsInput" value="5">
+        <p style="font-size: 13px; color: #64748b; margin-bottom: 14px;">Quý khách vui lòng đánh giá độ tươi ngon của nông sản và dịch vụ giao hàng:</p>
+
+        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 18px; font-size: 32px;">
+          <span class="star-rating-btn" style="cursor: pointer; color: #f59e0b;" onclick="setRating(1)">★</span>
+          <span class="star-rating-btn" style="cursor: pointer; color: #f59e0b;" onclick="setRating(2)">★</span>
+          <span class="star-rating-btn" style="cursor: pointer; color: #f59e0b;" onclick="setRating(3)">★</span>
+          <span class="star-rating-btn" style="cursor: pointer; color: #f59e0b;" onclick="setRating(4)">★</span>
+          <span class="star-rating-btn" style="cursor: pointer; color: #f59e0b;" onclick="setRating(5)">★</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Nhận xét chi tiết (tùy chọn):</label>
+          <textarea id="reviewComment" class="form-control" rows="3" placeholder="Rau củ rất tươi, đóng gói cẩn thận..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('reviewModal')">Hủy</button>
+        <button class="btn-primary" onclick="submitReview()">Gửi Đánh Giá</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Goods Receipt Invoice Preview Modal -->
+  <div id="goodsReceiptModal" class="modal-overlay">
+    <div class="modal-container" style="max-width: 650px;">
+      <div class="modal-header">
+        <h3>Biên Bản Phiếu Nhập Kho Hoàn Tất</h3>
+        <button class="modal-close-btn" onclick="closeModal('goodsReceiptModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="receiptInvoicePreview" class="invoice-paper">
+          <!-- Rendered dynamically -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('goodsReceiptModal')">Đóng</button>
+        <button class="btn-primary" onclick="window.print()">🖨️ In Phiếu Nhập Kho</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Core Prototype Script -->
+  <script src="app.js"></script>
+</body>
+</html>

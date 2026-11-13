@@ -1,0 +1,301 @@
+{
+  "CUSTOMER": {
+    "CustomerId": "7",
+    "Authenticated": true,
+    "claim": "customer_id=7",
+    "untrustedHeader": "X-Customer-Id=99 grants no identity"
+  },
+  "CATALOG": {
+    "ProductId": "1",
+    "ProductName": "Greens",
+    "IsActive": true,
+    "CategoryId": 1,
+    "BatchId": "1",
+    "RetailPrice": "10000",
+    "DiscountRate": 0,
+    "SaleStatus": "ACTIVE",
+    "ExpiryDate": "2099-01-01",
+    "CurrentStock": 10,
+    "ReservedStock": 3
+  },
+  "CART": {
+    "CartId": "1",
+    "CustomerId": "7",
+    "Items": [
+      {
+        "ProductId": "1",
+        "Quantity": 2
+      }
+    ]
+  },
+  "ADDRESS": {
+    "AddressId": "2",
+    "CustomerId": "7",
+    "RecipientName": "Tester",
+    "RecipientPhone": "0912345678",
+    "StreetAddress": "Test street",
+    "Latitude": 10,
+    "Longitude": 105,
+    "IsDefault": false
+  },
+  "CHECKOUT": {
+    "AddressId": "2",
+    "PaymentMethod": "Cod",
+    "CheckoutReference": "ref-001",
+    "IdempotencyKey": "key-001",
+    "DistanceKm": 1,
+    "SubTotal": "20000",
+    "ShippingFee": "20000",
+    "Total": "40000"
+  },
+  "ORDER": {
+    "OrderId": "1",
+    "CustomerId": "7",
+    "OrderStatus": "PendingUnpaid",
+    "PaymentStatus": "Unpaid",
+    "SubTotal": "20000",
+    "TotalAmount": "40000",
+    "ShippingFee": "20000",
+    "Details": [
+      {
+        "ProductId": "1",
+        "BatchId": "1",
+        "Quantity": 2,
+        "UnitPrice": "10000",
+        "LineTotal": "20000"
+      }
+    ]
+  },
+  "FEFO": {
+    "batches": [
+      {
+        "BatchId": "2",
+        "ExpiryDate": "2099-01-03",
+        "CurrentStock": 3,
+        "ReservedStock": 1
+      },
+      {
+        "BatchId": "1",
+        "ExpiryDate": "2099-01-01",
+        "CurrentStock": 5,
+        "ReservedStock": 0
+      }
+    ],
+    "Quantity": 6,
+    "expectedLines": "batch 1:5 units, then batch 2:1 unit; SubTotal=60000"
+  },
+  "SESSION": {
+    "Active": true,
+    "QueryResult": "typed sentinel rows arranged per method",
+    "calls": "Capture parameterized SQL, ordered arguments, token and call order. No live DB."
+  },
+  "NOTICE": {
+    "RawBody": "{ \"amount\" : 100,\n \"description\":\"Thanh toÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡n\" }\n",
+    "Signature": "Apikey test-signature",
+    "ProviderReference": "provider-123"
+  },
+  "CLOCK": {
+    "today": "Capture UTC date at Arrange for before/on/after expiry cases; detect UTC-day rollover. Explicit asOf when accepted. No assumed clock injection seam."
+  },
+  "AddressDto": {
+    "AddressId": "2",
+    "RecipientName": "Tester",
+    "RecipientPhone": "0912345678",
+    "StreetAddress": "Test street",
+    "Latitude": 10,
+    "Longitude": 105,
+    "IsDefault": false
+  },
+  "AddressInputDto": {
+    "AddressId": "2",
+    "RecipientName": "Tester",
+    "RecipientPhone": "0912345678",
+    "StreetAddress": "Test street",
+    "IsDefault": false
+  },
+  "BatchOfferDto": {
+    "BatchId": "1",
+    "ExpiryDate": "Typed DateOnly value arranged by the case",
+    "Price": "Sample",
+    "Clearance": false
+  },
+  "CancelOrderDto": {
+    "OrderId": "1",
+    "Reason": "Changed mind"
+  },
+  "CartChangeDto": {
+    "ProductId": "1",
+    "Quantity": 2
+  },
+  "CartIdentityDto": {
+    "CustomerId": "7",
+    "SessionId": "1"
+  },
+  "CartLineDto": {
+    "ProductId": "1",
+    "Quantity": 2,
+    "AvailableQuantity": 1,
+    "CurrentPrice": "Sample",
+    "LineTotal": "Sample"
+  },
+  "CartResultDto": {
+    "Lines": [],
+    "SubTotal": "Sample",
+    "CanCheckout": false,
+    "Warnings": []
+  },
+  "CatalogQueryDto": {
+    "Keyword": "Sample",
+    "CategoryId": "1",
+    "ClearanceOnly": false
+  },
+  "CatalogResultDto": {
+    "Items": [],
+    "Categories": [],
+    "Alternatives": []
+  },
+  "CategoryDto": {
+    "CategoryId": "1",
+    "Name": "Sample"
+  },
+  "CheckoutInputDto": {
+    "AddressId": "2"
+  },
+  "CheckoutLineDto": {
+    "ProductId": "1",
+    "BatchId": "1",
+    "Quantity": 2,
+    "UnitPrice": "Sample",
+    "Discount": "Sample"
+  },
+  "CheckoutSummaryDto": {
+    "SubTotal": "Sample",
+    "ShippingFee": "Sample",
+    "DistanceKm": 1,
+    "Total": "Sample",
+    "Lines": []
+  },
+  "GeoPointDto": {
+    "Latitude": 10,
+    "Longitude": 105
+  },
+  "GuardFactsDto": {
+    "FirstOrder": false,
+    "PhoneConfirmed": "0912345678",
+    "VerifiedPayment": false,
+    "CompleteReceipt": false,
+    "ConfirmedCause": "Sample",
+    "CapturedGoods": "Sample",
+    "CapturedShipping": "Sample",
+    "SettledRefund": "Sample"
+  },
+  "NotificationDto": {
+    "OrderId": "1",
+    "EventCode": "Sample"
+  },
+  "OperationResultDto": {
+    "Success": false,
+    "MessageCode": "Sample"
+  },
+  "OrderConfirmationDto": {
+    "OrderId": "1",
+    "OrderNumber": "Sample",
+    "Status": "Typed OrderStatus value arranged by the case",
+    "PaymentStatus": "Typed PaymentStatus value arranged by the case",
+    "Total": "Sample"
+  },
+  "OrderDetailsDto": {
+    "Order": "Typed OrderSummaryDto value arranged by the case",
+    "Address": "Typed AddressDto value arranged by the case",
+    "PaymentStatus": "Typed PaymentStatus value arranged by the case",
+    "Lines": [],
+    "Return": "Typed ReturnSummaryDto? value arranged by the case"
+  },
+  "OrderLineDto": {
+    "ProductName": "Sample",
+    "Quantity": 2,
+    "UnitPrice": "Sample",
+    "LineTotal": "Sample"
+  },
+  "OrderListDto": {
+    "Orders": []
+  },
+  "OrderReviewDto": {
+    "OrderId": "1",
+    "Rating": 5,
+    "Comment": "Fresh produce"
+  },
+  "OrderSummaryDto": {
+    "OrderId": "1",
+    "OrderNumber": "Sample",
+    "OrderDate": "Typed DateTimeOffset value arranged by the case",
+    "Status": "Typed OrderStatus value arranged by the case",
+    "Total": "Sample"
+  },
+  "PaymentNoticeDto": {
+    "RawBody": "{ \"amount\" : 100,\n \"description\":\"Thanh toÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¡n\" }\n",
+    "Signature": "Apikey test-signature",
+    "ProviderReference": "ProviderReference-001"
+  },
+  "PaymentQrDto": {
+    "QrPayload": "Sample",
+    "ExpiresAt": "Typed DateTimeOffset value arranged by the case"
+  },
+  "PaymentQrRequestDto": {
+    "CheckoutReference": "CheckoutReference-001"
+  },
+  "PaymentResultDto": {
+    "Accepted": false,
+    "Duplicate": false,
+    "PaymentStatus": "Typed PaymentStatus value arranged by the case"
+  },
+  "PayoutOutcomeDto": {
+    "Outcome": "Sample",
+    "ProviderReference": "ProviderReference-001",
+    "SettledAmount": "Sample"
+  },
+  "PlaceOrderDto": {
+    "AddressId": "2",
+    "PaymentMethod": "Cod",
+    "CheckoutReference": "CheckoutReference-001",
+    "IdempotencyKey": "IdempotencyKey-001"
+  },
+  "ProductDetailsDto": {
+    "Product": "Typed ProductSummaryDto value arranged by the case",
+    "Description": "Sample",
+    "AvailableBatches": []
+  },
+  "ProductSummaryDto": {
+    "ProductId": "1",
+    "Name": "Sample",
+    "Unit": "Sample",
+    "AvailableQuantity": 1,
+    "CurrentPrice": "Sample"
+  },
+  "ProfileResultDto": {
+    "CustomerId": "7",
+    "FullName": "Tester",
+    "Phone": "0912345678",
+    "Email": "tester@example.com",
+    "Addresses": []
+  },
+  "ProfileUpdateDto": {
+    "FullName": "Tester",
+    "Email": "tester@example.com"
+  },
+  "ReturnSummaryDto": {
+    "FailureReason": "Sample",
+    "ReceiptStatus": "Sample",
+    "RefundStatus": "Sample",
+    "GoodsRefunded": "Sample",
+    "ShippingRefunded": "Sample",
+    "InventoryDisposition": "Sample"
+  },
+  "VerifiedPaymentDto": {
+    "ProviderReference": "ProviderReference-001",
+    "CheckoutReference": "CheckoutReference-001",
+    "GoodsAmount": "Sample",
+    "ShippingAmount": "Sample",
+    "VerifiedAt": "Typed DateTimeOffset value arranged by the case"
+  }
+}

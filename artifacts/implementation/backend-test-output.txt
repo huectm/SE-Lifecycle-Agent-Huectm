@@ -1,0 +1,248 @@
+✔ delivery boundary 0 (3.7059ms)
+✔ delivery boundary 0.999 (0.1682ms)
+✔ delivery boundary 1 (0.1959ms)
+✔ delivery boundary 2.999 (0.1059ms)
+✔ delivery boundary 3 (0.0626ms)
+✔ delivery boundary 10 (0.0883ms)
+✔ delivery rejects -1 (0.3154ms)
+✔ delivery rejects NaN (0.0732ms)
+✔ delivery rejects Infinity (0.0818ms)
+✔ delivery rejects 10.001 (0.06ms)
+✔ exact VND discount 0 (1.148ms)
+✔ exact VND discount 10 (0.2012ms)
+✔ exact VND discount 50 (0.1122ms)
+✔ exact VND discount 10.25 (0.0759ms)
+✔ fractional VND does not silently round (3.6698ms)
+✔ expired batch is rejected (0.2309ms)
+✔ money beyond JS safe integer stays exact (2.4573ms)
+✔ transaction rolls back and preserves original error (0.9898ms)
+✔ aborted operation never starts transaction (0.1736ms)
+✔ catalog empty search returns six alternatives (0.5771ms)
+✔ catalog does not expose delisted product detail (0.2576ms)
+✔ cart clamps requested quantity to live stock (0.8234ms)
+✔ cart rejects quantity 0 (0.1392ms)
+✔ cart rejects quantity -1 (0.3136ms)
+✔ cart rejects quantity 1.5 (0.2151ms)
+✔ cart rejects quantity NaN (0.0847ms)
+✔ cart identity is server resolved (0.3094ms)
+✔ cart marks expired or missing batch not check-outable (0.5303ms)
+✔ remove item returns recalculated empty cart (0.5272ms)
+✔ profile updates only name/email, never trusted customer identity (0.749ms)
+✔ profile rejects malformed email before write (0.2814ms)
+✔ address ownership rejects another customers address (0.4423ms)
+✔ address used by active order cannot be deleted (0.3182ms)
+✔ checkout accepts COD through acceptOrder and independent unpaid branch (3.2163ms)
+✔ checkout FEFO splits quantities over ordered batches (30.2343ms)
+✔ checkout insufficient stock writes nothing (0.4595ms)
+✔ checkout persistence failure rolls back reservation and all transition evidence (0.5027ms)
+✔ prepaid flow fails closed while correlation policy remains TBD (0.1939ms)
+✔ forged transition snapshot is rejected (0.2621ms)
+✔ cancellation cannot run from Packing (0.4983ms)
+✔ review enforces Delivered and 1..5 rating (0.5291ms)
+✔ history and detail are restricted to authenticated owner (0.3832ms)
+✔ SQL search binds malicious keyword as data (0.4059ms)
+✔ DI resolves all five controllers and exactly 24 transition handlers (2.1682ms)
+✔ HTTP exposes JSON, blocks malformed payload and does not trust identity fields (124.8692ms)
+✔ catalog details and clearance expose typed batch offers (1.0903ms)
+✔ profile address add and default select preserve owned values (0.6154ms)
+✔ address geocoding error cannot persist a guessed coordinate (0.4256ms)
+✔ address delete succeeds only when no active order references it (0.3204ms)
+✔ profile and cart reject missing server identity (0.3093ms)
+✔ checkout rejects an empty cart and inaccessible address (0.4766ms)
+✔ QR and later payment explicitly preserve unresolved correlation boundary (0.5525ms)
+✔ order detail maps price strings, address and independent payment state (0.5769ms)
+✔ reorder copies current availability and reports missing items (1.0836ms)
+✔ delivered order accepts one review and rejects duplicates (1.0378ms)
+✔ cancellation dispatch releases stock and records audit before commit (0.9305ms)
+✔ entity setters cannot bypass stock guards (1.5825ms)
+ℹ tests 57
+ℹ suites 0
+ℹ pass 57
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 586.8335
+ℹ start of coverage report
+ℹ -----------------------------------------------------------------------------------------------
+ℹ file                                          | line % | branch % | funcs % | uncovered lines
+ℹ -----------------------------------------------------------------------------------------------
+ℹ src                                           |        |          |         | 
+ℹ  FreshFood-API                                |        |          |         | 
+ℹ   ApiCompositionRoot.js                       | 100.00 |    94.44 |  100.00 | 
+ℹ   bindings.js                                 | 100.00 |   100.00 |  100.00 | 
+ℹ   class-catalog.js                            | 100.00 |   100.00 |  100.00 | 
+ℹ   composition.js                              | 100.00 |   100.00 |  100.00 | 
+ℹ   Controllers                                 |        |          |         | 
+ℹ    CartController.js                          | 100.00 |   100.00 |   25.00 | 
+ℹ    CatalogController.js                       | 100.00 |   100.00 |   20.00 | 
+ℹ    CheckoutController.js                      | 100.00 |   100.00 |   25.00 | 
+ℹ    MyOrdersController.js                      | 100.00 |   100.00 |   16.67 | 
+ℹ    ProfileController.js                       | 100.00 |   100.00 |   16.67 | 
+ℹ   DTOs                                        |        |          |         | 
+ℹ    AddressDto.js                              |  65.22 |   100.00 |    0.00 | 15-22
+ℹ    AddressInputDto.js                         |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    BatchOfferDto.js                           |  70.59 |   100.00 |    0.00 | 12-16
+ℹ    CancelOrderDto.js                          |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    CartChangeDto.js                           |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    CartIdentityDto.js                         |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    CartLineDto.js                             |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    CartResultDto.js                           |  70.59 |   100.00 |    0.00 | 12-16
+ℹ    CatalogQueryDto.js                         |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    CatalogResultDto.js                        |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    CategoryDto.js                             |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    CheckoutInputDto.js                        |  81.82 |   100.00 |    0.00 | 9-10
+ℹ    CheckoutLineDto.js                         |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    CheckoutSummaryDto.js                      |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    GeoPointDto.js                             |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    GuardFactsDto.js                           |  64.00 |   100.00 |    0.00 | 16-24
+ℹ    IsoDateTime.js                             |  90.00 |   100.00 |    0.00 | 9
+ℹ    NotificationDto.js                         |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    OperationResultDto.js                      |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    OrderConfirmationDto.js                    |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    OrderDetailsDto.js                         |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    OrderLineDto.js                            |  70.59 |   100.00 |    0.00 | 12-16
+ℹ    OrderListDto.js                            |  81.82 |   100.00 |    0.00 | 9-10
+ℹ    OrderReviewDto.js                          |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    OrderSummaryDto.js                         |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    PaymentNoticeDto.js                        |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    PaymentQrDto.js                            |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    PaymentQrRequestDto.js                     |  81.82 |   100.00 |    0.00 | 9-10
+ℹ    PaymentResultDto.js                        |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    PayoutOutcomeDto.js                        |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    PlaceOrderDto.js                           |  70.59 |   100.00 |    0.00 | 12-16
+ℹ    ProductDetailsDto.js                       |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    ProductSummaryDto.js                       |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    ProfileResultDto.js                        |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    ProfileUpdateDto.js                        |  76.92 |   100.00 |    0.00 | 10-12
+ℹ    ReturnSummaryDto.js                        |  66.67 |   100.00 |    0.00 | 14-20
+ℹ    TransitionCommand.js                       |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    TransitionResult.js                        |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    TransitionSnapshot.js                      |  60.61 |   100.00 |    0.00 | 20-32
+ℹ    VerifiedPaymentDto.js                      |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    VndAmountString.js                         |  90.00 |   100.00 |    0.00 | 9
+ℹ   http.js                                     | 100.00 |    66.67 |   80.00 | 
+ℹ   RegistrationMap.js                          | 100.00 |    68.75 |  100.00 | 
+ℹ   Services                                    |        |          |         | 
+ℹ    AuthenticatedPrincipal.js                  |  73.33 |   100.00 |    0.00 | 11-14
+ℹ    HttpTransport.js                           | 100.00 |   100.00 |    0.00 | 
+ℹ    ICartService.js                            | 100.00 |   100.00 |    0.00 | 
+ℹ    ICatalogService.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    ICheckoutService.js                        | 100.00 |   100.00 |    0.00 | 
+ℹ    ICurrentCustomer.js                        | 100.00 |   100.00 |    0.00 | 
+ℹ    IDistanceCalculator.js                     | 100.00 |   100.00 |    0.00 | 
+ℹ    IDistanceGateway.js                        | 100.00 |   100.00 |    0.00 | 
+ℹ    IGeocodingGateway.js                       | 100.00 |   100.00 |    0.00 | 
+ℹ    Implements                                 |        |          |         | 
+ℹ     AcceptOrderTransition.js                  | 100.00 |   100.00 |  100.00 | 
+ℹ     ApprovePendingPaidTransition.js           | 100.00 |   100.00 |  100.00 | 
+ℹ     ApprovePendingUnpaidTransition.js         | 100.00 |   100.00 |  100.00 | 
+ℹ     CancelConfirmedOrderTransition.js         | 100.00 |   100.00 |  100.00 | 
+ℹ     CancelPendingPaidTransition.js            | 100.00 |   100.00 |  100.00 | 
+ℹ     CancelPendingUnpaidTransition.js          | 100.00 |   100.00 |  100.00 | 
+ℹ     CaptureVerifiedPaymentTransition.js       | 100.00 |   100.00 |  100.00 | 
+ℹ     CartService.js                            | 100.00 |    90.91 |  100.00 | 
+ℹ     CatalogService.js                         | 100.00 |    94.74 |  100.00 | 
+ℹ     CheckoutService.js                        | 100.00 |    96.15 |  100.00 | 
+ℹ     CompleteCancelledFulfillmentTransition.js | 100.00 |   100.00 |  100.00 | 
+ℹ     CompleteDeliveredFulfillmentTransition.js | 100.00 |   100.00 |  100.00 | 
+ℹ     CompleteReturnedFulfillmentTransition.js  | 100.00 |   100.00 |  100.00 | 
+ℹ     ConfiguredNotificationPublisher.js        | 100.00 |   100.00 |   50.00 | 
+ℹ     ConfirmRefundSettlementTransition.js      | 100.00 |   100.00 |  100.00 | 
+ℹ     CurrentCustomer.js                        | 100.00 |   100.00 |  100.00 | 
+ℹ     DeliverOrderTransition.js                 | 100.00 |   100.00 |  100.00 | 
+ℹ     DispatchOrderTransition.js                | 100.00 |   100.00 |  100.00 | 
+ℹ     DistanceCalculator.js                     | 100.00 |   100.00 |   50.00 | 
+ℹ     EnterPendingPaidTransition.js             | 100.00 |   100.00 |  100.00 | 
+ℹ     EnterPendingUnpaidTransition.js           | 100.00 |   100.00 |  100.00 | 
+ℹ     FailDeliveryTransition.js                 | 100.00 |   100.00 |  100.00 | 
+ℹ     GoogleMapsDistanceAdapter.js              | 100.00 |   100.00 |   50.00 | 
+ℹ     GoogleMapsGeocodingAdapter.js             | 100.00 |   100.00 |   50.00 | 
+ℹ     InitializeUnpaidPaymentTransition.js      | 100.00 |   100.00 |  100.00 | 
+ℹ     MarkFullRefundTransition.js               | 100.00 |   100.00 |  100.00 | 
+ℹ     MarkPartialRefundTransition.js            | 100.00 |   100.00 |  100.00 | 
+ℹ     MyOrdersService.js                        | 100.00 |    87.50 |  100.00 | 
+ℹ     NotificationAdapter.js                    | 100.00 |   100.00 |   50.00 | 
+ℹ     ObserveRefundCandidateTransition.js       | 100.00 |   100.00 |  100.00 | 
+ℹ     PaymentNoticeHandler.js                   | 100.00 |   100.00 |    0.00 | 
+ℹ     ProfileService.js                         | 100.00 |    94.74 |  100.00 | 
+ℹ     ReceiveReturnedOrderTransition.js         | 100.00 |   100.00 |  100.00 | 
+ℹ     RecordUncertainRefundTransition.js        | 100.00 |   100.00 |  100.00 | 
+ℹ     SePayPaymentAdapter.js                    | 100.00 |   100.00 |   33.33 | 
+ℹ     shared.js                                 | 100.00 |    85.00 |  100.00 | 
+ℹ     StartEligibleRefundTransition.js          | 100.00 |   100.00 |  100.00 | 
+ℹ     StartPackingTransition.js                 | 100.00 |   100.00 |  100.00 | 
+ℹ     TransitionExecutor.js                     | 100.00 |    85.71 |   75.00 | 
+ℹ     TransitionHandler.js                      |  96.43 |    77.78 |  100.00 | 26
+ℹ     transitionRuntime.js                      | 100.00 |    85.71 |  100.00 | 
+ℹ     UnconfiguredPayoutAdapter.js              | 100.00 |   100.00 |    0.00 | 
+ℹ    IMyOrdersService.js                        | 100.00 |   100.00 |    0.00 | 
+ℹ    INotificationGateway.js                    | 100.00 |   100.00 |    0.00 | 
+ℹ    INotificationPublisher.js                  | 100.00 |   100.00 |    0.00 | 
+ℹ    IPaymentGateway.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    IPayoutPort.js                             | 100.00 |   100.00 |    0.00 | 
+ℹ    IProfileService.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    IStateTransition.js                        | 100.00 |   100.00 |    0.00 | 
+ℹ    ITransitionExecutor.js                     | 100.00 |   100.00 |    0.00 | 
+ℹ  FreshFood.Reposistory                        |        |          |         | 
+ℹ   Entities                                    |        |          |         | 
+ℹ    AuditLog.js                                | 100.00 |   100.00 |    0.00 | 
+ℹ    BatchInventory.js                          | 100.00 |    83.33 |  100.00 | 
+ℹ    BatchPricingPolicy.js                      | 100.00 |    68.75 |  100.00 | 
+ℹ    Cart.js                                    | 100.00 |    60.00 |   66.67 | 
+ℹ    CartItem.js                                | 100.00 |   100.00 |    0.00 | 
+ℹ    Customer.js                                | 100.00 |   100.00 |    0.00 | 
+ℹ    CustomerAddress.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    DeliveryAgent.js                           | 100.00 |   100.00 |    0.00 | 
+ℹ    DeliveryFailure.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    DeliveryFeePolicy.js                       | 100.00 |   100.00 |  100.00 | 
+ℹ    EntityId.js                                |  90.00 |   100.00 |    0.00 | 9
+ℹ    EntityState.js                             | 100.00 |    87.50 |  100.00 | 
+ℹ    IBatchPricingPolicy.js                     | 100.00 |   100.00 |    0.00 | 
+ℹ    IDeliveryFeePolicy.js                      | 100.00 |   100.00 |    0.00 | 
+ℹ    LocalDate.js                               |  90.00 |   100.00 |    0.00 | 9
+ℹ    Order.js                                   | 100.00 |   100.00 |    0.00 | 
+ℹ    OrderDetail.js                             | 100.00 |   100.00 |    0.00 | 
+ℹ    OrderPayment.js                            | 100.00 |   100.00 |    0.00 | 
+ℹ    OrderReview.js                             | 100.00 |   100.00 |    0.00 | 
+ℹ    OrderStatus.js                             | 100.00 |   100.00 |  100.00 | 
+ℹ    PaymentMethod.js                           | 100.00 |   100.00 |  100.00 | 
+ℹ    PaymentStatus.js                           | 100.00 |   100.00 |  100.00 | 
+ℹ    Product.js                                 | 100.00 |   100.00 |    0.00 | 
+ℹ    ProductCategory.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    Refund.js                                  | 100.00 |   100.00 |    0.00 | 
+ℹ    ReturnInspection.js                        | 100.00 |   100.00 |    0.00 | 
+ℹ    ReturnReceipt.js                           | 100.00 |   100.00 |    0.00 | 
+ℹ    ReturnReceiptItem.js                       | 100.00 |   100.00 |    0.00 | 
+ℹ    ShippingFeeSettlement.js                   | 100.00 |   100.00 |    0.00 | 
+ℹ    VndAmount.js                               | 100.00 |    83.33 |   57.14 | 
+ℹ   Repository                                  |        |          |         | 
+ℹ    BatchCriteria.js                           |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    DatabaseConnection.js                      | 100.00 |   100.00 |    0.00 | 
+ℹ    DatabaseTransaction.js                     | 100.00 |   100.00 |    0.00 | 
+ℹ    ICartRepository.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ    ICatalogRepository.js                      | 100.00 |   100.00 |    0.00 | 
+ℹ    ICheckoutRepository.js                     | 100.00 |   100.00 |    0.00 | 
+ℹ    IFefoBatchSpecification.js                 | 100.00 |   100.00 |    0.00 | 
+ℹ    Implements                                 |        |          |         | 
+ℹ     CartRepository.js                         | 100.00 |   100.00 |   20.00 | 
+ℹ     CatalogRepository.js                      | 100.00 |   100.00 |   33.33 | 
+ℹ     CheckoutRepository.js                     |  82.14 |   100.00 |   14.29 | 21-25
+ℹ     FefoBatchSpecification.js                 | 100.00 |   100.00 |    0.00 | 
+ℹ     MyOrdersRepository.js                     | 100.00 |   100.00 |   12.50 | 
+ℹ     OrderLifecycleRepository.js               | 100.00 |   100.00 |    7.14 | 
+ℹ     PostgreSqlSession.js                      | 100.00 |   100.00 |   25.00 | 
+ℹ     ProfileRepository.js                      |  81.48 |   100.00 |   14.29 | 21-25
+ℹ     sql.js                                    |  50.00 |    50.00 |   10.00 | 9-12 14-17 20-23
+ℹ     UnitOfWork.js                             | 100.00 |    88.89 |   66.67 | 
+ℹ    IMyOrdersRepository.js                     | 100.00 |   100.00 |    0.00 | 
+ℹ    IOrderLifecycleRepository.js               | 100.00 |   100.00 |    0.00 | 
+ℹ    IProfileRepository.js                      | 100.00 |   100.00 |    0.00 | 
+ℹ    IRepositorySession.js                      | 100.00 |   100.00 |    0.00 | 
+ℹ    IUnitOfWork.js                             | 100.00 |   100.00 |    0.00 | 
+ℹ    OrderLifecycleRecords.js                   |  68.42 |   100.00 |    0.00 | 13-18
+ℹ    TransactionWork.js                         | 100.00 |   100.00 |    0.00 | 
+ℹ -----------------------------------------------------------------------------------------------
+ℹ all files                                     |  92.95 |    89.82 |   43.16 | 
+ℹ -----------------------------------------------------------------------------------------------
+ℹ end of coverage report

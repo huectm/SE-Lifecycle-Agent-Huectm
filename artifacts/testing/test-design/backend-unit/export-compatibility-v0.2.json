@@ -1,0 +1,9 @@
+{
+  "authoring": "artifact-tool",
+  "compatibilityConversion": "OpenXML normalization via openpyxl load/save after native Excel rejected artifact export",
+  "canonicalTimestampTextRestored": [],
+  "sheetCount": 202,
+  "valuesAndFormulasUnchanged": true,
+  "mergedRangesUnchanged": true,
+  "templateImageBytesUnchanged": true
+}

@@ -1,0 +1,1058 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="SE-Lifecycle-Agent" version="24.7.17">
+  <diagram id="uc-c05-profile-addresses-design-classes-1" name="01 VOPC to Detailed Design Realization">
+    <mxGraphModel grid="1" page="1" pageWidth="6860" pageHeight="3180" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C05 - VOPC to Detailed Design Realization&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="6780" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="6780" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfilePage" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;ProfilePage&lt;/b&gt;&lt;br&gt;VOPC: ProfileAddressView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- api: ProfileApiClient&lt;br&gt;- state: ProfileResultDto?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Render(): View&lt;br&gt;+ OnGetProfileAsync(): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="500" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileAddressView" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;ProfileAddressView&lt;/b&gt;&lt;br&gt;VOPC: ProfileAddressView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- model: ProfileViewModel&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Build(): View&lt;br&gt;+ OnGetProfile(): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="835" width="500" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileApiClient" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;ProfileApiClient&lt;/b&gt;&lt;br&gt;VOPC: ProfileAddressView&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request:&lt;br&gt;ProfileUpdateDto): ProfileResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1140" y="190" width="500" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileViewModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;viewmodel&amp;gt;&amp;gt;&lt;br&gt;ProfileViewModel&lt;/b&gt;&lt;br&gt;VOPC: ProfileAddressView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- api: ProfileApiModel&lt;br&gt;- state: ProfileResultDto?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request:&lt;br&gt;ProfileUpdateDto): ProfileResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1140" y="835" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileApiModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;ProfileApiModel&lt;/b&gt;&lt;br&gt;VOPC: ProfileAddressView&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request:&lt;br&gt;ProfileUpdateDto): ProfileResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1140" y="1500" width="500" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;ProfileController&lt;/b&gt;&lt;br&gt;VOPC: ProfileController&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- service: IProfileService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProfileController(service:&lt;br&gt;IProfileService)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2160" y="190" width="500" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="IProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IProfileService&lt;/b&gt;&lt;br&gt;VOPC: ProfileService&lt;br&gt;Design: Backend DI contract&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request:&lt;br&gt;ProfileUpdateDto): ProfileResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2160" y="835" width="500" height="275" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;ProfileService&lt;/b&gt;&lt;br&gt;VOPC: ProfileService&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- profileRepository: IProfileRepository&lt;br&gt;- currentCustomer: ICurrentCustomer&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProfileService(profileRepository:&lt;br&gt;IProfileRepository, currentCustomer:&lt;br&gt;ICurrentCustomer, unitOfWork: IUnitOfWork,&lt;br&gt;geocodingGateway: IGeocodingGateway)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2160" y="1430" width="500" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="IProfileRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IProfileRepository&lt;/b&gt;&lt;br&gt;VOPC: ProfileService&lt;br&gt;Design: Repository&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCustomerAsync(customerId: Text):&lt;br&gt;Customer&lt;br&gt;+ GetAddressesAsync(customerId: Text):&lt;br&gt;Sequence&amp;lt;CustomerAddress&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="3180" y="190" width="500" height="295" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;ProfileRepository&lt;/b&gt;&lt;br&gt;VOPC: ProfileService&lt;br&gt;Design: Repository&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- session: IRepositorySession&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProfileRepository(session:&lt;br&gt;IRepositorySession)&lt;br&gt;+ GetCustomerAsync(customerId: Text):&lt;br&gt;Customer&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="3180" y="805" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="Customer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Customer&lt;/b&gt;&lt;br&gt;VOPC: Customer&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CustomerId: Text&lt;br&gt;+ FullName: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="4200" y="190" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CustomerAddress" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;CustomerAddress&lt;/b&gt;&lt;br&gt;VOPC: CustomerAddress&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ AddressId: Text&lt;br&gt;+ CustomerId: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="4200" y="765" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="Order" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Order&lt;/b&gt;&lt;br&gt;VOPC: Order&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ OrderId: Text&lt;br&gt;+ OrderNumber: Text&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ApplyFulfillment(expected: OrderStatus,&lt;br&gt;target: OrderStatus): Void&lt;br&gt;+ RecordPayment(expected: PaymentStatus,&lt;br&gt;target: PaymentStatus): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="4200" y="1340" width="500" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="IGeocodingGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IGeocodingGateway&lt;/b&gt;&lt;br&gt;VOPC: GeocodingBoundary&lt;br&gt;Design: Backend DI contract&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ResolveAsync(address: Text): GeoPointDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="5220" y="190" width="500" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="GoogleMapsGeocodingAdapter" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;GoogleMapsGeocodingAdapter&lt;/b&gt;&lt;br&gt;VOPC: GeocodingBoundary&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ResolveAsync(address: Text): GeoPointDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="5220" y="745" width="500" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="IUnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IUnitOfWork&lt;/b&gt;&lt;br&gt;VOPC: design support&lt;br&gt;Design: Unit of Work / transaction boundary&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ExecuteAsync(work: TransactionWork): Value&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="5220" y="1300" width="500" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="ICurrentCustomer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICurrentCustomer&lt;/b&gt;&lt;br&gt;VOPC: design support&lt;br&gt;Design: Backend DI contract&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ RequireCustomerId(): Text&lt;br&gt;+ GetCartIdentity(): CartIdentityDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="5220" y="1855" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="OperationResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;OperationResultDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Success: Boolean&lt;br&gt;+ MessageCode: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="190" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProfileResultDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CustomerId: Text&lt;br&gt;+ FullName: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="765" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileUpdateDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProfileUpdateDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ FullName: Text&lt;br&gt;+ Email: Text?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="1345" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="AddressInputDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;AddressInputDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ AddressId: Text?&lt;br&gt;+ RecipientName: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="1925" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="AddressDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;AddressDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ AddressId: Text&lt;br&gt;+ RecipientName: Text&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="6240" y="2505" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="ProfilePage" target="ProfileApiClient" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="255.0" />
+              <mxPoint x="652" y="352.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="ProfileApiClient" target="ProfileController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.14285714285714285;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="236.42857142857142" />
+              <mxPoint x="1672" y="352.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="ProfileController" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2326.6666666666665" y="803" />
+              <mxPoint x="2410.0" y="803" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="ProfileAddressView" target="ProfileViewModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="911.25" />
+              <mxPoint x="652" y="1007.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="ProfileViewModel" target="ProfileApiModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390.0" y="1468" />
+              <mxPoint x="1306.6666666666667" y="1468" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ProfileApiModel" target="ProfileController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.6666666666666666;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1473.3333333333333" y="1468" />
+              <mxPoint x="2128" y="1468" />
+              <mxPoint x="2128" y="547" />
+              <mxPoint x="2493.3333333333335" y="547" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="ProfileService" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2326.6666666666665" y="1142" />
+              <mxPoint x="2410.0" y="1142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="ProfileRepository" target="IProfileRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.3333333333333333;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3430.0" y="517" />
+              <mxPoint x="3346.6666666666665" y="517" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="ProfileService" target="IProfileRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.6666666666666666;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2493.3333333333335" y="1398" />
+              <mxPoint x="3148" y="1398" />
+              <mxPoint x="3148" y="533" />
+              <mxPoint x="3513.3333333333335" y="533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="ProfileService" target="ICurrentCustomer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.08333333333333333;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2692" y="1462.5" />
+              <mxPoint x="2692" y="1982.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="ProfileService" target="IUnitOfWork" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.16666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="1495.0" />
+              <mxPoint x="4168" y="1314" />
+              <mxPoint x="5188" y="1314" />
+              <mxPoint x="5188" y="1417.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="ProfileService" target="IGeocodingGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4140" y="1527.5" />
+              <mxPoint x="4140" y="477" />
+              <mxPoint x="5188" y="477" />
+              <mxPoint x="5188" y="307.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="Customer" target="CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4366.666666666667" y="733" />
+              <mxPoint x="4450.0" y="733" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" source="GoogleMapsGeocodingAdapter" target="IGeocodingGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" edge="1" parent="1" source="ProfileRepository" target="Customer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3712" y="891.25" />
+              <mxPoint x="3712" y="253.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="" edge="1" parent="1" source="ProfileRepository" target="CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="977.5" />
+              <mxPoint x="4168" y="828.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="" edge="1" parent="1" source="ProfileRepository" target="Order" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3712" y="1063.75" />
+              <mxPoint x="3712" y="1461.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="" edge="1" parent="1" source="Order" target="Customer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=0;entryX=0.6666666666666666;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4366.666666666667" y="1308" />
+              <mxPoint x="4732" y="1308" />
+              <mxPoint x="4732" y="485" />
+              <mxPoint x="4533.333333333333" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="" edge="1" parent="1" source="Order" target="CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4533.333333333333" y="1052" />
+              <mxPoint x="4450.0" y="1052" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="" edge="1" parent="1" source="ProfilePage" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.4;entryX=0;entryY=0.1111111111111111;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1108" y="320.0" />
+              <mxPoint x="1108" y="158" />
+              <mxPoint x="6208" y="158" />
+              <mxPoint x="6208" y="1953.888888888889" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="" edge="1" parent="1" source="ProfilePage" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6;entryX=0;entryY=0.125;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="385.0" />
+              <mxPoint x="652" y="719" />
+              <mxPoint x="6180" y="719" />
+              <mxPoint x="6180" y="797.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="" edge="1" parent="1" source="ProfilePage" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8;entryX=0;entryY=0.1111111111111111;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1108" y="450.0" />
+              <mxPoint x="1108" y="1280" />
+              <mxPoint x="6180" y="1280" />
+              <mxPoint x="6180" y="1373.888888888889" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="" edge="1" parent="1" source="ProfileAddressView" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.2222222222222222;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="987.5" />
+              <mxPoint x="1080" y="1268" />
+              <mxPoint x="6152" y="1268" />
+              <mxPoint x="6152" y="1982.7777777777778" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="" edge="1" parent="1" source="ProfileAddressView" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.2222222222222222;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="1063.75" />
+              <mxPoint x="652" y="1266" />
+              <mxPoint x="6124" y="1266" />
+              <mxPoint x="6124" y="1402.7777777777778" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="" edge="1" parent="1" source="ProfileApiClient" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2857142857142857;entryX=0;entryY=0.14285714285714285;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2100" y="282.85714285714283" />
+              <mxPoint x="2100" y="2541.4285714285716" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="" edge="1" parent="1" source="ProfileApiClient" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.42857142857142855;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2072" y="329.2857142857143" />
+              <mxPoint x="2072" y="1257" />
+              <mxPoint x="6096" y="1257" />
+              <mxPoint x="6096" y="2011.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="" edge="1" parent="1" source="ProfileApiClient" target="OperationResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5714285714285714;entryX=0;entryY=0.14285714285714285;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2128" y="375.71428571428567" />
+              <mxPoint x="2128" y="145" />
+              <mxPoint x="6180" y="145" />
+              <mxPoint x="6180" y="226.42857142857142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" value="" edge="1" parent="1" source="ProfileApiClient" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.7142857142857143;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="422.1428571428571" />
+              <mxPoint x="1672" y="717" />
+              <mxPoint x="6152" y="717" />
+              <mxPoint x="6152" y="830.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" value="" edge="1" parent="1" source="ProfileApiClient" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8571428571428571;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2044" y="468.57142857142856" />
+              <mxPoint x="2044" y="1256" />
+              <mxPoint x="5864" y="1256" />
+              <mxPoint x="5864" y="1431.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" value="" edge="1" parent="1" source="ProfileViewModel" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.16666666666666666;entryX=0;entryY=0.2857142857142857;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1672" y="892.5" />
+              <mxPoint x="1672" y="2577.8571428571427" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" value="" edge="1" parent="1" source="ProfileViewModel" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.4444444444444444;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2016" y="950.0" />
+              <mxPoint x="2016" y="2142" />
+              <mxPoint x="6208" y="2142" />
+              <mxPoint x="6208" y="2040.5555555555557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e32" value="" edge="1" parent="1" source="ProfileViewModel" target="OperationResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.2857142857142857;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1784" y="1007.5" />
+              <mxPoint x="1784" y="561" />
+              <mxPoint x="6180" y="561" />
+              <mxPoint x="6180" y="262.85714285714283" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" value="" edge="1" parent="1" source="ProfileViewModel" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.375;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1784" y="1065.0" />
+              <mxPoint x="1784" y="1169" />
+              <mxPoint x="6180" y="1169" />
+              <mxPoint x="6180" y="862.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" value="" edge="1" parent="1" source="ProfileViewModel" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8333333333333334;entryX=0;entryY=0.4444444444444444;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1756" y="1122.5" />
+              <mxPoint x="1756" y="1254" />
+              <mxPoint x="5836" y="1254" />
+              <mxPoint x="5836" y="1460.5555555555557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" value="" edge="1" parent="1" source="ProfileApiModel" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.16666666666666666;entryX=0;entryY=0.42857142857142855;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2072" y="1554.1666666666667" />
+              <mxPoint x="2072" y="2614.285714285714" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" value="" edge="1" parent="1" source="ProfileApiModel" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5555555555555556;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2128" y="1608.3333333333333" />
+              <mxPoint x="2128" y="2170" />
+              <mxPoint x="6180" y="2170" />
+              <mxPoint x="6180" y="2069.4444444444443" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" value="" edge="1" parent="1" source="ProfileApiModel" target="OperationResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.42857142857142855;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1784" y="1662.5" />
+              <mxPoint x="1784" y="1170" />
+              <mxPoint x="6124" y="1170" />
+              <mxPoint x="6124" y="299.2857142857143" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" value="" edge="1" parent="1" source="ProfileApiModel" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1728" y="1716.6666666666667" />
+              <mxPoint x="1728" y="1172" />
+              <mxPoint x="6152" y="1172" />
+              <mxPoint x="6152" y="895.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" value="" edge="1" parent="1" source="ProfileApiModel" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8333333333333334;entryX=0;entryY=0.5555555555555556;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2044" y="1770.8333333333335" />
+              <mxPoint x="2044" y="1849" />
+              <mxPoint x="5188" y="1849" />
+              <mxPoint x="5188" y="1567" />
+              <mxPoint x="6180" y="1567" />
+              <mxPoint x="6180" y="1489.4444444444443" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40" value="" edge="1" parent="1" source="ProfileController" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.16666666666666666;entryX=0;entryY=0.5714285714285714;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2692" y="244.16666666666666" />
+              <mxPoint x="2692" y="1252" />
+              <mxPoint x="5808" y="1252" />
+              <mxPoint x="5808" y="2650.714285714286" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" value="" edge="1" parent="1" source="ProfileController" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3120" y="298.3333333333333" />
+              <mxPoint x="3120" y="1240" />
+              <mxPoint x="5780" y="1240" />
+              <mxPoint x="5780" y="2098.3333333333335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" value="" edge="1" parent="1" source="ProfileController" target="OperationResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5714285714285714;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3148" y="352.5" />
+              <mxPoint x="3148" y="505" />
+              <mxPoint x="5864" y="505" />
+              <mxPoint x="5864" y="335.71428571428567" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e43" value="" edge="1" parent="1" source="ProfileController" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.625;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3092" y="406.66666666666663" />
+              <mxPoint x="3092" y="713" />
+              <mxPoint x="6096" y="713" />
+              <mxPoint x="6096" y="927.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" value="" edge="1" parent="1" source="ProfileController" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8333333333333334;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3064" y="460.83333333333337" />
+              <mxPoint x="3064" y="1238" />
+              <mxPoint x="5752" y="1238" />
+              <mxPoint x="5752" y="1518.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45" value="" edge="1" parent="1" source="IProfileService" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.16666666666666666;entryX=0;entryY=0.7142857142857143;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3092" y="880.8333333333334" />
+              <mxPoint x="3092" y="2687.1428571428573" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e46" value="" edge="1" parent="1" source="IProfileService" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.7777777777777778;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3036" y="926.6666666666666" />
+              <mxPoint x="3036" y="1837" />
+              <mxPoint x="5752" y="1837" />
+              <mxPoint x="5752" y="2127.222222222222" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e47" value="" edge="1" parent="1" source="IProfileService" target="OperationResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.7142857142857143;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2804" y="972.5" />
+              <mxPoint x="2804" y="541" />
+              <mxPoint x="6152" y="541" />
+              <mxPoint x="6152" y="372.1428571428571" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e48" value="" edge="1" parent="1" source="IProfileService" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2804" y="1018.3333333333333" />
+              <mxPoint x="2804" y="1182" />
+              <mxPoint x="6096" y="1182" />
+              <mxPoint x="6096" y="960.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e49" value="" edge="1" parent="1" source="IProfileService" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8333333333333334;entryX=0;entryY=0.7777777777777778;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2776" y="1064.1666666666667" />
+              <mxPoint x="2776" y="1296" />
+              <mxPoint x="5160" y="1296" />
+              <mxPoint x="5160" y="1595" />
+              <mxPoint x="6124" y="1595" />
+              <mxPoint x="6124" y="1547.2222222222222" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50" value="" edge="1" parent="1" source="ProfileService" target="Customer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4112" y="1560.0" />
+              <mxPoint x="4112" y="317.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e51" value="" edge="1" parent="1" source="ProfileService" target="CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.4166666666666667;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4084" y="1592.5" />
+              <mxPoint x="4084" y="892.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e52" value="" edge="1" parent="1" source="ProfileService" target="Order" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="1625.0" />
+              <mxPoint x="4168" y="1583.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e53" value="" edge="1" parent="1" source="ProfileService" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5833333333333334;entryX=0;entryY=0.8571428571428571;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3064" y="1657.5" />
+              <mxPoint x="3064" y="2723.5714285714284" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e54" value="" edge="1" parent="1" source="ProfileService" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.8888888888888888;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="1690.0" />
+              <mxPoint x="4168" y="2156.1111111111113" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e55" value="" edge="1" parent="1" source="ProfileService" target="OperationResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.8571428571428571;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4140" y="1722.5" />
+              <mxPoint x="4140" y="1737" />
+              <mxPoint x="5132" y="1737" />
+              <mxPoint x="5132" y="1012" />
+              <mxPoint x="5836" y="1012" />
+              <mxPoint x="5836" y="408.57142857142856" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e56" value="" edge="1" parent="1" source="ProfileService" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8333333333333334;entryX=0;entryY=0.875;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5104" y="1755.0" />
+              <mxPoint x="5104" y="1040" />
+              <mxPoint x="5864" y="1040" />
+              <mxPoint x="5864" y="992.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e57" value="" edge="1" parent="1" source="ProfileService" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.9166666666666666;entryX=0;entryY=0.8888888888888888;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6180" y="1787.5" />
+              <mxPoint x="6180" y="1576.111111111111" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e58" value="" edge="1" parent="1" source="IProfileRepository" target="Customer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4168" y="288.3333333333333" />
+              <mxPoint x="4168" y="381.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e59" value="" edge="1" parent="1" source="IProfileRepository" target="CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4056" y="386.66666666666663" />
+              <mxPoint x="4056" y="956.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e60" value="" edge="1" parent="1" source="ProfileResultDto" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="6490.0" y="1057" />
+              <mxPoint x="6772" y="1057" />
+              <mxPoint x="6772" y="2473" />
+              <mxPoint x="6490.0" y="2473" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1857.0" y="398.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label6" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1870.0" y="992.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label13" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="4388.666666666667" y="574.0" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication. VOPC origin and applied solution are tagged on each classifier; full attributes/operations are in subsequent detail views." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="3090" width="6740" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c05-profile-addresses-design-classes-2" name="02 Web View Classes">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1691" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C05 - Web View Classes&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfilePage" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;ProfilePage&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- api: ProfileApiClient&lt;br&gt;- state: ProfileResultDto?&lt;br&gt;- isBusy: Boolean&lt;br&gt;- errorCode: Text?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Render(): View&lt;br&gt;+ OnGetProfileAsync(): Void&lt;br&gt;+ OnUpdateProfileAsync(request: ProfileUpdateDto): Void&lt;br&gt;+ OnSaveAddressAsync(request: AddressInputDto): Void&lt;br&gt;+ OnSetDefaultAddressAsync(addressId: EntityId): Void&lt;br&gt;+ OnDeleteAddressAsync(addressId: EntityId): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="415" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;ProfileController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: IProfileService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileController(service: IProfileService)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileApiClient" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;ProfileApiClient&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: EntityId): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: EntityId): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="925" width="680" height="346" as="geometry" />
+        </mxCell>
+        <mxCell id="IProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IProfileService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="925" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="ProfilePage" target="ProfileApiClient" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="ProfileApiClient" target="ProfileController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1098.0" />
+              <mxPoint x="832" y="374.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="ProfileController" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="854.0" y="721.25" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1601" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c05-profile-addresses-design-classes-3" name="03 Mobile View Classes">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1714" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C05 - Mobile View Classes&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileAddressView" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;ProfileAddressView&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- model: ProfileViewModel&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Build(): View&lt;br&gt;+ OnGetProfile(): Void&lt;br&gt;+ OnUpdateProfile(request: ProfileUpdateDto): Void&lt;br&gt;+ OnSaveAddress(request: AddressInputDto): Void&lt;br&gt;+ OnSetDefaultAddress(addressId: EntityId): Void&lt;br&gt;+ OnDeleteAddress(addressId: EntityId): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="346" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileViewModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;viewmodel&amp;gt;&amp;gt;&lt;br&gt;ProfileViewModel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- api: ProfileApiModel&lt;br&gt;- state: ProfileResultDto?&lt;br&gt;- isBusy: Boolean&lt;br&gt;- errorCode: Text?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: EntityId): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: EntityId): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="415" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileApiModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;ProfileApiModel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: EntityId): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: EntityId): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="925" width="680" height="346" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;ProfileController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: IProfileService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileController(service: IProfileService)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="925" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="ProfileAddressView" target="ProfileViewModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="363.0" />
+              <mxPoint x="832" y="328.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="ProfileViewModel" target="ProfileApiModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="466.66666666666663" />
+              <mxPoint x="1128" y="1040.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="ProfileApiModel" target="ProfileController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1155.6666666666667" />
+              <mxPoint x="832" y="1109.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="937.0" y="1057.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1624" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c05-profile-addresses-design-classes-4" name="04 Application Services and Constructor Injection">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2304" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C05 - Application Services and Constructor Injection&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;ProfileController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: IProfileService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileController(service: IProfileService)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="IProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IProfileService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;ProfileService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- profileRepository: IProfileRepository&lt;br&gt;- currentCustomer: ICurrentCustomer&lt;br&gt;- unitOfWork: IUnitOfWork&lt;br&gt;- geocodingGateway: IGeocodingGateway&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileService(profileRepository: IProfileRepository,&lt;br&gt;currentCustomer: ICurrentCustomer, unitOfWork: IUnitOfWork,&lt;br&gt;geocodingGateway: IGeocodingGateway)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="484" as="geometry" />
+        </mxCell>
+        <mxCell id="IProfileRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IProfileRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCustomerAsync(customerId: Text): Customer&lt;br&gt;+ GetAddressesAsync(customerId: Text): Sequence&amp;lt;CustomerAddress&amp;gt;&lt;br&gt;+ HasActiveOrderAsync(customerId: Text, addressId: Text):&lt;br&gt;Boolean&lt;br&gt;+ SaveCustomerAsync(customer: Customer): Void&lt;br&gt;+ SaveAddressAsync(address: CustomerAddress): Void&lt;br&gt;+ DeleteAddressAsync(customerId: Text, addressId: Text): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="994" width="680" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;ProfileRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- session: IRepositorySession&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileRepository(session: IRepositorySession)&lt;br&gt;+ GetCustomerAsync(customerId: Text): Customer&lt;br&gt;+ GetAddressesAsync(customerId: Text): Sequence&amp;lt;CustomerAddress&amp;gt;&lt;br&gt;+ HasActiveOrderAsync(customerId: Text, addressId: Text):&lt;br&gt;Boolean&lt;br&gt;+ SaveCustomerAsync(customer: Customer): Void&lt;br&gt;+ SaveAddressAsync(address: CustomerAddress): Void&lt;br&gt;+ DeleteAddressAsync(customerId: Text, addressId: Text): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="994" width="680" height="392" as="geometry" />
+        </mxCell>
+        <mxCell id="ICurrentCustomer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICurrentCustomer&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RequireCustomerId(): Text&lt;br&gt;+ GetCartIdentity(): CartIdentityDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="994" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="IUnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IUnitOfWork&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ExecuteAsync(work: TransactionWork): Value&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1706" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="IGeocodingGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IGeocodingGateway&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ResolveAsync(address: Text): GeoPointDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1706" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="ProfileController" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="374.5" />
+              <mxPoint x="832" y="336.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="ProfileService" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.25;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="311.0" />
+              <mxPoint x="2168" y="336.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="ProfileRepository" target="IProfileRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="1190.0" />
+              <mxPoint x="1128" y="1099.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="ProfileService" target="IProfileRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="432.0" />
+              <mxPoint x="2168" y="962" />
+              <mxPoint x="832" y="962" />
+              <mxPoint x="832" y="1204.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="ProfileService" target="ICurrentCustomer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2426.6666666666665" y="962" />
+              <mxPoint x="2540.0" y="962" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ProfileService" target="IUnitOfWork" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.75;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="553.0" />
+              <mxPoint x="860" y="1795.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="ProfileService" target="IGeocodingGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2653.3333333333335" y="706" />
+              <mxPoint x="1872" y="706" />
+              <mxPoint x="1872" y="1674" />
+              <mxPoint x="1500.0" y="1674" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2214" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c05-profile-addresses-design-classes-5" name="05 Participating Entities 1">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="2213" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C05 - Participating Entities 1&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="Customer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Customer&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CustomerId: Text&lt;br&gt;+ FullName: Text&lt;br&gt;+ Phone: Text&lt;br&gt;+ Email: Text?&lt;br&gt;+ AuthProvider: Text&lt;br&gt;+ ProviderUserId: Text&lt;br&gt;+ IsPhoneVerified: Boolean&lt;br&gt;+ CreatedAt: DateTime&lt;br&gt;+ Addresses: Sequence&amp;lt;CustomerAddress&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="362" as="geometry" />
+        </mxCell>
+        <mxCell id="CustomerAddress" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;CustomerAddress&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ AddressId: Text&lt;br&gt;+ CustomerId: Text&lt;br&gt;+ RecipientName: Text&lt;br&gt;+ RecipientPhone: Text&lt;br&gt;+ StreetAddress: Text&lt;br&gt;+ Latitude: Decimal&lt;br&gt;+ Longitude: Decimal&lt;br&gt;+ IsDefault: Boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="339" as="geometry" />
+        </mxCell>
+        <mxCell id="Order" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Order&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderId: Text&lt;br&gt;+ OrderNumber: Text&lt;br&gt;+ CustomerId: Text&lt;br&gt;+ DeliveryAddressId: Text&lt;br&gt;+ ProcessedByStaffId: Integer&lt;br&gt;+ OrderDate: DateTime&lt;br&gt;+ SubTotal: VndAmount&lt;br&gt;+ DeliveryDistance: Decimal&lt;br&gt;+ ShippingFee: VndAmount&lt;br&gt;+ TotalAmount: VndAmount&lt;br&gt;+ PaymentMethod: PaymentMethod&lt;br&gt;+ PaymentStatus: PaymentStatus&lt;br&gt;+ OrderStatus: OrderStatus&lt;br&gt;+ IsFirstOrder: Boolean&lt;br&gt;+ DeliveryAgentId: Text&lt;br&gt;+ PhoneConfirmationStatus: Text&lt;br&gt;+ PhoneContactedByStaffId: Integer&lt;br&gt;+ PhoneContactedAt: DateTime&lt;br&gt;+ PhoneConfirmationNote: Text&lt;br&gt;+ CancellationReason: Text&lt;br&gt;+ Details: Sequence&amp;lt;OrderDetail&amp;gt;&lt;br&gt;+ Customer: Customer&lt;br&gt;+ DeliveryAddress: CustomerAddress&lt;br&gt;+ Payments: Sequence&amp;lt;OrderPayment&amp;gt;&lt;br&gt;+ Failure: DeliveryFailure?&lt;br&gt;+ Return: ReturnReceipt?&lt;br&gt;+ Refund: Refund?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ApplyFulfillment(expected: OrderStatus, target: OrderStatus):&lt;br&gt;Void&lt;br&gt;+ RecordPayment(expected: PaymentStatus, target: PaymentStatus):&lt;br&gt;Void&lt;br&gt;+ Cancel(expected: OrderStatus, reason: Text): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="872" width="680" height="921" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="Customer" target="CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="371.0" />
+              <mxPoint x="832" y="359.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="951.0" y="307.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2123" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c05-profile-addresses-design-classes-6" name="06 DTO Contracts and Usage 1">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2320" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C05 - DTO Contracts and Usage 1&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;ProfileController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: IProfileService&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileController(service: IProfileService)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="IProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IProfileService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;ProfileService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- profileRepository: IProfileRepository&lt;br&gt;- currentCustomer: ICurrentCustomer&lt;br&gt;- unitOfWork: IUnitOfWork&lt;br&gt;- geocodingGateway: IGeocodingGateway&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProfileService(profileRepository: IProfileRepository,&lt;br&gt;currentCustomer: ICurrentCustomer, unitOfWork: IUnitOfWork,&lt;br&gt;geocodingGateway: IGeocodingGateway)&lt;br&gt;+ GetProfileAsync(): ProfileResultDto&lt;br&gt;+ UpdateProfileAsync(request: ProfileUpdateDto):&lt;br&gt;ProfileResultDto&lt;br&gt;+ SaveAddressAsync(request: AddressInputDto): AddressDto&lt;br&gt;+ SetDefaultAddressAsync(addressId: Text): ProfileResultDto&lt;br&gt;+ DeleteAddressAsync(addressId: Text): OperationResultDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="484" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProfileResultDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CustomerId: Text&lt;br&gt;+ FullName: Text&lt;br&gt;+ Phone: Text&lt;br&gt;+ Email: Text?&lt;br&gt;+ Addresses: Sequence&amp;lt;AddressDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="994" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="ProfileUpdateDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;ProfileUpdateDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ FullName: Text&lt;br&gt;+ Email: Text?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="994" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="AddressInputDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;AddressInputDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ AddressId: Text?&lt;br&gt;+ RecipientName: Text&lt;br&gt;+ RecipientPhone: Text&lt;br&gt;+ StreetAddress: Text&lt;br&gt;+ IsDefault: Boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="994" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="AddressDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;AddressDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ AddressId: Text&lt;br&gt;+ RecipientName: Text&lt;br&gt;+ RecipientPhone: Text&lt;br&gt;+ StreetAddress: Text&lt;br&gt;+ Latitude: Decimal&lt;br&gt;+ Longitude: Decimal&lt;br&gt;+ IsDefault: Boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1584" width="680" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="GeoPointDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;GeoPointDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Latitude: Decimal&lt;br&gt;+ Longitude: Decimal&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1584" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="ProfileController" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="282.25" />
+              <mxPoint x="832" y="287.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="ProfileService" target="IProfileService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.2;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="286.8" />
+              <mxPoint x="2168" y="287.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="ProfileController" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.25;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="346.66666666666663" y="591" />
+              <mxPoint x="88" y="591" />
+              <mxPoint x="88" y="1552" />
+              <mxPoint x="290.0" y="1552" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="ProfileController" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="374.5" />
+              <mxPoint x="832" y="962" />
+              <mxPoint x="2168" y="962" />
+              <mxPoint x="2168" y="1084.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="ProfileController" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="573.3333333333333" y="962" />
+              <mxPoint x="460.0" y="962" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ProfileController" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="466.75" />
+              <mxPoint x="1128" y="1094.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="IProfileService" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1386.6666666666667" y="515" />
+              <mxPoint x="860" y="515" />
+              <mxPoint x="860" y="1552" />
+              <mxPoint x="460.0" y="1552" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="IProfileService" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="385.3333333333333" />
+              <mxPoint x="1872" y="1174.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="IProfileService" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="888" y="385.3333333333333" />
+              <mxPoint x="888" y="1084.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="IProfileService" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1613.3333333333333" y="515" />
+              <mxPoint x="1500.0" y="515" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="ProfileService" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.4;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="383.6" />
+              <mxPoint x="2168" y="934" />
+              <mxPoint x="916" y="934" />
+              <mxPoint x="916" y="1742.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="ProfileService" target="AddressInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="ProfileService" target="ProfileResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1900" y="480.4" />
+              <mxPoint x="1900" y="1227" />
+              <mxPoint x="832" y="1227" />
+              <mxPoint x="832" y="1174.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" source="ProfileService" target="ProfileUpdateDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.8;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1928" y="577.2" />
+              <mxPoint x="1928" y="1094.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" edge="1" parent="1" source="ProfileResultDto" target="AddressDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.75;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460.0" y="1296" />
+              <mxPoint x="630.0" y="1296" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2230" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,49 @@
+﻿Analysis Class,Design Class / Component,Mapping Rationale
+UC-C01 / CatalogView,CatalogPage; CatalogApiClient; CatalogView; CatalogViewModel; CatalogApiModel,Web Pages / CallService; mobile MVVM; no frontend DI; shown together on page 1 with source/pattern tags.
+UC-C01 / CatalogController,CatalogController,API controller retained; service interface supplied by backend DI; shown together on page 1 with source/pattern tags.
+UC-C01 / CatalogService,ICatalogService; CatalogService; ICatalogRepository; CatalogRepository; IBatchPricingPolicy; BatchPricingPolicy,Layered application logic + service interface extraction + Repository / domain policies / backend DI; shown together on page 1 with source/pattern tags.
+UC-C01 / ProductCategory,ProductCategory,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C01 / Product,Product,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C01 / BatchInventory,BatchInventory,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C03 / CartView,CartPage; CartApiClient; CartView; CartViewModel; CartApiModel,Web Pages / CallService; mobile MVVM; no frontend DI; shown together on page 1 with source/pattern tags.
+UC-C03 / CartController,CartController,API controller retained; service interface supplied by backend DI; shown together on page 1 with source/pattern tags.
+UC-C03 / CartService,ICartService; CartService; ICartRepository; CartRepository; IBatchPricingPolicy; BatchPricingPolicy,Layered application logic + service interface extraction + Repository / domain policies / backend DI; shown together on page 1 with source/pattern tags.
+UC-C03 / Cart,Cart,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C03 / CartItem,CartItem,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C03 / Product,Product,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C03 / BatchInventory,BatchInventory,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C05 / ProfileAddressView,ProfilePage; ProfileApiClient; ProfileAddressView; ProfileViewModel; ProfileApiModel,Web Pages / CallService; mobile MVVM; no frontend DI; shown together on page 1 with source/pattern tags.
+UC-C05 / ProfileController,ProfileController,API controller retained; service interface supplied by backend DI; shown together on page 1 with source/pattern tags.
+UC-C05 / ProfileService,IProfileService; ProfileService; IProfileRepository; ProfileRepository,Layered application logic + service interface extraction + Repository / domain policies / backend DI; shown together on page 1 with source/pattern tags.
+UC-C05 / Customer,Customer,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C05 / CustomerAddress,CustomerAddress,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C05 / Order,Order,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C05 / GeocodingBoundary,IGeocodingGateway; GoogleMapsGeocodingAdapter,Adapter / backend DI; shown together on page 1 with source/pattern tags.
+UC-C06 / CheckoutView,CheckoutPage; CheckoutApiClient; CheckoutView; CheckoutViewModel; CheckoutApiModel,Web Pages / CallService; mobile MVVM; no frontend DI; shown together on page 1 with source/pattern tags.
+UC-C06 / CheckoutController,CheckoutController,API controller retained; service interface supplied by backend DI; shown together on page 1 with source/pattern tags.
+UC-C06 / CheckoutService,ICheckoutService; CheckoutService; ICheckoutRepository; CheckoutRepository; IBatchPricingPolicy; BatchPricingPolicy; IDeliveryFeePolicy; DeliveryFeePolicy; IFefoBatchSpecification; FefoBatchSpecification,Layered application logic + service interface extraction + Repository / domain policies / backend DI; shown together on page 1 with source/pattern tags.
+UC-C06 / Customer,Customer,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / CustomerAddress,CustomerAddress,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / Cart,Cart,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / CartItem,CartItem,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / Product,Product,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / BatchInventory,BatchInventory,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / Order,Order,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / OrderDetail,OrderDetail,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C06 / DistanceBoundary,IDistanceCalculator; DistanceCalculator; IDistanceGateway; GoogleMapsDistanceAdapter,Adapter / backend DI; shown together on page 1 with source/pattern tags.
+UC-C06 / PaymentBoundary,IPaymentGateway; SePayPaymentAdapter; PaymentNoticeHandler,Adapter / backend DI; shown together on page 1 with source/pattern tags.
+UC-C06 / NotificationBoundary,INotificationGateway; NotificationAdapter,Adapter / backend DI; shown together on page 1 with source/pattern tags.
+UC-C07 / MyOrdersView,MyOrdersPage; MyOrdersApiClient; MyOrdersView; MyOrdersViewModel; MyOrdersApiModel,Web Pages / CallService; mobile MVVM; no frontend DI; shown together on page 1 with source/pattern tags.
+UC-C07 / MyOrdersController,MyOrdersController,API controller retained; service interface supplied by backend DI; shown together on page 1 with source/pattern tags.
+UC-C07 / MyOrdersService,IMyOrdersService; MyOrdersService; IMyOrdersRepository; MyOrdersRepository; IBatchPricingPolicy; BatchPricingPolicy,Layered application logic + service interface extraction + Repository / domain policies / backend DI; shown together on page 1 with source/pattern tags.
+UC-C07 / Customer,Customer,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / Order,Order,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / OrderDetail,OrderDetail,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / CustomerAddress,CustomerAddress,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / BatchInventory,BatchInventory,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / Product,Product,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / Cart,Cart,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / CartItem,CartItem,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / OrderReview,OrderReview,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / AuditLog,AuditLog,Domain entity retained; navigations and invariants refined from data requirements; shown together on page 1 with source/pattern tags.
+UC-C07 / OrderNotificationBoundary,INotificationGateway; NotificationAdapter,Adapter / backend DI; shown together on page 1 with source/pattern tags.

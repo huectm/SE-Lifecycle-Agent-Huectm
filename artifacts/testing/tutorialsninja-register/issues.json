@@ -1,0 +1,90 @@
+[
+  {
+    "id": "REG-ISS-001",
+    "case": "REG-028",
+    "summary": "password length 21",
+    "category": "Functional validation",
+    "expected": "Password must",
+    "actual": "Unexpected successful registration; expected Password must",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-002",
+    "case": "REG-041",
+    "summary": "Proposed UC firstname maximum boundary 21",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-003",
+    "case": "REG-043",
+    "summary": "Proposed UC lastname maximum boundary 11",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-004",
+    "case": "REG-044",
+    "summary": "Proposed UC password composition Abc12!x",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-005",
+    "case": "REG-046",
+    "summary": "Proposed UC password composition abc12!xy",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-006",
+    "case": "REG-047",
+    "summary": "Proposed UC password composition ABC12!XY",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-007",
+    "case": "REG-048",
+    "summary": "Proposed UC password composition Abcdef!x",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  },
+  {
+    "id": "REG-ISS-008",
+    "case": "REG-049",
+    "summary": "Proposed UC password composition Abc123xy",
+    "category": "Requirement clarification",
+    "expected": "Registration rejected under the proposed UC rule. Approval/clarification required.",
+    "actual": "Proposed UC rule violated: registration accepted; clarification required. {'url': 'https://tutorialsninja.com/demo/index.php?route=account/success', 'success': True, 'warnings': '', 'email_validity': None}",
+    "severity": "Medium",
+    "priority": "Medium",
+    "status": "New - review required"
+  }
+]

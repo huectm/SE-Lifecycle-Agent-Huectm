@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "REG-029",
+    "title": "Invalid email ''",
+    "field": "email",
+    "value": "",
+    "expected": "email-invalid",
+    "basis": "Observed UI",
+    "technique": "EP",
+    "flow": "E2",
+    "firstname": "Robot",
+    "lastname": "Tester",
+    "email": "",
+    "telephone": "0812345678",
+    "password": "Valid123!",
+    "confirm": "Valid123!",
+    "newsletter": "0",
+    "agree": "1"
+  },
+  "status": "PASS",
+  "url": "https://tutorialsninja.com/demo/index.php?route=account/register",
+  "title": "Register Account",
+  "actual": {
+    "url": "https://tutorialsninja.com/demo/index.php?route=account/register",
+    "success": false,
+    "warnings": "E-Mail Address does not appear to be valid!",
+    "email_validity": {
+      "message": "",
+      "valid": true
+    }
+  }
+}

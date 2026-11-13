@@ -1,0 +1,193 @@
+using System.Globalization;
+using System.Reflection;
+using System.Text.Json;
+using FreshFood.Api;
+using FreshFood.Api.DTOs;
+using FreshFood.Api.Services;
+using FreshFood.Api.Services.Implements;
+using FreshFood.Reposistory.Entities;
+using FreshFood.Reposistory.Repository;
+using FreshFood.Reposistory.Repository.Implements;
+using Microsoft.Extensions.Logging.Abstractions;
+using NUnit.Framework;
+using System.Security.Claims;
+using System.Text;
+using FreshFood.Api.Controllers;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Npgsql;
+using static FreshFood.Backend.UnitTests.ScenarioValues;
+
+// Generated NUnit tests with explicit business calls and expected-result assertions.
+namespace FreshFood.Backend.UnitTests;
+[NUnit.Framework.TestFixture]
+public sealed class Entities_FefoBatchSpecificationTests
+{
+    /// <summary>
+    /// UTM-112-TC001: Normal operational input
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Method under test: BatchCriteria FefoBatchSpecification.Criteria(DateTimeOffset asOf)
+    /// </para>
+    /// <para>
+    /// Technique: Equivalence partitioning; input category: Normal.
+    /// </para>
+    /// <para>
+    /// Arrange: Strict interface fakes; no live DB or provider; independent arrange-act-assert fixtures.
+    /// Prerequisite guards before the target pass; reset all state per case.
+    /// </para>
+    /// <para>
+    /// Design input: {"asOf": "2099-01-01T00:00:00Z"}
+    /// </para>
+    /// <para>
+    /// Act: Arrange fixtures and overrides; invoke BatchCriteria FefoBatchSpecification.Criteria(DateTimeOffset
+    /// asOf); assert result, exception and captured calls/effects.
+    /// </para>
+    /// <para>
+    /// Design expected result: Return the typed sentinel/declared projection; preserve arguments, ownership and
+    /// cancellation token.
+    /// </para>
+    /// <para>
+    /// Design exception expectation: No exception specified.
+    /// </para>
+    /// <para>
+    /// Expected side effects: Verify declared call count/order; no unrelated mutation
+    /// </para>
+    /// <para>
+    /// Design source: artifacts/testing/test-design/backend-unit/backend-unit-test-design.json; method ID UTM-112.
+    /// </para>
+    /// </remarks>
+    [NUnit.Framework.Test]
+    [NUnit.Framework.Property("DesignCase", "UTM-112-TC001")]
+    public void UTM_112_TC001()
+    {
+        // Arrange: test inputs and mock setup.
+        var asOf = new DateTimeOffset(2099, 1, 1, 0, 0, 0, TimeSpan.Zero);
+        var subject = new FefoBatchSpecification();
+        // Act
+        var actual = subject.Criteria(asOf);
+        // Assert
+        Assert.That(actual.ActiveProductsOnly, Is.True);
+        Assert.That(actual.LockForUpdate, Is.True);
+        Assert.That(actual.MinimumAvailable, Is.EqualTo(1));
+        var expectedSortKeys = new[]
+        {
+            "expiry_date",
+            "batch_id"
+        };
+        Assert.That(actual.SortKeys, Is.EqualTo(expectedSortKeys));
+    }
+
+    /// <summary>
+    /// UTM-112-TC002: Boundary / empty result
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Method under test: BatchCriteria FefoBatchSpecification.Criteria(DateTimeOffset asOf)
+    /// </para>
+    /// <para>
+    /// Technique: Boundary value analysis; input category: Boundary.
+    /// </para>
+    /// <para>
+    /// Arrange: Strict interface fakes; no live DB or provider; independent arrange-act-assert fixtures.
+    /// Prerequisite guards before the target pass; reset all state per case.
+    /// </para>
+    /// <para>
+    /// Design input: {"asOf": "2099-01-01T00:00:00Z", "boundary": "Empty then single-item collection where
+    /// relevant; identifier=1; minimum allowed state. Branch-free forwarding: empty optional field unchanged."}
+    /// </para>
+    /// <para>
+    /// Act: Arrange fixtures and overrides; invoke BatchCriteria FefoBatchSpecification.Criteria(DateTimeOffset
+    /// asOf); assert result, exception and captured calls/effects.
+    /// </para>
+    /// <para>
+    /// Design expected result: Declared empty/default outcome or existing boundary guard; no invented maximum or
+    /// rejection.
+    /// </para>
+    /// <para>
+    /// Design exception expectation: No exception specified.
+    /// </para>
+    /// <para>
+    /// Expected side effects: No duplicate entity or unnecessary call
+    /// </para>
+    /// <para>
+    /// Design source: artifacts/testing/test-design/backend-unit/backend-unit-test-design.json; method ID UTM-112.
+    /// </para>
+    /// </remarks>
+    [NUnit.Framework.Test]
+    [NUnit.Framework.Property("DesignCase", "UTM-112-TC002")]
+    public void UTM_112_TC002()
+    {
+        // Arrange: test inputs and mock setup.
+        var asOf = new DateTimeOffset(2099, 1, 1, 0, 0, 0, TimeSpan.Zero);
+        var subject = new FefoBatchSpecification();
+        // Act
+        var actual = subject.Criteria(asOf);
+        // Assert
+        Assert.That(actual.ActiveProductsOnly, Is.True);
+        Assert.That(actual.LockForUpdate, Is.True);
+        Assert.That(actual.MinimumAvailable, Is.EqualTo(1));
+        var expectedSortKeys = new[]
+        {
+            "expiry_date",
+            "batch_id"
+        };
+        Assert.That(actual.SortKeys, Is.EqualTo(expectedSortKeys));
+    }
+
+    /// <summary>
+    /// UTM-112-TC003: Dependency failure / abnormal contract
+    /// </summary>
+    /// <remarks>
+    /// <para>
+    /// Method under test: BatchCriteria FefoBatchSpecification.Criteria(DateTimeOffset asOf)
+    /// </para>
+    /// <para>
+    /// Technique: Experience / failure injection; input category: Abnormal.
+    /// </para>
+    /// <para>
+    /// Arrange: Strict interface fakes; no live DB or provider; independent arrange-act-assert fixtures.
+    /// Prerequisite guards before the target pass; reset all state per case.
+    /// </para>
+    /// <para>
+    /// Design input: {"asOf": "2099-01-01T00:00:00Z", "failure": "First collaborator throws TimeoutException
+    /// sentinel; for pure methods use a declared invalid-input guard instead."}
+    /// </para>
+    /// <para>
+    /// Act: Arrange fixtures and overrides; invoke BatchCriteria FefoBatchSpecification.Criteria(DateTimeOffset
+    /// asOf); assert result, exception and captured calls/effects.
+    /// </para>
+    /// <para>
+    /// Design expected result: Declared error propagation/catch behavior; no unauthorized write. Pure methods with
+    /// no abnormal-input contract require review, not an invented assertion.
+    /// </para>
+    /// <para>
+    /// Design exception expectation: Sentinel TimeoutException or source-defined error/catch
+    /// </para>
+    /// <para>
+    /// Expected side effects: No downstream mutation after failure; rollback only where this method owns
+    /// transaction
+    /// </para>
+    /// <para>
+    /// Execution constraint (NUnit Ignore): No injectable collaborator here; bind abnormal cases to the declared
+    /// guard, or review N/A instead of inventing a fault injection seam.
+    /// </para>
+    /// <para>
+    /// Design source: artifacts/testing/test-design/backend-unit/backend-unit-test-design.json; method ID UTM-112.
+    /// </para>
+    /// </remarks>
+    [NUnit.Framework.Test]
+    [NUnit.Framework.Ignore("No injectable collaborator here; bind abnormal cases to the declared guard, or review N/A instead of inventing a fault injection seam.")]
+    [NUnit.Framework.Property("DesignCase", "UTM-112-TC003")]
+    public void UTM_112_TC003()
+    {
+        // Arrange: test inputs and mock setup.
+        // Not executed: the documented design constraint must be resolved before arranging a real invocation.
+        Assert.Ignore("No injectable collaborator here; bind abnormal cases to the declared guard, or review N/A instead of inventing a fault injection seam.");
+    }
+}

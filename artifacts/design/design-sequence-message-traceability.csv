@@ -1,0 +1,515 @@
+UseCase,Page,SourceFlows,Number,Sender,Receiver,Interaction,Kind
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,1,Customer,CatalogPage,OnGetCatalogAsync(query),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,2,CatalogPage,CatalogApiClient,GetCatalogAsync(query),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,3,CatalogApiClient,CatalogController,HTTPS GetCatalogAsync(query),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,4,CatalogController,CatalogService,GetCatalogAsync(query),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,5,CatalogService,CatalogRepository,"FindActiveAsync(keyword, categoryId, clearanceOnly)",C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,6,CatalogRepository,CatalogService,Product[],R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,7,CatalogService,CatalogRepository,GetCategoriesAsync(),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,8,CatalogRepository,CatalogService,ProductCategory[],R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,9,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,10,CatalogRepository,CatalogService,BatchInventory[],R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,11,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,12,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,13,CatalogService,CatalogService,[local] map entities to response DTO (local computation),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,14,CatalogService,CatalogRepository,GetPopularAsync(limit),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,15,CatalogRepository,CatalogService,alternative products,R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,16,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,17,CatalogRepository,CatalogService,alternative sellable batches,R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,18,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,19,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,20,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,C
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,21,CatalogService,CatalogController,CatalogResultDto,R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,22,CatalogController,CatalogApiClient,HTTPS response: CatalogResultDto,R
+UC-C01,GetCatalog,Normal 1-6; E4.1 | PIM,23,CatalogApiClient,CatalogPage,CatalogResultDto; update UI,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,1,Customer,CatalogPage,OnSearchAsync(query),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,2,CatalogPage,CatalogApiClient,SearchAsync(query),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,3,CatalogApiClient,CatalogController,HTTPS SearchAsync(query),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,4,CatalogController,CatalogService,SearchAsync(query),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,5,CatalogService,CatalogRepository,"FindActiveAsync(keyword, categoryId, clearanceOnly)",C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,6,CatalogRepository,CatalogService,Product[],R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,7,CatalogService,CatalogRepository,GetCategoriesAsync(),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,8,CatalogRepository,CatalogService,ProductCategory[],R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,9,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,10,CatalogRepository,CatalogService,BatchInventory[],R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,11,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,12,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,13,CatalogService,CatalogService,[local] map entities to response DTO (local computation),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,14,CatalogService,CatalogRepository,GetPopularAsync(limit),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,15,CatalogRepository,CatalogService,alternative products,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,16,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,17,CatalogRepository,CatalogService,alternative sellable batches,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,18,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,19,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,20,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,C
+UC-C01,Search,Normal 1-6; E4.1 | PIM,21,CatalogService,CatalogController,CatalogResultDto,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,22,CatalogController,CatalogApiClient,HTTPS response: CatalogResultDto,R
+UC-C01,Search,Normal 1-6; E4.1 | PIM,23,CatalogApiClient,CatalogPage,CatalogResultDto; update UI,R
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,1,Customer,CatalogPage,OnGetProductDetailsAsync(productId),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,2,CatalogPage,CatalogApiClient,GetProductDetailsAsync(productId),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,3,CatalogApiClient,CatalogController,HTTPS GetProductDetailsAsync(productId),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,4,CatalogController,CatalogService,GetProductDetailsAsync(productId),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,5,CatalogService,CatalogRepository,GetProductAsync(productId),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,6,CatalogRepository,CatalogService,Product?,R
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,7,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,8,CatalogRepository,CatalogService,BatchInventory[],R
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,9,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,10,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,11,CatalogService,CatalogService,[local] map entities to response DTO (local computation),C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,12,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,C
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,13,CatalogService,CatalogController,ProductDetailsDto,R
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,14,CatalogController,CatalogApiClient,HTTPS response: ProductDetailsDto,R
+UC-C01,GetProductDetails,A3.1; A3.2 | PIM,15,CatalogApiClient,CatalogPage,ProductDetailsDto; update UI,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,1,Customer,CatalogPage,OnGetClearanceAsync(query),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,2,CatalogPage,CatalogApiClient,GetClearanceAsync(query),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,3,CatalogApiClient,CatalogController,HTTPS GetClearanceAsync(query),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,4,CatalogController,CatalogService,GetClearanceAsync(query),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,5,CatalogService,CatalogRepository,"FindActiveAsync(keyword, categoryId, clearanceOnly)",C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,6,CatalogRepository,CatalogService,Product[],R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,7,CatalogService,CatalogRepository,GetCategoriesAsync(),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,8,CatalogRepository,CatalogService,ProductCategory[],R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,9,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,10,CatalogRepository,CatalogService,BatchInventory[],R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,11,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,12,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,13,CatalogService,CatalogService,[local] map entities to response DTO (local computation),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,14,CatalogService,CatalogRepository,GetPopularAsync(limit),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,15,CatalogRepository,CatalogService,alternative products,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,16,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,17,CatalogRepository,CatalogService,alternative sellable batches,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,18,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,19,BatchPricingPolicy,CatalogService,VndAmount,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,20,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,C
+UC-C01,GetClearance,A3.1; A3.2 | PIM,21,CatalogService,CatalogController,CatalogResultDto,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,22,CatalogController,CatalogApiClient,HTTPS response: CatalogResultDto,R
+UC-C01,GetClearance,A3.1; A3.2 | PIM,23,CatalogApiClient,CatalogPage,CatalogResultDto; update UI,R
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,1,Customer,CatalogView,user action: GetCatalog,C
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,2,CatalogView,CatalogViewModel,GetCatalogAsync(query),C
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,3,CatalogViewModel,CatalogApiModel,GetCatalogAsync(query),C
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,4,CatalogApiModel,CatalogController,HTTPS GetCatalogAsync(query),C
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,5,CatalogController,CatalogService,GetCatalogAsync(query),C
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,6,CatalogService,CatalogController,CatalogResultDto; ref detailed backend page,R
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,7,CatalogController,CatalogApiModel,HTTPS response: CatalogResultDto,R
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,8,CatalogApiModel,CatalogViewModel,CatalogResultDto,R
+UC-C01,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,9,CatalogViewModel,CatalogView,CatalogResultDto; render result,R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,1,Customer,CartPage,OnGetCartAsync(),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,2,CartPage,CartApiClient,GetCartAsync(),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,3,CartApiClient,CartController,HTTPS GetCartAsync(),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,4,CartController,CartService,GetCartAsync(),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,5,CartService,CurrentCustomer,GetCartIdentity(),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,6,CurrentCustomer,CartService,trusted identity,R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,7,CartService,CartRepository,"GetAsync(customerId, sessionId)",C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,8,CartRepository,CartService,Cart,R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,9,CartService,CartRepository,GetProductsAsync(ids),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,10,CartRepository,CartService,Product[],R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,11,CartService,CartRepository,GetSellableBatchesAsync(ids),C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,12,CartRepository,CartService,BatchInventory[],R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,13,CartService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,14,BatchPricingPolicy,CartService,VndAmount,R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,15,CartService,CartController,CartResultDto,R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,16,CartController,CartApiClient,HTTPS response: CartResultDto,R
+UC-C03,GetCart,Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2 | PIM,17,CartApiClient,CartPage,CartResultDto; update UI,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,1,Customer,CartPage,OnChangeQuantityAsync(request),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,2,CartPage,CartApiClient,ChangeQuantityAsync(request),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,3,CartApiClient,CartController,HTTPS ChangeQuantityAsync(request),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,4,CartController,CartService,ChangeQuantityAsync(request),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,5,CartService,CurrentCustomer,GetCartIdentity(),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,6,CurrentCustomer,CartService,trusted identity,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,7,CartService,UnitOfWork,ExecuteAsync(work),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,8,UnitOfWork,CartService,TransactionWork callback (same transaction),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,9,CartService,CartRepository,"GetAsync(customerId, sessionId)",C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,10,CartRepository,CartService,owned cart in current transaction,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,11,CartService,CartRepository,GetProductsAsync(ids),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,12,CartRepository,CartService,active product,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,13,CartService,CartRepository,GetSellableBatchesAsync(ids),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,14,CartRepository,CartService,current availability,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,15,CartService,CartService,"[local] change absolute quantity, clamp if necessary, or remove selected item",C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,16,CartService,CartRepository,SaveAsync(cart),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,17,CartRepository,CartService,cart saved,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,18,CartService,CartRepository,GetProductsAsync(ids),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,19,CartRepository,CartService,remaining products,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,20,CartService,CartRepository,GetSellableBatchesAsync(ids),C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,21,CartRepository,CartService,current display stock,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,22,CartService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,23,BatchPricingPolicy,CartService,current price,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,24,CartService,CartService,[local] reject mutation; transaction rolls back,C
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,25,CartService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,26,UnitOfWork,CartService,committed; exception means rolled back,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,27,CartService,CartController,CartResultDto,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,28,CartController,CartApiClient,HTTPS response: CartResultDto,R
+UC-C03,ChangeQuantity,A1.1; A4.1; E2.1 | PIM,29,CartApiClient,CartPage,CartResultDto; update UI,R
+UC-C03,RemoveItem,A4.2 | PIM,1,Customer,CartPage,OnRemoveItemAsync(productId),C
+UC-C03,RemoveItem,A4.2 | PIM,2,CartPage,CartApiClient,RemoveItemAsync(productId),C
+UC-C03,RemoveItem,A4.2 | PIM,3,CartApiClient,CartController,HTTPS RemoveItemAsync(productId),C
+UC-C03,RemoveItem,A4.2 | PIM,4,CartController,CartService,RemoveItemAsync(productId),C
+UC-C03,RemoveItem,A4.2 | PIM,5,CartService,CurrentCustomer,GetCartIdentity(),C
+UC-C03,RemoveItem,A4.2 | PIM,6,CurrentCustomer,CartService,trusted identity,R
+UC-C03,RemoveItem,A4.2 | PIM,7,CartService,UnitOfWork,ExecuteAsync(work),C
+UC-C03,RemoveItem,A4.2 | PIM,8,UnitOfWork,CartService,TransactionWork callback (same transaction),C
+UC-C03,RemoveItem,A4.2 | PIM,9,CartService,CartRepository,"GetAsync(customerId, sessionId)",C
+UC-C03,RemoveItem,A4.2 | PIM,10,CartRepository,CartService,owned cart in current transaction,R
+UC-C03,RemoveItem,A4.2 | PIM,11,CartService,CartService,"[local] change absolute quantity, clamp if necessary, or remove selected item",C
+UC-C03,RemoveItem,A4.2 | PIM,12,CartService,CartRepository,SaveAsync(cart),C
+UC-C03,RemoveItem,A4.2 | PIM,13,CartRepository,CartService,cart saved,R
+UC-C03,RemoveItem,A4.2 | PIM,14,CartService,CartRepository,GetProductsAsync(ids),C
+UC-C03,RemoveItem,A4.2 | PIM,15,CartRepository,CartService,remaining products,R
+UC-C03,RemoveItem,A4.2 | PIM,16,CartService,CartRepository,GetSellableBatchesAsync(ids),C
+UC-C03,RemoveItem,A4.2 | PIM,17,CartRepository,CartService,current display stock,R
+UC-C03,RemoveItem,A4.2 | PIM,18,CartService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C03,RemoveItem,A4.2 | PIM,19,BatchPricingPolicy,CartService,current price,R
+UC-C03,RemoveItem,A4.2 | PIM,20,CartService,CartService,[local] reject mutation; transaction rolls back,C
+UC-C03,RemoveItem,A4.2 | PIM,21,CartService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C03,RemoveItem,A4.2 | PIM,22,UnitOfWork,CartService,committed; exception means rolled back,R
+UC-C03,RemoveItem,A4.2 | PIM,23,CartService,CartController,CartResultDto,R
+UC-C03,RemoveItem,A4.2 | PIM,24,CartController,CartApiClient,HTTPS response: CartResultDto,R
+UC-C03,RemoveItem,A4.2 | PIM,25,CartApiClient,CartPage,CartResultDto; update UI,R
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,1,Customer,CartView,user action: GetCart,C
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,2,CartView,CartViewModel,GetCartAsync(),C
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,3,CartViewModel,CartApiModel,GetCartAsync(),C
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,4,CartApiModel,CartController,HTTPS GetCartAsync(),C
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,5,CartController,CartService,GetCartAsync(),C
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,6,CartService,CartController,CartResultDto; ref detailed backend page,R
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,7,CartController,CartApiModel,HTTPS response: CartResultDto,R
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,8,CartApiModel,CartViewModel,CartResultDto,R
+UC-C03,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,9,CartViewModel,CartView,CartResultDto; render result,R
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,1,Customer,ProfilePage,OnGetProfileAsync(),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,2,ProfilePage,ProfileApiClient,GetProfileAsync(),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,3,ProfileApiClient,ProfileController,HTTPS GetProfileAsync(),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,4,ProfileController,ProfileService,GetProfileAsync(),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,5,ProfileService,CurrentCustomer,RequireCustomerId(),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,6,CurrentCustomer,ProfileService,trusted identity,R
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,7,ProfileService,ProfileRepository,GetCustomerAsync(customerId),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,8,ProfileRepository,ProfileService,Customer,R
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,9,ProfileService,ProfileRepository,GetAddressesAsync(customerId),C
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,10,ProfileRepository,ProfileService,CustomerAddress[],R
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,11,ProfileService,ProfileController,ProfileResultDto,R
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,12,ProfileController,ProfileApiClient,HTTPS response: ProfileResultDto,R
+UC-C05,GetProfile,Normal 1-3; A2.1 | PIM,13,ProfileApiClient,ProfilePage,ProfileResultDto; update UI,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,1,Customer,ProfilePage,OnUpdateProfileAsync(request),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,2,ProfilePage,ProfileApiClient,UpdateProfileAsync(request),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,3,ProfileApiClient,ProfileController,HTTPS UpdateProfileAsync(request),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,4,ProfileController,ProfileService,UpdateProfileAsync(request),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,5,ProfileService,CurrentCustomer,RequireCustomerId(),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,6,CurrentCustomer,ProfileService,trusted identity,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,7,ProfileService,UnitOfWork,ExecuteAsync(work),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,8,UnitOfWork,ProfileService,TransactionWork callback (same transaction),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,9,ProfileService,ProfileRepository,GetCustomerAsync(customerId),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,10,ProfileRepository,ProfileService,owned Customer,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,11,ProfileService,ProfileRepository,SaveCustomerAsync(customer),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,12,ProfileRepository,ProfileService,change saved; errors roll back,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,13,ProfileService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,14,UnitOfWork,ProfileService,committed; exception means rolled back,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,15,ProfileService,ProfileService,[local] reject change without partial persistence,C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,16,ProfileService,ProfileRepository,GetCustomerAsync(customerId),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,17,ProfileRepository,ProfileService,refreshed Customer,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,18,ProfileService,ProfileRepository,GetAddressesAsync(customerId),C
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,19,ProfileRepository,ProfileService,refreshed owned addresses,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,20,ProfileService,ProfileController,ProfileResultDto,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,21,ProfileController,ProfileApiClient,HTTPS response: ProfileResultDto,R
+UC-C05,UpdateProfile,Normal 1-3; A2.1 | PIM,22,ProfileApiClient,ProfilePage,ProfileResultDto; update UI,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,1,Customer,ProfilePage,OnSaveAddressAsync(request),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,2,ProfilePage,ProfileApiClient,SaveAddressAsync(request),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,3,ProfileApiClient,ProfileController,HTTPS SaveAddressAsync(request),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,4,ProfileController,ProfileService,SaveAddressAsync(request),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,5,ProfileService,CurrentCustomer,RequireCustomerId(),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,6,CurrentCustomer,ProfileService,trusted identity,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,7,ProfileService,GoogleMapsGeocodingAdapter,ResolveAsync(address),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,8,GoogleMapsGeocodingAdapter,ProfileService,GeoPointDto or integration unavailable,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,9,ProfileService,UnitOfWork,ExecuteAsync(work),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,10,UnitOfWork,ProfileService,TransactionWork callback (same transaction),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,11,ProfileService,ProfileRepository,[editing existing address] GetAddressesAsync(customerId),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,12,ProfileRepository,ProfileService,owned addresses,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,13,ProfileService,ProfileRepository,SaveAddressAsync(address),C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,14,ProfileRepository,ProfileService,change saved; errors roll back,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,15,ProfileService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,16,UnitOfWork,ProfileService,committed; exception means rolled back,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,17,ProfileService,ProfileService,[local] reject change without partial persistence,C
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,18,ProfileService,ProfileController,AddressDto,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,19,ProfileController,ProfileApiClient,HTTPS response: AddressDto,R
+UC-C05,SaveAddress,A3.1; A3.2; E3.1; E3.2 | PIM,20,ProfileApiClient,ProfilePage,AddressDto; update UI,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,1,Customer,ProfilePage,OnSetDefaultAddressAsync(addressId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,2,ProfilePage,ProfileApiClient,SetDefaultAddressAsync(addressId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,3,ProfileApiClient,ProfileController,HTTPS SetDefaultAddressAsync(addressId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,4,ProfileController,ProfileService,SetDefaultAddressAsync(addressId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,5,ProfileService,CurrentCustomer,RequireCustomerId(),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,6,CurrentCustomer,ProfileService,trusted identity,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,7,ProfileService,UnitOfWork,ExecuteAsync(work),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,8,UnitOfWork,ProfileService,TransactionWork callback (same transaction),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,9,ProfileService,ProfileRepository,GetAddressesAsync(customerId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,10,ProfileRepository,ProfileService,owned addresses,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,11,ProfileService,ProfileRepository,SaveAddressAsync(address),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,12,ProfileRepository,ProfileService,change saved; errors roll back,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,13,ProfileService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,14,UnitOfWork,ProfileService,committed; exception means rolled back,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,15,ProfileService,ProfileService,[local] reject change without partial persistence,C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,16,ProfileService,ProfileRepository,GetCustomerAsync(customerId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,17,ProfileRepository,ProfileService,refreshed Customer,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,18,ProfileService,ProfileRepository,GetAddressesAsync(customerId),C
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,19,ProfileRepository,ProfileService,refreshed owned addresses,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,20,ProfileService,ProfileController,ProfileResultDto,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,21,ProfileController,ProfileApiClient,HTTPS response: ProfileResultDto,R
+UC-C05,SetDefaultAddress,Address default selection in approved profile flow | PIM,22,ProfileApiClient,ProfilePage,ProfileResultDto; update UI,R
+UC-C05,DeleteAddress,A3.3 | PIM,1,Customer,ProfilePage,OnDeleteAddressAsync(addressId),C
+UC-C05,DeleteAddress,A3.3 | PIM,2,ProfilePage,ProfileApiClient,DeleteAddressAsync(addressId),C
+UC-C05,DeleteAddress,A3.3 | PIM,3,ProfileApiClient,ProfileController,HTTPS DeleteAddressAsync(addressId),C
+UC-C05,DeleteAddress,A3.3 | PIM,4,ProfileController,ProfileService,DeleteAddressAsync(addressId),C
+UC-C05,DeleteAddress,A3.3 | PIM,5,ProfileService,CurrentCustomer,RequireCustomerId(),C
+UC-C05,DeleteAddress,A3.3 | PIM,6,CurrentCustomer,ProfileService,trusted identity,R
+UC-C05,DeleteAddress,A3.3 | PIM,7,ProfileService,UnitOfWork,ExecuteAsync(work),C
+UC-C05,DeleteAddress,A3.3 | PIM,8,UnitOfWork,ProfileService,TransactionWork callback (same transaction),C
+UC-C05,DeleteAddress,A3.3 | PIM,9,ProfileService,ProfileRepository,GetAddressesAsync(customerId),C
+UC-C05,DeleteAddress,A3.3 | PIM,10,ProfileRepository,ProfileService,owned addresses,R
+UC-C05,DeleteAddress,A3.3 | PIM,11,ProfileService,ProfileRepository,"HasActiveOrderAsync(customerId, addressId)",C
+UC-C05,DeleteAddress,A3.3 | PIM,12,ProfileRepository,ProfileService,false required for deletion,R
+UC-C05,DeleteAddress,A3.3 | PIM,13,ProfileService,ProfileRepository,"DeleteAddressAsync(customerId, addressId)",C
+UC-C05,DeleteAddress,A3.3 | PIM,14,ProfileRepository,ProfileService,change saved; errors roll back,R
+UC-C05,DeleteAddress,A3.3 | PIM,15,ProfileService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C05,DeleteAddress,A3.3 | PIM,16,UnitOfWork,ProfileService,committed; exception means rolled back,R
+UC-C05,DeleteAddress,A3.3 | PIM,17,ProfileService,ProfileService,[local] reject change without partial persistence,C
+UC-C05,DeleteAddress,A3.3 | PIM,18,ProfileService,ProfileController,OperationResultDto,R
+UC-C05,DeleteAddress,A3.3 | PIM,19,ProfileController,ProfileApiClient,HTTPS response: OperationResultDto,R
+UC-C05,DeleteAddress,A3.3 | PIM,20,ProfileApiClient,ProfilePage,OperationResultDto; update UI,R
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,1,Customer,ProfileAddressView,user action: GetProfile,C
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,2,ProfileAddressView,ProfileViewModel,GetProfileAsync(),C
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,3,ProfileViewModel,ProfileApiModel,GetProfileAsync(),C
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,4,ProfileApiModel,ProfileController,HTTPS GetProfileAsync(),C
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,5,ProfileController,ProfileService,GetProfileAsync(),C
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,6,ProfileService,ProfileController,ProfileResultDto; ref detailed backend page,R
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,7,ProfileController,ProfileApiModel,HTTPS response: ProfileResultDto,R
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,8,ProfileApiModel,ProfileViewModel,ProfileResultDto,R
+UC-C05,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,9,ProfileViewModel,ProfileAddressView,ProfileResultDto; render result,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,1,Customer,CheckoutPage,OnPrepareCheckoutAsync(request),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,2,CheckoutPage,CheckoutApiClient,PrepareCheckoutAsync(request),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,3,CheckoutApiClient,CheckoutController,HTTPS PrepareCheckoutAsync(request),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,4,CheckoutController,CheckoutService,PrepareCheckoutAsync(request),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,5,CheckoutService,CurrentCustomer,RequireCustomerId(),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,6,CurrentCustomer,CheckoutService,trusted identity,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,7,CheckoutService,CheckoutRepository,GetCheckoutCartAsync(customerId),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,8,CheckoutRepository,CheckoutService,Cart,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,9,CheckoutService,CheckoutRepository,"GetOwnedAddressAsync(customerId, addressId)",C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,10,CheckoutRepository,CheckoutService,CustomerAddress,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,11,CheckoutService,DistanceCalculator,CalculateAsync(addressId),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,12,DistanceCalculator,CheckoutService,distanceKm,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,13,CheckoutService,DeliveryFeePolicy,Quote(distanceKm),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,14,DeliveryFeePolicy,CheckoutService,VndAmount delivery fee,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,15,CheckoutService,CheckoutRepository,LockFefoBatchesAsync(productIds),C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,16,CheckoutRepository,CheckoutService,available FEFO candidates; read-only preparation,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,17,CheckoutService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,18,BatchPricingPolicy,CheckoutService,VndAmount,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,19,CheckoutService,CheckoutService,[local] allocate all lines and calculate summary,C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,20,CheckoutService,CheckoutService,[local] validation result; no order created,C
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,21,CheckoutService,CheckoutController,CheckoutSummaryDto,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,22,CheckoutController,CheckoutApiClient,HTTPS response: CheckoutSummaryDto,R
+UC-C06,PrepareCheckout,Normal 1-6; A2.1; E4.1 | PIM,23,CheckoutApiClient,CheckoutPage,CheckoutSummaryDto; update UI,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,1,Customer,CheckoutPage,OnPlaceOrderAsync(request),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,2,CheckoutPage,CheckoutApiClient,PlaceOrderAsync(request),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,3,CheckoutApiClient,CheckoutController,HTTPS PlaceOrderAsync(request),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,4,CheckoutController,CheckoutService,PlaceOrderAsync(request),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,5,CheckoutService,CurrentCustomer,RequireCustomerId(),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,6,CurrentCustomer,CheckoutService,trusted identity,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,7,CheckoutService,CheckoutRepository,GetCheckoutCartAsync(customerId),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,8,CheckoutRepository,CheckoutService,Cart,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,9,CheckoutService,CheckoutRepository,"GetOwnedAddressAsync(customerId, addressId)",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,10,CheckoutRepository,CheckoutService,CustomerAddress,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,11,CheckoutService,DistanceCalculator,CalculateAsync(addressId),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,12,DistanceCalculator,CheckoutService,distanceKm,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,13,CheckoutService,DeliveryFeePolicy,Quote(distanceKm),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,14,DeliveryFeePolicy,CheckoutService,VndAmount delivery fee,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,15,CheckoutService,UnitOfWork,ExecuteAsync(work),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,16,UnitOfWork,CheckoutService,TransactionWork callback (same transaction),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,17,CheckoutService,CheckoutRepository,"ClaimCheckoutAsync(customerId, reference, key, requestHash)",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,18,CheckoutRepository,CheckoutService,new claim or original stored confirmation,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,19,CheckoutService,CheckoutRepository,GetCheckoutCartAsync(customerId),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,20,CheckoutRepository,CheckoutService,cart revalidated under current transaction,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,21,CheckoutService,CheckoutRepository,"GetOwnedAddressAsync(customerId, addressId)",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,22,CheckoutRepository,CheckoutService,owned address revalidated; changed preparation is rejected,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,23,CheckoutService,CheckoutRepository,LockFefoBatchesAsync(productIds),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,24,CheckoutRepository,CheckoutService,locked sellable FEFO batches,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,25,CheckoutService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,26,BatchPricingPolicy,CheckoutService,VndAmount,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,27,CheckoutService,CheckoutService,"[local] reuse original confirmation; skip state, stock and cart writes",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,28,CheckoutService,OrderStateMachine,"ProcessEventAsync(snapshot, acceptOrderEvent)",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,29,OrderStateMachine,CheckoutService,"StateMachineResult; I00, selected T01 branch and initial payment row",R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,30,CheckoutService,CheckoutRepository,SaveOrderAsync(order),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,31,CheckoutRepository,CheckoutService,order persisted in current transaction,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,32,CheckoutService,CheckoutRepository,ClearCartAsync(cartId),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,33,CheckoutRepository,CheckoutService,cart cleared,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,34,CheckoutService,CheckoutRepository,"CompleteCheckoutAsync(customerId, reference, key, response)",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,35,CheckoutRepository,CheckoutService,response persisted and initial events linked in the same transaction,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,36,CheckoutService,CheckoutService,"[local] throw; roll back all order, payment, reservation and cart effects",C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,37,CheckoutService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,38,UnitOfWork,CheckoutService,committed; exception means rolled back,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,39,CheckoutService,NotificationAdapter,PublishAsync(message),C
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,40,NotificationAdapter,CheckoutService,notification submitted once after commit,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,41,CheckoutService,CheckoutController,OrderConfirmationDto,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,42,CheckoutController,CheckoutApiClient,HTTPS response: OrderConfirmationDto,R
+UC-C06,PlaceOrder,Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions | PIM,43,CheckoutApiClient,CheckoutPage,OrderConfirmationDto; update UI,R
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,1,Customer,CheckoutPage,OnCreatePaymentQrAsync(request),C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,2,CheckoutPage,CheckoutApiClient,CreatePaymentQrAsync(request),C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,3,CheckoutApiClient,CheckoutController,HTTPS CreatePaymentQrAsync(request),C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,4,CheckoutController,CheckoutService,CreatePaymentQrAsync(request),C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,5,CheckoutService,CurrentCustomer,RequireCustomerId(),C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,6,CurrentCustomer,CheckoutService,trusted identity,R
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,7,CheckoutService,CheckoutService,[local] report payment unavailable; do not invoke payment creation,C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,8,CheckoutService,SePayPaymentAdapter,"CreateQrAsync(reference, amount)",C
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,9,SePayPaymentAdapter,CheckoutService,"PaymentQrDto; planned integration, currently deferred",R
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,10,CheckoutService,CheckoutController,PaymentQrDto,R
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,11,CheckoutController,CheckoutApiClient,HTTPS response: PaymentQrDto,R
+UC-C06,CreatePaymentQr,Address default selection in approved profile flow | PIM,12,CheckoutApiClient,CheckoutPage,PaymentQrDto; update UI,R
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,1,Customer,CheckoutView,user action: PrepareCheckout,C
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,2,CheckoutView,CheckoutViewModel,PrepareCheckoutAsync(request),C
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,3,CheckoutViewModel,CheckoutApiModel,PrepareCheckoutAsync(request),C
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,4,CheckoutApiModel,CheckoutController,HTTPS PrepareCheckoutAsync(request),C
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,5,CheckoutController,CheckoutService,PrepareCheckoutAsync(request),C
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,6,CheckoutService,CheckoutController,CheckoutSummaryDto; ref detailed backend page,R
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,7,CheckoutController,CheckoutApiModel,HTTPS response: CheckoutSummaryDto,R
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,8,CheckoutApiModel,CheckoutViewModel,CheckoutSummaryDto,R
+UC-C06,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,9,CheckoutViewModel,CheckoutView,CheckoutSummaryDto; render result,R
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,1,SePay,PaymentNoticeHandler,HandleAsync(notice),A
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,2,PaymentNoticeHandler,CheckoutService,HandleVerifiedPaymentAsync(notice),C
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,3,CheckoutService,SePayPaymentAdapter,VerifyNoticeAsync(notice),C
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,4,SePayPaymentAdapter,CheckoutService,VerifiedPaymentDto or unconfigured verification error,R
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,5,CheckoutService,CheckoutService,[local] reject unsigned notice,C
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,6,CheckoutService,CheckoutService,[local] explicit correlation error; P02 capture remains disabled,C
+UC-C06,Verified payment webhook,A6.1; latest initial-state rules override stale Pending wording | PIM,7,CheckoutService,PaymentNoticeHandler,PaymentResultDto error; no payment mutation,R
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,1,CheckoutService,OrderStateMachine,"ProcessEventAsync(snapshot, acceptOrderEvent)",C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,2,OrderStateMachine,OrderStateMachine,[local] resolve current state + event + trusted guard in private table,C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,3,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,4,OrderLifecycleRepository,OrderStateMachine,I00 recorded once,R
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,5,OrderStateMachine,OrderStateMachine,[local] apply acceptance and follow completion to guarded initial branch,C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,6,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,7,OrderLifecycleRepository,OrderStateMachine,T01u recorded once,R
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,8,OrderStateMachine,OrderStateMachine,[local] set Pending Unpaid; internal createOrder event selects P01,C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,9,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,10,OrderLifecycleRepository,OrderStateMachine,P01 recorded once,R
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,11,OrderStateMachine,OrderStateMachine,[local] table selects T01p; required P02 remains disabled until payment correlation is resolved,C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,12,OrderStateMachine,OrderStateMachine,CurrentState(),C
+UC-C06,OrderStateMachine acceptance,acceptOrder; one private table; all database effects share the checkout transaction | PIM,13,OrderStateMachine,CheckoutService,StateMachineResult; Pending Unpaid or explicit unresolved-payment error; caller owns commit,R
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,1,Customer,CheckoutPage,OnPlaceOrderAsync(request),C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,2,CheckoutPage,CheckoutApiClient,PlaceOrderAsync(request),C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,3,CheckoutApiClient,CheckoutController,HTTPS PlaceOrderAsync(request),C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,4,CheckoutController,CheckoutService,PlaceOrderAsync(request),C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,5,CheckoutService,UnitOfWork,ExecuteAsync(work),C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,6,UnitOfWork,CheckoutService,TransactionWork callback (same transaction),C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,7,CheckoutService,CheckoutRepository,"ClaimCheckoutAsync(customerId, reference, key, requestHash)",C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,8,CheckoutRepository,CheckoutService,stored matching confirmation or claim conflict,R
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,9,CheckoutService,CheckoutService,"[local] replay original confirmation; skip state machine, reservation, cart writes and notification",C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,10,CheckoutService,CheckoutService,[local] reject conflict; preserve earlier successful outcome,C
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,11,CheckoutService,UnitOfWork,work completed or conflict thrown,R
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,12,UnitOfWork,CheckoutService,committed read/replay scope or rolled back conflict,R
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,13,CheckoutService,CheckoutController,OrderConfirmationDto or conflict,R
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,14,CheckoutController,CheckoutApiClient,HTTPS response,R
+UC-C06,Idempotent checkout replay,Same customer + key + fingerprint; original response survives cart clearing | PIM,15,CheckoutApiClient,CheckoutPage,render result,R
+UC-C07,GetOrders,Normal 1-5 | PIM,1,Customer,MyOrdersPage,OnGetOrdersAsync(),C
+UC-C07,GetOrders,Normal 1-5 | PIM,2,MyOrdersPage,MyOrdersApiClient,GetOrdersAsync(),C
+UC-C07,GetOrders,Normal 1-5 | PIM,3,MyOrdersApiClient,MyOrdersController,HTTPS GetOrdersAsync(),C
+UC-C07,GetOrders,Normal 1-5 | PIM,4,MyOrdersController,MyOrdersService,GetOrdersAsync(),C
+UC-C07,GetOrders,Normal 1-5 | PIM,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),C
+UC-C07,GetOrders,Normal 1-5 | PIM,6,CurrentCustomer,MyOrdersService,trusted identity,R
+UC-C07,GetOrders,Normal 1-5 | PIM,7,MyOrdersService,MyOrdersRepository,FindOwnedAsync(customerId),C
+UC-C07,GetOrders,Normal 1-5 | PIM,8,MyOrdersRepository,MyOrdersService,Order[],R
+UC-C07,GetOrders,Normal 1-5 | PIM,9,MyOrdersService,MyOrdersController,OrderListDto,R
+UC-C07,GetOrders,Normal 1-5 | PIM,10,MyOrdersController,MyOrdersApiClient,HTTPS response: OrderListDto,R
+UC-C07,GetOrders,Normal 1-5 | PIM,11,MyOrdersApiClient,MyOrdersPage,OrderListDto; update UI,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,1,Customer,MyOrdersPage,OnGetOrderDetailsAsync(orderId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,2,MyOrdersPage,MyOrdersApiClient,GetOrderDetailsAsync(orderId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,3,MyOrdersApiClient,MyOrdersController,HTTPS GetOrderDetailsAsync(orderId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,4,MyOrdersController,MyOrdersService,GetOrderDetailsAsync(orderId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,6,CurrentCustomer,MyOrdersService,trusted identity,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,7,MyOrdersService,MyOrdersRepository,FindOwnedAsync(customerId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,8,MyOrdersRepository,MyOrdersService,owned Order and OrderDetail data,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,9,MyOrdersService,MyOrdersRepository,GetReturnReceiptAsync(orderId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,10,MyOrdersRepository,MyOrdersService,ReturnReceipt?,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,11,MyOrdersService,MyOrdersRepository,GetRefundAsync(orderId),C
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,12,MyOrdersRepository,MyOrdersService,Refund?,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,13,MyOrdersService,MyOrdersController,OrderDetailsDto,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,14,MyOrdersController,MyOrdersApiClient,HTTPS response: OrderDetailsDto,R
+UC-C07,GetOrderDetails,Normal 1-5 | PIM,15,MyOrdersApiClient,MyOrdersPage,OrderDetailsDto; update UI,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,1,Customer,MyOrdersPage,OnCancelOrderAsync(request),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,2,MyOrdersPage,MyOrdersApiClient,CancelOrderAsync(request),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,3,MyOrdersApiClient,MyOrdersController,HTTPS CancelOrderAsync(request),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,4,MyOrdersController,MyOrdersService,CancelOrderAsync(request),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,6,CurrentCustomer,MyOrdersService,trusted identity,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,7,MyOrdersService,UnitOfWork,ExecuteAsync(work),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,8,UnitOfWork,MyOrdersService,TransactionWork callback (same transaction),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,9,MyOrdersService,MyOrdersRepository,"LockOwnedAsync(customerId, orderId)",C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,10,MyOrdersRepository,MyOrdersService,locked owned Order,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,11,MyOrdersService,OrderStateMachine,"ProcessEventAsync(snapshot, cancelOrderEvent)",C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,12,OrderStateMachine,MyOrdersService,StateMachineResult; table selects cancellation and fulfillment completion,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,13,MyOrdersService,MyOrdersService,[local] reject or return existing outcome; no unauthorized mutation,C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,14,MyOrdersService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,15,UnitOfWork,MyOrdersService,committed; exception means rolled back,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,16,MyOrdersService,NotificationAdapter,PublishAsync(message),C
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,17,NotificationAdapter,MyOrdersService,notification submitted after commit,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,18,MyOrdersService,MyOrdersController,OperationResultDto,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,19,MyOrdersController,MyOrdersApiClient,HTTPS response: OperationResultDto,R
+UC-C07,CancelOrder,A3.1; E1.1 | PIM,20,MyOrdersApiClient,MyOrdersPage,OperationResultDto; update UI,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,1,Customer,MyOrdersPage,OnReorderAsync(orderId),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,2,MyOrdersPage,MyOrdersApiClient,ReorderAsync(orderId),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,3,MyOrdersApiClient,MyOrdersController,HTTPS ReorderAsync(orderId),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,4,MyOrdersController,MyOrdersService,ReorderAsync(orderId),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,6,CurrentCustomer,MyOrdersService,trusted identity,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,7,MyOrdersService,UnitOfWork,ExecuteAsync(work),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,8,UnitOfWork,MyOrdersService,TransactionWork callback (same transaction),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,9,MyOrdersService,MyOrdersRepository,"LockOwnedAsync(customerId, orderId)",C
+UC-C07,Reorder,A5.1; E2.1 | PIM,10,MyOrdersRepository,MyOrdersService,locked owned Order,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,11,MyOrdersService,MyOrdersRepository,GetCurrentBatchesAsync(productIds),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,12,MyOrdersRepository,MyOrdersService,current availability,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,13,MyOrdersService,BatchPricingPolicy,"Quote(batch, asOf)",C
+UC-C07,Reorder,A5.1; E2.1 | PIM,14,BatchPricingPolicy,MyOrdersService,current VndAmount,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,15,MyOrdersService,MyOrdersRepository,SaveCartAsync(cart),C
+UC-C07,Reorder,A5.1; E2.1 | PIM,16,MyOrdersRepository,MyOrdersService,available items copied; changed/unavailable items reported,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,17,MyOrdersService,MyOrdersService,[local] reject or return existing outcome; no unauthorized mutation,C
+UC-C07,Reorder,A5.1; E2.1 | PIM,18,MyOrdersService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,19,UnitOfWork,MyOrdersService,committed; exception means rolled back,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,20,MyOrdersService,MyOrdersController,CartResultDto,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,21,MyOrdersController,MyOrdersApiClient,HTTPS response: CartResultDto,R
+UC-C07,Reorder,A5.1; E2.1 | PIM,22,MyOrdersApiClient,MyOrdersPage,CartResultDto; update UI,R
+UC-C07,SubmitReview,A5.2 | PIM,1,Customer,MyOrdersPage,OnSubmitReviewAsync(request),C
+UC-C07,SubmitReview,A5.2 | PIM,2,MyOrdersPage,MyOrdersApiClient,SubmitReviewAsync(request),C
+UC-C07,SubmitReview,A5.2 | PIM,3,MyOrdersApiClient,MyOrdersController,HTTPS SubmitReviewAsync(request),C
+UC-C07,SubmitReview,A5.2 | PIM,4,MyOrdersController,MyOrdersService,SubmitReviewAsync(request),C
+UC-C07,SubmitReview,A5.2 | PIM,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),C
+UC-C07,SubmitReview,A5.2 | PIM,6,CurrentCustomer,MyOrdersService,trusted identity,R
+UC-C07,SubmitReview,A5.2 | PIM,7,MyOrdersService,UnitOfWork,ExecuteAsync(work),C
+UC-C07,SubmitReview,A5.2 | PIM,8,UnitOfWork,MyOrdersService,TransactionWork callback (same transaction),C
+UC-C07,SubmitReview,A5.2 | PIM,9,MyOrdersService,MyOrdersRepository,"LockOwnedAsync(customerId, orderId)",C
+UC-C07,SubmitReview,A5.2 | PIM,10,MyOrdersRepository,MyOrdersService,locked owned Order,R
+UC-C07,SubmitReview,A5.2 | PIM,11,MyOrdersService,MyOrdersRepository,SaveReviewOnceAsync(review),C
+UC-C07,SubmitReview,A5.2 | PIM,12,MyOrdersRepository,MyOrdersService,once only; Delivered order and rating 1..5 required,R
+UC-C07,SubmitReview,A5.2 | PIM,13,MyOrdersService,MyOrdersService,[local] reject or return existing outcome; no unauthorized mutation,C
+UC-C07,SubmitReview,A5.2 | PIM,14,MyOrdersService,UnitOfWork,work completed; otherwise throw to roll back,R
+UC-C07,SubmitReview,A5.2 | PIM,15,UnitOfWork,MyOrdersService,committed; exception means rolled back,R
+UC-C07,SubmitReview,A5.2 | PIM,16,MyOrdersService,MyOrdersController,OperationResultDto,R
+UC-C07,SubmitReview,A5.2 | PIM,17,MyOrdersController,MyOrdersApiClient,HTTPS response: OperationResultDto,R
+UC-C07,SubmitReview,A5.2 | PIM,18,MyOrdersApiClient,MyOrdersPage,OperationResultDto; update UI,R
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,1,Customer,MyOrdersView,user action: GetOrders,C
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,2,MyOrdersView,MyOrdersViewModel,GetOrdersAsync(),C
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,3,MyOrdersViewModel,MyOrdersApiModel,GetOrdersAsync(),C
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,4,MyOrdersApiModel,MyOrdersController,HTTPS GetOrdersAsync(),C
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,5,MyOrdersController,MyOrdersService,GetOrdersAsync(),C
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,6,MyOrdersService,MyOrdersController,OrderListDto; ref detailed backend page,R
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,7,MyOrdersController,MyOrdersApiModel,HTTPS response: OrderListDto,R
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,8,MyOrdersApiModel,MyOrdersViewModel,OrderListDto,R
+UC-C07,Mobile entry refinement,Same DTO/API contract; ref operation-specific backend pages | PIM,9,MyOrdersViewModel,MyOrdersView,OrderListDto; render result,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,1,MyOrdersService,OrderStateMachine,"ProcessEventAsync(snapshot, cancelOrderEvent)",C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,2,OrderStateMachine,OrderStateMachine,[local] select exactly one source-state / event / guard row,C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,3,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,4,OrderLifecycleRepository,OrderStateMachine,selected cancellation row recorded once,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,5,OrderStateMachine,OrderLifecycleRepository,LockReservedBatchesAsync(orderId),C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,6,OrderLifecycleRepository,OrderStateMachine,locked reserved batches,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,7,OrderStateMachine,OrderStateMachine,[local] release reservations once; set Cancelled; retain independent payment state,C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,8,OrderStateMachine,OrderLifecycleRepository,SaveBatchesAsync(batches),C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,9,OrderLifecycleRepository,OrderStateMachine,reservations persisted,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,10,OrderStateMachine,OrderLifecycleRepository,SaveAsync(order),C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,11,OrderLifecycleRepository,OrderStateMachine,Cancelled persisted,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,12,OrderStateMachine,OrderLifecycleRepository,AppendAuditAsync(audit),C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,13,OrderLifecycleRepository,OrderStateMachine,customer actor audit persisted,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,14,OrderStateMachine,OrderStateMachine,[local] completion lookup selects F_cancelled without adding a persistent status,C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,15,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,16,OrderLifecycleRepository,OrderStateMachine,fulfillment completion evidence,R
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,17,OrderStateMachine,OrderStateMachine,CurrentState(),C
+UC-C07,OrderStateMachine cancellation,cancelOrder; private table selects T08u/T08p/T09; no per-transition objects | PIM,18,OrderStateMachine,MyOrdersService,StateMachineResult; caller commits all effects together,R

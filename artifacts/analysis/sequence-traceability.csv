@@ -1,0 +1,237 @@
+UseCase,Page,SourceFlows,Number,Sender,Receiver,Interaction,Kind
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,1,Shopper,CatalogView,Open storefront catalog,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,2,CatalogView,CatalogController,Request catalog and categories,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,3,CatalogController,CatalogService,Prepare catalog,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,4,CatalogService,ProductCategory,Read active categories,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,5,ProductCategory,CatalogService,Categories,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,6,CatalogService,CatalogController,Catalog showcase,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,7,CatalogController,CatalogView,Display categories and showcase,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,8,Shopper,CatalogView,Select category or enter keyword,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,9,CatalogView,CatalogController,Submit search criteria,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,10,CatalogController,CatalogService,Search active products,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,11,CatalogService,Product,Find matching active products,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,12,Product,CatalogService,Matching products,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,13,CatalogService,BatchInventory,"Read active stock, price and clearance",C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,14,BatchInventory,CatalogService,Availability and prices,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,15,CatalogService,CatalogController,Priced product results,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,16,CatalogController,CatalogView,Render product grid,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,17,CatalogService,Product,Read six popular alternatives,C
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,18,Product,CatalogService,Recommended products,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,19,CatalogService,CatalogController,Empty search and alternatives,R
+UC-C01,01 Catalog and search,Normal 1-6; E4.1,20,CatalogController,CatalogView,Show no-match message and retry guidance,R
+UC-C01,02 Details and clearance,A3.1; A3.2,1,Shopper,CatalogView,Select product,C
+UC-C01,02 Details and clearance,A3.1; A3.2,2,CatalogView,CatalogController,Request product details,C
+UC-C01,02 Details and clearance,A3.1; A3.2,3,CatalogController,CatalogService,Get product details,C
+UC-C01,02 Details and clearance,A3.1; A3.2,4,CatalogService,Product,"Read description, origin and certificate",C
+UC-C01,02 Details and clearance,A3.1; A3.2,5,Product,CatalogService,Product details,R
+UC-C01,02 Details and clearance,A3.1; A3.2,6,CatalogService,BatchInventory,"Read harvest, expiry and active price",C
+UC-C01,02 Details and clearance,A3.1; A3.2,7,BatchInventory,CatalogService,Batch details,R
+UC-C01,02 Details and clearance,A3.1; A3.2,8,CatalogService,CatalogController,Combined details,R
+UC-C01,02 Details and clearance,A3.1; A3.2,9,CatalogController,CatalogView,Render details and quantity selector,R
+UC-C01,02 Details and clearance,A3.1; A3.2,10,Shopper,CatalogView,Select clearance filter,C
+UC-C01,02 Details and clearance,A3.1; A3.2,11,CatalogView,CatalogController,Request discounted products,C
+UC-C01,02 Details and clearance,A3.1; A3.2,12,CatalogController,CatalogService,Filter active clearance batches,C
+UC-C01,02 Details and clearance,A3.1; A3.2,13,CatalogService,BatchInventory,Read eligible clearance prices,C
+UC-C01,02 Details and clearance,A3.1; A3.2,14,BatchInventory,CatalogService,Clearance batches,R
+UC-C01,02 Details and clearance,A3.1; A3.2,15,CatalogService,CatalogController,Clearance results,R
+UC-C01,02 Details and clearance,A3.1; A3.2,16,CatalogController,CatalogView,Render clearance product grid,R
+UC-C03,01 View cart,Normal 1-5; E3.1,1,Shopper,CartView,Open shopping cart,C
+UC-C03,01 View cart,Normal 1-5; E3.1,2,CartView,CartController,Request cart,C
+UC-C03,01 View cart,Normal 1-5; E3.1,3,CartController,CartService,Load current basket,C
+UC-C03,01 View cart,Normal 1-5; E3.1,4,CartService,Cart,Read current cart context,C
+UC-C03,01 View cart,Normal 1-5; E3.1,5,Cart,CartService,Cart context,R
+UC-C03,01 View cart,Normal 1-5; E3.1,6,CartService,CartItem,Read line quantities and products,C
+UC-C03,01 View cart,Normal 1-5; E3.1,7,CartItem,CartService,Cart lines,R
+UC-C03,01 View cart,Normal 1-5; E3.1,8,CartService,Product,Read active product status,C
+UC-C03,01 View cart,Normal 1-5; E3.1,9,Product,CartService,Product status,R
+UC-C03,01 View cart,Normal 1-5; E3.1,10,CartService,BatchInventory,"Read stock, reservations and prices",C
+UC-C03,01 View cart,Normal 1-5; E3.1,11,BatchInventory,CartService,Available quantities and prices,R
+UC-C03,01 View cart,Normal 1-5; E3.1,12,CartService,CartService,Calculate line totals and subtotal,C
+UC-C03,01 View cart,Normal 1-5; E3.1,13,CartService,CartController,Cart summary,R
+UC-C03,01 View cart,Normal 1-5; E3.1,14,CartController,CartView,Render cart and checkout control,R
+UC-C03,01 View cart,Normal 1-5; E3.1,15,CartService,CartController,Cart with invalid-item indicators,R
+UC-C03,01 View cart,Normal 1-5; E3.1,16,CartController,CartView,Highlight unavailable items; disable checkout,R
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,1,Shopper,CartView,Add product or change quantity Q,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,2,CartView,CartController,Submit item and requested quantity,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,3,CartController,CartService,Validate cart change,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,4,CartService,BatchInventory,Read current available stock and price,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,5,BatchInventory,CartService,Available quantity and price,R
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,6,CartService,CartItem,Create or update cart quantity,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,7,CartItem,CartService,Updated cart line,R
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,8,CartService,CartItem,Restrict quantity to available maximum,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,9,CartItem,CartService,Clamped cart line,R
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,10,CartService,CartService,Recalculate totals and subtotal,C
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,11,CartService,CartController,Updated summary and optional stock warning,R
+UC-C03,02 Add or update quantity,A1.1; A4.1; E2.1,12,CartController,CartView,"Refresh basket, badge and warning",R
+UC-C03,03 Remove item,A4.2,1,Shopper,CartView,Select Remove,C
+UC-C03,03 Remove item,A4.2,2,CartView,CartView,Request removal confirmation,C
+UC-C03,03 Remove item,A4.2,3,Shopper,CartView,Confirm removal,C
+UC-C03,03 Remove item,A4.2,4,CartView,CartController,Remove selected line,C
+UC-C03,03 Remove item,A4.2,5,CartController,CartService,Apply removal,C
+UC-C03,03 Remove item,A4.2,6,CartService,CartItem,Delete selected cart line,C
+UC-C03,03 Remove item,A4.2,7,CartItem,CartService,Removal complete,R
+UC-C03,03 Remove item,A4.2,8,CartService,CartService,Recalculate subtotal,C
+UC-C03,03 Remove item,A4.2,9,CartService,CartController,Updated cart summary,R
+UC-C03,03 Remove item,A4.2,10,CartController,CartView,Render remaining basket,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,1,Customer actor,ProfileAddressView,Open profile and address book,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,2,ProfileAddressView,ProfileController,Request own profile,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,3,ProfileController,ProfileService,Load authenticated profile,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,4,ProfileService,Customer,Read profile and contact information,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,5,Customer,ProfileService,Profile,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,6,ProfileService,CustomerAddress,Read addresses and default indicator,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,7,CustomerAddress,ProfileService,Address book,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,8,ProfileService,ProfileController,Profile and addresses,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,9,ProfileController,ProfileAddressView,Render profile and default address,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,10,Customer actor,ProfileAddressView,Edit full name or contact email; Save,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,11,ProfileAddressView,ProfileController,Submit profile changes,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,12,ProfileController,ProfileService,Validate email and update profile,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,13,ProfileService,Customer,Apply valid profile changes,C
+UC-C05,01 View and update profile,Normal 1-3; A2.1,14,Customer,ProfileService,Updated profile,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,15,ProfileService,ProfileController,Update confirmation,R
+UC-C05,01 View and update profile,Normal 1-3; A2.1,16,ProfileController,ProfileAddressView,Show profile update confirmation,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,1,Customer actor,ProfileAddressView,Enter or edit address and default choice,C
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,2,ProfileAddressView,ProfileController,Submit address fields,C
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,3,ProfileController,ProfileService,Validate recipient and address,C
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,4,ProfileService,ProfileController,Phone validation error,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,5,ProfileController,ProfileAddressView,Display 10-digit phone error,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,6,ProfileService,GeocodingBoundary,Resolve address coordinates,C
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,7,GeocodingBoundary,Google Maps,Request geocoding,C
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,8,Google Maps,GeocodingBoundary,Coordinates or unresolved result,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,9,GeocodingBoundary,ProfileService,Geocoding result,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,10,ProfileService,CustomerAddress,Save address; clear prior default if selected,C
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,11,CustomerAddress,ProfileService,Updated address book,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,12,ProfileService,ProfileController,Address saved,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,13,ProfileController,ProfileAddressView,Refresh address list and default marker,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,14,ProfileService,ProfileController,Address cannot be resolved,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,15,ProfileController,ProfileAddressView,Prompt address correction,R
+UC-C05,02 Add or edit address,A3.1; A3.2; E3.1; E3.2,16,ProfileAddressView,ProfileAddressView,Keep form open for correction,C
+UC-C05,03 Delete saved address,A3.3,1,Customer actor,ProfileAddressView,Delete eligible address,C
+UC-C05,03 Delete saved address,A3.3,2,ProfileAddressView,ProfileController,Request address deletion,C
+UC-C05,03 Delete saved address,A3.3,3,ProfileController,ProfileService,Check address deletion eligibility,C
+UC-C05,03 Delete saved address,A3.3,4,ProfileService,Order,Check active pending-order use,C
+UC-C05,03 Delete saved address,A3.3,5,Order,ProfileService,No active pending-order reference,R
+UC-C05,03 Delete saved address,A3.3,6,ProfileService,CustomerAddress,Delete confirmed address,C
+UC-C05,03 Delete saved address,A3.3,7,CustomerAddress,ProfileService,Address removed,R
+UC-C05,03 Delete saved address,A3.3,8,ProfileService,ProfileController,Updated address book,R
+UC-C05,03 Delete saved address,A3.3,9,ProfileController,ProfileAddressView,Refresh address list,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,1,Customer actor,CheckoutView,Proceed to checkout,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,2,CheckoutView,CheckoutController,Request checkout data,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,3,CheckoutController,CheckoutService,Prepare checkout,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,4,CheckoutService,CustomerAddress,Read latest completed-purchase address,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,5,CustomerAddress,CheckoutService,Default delivery address,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,6,CheckoutService,Cart,Read non-empty cart context,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,7,Cart,CheckoutService,Current cart,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,8,CheckoutService,CheckoutController,Checkout context,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,9,CheckoutController,CheckoutView,Show checkout address and cart,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,10,Customer actor,CheckoutView,Choose another saved or entered address,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,11,CheckoutView,CheckoutController,Submit selected address,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,12,CheckoutController,CheckoutService,Re-evaluate delivery address,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,13,CheckoutService,DistanceBoundary,Calculate driving distance,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,14,DistanceBoundary,Google Maps,Request route distance,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,15,Google Maps,DistanceBoundary,Driving distance d,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,16,DistanceBoundary,CheckoutService,Distance result,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,17,CheckoutService,CheckoutService,Calculate tiered fee and FEFO-priced summary,C
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,18,CheckoutService,CheckoutController,Summary and COD/VietQR choices,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,19,CheckoutController,CheckoutView,Render totals and payment choices,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,20,CheckoutService,CheckoutController,Address outside service boundary,R
+UC-C06,01 Prepare delivery and totals,Normal 1-6; A2.1; E4.1,21,CheckoutController,CheckoutView,Block placement; request another address,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,1,Customer actor,CheckoutView,Select COD and Place Order,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,2,CheckoutView,CheckoutController,Submit confirmed checkout,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,3,CheckoutController,CheckoutService,Place COD order,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,4,CheckoutService,BatchInventory,Recheck stock and FEFO allocation,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,5,BatchInventory,CheckoutService,Current allocation and stock result,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,6,CheckoutService,BatchInventory,Reserve allocated quantities atomically,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,7,BatchInventory,CheckoutService,Reservation staged,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,8,CheckoutService,Order,Create Pending order,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,9,Order,CheckoutService,Order reference,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,10,CheckoutService,OrderDetail,"Record batch lines, quantities and totals",C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,11,OrderDetail,CheckoutService,Order details staged,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,12,CheckoutService,CartItem,Clear submitted cart items,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,13,CartItem,CheckoutService,Cart clear staged,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,14,CheckoutService,CheckoutService,"Commit order, stock, lines and cart together",C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,15,CheckoutService,NotificationBoundary,Dispatch confirmation and staff-queue notice,A
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,16,CheckoutService,CheckoutController,Committed order confirmation,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,17,CheckoutController,CheckoutView,Show order number and delivery summary,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,18,CheckoutService,CheckoutService,Roll back attempted order changes,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,19,CheckoutService,CartItem,Adjust quantities to current availability,C
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,20,CartItem,CheckoutService,Adjusted cart,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,21,CheckoutService,CheckoutController,Stock changed; re-confirm required,R
+UC-C06,02 Submit COD order,Normal 7-9; E8.1; postconditions,22,CheckoutController,CheckoutView,Show warning and revised quantities,R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,1,Customer actor,CheckoutView,Choose VietQR and Confirm Order,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,2,CheckoutView,CheckoutController,Submit VietQR checkout,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,3,CheckoutController,CheckoutService,Place order through shared atomic submission,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,4,CheckoutService,Order,Obtain newly created Pending order and total,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,5,Order,CheckoutService,Pending order reference and amount,R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,6,CheckoutService,PaymentBoundary,Generate QR for exact order amount,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,7,PaymentBoundary,SePay,Request VietQR data,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,8,SePay,PaymentBoundary,QR payment data,R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,9,PaymentBoundary,CheckoutService,QR data,R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,10,CheckoutService,CheckoutController,Pending order and QR data,R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,11,CheckoutController,CheckoutView,"Show QR, 15-minute timer and payment listener",R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,12,Customer actor,SePay,Scan QR and pay using banking application,A
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,13,SePay,PaymentBoundary,Deliver payment confirmation payload,A
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,14,PaymentBoundary,CheckoutService,Forward payment notification,A
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,15,CheckoutService,CheckoutService,Verify authenticity and matching order/amount,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,16,CheckoutService,Order,Record Paid payment status,C
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,17,Order,CheckoutService,Updated payment state,R
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,18,CheckoutService,CheckoutView,Publish real-time payment-state update within 3 seconds,A
+UC-C06,03 VietQR and payment confirmation,A6.1; BR-ORD-03; payment postconditions,19,CheckoutService,NotificationBoundary,Dispatch confirmation and staff notice,A
+UC-C07,01 Order history and details,Normal 1-5,1,Customer actor,MyOrdersView,Open My Orders,C
+UC-C07,01 Order history and details,Normal 1-5,2,MyOrdersView,MyOrdersController,Request own order history,C
+UC-C07,01 Order history and details,Normal 1-5,3,MyOrdersController,MyOrdersService,Load orders for authenticated customer,C
+UC-C07,01 Order history and details,Normal 1-5,4,MyOrdersService,Order,Read owned orders newest first,C
+UC-C07,01 Order history and details,Normal 1-5,5,Order,MyOrdersService,Orders with totals and states,R
+UC-C07,01 Order history and details,Normal 1-5,6,MyOrdersService,MyOrdersController,Order history,R
+UC-C07,01 Order history and details,Normal 1-5,7,MyOrdersController,MyOrdersView,Render history and status badges,R
+UC-C07,01 Order history and details,Normal 1-5,8,Customer actor,MyOrdersView,Select order details,C
+UC-C07,01 Order history and details,Normal 1-5,9,MyOrdersView,MyOrdersController,Request selected owned order,C
+UC-C07,01 Order history and details,Normal 1-5,10,MyOrdersController,MyOrdersService,Load owned order details,C
+UC-C07,01 Order history and details,Normal 1-5,11,MyOrdersService,OrderDetail,"Read quantities, batch prices and discounts",C
+UC-C07,01 Order history and details,Normal 1-5,12,OrderDetail,MyOrdersService,Historical order lines,R
+UC-C07,01 Order history and details,Normal 1-5,13,MyOrdersService,CustomerAddress,Read delivery and contact address,C
+UC-C07,01 Order history and details,Normal 1-5,14,CustomerAddress,MyOrdersService,Delivery information,R
+UC-C07,01 Order history and details,Normal 1-5,15,MyOrdersService,MyOrdersController,Order details and lifecycle progress,R
+UC-C07,01 Order history and details,Normal 1-5,16,MyOrdersController,MyOrdersView,Render receipt and tracking timeline,R
+UC-C07,02 Cancel order,A3.1; E1.1,1,Customer actor,MyOrdersView,Select Cancel Order,C
+UC-C07,02 Cancel order,A3.1; E1.1,2,MyOrdersView,MyOrdersView,Ask confirmation and reason,C
+UC-C07,02 Cancel order,A3.1; E1.1,3,Customer actor,MyOrdersView,Confirm cancellation and reason,C
+UC-C07,02 Cancel order,A3.1; E1.1,4,MyOrdersView,MyOrdersController,Submit cancellation,C
+UC-C07,02 Cancel order,A3.1; E1.1,5,MyOrdersController,MyOrdersService,Cancel owned order if eligible,C
+UC-C07,02 Cancel order,A3.1; E1.1,6,MyOrdersService,Order,Read current owned-order state,C
+UC-C07,02 Cancel order,A3.1; E1.1,7,Order,MyOrdersService,Current lifecycle state,R
+UC-C07,02 Cancel order,A3.1; E1.1,8,MyOrdersService,Order,Stage Cancelled status and reason,C
+UC-C07,02 Cancel order,A3.1; E1.1,9,MyOrdersService,BatchInventory,Release reserved batch quantities,C
+UC-C07,02 Cancel order,A3.1; E1.1,10,MyOrdersService,AuditLog,Record cancellation event,C
+UC-C07,02 Cancel order,A3.1; E1.1,11,MyOrdersService,MyOrdersService,"Commit cancellation, release and audit together",C
+UC-C07,02 Cancel order,A3.1; E1.1,12,MyOrdersService,OrderNotificationBoundary,Notify customer/status and staff queue,A
+UC-C07,02 Cancel order,A3.1; E1.1,13,MyOrdersService,MyOrdersController,Cancellation complete,R
+UC-C07,02 Cancel order,A3.1; E1.1,14,MyOrdersController,MyOrdersView,Render Cancelled state,R
+UC-C07,02 Cancel order,A3.1; E1.1,15,MyOrdersService,MyOrdersController,Self-cancellation unavailable,R
+UC-C07,02 Cancel order,A3.1; E1.1,16,MyOrdersController,MyOrdersView,Disable cancellation; show store-contact guidance,R
+UC-C07,03 Re-order,A5.1; E2.1,1,Customer actor,MyOrdersView,Select Re-Order on delivered order,C
+UC-C07,03 Re-order,A5.1; E2.1,2,MyOrdersView,MyOrdersController,Request re-order,C
+UC-C07,03 Re-order,A5.1; E2.1,3,MyOrdersController,MyOrdersService,Copy items at current availability and prices,C
+UC-C07,03 Re-order,A5.1; E2.1,4,MyOrdersService,OrderDetail,Read historical products and quantities,C
+UC-C07,03 Re-order,A5.1; E2.1,5,OrderDetail,MyOrdersService,Historical lines,R
+UC-C07,03 Re-order,A5.1; E2.1,6,MyOrdersService,Product,Check currently active products,C
+UC-C07,03 Re-order,A5.1; E2.1,7,Product,MyOrdersService,Active product set,R
+UC-C07,03 Re-order,A5.1; E2.1,8,MyOrdersService,BatchInventory,Read availability and current prices,C
+UC-C07,03 Re-order,A5.1; E2.1,9,BatchInventory,MyOrdersService,Current stock and prices,R
+UC-C07,03 Re-order,A5.1; E2.1,10,MyOrdersService,Cart,Locate current customer cart,C
+UC-C07,03 Re-order,A5.1; E2.1,11,Cart,MyOrdersService,Current cart,R
+UC-C07,03 Re-order,A5.1; E2.1,12,MyOrdersService,CartItem,Add only currently available items,C
+UC-C07,03 Re-order,A5.1; E2.1,13,CartItem,MyOrdersService,Updated cart lines,R
+UC-C07,03 Re-order,A5.1; E2.1,14,MyOrdersService,MyOrdersController,Re-order cart prepared,R
+UC-C07,03 Re-order,A5.1; E2.1,15,MyOrdersService,MyOrdersController,Available items added; missing/changed items flagged,R
+UC-C07,03 Re-order,A5.1; E2.1,16,MyOrdersController,MyOrdersView,Redirect to cart with applicable warning,R
+UC-C07,04 Submit review,A5.2,1,Customer actor,MyOrdersView,Select Rate and Review,C
+UC-C07,04 Submit review,A5.2,2,MyOrdersView,MyOrdersView,Show 1-5 rating and optional comment form,C
+UC-C07,04 Submit review,A5.2,3,Customer actor,MyOrdersView,Submit rating and comment,C
+UC-C07,04 Submit review,A5.2,4,MyOrdersView,MyOrdersController,Submit review,C
+UC-C07,04 Submit review,A5.2,5,MyOrdersController,MyOrdersService,Validate owned Delivered order and 1-5 rating,C
+UC-C07,04 Submit review,A5.2,6,MyOrdersService,Order,Check owner and Delivered status,C
+UC-C07,04 Submit review,A5.2,7,Order,MyOrdersService,Eligible delivered order,R
+UC-C07,04 Submit review,A5.2,8,MyOrdersService,OrderReview,Save one review per order,C
+UC-C07,04 Submit review,A5.2,9,OrderReview,MyOrdersService,Review saved,R
+UC-C07,04 Submit review,A5.2,10,MyOrdersService,MyOrdersController,Feedback confirmation,R
+UC-C07,04 Submit review,A5.2,11,MyOrdersController,MyOrdersView,Show thank-you message,R

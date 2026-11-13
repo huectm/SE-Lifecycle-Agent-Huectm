@@ -1,0 +1,11 @@
+test_case_id,product_id,product_name,unit_price,current_stock,reserved_stock,available_stock,requested_qty,expected_cart_qty,expected_line_total,expected_action_result,system_alert_message,rule_reference
+TC-CRT-DATA-01,PRD-001,Cải bẹ xanh hữu cơ,28000,45,5,40,2,2,56000,Success,Sản phẩm đã được thêm vào giỏ hàng,BR-BAT-01
+TC-CRT-DATA-02,PRD-001,Cải bẹ xanh hữu cơ,28000,45,5,40,40,40,1120000,Success - Max stock,Đã thêm toàn bộ số lượng còn lại vào giỏ hàng,BR-BAT-02 & BR-ORD-01
+TC-CRT-DATA-03,PRD-001,Cải bẹ xanh hữu cơ,28000,45,5,40,45,40,1120000,Stock limit clamp,Rất tiếc số lượng trong kho chỉ còn 40 đơn vị,BR-ORD-01 (Zero Over-selling)
+TC-CRT-DATA-04,PRD-008,Xà lách Lô Lô xanh,13000,5,5,0,1,0,0,Blocked - Out of stock,Sản phẩm hiện đang tạm hết hàng,BR-ORD-01
+TC-CRT-DATA-05,PRD-003,Cà chua Cherry Đà Lạt,36000,25,0,25,0,0,0,Rejected - Zero quantity,Số lượng mua phải lớn hơn 0,BR-ORD-01
+TC-CRT-DATA-06,PRD-003,Cà chua Cherry Đà Lạt,36000,25,0,25,-5,0,0,Rejected - Negative quantity,Số lượng không hợp lệ,BR-ORD-01
+TC-CRT-DATA-07,PRD-003,Cà chua Cherry Đà Lạt,36000,25,0,25,abc,0,0,Rejected - Non-numeric,Vui lòng nhập số lượng hợp lệ,Input Validation
+TC-CRT-DATA-08,PRD-004,Cải Kale xoăn hữu cơ,38500,12,2,10,5,5,192500,Success - Clearance item with 30% discount,Thêm giỏ hàng thành công,BR-BAT-04
+TC-CRT-DATA-09,PRD-004,Cải Kale xoăn hữu cơ,38500,12,2,10,12,10,385000,Stock clamp on clearance item,Chỉ còn 10 túi trong kho,BR-ORD-01 & BR-BAT-04
+TC-CRT-DATA-10,PRD-005,Cà rốt ta hữu cơ,32000,80,0,80,1,0,0,Item removed from cart,Đã xóa sản phẩm khỏi giỏ hàng,UC-C03.3

@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-06",
+  "round": 1,
+  "unit": {
+    "NotExecuted": 533,
+    "Passed": 660
+  },
+  "regression": {
+    "Passed": 66,
+    "NotExecuted": 1
+  },
+  "newExecutedFailures": 0,
+  "productionFixesThisRound": 0,
+  "retestRequired": false,
+  "termination": "No failing executed tests in round 1; no correction/retest loop was needed.",
+  "limitations": "Skipped cases remain unexecuted; coverage/completion gate not met.",
+  "coverage": {
+    "linePercent": 85.19,
+    "branchPercent": 73.49,
+    "linesCovered": 1007,
+    "linesValid": 1182,
+    "branchesCovered": 355,
+    "branchesValid": 483,
+    "atomicConditionCoverage": "Not independently measured; planned truth vectors are not runtime coverage."
+  }
+}

@@ -1,0 +1,25 @@
+Transition ID,Region,Source,Event,Guard,Action,Target,Class,Contract,Basis
+I00,fulfillment,initial,acceptOrder,plannedStock,accept,payment_choice,OrderStateMachine,IOrderStateMachine,FR-ORD-03; BR-ORD-01
+T01u,fulfillment,payment_choice,__completion,unpaid,enterInitial,pending_unpaid,OrderStateMachine,IOrderStateMachine,Stakeholder: independent initial unpaid state
+T01p,fulfillment,payment_choice,__completion,paid,enterInitial,pending_paid,OrderStateMachine,IOrderStateMachine,Stakeholder: independent initial paid state
+T02u,fulfillment,pending_unpaid,approveOrder,deferred,deferred,confirmed,OrderStateMachine,IOrderStateMachine,BR-FUL-01; FR-FUL-02
+T02p,fulfillment,pending_paid,approveOrder,deferred,deferred,confirmed,OrderStateMachine,IOrderStateMachine,FR-FUL-02; no mandatory call for paid first order
+T03,fulfillment,confirmed,startPacking,deferred,deferred,packing,OrderStateMachine,IOrderStateMachine,UC-C07
+T04,fulfillment,packing,dispatchOrder,deferred,deferred,shipping,OrderStateMachine,IOrderStateMachine,BR-FUL-02; FR-DEL-01
+T05,fulfillment,shipping,deliverySuccess,deferred,deferred,delivered,OrderStateMachine,IOrderStateMachine,FR-DEL-02
+T06,fulfillment,shipping,deliveryFailure,deferred,deferred,delivery_failed,OrderStateMachine,IOrderStateMachine,FR-DEL-03
+T07,fulfillment,delivery_failed,confirmReturnReceipt,deferred,deferred,returned,OrderStateMachine,IOrderStateMachine,FR-DEL-04
+T08u,fulfillment,pending_unpaid,cancelOrder,ownedCustomer,cancel,cancelled,OrderStateMachine,IOrderStateMachine,UC-C07; BR-FUL-01
+T08p,fulfillment,pending_paid,cancelOrder,ownedCustomer,cancel,cancelled,OrderStateMachine,IOrderStateMachine,UC-C07; paid cancellation refund policy TBD
+T09,fulfillment,confirmed,cancelOrder,ownedCustomer,cancel,cancelled,OrderStateMachine,IOrderStateMachine,UC-C07
+F_delivered,fulfillment,delivered,__completion,always,completeFulfillment,final_delivered,OrderStateMachine,IOrderStateMachine,Stakeholder request: explicit UML final node for fulfillment completion
+F_returned,fulfillment,returned,__completion,always,completeFulfillment,final_returned,OrderStateMachine,IOrderStateMachine,Stakeholder request: explicit UML final node for fulfillment completion
+F_cancelled,fulfillment,cancelled,__completion,always,completeFulfillment,final_cancelled,OrderStateMachine,IOrderStateMachine,Stakeholder request: explicit UML final node for fulfillment completion
+R01,refund,refund_initial,observeRefundCandidate,deferred,deferred,awaiting,OrderStateMachine,IOrderStateMachine,Stakeholder automatic-refund policy; proposed workflow milestone
+R02,refund,awaiting,receiptAndCauseConfirmed,deferred,deferred,processing,OrderStateMachine,IOrderStateMachine,Stakeholder confirmed eligibility and amount 2026-10-29; proposed duplicate-safety control
+R03,refund,processing,refundSettlementConfirmed,deferred,deferred,completed,OrderStateMachine,IOrderStateMachine,Derived settlement integrity; provider integration TBD
+R04,refund,processing,"refundRejected, settlementUncertain",deferred,deferred,unresolved,OrderStateMachine,IOrderStateMachine,Exception representation proposed; retry/reconciliation policy TBD
+P01,payment,pay_initial,createOrder,initialPayment,initializePayment,unpaid,OrderStateMachine,IOrderStateMachine,UC-C06 COD/VietQR initial payment state
+P02,payment,unpaid,verifiedSePayNotification,deferred,deferred,paid,OrderStateMachine,IOrderStateMachine,BR-ORD-03; FR-PAY-02; UC-C06 A6.1
+P03,payment,paid,refundSettlementConfirmed,deferred,deferred,partially_refunded,OrderStateMachine,IOrderStateMachine,Confirmed goods-only refund with retained delivery fee; proposed financial enum
+P04,payment,paid,refundSettlementConfirmed,deferred,deferred,refunded,OrderStateMachine,IOrderStateMachine,BR-FUL-05; confirmed product-fault full refund

@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-06",
+  "fixtures": 48,
+  "documentedTestMethods": 1191,
+  "designIdsPreserved": 1190,
+  "designOutcomesIdentical": true,
+  "passed": 660,
+  "failed": 0,
+  "skipped": 533,
+  "runtimeDispatcherRemoved": true,
+  "noPlaceholderBodies": true,
+  "productionSourceUnchanged": true,
+  "coverage": {
+    "linePercent": 85.19,
+    "branchPercent": 73.49
+  },
+  "evidence": "artifacts/testing/unit-execution/explicit-final/explicit-final.trx",
+  "generator": "scripts/analysis/generate_unit_scripts.py",
+  "generatorUsesStaging": true,
+  "harnessCorrection": {
+    "caseId": "UTM-075-TC002",
+    "cause": "Numeric folding compared decimal zero with integer zero by object equality. Corrected to numeric comparison.",
+    "initialEvidence": "readable-tests/readable-tests.trx",
+    "retest": "explicit-final/explicit-final.trx"
+  },
+  "excludedIntermediateRun": {
+    "evidence": "explicit-local/explicit-local.trx",
+    "reason": "Generation failed before expansion in an intermediate iteration; output was not accepted. Final generator stages and rejects incomplete bodies before publication."
+  },
+  "productionFilesVerified": 123
+}

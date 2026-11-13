@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "REG-036",
+    "title": "Privacy not accepted",
+    "field": "agree",
+    "value": "0",
+    "expected": "You must agree to the Privacy Policy",
+    "basis": "UC-REG-01 BR-03",
+    "technique": "EP",
+    "flow": "E4",
+    "firstname": "Robot",
+    "lastname": "Tester",
+    "email": "rf1793178813186849400reg-036@example.com",
+    "telephone": "0812345678",
+    "password": "Valid123!",
+    "confirm": "Valid123!",
+    "newsletter": "0",
+    "agree": "0"
+  },
+  "status": "PASS",
+  "url": "https://tutorialsninja.com/demo/index.php?route=account/register",
+  "title": "Register Account",
+  "actual": {
+    "url": "https://tutorialsninja.com/demo/index.php?route=account/register",
+    "success": false,
+    "warnings": "Warning: You must agree to the Privacy Policy!",
+    "email_validity": {
+      "message": "",
+      "valid": true
+    }
+  }
+}

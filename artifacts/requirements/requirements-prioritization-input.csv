@@ -1,0 +1,60 @@
+ID,Requirement_Name,Benefit,Penalty,Cost,Risk
+FR-CAT-01,"The system shall display the list of all product categories with category code, name, and total active product count.",7,6,2,1
+FR-CAT-02,The system shall allow Warehouse Staff to create a new category with unique name and description.,7,6,2,1
+FR-CAT-03,The system shall allow Warehouse Staff to update existing category information.,6,5,2,1
+FR-CAT-04,The system shall allow category deletion only when `BR-CAT-01` is satisfied (zero associated products); otherwise reject with an error message.,7,7,3,2
+FR-PRD-01,"The system shall display a filtered and paginated product list with SKU, name, category, unit, image, and total available inventory across batches.",8,7,3,2
+FR-PRD-02,"The system shall allow Warehouse Staff to create a new product specifying SKU, name, category, unit of measurement, description, and images (`BR-CAT-02`).",8,7,3,2
+FR-PRD-03,"The system shall allow updating product specifications, images, and descriptions.",7,6,2,1
+FR-PRD-04,The system shall allow marking products as inactive or deleting products that have no historical transaction records.,6,5,2,1
+FR-SUP-01,"The system shall list all suppliers with supplier code, name, phone, address, and partnership status.",6,5,2,1
+FR-SUP-02,The system shall allow creating a new supplier with validated tax ID/phone and contact person.,6,5,2,1
+FR-SUP-03,The system shall allow updating supplier contact and address information.,5,4,2,1
+FR-SUP-04,"The system shall enforce `BR-SUP-02`, prohibiting deletion of suppliers with existing Goods Receipts and allowing status change to Inactive only.",7,6,2,2
+FR-GR-01,"The system shall display the history of Goods Receipts with receipt ID, date, supplier name, line count, total amount, and creator.",7,6,3,2
+FR-GR-02,"The system shall allow Warehouse Staff to create a Goods Receipt, selecting a supplier and adding items with Batch No, MFG, EXP, Qty, and Unit Price (`BR-GR-01`).",9,8,4,3
+FR-GR-03,The system shall validate $\text{EXP} > \text{MFG}$ and $\text{EXP} \ge \text{Receipt Date} + 3\text{ days}$ for all perishable items (`BR-GR-02`).,9,9,3,2
+FR-GR-04,The system shall calculate line totals and receipt totals automatically without manual overrides (`BR-GR-03`).,8,7,2,2
+FR-GR-05,"The system shall prohibit modification or deletion of Goods Receipts once associated batch items have been sold, reserved, or disposed (`BR-GR-04`).",8,8,3,2
+FR-BAT-01,The system shall maintain real-time inventory quantity per individual batch (`Batch Inventory`).,9,9,4,3
+FR-BAT-02,The system shall allow Warehouse Staff to set and update the retail selling price independently for each batch (`BR-BAT-01`).,8,8,3,2
+FR-BAT-03,The system shall allow Warehouse Staff to apply clearance discount percentages (10%–50%) to older batches nearing expiration (`BR-BAT-04`).,8,7,3,2
+FR-BAT-04,"The system shall allow Warehouse Staff to set the sale status of newly imported batches to ""Delayed"" or ""Active"" (`BR-BAT-03`).",7,6,2,1
+FR-EXP-01,The system shall run an automated daily routine to delist any batch where $\text{Current Date} \ge \text{EXP}$ (`BR-EXP-01`).,9,9,4,3
+FR-EXP-02,"The system shall provide an Expired Stock Disposal function allowing staff to record condemned batch quantities, reasons, and deduct inventory (`BR-EXP-02`).",8,7,3,2
+FR-BRW-01,"The system shall allow users to browse products grouped by New Arrivals, Best Sellers, Promotions, and Categories.",8,7,3,2
+FR-BRW-02,The system shall provide keyword search on product names returning matches within $\le 500\text{ ms}$ (`NFR-PERF-03`).,7,6,3,2
+FR-BRW-03,"The system shall display product details including high-resolution images, description, origin, organic certification, active batch selling price, and discount tag.",8,7,2,1
+FR-CRT-01,"The system shall allow users to add items to a persistent cart, update quantities, or remove items.",9,9,3,2
+FR-CRT-02,"The system shall validate cart items against active batch inventory, preventing selection of quantities exceeding available stock.",9,9,4,3
+FR-ATH-01,The system shall allow customers to log in via Google OAuth 2.0 and Facebook Login.,8,8,4,3
+FR-ATH-02,"On first-time social login, the system shall prompt the customer for Full Name, Phone Number, Email, and Initial Delivery Address (`BR-AUTH-02`).",8,7,3,2
+FR-ATH-03,"The system shall transmit a 6-digit OTP code to the customer's phone via SMS Brandname, validating input within a 3-minute expiration window (`BR-AUTH-02`).",8,8,5,4
+FR-PRF-01,The system shall allow customers to view and update their profile and maintain a personal address book.,6,5,2,1
+FR-PRF-02,The system shall default the checkout shipping address to the customer's most recently completed order address (`BR-AUTH-03`).,7,6,2,1
+FR-ORD-01,"At checkout, the system shall compute driving distance $d$ from the store to the selected address. If $d > 10\text{ km}$, the order shall be rejected with an explanatory notification (`BR-DEL-01`).",9,9,5,4
+FR-ORD-02,"The system shall compute tiered delivery fees automatically based on distance: $10,000\text{ VND}$ ($<1\text{ km}$), $20,000\text{ VND}$ ($1\text{ to }<3\text{ km}$), $30,000\text{ VND}$ ($3\text{ to }10\text{ km}$) (`BR-DEL-02`).",9,8,4,3
+FR-ORD-03,"Upon order submission, the system shall allocate inventory following FEFO order (`BR-BAT-02`) and place immediate atomic reservations on batches (`BR-ORD-01`).",9,9,5,5
+FR-PAY-01,"The system shall support Cash on Delivery (COD) payment, recording order status as `Pending`.",9,9,3,2
+FR-PAY-02,"For VietQR payment, the system shall render a dynamic QR code containing exact amount and Order ID. Upon receiving verified SePay webhook, status shall transition to `Paid` (`BR-ORD-03`).",9,9,6,5
+FR-MYO-01,"The system shall display the customer's order history with tracking statuses: `Pending`, `Processing`, `In Delivery`, `Delivered`, `Cancelled`, `Delivery Failed`.",8,7,3,2
+FR-MYO-02,"The system shall allow customers to cancel orders that are in `Pending` or `Processing` status, immediately releasing batch reservations (`BR-ORD-04`, `BR-ORD-05`).",8,7,3,2
+FR-MYO-03,The system shall enable rating (1–5 stars) and reviews only for orders in `Delivered` status (`BR-FB-01`).,4,3,3,2
+FR-MYO-04,"The system shall provide a ""Re-Order"" action that maps items from a previous order into the current cart using currently available batches and prevailing prices (`BR-RE-01`).",5,4,2,1
+FR-FUL-01,"The system shall display an incoming order queue for Sales Staff, highlighting first-time customer orders.",9,9,3,2
+FR-FUL-02,"For first-time customer orders, the system shall require Sales Staff to confirm that telephone verification has been conducted before advancing order status (`BR-FUL-01`).",8,8,3,2
+FR-PRN-01,The system shall provide a one-click print function generating formatted Invoices and Packing Slips sent to the store receipt printer (`BR-FUL-02`).,7,6,3,3
+FR-DEL-01,The system shall allow Sales Staff to assign an order to a delivery staff member and transition status to `In Delivery`.,8,8,3,2
+FR-DEL-02,"The system shall allow confirming delivery success (`Delivered`), permanently deducting batch stock and recording financial revenue (`BR-FUL-03`).",8,8,2,1
+FR-DEL-03,"In case of delivery failure, the system shall allow recording failure reasons (`Delivery Failed`) and initiating warehouse restocking inspection (`BR-FUL-04`).",8,8,3,2
+FR-ART-01,The system shall allow Sales Staff to publish rich-text articles and cooking recipes with images.,4,3,3,1
+FR-ART-02,"The system shall allow Sales Staff to edit, delete, hide outdated articles, and unhide previously hidden articles.",4,3,2,1
+FR-ART-03,The storefront shall render active articles for guest and customer viewing.,5,3,2,1
+FR-REP-01,"The system shall generate Revenue Reports aggregated by day, week, month, or custom date ranges with breakdown by product category (`BR-REP-01`).",7,6,3,2
+FR-REP-02,"The system shall generate Real-Time Stock Reports showing quantity on hand, reserved stock, and days remaining until expiration per batch.",8,7,3,2
+FR-REP-03,The system shall generate Expired Stock Disposal Reports detailing destroyed quantities and financial loss values.,7,6,3,2
+FR-REP-04,The system shall trigger visual low-stock alerts when batch inventory drops below defined minimum thresholds.,8,7,2,2
+FR-REP-05,The system shall allow exporting all report tables to Excel (.xlsx) and PDF formats.,5,4,2,1
+FR-ADM-01,"The system shall allow the Store Owner to create staff user accounts and assign roles (`Sales Staff`, `Warehouse Staff`).",8,8,3,2
+FR-ADM-02,"The system shall allow the Store Owner to immediately revoke staff account access, terminating active sessions within $\le 1.0\text{ s}$ (`BR-SEC-03`).",8,8,2,1
+FR-ADM-03,The system shall enforce role-based access control granting the Store Owner unrestricted access to all system functions (`BR-SEC-02`).,8,8,4,2

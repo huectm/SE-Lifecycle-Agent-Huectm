@@ -1,0 +1,49 @@
+{
+  "checks": [
+    {
+      "check": "24 stable table row identifiers",
+      "passed": true
+    },
+    {
+      "check": "Original transition sources and targets preserved",
+      "passed": true
+    },
+    {
+      "check": "No per-transition classifiers in active design",
+      "passed": true
+    },
+    {
+      "check": "One state-machine interface and control class",
+      "passed": true
+    },
+    {
+      "check": "Five use case identifiers preserved",
+      "passed": true
+    },
+    {
+      "check": "All 48 VOPC participations retained",
+      "passed": true
+    },
+    {
+      "check": "Current-state and event processing are exposed",
+      "passed": true
+    },
+    {
+      "check": "Only repository collaborator is retained by state-machine DI",
+      "passed": true
+    },
+    {
+      "check": "No obsolete source classifier files remain",
+      "passed": true
+    },
+    {
+      "check": "No class overlaps or connector crossings through unrelated classes",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "class_pages": 54,
+  "classifiers": 157,
+  "table_rows": 24,
+  "geometry_collisions": []
+}

@@ -1,0 +1,9 @@
+﻿dotnet-coverage v18.12.0.0 [win-x64 - .NET 10.0.12]
+
+SessionId: 2b3d3ca1-049a-4f4e-b84e-6a7bfbbfa6db
+Test run for D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Release\net10.0\FreshFood.Api.Tests.dll (.NETCoreApp,Version=v10.0)
+A total of 1 test files matched the specified pattern.
+Results File: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\artifacts\analysis\sonarqube\tests\huect_LAPTOP-6SN65NCS_2026-11-02_16_48_40_net10.0.trx
+
+Passed!  - Failed:     0, Passed:    41, Skipped:     0, Total:    41, Duration: 1 s - FreshFood.Api.Tests.dll (net10.0)
+Code coverage results: D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\artifacts\analysis\sonarqube\coverage.xml.

@@ -1,0 +1,133 @@
+Design Classifier,C# Symbol,Source,Mapping,Basis
+IUnitOfWork,FreshFood.Reposistory.Repository.IUnitOfWork,src/FreshFood.Reposistory/Repository/IUnitOfWork.cs,Compiled C#,UC-C06 atomic checkout; UC-C07 atomic cancellation
+UnitOfWork,FreshFood.Reposistory.Repository.Implements.UnitOfWork,src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs,Compiled C#,Proposed transaction adapter
+IRepositorySession,FreshFood.Reposistory.Repository.IRepositorySession,src/FreshFood.Reposistory/Repository/IRepositorySession.cs,Compiled C#,Shared scoped transaction; no provider choice imposed
+PostgreSqlSession,FreshFood.Reposistory.Repository.Implements.PostgreSqlSession,src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs,Compiled C#,Existing PostgreSQL; provider factory configured at startup
+ICurrentCustomer,FreshFood.Api.Services.ICurrentCustomer,src/FreshFood-API/Services/ICurrentCustomer.cs,Compiled C#,BR-AUTH-01; guest session variant UC-C03
+CurrentCustomer,FreshFood.Api.Services.Implements.CurrentCustomer,src/FreshFood-API/Services/Implements/CurrentCustomer.cs,Compiled C#,"Server-authenticated principal; session ownership, not request customerId"
+OperationResultDto,FreshFood.Api.DTOs.OperationResultDto,src/FreshFood-API/DTOs/OperationResultDto.cs,Compiled C#,Existing success/error boundary responses
+IGeocodingGateway,FreshFood.Api.Services.IGeocodingGateway,src/FreshFood-API/Services/IGeocodingGateway.cs,Compiled C#,GeocodingBoundary; UC-C05
+GoogleMapsGeocodingAdapter,FreshFood.Api.Services.Implements.GoogleMapsGeocodingAdapter,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,GeocodingBoundary; UC-C05
+IDistanceGateway,FreshFood.Api.Services.IDistanceGateway,src/FreshFood-API/Services/IDistanceGateway.cs,Compiled C#,DistanceBoundary; BR-DEL-01/02
+GoogleMapsDistanceAdapter,FreshFood.Api.Services.Implements.GoogleMapsDistanceAdapter,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,DistanceBoundary; BR-DEL-01/02
+IPaymentGateway,FreshFood.Api.Services.IPaymentGateway,src/FreshFood-API/Services/IPaymentGateway.cs,Compiled C#,"PaymentBoundary; incoming payments only, no invented refund API"
+SePayPaymentAdapter,FreshFood.Api.Services.Implements.SePayPaymentAdapter,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,"PaymentBoundary; incoming payments only, no invented refund API"
+INotificationGateway,FreshFood.Api.Services.INotificationGateway,src/FreshFood-API/Services/INotificationGateway.cs,Compiled C#,NotificationBoundary; channel adapter provider stays configurable
+NotificationAdapter,FreshFood.Api.Services.Implements.NotificationAdapter,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,NotificationBoundary; channel adapter provider stays configurable
+INotificationPublisher,FreshFood.Api.Services.INotificationPublisher,src/FreshFood-API/Services/INotificationPublisher.cs,Compiled C#,Proposed channel seam; no delivery guarantee invented
+NotificationDto,FreshFood.Api.DTOs.NotificationDto,src/FreshFood-API/DTOs/NotificationDto.cs,Compiled C#,Existing customer/staff notification; transaction commits before publish
+VerifiedPaymentDto,FreshFood.Api.DTOs.VerifiedPaymentDto,src/FreshFood-API/DTOs/VerifiedPaymentDto.cs,Compiled C#,Server verified immutable allocation evidence
+ProductCategory,FreshFood.Reposistory.Entities.ProductCategory,src/FreshFood.Reposistory/Entities/ProductCategory.cs,Compiled C#,Existing data requirements / product_categories
+Product,FreshFood.Reposistory.Entities.Product,src/FreshFood.Reposistory/Entities/Product.cs,Compiled C#,Existing data requirements / products
+BatchInventory,FreshFood.Reposistory.Entities.BatchInventory,src/FreshFood.Reposistory/Entities/DomainBehavior.cs,Compiled C#,Existing data requirements / batch_inventory
+Customer,FreshFood.Reposistory.Entities.Customer,src/FreshFood.Reposistory/Entities/Customer.cs,Compiled C#,Existing data requirements / customers
+CustomerAddress,FreshFood.Reposistory.Entities.CustomerAddress,src/FreshFood.Reposistory/Entities/CustomerAddress.cs,Compiled C#,Existing data requirements / customer_addresses
+Cart,FreshFood.Reposistory.Entities.Cart,src/FreshFood.Reposistory/Entities/DomainBehavior.cs,Compiled C#,Existing data requirements / carts
+CartItem,FreshFood.Reposistory.Entities.CartItem,src/FreshFood.Reposistory/Entities/CartItem.cs,Compiled C#,Existing data requirements / cart_items
+Order,FreshFood.Reposistory.Entities.Order,src/FreshFood.Reposistory/Entities/Order.cs,Compiled C#,Existing data requirements / orders
+OrderDetail,FreshFood.Reposistory.Entities.OrderDetail,src/FreshFood.Reposistory/Entities/OrderDetail.cs,Compiled C#,Existing data requirements / order_details
+OrderReview,FreshFood.Reposistory.Entities.OrderReview,src/FreshFood.Reposistory/Entities/OrderReview.cs,Compiled C#,Existing data requirements / order_reviews
+AuditLog,FreshFood.Reposistory.Entities.AuditLog,src/FreshFood.Reposistory/Entities/AuditLog.cs,Compiled C#,Existing data requirements / audit_logs
+DeliveryAgent,FreshFood.Reposistory.Entities.DeliveryAgent,src/FreshFood.Reposistory/Entities/DeliveryAgent.cs,Compiled C#,Existing data requirements / delivery_agents
+OrderPayment,FreshFood.Reposistory.Entities.OrderPayment,src/FreshFood.Reposistory/Entities/OrderPayment.cs,Compiled C#,Existing data requirements / order_payments
+DeliveryFailure,FreshFood.Reposistory.Entities.DeliveryFailure,src/FreshFood.Reposistory/Entities/DeliveryFailure.cs,Compiled C#,Existing data requirements / delivery_failures
+ReturnReceipt,FreshFood.Reposistory.Entities.ReturnReceipt,src/FreshFood.Reposistory/Entities/ReturnReceipt.cs,Compiled C#,Existing data requirements / return_receipts
+ReturnReceiptItem,FreshFood.Reposistory.Entities.ReturnReceiptItem,src/FreshFood.Reposistory/Entities/ReturnReceiptItem.cs,Compiled C#,Existing data requirements / return_receipt_items
+ReturnInspection,FreshFood.Reposistory.Entities.ReturnInspection,src/FreshFood.Reposistory/Entities/ReturnInspection.cs,Compiled C#,Existing data requirements / return_inspections
+Refund,FreshFood.Reposistory.Entities.Refund,src/FreshFood.Reposistory/Entities/Refund.cs,Compiled C#,Existing data requirements / refunds
+ShippingFeeSettlement,FreshFood.Reposistory.Entities.ShippingFeeSettlement,src/FreshFood.Reposistory/Entities/ShippingFeeSettlement.cs,Compiled C#,Existing data requirements / shipping_fee_settlements
+OrderStatus,FreshFood.Reposistory.Entities.OrderStatus,src/FreshFood.Reposistory/Entities/OrderStatus.cs,Compiled C#,Stakeholder-confirmed lifecycle / payment revision
+PaymentStatus,FreshFood.Reposistory.Entities.PaymentStatus,src/FreshFood.Reposistory/Entities/PaymentStatus.cs,Compiled C#,Stakeholder-confirmed lifecycle / payment revision
+PaymentMethod,FreshFood.Reposistory.Entities.PaymentMethod,src/FreshFood.Reposistory/Entities/PaymentMethod.cs,Compiled C#,Stakeholder-confirmed lifecycle / payment revision
+ICatalogService,FreshFood.Api.Services.ICatalogService,src/FreshFood-API/Services/ICatalogService.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+CatalogService,FreshFood.Api.Services.Implements.CatalogService,src/FreshFood-API/Services/Implements/CatalogService.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+CatalogController,FreshFood.Api.Controllers.CatalogController,src/FreshFood-API/Controllers/CatalogController.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+ICatalogRepository,FreshFood.Reposistory.Repository.ICatalogRepository,src/FreshFood.Reposistory/Repository/ICatalogRepository.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+CatalogRepository,FreshFood.Reposistory.Repository.Implements.CatalogRepository,src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+CatalogQueryDto,FreshFood.Api.DTOs.CatalogQueryDto,src/FreshFood-API/DTOs/CatalogQueryDto.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+CatalogResultDto,FreshFood.Api.DTOs.CatalogResultDto,src/FreshFood-API/DTOs/CatalogResultDto.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+ProductDetailsDto,FreshFood.Api.DTOs.ProductDetailsDto,src/FreshFood-API/DTOs/ProductDetailsDto.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+ProductSummaryDto,FreshFood.Api.DTOs.ProductSummaryDto,src/FreshFood-API/DTOs/ProductSummaryDto.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+CategoryDto,FreshFood.Api.DTOs.CategoryDto,src/FreshFood-API/DTOs/CategoryDto.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+BatchOfferDto,FreshFood.Api.DTOs.BatchOfferDto,src/FreshFood-API/DTOs/BatchOfferDto.cs,Compiled C#,UC-C01; VOPC and analysis sequence scenario pages
+ICartService,FreshFood.Api.Services.ICartService,src/FreshFood-API/Services/ICartService.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartService,FreshFood.Api.Services.Implements.CartService,src/FreshFood-API/Services/Implements/CartService.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartController,FreshFood.Api.Controllers.CartController,src/FreshFood-API/Controllers/CartController.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+ICartRepository,FreshFood.Reposistory.Repository.ICartRepository,src/FreshFood.Reposistory/Repository/ICartRepository.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartRepository,FreshFood.Reposistory.Repository.Implements.CartRepository,src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartIdentityDto,FreshFood.Api.DTOs.CartIdentityDto,src/FreshFood-API/DTOs/CartIdentityDto.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartChangeDto,FreshFood.Api.DTOs.CartChangeDto,src/FreshFood-API/DTOs/CartChangeDto.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartResultDto,FreshFood.Api.DTOs.CartResultDto,src/FreshFood-API/DTOs/CartResultDto.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+CartLineDto,FreshFood.Api.DTOs.CartLineDto,src/FreshFood-API/DTOs/CartLineDto.cs,Compiled C#,UC-C03; VOPC and analysis sequence scenario pages
+IProfileService,FreshFood.Api.Services.IProfileService,src/FreshFood-API/Services/IProfileService.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+ProfileService,FreshFood.Api.Services.Implements.ProfileService,src/FreshFood-API/Services/Implements/ProfileService.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+ProfileController,FreshFood.Api.Controllers.ProfileController,src/FreshFood-API/Controllers/ProfileController.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+IProfileRepository,FreshFood.Reposistory.Repository.IProfileRepository,src/FreshFood.Reposistory/Repository/IProfileRepository.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+ProfileRepository,FreshFood.Reposistory.Repository.Implements.ProfileRepository,src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+ProfileResultDto,FreshFood.Api.DTOs.ProfileResultDto,src/FreshFood-API/DTOs/ProfileResultDto.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+ProfileUpdateDto,FreshFood.Api.DTOs.ProfileUpdateDto,src/FreshFood-API/DTOs/ProfileUpdateDto.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+AddressInputDto,FreshFood.Api.DTOs.AddressInputDto,src/FreshFood-API/DTOs/AddressInputDto.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+AddressDto,FreshFood.Api.DTOs.AddressDto,src/FreshFood-API/DTOs/AddressDto.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+GeoPointDto,FreshFood.Api.DTOs.GeoPointDto,src/FreshFood-API/DTOs/GeoPointDto.cs,Compiled C#,UC-C05; VOPC and analysis sequence scenario pages
+ICheckoutService,FreshFood.Api.Services.ICheckoutService,src/FreshFood-API/Services/ICheckoutService.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+CheckoutService,FreshFood.Api.Services.Implements.CheckoutService,src/FreshFood-API/Services/Implements/CheckoutService.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+CheckoutController,FreshFood.Api.Controllers.CheckoutController,src/FreshFood-API/Controllers/CheckoutController.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+ICheckoutRepository,FreshFood.Reposistory.Repository.ICheckoutRepository,src/FreshFood.Reposistory/Repository/ICheckoutRepository.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+CheckoutRepository,FreshFood.Reposistory.Repository.Implements.CheckoutRepository,src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+CheckoutInputDto,FreshFood.Api.DTOs.CheckoutInputDto,src/FreshFood-API/DTOs/CheckoutInputDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+CheckoutSummaryDto,FreshFood.Api.DTOs.CheckoutSummaryDto,src/FreshFood-API/DTOs/CheckoutSummaryDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+CheckoutLineDto,FreshFood.Api.DTOs.CheckoutLineDto,src/FreshFood-API/DTOs/CheckoutLineDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+PlaceOrderDto,FreshFood.Api.DTOs.PlaceOrderDto,src/FreshFood-API/DTOs/PlaceOrderDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+OrderConfirmationDto,FreshFood.Api.DTOs.OrderConfirmationDto,src/FreshFood-API/DTOs/OrderConfirmationDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+PaymentQrRequestDto,FreshFood.Api.DTOs.PaymentQrRequestDto,src/FreshFood-API/DTOs/PaymentQrRequestDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+PaymentQrDto,FreshFood.Api.DTOs.PaymentQrDto,src/FreshFood-API/DTOs/PaymentQrDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+PaymentNoticeDto,FreshFood.Api.DTOs.PaymentNoticeDto,src/FreshFood-API/DTOs/PaymentNoticeDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+PaymentResultDto,FreshFood.Api.DTOs.PaymentResultDto,src/FreshFood-API/DTOs/PaymentResultDto.cs,Compiled C#,UC-C06; VOPC and analysis sequence scenario pages
+IMyOrdersService,FreshFood.Api.Services.IMyOrdersService,src/FreshFood-API/Services/IMyOrdersService.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+MyOrdersService,FreshFood.Api.Services.Implements.MyOrdersService,src/FreshFood-API/Services/Implements/MyOrdersService.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+MyOrdersController,FreshFood.Api.Controllers.MyOrdersController,src/FreshFood-API/Controllers/MyOrdersController.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+IMyOrdersRepository,FreshFood.Reposistory.Repository.IMyOrdersRepository,src/FreshFood.Reposistory/Repository/IMyOrdersRepository.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+MyOrdersRepository,FreshFood.Reposistory.Repository.Implements.MyOrdersRepository,src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+OrderListDto,FreshFood.Api.DTOs.OrderListDto,src/FreshFood-API/DTOs/OrderListDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+OrderSummaryDto,FreshFood.Api.DTOs.OrderSummaryDto,src/FreshFood-API/DTOs/OrderSummaryDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+OrderDetailsDto,FreshFood.Api.DTOs.OrderDetailsDto,src/FreshFood-API/DTOs/OrderDetailsDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+OrderLineDto,FreshFood.Api.DTOs.OrderLineDto,src/FreshFood-API/DTOs/OrderLineDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+CancelOrderDto,FreshFood.Api.DTOs.CancelOrderDto,src/FreshFood-API/DTOs/CancelOrderDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+OrderReviewDto,FreshFood.Api.DTOs.OrderReviewDto,src/FreshFood-API/DTOs/OrderReviewDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+ReturnSummaryDto,FreshFood.Api.DTOs.ReturnSummaryDto,src/FreshFood-API/DTOs/ReturnSummaryDto.cs,Compiled C#,UC-C07; VOPC and analysis sequence scenario pages
+StateMachineEvent,FreshFood.Api.DTOs.StateMachineEvent,src/FreshFood-API/DTOs/StateMachineEvent.cs,Compiled C#,Stakeholder selection 2026-11-02: table-driven OrderStateMachine replaces individual transition classes
+TransitionSnapshot,FreshFood.Api.DTOs.TransitionSnapshot,src/FreshFood-API/DTOs/TransitionSnapshot.cs,Compiled C#,Built under lock from authoritative records; never client-bound
+GuardFactsDto,FreshFood.Api.DTOs.GuardFactsDto,src/FreshFood-API/DTOs/GuardFactsDto.cs,Compiled C#,Projection of existing authoritative facts
+StateMachineResult,FreshFood.Api.DTOs.StateMachineResult,src/FreshFood-API/DTOs/StateMachineResult.cs,Compiled C#,Stakeholder selection 2026-11-02: table-driven OrderStateMachine replaces individual transition classes
+OrderLifecycleRecords,FreshFood.Reposistory.Repository.OrderLifecycleRecords,src/FreshFood.Reposistory/Repository/OrderLifecycleRecords.cs,Compiled C#,"Repository-owned entity bundle, not API DTO"
+IOrderLifecycleRepository,FreshFood.Reposistory.Repository.IOrderLifecycleRepository,src/FreshFood.Reposistory/Repository/IOrderLifecycleRepository.cs,Compiled C#,Existing order/payment/return/refund records
+OrderLifecycleRepository,FreshFood.Reposistory.Repository.Implements.OrderLifecycleRepository,src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs,Compiled C#,Proposed persistence seam; event-dedup storage choice pending review
+IPayoutPort,FreshFood.Api.Services.IPayoutPort,src/FreshFood-API/Services/IPayoutPort.cs,Compiled C#,Unresolved outbound provider. Fail closed when not configured.
+PayoutOutcomeDto,FreshFood.Api.DTOs.PayoutOutcomeDto,src/FreshFood-API/DTOs/PayoutOutcomeDto.cs,Compiled C#,Provider result does not imply settlement unless verified
+PaymentNoticeHandler,FreshFood.Api.Services.Implements.PaymentNoticeHandler,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,PaymentBoundary callback to CheckoutService through injected interface; no CheckoutController relation
+TransactionWork,"System.Func<CancellationToken,Task>",Framework / type alias,Framework or type alias,Proposed async transaction callback; repository-owned type
+ConfiguredNotificationPublisher,FreshFood.Api.Services.Implements.ConfiguredNotificationPublisher,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,"Configured notification channel; failures surfaced, no guarantee of delivery"
+UnconfiguredPayoutAdapter,FreshFood.Api.Services.Implements.UnconfiguredPayoutAdapter,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,Blocks outgoing payout while provider/contract remains TBD; never marks settlement succeeded
+ApiCompositionRoot,FreshFood.Api.ApiCompositionRoot,src/FreshFood-API/ApiCompositionRoot.cs,Compiled C#,Application startup owns all concrete choices; scoped business/repository/UoW objects
+IBatchPricingPolicy,FreshFood.Reposistory.Entities.IBatchPricingPolicy,src/FreshFood.Reposistory/Entities/IBatchPricingPolicy.cs,Compiled C#,BR-BAT-01/04; isolate current active batch price/discount logic
+BatchPricingPolicy,FreshFood.Reposistory.Entities.BatchPricingPolicy,src/FreshFood.Reposistory/Entities/DomainBehavior.cs,Compiled C#,Pure integer-VND pricing responsibility refined from application logic; proposed implementation
+IDeliveryFeePolicy,FreshFood.Reposistory.Entities.IDeliveryFeePolicy,src/FreshFood.Reposistory/Entities/IDeliveryFeePolicy.cs,Compiled C#,BR-DEL-01/02; service radius and tiered fee
+DeliveryFeePolicy,FreshFood.Reposistory.Entities.DeliveryFeePolicy,src/FreshFood.Reposistory/Entities/DomainBehavior.cs,Compiled C#,Use existing 1/3/10 km boundaries and fees; reject invalid distance; no new policy
+IDistanceCalculator,FreshFood.Api.Services.IDistanceCalculator,src/FreshFood-API/Services/IDistanceCalculator.cs,Compiled C#,Architecture CON-01 DistanceCalculator; external distance boundary refinement
+DistanceCalculator,FreshFood.Api.Services.Implements.DistanceCalculator,src/FreshFood-API/Services/Implements/Gateways.cs,Compiled C#,Coordinate driving-distance adapter and <=10 km validation; provider fallback remains TBD
+IFefoBatchSpecification,FreshFood.Reposistory.Repository.IFefoBatchSpecification,src/FreshFood.Reposistory/Repository/IFefoBatchSpecification.cs,Compiled C#,Architecture CON-02 query specification; BR-BAT-02 / BR-ORD-01
+FefoBatchSpecification,FreshFood.Reposistory.Entities.FefoBatchSpecification,src/FreshFood.Reposistory/Entities/DomainBehavior.cs,Compiled C#,Translate eligible sellable batches and expiry ASC / deterministic batch tie-break into locked repository query; no in-memory substitute for DB locking
+BatchCriteria,FreshFood.Reposistory.Repository.BatchCriteria,src/FreshFood.Reposistory/Repository/BatchCriteria.cs,Compiled C#,Repository-owned closed query criteria; no API DTO dependency or chosen SQL/ORM framework
+VndAmount,FreshFood.Reposistory.Entities.VndAmount,src/FreshFood.Reposistory/Entities/VndAmount.cs,Compiled C#,"CON-04 integer VND; exact 18-digit amounts, no JS binary floating-point money"
+EntityId,System.String,Framework / type alias,Framework or type alias,Safe SQL BIGINT / JSON identifier representation; not a new database entity
+LocalDate,System.DateOnly,Framework / type alias,Framework or type alias,Preserve date-only expiry/manufacture values without choosing an instant/timezone policy
+VndAmountString,System.String,Framework / type alias,Framework or type alias,Wire projection of exact VND amounts; map to/from VndAmount explicitly
+IsoDateTime,System.DateTimeOffset,Framework / type alias,Framework or type alias,Wire representation of existing timestamp evidence
+AuthenticatedPrincipal,System.Security.Claims.ClaimsPrincipal,Framework / type alias,Framework or type alias,"Trusted server identity, never populated from customer request fields"
+DatabaseConnection,Npgsql.NpgsqlDataSource,Framework / type alias,Framework or type alias,Provider-neutral ASP.NET Core 10 / C# database connection; PostgreSQL driver remains unselected
+DatabaseTransaction,Npgsql.NpgsqlTransaction,Framework / type alias,Framework or type alias,"Provider-neutral transaction protocol, not a selected ORM"
+RegistrationMap,Microsoft.Extensions.DependencyInjection.IServiceCollection,Framework / type alias,Framework or type alias,Framework-neutral ASP.NET Core 10 / C# bootstrap constructor bindings; no .NET IServiceCollection or chosen DI library
+HttpTransport,System.Net.Http.HttpClient,Framework / type alias,Framework or type alias,Opaque platform HTTP transport; no provider/framework imposed or backend runtime imported into frontend
+IOrderStateMachine,FreshFood.Api.Services.IOrderStateMachine,src/FreshFood-API/Services/IOrderStateMachine.cs,Compiled C#,Stakeholder selection 2026-11-02: table-driven OrderStateMachine replaces individual transition classes
+OrderStateMachine,FreshFood.Api.Services.Implements.OrderStateMachine,src/FreshFood-API/Services/Implements/OrderStateMachine.cs,Compiled C#,Stakeholder selection 2026-11-02: table-driven OrderStateMachine replaces individual transition classes
+OrderStateSnapshot,FreshFood.Api.DTOs.OrderStateSnapshot,src/FreshFood-API/DTOs/OrderStateSnapshot.cs,Compiled C#,Stakeholder selection 2026-11-02: table-driven OrderStateMachine replaces individual transition classes

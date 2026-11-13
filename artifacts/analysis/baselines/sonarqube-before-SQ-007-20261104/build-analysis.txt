@@ -1,0 +1,39 @@
+﻿  Determining projects to restore...
+  Restored D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj (in 982 ms).
+  Restored D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory\FreshFood.Reposistory.csproj (in 982 ms).
+  Restored D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\FreshFood-API.Tests.csproj (in 989 ms).
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory\Repository\Implements\SqlRepository.cs(9,109): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory\FreshFood.Reposistory.csproj]
+  FreshFood.Reposistory -> D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory\bin\Release\net10.0\FreshFood.Reposistory.dll
+  Sonar: (FreshFood.Reposistory.csproj) Project processed successfully
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\AddressInputDto.cs(9,17): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\CatalogQueryDto.cs(7,17): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\CartChangeDto.cs(6,16): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\OrderReviewDto.cs(6,16): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Program.cs(49,1): warning S6966: Await RunAsync instead. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\CurrentCustomer.cs(25,96): warning S2092: Set the 'Secure' flag on this cookie. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Controllers\PaymentWebhookController.cs(12,139): warning S6932: Use model binding instead of accessing the raw request data [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\ProfileService.cs(15,69): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\ProfileService.cs(22,30): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\OrderStateMachine.cs(19,54): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+  FreshFood-API -> D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\bin\Release\net10.0\FreshFood-API.dll
+  Sonar: (FreshFood-API.csproj) Project processed successfully
+  FreshFood-API.Tests -> D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Release\net10.0\FreshFood.Api.Tests.dll
+  Sonar: (FreshFood-API.Tests.csproj) Project processed successfully
+
+Build succeeded.
+
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory\Repository\Implements\SqlRepository.cs(9,109): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood.Reposistory\FreshFood.Reposistory.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\AddressInputDto.cs(9,17): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\CatalogQueryDto.cs(7,17): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\CartChangeDto.cs(6,16): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\DTOs\OrderReviewDto.cs(6,16): warning S6964: Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Program.cs(49,1): warning S6966: Await RunAsync instead. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\CurrentCustomer.cs(25,96): warning S2092: Set the 'Secure' flag on this cookie. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Controllers\PaymentWebhookController.cs(12,139): warning S6932: Use model binding instead of accessing the raw request data [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\ProfileService.cs(15,69): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\ProfileService.cs(22,30): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\Services\Implements\OrderStateMachine.cs(19,54): warning S6444: Pass a timeout to limit the execution time. [D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\FreshFood-API.csproj]
+    11 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:19.64

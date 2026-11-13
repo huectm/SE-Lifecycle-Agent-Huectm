@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.1 on win32)" generated="2026-10-25T22:38:13.110053" rpa="false" schemaversion="5">
+<suite id="s1" name="Environment Smoke" source="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\functional\environment_smoke.robot">
+<test id="s1-t1" name="Chrome Environment Smoke" line="7">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:38:13.471301" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:38:13.470999" elapsed="1.512634"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:38:14.993047" level="INFO">Current location is 'about:blank'.</msg>
+<arg>about:blank</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:38:14.983991" elapsed="0.009276"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-25T22:38:14.993799" elapsed="2.157851"/>
+</kw>
+<doc>Environment smoke only. No business baseline or approval changes.</doc>
+<tag>automated</tag>
+<tag>generated</tag>
+<tag>web</tag>
+<status status="PASS" start="2026-10-25T22:38:13.469708" elapsed="3.682113"/>
+</test>
+<doc>Test suite generated from session 34c8972f-a460-4fed-b614-f2c92c0c6c26 containing 1 test case for web automation.</doc>
+<status status="PASS" start="2026-10-25T22:38:13.111787" elapsed="4.040768"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">automated</stat>
+<stat pass="1" fail="0" skip="0">generated</stat>
+<stat pass="1" fail="0" skip="0">web</stat>
+</tag>
+<suite>
+<stat name="Environment Smoke" id="s1" pass="1" fail="0" skip="0">Environment Smoke</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

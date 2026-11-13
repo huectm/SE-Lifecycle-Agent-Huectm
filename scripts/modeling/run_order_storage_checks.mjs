@@ -1,0 +1,6 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const dir='artifacts/implementation';const checks=[];
+for(const source of ['src/FreshFood-API/scripts/check-source.js','src/FreshFood-API/scripts/check-design.js']){const r=spawnSync(process.execPath,[source],{encoding:'utf8'});checks.push({command:'node '+source,exitCode:r.status,output:r.stdout+r.stderr});}
+for(const [name,source] of [['unit','src/FreshFood-API/tests/backend.test.js'],['postgres','src/FreshFood-API/tests/postgres/storage.test.js']]){const r=spawnSync(process.execPath,['--test','--test-reporter=spec','--test-reporter-destination='+dir+'/order-storage-'+name+'.txt','--test-reporter=junit','--test-reporter-destination='+dir+'/order-storage-'+name+'.xml',source],{encoding:'utf8'});checks.push({command:'node --test '+source,exitCode:r.status,output:r.stdout+r.stderr});console.log(name,r.status);}
+fs.writeFileSync(dir+'/order-storage-check-results.json',JSON.stringify({node:process.version,checks,scope:'Local unit checks and temporary single-connection embedded PostgreSQL SQL tests. Production migration and multi-connection server contention not executed.'},null,2));console.log(checks.map(x=>({command:x.command,exitCode:x.exitCode})));process.exitCode=checks.some(x=>x.exitCode!==0)?1:0;

@@ -1,0 +1,31 @@
+{
+  "status": "Draft for Analysis Review",
+  "source": "artifacts\\diagrams\\state-machine\\order-state-machine.drawio",
+  "source_sha256": "0c896f5e2818294a2398b246a866c628241ca2eba8a844bfe515ea46df5792f5",
+  "transitions": 24,
+  "fulfillment_states": 9,
+  "outputs": [
+    {
+      "page": 1,
+      "path": "artifacts\\diagrams\\images\\order-state-machine.png",
+      "sha256": "3a29d2e1097a89bbc965843009f019e03a5b0a08e196ea0fed2d07d47238fdba"
+    },
+    {
+      "page": 2,
+      "path": "artifacts\\diagrams\\images\\order-refund-workflow.png",
+      "sha256": "f6fe4551550aaa8acb9709e7178c45e6794837c3cf3e755b44d2806ece2b9119"
+    },
+    {
+      "page": 3,
+      "path": "artifacts\\diagrams\\images\\order-payment-state-machine.png",
+      "sha256": "4bbede03d7fd347a6e8c0296613a4998245184e4a4b30e4c11d20a6504737774"
+    }
+  ],
+  "final_nodes": [
+    "final_delivered",
+    "final_cancelled",
+    "final_returned"
+  ],
+  "final_scope": "Fulfillment region only; financial state machines remain independent",
+  "master_image_synchronized": true
+}

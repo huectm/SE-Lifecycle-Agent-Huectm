@@ -1,0 +1,11 @@
+order_test_id,customer_id,selected_address_id,distance_km,shipping_fee,subtotal,grand_total,payment_method,vietqr_bank,transfer_content,qr_timer_seconds,webhook_payload_type,expected_initial_status,expected_final_status,test_scenario
+TC-ORD-DATA-01,CUST-001,ADDR-001,0.85,10000,120000,130000,COD,None,None,0,None,Pending,Pending,Normal COD order within 1 km - Tier 1 shipping fee 10k VND
+TC-ORD-DATA-02,CUST-001,ADDR-002,1.80,20000,245000,265000,COD,None,None,0,None,Pending,Pending,Normal COD order within 1 to <3 km - Tier 2 shipping fee 20k VND
+TC-ORD-DATA-03,CUST-003,ADDR-005,6.20,30000,185000,215000,COD,None,None,0,None,Pending,Pending,Normal COD order within 3 to 10 km - Tier 3 shipping fee 30k VND
+TC-ORD-DATA-04,CUST-003,ADDR-006,10.00,30000,310000,340000,COD,None,None,0,None,Pending,Pending,Boundary test - Exactly 10.0 km - Permitted per BR-DEL-01
+TC-ORD-DATA-05,CUST-004,ADDR-007,10.20,0,150000,150000,COD,None,None,0,None,Blocked,Blocked,Boundary failure - 10.2 km (>10 km) - Checkout blocked per BR-DEL-01
+TC-ORD-DATA-06,CUST-002,ADDR-003,1.20,20000,148000,168000,VIETQR,MB,FFO102401,900,VALID_MATCH,Pending,Paid,VietQR success - Instant webhook confirmation under 3.0s (BR-ORD-03)
+TC-ORD-DATA-07,CUST-002,ADDR-003,1.20,20000,148000,168000,VIETQR,MB,FFO102402,0,EXPIRED_TIMEOUT,Pending,Cancelled,VietQR expired - Customer does not pay within 15 mins (BR-ORD-03)
+TC-ORD-DATA-08,CUST-002,ADDR-003,1.20,20000,148000,168000,VIETQR,MB,FFO102403,900,AMOUNT_MISMATCH,Pending,Pending_Manual_Review,VietQR amount mismatch - Customer transfers 100k instead of 168k
+TC-ORD-DATA-09,CUST-002,ADDR-003,1.20,20000,148000,168000,VIETQR,MB,FFO102404,900,INVALID_SIGNATURE,Pending,Pending,Security failure - SePay webhook with forged secret key / invalid signature
+TC-ORD-DATA-10,CUST-002,ADDR-003,1.20,20000,148000,168000,VIETQR,MB,FFO102405,900,DUPLICATE_WEBHOOK,Paid,Paid,Idempotency test - Duplicate webhook callback must not double-process

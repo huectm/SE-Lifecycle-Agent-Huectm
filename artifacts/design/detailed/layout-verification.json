@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-31",
+  "scope": "Seven detailed-class Draw.io masters",
+  "pages": 61,
+  "semantics_preserved": true,
+  "checks": {
+    "class_pairs": 3482,
+    "route_segments": 3057,
+    "labels": 47,
+    "shared_collinear_segments": 0,
+    "class_collisions": 0,
+    "label_collisions": 0
+  },
+  "issues": [],
+  "crossing_convention": "Perpendicular crossings use draw.io jump arcs; no different edges share a collinear segment."
+}

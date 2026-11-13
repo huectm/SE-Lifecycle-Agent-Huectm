@@ -1,0 +1,2843 @@
+{
+  "status": "DESIGN_AUTHORIZED_EXECUTION_GATE_NOT_MET",
+  "date": "2026-11-04",
+  "template": "templates/Test Documents/Template_Unit Test Case.xls",
+  "checklist": "checklists/Checklist_Test Case Review.xls",
+  "checks": [
+    {
+      "check": "All 193 executable declarations cataloged",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "All 85 interface contracts map to concrete methods",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Stable unique method/test IDs",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Every method has N/A/B input groups",
+      "passed": true,
+      "note": "Review-only constructor/pure-method abnormal cases remain explicit, not claimed executed."
+    },
+    {
+      "check": "Every case records input, action and expected result",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Source snapshot hashes still match",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "No planned case has fabricated execution result",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-001-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-032-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-032-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-032-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-032-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-035-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-035-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-035-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-035-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-035-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-035-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-035-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-035-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-035-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-035-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-035-D04:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-035-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-035-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-035-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-035-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-035-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-035-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-037-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-037-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-037-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-037-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-037-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-037-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-037-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-037-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-037-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-037-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-037-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-037-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-037-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-037-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-037-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-040-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-040-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-040-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-040-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-040-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-040-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-040-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-040-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-040-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-041-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-041-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-041-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-041-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-041-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-041-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-041-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-044-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-044-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-044-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-044-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-048-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-048-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-048-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-049-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-049-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-049-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-049-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-049-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-049-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-049-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-049-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-049-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-049-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-049-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-049-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-049-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-049-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-049-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-049-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-049-D07:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-052-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-052-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-052-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-052-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-052-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-052-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-052-D10:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-052-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-052-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-052-D11:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-052-D11:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-052-D11:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-052-D12",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-052-D12",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-052-D12:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-052-D12:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-053-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D07:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D08:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-053-D08:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-053-D08:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-053-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-053-D09:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-053-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-055-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-055-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-055-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-055-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-057-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-057-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-057-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-057-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-057-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-057-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-057-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-057-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-057-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-058-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-058-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-058-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-058-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-058-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-058-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-058-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-058-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-058-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-058-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-058-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-058-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-073-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-073-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-073-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-073-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-073-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-073-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-073-D03:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-073-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-073-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-074-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-074-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-074-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-074-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-074-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-074-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-074-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-074-D03:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-074-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-074-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-074-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-074-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-074-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-074-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-074-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-075-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-075-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-075-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-075-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-075-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-075-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-075-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-075-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-075-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-075-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-076-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-076-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-076-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-076-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-076-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-076-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-076-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-076-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-076-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-076-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-076-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-080-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-080-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-080-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-082-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-082-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-082-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-083-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-083-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-083-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-083-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-083-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-083-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-083-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-083-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-083-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-083-D05:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-083-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-083-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-083-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-083-D06:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-084-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-084-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-084-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-084-D08:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-084-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-084-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-084-D09:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-084-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-084-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-084-D10:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-084-D10:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-084-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-084-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-084-D11:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-085-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-085-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-085-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-085-D09:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-085-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-086-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-086-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-086-D01:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-086-D01:C4",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D07:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D08:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-086-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D10:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-086-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-086-D11:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-086-D12",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-087-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-087-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-087-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-087-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-087-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-087-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-087-D02:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-087-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-087-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-087-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-087-D03:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-087-D03:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-087-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-090-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-090-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-090-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-090-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-090-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-090-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-090-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-090-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-091-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-091-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-091-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-091-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-091-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-091-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-091-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-091-D03:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-091-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-091-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-091-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-091-D04:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-091-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-091-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-091-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-091-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-091-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-092-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-092-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-092-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-092-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-093-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-093-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-093-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-093-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-093-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-093-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-093-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-093-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-093-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-094-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-094-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-094-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-095-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-095-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-095-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-096-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-096-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-096-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-096-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-097-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-097-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-097-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-097-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-098-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-098-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-098-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-098-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-098-D01:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-098-D01:C4",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-103-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-103-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-103-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-103-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-104-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-104-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-104-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-104-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-105-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-105-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-105-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-105-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-105-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-105-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-105-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-105-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-105-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-106-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-106-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-106-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-107-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-107-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-107-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-108-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-108-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-108-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-109-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-109-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-109-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-110-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-110-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-110-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-110-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-110-D01:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-110-D01:C4",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-110-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-110-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-110-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-111-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-111-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-111-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-111-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-113-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-113-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-113-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-113-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-113-D01:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-118-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-118-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-118-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-133-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-135-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-135-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-135-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-135-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-135-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-138-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-138-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-138-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-138-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-138-D02:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-138-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-138-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-138-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-138-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-138-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-138-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-139-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-139-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-139-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-143-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-143-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-143-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-143-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-143-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-143-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-145-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-150-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-153-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-153-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-153-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-153-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-160-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-161-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-162-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-162-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-162-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-162-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-162-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-162-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-164-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-164-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-164-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-165-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-165-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-165-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-165-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-166-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-166-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-166-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-167-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-167-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-167-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-168-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-168-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-168-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-168-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-168-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-168-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-169-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-169-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-169-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D04:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D05",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D05:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D06",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D06:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D07",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D07:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-169-D07:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-169-D07:C3",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D08",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-169-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D09",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D09:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D10",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D10:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D11",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D11:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-169-D11:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D12",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D12",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D12:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-169-D12:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D13",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D13",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D13:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-169-D14",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-169-D14",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-169-D14:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-171-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-173-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-173-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-173-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-175-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-175-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-175-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-175-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-175-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-175-D02:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-175-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-175-D04",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-178-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-178-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-178-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-179-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-179-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-179-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-179-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-180-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-180-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-180-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-181-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-181-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-181-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-184-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-184-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-184-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-185-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-185-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-185-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Atomic condition UTM-185-D01:C2",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-185-D02",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-185-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-185-D03",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-185-D03:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-186-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Both outcomes UTM-186-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Atomic condition UTM-186-D01:C1",
+      "passed": true,
+      "note": "True/False must be evaluated; NE never counts as false. Concrete reachability remains a review item."
+    },
+    {
+      "check": "Decision plan UTM-187-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-188-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "Decision plan UTM-193-D01",
+      "passed": true,
+      "note": ""
+    },
+    {
+      "check": "TC/KLOC norm has no deficit",
+      "passed": true,
+      "note": ""
+    }
+  ],
+  "failures": [],
+  "methods": 193,
+  "contracts": 85,
+  "testCases": 1190,
+  "sourceDecisions": 226,
+  "actualCoverage": "Measured full suite: 85.19% lines, 73.49% branches; atomic conditions not independently measured; exit gate not met.",
+  "testLevels": {
+    "Unit": 186,
+    "Component / testability review": 7
+  },
+  "caseDesignConstraints": 208,
+  "reviewItems": [
+    {
+      "id": "UT-REV-01",
+      "topic": "Npgsql isolation",
+      "scope": "7 PostgreSqlSession declarations",
+      "decision": "Approve a transport seam for true unit tests, or keep these checks separately tagged as component verification; never count a live database as isolated unit coverage."
+    },
+    {
+      "id": "UT-REV-02",
+      "topic": "Hard-to-reach defensive paths",
+      "scope": "static phone regex timeout, immutable table corruption/ambiguity/cycle and trusted ActorId facts",
+      "decision": "Review isolated test-resource/private harness or document proven structural unreachability. Do not force flaky timing or silently alter production state."
+    },
+    {
+      "id": "UT-REV-03",
+      "topic": "Verified-paid state consistency",
+      "scope": "OrderStateMachine initial PendingPaid follow-up P01",
+      "decision": "Expected PendingPaid/Paid derives from approved decisions; current P01 sets Unpaid. This is a static review concern and planned test, not an executed defect result."
+    },
+    {
+      "id": "UT-REV-04",
+      "topic": "Concrete witness/abnormal contracts",
+      "scope": "Cases carrying explicit review constraints, constructors and pure functions without declared abnormal validation",
+      "decision": "Confirm fixture assignments and justify N/A cases before automation. Generated truth constraints are planning evidence, not proof of runtime coverage."
+    }
+  ],
+  "approval": "Pending stakeholder / Technical Lead / QA. No scripts/project or tests generated/executed.",
+  "authorizationDate": "2026-11-05",
+  "executionEvidence": "artifacts/testing/unit-execution/execution-results.json"
+}

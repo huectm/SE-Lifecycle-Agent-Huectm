@@ -1,0 +1,19 @@
+{
+  "status": "Review ready; technical approval pending",
+  "database_checks_passed": 20,
+  "rtm_excel_error_cells": [],
+  "files": {
+    "artifacts/Requirements_Analysis_Design_Specification.docx": "330da0c0e6a865b65f631432e3b6df1d456531304222aa2188b6920a5d5acea8",
+    "artifacts/requirements/Software_Requirements_Specification.docx": "220ad794cc275f07e9f2671697b55724ade0451b314d69542288f7dfaded7e2c",
+    "artifacts/diagrams/class/entity-class-diagram.drawio": "3fd29352f9cedbce9a7fa9377288cbc76c91c08fbf41257dbaa592009bf281b3",
+    "artifacts/diagrams/database/physical-erd.drawio": "8cb5e23fe15650439a04c59bafc99a00cfacc94c4e890ea75dd4645a945caea4",
+    "artifacts/design/database/order-lifecycle-extension.sql": "260c6ac1efbd8afa0c6263e5b34081057854ece82fbf26b753936b1a3d85f43d",
+    "artifacts\\traceability\\Requirements_Traceability_Matrix.xlsx": "cf79d7e0e148bc628a0c168c4e84829d8df0146bda7ba047d082a93ff72dd883"
+  },
+  "limits": [
+    "No production migration",
+    "No real payment-provider payout",
+    "No multi-session stock concurrency proof",
+    "Cause-confirmation authority and refund provider remain TBD"
+  ]
+}

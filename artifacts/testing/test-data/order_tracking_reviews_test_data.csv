@@ -1,0 +1,12 @@
+test_id,order_number,current_status,action_performed,user_input_data,expected_result,expected_stock_effect,rule_reference,notes
+TC-MYO-DATA-01,ORD-20261023-001,Pending,Cancel Order,Lý do: Đặt nhầm địa chỉ,Success - Status changed to Cancelled,Reserved batch stock released immediately,BR-ORD-04 & BR-ORD-05,Permitted cancellation in Pending
+TC-MYO-DATA-02,ORD-20261023-002,Confirmed,Cancel Order,Lý do: Bận việc đột xuất,Success - Status changed to Cancelled,Reserved batch stock released immediately,BR-ORD-04 & BR-ORD-05,Permitted cancellation in Confirmed
+TC-MYO-DATA-03,ORD-20261023-003,Packing,Cancel Order,Lý do: Muốn hủy,Blocked - Alert: Đơn hàng đang đóng gói vui lòng liên hệ hotline,No stock change,BR-ORD-04,Cancellation disabled in Packing
+TC-MYO-DATA-04,ORD-20261023-004,Shipping,Cancel Order,Lý do: Muốn hủy,Blocked - Alert: Đơn hàng đang vận chuyển vui lòng liên hệ hotline,No stock change,BR-ORD-04,Cancellation disabled in Shipping
+TC-MYO-DATA-05,ORD-20261023-005,Delivered,Re-order,None,Success - Line items populated into cart with current prices,None,FR-MYO-04,1-click re-order from delivered order
+TC-MYO-DATA-06,ORD-20261023-005,Delivered,Submit Review,Rating: 5 stars; Comment: Rau rất tươi sạch,Success - Review recorded in order_reviews table,None,BR-FB-01,Valid 5-star review on delivered order
+TC-MYO-DATA-07,ORD-20261023-005,Delivered,Submit Review,Rating: 1 star; Comment: Giao hàng hơi trễ,Success - Review recorded in order_reviews table,None,BR-FB-01,Valid 1-star boundary review
+TC-MYO-DATA-08,ORD-20261023-005,Delivered,Submit Review,Rating: 0 stars; Comment: Không hài lòng,Rejected - Rating must be between 1 and 5,None,BR-FB-01,Boundary failure - 0 stars invalid
+TC-MYO-DATA-09,ORD-20261023-005,Delivered,Submit Review,Rating: 6 stars; Comment: Tuyệt vời,Rejected - Rating must be between 1 and 5,None,BR-FB-01,Boundary failure - 6 stars invalid
+TC-MYO-DATA-10,ORD-20261023-001,Pending,Submit Review,Rating: 5 stars; Comment: Đang chờ hàng,Rejected - Review permitted only for Delivered orders,None,BR-FB-01,Negative test - Review blocked before delivery
+TC-MYO-DATA-11,ORD-20261023-005,Delivered,Submit Review (Duplicate),Rating: 4 stars; Comment: Đánh giá lại,Rejected - Order has already been reviewed,None,BR-FB-01,1:1 uniqueness constraint on order reviews

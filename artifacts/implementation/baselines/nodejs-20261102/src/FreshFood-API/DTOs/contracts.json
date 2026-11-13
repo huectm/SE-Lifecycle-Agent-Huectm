@@ -1,0 +1,309 @@
+{
+  "OperationResultDto": {
+    "attributes": [
+      "+ Success: boolean",
+      "+ MessageCode: string"
+    ]
+  },
+  "NotificationDto": {
+    "attributes": [
+      "+ OrderId: EntityId",
+      "+ EventCode: string"
+    ]
+  },
+  "VerifiedPaymentDto": {
+    "attributes": [
+      "+ ProviderReference: string",
+      "+ CheckoutReference: string",
+      "+ GoodsAmount: VndAmountString",
+      "+ ShippingAmount: VndAmountString",
+      "+ VerifiedAt: IsoDateTime"
+    ]
+  },
+  "CatalogQueryDto": {
+    "attributes": [
+      "+ Keyword: string?",
+      "+ CategoryId: EntityId?",
+      "+ ClearanceOnly: boolean"
+    ]
+  },
+  "CatalogResultDto": {
+    "attributes": [
+      "+ Items: ReadonlyArray<ProductSummaryDto>",
+      "+ Categories: ReadonlyArray<CategoryDto>",
+      "+ Alternatives: ReadonlyArray<ProductSummaryDto>"
+    ]
+  },
+  "ProductDetailsDto": {
+    "attributes": [
+      "+ Product: ProductSummaryDto",
+      "+ Description: string?",
+      "+ AvailableBatches: ReadonlyArray<BatchOfferDto>"
+    ]
+  },
+  "ProductSummaryDto": {
+    "attributes": [
+      "+ ProductId: EntityId",
+      "+ Name: string",
+      "+ Unit: string",
+      "+ AvailableQuantity: number",
+      "+ CurrentPrice: VndAmountString"
+    ]
+  },
+  "CategoryDto": {
+    "attributes": [
+      "+ CategoryId: EntityId",
+      "+ Name: string"
+    ]
+  },
+  "BatchOfferDto": {
+    "attributes": [
+      "+ BatchId: EntityId",
+      "+ ExpiryDate: LocalDate",
+      "+ Price: VndAmountString",
+      "+ Clearance: boolean"
+    ]
+  },
+  "CartIdentityDto": {
+    "attributes": [
+      "+ CustomerId: EntityId? {server resolved}",
+      "+ SessionId: string? {server resolved}"
+    ]
+  },
+  "CartChangeDto": {
+    "attributes": [
+      "+ ProductId: EntityId",
+      "+ Quantity: number"
+    ]
+  },
+  "CartResultDto": {
+    "attributes": [
+      "+ Lines: ReadonlyArray<CartLineDto>",
+      "+ SubTotal: VndAmountString",
+      "+ CanCheckout: boolean",
+      "+ Warnings: ReadonlyArray<string>"
+    ]
+  },
+  "CartLineDto": {
+    "attributes": [
+      "+ ProductId: EntityId",
+      "+ Quantity: number",
+      "+ AvailableQuantity: number",
+      "+ CurrentPrice: VndAmountString",
+      "+ LineTotal: VndAmountString"
+    ]
+  },
+  "ProfileResultDto": {
+    "attributes": [
+      "+ CustomerId: EntityId",
+      "+ FullName: string",
+      "+ Phone: string",
+      "+ Email: string?",
+      "+ Addresses: ReadonlyArray<AddressDto>"
+    ]
+  },
+  "ProfileUpdateDto": {
+    "attributes": [
+      "+ FullName: string",
+      "+ Email: string?"
+    ]
+  },
+  "AddressInputDto": {
+    "attributes": [
+      "+ AddressId: EntityId?",
+      "+ RecipientName: string",
+      "+ RecipientPhone: string",
+      "+ StreetAddress: string",
+      "+ IsDefault: boolean"
+    ]
+  },
+  "AddressDto": {
+    "attributes": [
+      "+ AddressId: EntityId",
+      "+ RecipientName: string",
+      "+ RecipientPhone: string",
+      "+ StreetAddress: string",
+      "+ Latitude: number",
+      "+ Longitude: number",
+      "+ IsDefault: boolean"
+    ]
+  },
+  "GeoPointDto": {
+    "attributes": [
+      "+ Latitude: number",
+      "+ Longitude: number"
+    ]
+  },
+  "CheckoutInputDto": {
+    "attributes": [
+      "+ AddressId: EntityId"
+    ]
+  },
+  "CheckoutSummaryDto": {
+    "attributes": [
+      "+ SubTotal: VndAmountString",
+      "+ ShippingFee: VndAmountString",
+      "+ DistanceKm: number",
+      "+ Total: VndAmountString",
+      "+ Lines: ReadonlyArray<CheckoutLineDto>"
+    ]
+  },
+  "CheckoutLineDto": {
+    "attributes": [
+      "+ ProductId: EntityId",
+      "+ BatchId: EntityId",
+      "+ Quantity: number",
+      "+ UnitPrice: VndAmountString",
+      "+ Discount: VndAmountString"
+    ]
+  },
+  "PlaceOrderDto": {
+    "attributes": [
+      "+ AddressId: EntityId",
+      "+ PaymentMethod: PaymentMethod",
+      "+ CheckoutReference: string",
+      "+ IdempotencyKey: string"
+    ]
+  },
+  "OrderConfirmationDto": {
+    "attributes": [
+      "+ OrderId: EntityId",
+      "+ OrderNumber: string",
+      "+ Status: OrderStatus",
+      "+ PaymentStatus: PaymentStatus",
+      "+ Total: VndAmountString"
+    ]
+  },
+  "PaymentQrRequestDto": {
+    "attributes": [
+      "+ CheckoutReference: string"
+    ]
+  },
+  "PaymentQrDto": {
+    "attributes": [
+      "+ QrPayload: string",
+      "+ ExpiresAt: IsoDateTime"
+    ]
+  },
+  "PaymentNoticeDto": {
+    "attributes": [
+      "+ RawBody: string",
+      "+ Signature: string",
+      "+ ProviderReference: string"
+    ]
+  },
+  "PaymentResultDto": {
+    "attributes": [
+      "+ Accepted: boolean",
+      "+ Duplicate: boolean",
+      "+ PaymentStatus: PaymentStatus"
+    ]
+  },
+  "OrderListDto": {
+    "attributes": [
+      "+ Orders: ReadonlyArray<OrderSummaryDto>"
+    ]
+  },
+  "OrderSummaryDto": {
+    "attributes": [
+      "+ OrderId: EntityId",
+      "+ OrderNumber: string",
+      "+ OrderDate: IsoDateTime",
+      "+ Status: OrderStatus",
+      "+ Total: VndAmountString"
+    ]
+  },
+  "OrderDetailsDto": {
+    "attributes": [
+      "+ Order: OrderSummaryDto",
+      "+ Address: AddressDto",
+      "+ PaymentStatus: PaymentStatus",
+      "+ Lines: ReadonlyArray<OrderLineDto>",
+      "+ Return: ReturnSummaryDto?"
+    ]
+  },
+  "OrderLineDto": {
+    "attributes": [
+      "+ ProductName: string",
+      "+ Quantity: number",
+      "+ UnitPrice: VndAmountString",
+      "+ LineTotal: VndAmountString"
+    ]
+  },
+  "CancelOrderDto": {
+    "attributes": [
+      "+ OrderId: EntityId",
+      "+ Reason: string"
+    ]
+  },
+  "OrderReviewDto": {
+    "attributes": [
+      "+ OrderId: EntityId",
+      "+ Rating: number",
+      "+ Comment: string?"
+    ]
+  },
+  "ReturnSummaryDto": {
+    "attributes": [
+      "+ FailureReason: string?",
+      "+ ReceiptStatus: string?",
+      "+ RefundStatus: string?",
+      "+ GoodsRefunded: VndAmountString",
+      "+ ShippingRefunded: VndAmountString",
+      "+ InventoryDisposition: string?"
+    ]
+  },
+  "TransitionCommand": {
+    "attributes": [
+      "+ TransitionId: string",
+      "+ AggregateId: EntityId",
+      "+ EventId: string",
+      "+ ExpectedVersion: string?",
+      "+ Reason: string?"
+    ]
+  },
+  "TransitionSnapshot": {
+    "attributes": [
+      "+ WorkflowNode: string {transient UML position}",
+      "+ AggregateId: EntityId",
+      "+ CheckoutReference: string?",
+      "+ CustomerId: EntityId {server resolved}",
+      "+ AddressId: EntityId?",
+      "+ PaymentMethod: PaymentMethod?",
+      "+ PlannedLines: ReadonlyArray<CheckoutLineDto>",
+      "+ FulfillmentState: string",
+      "+ PaymentState: string",
+      "+ RefundState: string?",
+      "+ ActorId: string {trusted server value}",
+      "+ GuardFacts: GuardFactsDto {trusted server value}"
+    ]
+  },
+  "GuardFactsDto": {
+    "attributes": [
+      "+ FirstOrder: boolean",
+      "+ PhoneConfirmed: boolean",
+      "+ VerifiedPayment: boolean",
+      "+ CompleteReceipt: boolean",
+      "+ ConfirmedCause: string?",
+      "+ CapturedGoods: VndAmountString",
+      "+ CapturedShipping: VndAmountString",
+      "+ SettledRefund: VndAmountString"
+    ]
+  },
+  "TransitionResult": {
+    "attributes": [
+      "+ TransitionId: string",
+      "+ Target: string",
+      "+ Applied: boolean",
+      "+ Duplicate: boolean",
+      "+ FailureCode: string?"
+    ]
+  },
+  "PayoutOutcomeDto": {
+    "attributes": [
+      "+ Outcome: string",
+      "+ ProviderReference: string?",
+      "+ SettledAmount: VndAmountString?"
+    ]
+  }
+}

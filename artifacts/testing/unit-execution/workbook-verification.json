@@ -1,0 +1,12 @@
+{
+  "nativeExcelOpen": "Passed",
+  "methodSheetsVerified": 193,
+  "conditionMatrixPreserved": true,
+  "actualResultsVerified": true,
+  "passed": 657,
+  "failed": 0,
+  "skipped": 533,
+  "templateReportReconciled": true,
+  "verifiedDefectRecords": 31,
+  "sha256": "22c828395c3a3fe1c2b3362dec0b3f667b3c1b5c20e20ab29969c3152ebc78f7"
+}

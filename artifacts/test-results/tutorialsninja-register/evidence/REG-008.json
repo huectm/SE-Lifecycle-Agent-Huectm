@@ -1,0 +1,32 @@
+{
+  "case": {
+    "id": "REG-008",
+    "title": "firstname length 33",
+    "field": "firstname",
+    "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "expected": "First Name must",
+    "basis": "Observed UI",
+    "technique": "BVA",
+    "flow": "E1",
+    "firstname": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "lastname": "Tester",
+    "email": "rf1793178813186849400reg-008@example.com",
+    "telephone": "0812345678",
+    "password": "Valid123!",
+    "confirm": "Valid123!",
+    "newsletter": "0",
+    "agree": "1"
+  },
+  "status": "PASS",
+  "url": "https://tutorialsninja.com/demo/index.php?route=account/register",
+  "title": "Register Account",
+  "actual": {
+    "url": "https://tutorialsninja.com/demo/index.php?route=account/register",
+    "success": false,
+    "warnings": "First Name must be between 1 and 32 characters!",
+    "email_validity": {
+      "message": "",
+      "valid": true
+    }
+  }
+}

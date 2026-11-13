@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="ceb294bf-ef0a-4271-8829-cac10a0ce973" name="huect@LAPTOP-6SN65NCS 2026-11-05 13:53:35" runUser="LAPTOP-6SN65NCS\huect" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-05T13:53:35.4100578+07:00" queuing="2026-11-05T13:53:35.4100580+07:00" start="2026-11-05T13:53:33.0730854+07:00" finish="2026-11-05T13:53:35.4193708+07:00" />
+  <TestSettings name="default" id="672ae73d-c798-471e-8835-ce998d46a1e4">
+    <Deployment runDeploymentRoot="huect_LAPTOP-6SN65NCS_2026-11-05_13_53_35" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="c127f7af-3485-4244-9691-889a2578908e" testId="7ce8b894-5a9d-b122-780e-9f2fc28b8907" testName="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.RejectUntrustedInitialPayment(initial: True, verified: True, paidState: False)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0003293" startTime="2026-11-05T13:53:35.2941509+07:00" endTime="2026-11-05T13:53:35.2941841+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c127f7af-3485-4244-9691-889a2578908e" />
+    <UnitTestResult executionId="71103d88-2b8a-4074-b9e2-fd2c8a2577fe" testId="e7b9f1f4-9972-8cad-ed3f-7e365bc37605" testName="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.RejectUntrustedInitialPayment(initial: False, verified: True, paidState: True)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0746068" startTime="2026-11-05T13:53:35.2254463+07:00" endTime="2026-11-05T13:53:35.2830209+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71103d88-2b8a-4074-b9e2-fd2c8a2577fe" />
+    <UnitTestResult executionId="38f1405b-92ff-490c-ab7c-5de29bb1813b" testId="08400e2e-33a4-ca85-4edf-78d3b52684a0" testName="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.RejectUntrustedInitialPayment(initial: True, verified: False, paidState: True)" computerName="LAPTOP-6SN65NCS" duration="00:00:00.0012213" startTime="2026-11-05T13:53:35.2934215+07:00" endTime="2026-11-05T13:53:35.2935035+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="38f1405b-92ff-490c-ab7c-5de29bb1813b" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.RejectUntrustedInitialPayment(initial: True, verified: False, paidState: True)" storage="d:\1. giang day\genai\se-lifecycle-agent\tests\unit\freshfood.backend.unittests\bin\debug\net10.0\freshfood.backend.unittests.dll" id="08400e2e-33a4-ca85-4edf-78d3b52684a0">
+      <Execution id="38f1405b-92ff-490c-ab7c-5de29bb1813b" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\unit\FreshFood.Backend.UnitTests\bin\Debug\net10.0\FreshFood.Backend.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests" name="RejectUntrustedInitialPayment" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.RejectUntrustedInitialPayment(initial: True, verified: True, paidState: False)" storage="d:\1. giang day\genai\se-lifecycle-agent\tests\unit\freshfood.backend.unittests\bin\debug\net10.0\freshfood.backend.unittests.dll" id="7ce8b894-5a9d-b122-780e-9f2fc28b8907">
+      <Execution id="c127f7af-3485-4244-9691-889a2578908e" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\unit\FreshFood.Backend.UnitTests\bin\Debug\net10.0\FreshFood.Backend.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests" name="RejectUntrustedInitialPayment" />
+    </UnitTest>
+    <UnitTest name="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.RejectUntrustedInitialPayment(initial: False, verified: True, paidState: True)" storage="d:\1. giang day\genai\se-lifecycle-agent\tests\unit\freshfood.backend.unittests\bin\debug\net10.0\freshfood.backend.unittests.dll" id="e7b9f1f4-9972-8cad-ed3f-7e365bc37605">
+      <Execution id="71103d88-2b8a-4074-b9e2-fd2c8a2577fe" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\unit\FreshFood.Backend.UnitTests\bin\Debug\net10.0\FreshFood.Backend.UnitTests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests" name="RejectUntrustedInitialPayment" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7ce8b894-5a9d-b122-780e-9f2fc28b8907" executionId="c127f7af-3485-4244-9691-889a2578908e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e7b9f1f4-9972-8cad-ed3f-7e365bc37605" executionId="71103d88-2b8a-4074-b9e2-fd2c8a2577fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="08400e2e-33a4-ca85-4edf-78d3b52684a0" executionId="38f1405b-92ff-490c-ab7c-5de29bb1813b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:01.31]   Discovering: FreshFood.Backend.UnitTests&#xD;
+[xUnit.net 00:00:01.48]   Discovered:  FreshFood.Backend.UnitTests&#xD;
+[xUnit.net 00:00:01.53]   Starting:    FreshFood.Backend.UnitTests&#xD;
+[xUnit.net 00:00:01.66]   Finished:    FreshFood.Backend.UnitTests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

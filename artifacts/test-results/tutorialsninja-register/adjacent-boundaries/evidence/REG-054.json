@@ -1,0 +1,29 @@
+{
+  "case": {
+    "id": "REG-054",
+    "title": "Proposed UC adjacent valid boundary lastname",
+    "field": "lastname",
+    "value": "AAAAAAAAA",
+    "expected": "success",
+    "basis": "UC proposal; confirmation required",
+    "technique": "BVA",
+    "flow": "Appendix",
+    "firstname": "Robot",
+    "lastname": "AAAAAAAAA",
+    "email": "rf1793178983034303400reg-054@example.com",
+    "telephone": "0812345678",
+    "password": "Valid123!",
+    "confirm": "Valid123!",
+    "newsletter": "0",
+    "agree": "1"
+  },
+  "status": "PASS",
+  "url": "https://tutorialsninja.com/demo/index.php?route=account/edit",
+  "title": "My Account Information",
+  "actual": {
+    "url": "https://tutorialsninja.com/demo/index.php?route=account/success",
+    "success": true,
+    "warnings": "",
+    "email_validity": null
+  }
+}

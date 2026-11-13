@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" agent="SE-Lifecycle-Agent">
+  <diagram id="high-level-architecture" name="High-Level Architecture">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="3000" pageHeight="2680" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="FreshFood | High-Level System Architecture" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#172B4D;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="30" width="2200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary" value="FreshFood E-Commerce Platform" style="swimlane;startSize=35;collapsible=0;fillColor=#ffffff;swimlaneFillColor=#ffffff;strokeColor=#253858;fontFamily=Arial;fontSize=20;fontStyle=1;align=right;spacingRight=25;" vertex="1" parent="1">
+          <mxGeometry x="750" y="650" width="1500" height="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="maps" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="870" y="170" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="maps_head" value="&amp;lt;&amp;lt;Service&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Google Maps&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="878" y="178" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="maps_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20128%20128%27%3E%0A%20%20%3Cpath%20fill%3D%27%23EA4335%27%20d%3D%27M64%2010C45%2010%2030%2025%2030%2044c0%2026%2034%2068%2034%2068s34-42%2034-68c0-19-15-34-34-34z%27/%3E%0A%20%20%3Ccircle%20cx%3D%2764%27%20cy%3D%2744%27%20r%3D%2714%27%20fill%3D%27%23ffffff%27/%3E%0A%20%20%3Cpath%20fill%3D%27%2334A853%27%20d%3D%27M38%2072l26%2036%2010-14-24-34z%27/%3E%0A%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="986.0" y="243" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="maps_tech" value="Distance API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="878" y="327" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sms" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="170" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_head" value="&amp;lt;&amp;lt;Service&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SMS Gateway&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1378" y="178" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20128%20128%27%3E%0A%20%20%3Crect%20x%3D%2716%27%20y%3D%2724%27%20width%3D%2796%27%20height%3D%2770%27%20rx%3D%2716%27%20fill%3D%27%230078D7%27/%3E%0A%20%20%3Cpath%20fill%3D%27%23ffffff%27%20d%3D%27M36%2050h56v8H36zm0%2016h40v8H36z%27/%3E%0A%20%20%3Cpath%20fill%3D%27%230078D7%27%20d%3D%27M36%2094l16-16H24z%27/%3E%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1486.0" y="243" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_tech" value="SpeedSMS | OTP delivery" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1378" y="327" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="fcm" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="120" y="830" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="fcm_head" value="&amp;lt;&amp;lt;Service&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Firebase FCM&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="128" y="838" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="fcm_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cpath%20fill%3D%22%23ffa000%22%20d%3D%22M17.474%20103.276%2033.229%202.462a2.91%202.91%200%200%201%205.44-.924l16.294%2030.39%206.494-12.366a2.91%202.91%200%200%201%205.15%200l43.97%2083.714H17.474Z%22/%3E%3Cpath%20fill%3D%22%23f57c00%22%20d%3D%22M71.903%2064.005%2054.955%2031.913l-37.481%2071.363Z%22/%3E%3Cpath%20fill%3D%22%23ffca28%22%20d%3D%22M110.577%20103.276%2098.51%2028.604a2.913%202.913%200%200%200-1.984-2.286%202.906%202.906%200%200%200-2.94.714l-76.112%2076.243%2042.115%2023.618a8.728%208.728%200%200%200%208.51%200l42.478-23.618Z%22/%3E%3Cpath%20fill%3D%22%23fff%22%20fill-opacity%3D%22.2%22%20d%3D%22M98.51%2028.604a2.913%202.913%200%200%200-1.984-2.286%202.906%202.906%200%200%200-2.94.713L78.479%2042.178%2066.6%2019.562a2.91%202.91%200%200%200-5.15%200l-6.494%2012.365L38.662%201.538A2.91%202.91%200%200%200%2035.605.044a2.907%202.907%200%200%200-2.384%202.425L17.474%20103.276h-.051l.05.058.415.204%2075.676-75.764a2.91%202.91%200%200%201%204.932%201.571l11.965%2074.003.116-.073L98.51%2028.603Zm-80.898%2074.534L33.228%203.182A2.91%202.91%200%200%201%2035.613.756a2.911%202.911%200%200%201%203.057%201.495l16.292%2030.39%206.495-12.366a2.91%202.91%200%200%201%205.15%200L78.245%2042.41%2017.61%20103.138Z%22/%3E%3Cpath%20fill%3D%22%23a52714%22%20d%3D%22M68.099%20126.18a8.728%208.728%200%200%201-8.51%200l-42.015-23.55-.102.647%2042.115%2023.61a8.728%208.728%200%200%200%208.51%200l42.48-23.61-.11-.67-42.37%2023.575z%22%20opacity%3D%22.2%22/%3E%3C/svg%3E%0A;" vertex="1" parent="1">
+          <mxGeometry x="236.0" y="903" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="fcm_tech" value="Push notifications" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="128" y="987" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="oauth" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="170" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="oauth_head" value="&amp;lt;&amp;lt;Service&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;OAuth 2.0 Providers&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1878" y="178" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="oauth_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M44.59%204.21a63.28%2063.28%200%20004.33%20120.9%2067.6%2067.6%200%200032.36.35%2057.13%2057.13%200%200025.9-13.46%2057.44%2057.44%200%200016-26.26%2074.33%2074.33%200%20001.61-33.58H65.27v24.69h34.47a29.72%2029.72%200%2001-12.66%2019.52%2036.16%2036.16%200%2001-13.93%205.5%2041.29%2041.29%200%2001-15.1%200A37.16%2037.16%200%200144%2095.74a39.3%2039.3%200%2001-14.5-19.42%2038.31%2038.31%200%20010-24.63%2039.25%2039.25%200%20019.18-14.91A37.17%2037.17%200%200176.13%2027a34.28%2034.28%200%200113.64%208q5.83-5.8%2011.64-11.63c2-2.09%204.18-4.08%206.15-6.22A61.22%2061.22%200%200087.2%204.59a64%2064%200%2000-42.61-.38z%22/%3E%3Cpath%20fill%3D%22%23e33629%22%20d%3D%22M44.59%204.21a64%2064%200%200142.61.37%2061.22%2061.22%200%200120.35%2012.62c-2%202.14-4.11%204.14-6.15%206.22Q95.58%2029.23%2089.77%2035a34.28%2034.28%200%2000-13.64-8%2037.17%2037.17%200%2000-37.46%209.74%2039.25%2039.25%200%2000-9.18%2014.91L8.76%2035.6A63.53%2063.53%200%200144.59%204.21z%22/%3E%3Cpath%20fill%3D%22%23f8bd00%22%20d%3D%22M3.26%2051.5a62.93%2062.93%200%20015.5-15.9l20.73%2016.09a38.31%2038.31%200%20000%2024.63q-10.36%208-20.73%2016.08a63.33%2063.33%200%2001-5.5-40.9z%22/%3E%3Cpath%20fill%3D%22%23587dbd%22%20d%3D%22M65.27%2052.15h59.52a74.33%2074.33%200%2001-1.61%2033.58%2057.44%2057.44%200%2001-16%2026.26c-6.69-5.22-13.41-10.4-20.1-15.62a29.72%2029.72%200%200012.66-19.54H65.27c-.01-8.22%200-16.45%200-24.68z%22/%3E%3Cpath%20fill%3D%22%23319f43%22%20d%3D%22M8.75%2092.4q10.37-8%2020.73-16.08A39.3%2039.3%200%200044%2095.74a37.16%2037.16%200%200014.08%206.08%2041.29%2041.29%200%200015.1%200%2036.16%2036.16%200%200013.93-5.5c6.69%205.22%2013.41%2010.4%2020.1%2015.62a57.13%2057.13%200%2001-25.9%2013.47%2067.6%2067.6%200%2001-32.36-.35%2063%2063%200%2001-23-11.59A63.73%2063.73%200%20018.75%2092.4z%22/%3E%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1986.0" y="243" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="oauth_tech" value="Google | Customer sign-in" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1878" y="327" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sepay" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="2580" y="830" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="sepay_head" value="&amp;lt;&amp;lt;Service&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;SePay&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="2588" y="838" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sepay_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20128%20128%27%3E%0A%20%20%3Crect%20width%3D%27128%27%20height%3D%27128%27%20rx%3D%2720%27%20fill%3D%27%230A2540%27/%3E%0A%20%20%3Cpath%20fill%3D%27%2300D4B2%27%20d%3D%27M24%2034h32v32H24zm8%208v16h16V42zm40-8h32v32H72zm8%208v16h16V42zM24%2082h32v32H24zm8%208v16h16V90zm48-8h8v8h-8zm16%200h16v8h-16zm-16%2016h8v16h-8zm16%208h16v8h-16z%27/%3E%0A%20%20%3Ctext%20x%3D%2764%27%20y%3D%27122%27%20font-size%3D%2714%27%20font-weight%3D%27bold%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%20font-family%3D%27sans-serif%27%3EVietQR%3C/text%3E%0A%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="2696.0" y="903" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="sepay_tech" value="VietQR payments" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="2588" y="987" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="" style="rounded=0;html=1;fillColor=#D9E8FB;strokeColor=#6C8EBF;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="850" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="api_head" value="&amp;lt;&amp;lt;Service&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FreshFood-API&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="858" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="api_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22128%22%20height%3D%22128%22%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20fill%3D%22%23512BD4%22%2F%3E%3Ctext%20x%3D%2264%22%20y%3D%2279%22%20text-anchor%3D%22middle%22%20fill%3D%22white%22%20font-family%3D%22Arial%22%20font-size%3D%2240%22%3E.NET%3C%2Ftext%3E%3C%2Fsvg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1466.0" y="923" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="api_tech" value="ASP.NET Core 10 / C# | Clean Layered Modular Monolith" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="1007" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="db" value="" style="rounded=0;html=1;fillColor=#D9E8FB;strokeColor=#6C8EBF;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="850" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="db_head" value="&amp;lt;&amp;lt;Database&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FreshFood-DB&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1858" y="858" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="db_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cpath%20d%3D%22M93.809%2092.112c.785-6.533.55-7.492%205.416-6.433l1.235.108c3.742.17%208.637-.602%2011.513-1.938%206.191-2.873%209.861-7.668%203.758-6.409-13.924%202.873-14.881-1.842-14.881-1.842%2014.703-21.815%2020.849-49.508%2015.543-56.287-14.47-18.489-39.517-9.746-39.936-9.52l-.134.025c-2.751-.571-5.83-.912-9.289-.968-6.301-.104-11.082%201.652-14.709%204.402%200%200-44.683-18.409-42.604%2023.151.442%208.841%2012.672%2066.898%2027.26%2049.362%205.332-6.412%2010.484-11.834%2010.484-11.834%202.558%201.699%205.622%202.567%208.834%202.255l.249-.212c-.078.796-.044%201.575.099%202.497-3.757%204.199-2.653%204.936-10.166%206.482-7.602%201.566-3.136%204.355-.221%205.084%203.535.884%2011.712%202.136%2017.238-5.598l-.22.882c1.474%201.18%201.375%208.477%201.583%2013.69.209%205.214.558%2010.079%201.621%2012.948%201.063%202.868%202.317%2010.256%2012.191%208.14%208.252-1.764%2014.561-4.309%2015.136-27.985%22/%3E%3Cpath%20d%3D%22M75.458%20125.256c-4.367%200-7.211-1.689-8.938-3.32-2.607-2.46-3.641-5.629-4.259-7.522l-.267-.79c-1.244-3.358-1.666-8.193-1.916-14.419-.038-.935-.064-1.898-.093-2.919-.021-.747-.047-1.684-.085-2.664a18.8%2018.8%200%2001-4.962%201.568c-3.079.526-6.389.356-9.84-.507-2.435-.609-4.965-1.871-6.407-3.82-4.203%203.681-8.212%203.182-10.396%202.453-3.853-1.285-7.301-4.896-10.542-11.037-2.309-4.375-4.542-10.075-6.638-16.943-3.65-11.96-5.969-24.557-6.175-28.693C4.292%2023.698%207.777%2014.44%2015.296%209.129%2027.157.751%2045.128%205.678%2051.68%207.915c4.402-2.653%209.581-3.944%2015.433-3.851%203.143.051%206.136.327%208.916.823%202.9-.912%208.628-2.221%2015.185-2.139%2012.081.144%2022.092%204.852%2028.949%2013.615%204.894%206.252%202.474%2019.381.597%2026.651-2.642%2010.226-7.271%2021.102-12.957%2030.57%201.544.011%203.781-.174%206.961-.831%206.274-1.295%208.109%202.069%208.607%203.575%201.995%206.042-6.677%2010.608-9.382%2011.864-3.466%201.609-9.117%202.589-13.745%202.377l-.202-.013-1.216-.107-.12%201.014-.116.991c-.311%2011.999-2.025%2019.598-5.552%2024.619-3.697%205.264-8.835%206.739-13.361%207.709-1.544.33-2.947.474-4.219.474zm-9.19-43.671c2.819%202.256%203.066%206.501%203.287%2014.434.028.99.054%201.927.089%202.802.106%202.65.355%208.855%201.327%2011.477.137.371.26.747.39%201.146%201.083%203.316%201.626%204.979%206.309%203.978%203.931-.843%205.952-1.599%207.534-3.851%202.299-3.274%203.585-9.86%203.821-19.575l4.783.116-4.75-.57.14-1.186c.455-3.91.783-6.734%203.396-8.602%202.097-1.498%204.486-1.353%206.389-1.01-2.091-1.58-2.669-3.433-2.823-4.193l-.399-1.965%201.121-1.663c6.457-9.58%2011.781-21.354%2014.609-32.304%202.906-11.251%202.02-17.226%201.134-18.356-11.729-14.987-32.068-8.799-34.192-8.097l-.359.194-1.8.335-.922-.191c-2.542-.528-5.366-.82-8.393-.869-4.756-.08-8.593%201.044-11.739%203.431l-2.183%201.655-2.533-1.043c-5.412-2.213-21.308-6.662-29.696-.721-4.656%203.298-6.777%209.76-6.305%2019.207.156%203.119%202.275%2014.926%205.771%2026.377%204.831%2015.825%209.221%2021.082%2011.054%2021.693.32.108%201.15-.537%201.976-1.529a270.708%20270.708%200%200110.694-12.07l2.77-2.915%203.349%202.225c1.35.897%202.839%201.406%204.368%201.502l7.987-6.812-1.157%2011.808c-.026.265-.039.626.065%201.296l.348%202.238-1.51%201.688-.174.196%204.388%202.025%201.836-2.301z%22/%3E%3Cpath%20fill%3D%22%23336791%22%20d%3D%22M115.731%2077.44c-13.925%202.873-14.882-1.842-14.882-1.842%2014.703-21.816%2020.849-49.51%2015.545-56.287C101.924.823%2076.875%209.566%2076.457%209.793l-.135.024c-2.751-.571-5.83-.911-9.291-.967-6.301-.103-11.08%201.652-14.707%204.402%200%200-44.684-18.408-42.606%2023.151.442%208.842%2012.672%2066.899%2027.26%2049.363%205.332-6.412%2010.483-11.834%2010.483-11.834%202.559%201.699%205.622%202.567%208.833%202.255l.25-.212c-.078.796-.042%201.575.1%202.497-3.758%204.199-2.654%204.936-10.167%206.482-7.602%201.566-3.136%204.355-.22%205.084%203.534.884%2011.712%202.136%2017.237-5.598l-.221.882c1.473%201.18%202.507%207.672%202.334%2013.557-.174%205.885-.29%209.926.871%2013.082%201.16%203.156%202.316%2010.256%2012.192%208.14%208.252-1.768%2012.528-6.351%2013.124-13.995.422-5.435%201.377-4.631%201.438-9.49l.767-2.3c.884-7.367.14-9.743%205.225-8.638l1.235.108c3.742.17%208.639-.602%2011.514-1.938%206.19-2.871%209.861-7.667%203.758-6.408z%22/%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M75.957%20122.307c-8.232%200-10.84-6.519-11.907-9.185-1.562-3.907-1.899-19.069-1.551-31.503a1.59%201.59%200%20011.64-1.55%201.594%201.594%200%20011.55%201.639c-.401%2014.341.168%2027.337%201.324%2030.229%201.804%204.509%204.54%208.453%2012.275%206.796%207.343-1.575%2010.093-4.359%2011.318-11.46.94-5.449%202.799-20.951%203.028-24.01a1.593%201.593%200%20011.71-1.472%201.597%201.597%200%20011.472%201.71c-.239%203.185-2.089%2018.657-3.065%2024.315-1.446%208.387-5.185%2012.191-13.794%2014.037-1.463.313-2.792.453-4%20.454zM31.321%2090.466a6.71%206.71%200%2001-2.116-.35c-5.347-1.784-10.44-10.492-15.138-25.885-3.576-11.717-5.842-23.947-6.041-27.922-.589-11.784%202.445-20.121%209.02-24.778%2013.007-9.216%2034.888-.44%2035.813-.062a1.596%201.596%200%2001-1.207%202.955c-.211-.086-21.193-8.492-32.768-.285-5.622%203.986-8.203%2011.392-7.672%2022.011.167%203.349%202.284%2015.285%205.906%2027.149%204.194%2013.742%208.967%2022.413%2013.096%2023.79.648.216%202.62.873%205.439-2.517A245.272%20245.272%200%200145.88%2073.046a1.596%201.596%200%20012.304%202.208c-.048.05-4.847%205.067-10.077%2011.359-2.477%202.979-4.851%203.853-6.786%203.853zm69.429-13.445a1.596%201.596%200%2001-1.322-2.487c14.863-22.055%2020.08-48.704%2015.612-54.414-5.624-7.186-13.565-10.939-23.604-11.156-7.433-.16-13.341%201.738-14.307%202.069l-.243.099c-.971.305-1.716-.227-1.997-.849a1.6%201.6%200%2001.631-2.025c.046-.027.192-.089.429-.176l-.021.006.021-.007c1.641-.601%207.639-2.4%2015.068-2.315%2011.108.118%2020.284%204.401%2026.534%2012.388%202.957%203.779%202.964%2012.485.019%2023.887-3.002%2011.625-8.651%2024.118-15.497%2034.277-.306.457-.81.703-1.323.703zm.76%2010.21c-2.538%200-4.813-.358-6.175-1.174-1.4-.839-1.667-1.979-1.702-2.584-.382-6.71%203.32-7.878%205.208-8.411-.263-.398-.637-.866-1.024-1.349-1.101-1.376-2.609-3.26-3.771-6.078-.182-.44-.752-1.463-1.412-2.648-3.579-6.418-11.026-19.773-6.242-26.612%202.214-3.165%206.623-4.411%2013.119-3.716C97.6%2028.837%2088.5%2010.625%2066.907%2010.271c-6.494-.108-11.82%201.889-15.822%205.93-8.96%209.049-8.636%2025.422-8.631%2025.586a1.595%201.595%200%2011-3.19.084c-.02-.727-.354-17.909%209.554-27.916C53.455%209.272%2059.559%206.96%2066.96%207.081c13.814.227%2022.706%207.25%2027.732%2013.101%205.479%206.377%208.165%2013.411%208.386%2015.759.165%201.746-1.088%202.095-1.341%202.147l-.576.013c-6.375-1.021-10.465-.312-12.156%202.104-3.639%205.201%203.406%2017.834%206.414%2023.229.768%201.376%201.322%202.371%201.576%202.985.988%202.396%202.277%204.006%203.312%205.3.911%201.138%201.7%202.125%201.982%203.283.131.23%201.99%202.98%2013.021.703%202.765-.57%204.423-.083%204.93%201.45.997%203.015-4.597%206.532-7.694%207.97-2.775%201.29-7.204%202.106-11.036%202.106zm-4.696-4.021c.35.353%202.101.962%205.727.806%203.224-.138%206.624-.839%208.664-1.786%202.609-1.212%204.351-2.567%205.253-3.492l-.5.092c-7.053%201.456-12.042%201.262-14.828-.577a6.162%206.162%200%2001-.54-.401c-.302.119-.581.197-.78.253-1.58.443-3.214.902-2.996%205.105zm-45.562%208.915c-1.752%200-3.596-.239-5.479-.71-1.951-.488-5.24-1.957-5.19-4.37.057-2.707%203.994-3.519%205.476-3.824%205.354-1.103%205.703-1.545%207.376-3.67.488-.619%201.095-1.39%201.923-2.314%201.229-1.376%202.572-2.073%203.992-2.073.989%200%201.8.335%202.336.558%201.708.708%203.133%202.42%203.719%204.467.529%201.847.276%203.625-.71%205.006-3.237%204.533-7.886%206.93-13.443%206.93zm-7.222-4.943c.481.372%201.445.869%202.518%201.137%201.631.408%203.213.615%204.705.615%204.546%200%208.196-1.882%2010.847-5.594.553-.774.387-1.757.239-2.274-.31-1.083-1.08-2.068-1.873-2.397-.43-.178-.787-.314-1.115-.314-.176%200-.712%200-1.614%201.009a41.146%2041.146%200%2000-1.794%202.162c-2.084%202.646-3.039%203.544-9.239%204.821-1.513.31-2.289.626-2.674.835zm12.269-7.36a1.596%201.596%200%2001-1.575-1.354%208.218%208.218%200%2001-.08-.799c-4.064-.076-7.985-1.82-10.962-4.926-3.764-3.927-5.477-9.368-4.699-14.927.845-6.037.529-11.366.359-14.229-.047-.796-.081-1.371-.079-1.769.003-.505.013-1.844%204.489-4.113%201.592-.807%204.784-2.215%208.271-2.576%205.777-.597%209.585%201.976%2010.725%207.246%203.077%2014.228.244%2020.521-1.825%2025.117-.385.856-.749%201.664-1.04%202.447l-.257.69c-1.093%202.931-2.038%205.463-1.748%207.354a1.595%201.595%200%2001-1.335%201.819l-.244.02zM42.464%2042.26l.062%201.139c.176%202.974.504%208.508-.384%2014.86-.641%204.585.759%209.06%203.843%2012.276%202.437%202.542%205.644%203.945%208.94%203.945h.068c.369-1.555.982-3.197%201.642-4.966l.255-.686c.329-.884.714-1.74%201.122-2.646%201.991-4.424%204.47-9.931%201.615-23.132-.565-2.615-1.936-4.128-4.189-4.627-4.628-1.022-11.525%202.459-12.974%203.837zm9.63-.677c-.08.564%201.033%202.07%202.485%202.271%201.449.203%202.689-.975%202.768-1.539.079-.564-1.033-1.186-2.485-1.388-1.451-.202-2.691.092-2.768.656zm2.818%202.826l-.407-.028c-.9-.125-1.81-.692-2.433-1.518-.219-.29-.576-.852-.505-1.354.101-.736.999-1.177%202.4-1.177.313%200%20.639.023.967.069.766.106%201.477.327%202.002.62.91.508.977%201.075.936%201.368-.112.813-1.405%202.02-2.96%202.02zm-2.289-2.732c.045.348.907%201.496%202.029%201.651l.261.018c1.036%200%201.81-.815%201.901-1.082-.096-.182-.762-.634-2.025-.81a5.823%205.823%200%2000-.821-.059c-.812%200-1.243.183-1.345.282zm43.605-1.245c.079.564-1.033%202.07-2.484%202.272-1.45.202-2.691-.975-2.771-1.539-.076-.564%201.036-1.187%202.486-1.388%201.45-.203%202.689.092%202.769.655zm-2.819%202.56c-1.396%200-2.601-1.086-2.7-1.791-.115-.846%201.278-1.489%202.712-1.688.316-.044.629-.066.93-.066%201.238%200%202.058.363%202.14.949.053.379-.238.964-.739%201.492-.331.347-1.026.948-1.973%201.079l-.37.025zm.943-3.013c-.276%200-.564.021-.856.061-1.441.201-2.301.779-2.259%201.089.048.341.968%201.332%202.173%201.332l.297-.021c.787-.109%201.378-.623%201.66-.919.443-.465.619-.903.598-1.052-.028-.198-.56-.49-1.613-.49zm3.965%2032.843a1.594%201.594%200%2001-1.324-2.483c3.398-5.075%202.776-10.25%202.175-15.255-.257-2.132-.521-4.337-.453-6.453.07-2.177.347-3.973.614-5.71.317-2.058.617-4.002.493-6.31a1.595%201.595%200%20113.186-.172c.142%202.638-.197%204.838-.525%206.967-.253%201.643-.515%203.342-.578%205.327-.061%201.874.178%203.864.431%205.97.64%205.322%201.365%2011.354-2.691%2017.411a1.596%201.596%200%2001-1.328.708z%22/%3E%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1966.0" y="923" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="db_tech" value="PostgreSQL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1858" y="1007" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="app" value="" style="rounded=0;html=1;fillColor=#D9E8FB;strokeColor=#6C8EBF;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="950" y="1440" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="app_head" value="&amp;lt;&amp;lt;MobileApp&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FreshFood-App&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="958" y="1448" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="app_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cg%20fill%3D%22%233FB6D3%22%3E%3Cpath%20d%3D%22M12.3%2064.2L76.3%200h39.4L32.1%2083.6zM76.3%20128h39.4L81.6%2093.9l34.1-34.8H76.3L42.2%2093.5z%22/%3E%3C/g%3E%3Cpath%20fill%3D%22%2327AACD%22%20d%3D%22M81.6%2093.9l-20-20-19.4%2019.6%2019.4%2019.6z%22/%3E%3Cpath%20fill%3D%22%2319599A%22%20d%3D%22M115.7%20128L81.6%2093.9l-20%2019.2L76.3%20128z%22/%3E%3ClinearGradient%20id%3D%22flutter-original-a%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%2259.365%22%20y1%3D%22116.36%22%20x2%3D%2286.825%22%20y2%3D%2299.399%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%231b4e94%22/%3E%3Cstop%20offset%3D%22.63%22%20stop-color%3D%22%231a5497%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23195a9b%22/%3E%3C/linearGradient%3E%3Cpath%20fill%3D%22url%28%23flutter-original-a%29%22%20d%3D%22M61.6%20113.1l30.8-8.4-10.8-10.8z%22/%3E%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1066.0" y="1513" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="app_tech" value="Flutter | Android / iOS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="958" y="1597" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="customerweb" value="" style="rounded=0;html=1;fillColor=#D9E8FB;strokeColor=#6C8EBF;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="1440" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="customerweb_head" value="&amp;lt;&amp;lt;WebApp&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FreshFood-Customer-Web&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="1448" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="customerweb_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cg%20fill%3D%22%2361DAFB%22%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%2211.4%22/%3E%3Cpath%20d%3D%22M107.3%2045.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4%201.1-4.8%201.5-7.1%202.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7%200-15.9%205.2-24.9%2013.9-9-8.7-17.9-13.9-24.9-13.9-2.4%200-4.5.5-6.4%201.6-6.4%203.7-8.7%2013-6.6%2026.1.4%202.3.9%204.7%201.5%207.1-2.4.7-4.7%201.4-6.9%202.3C8.2%2050%201.4%2056.6%201.4%2064s6.9%2014%2019.3%2018.8c2.2.8%204.5%201.6%206.9%202.3-.6%202.4-1.1%204.8-1.5%207.1-2.1%2013.2.2%2022.5%206.6%2026.1%201.9%201.1%204%201.6%206.4%201.6%207.1%200%2016-5.2%2024.9-13.9%209%208.7%2017.9%2013.9%2024.9%2013.9%202.4%200%204.5-.5%206.4-1.6%206.4-3.7%208.7-13%206.6-26.1-.4-2.3-.9-4.7-1.5-7.1%202.4-.7%204.7-1.4%206.9-2.3%2012.5-4.8%2019.3-11.4%2019.3-18.8s-6.8-14-19.3-18.8zM92.5%2014.7c4.1%202.4%205.5%209.8%203.8%2020.3-.3%202.1-.8%204.3-1.4%206.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13%207.4-7.3%2014.9-12.3%2021-12.3%201.3%200%202.5.3%203.5.9zM81.3%2074c-1.8%203.2-3.9%206.4-6.1%209.6-3.7.3-7.4.4-11.2.4-3.9%200-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10%201.6-3.3%203.4-6.7%205.3-10%201.8-3.2%203.9-6.4%206.1-9.6%203.7-.3%207.4-.4%2011.2-.4%203.9%200%207.6.1%2011.2.4%202.2%203.2%204.2%206.4%206%209.6%201.9%203.3%203.7%206.7%205.3%2010-1.7%203.3-3.4%206.6-5.3%2010zm8.3-3.3c1.5%203.5%202.7%206.9%203.8%2010.3-3.4.8-7%201.4-10.8%201.9%201.2-1.9%202.5-3.9%203.6-6%201.2-2.1%202.3-4.2%203.4-6.2zM64%2097.8c-2.4-2.6-4.7-5.4-6.9-8.3%202.3.1%204.6.2%206.9.2%202.3%200%204.6-.1%206.9-.2-2.2%202.9-4.5%205.7-6.9%208.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9%201.1-3.3%202.3-6.8%203.8-10.3%201.1%202%202.2%204.1%203.4%206.1%201.2%202.2%202.4%204.1%203.6%206.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3%203.4-.8%207-1.4%2010.8-1.9-1.2%201.9-2.5%203.9-3.6%206-1.2%202.1-2.3%204.2-3.4%206.2zM64%2030.2c2.4%202.6%204.7%205.4%206.9%208.3-2.3-.1-4.6-.2-6.9-.2-2.3%200-4.6.1-6.9.2%202.2-2.9%204.5-5.7%206.9-8.3zm22.2%2021l-3.6-6c3.8.5%207.4%201.1%2010.8%201.9-1.1%203.3-2.3%206.8-3.8%2010.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7%2035c-1.7-10.5-.3-17.9%203.8-20.3%201-.6%202.2-.9%203.5-.9%206%200%2013.5%204.9%2021%2012.3-3.5%203.8-7%208.2-10.4%2013-5.8.5-11.3%201.4-16.5%202.5-.6-2.3-1-4.5-1.4-6.6zM7%2064c0-4.7%205.7-9.7%2015.7-13.4%202-.8%204.2-1.5%206.4-2.1%201.6%205%203.6%2010.3%206%2015.6-2.4%205.3-4.5%2010.5-6%2015.5C15.3%2075.6%207%2069.6%207%2064zm28.5%2049.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3%201.4-6.6%205.2%201.2%2010.7%202%2016.5%202.5%203.4%204.8%206.9%209.1%2010.4%2013-7.4%207.3-14.9%2012.3-21%2012.3-1.3%200-2.5-.3-3.5-.9zM96.3%2093c1.7%2010.5.3%2017.9-3.8%2020.3-1%20.6-2.2.9-3.5.9-6%200-13.5-4.9-21-12.3%203.5-3.8%207-8.2%2010.4-13%205.8-.5%2011.3-1.4%2016.5-2.5.6%202.3%201%204.5%201.4%206.6zm9-15.6c-2%20.8-4.2%201.5-6.4%202.1-1.6-5-3.6-10.3-6-15.6%202.4-5.3%204.5-10.5%206-15.5%2013.8%204%2022.1%2010%2022.1%2015.6%200%204.7-5.8%209.7-15.7%2013.4z%22/%3E%3C/g%3E%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1466.0" y="1513" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="customerweb_tech" value="React | Customer storefront" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="1597" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="staffweb" value="" style="rounded=0;html=1;fillColor=#D9E8FB;strokeColor=#6C8EBF;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1750" y="1440" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="staffweb_head" value="&amp;lt;&amp;lt;WebApp&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;FreshFood-Web&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1758" y="1448" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="staffweb_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20128%20128%22%3E%3Cg%20fill%3D%22%2361DAFB%22%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%2211.4%22/%3E%3Cpath%20d%3D%22M107.3%2045.2c-2.2-.8-4.5-1.6-6.9-2.3.6-2.4%201.1-4.8%201.5-7.1%202.1-13.2-.2-22.5-6.6-26.1-1.9-1.1-4-1.6-6.4-1.6-7%200-15.9%205.2-24.9%2013.9-9-8.7-17.9-13.9-24.9-13.9-2.4%200-4.5.5-6.4%201.6-6.4%203.7-8.7%2013-6.6%2026.1.4%202.3.9%204.7%201.5%207.1-2.4.7-4.7%201.4-6.9%202.3C8.2%2050%201.4%2056.6%201.4%2064s6.9%2014%2019.3%2018.8c2.2.8%204.5%201.6%206.9%202.3-.6%202.4-1.1%204.8-1.5%207.1-2.1%2013.2.2%2022.5%206.6%2026.1%201.9%201.1%204%201.6%206.4%201.6%207.1%200%2016-5.2%2024.9-13.9%209%208.7%2017.9%2013.9%2024.9%2013.9%202.4%200%204.5-.5%206.4-1.6%206.4-3.7%208.7-13%206.6-26.1-.4-2.3-.9-4.7-1.5-7.1%202.4-.7%204.7-1.4%206.9-2.3%2012.5-4.8%2019.3-11.4%2019.3-18.8s-6.8-14-19.3-18.8zM92.5%2014.7c4.1%202.4%205.5%209.8%203.8%2020.3-.3%202.1-.8%204.3-1.4%206.6-5.2-1.2-10.7-2-16.5-2.5-3.4-4.8-6.9-9.1-10.4-13%207.4-7.3%2014.9-12.3%2021-12.3%201.3%200%202.5.3%203.5.9zM81.3%2074c-1.8%203.2-3.9%206.4-6.1%209.6-3.7.3-7.4.4-11.2.4-3.9%200-7.6-.1-11.2-.4-2.2-3.2-4.2-6.4-6-9.6-1.9-3.3-3.7-6.7-5.3-10%201.6-3.3%203.4-6.7%205.3-10%201.8-3.2%203.9-6.4%206.1-9.6%203.7-.3%207.4-.4%2011.2-.4%203.9%200%207.6.1%2011.2.4%202.2%203.2%204.2%206.4%206%209.6%201.9%203.3%203.7%206.7%205.3%2010-1.7%203.3-3.4%206.6-5.3%2010zm8.3-3.3c1.5%203.5%202.7%206.9%203.8%2010.3-3.4.8-7%201.4-10.8%201.9%201.2-1.9%202.5-3.9%203.6-6%201.2-2.1%202.3-4.2%203.4-6.2zM64%2097.8c-2.4-2.6-4.7-5.4-6.9-8.3%202.3.1%204.6.2%206.9.2%202.3%200%204.6-.1%206.9-.2-2.2%202.9-4.5%205.7-6.9%208.3zm-18.6-15c-3.8-.5-7.4-1.1-10.8-1.9%201.1-3.3%202.3-6.8%203.8-10.3%201.1%202%202.2%204.1%203.4%206.1%201.2%202.2%202.4%204.1%203.6%206.1zm-7-25.5c-1.5-3.5-2.7-6.9-3.8-10.3%203.4-.8%207-1.4%2010.8-1.9-1.2%201.9-2.5%203.9-3.6%206-1.2%202.1-2.3%204.2-3.4%206.2zM64%2030.2c2.4%202.6%204.7%205.4%206.9%208.3-2.3-.1-4.6-.2-6.9-.2-2.3%200-4.6.1-6.9.2%202.2-2.9%204.5-5.7%206.9-8.3zm22.2%2021l-3.6-6c3.8.5%207.4%201.1%2010.8%201.9-1.1%203.3-2.3%206.8-3.8%2010.3-1.1-2.1-2.2-4.2-3.4-6.2zM31.7%2035c-1.7-10.5-.3-17.9%203.8-20.3%201-.6%202.2-.9%203.5-.9%206%200%2013.5%204.9%2021%2012.3-3.5%203.8-7%208.2-10.4%2013-5.8.5-11.3%201.4-16.5%202.5-.6-2.3-1-4.5-1.4-6.6zM7%2064c0-4.7%205.7-9.7%2015.7-13.4%202-.8%204.2-1.5%206.4-2.1%201.6%205%203.6%2010.3%206%2015.6-2.4%205.3-4.5%2010.5-6%2015.5C15.3%2075.6%207%2069.6%207%2064zm28.5%2049.3c-4.1-2.4-5.5-9.8-3.8-20.3.3-2.1.8-4.3%201.4-6.6%205.2%201.2%2010.7%202%2016.5%202.5%203.4%204.8%206.9%209.1%2010.4%2013-7.4%207.3-14.9%2012.3-21%2012.3-1.3%200-2.5-.3-3.5-.9zM96.3%2093c1.7%2010.5.3%2017.9-3.8%2020.3-1%20.6-2.2.9-3.5.9-6%200-13.5-4.9-21-12.3%203.5-3.8%207-8.2%2010.4-13%205.8-.5%2011.3-1.4%2016.5-2.5.6%202.3%201%204.5%201.4%206.6zm9-15.6c-2%20.8-4.2%201.5-6.4%202.1-1.6-5-3.6-10.3-6-15.6%202.4-5.3%204.5-10.5%206-15.5%2013.8%204%2022.1%2010%2022.1%2015.6%200%204.7-5.8%209.7-15.7%2013.4z%22/%3E%3C/g%3E%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="1866.0" y="1513" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="staffweb_tech" value="React | Staff back office" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1758" y="1597" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="printer" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="2580" y="1440" width="300" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="printer_head" value="&amp;lt;&amp;lt;Hardware Device&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Thermal Printer&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="2588" y="1448" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="printer_icon" value="" style="shape=image;imageAspect=1;aspect=fixed;image=data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%20128%20128%27%3E%0A%20%20%3Crect%20x%3D%2724%27%20y%3D%2752%27%20width%3D%2780%27%20height%3D%2758%27%20rx%3D%278%27%20fill%3D%27%23424242%27/%3E%0A%20%20%3Crect%20x%3D%2734%27%20y%3D%2718%27%20width%3D%2760%27%20height%3D%2734%27%20fill%3D%27%23FAFAFA%27%20stroke%3D%27%23BDBDBD%27%20stroke-width%3D%272%27/%3E%0A%20%20%3Cpath%20fill%3D%27%23E0E0E0%27%20d%3D%27M42%2028h44v4H42zm0%208h36v4H42z%27/%3E%0A%20%20%3Crect%20x%3D%2730%27%20y%3D%2760%27%20width%3D%2768%27%20height%3D%278%27%20rx%3D%272%27%20fill%3D%27%23212121%27/%3E%0A%20%20%3Ccircle%20cx%3D%2788%27%20cy%3D%2782%27%20r%3D%274%27%20fill%3D%27%234CAF50%27/%3E%0A%3C/svg%3E;" vertex="1" parent="1">
+          <mxGeometry x="2696.0" y="1513" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="printer_tech" value="80 mm | ESC/POS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="2588" y="1597" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="mobiledevice" value="Customer" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontFamily=Arial;fontSize=18;fontStyle=1;strokeColor=#253858;strokeWidth=2;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1075" y="2010" width="50" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="1990" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser_head" value="&amp;lt;&amp;lt;Web Browser&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Customer Computer&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="1998" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser_tech" value="Web browser | HTTPS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="2075" width="284" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser" value="" style="rounded=0;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1750" y="1990" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser_head" value="&amp;lt;&amp;lt;Web Browser&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Staff Computer&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1758" y="1998" width="284" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser_tech" value="Web browser | HTTPS" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1758" y="2075" width="284" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="maps_request" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.12;exitY=0;entryX=0.4;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="maps">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1386.0" y="530" />
+              <mxPoint x="990" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="maps_request_label" value="HTTPS / Distance request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1083.0" y="518" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="maps_response" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.6;exitY=1;entryX=0.25;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="maps" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1050" y="600" />
+              <mxPoint x="1425.0" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="maps_response_label" value="HTTPS / Distance response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1132.5" y="588" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_request" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.45;exitY=0;entryX=0.38333333333333336;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="sms">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_request_label" value="HTTPS / Send OTP" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1380.0" y="608" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_response" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5333333333333333;exitY=1;entryX=0.6;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="sms" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sms_response_label" value="HTTPS / OTP response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1425.0" y="608" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="fcm_request" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.25;entryX=1;entryY=0.25;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="fcm">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="905" />
+              <mxPoint x="900" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fcm_request_label" value="HTTPS / Push request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="545.0" y="873" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="fcm_response" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.65;entryX=0;entryY=0.65;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="fcm" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="973" />
+              <mxPoint x="820" y="993" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fcm_response_label" value="HTTPS / Push response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="515.0" y="961" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="oauth_request" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.75;exitY=0;entryX=0.4;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="oauth">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1575.0" y="530" />
+              <mxPoint x="1990" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oauth_request_label" value="HTTPS / OAuth request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1677.5" y="518" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="oauth_response" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.6;exitY=1;entryX=0.88;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="oauth" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2050" y="600" />
+              <mxPoint x="1614.0" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oauth_response_label" value="HTTPS / OAuth response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1727.0" y="588" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sepay_request" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.12;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="sepay">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1720" y="876.4" />
+              <mxPoint x="1720" y="740" />
+              <mxPoint x="2430" y="740" />
+              <mxPoint x="2430" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sepay_request_label" value="HTTPS / Payment request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2100.0" y="728" width="240" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="sepay_response" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.65;entryX=1;entryY=0.35;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="sepay" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2370" y="973" />
+              <mxPoint x="2370" y="790" />
+              <mxPoint x="1780" y="790" />
+              <mxPoint x="1780" y="927" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sepay_response_label" value="Webhook HTTP POST" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2100.0" y="778" width="240" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="db_query" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.52;entryX=0;entryY=0.52;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="db_query_label" value="SQL Query" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1675.0" y="952.4" width="150" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="db_response" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0;exitY=0.84;entryX=1;entryY=0.84;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="db" target="api">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="db_response_label" value="SQL Response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1675.0" y="1022.8" width="150" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="app_req" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.4;exitY=0;entryX=0.1;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="app" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="1190" />
+              <mxPoint x="1380.0" y="1190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="app_req_label" value="HTTPS Request / REST JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="980.0" y="1348" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="app_res" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.24;exitY=1;entryX=0.6;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="app">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1422.0" y="1270" />
+              <mxPoint x="1130" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="app_res_label" value="HTTPS Response / JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1040.0" y="1348" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="customerweb_req" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.4;exitY=0;entryX=0.43;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="customerweb" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="1190" />
+              <mxPoint x="1479.0" y="1190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="customerweb_req_label" value="HTTPS Request / REST JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1380.0" y="1348" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="customerweb_res" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.61;exitY=1;entryX=0.6;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="customerweb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1533.0" y="1270" />
+              <mxPoint x="1530" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="customerweb_res_label" value="HTTPS Response / JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1440.0" y="1348" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="staffweb_req" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.4;exitY=0;entryX=0.77;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="staffweb" target="api">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1870" y="1190" />
+              <mxPoint x="1581.0" y="1190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="staffweb_req_label" value="HTTPS Request / REST JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1780.0" y="1348" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="staffweb_res" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.91;exitY=1;entryX=0.6;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="staffweb">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1623.0" y="1270" />
+              <mxPoint x="1930" y="1270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="staffweb_res_label" value="HTTPS Response / JSON" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1840.0" y="1348" width="180" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="print" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=1;exitY=0.94;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="api" target="printer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="1056.8" />
+              <mxPoint x="1730" y="1320" />
+              <mxPoint x="2730" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="print_label" value="ESC/POS Raw Command" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="2290.0" y="1308" width="240" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_push" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="fcm" target="app">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270" y="1550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mobile_push_label" value="FCM mobile push" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="490.0" y="1538" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_use" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="mobiledevice" target="app">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_use_label" value="Direct touch interaction" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=0;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="995.0" y="1828" width="210" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser_req" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.4;exitY=0;entryX=0.4;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="customerbrowser" target="customerweb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser_req_label" value="HTTPS Request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1390.0" y="1818" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser_res" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.6;exitY=1;entryX=0.6;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="customerweb" target="customerbrowser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="customerbrowser_res_label" value="HTTPS Response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1450.0" y="1818" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser_req" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.4;exitY=0;entryX=0.4;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="staffbrowser" target="staffweb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser_req_label" value="HTTPS Request" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1790.0" y="1818" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser_res" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontSize=14;labelBackgroundColor=#ffffff;exitX=0.6;exitY=1;entryX=0.6;entryY=0;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;" edge="1" parent="1" source="staffweb" target="staffbrowser">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="staffbrowser_res_label" value="HTTPS Response" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontColor=#172B4D;rotation=270;fontSize=15;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1850.0" y="1818" width="160" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_internal" value="" style="fillColor=#D9E8FB;strokeColor=#6C8EBF;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="2500" width="40" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_internal_text" value="Internal subsystems" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="2495" width="300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_external" value="" style="fillColor=#FFF2CC;strokeColor=#D6B656;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="2500" width="40" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_external_text" value="External services / devices" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="2495" width="400" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="caption" value="Figure 5.1: Overall System Architecture of FreshFood E-Commerce Platform" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=21;fontColor=#172B4D;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="2580" width="2200" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_customer_web" parent="1" vertex="1" value="Customer / Guest" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontFamily=Arial;fontSize=18;fontStyle=1;strokeColor=#253858;strokeWidth=2;labelBackgroundColor=#ffffff;">
+          <mxGeometry as="geometry" x="1475" y="2280" width="50" height="95" />
+        </mxCell>
+        <mxCell id="actor_staff_web" parent="1" vertex="1" value="Staff / Store Owner" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontFamily=Arial;fontSize=18;fontStyle=1;strokeColor=#253858;strokeWidth=2;labelBackgroundColor=#ffffff;">
+          <mxGeometry as="geometry" x="1875" y="2280" width="50" height="95" />
+        </mxCell>
+        <mxCell id="actor_customer_browser" value="Browser interaction" edge="1" parent="1" source="actor_customer_web" target="customerbrowser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontFamily=Arial;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_staff_browser" value="Browser interaction" edge="1" parent="1" source="actor_staff_web" target="staffbrowser" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeColor=#344563;strokeWidth=1.7;fontFamily=Arial;fontSize=15;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

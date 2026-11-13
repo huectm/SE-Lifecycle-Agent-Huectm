@@ -1,0 +1,16 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1793182806807,97,REGISTRATION_TRANSACTION,200,"Number of samples in transaction : 2, number of failing samples : 0",Local users 1-1,,true,,581,695,1,1,null,0,56,20
+1793182806861,50,GET_REGISTER,200,OK,Local users 1-1,text,true,,200,151,1,1,http://127.0.0.1:61621/index.php?route=account/register,45,0,18
+1793182806914,47,POST_REGISTER,200,OK,Local users 1-1,text,true,,381,544,1,1,http://127.0.0.1:61621/index.php?route=account/success,24,0,2
+1793182806914,24,POST_REGISTER-0,302,Found,Local users 1-1,text,true,,194,394,1,1,http://127.0.0.1:61621/index.php?route=account/register,24,0,2
+1793182806939,22,POST_REGISTER-1,200,OK,Local users 1-1,text,true,,187,150,1,1,http://127.0.0.1:61621/index.php?route=account/success,22,0,0
+1793182806962,69,REGISTRATION_TRANSACTION,200,"Number of samples in transaction : 2, number of failing samples : 0",Local users 1-1,,true,,581,695,1,1,null,0,17,2
+1793182806979,23,GET_REGISTER,200,OK,Local users 1-1,text,true,,200,151,1,1,http://127.0.0.1:61621/index.php?route=account/register,22,0,1
+1793182807002,46,POST_REGISTER,200,OK,Local users 1-1,text,true,,381,544,1,1,http://127.0.0.1:61621/index.php?route=account/success,23,0,1
+1793182807002,23,POST_REGISTER-0,302,Found,Local users 1-1,text,true,,194,394,1,1,http://127.0.0.1:61621/index.php?route=account/register,23,0,1
+1793182807025,23,POST_REGISTER-1,200,OK,Local users 1-1,text,true,,187,150,1,1,http://127.0.0.1:61621/index.php?route=account/success,22,0,1
+1793182807049,67,REGISTRATION_TRANSACTION,200,"Number of samples in transaction : 2, number of failing samples : 0",Local users 1-1,,true,,581,695,1,1,null,0,2,2
+1793182807049,22,GET_REGISTER,200,OK,Local users 1-1,text,true,,200,151,1,1,http://127.0.0.1:61621/index.php?route=account/register,22,0,1
+1793182807072,45,POST_REGISTER,200,OK,Local users 1-1,text,true,,381,544,1,1,http://127.0.0.1:61621/index.php?route=account/success,22,0,1
+1793182807072,22,POST_REGISTER-0,302,Found,Local users 1-1,text,true,,194,394,1,1,http://127.0.0.1:61621/index.php?route=account/register,22,0,1
+1793182807095,22,POST_REGISTER-1,200,OK,Local users 1-1,text,true,,187,150,1,1,http://127.0.0.1:61621/index.php?route=account/success,22,0,0

@@ -1,0 +1,88 @@
+{
+  "engine": "PostgreSQL 17.4 on x86_64-pc-linux-gnu, compiled by emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.74 (1092ec30a3fb1d46b1782ff1b4db5094d3d06ae5), 32-bit",
+  "checks": [
+    {
+      "name": "Product fault: refund captured goods and shipping without any quality inspection",
+      "status": "PASS"
+    },
+    {
+      "name": "Deliberate refusal: refund goods and retain delivery fee",
+      "status": "PASS"
+    },
+    {
+      "name": "Unpaid goods with shipping-only cash collection: no goods refund and no PAID flag",
+      "status": "PASS"
+    },
+    {
+      "name": "First unpaid order cannot be confirmed without phone confirmation",
+      "status": "PASS"
+    },
+    {
+      "name": "First unpaid order can be confirmed after a successful staff call",
+      "status": "PASS"
+    },
+    {
+      "name": "Paid first order has PENDING_PAID and does not require the mandatory phone call",
+      "status": "PASS"
+    },
+    {
+      "name": "Repeat unpaid order does not require the mandatory call",
+      "status": "PASS"
+    },
+    {
+      "name": "Unconfirmed cause cannot select a refund policy",
+      "status": "PASS"
+    },
+    {
+      "name": "Partial physical receipt cannot be marked complete",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate receipt/payment notifications do not duplicate a refund obligation",
+      "status": "PASS"
+    },
+    {
+      "name": "Completed receipt quantities cannot be changed silently",
+      "status": "PASS"
+    },
+    {
+      "name": "Cross-order returned-line association is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Refund request alone cannot become SUCCEEDED without settlement evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Reserved stock cannot exceed available on-hand balance",
+      "status": "PASS"
+    },
+    {
+      "name": "Unsupported payment method is rejected rather than silently adding gateways",
+      "status": "PASS"
+    },
+    {
+      "name": "Product-fault unpaid return has no prepaid goods refund",
+      "status": "PASS"
+    },
+    {
+      "name": "Unconfirmed first-order call does not automatically cancel the order",
+      "status": "PASS"
+    },
+    {
+      "name": "Verified excess capture is preserved and blocked from an invented automatic overpayment policy",
+      "status": "PASS"
+    },
+    {
+      "name": "Independent initial pending states cannot transition between each other",
+      "status": "PASS"
+    },
+    {
+      "name": "Legacy parent PENDING is not a valid order state",
+      "status": "PASS"
+    }
+  ],
+  "passed": 20,
+  "total": 20,
+  "limits": "Isolated in-memory PostgreSQL-compatible PGlite check. Not a PostgreSQL 16 deployment, provider payout test, authorization test or multi-session concurrency proof."
+}

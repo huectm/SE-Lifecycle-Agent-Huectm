@@ -1,0 +1,56 @@
+case,use_case,flow,basis,technique,status
+REG-001,UC-REG-01,Basic,Observed UI,EP,PASS
+REG-002,UC-REG-01,Alt1.1,Observed UI,EP,PASS
+REG-003,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-004,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-005,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-006,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-007,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-008,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-009,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-010,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-011,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-012,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-013,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-014,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-015,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-016,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-017,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-018,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-019,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-020,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-021,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-022,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-023,UC-REG-01,E1,Observed UI,BVA,PASS
+REG-024,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-025,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-026,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-027,UC-REG-01,Basic,Observed UI,BVA,PASS
+REG-028,UC-REG-01,E1,Observed UI,BVA,FAIL
+REG-029,UC-REG-01,E2,Observed UI,EP,PASS
+REG-030,UC-REG-01,E2,Observed UI,EP,PASS
+REG-031,UC-REG-01,E2,Observed UI,EP,PASS
+REG-032,UC-REG-01,E2,Observed UI,EP,PASS
+REG-033,UC-REG-01,E2,Observed UI,EP,PASS
+REG-034,UC-REG-01,E3,UC-REG-01 BR-02,EP,PASS
+REG-035,UC-REG-01,E3,UC-REG-01 BR-02,EP,PASS
+REG-036,UC-REG-01,E4,UC-REG-01 BR-03,EP,PASS
+REG-037,UC-REG-01,E5,Observed UI,EP,PASS
+REG-038,UC-REG-01,Alt1.2,UC-REG-01 Alt1.2,EP,PASS
+REG-039,UC-REG-01,UI,Observed UI,EP,PASS
+REG-040,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,PASS
+REG-041,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,FAIL
+REG-042,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,PASS
+REG-043,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,FAIL
+REG-044,UC-REG-01,Appendix,UC proposal; confirmation required,BVA/EP,FAIL
+REG-045,UC-REG-01,Appendix,UC proposal; confirmation required,BVA/EP,PASS
+REG-046,UC-REG-01,Appendix,UC proposal; confirmation required,BVA/EP,FAIL
+REG-047,UC-REG-01,Appendix,UC proposal; confirmation required,BVA/EP,FAIL
+REG-048,UC-REG-01,Appendix,UC proposal; confirmation required,BVA/EP,FAIL
+REG-049,UC-REG-01,Appendix,UC proposal; confirmation required,BVA/EP,FAIL
+REG-050,UC-REG-01,Appendix,UC proposal; confirmation required,EP,PASS
+REG-051,UC-REG-01,Appendix,UC proposal; confirmation required,EP,PASS
+REG-052,UC-REG-01,E6,UC E6; controlled fault environment required,EP,SKIP
+REG-053,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,PASS
+REG-054,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,PASS
+REG-055,UC-REG-01,Appendix,UC proposal; confirmation required,BVA,PASS

@@ -1,0 +1,11 @@
+product_id,product_code,product_name,category_code,category_name,cert_type,cert_number,active_batch_no,import_price,retail_price,discount_rate,discounted_price,current_stock,reserved_stock,available_stock,unit,harvest_date,expiry_date,days_to_expiry,is_clearance,expected_behavior
+PRD-001,VEG-CLAY-01,Cải bẹ xanh hữu cơ,CAT-VEG,Rau lá hữu cơ,USDA Organic,USDA-849201,BAT-20261020-01,15000,28000,0.0,28000,45,5,40,Túi 500g,2026-10-19,2026-10-27,4,False,Normal item - Active batch - Standard price
+PRD-002,VEG-SPIN-02,Rau mồng tơi VietGAP,CAT-VEG,Rau lá hữu cơ,VietGAP,VG-HCM-2026-11,BAT-20261021-02,12000,22000,0.0,22000,60,10,50,Bó 500g,2026-10-20,2026-10-26,3,False,Normal item - Active batch - Standard price
+PRD-003,FRU-TOM-03,Cà chua Cherry Đà Lạt,CAT-FRU,Củ quả hữu cơ,EU Organic,EU-VN-9942,BAT-20261018-01,25000,45000,0.20,36000,25,0,25,Hộp 300g,2026-10-17,2026-10-24,1,True,Clearance item - 20% discount (BR-BAT-04: Expiry <= 2 days)
+PRD-004,VEG-KALE-04,Cải Kale xoăn hữu cơ,CAT-VEG,Rau lá hữu cơ,USDA Organic,USDA-849205,BAT-20261017-02,30000,55000,0.30,38500,12,2,10,Túi 300g,2026-10-16,2026-10-23,0,True,Clearance item - 30% discount - Expiring today
+PRD-005,TUB-CAR-05,Cà rốt ta hữu cơ,CAT-TUB,Củ quả hữu cơ,VietGAP,VG-LD-2026-88,BAT-20261015-03,18000,32000,0.0,32000,80,0,80,Kg,2026-10-14,2026-11-05,13,False,Normal item - Root vegetable with long shelf-life
+PRD-006,FRU-BANA-06,Chuối Laba Nam Ban,CAT-FRU,Trái cây hữu cơ,VietGAP,VG-LD-2026-12,BAT-20261022-01,16000,29000,0.0,29000,50,0,50,Nải 1kg,2026-10-21,2026-10-28,5,False,Normal item - Active stock
+PRD-007,MUSH-OST-07,Nấm đùi gà hữu cơ,CAT-MUSH,Nấm tươi sạch,GlobalGAP,GG-VN-2026-03,BAT-20261019-04,22000,42000,0.0,42000,30,0,30,Khay 200g,2026-10-18,2026-10-26,3,False,Normal item - Fresh mushroom
+PRD-008,VEG-HERB-08,Xà lách Lô Lô xanh,CAT-VEG,Rau lá hữu cơ,USDA Organic,USDA-849210,BAT-20261016-01,14000,26000,0.50,13000,5,5,0,Cây 300g,2026-10-15,2026-10-23,0,True,Out of Stock - 0 available - Clearance tag 50%
+PRD-009,VEG-CABB-09,Bắp cải tím hữu cơ Đà Lạt,CAT-VEG,Rau lá hữu cơ,VietGAP,VG-DL-2026-44,BAT-20261022-03,20000,38000,0.0,38000,40,0,40,Bắp 800g,2026-10-21,2026-11-02,10,False,Normal item - Active stock
+PRD-010,INV-PROD-99,Sản phẩm ngừng kinh doanh,CAT-DISC,Khác,None,None,None,0,0,0.0,0,0,0,0,None,None,None,-10,False,Inactive product - Should not appear in public search

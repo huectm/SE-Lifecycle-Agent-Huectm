@@ -39,16 +39,16 @@ Use the following priority order:
 3. Approved project requirements and baselines
 4. Stakeholder / authorized project decisions
 5. This Artifact Registry (`artifact-registry.md`)
-6. Applicable Project Lifecycle Skills (`.agents/Skills/<lifecycle-skill>/SKILL.md`)
+6. Applicable Project Lifecycle Skills (`.agents/skills/<lifecycle-skill>/SKILL.md`)
 7. Approved Templates (`/templates`)
 8. Approved Checklists (`/checklists`)
-9. Supporting External Skills (`.agents/Skills/external-skills/*/SKILL.md`) — applied ONLY when needed to assist specific execution sub-tasks
+9. Supporting External Skills (`.agents/skills/external-skills/*/SKILL.md`) — applied ONLY when needed to assist specific execution sub-tasks
 10. Approved Examples (`/examples`)
 11. Reference books / standards (`/references`, `/standards`)
 12. General AI knowledge
 
 ### Fundamental Precedence Invariant
-The project's own Rules and Lifecycle Skills take absolute precedence over external skills. External skills in `.agents/Skills/external-skills/` are secondary, supporting accelerators. They must strictly operate under governing project skills, conform to approved project templates, and respect all verification gates.
+The project's own Rules and Lifecycle Skills take absolute precedence over external skills. External skills in `.agents/skills/external-skills/` are secondary, supporting accelerators. They must strictly operate under governing project skills, conform to approved project templates, and respect all verification gates.
 
 If a conflict is detected between approved project artifacts, the Agent MUST report the inconsistency and follow the applicable governance/verification rule rather than silently selecting one.
 
@@ -131,6 +131,11 @@ This is the primary consolidated engineering specification for:
 The Agent MUST inspect the actual document before editing.
 
 Requirements, Analysis, and Design Skills should populate their corresponding existing sections rather than creating parallel specification documents unless project governance explicitly requires separation.
+
+### Mandatory Post-Approval Integration Invariant
+Whenever an individual or intermediate engineering artifact (e.g. BPMN diagram, System Context Diagram, User Requirements, Use Case model, BCE class diagram, VOPC, Analysis Sequence, Architecture model, DCD, ERD) receives explicit stakeholder/authorized approval at a Human Verification Gate, the Agent MUST immediately invoke `master-specification-authoring` governed by `.agents/Rules/specification-document-rules.md` to integrate, embed, and synchronize its contents into the corresponding section of this Master Specification Document (`artifacts/Requirements_Analysis_Design_Specification.docx`). Progression to downstream lifecycle phases is prohibited until this integration is complete.
+
+All title lines, headings, table captions (placed above), figure captions (placed below), and table header rows MUST be formatted in **bold** (`run.font.bold = True`). Narrative body paragraphs MUST be justified across both margins with an exact 0.5 cm first-line indent.
 
 ---
 
@@ -242,13 +247,14 @@ The checklist's own items, status fields, scoring, and exit criteria take preced
 
 # 7. Lifecycle Artifact Registry
 
-| Lifecycle Activity | Governing Skill (Tier 1) | Supporting External Skill(s) (`.agents/Skills/external-skills`) (Tier 2 - If Needed) | Main Inputs | Approved Template / Artifact Location | Checklist | Main Output | Reviewer / Approver | Gate |
+| Lifecycle Activity | Governing Skill (Tier 1) | Supporting External Skill(s) (`.agents/skills/external-skills`) (Tier 2 - If Needed) | Main Inputs | Approved Template / Artifact Location | Checklist | Main Output | Reviewer / Approver | Gate |
 |---|---|---|---|---|---|---|---|---|
 | Business Context & Business Requirements | `requirements-engineering` | `research`, `grill-me`, `grill-with-docs`, `to-questionnaire`, `to-spec` | Stakeholder/business sources | Master R-A-D Specification | SRS Review as applicable | Background, problem/opportunity, objectives, scope, risks, BRs | Business Stakeholder, PO, BA | Requirements Gate |
 | Business Process Discovery | `business-process-modeling` | `grilling`, `wayfinder` | Business Requirements, BRs, process evidence | Master specification + editable BPMN `.drawio` | No dedicated BPMN checklist currently registered | AS-IS, problems/opportunities, TO-BE, BPMN | BA, Process Owner, PO | Process Verification Gate |
 | User Classes | `requirements-engineering` | `grill-me`, `to-spec` | Processes, stakeholders | Master specification | SRS Review | User Class specification | BA, PO | Requirements Gate |
 | User Requirements | `requirements-engineering` | `to-spec`, `writing-for-agents` | Business/process/user evidence | Master specification + RTM | `d2_Checklist_SRS Review.xls` | `UR-xx` | BA, PO | Requirements Gate |
 | Functional Requirements | `requirements-engineering` | `to-spec`, `writing-for-agents` | URs, processes, BRs | Master specification + RTM | `d2_Checklist_SRS Review.xls` | `FR-xx` | BA/System Analyst, QA | Requirements Gate |
+| Requirements Prioritization & Backlog Triage | `requirements-engineering` | `to-spec`, `to-tickets` | Candidate FRs, stakeholder value ratings | `artifacts/requirements/requirements-prioritization.csv` / Master specification | `d2_Checklist_SRS Review.xls` | Karl Wiegers Prioritization Matrix, Ranked Backlog, Sprint 1 Candidates | Product Owner, BA | Requirements Gate / Sprint Planning Gate |
 | Non-Functional Requirements | `requirements-engineering` | `research`, `to-spec` | Business goals, quality needs, constraints | Master specification + RTM | `d2_Checklist_SRS Review.xls` | Quality Attribute requirements | BA/System Analyst, Architect, QA | Requirements Gate |
 | Constraints | `requirements-engineering` | `to-spec` | Business/technical/regulatory sources | Master specification | SRS Review | Constraints | BA/System Analyst, Architect | Requirements Gate |
 | External Interfaces | `requirements-engineering` | `to-spec` | Integration/UI/device/communication needs | Master specification | SRS Review | Interface requirements | System Analyst, Architect | Requirements Gate |
@@ -259,8 +265,8 @@ The checklist's own items, status fields, scoring, and exit criteria take preced
 | Activity Diagram | `usecase-modeling` | `wayfinder` | Complex Use Case | Master specification + `.drawio` | SRS/Design Review as applicable | Actor/System swimlane Activity Diagram | System Analyst, QA | Requirements Gate |
 | Requirements Traceability | `traceability-consistency` | `to-tickets` | BR, UR, FR/NFR, UC and downstream artifacts | `Requirements_Traceability_Matrix_Simplified.xlsx` | Traceability/consistency rules | Updated RTM + coverage findings | BA/System Analyst, QA and relevant downstream roles | Cross-cutting Consistency Gate |
 | BCE Analysis | `analysis-modeling` | `domain-modeling` | Approved Requirements/UC | Analysis section of master specification | `d4_Checklist_Design Review.xls` as applicable | Boundary/Control/Entity analysis | System Analyst, Architect | Analysis Gate |
-| VOPC | `analysis-modeling` | `domain-modeling` | BCE + UC | Master specification + `.drawio` | Design Review | VOPC | System Analyst, Architect | Analysis Gate |
-| Analysis Sequence Diagram | `analysis-modeling` | `domain-modeling` | UC, BCE, VOPC | Master specification + `.drawio` | Design Review | Analysis Sequence | System Analyst, Architect | Analysis Gate |
+| VOPC | `analysis-modeling` | `domain-modeling` | BCE + UC | Master specification + `.drawio` in `artifacts/diagrams/class/` | Design Review | VOPC | System Analyst, Architect | Analysis Gate |
+| Analysis Sequence Diagram | `analysis-modeling` | `domain-modeling` | UC, BCE, VOPC | Master specification + `.drawio` in `artifacts/diagrams/class/` | Design Review | Analysis Sequence | System Analyst, Architect | Analysis Gate |
 | State Machine Diagram | `analysis-modeling` | `domain-modeling` | State-dependent requirement/entity | Master specification + `.drawio` | Design Review | State Machine | System Analyst, Architect | Analysis Gate |
 | High-Level Architecture | `software-design` | `codebase-design`, `improve-codebase-architecture` | Requirements, Analysis, Quality Attributes | Design section + `.drawio` + RTM | `d4_Checklist_Design Review.xls` | Architecture | Architect/Technical Lead | Architecture/Design Gate |
 | Subsystem Design | `software-design` | `codebase-design` | Architecture drivers | Master specification + Design_Elements sheet + `.drawio` | Design Review | Subsystems | Architect/Technical Lead | Design Gate |
@@ -270,17 +276,18 @@ The checklist's own items, status fields, scoring, and exit criteria take preced
 | Design Sequence Diagram | `software-design` | `codebase-design`, `domain-modeling` | UC realization + architecture | Master specification + `.drawio` | Design Review | Design Sequence | Architect/System Designer | Design Gate |
 | Detailed Class Design | `software-design` | `codebase-design` | Detailed realization | Master specification + `.drawio` + Design_Elements | Design Review | Classes, operations/methods, class specification | Architect/Technical Lead | Design Gate |
 | Database Design | `database-design` | `domain-modeling` | Data Requirements, BRs, entities, architecture | Database section + `.drawio` | Design Review as applicable | Conceptual/logical/physical DB design | DB Designer, Architect | Database/Design Gate |
+| Master Specification Integration & Formatting | `master-specification-authoring` | `to-spec`, `writing-for-agents` | Approved artifacts from completed phase + static diagram PNGs | `Template_Requirements_Analysis_Design_Specification.docx` | `.agents/Rules/specification-document-rules.md` | Synchronized, baselined Word specification deliverable (`Requirements_Analysis_Design_Specification.docx`) | PO, System Analyst, Software Architect, Project Lead | Phase Baseline Gates |
 | Implementation | `implementation` | `implement`, `implement-spec`, `tdd`, `loop-me` | Approved Design Baseline | `/src` / approved repository structure + RTM | `Code Review CheckList_v1.0.xls` | Source code, methods, unit tests | Peer Developer, Technical Lead | Code Review Gate |
 | Static Code Analysis | `static-code-analysis` | `code-review`, `setup-pre-commit` | Reviewable code/build | Approved analyzer output + defect/report structures | Code Review as applicable | Findings, fixes, re-scan, Quality Gate evidence | Developer, QA, Security/Lead | Static Analysis Gate |
-| Unit Testing | `software-testing` | `tdd`, `diagnosing-bugs` | Unit/code/design basis | `Template_Unit Test Case.xls` | `Checklist_Test Case Review.xls` | Unit Test artifacts/results as template supports | Developer/QA | Test Gate |
-| Integration Testing | `software-testing` | `diagnosing-bugs`, `wait-what` | Interface/integration basis | `Template_Integration Test Case.xls` | `Checklist_Test Case Review.xls` | Integration Test artifacts/results | QA/Developer | Test Gate |
-| Functional/System Test Design | `software-testing` | `triage` | Requirements, BRs, UCs, states | `Sample_Test_Design.xls` and inspected approved workbook | `Checklist_Test Case Review.xls` | Test Conditions/Design | QA | Test Gate |
-| Functional/System Test Cases | `software-testing` | `triage` | Approved Test Design | `Sample_Test_Cases.xlsx` / actual approved Functional workbook | `Checklist_Test Case Review.xls` | Test Cases + execution evidence | QA | Test Gate |
-| Functional Test Result/Report | `software-testing` | `wait-what` | Functional execution | Existing embedded result/report sheet in approved Functional workbook | According to workbook/checklist | Functional Test result/report | QA/Test Lead | Test Completion Gate |
-| Defect Management | `software-testing` | `diagnosing-bugs`, `triage`, `wait-what` | Review/test failures | `Template_Defect_log.xls` | — | Defect Log | QA + responsible developer | Review/Test Gate |
-| Test Log / Report | `software-testing` | `wait-what` | Test execution | `Log_Report Test.xlsx` only according to inspected approved purpose | — | Test log/report | QA/Test Lead | Test Completion Gate |
-| Test Data | `software-testing` | — | Test cases | CSV when project convention requires | — | Test data | QA | Test Gate |
-| Performance Testing | `software-testing` | `wait-what` | Performance requirements | Existing testing workbook if supported; otherwise `TEMPLATE MISSING` | No dedicated checklist currently registered | Performance design/results | QA/Performance role | Test Completion Gate |
+| Post-Requirements System Test Planning & Design | `software-testing` | `triage`, `to-spec` | Approved Requirements Baseline (SRS, UCs, BRs, Prototypes) | `Functional_Test Cases.xlsx`, `Sample_Test_Design.xls`, `Preformance_Test case.xls` | `Checklist_Test Case Review.xls` | System Test Plan, Functional & NFR Test Cases, UAT Scenarios | QA Lead, Product Owner | System Test Design Gate |
+| Post-High-Level Design System Integration Test Planning & Design | `software-testing` | `wait-what`, `triage` | Approved High-Level Architecture & DB Baseline | `Template_Integration Test Case.xls` | `Checklist_Test Case Review.xls` | System Integration Test Plan & API/Interface Test Cases | Software Architect, QA Lead | System Integration Test Design Gate |
+| Post-Detailed Design Module Integration & Unit Test Planning & Design | `software-testing` | `tdd`, `diagnosing-bugs` | Approved Detailed Design Baseline (DCD, Sequence, Class Specs) | `Template_Integration Test Case.xls`, `Template_Unit Test Case.xls` | `Checklist_Test Case Review.xls` | Module Integration Cases, Unit Test Plan & Cases (Normal/Boundary/Abnormal, TC/KLOC) | Technical Lead, QA Lead | Unit & Module Test Design Gate |
+| Unit Test Execution | `software-testing` | `tdd`, `diagnosing-bugs` | Implemented Units/Classes + Unit Test Cases | `Template_Unit Test Case.xls` (Test Report sheet) | `Checklist_Test Case Review.xls` | Unit Test Execution Results & Metrics | Developer, QA | Unit Test Gate |
+| Module & System Integration Test Execution | `software-testing` | `diagnosing-bugs`, `wait-what` | Implemented Modules, APIs + Integration Cases | `Template_Integration Test Case.xls` (Test Report sheet) | `Checklist_Test Case Review.xls` | Integration Test Execution Results | QA Lead, Developer | Integration Test Gate |
+| System Functional & Performance Test Execution | `software-testing` | `wait-what` | Deployed System Build + System Test Cases | `Functional_Test Cases.xlsx`, `Preformance_Test case.xls` | `Checklist_Quality Gate Review.xls` | System Test Execution Results & Performance Metrics | QA Lead, Product Owner | System Test Complete Gate |
+| Defect Management | `software-testing` | `diagnosing-bugs`, `triage`, `wait-what` | Review/test failures across all levels | `Template_Defect_log.xls` | — | Defect Log with triage, severity, fix, and verification | QA Lead, Responsible Developer | Defect Triage Gate |
+| Consolidated Test Log & Reporting | `software-testing` | `wait-what` | Test execution across all V-Model levels | `Log_Report Test.xlsx` and embedded workbook report sheets | `Checklist_Quality Gate Review.xls` | Consolidated Test Summary & Quality Gate Evidence | QA Lead, Authorized Approver | Test Completion Gate |
+| Test Data Management | `software-testing` | — | Test cases across all levels | CSV when project convention requires | — | Test Data sets (no sensitive/production credentials) | QA | Test Gate |
 | CI/CD | `devops-release` | `setup-pre-commit`, `pr` | Approved code/test/static evidence | Repository pipeline configuration | — | CI/CD pipeline | DevOps/Technical Lead | Pipeline Gate |
 | Release Readiness | `devops-release` | `claude-handoff`, `handoff` | Release candidate + evidence | Existing approved release artifact if identified; otherwise `TEMPLATE MISSING` | `Checklist_Quality Gate Review.xls` as applicable | Release readiness evidence | DevOps, QA, PO/Approver | Release Gate |
 | Release Notes | `devops-release` | `writing-beats`, `writing-fragments` | Approved release content | Existing project standard if identified; otherwise `TEMPLATE MISSING` | — | Release Notes | DevOps/PO | Release Gate |
@@ -293,7 +300,7 @@ The checklist's own items, status fields, scoring, and exit criteria take preced
 To ensure strict engineering governance and avoid uncontrolled divergence:
 
 ### Rule 1: Project Lifecycle Skills (Tier 1) Always Govern
-Every lifecycle activity is initiated, orchestrated, and closed by its designated **Governing Skill** (`.agents/Skills/<lifecycle-skill>/SKILL.md`). The governing skill is the sole authority responsible for:
+Every lifecycle activity is initiated, orchestrated, and closed by its designated **Governing Skill** (`.agents/skills/<lifecycle-skill>/SKILL.md`). The governing skill is the sole authority responsible for:
 - verifying entry criteria;
 - enforcing applicable project Rules in `.agents/Rules/`;
 - enforcing approved project Templates in `/templates/`;
@@ -302,7 +309,7 @@ Every lifecycle activity is initiated, orchestrated, and closed by its designate
 - enforcing Human Verification Gates (STOP condition).
 
 ### Rule 2: External Skills (Tier 2) Are Applied Only When Needed
-External skills in `.agents/Skills/external-skills/` are **tactical execution helpers**. They are invoked **ONLY IF NEEDED** ("Sau đó nếu cần") to perform a focused technical task (e.g., executing a TDD loop, diagnosing an elusive bug, conducting an interactive interview via `grill-me`).
+External skills in `.agents/skills/external-skills/` are **tactical execution helpers**. They are invoked **ONLY IF NEEDED** ("Sau đó nếu cần") to perform a focused technical task (e.g., executing a TDD loop, diagnosing an elusive bug, conducting an interactive interview via `grill-me`).
 
 ### Rule 3: Output Consolidation into Approved Templates
 External skills frequently have their own internal conventions or output suggestions. The Agent MUST NOT use external skill output formats to replace or bypass project-approved templates. All intermediate or raw results generated with external skill assistance MUST be formatted and consolidated directly into the designated project template (e.g. Master Specification `.docx`, RTM `.xlsx`, or Test Document `.xls`).

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-29",
+  "scope": "Explicitly confirmed status naming, goods-only automatic refund, complete warehouse receipt and staff-only quality decision. No new refund API or technical enum baselined.",
+  "changes": [
+    {
+      "path": "artifacts/requirements/software-requirements-specification.md",
+      "changed_lines": 8
+    },
+    {
+      "path": "artifacts/requirements/business-rules.md",
+      "changed_lines": 3
+    },
+    {
+      "path": "artifacts\\requirements\\business-rules.csv",
+      "changed_rules": 3
+    },
+    {
+      "path": "artifacts/Requirements_Analysis_Design_Specification.docx",
+      "changed_paragraphs": 7
+    },
+    {
+      "path": "artifacts/requirements/Software_Requirements_Specification.docx",
+      "changed_paragraphs": 6
+    }
+  ],
+  "backup": "scratch\\order-policy-before-20261029",
+  "remaining_review": "New Returned/Partially Refunded enum proposals, payout integration, partial returns, NFR-INT-02 timing conflict and diagrams remain for review.",
+  "source_hashes": {
+    "artifacts\\Requirements_Analysis_Design_Specification.docx": "c95bcc55ba4e2399ef8959ea12a7f1632fb79f7b7233fc54a481004f080d641c",
+    "artifacts\\requirements\\Software_Requirements_Specification.docx": "0b6aeec29caed40bc6b6e00d9d089edc1c406d99bc25f9e7b12f3514a5f663e3",
+    "artifacts\\requirements\\customer-use-case-descriptions.md": "184264c83e83afa8fd817cdd6b9e1e8983a34877de2001e2619c84fdb2fa492a"
+  },
+  "quality_review": "Native Word PDF export, affected-page inspection; normal SRS body weight restored."
+}

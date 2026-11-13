@@ -1,0 +1,2609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.1 on win32)" generated="2026-10-28T16:27:49.770712" rpa="false" schemaversion="5">
+<suite id="s1" name="Tutorialsninja Register" source="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\functional\tutorialsninja_register.robot">
+<kw name="Open Registration Browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:27:49.956566" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo/index.php?route=account/register'.</msg>
+<arg>${REGISTER_URL}</arg>
+<arg>chrome</arg>
+<arg>options=${BROWSER_OPTIONS}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:27:49.956226" elapsed="2.632313"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>${ACTION_DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-10-28T16:27:52.588879" elapsed="0.000359"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:27:49.955594" elapsed="2.633745"/>
+</kw>
+<test id="s1-t1" name="REG-001 Register with default Newsletter No" line="19">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:27:52.590409" elapsed="0.520001"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:27:53.110836" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:27:53.110656" elapsed="0.653392"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:27:53.764469" elapsed="1.026918"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:27:54.791835" level="INFO">Verifying radio button 'newsletter' has selection '0'.</msg>
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:27:54.791646" elapsed="2.030108"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:27:56.822571" level="INFO">Verifying checkbox 'name:agree' is not selected.</msg>
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-28T16:27:56.822125" elapsed="2.027600"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:27:52.590118" elapsed="6.259827"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:27:58.852948" level="INFO">{"id": "REG-001", "title": "Register with default Newsletter No", "field": "", "value": "", "expected": "success", "basis": "Observed UI", "technique": "EP", "flow": "Basic", "firstname": "Robot", "lastname": "Tester", "email": "rf1793179678852399300reg-001@example.com", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:27:58.853142" level="INFO">${row} = {'id': 'REG-001', 'title': 'Register with default Newsletter No', 'field': '', 'value': '', 'expected': 'success', 'basis': 'Observed UI', 'technique': 'EP', 'flow': 'Basic', 'firstname': 'Robot', 'la...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:27:58.851812" elapsed="0.001366"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:27:58.854363" elapsed="0.000040"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:27:58.853343" elapsed="0.001125"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:27:58.853299" elapsed="0.001222"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:27:58.854828" elapsed="0.000033"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:27:58.854956" elapsed="0.000023"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855030" elapsed="0.000035"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:27:58.854598" elapsed="0.000504"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:27:58.854577" elapsed="0.000560"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855371" elapsed="0.000024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855490" elapsed="0.000022"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855595" elapsed="0.000021"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855660" elapsed="0.000024"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855191" elapsed="0.000545"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:27:58.855177" elapsed="0.000589"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:27:58.856113" elapsed="0.000043"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:27:58.855816" elapsed="0.000388"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:27:58.855803" elapsed="0.000440"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:27:58.857303" level="INFO">Typing text 'Robot' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:27:58.856974" elapsed="1.574020"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:27:58.856831" elapsed="1.574297"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:00.432516" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:00.432192" elapsed="1.555044"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:28:00.431330" elapsed="1.556140"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:01.988602" level="INFO">Typing text 'rf1793179678852399300reg-001@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:01.988080" elapsed="1.576833"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:28:01.987788" elapsed="1.577279"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:03.565705" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:03.565399" elapsed="1.562017"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:28:03.565239" elapsed="1.562310"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:05.128312" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:05.127903" elapsed="1.556095"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:28:05.127730" elapsed="1.556402"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:06.684781" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:06.684478" elapsed="1.564227"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:28:06.684305" elapsed="1.564527"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:27:58.856673" elapsed="9.392221"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:08.249300" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:28:08.249092" elapsed="1.013030"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:09.263004" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:09.262726" elapsed="2.564651"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:28:09.262362" elapsed="2.565155"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:28:09.262326" elapsed="2.565250"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:27:58.856402" elapsed="12.971234"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:11.828359" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:11.828134" elapsed="3.388246"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:28:11.827833" elapsed="3.388707"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:28:15.217041" elapsed="10.021097"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:28:15.216733" elapsed="10.021616"/>
+</kw>
+<arg>REG-001</arg>
+<status status="PASS" start="2026-10-28T16:27:58.851165" elapsed="26.387292"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:28:25.239288" elapsed="2.106748"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:28:30.347220" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:28:27.346402" elapsed="3.000961"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:28:25.238874" elapsed="5.108603"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:27:52.589439" elapsed="37.758099"/>
+</test>
+<test id="s1-t2" name="REG-002 Register with Newsletter Yes" line="21">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:28:30.348970" elapsed="0.516552"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:30.866045" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:28:30.865799" elapsed="0.655539"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:28:31.521591" elapsed="1.013933"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:32.535939" level="INFO">Verifying radio button 'newsletter' has selection '0'.</msg>
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:28:32.535766" elapsed="2.025405"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:34.561734" level="INFO">Verifying checkbox 'name:agree' is not selected.</msg>
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-28T16:28:34.561450" elapsed="2.025647"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:28:30.348547" elapsed="6.238777"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:28:36.588305" level="INFO">{"id": "REG-002", "title": "Register with Newsletter Yes", "field": "newsletter", "value": "1", "expected": "success", "basis": "Observed UI", "technique": "EP", "flow": "Alt1.1", "firstname": "Robot", "lastname": "Tester", "email": "rf1793179678852399300reg-002@example.com", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "1", "agree": "1"}</msg>
+<msg time="2026-10-28T16:28:36.588411" level="INFO">${row} = {'id': 'REG-002', 'title': 'Register with Newsletter Yes', 'field': 'newsletter', 'value': '1', 'expected': 'success', 'basis': 'Observed UI', 'technique': 'EP', 'flow': 'Alt1.1', 'firstname': 'Robot'...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:28:36.588140" elapsed="0.000304"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:28:36.588795" elapsed="0.000025"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:28:36.588533" elapsed="0.000325"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:28:36.588509" elapsed="0.000387"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589109" elapsed="0.000021"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589238" elapsed="0.000020"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589300" elapsed="0.000026"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:28:36.588942" elapsed="0.000412"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:28:36.588931" elapsed="0.000449"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589586" elapsed="0.000020"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589682" elapsed="0.000018"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589775" elapsed="0.000016"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589828" elapsed="0.000017"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589430" elapsed="0.000439"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:28:36.589418" elapsed="0.000475"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:28:36.590162" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:28:36.589932" elapsed="0.000288"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:28:36.589922" elapsed="0.000324"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:36.591153" level="INFO">Typing text 'Robot' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:36.590894" elapsed="1.561792"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:28:36.590787" elapsed="1.562043"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:38.153626" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:38.153262" elapsed="1.554853"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:28:38.153056" elapsed="1.555208"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:39.709029" level="INFO">Typing text 'rf1793179678852399300reg-002@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:39.708662" elapsed="1.570134"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:28:39.708460" elapsed="1.570484"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:41.279731" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:41.279353" elapsed="1.561741"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:28:41.279146" elapsed="1.562081"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:42.841898" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:42.841577" elapsed="1.563529"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:28:42.841401" elapsed="1.563850"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:44.405873" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:44.405577" elapsed="1.560936"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:28:44.405424" elapsed="1.561310"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:28:36.590638" elapsed="9.376207"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:45.967591" level="INFO">Selecting '1' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:28:45.967206" elapsed="1.552572"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:47.520777" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:47.520470" elapsed="2.557584"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:28:47.520021" elapsed="2.558178"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:28:47.519978" elapsed="2.558296"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:28:36.590376" elapsed="13.487974"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:28:50.079249" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:28:50.078951" elapsed="3.032151"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:28:50.078593" elapsed="3.032841"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:28:53.112106" elapsed="9.910887"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:28:53.111732" elapsed="9.911419"/>
+</kw>
+<arg>REG-002</arg>
+<status status="PASS" start="2026-10-28T16:28:36.587818" elapsed="26.435393"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:29:03.023788" elapsed="2.103477"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:29:08.128501" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:29:05.127501" elapsed="3.001161"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:03.023510" elapsed="5.105268"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:28:30.347970" elapsed="37.780876"/>
+</test>
+<test id="s1-t3" name="REG-003 firstname length 0" line="23">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:29:08.130247" elapsed="0.519247"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:08.649904" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:29:08.649726" elapsed="0.648280"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:29:09.298252" elapsed="1.014163"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:10.312938" level="INFO">Verifying radio button 'newsletter' has selection '0'.</msg>
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:29:10.312715" elapsed="2.025976"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:12.339302" level="INFO">Verifying checkbox 'name:agree' is not selected.</msg>
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-28T16:29:12.338986" elapsed="2.021743"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:08.129848" elapsed="6.231042"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:29:14.361739" level="INFO">{"id": "REG-003", "title": "firstname length 0", "field": "firstname", "value": "", "expected": "First Name must", "basis": "Observed UI", "technique": "BVA", "flow": "E1", "firstname": "", "lastname": "Tester", "email": "rf1793179678852399300reg-003@example.com", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:29:14.361898" level="INFO">${row} = {'id': 'REG-003', 'title': 'firstname length 0', 'field': 'firstname', 'value': '', 'expected': 'First Name must', 'basis': 'Observed UI', 'technique': 'BVA', 'flow': 'E1', 'firstname': '', 'lastname'...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:29:14.361579" elapsed="0.000376"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:14.362546" elapsed="0.000039"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:29:14.362108" elapsed="0.000525"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:14.362065" elapsed="0.000633"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:14.363038" elapsed="0.000041"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:14.363228" elapsed="0.000039"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:29:14.363353" elapsed="0.000054"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:29:14.362772" elapsed="0.000709"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:14.362754" elapsed="0.000780"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:14.363888" elapsed="0.000043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:14.364066" elapsed="0.000049"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:14.364204" elapsed="0.000020"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:29:14.364268" elapsed="0.000033"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:29:14.363613" elapsed="0.000746"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:14.363590" elapsed="0.000803"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:29:14.364721" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:29:14.364444" elapsed="0.000350"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:14.364431" elapsed="0.000397"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:14.366407" level="INFO">Typing text '' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:14.366110" elapsed="1.552932"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:29:14.365995" elapsed="1.553196"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:15.919995" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:15.919609" elapsed="1.560031"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:29:15.919404" elapsed="1.560386"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:17.480587" level="INFO">Typing text 'rf1793179678852399300reg-003@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:17.480194" elapsed="1.569753"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:29:17.479990" elapsed="1.570108"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:19.050880" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:19.050510" elapsed="1.559720"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:29:19.050304" elapsed="1.560082"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:20.611170" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:20.610794" elapsed="1.558052"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:29:20.610588" elapsed="1.558428"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:22.169784" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:22.169457" elapsed="1.553956"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:29:22.169286" elapsed="1.554275"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:29:14.365867" elapsed="9.357779"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:23.724136" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:29:23.723883" elapsed="1.012507"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:24.737572" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:24.737213" elapsed="2.555678"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:24.736727" elapsed="2.556342"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:24.736669" elapsed="2.556483"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:29:14.365602" elapsed="12.927630"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:27.294186" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:27.293883" elapsed="2.352636"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:27.293502" elapsed="2.353293"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:29:29.647658" elapsed="3.546349"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:29:29.647140" elapsed="3.547089"/>
+</kw>
+<arg>REG-003</arg>
+<status status="PASS" start="2026-10-28T16:29:14.361259" elapsed="18.833038"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:29:33.195065" elapsed="2.104367"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:29:38.300405" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:29:35.299713" elapsed="3.000863"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:33.194703" elapsed="5.106014"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:29:08.129312" elapsed="30.171467"/>
+</test>
+<test id="s1-t4" name="REG-008 firstname length 33" line="33">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:29:38.301952" elapsed="0.522093"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:38.824486" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:29:38.824279" elapsed="0.674189"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:29:39.498709" elapsed="1.017616"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:40.516942" level="INFO">Verifying radio button 'newsletter' has selection '0'.</msg>
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:29:40.516722" elapsed="2.026360"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:42.543680" level="INFO">Verifying checkbox 'name:agree' is not selected.</msg>
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-28T16:29:42.543369" elapsed="2.023114"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:38.301642" elapsed="6.265004"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:29:44.567765" level="INFO">{"id": "REG-008", "title": "firstname length 33", "field": "firstname", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "expected": "First Name must", "basis": "Observed UI", "technique": "BVA", "flow": "E1", "firstname": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "lastname": "Tester", "email": "rf1793179678852399300reg-008@example.com", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:29:44.567858" level="INFO">${row} = {'id': 'REG-008', 'title': 'firstname length 33', 'field': 'firstname', 'value': 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'expected': 'First Name must', 'basis': 'Observed UI', 'technique': 'BVA', 'flow':...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:29:44.567603" elapsed="0.000278"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568224" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:29:44.567972" elapsed="0.000318"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:44.567949" elapsed="0.000378"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568551" elapsed="0.000021"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568650" elapsed="0.000019"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568710" elapsed="0.000022"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568382" elapsed="0.000377"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:44.568368" elapsed="0.000416"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568968" elapsed="0.000019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:44.569062" elapsed="0.000017"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:29:44.569148" elapsed="0.000016"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:29:44.569224" elapsed="0.000017"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:29:44.568824" elapsed="0.000441"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:44.568813" elapsed="0.000477"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:29:44.569594" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:29:44.569328" elapsed="0.000337"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:44.569317" elapsed="0.000380"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:44.570555" level="INFO">Typing text 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:44.570260" elapsed="1.573775"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:29:44.570156" elapsed="1.574014"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:46.144803" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:46.144498" elapsed="1.554086"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:29:46.144339" elapsed="1.554470"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:47.699821" level="INFO">Typing text 'rf1793179678852399300reg-008@example.com' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:47.699370" elapsed="1.568043"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:29:47.699096" elapsed="1.568477"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:49.268474" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:49.268044" elapsed="1.586345"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:29:49.267816" elapsed="1.586800"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:50.855995" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:50.855330" elapsed="1.573192"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:29:50.854950" elapsed="1.573702"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:52.429340" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:52.429041" elapsed="1.558801"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:29:52.428816" elapsed="1.559170"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:29:44.570032" elapsed="9.418015"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:53.988495" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:29:53.988264" elapsed="1.011687"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:55.000702" level="INFO">Selecting checkbox 'name:agree'.</msg>
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:55.000456" elapsed="2.565275"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:55.000149" elapsed="2.565707"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:29:55.000115" elapsed="2.565798"/>
+</if>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:29:44.569840" elapsed="12.996134"/>
+</kw>
+<kw name="Submit Registration">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:29:57.566712" level="INFO">Clicking button 'css:input[type="submit"]'.</msg>
+<arg>css:input[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:29:57.566468" elapsed="2.547177"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:29:57.566167" elapsed="2.547638"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<kw name="Check Registration Outcome" owner="RegistrationData">
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:30:00.114300" elapsed="3.542463"/>
+</kw>
+<arg>${row}</arg>
+<status status="PASS" start="2026-10-28T16:30:00.113997" elapsed="3.542921"/>
+</kw>
+<arg>REG-008</arg>
+<status status="PASS" start="2026-10-28T16:29:44.567178" elapsed="19.089800"/>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:03.657618" elapsed="2.091935"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:08.751016" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:05.749972" elapsed="3.001213"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:03.657326" elapsed="5.094001"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="PASS" start="2026-10-28T16:29:38.301142" elapsed="30.450250"/>
+</test>
+<test id="s1-t5" name="REG-029 Invalid email ''" line="75">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" start="2026-10-28T16:30:08.752627" elapsed="0.516708"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:09.269764" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-10-28T16:30:09.269571" elapsed="0.728625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-28T16:30:09.998444" elapsed="1.014541"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:11.013584" level="INFO">Verifying radio button 'newsletter' has selection '0'.</msg>
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="PASS" start="2026-10-28T16:30:11.013317" elapsed="2.025725"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:13.039741" level="INFO">Verifying checkbox 'name:agree' is not selected.</msg>
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="PASS" start="2026-10-28T16:30:13.039385" elapsed="2.027129"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:08.752283" elapsed="6.314397"/>
+</kw>
+<kw name="Verify Registration Dataset">
+<kw name="Get Registration Dataset" owner="RegistrationData">
+<msg time="2026-10-28T16:30:15.067511" level="INFO">{"id": "REG-029", "title": "Invalid email ''", "field": "email", "value": "", "expected": "email-invalid", "basis": "Observed UI", "technique": "EP", "flow": "E2", "firstname": "Robot", "lastname": "Tester", "email": "", "telephone": "0812345678", "password": "Valid123!", "confirm": "Valid123!", "newsletter": "0", "agree": "1"}</msg>
+<msg time="2026-10-28T16:30:15.067600" level="INFO">${row} = {'id': 'REG-029', 'title': "Invalid email ''", 'field': 'email', 'value': '', 'expected': 'email-invalid', 'basis': 'Observed UI', 'technique': 'EP', 'flow': 'E2', 'firstname': 'Robot', 'lastname': 'T...</msg>
+<var>${row}</var>
+<arg>${case_id}</arg>
+<status status="PASS" start="2026-10-28T16:30:15.067366" elapsed="0.000258"/>
+</kw>
+<if>
+<branch type="IF" condition="$row['field'] == 'network'">
+<kw name="Skip" owner="BuiltIn">
+<arg>Controlled server/network fault and persistence access unavailable. No system-error branch coverage claimed.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:15.067970" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:30:15.067719" elapsed="0.000322"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:30:15.067694" elapsed="0.000406"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'login'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>link:login page</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068334" elapsed="0.000030"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<arg>route=account/login</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068458" elapsed="0.000019"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068520" elapsed="0.000023"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068152" elapsed="0.000420"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:30:15.068138" elapsed="0.000463"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'policy'">
+<kw name="Click Link" owner="SeleniumLibrary">
+<arg>css:a.agree</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068815" elapsed="0.000021"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068916" elapsed="0.000018"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>css:.modal-dialog</arg>
+<arg>Privacy Policy</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:15.069011" elapsed="0.000017"/>
+</kw>
+<return>
+<status status="NOT RUN" start="2026-10-28T16:30:15.069066" elapsed="0.000018"/>
+</return>
+<status status="NOT RUN" start="2026-10-28T16:30:15.068645" elapsed="0.000466"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:30:15.068633" elapsed="0.000505"/>
+</if>
+<if>
+<branch type="IF" condition="$row['field'] == 'duplicate'">
+<kw name="Prepare Duplicate Account">
+<var>${row}</var>
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:30:15.069451" elapsed="0.000069"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:30:15.069179" elapsed="0.000406"/>
+</branch>
+<status status="PASS" start="2026-10-28T16:30:15.069168" elapsed="0.000497"/>
+</if>
+<kw name="Fill Registration Form">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:15.070441" level="INFO">Typing text 'Robot' into text field 'id:input-firstname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:30:15.070244" elapsed="1.562991"/>
+</kw>
+<var name="${field}">firstname</var>
+<status status="PASS" start="2026-10-28T16:30:15.070176" elapsed="1.563246"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:16.634328" level="INFO">Typing text 'Tester' into text field 'id:input-lastname'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:30:16.633908" elapsed="1.558394"/>
+</kw>
+<var name="${field}">lastname</var>
+<status status="PASS" start="2026-10-28T16:30:16.633672" elapsed="1.558792"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:18.193144" level="INFO">Typing text '' into text field 'id:input-email'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:30:18.192822" elapsed="1.549748"/>
+</kw>
+<var name="${field}">email</var>
+<status status="PASS" start="2026-10-28T16:30:18.192651" elapsed="1.550049"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:19.743320" level="INFO">Typing text '0812345678' into text field 'id:input-telephone'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:30:19.743022" elapsed="1.556630"/>
+</kw>
+<var name="${field}">telephone</var>
+<status status="PASS" start="2026-10-28T16:30:19.742863" elapsed="1.556961"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:21.300687" level="INFO">Typing text 'Valid123!' into text field 'id:input-password'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:30:21.300314" elapsed="1.564384"/>
+</kw>
+<var name="${field}">password</var>
+<status status="PASS" start="2026-10-28T16:30:21.300113" elapsed="1.564771"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:22.865804" level="INFO">Typing text 'Valid123!' into text field 'id:input-confirm'.</msg>
+<arg>id:input-${field}</arg>
+<arg>${row}[${field}]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-28T16:30:22.865333" elapsed="1.561167"/>
+</kw>
+<var name="${field}">confirm</var>
+<status status="PASS" start="2026-10-28T16:30:22.865115" elapsed="1.561537"/>
+</iter>
+<var>${field}</var>
+<value>firstname</value>
+<value>lastname</value>
+<value>email</value>
+<value>telephone</value>
+<value>password</value>
+<value>confirm</value>
+<status status="PASS" start="2026-10-28T16:30:15.070101" elapsed="9.356621"/>
+</for>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:24.427095" level="INFO">Selecting '0' from radio button 'newsletter'.</msg>
+<msg time="2026-10-28T16:30:24.516374" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:24.516627" level="FAIL">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=156.0.8078.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!(No symbol) [0x7ff76f182d03]
+	chromedriver!(No symbol) [0x7ff76f177c4f]
+	chromedriver!(No symbol) [0x7ff76f188fc9]
+	chromedriver!(No symbol) [0x7ff76f1b1bf6]
+	chromedriver!(No symbol) [0x7ff76f1b5faf]
+	chromedriver!(No symbol) [0x7ff76f19bae9]
+	chromedriver!(No symbol) [0x7ff76f19ce13]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!(No symbol) [0x7ff76f30b9e4]
+	chromedriver!(No symbol) [0x7ff76f30bb74]
+	chromedriver!(No symbol) [0x7ff76f2f4bfc]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>newsletter</arg>
+<arg>${row}[newsletter]</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="FAIL" start="2026-10-28T16:30:24.426903" elapsed="0.111488">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=156.0.8078.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!(No symbol) [0x7ff76f182d03]
+	chromedriver!(No symbol) [0x7ff76f177c4f]
+	chromedriver!(No symbol) [0x7ff76f188fc9]
+	chromedriver!(No symbol) [0x7ff76f1b1bf6]
+	chromedriver!(No symbol) [0x7ff76f1b5faf]
+	chromedriver!(No symbol) [0x7ff76f19bae9]
+	chromedriver!(No symbol) [0x7ff76f19ce13]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!(No symbol) [0x7ff76f30b9e4]
+	chromedriver!(No symbol) [0x7ff76f30bb74]
+	chromedriver!(No symbol) [0x7ff76f2f4bfc]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<if>
+<branch type="IF" condition="$row['agree'] == '1'">
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<arg>name:agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:24.538644" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2026-10-28T16:30:24.538540" elapsed="0.000146"/>
+</branch>
+<status status="NOT RUN" start="2026-10-28T16:30:24.538518" elapsed="0.000191"/>
+</if>
+<arg>${row}</arg>
+<status status="FAIL" start="2026-10-28T16:30:15.069903" elapsed="9.468887">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=156.0.8078.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!(No symbol) [0x7ff76f182d03]
+	chromedriver!(No symbol) [0x7ff76f177c4f]
+	chromedriver!(No symbol) [0x7ff76f188fc9]
+	chromedriver!(No symbol) [0x7ff76f1b1bf6]
+	chromedriver!(No symbol) [0x7ff76f1b5faf]
+	chromedriver!(No symbol) [0x7ff76f19bae9]
+	chromedriver!(No symbol) [0x7ff76f19ce13]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!(No symbol) [0x7ff76f30b9e4]
+	chromedriver!(No symbol) [0x7ff76f30bb74]
+	chromedriver!(No symbol) [0x7ff76f2f4bfc]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Submit Registration">
+<status status="NOT RUN" start="2026-10-28T16:30:24.538906" elapsed="0.000019"/>
+</kw>
+<kw name="Assert Registration Outcome">
+<arg>${row}</arg>
+<status status="NOT RUN" start="2026-10-28T16:30:24.538980" elapsed="0.000012"/>
+</kw>
+<arg>REG-029</arg>
+<status status="FAIL" start="2026-10-28T16:30:15.067048" elapsed="9.472012">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=156.0.8078.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!(No symbol) [0x7ff76f182d03]
+	chromedriver!(No symbol) [0x7ff76f177c4f]
+	chromedriver!(No symbol) [0x7ff76f188fc9]
+	chromedriver!(No symbol) [0x7ff76f1b1bf6]
+	chromedriver!(No symbol) [0x7ff76f1b5faf]
+	chromedriver!(No symbol) [0x7ff76f19bae9]
+	chromedriver!(No symbol) [0x7ff76f19ce13]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!(No symbol) [0x7ff76f30b9e4]
+	chromedriver!(No symbol) [0x7ff76f30bb74]
+	chromedriver!(No symbol) [0x7ff76f2f4bfc]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<msg time="2026-10-28T16:30:24.541137" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:24.539595" elapsed="0.001713"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:27.542225" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:24.541493" elapsed="3.000855"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:24.539364" elapsed="3.003080"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="FAIL" start="2026-10-28T16:30:08.751774" elapsed="18.790728">InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=156.0.8078.47); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!(No symbol) [0x7ff76f182d03]
+	chromedriver!(No symbol) [0x7ff76f177c4f]
+	chromedriver!(No symbol) [0x7ff76f188fc9]
+	chromedriver!(No symbol) [0x7ff76f1b1bf6]
+	chromedriver!(No symbol) [0x7ff76f1b5faf]
+	chromedriver!(No symbol) [0x7ff76f19bae9]
+	chromedriver!(No symbol) [0x7ff76f19ce13]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!(No symbol) [0x7ff76f30b9e4]
+	chromedriver!(No symbol) [0x7ff76f30bb74]
+	chromedriver!(No symbol) [0x7ff76f2f4bfc]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</test>
+<test id="s1-t6" name="REG-035 Confirmation empty or mismatch" line="87">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:27.545244" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:27.545447" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<doc>Deletes all cookies.</doc>
+<status status="FAIL" start="2026-10-28T16:30:27.543308" elapsed="0.004504">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:27.547993" elapsed="0.000026"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:27.548081" elapsed="0.000013"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:27.548142" elapsed="0.000015"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:27.548204" elapsed="0.000012"/>
+</kw>
+<status status="FAIL" start="2026-10-28T16:30:27.543068" elapsed="0.005229">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<msg time="2026-10-28T16:30:27.549928" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:27.548695" elapsed="0.001439"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:30.551618" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:27.550257" elapsed="3.001592"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:27.548523" elapsed="3.003498"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="FAIL" start="2026-10-28T16:30:27.542778" elapsed="3.009309">Setup failed:
+InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</test>
+<test id="s1-t7" name="REG-036 Privacy not accepted" line="89">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:30.556256" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:30.556465" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<doc>Deletes all cookies.</doc>
+<status status="FAIL" start="2026-10-28T16:30:30.553511" elapsed="0.003876">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:30.557568" elapsed="0.000031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:30.557656" elapsed="0.000013"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:30.557712" elapsed="0.000012"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:30.557780" elapsed="0.000010"/>
+</kw>
+<status status="FAIL" start="2026-10-28T16:30:30.553227" elapsed="0.004646">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<msg time="2026-10-28T16:30:30.559129" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:30.558271" elapsed="0.000967"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:33.559889" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:30.559324" elapsed="3.000703"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:30.558092" elapsed="3.002058"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="FAIL" start="2026-10-28T16:30:30.552710" elapsed="3.007491">Setup failed:
+InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</test>
+<test id="s1-t8" name="REG-037 Previously registered email" line="91">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:33.563246" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:33.563413" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<doc>Deletes all cookies.</doc>
+<status status="FAIL" start="2026-10-28T16:30:33.561422" elapsed="0.002893">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:33.564429" elapsed="0.000020"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:33.564507" elapsed="0.000013"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:33.564577" elapsed="0.000012"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:33.564633" elapsed="0.000027"/>
+</kw>
+<status status="FAIL" start="2026-10-28T16:30:33.561064" elapsed="0.003663">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<msg time="2026-10-28T16:30:33.568222" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:33.565021" elapsed="0.003296"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:36.568767" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:33.568404" elapsed="3.000574"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:33.564880" elapsed="3.004264"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="FAIL" start="2026-10-28T16:30:33.560575" elapsed="3.008636">Setup failed:
+InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</test>
+<test id="s1-t9" name="REG-038 Login page link" line="93">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:36.574062" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:36.574422" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<doc>Deletes all cookies.</doc>
+<status status="FAIL" start="2026-10-28T16:30:36.570652" elapsed="0.005869">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:36.576843" elapsed="0.000046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:36.576994" elapsed="0.000022"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:36.577095" elapsed="0.000020"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:36.577190" elapsed="0.000019"/>
+</kw>
+<status status="FAIL" start="2026-10-28T16:30:36.570344" elapsed="0.007022">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<msg time="2026-10-28T16:30:36.579696" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:36.578136" elapsed="0.001744"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:39.580772" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:36.580034" elapsed="3.000939"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:36.577801" elapsed="3.003319"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="FAIL" start="2026-10-28T16:30:36.569753" elapsed="3.011430">Setup failed:
+InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</test>
+<test id="s1-t10" name="REG-039 Privacy policy dialog" line="95">
+<kw name="Reset Guest Registration" type="SETUP">
+<kw name="Delete All Cookies" owner="SeleniumLibrary">
+<msg time="2026-10-28T16:30:39.585771" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:39.586036" level="FAIL">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<doc>Deletes all cookies.</doc>
+<status status="FAIL" start="2026-10-28T16:30:39.582654" elapsed="0.005073">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${REGISTER_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:39.587948" elapsed="0.000033"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:input-firstname</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:39.588075" elapsed="0.000022"/>
+</kw>
+<kw name="Radio Button Should Be Set To" owner="SeleniumLibrary">
+<arg>newsletter</arg>
+<arg>0</arg>
+<doc>Verifies radio button group ``group_name`` is set to ``value``.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:39.588172" elapsed="0.000018"/>
+</kw>
+<kw name="Checkbox Should Not Be Selected" owner="SeleniumLibrary">
+<arg>name:agree</arg>
+<doc>Verifies checkbox ``locator`` is not selected/checked.</doc>
+<status status="NOT RUN" start="2026-10-28T16:30:39.588261" elapsed="0.000018"/>
+</kw>
+<status status="FAIL" start="2026-10-28T16:30:39.582323" elapsed="0.006061">InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</kw>
+<kw name="Capture Registration Evidence" type="TEARDOWN">
+<kw name="Save Registration Evidence" owner="RegistrationData">
+<msg time="2026-10-28T16:30:39.590062" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<arg>${TEST NAME}</arg>
+<arg>${TEST STATUS}</arg>
+<status status="PASS" start="2026-10-28T16:30:39.588884" elapsed="0.001330"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-10-28T16:30:42.591048" level="INFO">Slept 3 seconds.</msg>
+<arg>${CASE_OBSERVATION_DELAY}</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-10-28T16:30:39.590392" elapsed="3.000798"/>
+</kw>
+<status status="PASS" start="2026-10-28T16:30:39.588613" elapsed="3.002692"/>
+</kw>
+<tag>data-driven</tag>
+<tag>functional</tag>
+<tag>registration</tag>
+<status status="FAIL" start="2026-10-28T16:30:39.581734" elapsed="3.009622">Setup failed:
+InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</status>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-28T16:30:42.592126" elapsed="2.559826"/>
+</kw>
+<doc>UC-REG-01 keyword-driven UI tests. CSV is the authoritative dataset. Proposed UC constraints may fail pending clarification.</doc>
+<status status="FAIL" start="2026-10-28T16:27:49.772750" elapsed="175.379317"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="6" skip="0">data-driven</stat>
+<stat pass="4" fail="6" skip="0">functional</stat>
+<stat pass="4" fail="6" skip="0">registration</stat>
+</tag>
+<suite>
+<stat name="Tutorialsninja Register" id="s1" pass="4" fail="6" skip="0">Tutorialsninja Register</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-10-28T16:30:24.516374" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:24.541137" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:27.545244" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:27.549928" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:30.556256" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:30.559129" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:33.563246" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:33.568222" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:36.574062" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:36.579696" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:39.585771" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+<msg time="2026-10-28T16:30:39.590062" level="WARN">Evidence capture: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff76f3f2e35+4365]
+	chromedriver!(No symbol) [0x7ff76f301dc0]
+	chromedriver!GetHandleVerifier [0x7ff76f6e4fb1+2f64e1]
+	chromedriver!(No symbol) [0x7ff76f19b8d3]
+	chromedriver!(No symbol) [0x7ff76f1adae2]
+	chromedriver!(No symbol) [0x7ff76f1ab983]
+	chromedriver!(No symbol) [0x7ff76f1ab4ec]
+	chromedriver!(No symbol) [0x7ff76f16d64b]
+	chromedriver!(No symbol) [0x7ff76f16d822]
+	chromedriver!(No symbol) [0x7ff76f16da35]
+	chromedriver!GetHandleVerifier [0x7ff76f8863c1+4978f1]
+	chromedriver!GetHandleVerifier [0x7ff76f8a987b+4badab]
+	chromedriver!GetHandleVerifier [0x7ff76f89e240+4af770]
+	chromedriver!GetHandleVerifier [0x7ff76f51b4ee+12ca1e]
+	chromedriver!(No symbol) [0x7ff76f310985]
+	chromedriver!GetHandleVerifier [0x7ff76f948bc3+55a0f3]
+	chromedriver!(No symbol) [0x7ff76f16c6b4]
+	chromedriver!GetHandleVerifier [0x7ff76f8f5bef+50711f]
+	KERNEL32!BaseThreadInitThunk [0x7ff8d67adda7+17]
+	ntdll!RtlUserThreadStart [0x7ff8d829ee4c+2c]
+</msg>
+</errors>
+</robot>

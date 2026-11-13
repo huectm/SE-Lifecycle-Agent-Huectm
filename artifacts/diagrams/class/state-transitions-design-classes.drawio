@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="SE-Lifecycle-Agent" version="24.7.17">
+  <diagram id="state-transitions-design-classes-1" name="01 Order State Machine Control and Private Transition Table">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="3086" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;transitions - Order State Machine Control and Private Transition Table&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="PIM detailed design | 2026-11-03 | Backend DI only | Explicit source refinements" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderStateMachine" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;state machine&amp;gt;&amp;gt;&lt;br&gt;OrderStateMachine&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- repository: IOrderLifecycleRepository&lt;br&gt;- transitionTable: Sequence&amp;lt;Value&amp;gt; {private transition&lt;br&gt;definitions}&lt;br&gt;- snapshot: TransitionSnapshot?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderStateMachine(repository: IOrderLifecycleRepository)&lt;br&gt;+ ProcessEventAsync(snapshot: TransitionSnapshot, event:&lt;br&gt;StateMachineEvent): StateMachineResult&lt;br&gt;+ CurrentState(): OrderStateSnapshot?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="IOrderStateMachine" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IOrderStateMachine&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProcessEventAsync(snapshot: TransitionSnapshot, event:&lt;br&gt;StateMachineEvent): StateMachineResult&lt;br&gt;+ CurrentState(): OrderStateSnapshot?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="IOrderLifecycleRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IOrderLifecycleRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ LockOrderAsync(orderId: Text): Order&lt;br&gt;+ LoadLifecycleAsync(orderId: Text): OrderLifecycleRecords&lt;br&gt;+ SaveAsync(order: Order): Void&lt;br&gt;+ RecordEventOnceAsync(aggregateId: Text, eventId: Text,&lt;br&gt;transitionId: Text): Boolean&lt;br&gt;+ SaveOrderLinesAsync(order: Order, lines:&lt;br&gt;Sequence&amp;lt;OrderDetail&amp;gt;): Void&lt;br&gt;+ SavePaymentOnceAsync(payment: OrderPayment): Boolean&lt;br&gt;+ SaveFailureAsync(failure: DeliveryFailure): Void&lt;br&gt;+ SaveReceiptAsync(receipt: ReturnReceipt, items:&lt;br&gt;Sequence&amp;lt;ReturnReceiptItem&amp;gt;): Void&lt;br&gt;+ SaveRefundOnceAsync(refund: Refund): Boolean&lt;br&gt;+ SaveShippingSettlementAsync(settlement:&lt;br&gt;ShippingFeeSettlement): Void&lt;br&gt;+ LockReservedBatchesAsync(orderId: Text):&lt;br&gt;Sequence&amp;lt;BatchInventory&amp;gt;&lt;br&gt;+ SaveBatchesAsync(batches: Sequence&amp;lt;BatchInventory&amp;gt;): Void&lt;br&gt;+ AppendAuditAsync(audit: AuditLog): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="569" as="geometry" />
+        </mxCell>
+        <mxCell id="TransitionSnapshot" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;TransitionSnapshot&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ AggregateId: EntityId {readOnly}&lt;br&gt;+ CustomerId: EntityId {serverResolved}&lt;br&gt;+ ActorId: EntityId {serverResolved}&lt;br&gt;+ Order: Order {serverResolved}&lt;br&gt;+ Batches: Sequence&amp;lt;BatchInventory&amp;gt; {serverResolved}&lt;br&gt;+ GuardFacts: GuardFactsDto {serverResolved}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;~ TransitionSnapshot(order: Order, facts: GuardFactsDto)&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1079" width="680" height="346" as="geometry" />
+        </mxCell>
+        <mxCell id="StateMachineEvent" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;StateMachineEvent&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Event: Text&lt;br&gt;+ AggregateId: Text&lt;br&gt;+ EventId: Text&lt;br&gt;+ Reason: Text?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1079" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="StateMachineResult" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;StateMachineResult&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Applied: Boolean&lt;br&gt;+ Duplicate: Boolean&lt;br&gt;+ TransitionIds: Sequence&amp;lt;Text&amp;gt;&lt;br&gt;+ State: OrderStateSnapshot&lt;br&gt;+ Actions: Sequence&amp;lt;Text&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="1079" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderStateSnapshot" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;OrderStateSnapshot&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ FulfillmentState: OrderStatus?&lt;br&gt;+ PaymentState: PaymentStatus?&lt;br&gt;+ RefundState: Text?&lt;br&gt;+ WorkflowNode: Text?&lt;br&gt;+ FulfillmentCompleted: Boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1745" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="Order" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Order&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderId: Text&lt;br&gt;+ OrderNumber: Text&lt;br&gt;+ CustomerId: Text&lt;br&gt;+ DeliveryAddressId: Text&lt;br&gt;+ ProcessedByStaffId: Integer&lt;br&gt;+ OrderDate: DateTime&lt;br&gt;+ SubTotal: VndAmount&lt;br&gt;+ DeliveryDistance: Decimal&lt;br&gt;+ ShippingFee: VndAmount&lt;br&gt;+ TotalAmount: VndAmount&lt;br&gt;+ PaymentMethod: PaymentMethod&lt;br&gt;+ PaymentStatus: PaymentStatus&lt;br&gt;+ OrderStatus: OrderStatus&lt;br&gt;+ IsFirstOrder: Boolean&lt;br&gt;+ DeliveryAgentId: Text&lt;br&gt;+ PhoneConfirmationStatus: Text&lt;br&gt;+ PhoneContactedByStaffId: Integer&lt;br&gt;+ PhoneContactedAt: DateTime&lt;br&gt;+ PhoneConfirmationNote: Text&lt;br&gt;+ CancellationReason: Text&lt;br&gt;+ Details: Sequence&amp;lt;OrderDetail&amp;gt;&lt;br&gt;+ Customer: Customer&lt;br&gt;+ DeliveryAddress: CustomerAddress&lt;br&gt;+ Payments: Sequence&amp;lt;OrderPayment&amp;gt;&lt;br&gt;+ Failure: DeliveryFailure?&lt;br&gt;+ Return: ReturnReceipt?&lt;br&gt;+ Refund: Refund?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ApplyFulfillment(expected: OrderStatus, target: OrderStatus):&lt;br&gt;Void&lt;br&gt;+ RecordPayment(expected: PaymentStatus, target: PaymentStatus):&lt;br&gt;Void&lt;br&gt;+ Cancel(expected: OrderStatus, reason: Text): Void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1745" width="680" height="921" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="OrderStateMachine" target="IOrderStateMachine" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="263.8" />
+              <mxPoint x="832" y="264.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="OrderStateMachine" target="IOrderLifecycleRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.4;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="337.6" />
+              <mxPoint x="832" y="474.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="OrderStateMachine" target="TransitionSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.25;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290.0" y="1047" />
+              <mxPoint x="460.0" y="1047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="OrderStateMachine" target="StateMachineEvent" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="411.4" />
+              <mxPoint x="1128" y="1202.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="OrderStateMachine" target="StateMachineResult" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="485.2" />
+              <mxPoint x="2168" y="1146.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="OrderStateMachine" target="OrderStateSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460.0" y="591" />
+              <mxPoint x="88" y="591" />
+              <mxPoint x="88" y="1713" />
+              <mxPoint x="346.66666666666663" y="1713" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="OrderStateMachine" target="Order" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630.0" y="591" />
+              <mxPoint x="1100" y="591" />
+              <mxPoint x="1100" y="1713" />
+              <mxPoint x="1500.0" y="1713" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="StateMachineResult" target="OrderStateSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="1214.0" />
+              <mxPoint x="2168" y="1685" />
+              <mxPoint x="832" y="1685" />
+              <mxPoint x="832" y="1880.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="IOrderStateMachine" target="TransitionSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="339.3333333333333" />
+              <mxPoint x="860" y="1194.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="IOrderStateMachine" target="StateMachineEvent" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1386.6666666666667" y="1047" />
+              <mxPoint x="1500.0" y="1047" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="IOrderStateMachine" target="StateMachineResult" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="302.0" />
+              <mxPoint x="1872" y="1281.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="IOrderStateMachine" target="OrderStateSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1613.3333333333333" y="446" />
+              <mxPoint x="888" y="446" />
+              <mxPoint x="888" y="1713" />
+              <mxPoint x="573.3333333333333" y="1713" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="TransitionSnapshot" target="Order" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="1309.6666666666667" />
+              <mxPoint x="1128" y="2205.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication. OrderStateMachine encapsulates 24 table rows. UML choice/final positions introduce no persisted business status." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2996" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

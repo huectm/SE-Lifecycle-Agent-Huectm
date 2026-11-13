@@ -1,0 +1,4 @@
+{
+  "evidence": "explicit-local/explicit-local.trx",
+  "reason": "Generation failed before expansion in an intermediate iteration; output was not accepted. Final generator stages and rejects incomplete bodies before publication."
+}

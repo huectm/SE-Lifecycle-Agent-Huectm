@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="delivery boundary 0" time="0.004623" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery boundary 0.999" time="0.000544" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery boundary 1" time="0.000181" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery boundary 2.999" time="0.000106" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery boundary 3" time="0.000143" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery boundary 10" time="0.000080" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery rejects -1" time="0.000437" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery rejects NaN" time="0.000124" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery rejects Infinity" time="0.000117" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivery rejects 10.001" time="0.000171" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="exact VND discount 0" time="0.010874" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="exact VND discount 10" time="0.000196" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="exact VND discount 50" time="0.000091" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="exact VND discount 10.25" time="0.000106" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="fractional VND does not silently round" time="0.003814" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="expired batch is rejected" time="0.000316" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="money beyond JS safe integer stays exact" time="0.000196" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="transaction rolls back and preserves original error" time="0.001998" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="aborted operation never starts transaction" time="0.000350" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="catalog empty search returns six alternatives" time="0.000915" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="catalog does not expose delisted product detail" time="0.000503" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart clamps requested quantity to live stock" time="0.001814" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart rejects quantity 0" time="0.000250" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart rejects quantity -1" time="0.000187" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart rejects quantity 1.5" time="0.000185" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart rejects quantity NaN" time="0.000245" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart identity is server resolved" time="0.000467" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cart marks expired or missing batch not check-outable" time="0.000363" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="remove item returns recalculated empty cart" time="0.000454" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="profile updates only name/email, never trusted customer identity" time="0.000860" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="profile rejects malformed email before write" time="0.000279" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="address ownership rejects another customers address" time="0.000535" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="address used by active order cannot be deleted" time="0.000370" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="checkout accepts COD through acceptOrder and independent unpaid branch" time="0.009715" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="checkout FEFO splits quantities over ordered batches" time="0.035716" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="checkout insufficient stock writes nothing" time="0.000567" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="checkout persistence failure rolls back reservation and all transition evidence" time="0.000672" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="prepaid flow fails closed while correlation policy remains TBD" time="0.000223" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="forged transition snapshot is rejected" time="0.000246" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cancellation cannot run from Packing" time="0.000590" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="review enforces Delivered and 1..5 rating" time="0.000330" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="history and detail are restricted to authenticated owner" time="0.000338" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="SQL search binds malicious keyword as data" time="0.000338" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="DI resolves five controllers and one table-driven state machine" time="0.000733" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="HTTP exposes JSON, blocks malformed payload and does not trust identity fields" time="0.158126" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="catalog details and clearance expose typed batch offers" time="0.000606" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="profile address add and default select preserve owned values" time="0.000578" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="address geocoding error cannot persist a guessed coordinate" time="0.000375" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="address delete succeeds only when no active order references it" time="0.000264" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="profile and cart reject missing server identity" time="0.000268" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="checkout rejects an empty cart and inaccessible address" time="0.000309" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="QR and later payment explicitly preserve unresolved correlation boundary" time="0.000448" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="order detail maps price strings, address and independent payment state" time="0.000388" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="reorder copies current availability and reports missing items" time="0.000657" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="delivered order accepts one review and rejects duplicates" time="0.000273" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="cancellation dispatch releases stock and records audit before commit" time="0.000771" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="entity setters cannot bypass stock guards" time="0.000849" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="state machine selects unpaid acceptance from event and guard, not a caller transition ID" time="0.000362" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="state machine rejects an unknown event without recording a transition" time="0.000262" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="state machine guards reject insufficient planned stock before event evidence" time="0.000237" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<testcase name="table-driven cancellation executes guarded methods on readonly domain entities" time="0.000757" classname="test" file="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API\tests\backend.test.js"/>
+	<!-- tests 61 -->
+	<!-- suites 0 -->
+	<!-- pass 61 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 651.3782 -->
+</testsuites>

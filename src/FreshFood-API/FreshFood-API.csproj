@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup><TargetFramework>net10.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><TreatWarningsAsErrors>true</TreatWarningsAsErrors><RootNamespace>FreshFood.Api</RootNamespace></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../FreshFood.Reposistory/FreshFood.Reposistory.csproj" /></ItemGroup>
+  <ItemGroup><EmbeddedResource Include="OrderTransitions.json" LogicalName="FreshFood.Api.OrderTransitions.json" /></ItemGroup>
+  <ItemGroup><PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.12" /></ItemGroup>
+</Project>

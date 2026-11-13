@@ -1,0 +1,332 @@
+[
+  {
+    "run": "fixture-retest",
+    "caseId": "UTM-001-TC002",
+    "test": "FreshFood.Backend.UnitTests.ApiCompositionRootTests.UTM_001_TC002",
+    "message": "System.InvalidOperationException : 'FreshFood.Reposistory.Repository.Implements.PostgreSqlSession' type only implements IAsyncDisposable. Use DisposeAsync to dispose the container.",
+    "stack": "   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.Dispose()\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Composition(JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 34\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Composition(JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 30\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 37\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\fixture-retest\\fixture-retest.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-001-TC002"
+  },
+  {
+    "run": "fixture-retest",
+    "caseId": "UTM-087-TC003",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_OrderStateMachineTests.UTM_087_TC003",
+    "message": "FreshFood.Reposistory.Repository.Implements.DomainException : STATE_EVENT_NOT_IMPLEMENTED",
+    "stack": "   at FreshFood.Api.Services.Implements.OrderStateMachine.Process(TransitionSnapshot s, StateMachineEvent message, String region, HashSet`1 visited, List`1 applied, CancellationToken ct) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood-API\\Services\\Implements\\OrderStateMachine.cs:line 77\r\n   at FreshFood.Api.Services.Implements.OrderStateMachine.Process(TransitionSnapshot s, StateMachineEvent message, String region, HashSet`1 visited, List`1 applied, CancellationToken ct) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood-API\\Services\\Implements\\OrderStateMachine.cs:line 86\r\n   at FreshFood.Api.Services.Implements.OrderStateMachine.Process(TransitionSnapshot s, StateMachineEvent message, String region, HashSet`1 visited, List`1 applied, CancellationToken ct) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood-API\\Services\\Implements\\OrderStateMachine.cs:line 86\r\n   at FreshFood.Api.Services.Implements.OrderStateMachine.ProcessEventAsync(TransitionSnapshot context, StateMachineEvent message, CancellationToken signal) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood-API\\Services\\Implements\\OrderStateMachine.cs:line 97\r\n   at FreshFood.Backend.UnitTests.CaseRunner.<>c__DisplayClass25_0.<<Machine>g__Action|1>d.MoveNext() in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 101\r\n--- End of stack trace from previous location ---\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Machine(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 102\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 41\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\fixture-retest\\fixture-retest.trx",
+    "classification": "Backend",
+    "defectId": "UT-DEF-001"
+  },
+  {
+    "run": "fixture-retest",
+    "caseId": "UTM-001-TC001",
+    "test": "FreshFood.Backend.UnitTests.ApiCompositionRootTests.UTM_001_TC001",
+    "message": "System.InvalidOperationException : 'FreshFood.Reposistory.Repository.Implements.PostgreSqlSession' type only implements IAsyncDisposable. Use DisposeAsync to dispose the container.",
+    "stack": "   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.Dispose()\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Composition(JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 34\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Composition(JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 30\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 37\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\fixture-retest\\fixture-retest.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-001-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-050-TC002",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_CheckoutServiceTests.UTM_050_TC002",
+    "message": "Assert.Throws() Failure: No exception was thrown\r\nExpected: typeof(FreshFood.Reposistory.Repository.Implements.DomainException)",
+    "stack": "   at FreshFood.Backend.UnitTests.Fixture.Error(String code, Func`1 action) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\TestSupport.cs:line 54\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Checkout(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 134\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 40\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-050-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-132-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_132_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-132-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-135-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_135_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-135-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-134-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_134_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-134-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-055-TC003",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_CheckoutServiceTests.UTM_055_TC003",
+    "message": "Assert.Throws() Failure: Exception type was not an exact match\r\nExpected: typeof(System.TimeoutException)\r\nActual:   typeof(FreshFood.Reposistory.Repository.Implements.DomainException)\r\n---- FreshFood.Reposistory.Repository.Implements.DomainException : PAYMENT_CORRELATION_AND_LATE_PAYMENT_POLICY_TBD",
+    "stack": "   at FreshFood.Backend.UnitTests.CaseRunner.Checkout(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 134\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 40\r\n--- End of stack trace from previous location ---\r\n----- Inner Stack Trace -----\r\n   at FreshFood.Api.Services.Implements.CheckoutService.HandleVerifiedPaymentAsync(PaymentNoticeDto request, CancellationToken signal) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood-API\\Services\\Implements\\CheckoutService.cs:line 122\r\n   at FreshFood.Backend.UnitTests.CaseRunner.<>c__DisplayClass26_0.<<Checkout>g__Action|10>d.MoveNext() in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 128\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-055-TC003"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-135-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_135_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-135-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-185-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_SqlRepositoryTests.UTM_185_TC002",
+    "message": "System.NullReferenceException : Object reference not set to an instance of an object.",
+    "stack": "   at FreshFood.Reposistory.Repository.Implements.SqlRepository.LoadCart(String customerId, String sessionId, CancellationToken ct) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood.Reposistory\\Repository\\Implements\\SqlRepository.cs:line 19\r\n   at FreshFood.Backend.UnitTests.Fixture.Await(Object value) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\TestSupport.cs:line 50\r\n   at FreshFood.Backend.UnitTests.CaseRunner.<>c__DisplayClass18_0.<<Repository>g__Action|4>d.MoveNext() in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 99\r\n--- End of stack trace from previous location ---\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 120\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-185-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-067-TC001",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_NotificationAdapterTests.UTM_067_TC001",
+    "message": "Assert.Same() Failure: Values are not the same instance\r\nExpected: null\r\nActual:   System.Threading.Tasks.VoidTaskResult",
+    "stack": "   at FreshFood.Backend.UnitTests.CaseRunner.Forward(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 85\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 32\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-067-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-132-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_132_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-132-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-054-TC003",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_CheckoutServiceTests.UTM_054_TC003",
+    "message": "Assert.Throws() Failure: Exception type was not an exact match\r\nExpected: typeof(System.TimeoutException)\r\nActual:   typeof(FreshFood.Reposistory.Repository.Implements.DomainException)\r\n---- FreshFood.Reposistory.Repository.Implements.DomainException : PRE_ACCEPTANCE_PAYMENT_CORRELATION_TBD",
+    "stack": "   at FreshFood.Backend.UnitTests.CaseRunner.Checkout(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 134\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 40\r\n--- End of stack trace from previous location ---\r\n----- Inner Stack Trace -----\r\n   at FreshFood.Api.Services.Implements.CheckoutService.CreatePaymentQrAsync(PaymentQrRequestDto request, CancellationToken signal) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood-API\\Services\\Implements\\CheckoutService.cs:line 117\r\n   at FreshFood.Backend.UnitTests.CaseRunner.<>c__DisplayClass26_0.<<Checkout>g__Action|10>d.MoveNext() in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 127\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-054-TC003"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-001-TC001",
+    "test": "FreshFood.Backend.UnitTests.ApiCompositionRootTests.UTM_001_TC001",
+    "message": "System.InvalidOperationException : Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger`1[FreshFood.Api.Services.Implements.CheckoutService]' while attempting to activate 'FreshFood.Api.Services.Implements.CheckoutService'.",
+    "stack": "   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)\r\n   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Composition(JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 33\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 37\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-001-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-145-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_MyOrdersRepositoryTests.UTM_145_TC002",
+    "message": "System.NullReferenceException : Object reference not set to an instance of an object.",
+    "stack": "   at FreshFood.Reposistory.Repository.Implements.SqlRepository.LoadCart(String customerId, String sessionId, CancellationToken ct) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood.Reposistory\\Repository\\Implements\\SqlRepository.cs:line 19\r\n   at FreshFood.Reposistory.Repository.Implements.MyOrdersRepository.SaveCartAsync(Cart cart, CancellationToken signal) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood.Reposistory\\Repository\\Implements\\MyOrdersRepository.cs:line 15\r\n   at FreshFood.Backend.UnitTests.Fixture.Await(Object value) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\TestSupport.cs:line 50\r\n   at FreshFood.Backend.UnitTests.CaseRunner.<>c__DisplayClass18_0.<<Repository>g__Action|4>d.MoveNext() in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 99\r\n--- End of stack trace from previous location ---\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 120\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-145-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-138-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_138_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-138-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-134-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_134_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-134-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-139-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_139_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-139-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-139-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_139_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-139-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-137-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_137_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-137-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-136-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_136_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-136-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-049-TC002",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_CheckoutServiceTests.UTM_049_TC002",
+    "message": "Assert.Throws() Failure: No exception was thrown\r\nExpected: typeof(FreshFood.Reposistory.Repository.Implements.DomainException)",
+    "stack": "   at FreshFood.Backend.UnitTests.Fixture.Error(String code, Func`1 action) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\TestSupport.cs:line 54\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Checkout(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 134\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 40\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-049-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-001-TC002",
+    "test": "FreshFood.Backend.UnitTests.ApiCompositionRootTests.UTM_001_TC002",
+    "message": "System.InvalidOperationException : Unable to resolve service for type 'Microsoft.Extensions.Logging.ILogger`1[FreshFood.Api.Services.Implements.CheckoutService]' while attempting to activate 'FreshFood.Api.Services.Implements.CheckoutService'.",
+    "stack": "   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)\r\n   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)\r\n   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Composition(JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 33\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 37\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-001-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-133-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_133_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-133-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-121-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CartRepositoryTests.UTM_121_TC002",
+    "message": "System.NullReferenceException : Object reference not set to an instance of an object.",
+    "stack": "   at FreshFood.Reposistory.Repository.Implements.SqlRepository.LoadCart(String customerId, String sessionId, CancellationToken ct) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\src\\FreshFood.Reposistory\\Repository\\Implements\\SqlRepository.cs:line 19\r\n   at FreshFood.Backend.UnitTests.Fixture.Await(Object value) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\TestSupport.cs:line 50\r\n   at FreshFood.Backend.UnitTests.CaseRunner.<>c__DisplayClass18_0.<<Repository>g__Action|4>d.MoveNext() in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 99\r\n--- End of stack trace from previous location ---\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 120\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-121-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-136-TC002",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_136_TC002",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-136-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-062-TC002",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_DistanceCalculatorTests.UTM_062_TC002",
+    "message": "Assert.Same() Failure: Values are not the same instance\r\nExpected: 0\r\nActual:   0",
+    "stack": "   at FreshFood.Backend.UnitTests.CaseRunner.Forward(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 85\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 32\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-062-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-138-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_138_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-138-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-067-TC002",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_NotificationAdapterTests.UTM_067_TC002",
+    "message": "Assert.Same() Failure: Values are not the same instance\r\nExpected: null\r\nActual:   System.Threading.Tasks.VoidTaskResult",
+    "stack": "   at FreshFood.Backend.UnitTests.CaseRunner.Forward(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 85\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 32\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-067-TC002"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-093-TC001",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_ProfileServiceTests.UTM_093_TC001",
+    "message": "Assert.Throws() Failure: No exception was thrown\r\nExpected: typeof(FreshFood.Reposistory.Repository.Implements.DomainException)",
+    "stack": "   at FreshFood.Backend.UnitTests.Fixture.Error(String code, Func`1 action) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\TestSupport.cs:line 54\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Profile(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\ServiceCases.cs:line 66\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 42\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-093-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-062-TC001",
+    "test": "FreshFood.Backend.UnitTests.Services_Implements_DistanceCalculatorTests.UTM_062_TC001",
+    "message": "Assert.Same() Failure: Values are not the same instance\r\nExpected: 0\r\nActual:   0",
+    "stack": "   at FreshFood.Backend.UnitTests.CaseRunner.Forward(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 85\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 32\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-062-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-137-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_137_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-137-TC001"
+  },
+  {
+    "run": "initial",
+    "caseId": "UTM-133-TC001",
+    "test": "FreshFood.Backend.UnitTests.Repository_Implements_CheckoutRepositoryTests.UTM_133_TC001",
+    "message": "System.MissingMethodException : Constructor on type 'FreshFood.Reposistory.Repository.Implements.CheckoutRepository' not found.",
+    "stack": "   at System.RuntimeType.CreateInstanceImpl(BindingFlags bindingAttr, Binder binder, Object[] args, CultureInfo culture)\r\n   at System.Activator.CreateInstance(Type type, Object[] args)\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Repository(JsonElement m, JsonElement c) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\InfrastructureCases.cs:line 78\r\n   at FreshFood.Backend.UnitTests.CaseRunner.Run(String id) in D:\\1. Giang Day\\GenAI\\SE-Lifecycle-Agent\\tests\\unit\\FreshFood.Backend.UnitTests\\CaseRunner.cs:line 46\r\n--- End of stack trace from previous location ---",
+    "evidence": "artifacts\\testing\\unit-execution\\initial\\initial.trx",
+    "classification": "Test harness / fixture",
+    "defectId": "UTH-UTM-133-TC001"
+  }
+]

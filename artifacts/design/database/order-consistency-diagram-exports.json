@@ -1,0 +1,23 @@
+{
+  "master": "artifacts\\diagrams\\database\\order-consistency-storage-amendment.drawio",
+  "pages": [
+    {
+      "page": 1,
+      "name": "Conceptual technical model",
+      "png": "artifacts\\diagrams\\images\\order-consistency-storage-amendment-01.png",
+      "sha256": "97150a795b964fa6fa2472ba845435d91d940426fa8162a0e36e2fb48191875c"
+    },
+    {
+      "page": 2,
+      "name": "Logical storage model",
+      "png": "artifacts\\diagrams\\images\\order-consistency-storage-amendment-02.png",
+      "sha256": "374aa103bc9a2dcb5e48b7b2429c18b013c2c4054a1cb48d2cb3b1b219188cd5"
+    },
+    {
+      "page": 3,
+      "name": "Physical PostgreSQL model",
+      "png": "artifacts\\diagrams\\images\\order-consistency-storage-amendment-03.png",
+      "sha256": "b9f7947625a4216c366ab1c574361f07584558402b1cb1e31e8819c7b1ccf859"
+    }
+  ]
+}

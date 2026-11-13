@@ -1,0 +1,318 @@
+{
+  "status": "Requested revision for review",
+  "routing": "All transitions obstacle-checked; explicit ports; all source masters saved before image export",
+  "transitions": [
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b1",
+      "label": "",
+      "source": "start",
+      "target": "stock"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b2",
+      "label": "",
+      "source": "stock",
+      "target": "available"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b3",
+      "label": "Yes",
+      "source": "available",
+      "target": "create"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b4",
+      "label": "No",
+      "source": "available",
+      "target": "reject"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b5",
+      "label": "",
+      "source": "reject",
+      "target": "rejected"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b6",
+      "label": "",
+      "source": "create",
+      "target": "paid"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b7",
+      "label": "Yes",
+      "source": "paid",
+      "target": "record"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b8",
+      "label": "Not paid",
+      "source": "paid",
+      "target": "unpaid"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b8u",
+      "label": "",
+      "source": "unpaid",
+      "target": "merge"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b9",
+      "label": "",
+      "source": "record",
+      "target": "merge"
+    },
+    {
+      "process": "BP-02",
+      "page": "Stock-Backed Order Acceptance",
+      "transition": "b10",
+      "label": "",
+      "source": "merge",
+      "target": "accepted"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a1",
+      "label": "",
+      "source": "start",
+      "target": "required"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a2",
+      "label": "Yes",
+      "source": "required",
+      "target": "call"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a3",
+      "label": "",
+      "source": "call",
+      "target": "confirmed"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a4",
+      "label": "No: paid first order or repeat order",
+      "source": "required",
+      "target": "approve"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a5",
+      "label": "Yes",
+      "source": "confirmed",
+      "target": "approve"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a6",
+      "label": "No",
+      "source": "confirmed",
+      "target": "cancel_decision"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a7",
+      "label": "Staff elects cancellation",
+      "source": "cancel_decision",
+      "target": "cancel"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a8",
+      "label": "No",
+      "source": "cancel_decision",
+      "target": "pending_end"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a9",
+      "label": "",
+      "source": "cancel",
+      "target": "cancel_end"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a10",
+      "label": "",
+      "source": "approve",
+      "target": "dispatch"
+    },
+    {
+      "process": "BP-03",
+      "page": "Store Approval and Dispatch",
+      "transition": "a11",
+      "label": "",
+      "source": "dispatch",
+      "target": "shipping"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c1",
+      "label": "",
+      "source": "start",
+      "target": "success"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c2",
+      "label": "Yes",
+      "source": "success",
+      "target": "delivered"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c3",
+      "label": "",
+      "source": "delivered",
+      "target": "delivered_end"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c4",
+      "label": "No",
+      "source": "success",
+      "target": "failure"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c5",
+      "label": "Physical handover back to warehouse",
+      "source": "failure",
+      "target": "receive"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c6",
+      "label": "",
+      "source": "receive",
+      "target": "full"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c7",
+      "label": "No",
+      "source": "full",
+      "target": "draft"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c8",
+      "label": "",
+      "source": "draft",
+      "target": "draft_end"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c9",
+      "label": "Yes",
+      "source": "full",
+      "target": "returned"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c10",
+      "label": "Independent branches",
+      "source": "returned",
+      "target": "parallel"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c11",
+      "label": "",
+      "source": "parallel",
+      "target": "inspect"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c12",
+      "label": "",
+      "source": "parallel",
+      "target": "fees"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c13",
+      "label": "",
+      "source": "inspect",
+      "target": "inspect_end"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c14",
+      "label": "",
+      "source": "fees",
+      "target": "eligible"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c15",
+      "label": "Yes",
+      "source": "eligible",
+      "target": "refund"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c16",
+      "label": "No",
+      "source": "eligible",
+      "target": "no_refund"
+    },
+    {
+      "process": "BP-03",
+      "page": "Delivery Outcome, Physical Return and Independent Disposition",
+      "transition": "c17",
+      "label": "",
+      "source": "refund",
+      "target": "refund_end"
+    }
+  ]
+}

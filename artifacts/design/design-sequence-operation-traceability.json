@@ -1,0 +1,142 @@
+[
+  {
+    "UseCase": "UC-C01",
+    "Page": 1,
+    "Operation": "GetCatalogAsync",
+    "Signature": "+ GetCatalogAsync(query: CatalogQueryDto, signal: CancellationToken): Task<CatalogResultDto>",
+    "SourceFlows": "Normal 1-6; E4.1"
+  },
+  {
+    "UseCase": "UC-C01",
+    "Page": 2,
+    "Operation": "SearchAsync",
+    "Signature": "+ SearchAsync(query: CatalogQueryDto, signal: CancellationToken): Task<CatalogResultDto>",
+    "SourceFlows": "Normal 1-6; E4.1"
+  },
+  {
+    "UseCase": "UC-C01",
+    "Page": 3,
+    "Operation": "GetProductDetailsAsync",
+    "Signature": "+ GetProductDetailsAsync(productId: string, signal: CancellationToken): Task<ProductDetailsDto>",
+    "SourceFlows": "A3.1; A3.2"
+  },
+  {
+    "UseCase": "UC-C01",
+    "Page": 4,
+    "Operation": "GetClearanceAsync",
+    "Signature": "+ GetClearanceAsync(query: CatalogQueryDto, signal: CancellationToken): Task<CatalogResultDto>",
+    "SourceFlows": "A3.1; A3.2"
+  },
+  {
+    "UseCase": "UC-C03",
+    "Page": 1,
+    "Operation": "GetCartAsync",
+    "Signature": "+ GetCartAsync(identity: CartIdentityDto, signal: CancellationToken): Task<CartResultDto>",
+    "SourceFlows": "Normal 1-5; E3.1; A1.1; A4.1; E2.1; A4.2"
+  },
+  {
+    "UseCase": "UC-C03",
+    "Page": 2,
+    "Operation": "ChangeQuantityAsync",
+    "Signature": "+ ChangeQuantityAsync(request: CartChangeDto, signal: CancellationToken): Task<CartResultDto>",
+    "SourceFlows": "A1.1; A4.1; E2.1"
+  },
+  {
+    "UseCase": "UC-C03",
+    "Page": 3,
+    "Operation": "RemoveItemAsync",
+    "Signature": "+ RemoveItemAsync(productId: string, signal: CancellationToken): Task<CartResultDto>",
+    "SourceFlows": "A4.2"
+  },
+  {
+    "UseCase": "UC-C05",
+    "Page": 1,
+    "Operation": "GetProfileAsync",
+    "Signature": "+ GetProfileAsync(signal: CancellationToken): Task<ProfileResultDto>",
+    "SourceFlows": "Normal 1-3; A2.1"
+  },
+  {
+    "UseCase": "UC-C05",
+    "Page": 2,
+    "Operation": "UpdateProfileAsync",
+    "Signature": "+ UpdateProfileAsync(request: ProfileUpdateDto, signal: CancellationToken): Task<ProfileResultDto>",
+    "SourceFlows": "Normal 1-3; A2.1"
+  },
+  {
+    "UseCase": "UC-C05",
+    "Page": 3,
+    "Operation": "SaveAddressAsync",
+    "Signature": "+ SaveAddressAsync(request: AddressInputDto, signal: CancellationToken): Task<AddressDto>",
+    "SourceFlows": "A3.1; A3.2; E3.1; E3.2"
+  },
+  {
+    "UseCase": "UC-C05",
+    "Page": 4,
+    "Operation": "SetDefaultAddressAsync",
+    "Signature": "+ SetDefaultAddressAsync(addressId: string, signal: CancellationToken): Task<ProfileResultDto>",
+    "SourceFlows": "Address default selection in approved profile flow"
+  },
+  {
+    "UseCase": "UC-C05",
+    "Page": 5,
+    "Operation": "DeleteAddressAsync",
+    "Signature": "+ DeleteAddressAsync(addressId: string, signal: CancellationToken): Task<OperationResultDto>",
+    "SourceFlows": "A3.3"
+  },
+  {
+    "UseCase": "UC-C06",
+    "Page": 1,
+    "Operation": "PrepareCheckoutAsync",
+    "Signature": "+ PrepareCheckoutAsync(request: CheckoutInputDto, signal: CancellationToken): Task<CheckoutSummaryDto>",
+    "SourceFlows": "Normal 1-6; A2.1; E4.1"
+  },
+  {
+    "UseCase": "UC-C06",
+    "Page": 2,
+    "Operation": "PlaceOrderAsync",
+    "Signature": "+ PlaceOrderAsync(request: PlaceOrderDto, signal: CancellationToken): Task<OrderConfirmationDto>",
+    "SourceFlows": "Normal 7-9; E8.1; postconditions; A6.1; BR-ORD-03; payment postconditions"
+  },
+  {
+    "UseCase": "UC-C06",
+    "Page": 3,
+    "Operation": "CreatePaymentQrAsync",
+    "Signature": "+ CreatePaymentQrAsync(request: PaymentQrRequestDto, signal: CancellationToken): Task<PaymentQrDto>",
+    "SourceFlows": "Address default selection in approved profile flow"
+  },
+  {
+    "UseCase": "UC-C07",
+    "Page": 1,
+    "Operation": "GetOrdersAsync",
+    "Signature": "+ GetOrdersAsync(signal: CancellationToken): Task<OrderListDto>",
+    "SourceFlows": "Normal 1-5"
+  },
+  {
+    "UseCase": "UC-C07",
+    "Page": 2,
+    "Operation": "GetOrderDetailsAsync",
+    "Signature": "+ GetOrderDetailsAsync(orderId: string, signal: CancellationToken): Task<OrderDetailsDto>",
+    "SourceFlows": "Normal 1-5"
+  },
+  {
+    "UseCase": "UC-C07",
+    "Page": 3,
+    "Operation": "CancelOrderAsync",
+    "Signature": "+ CancelOrderAsync(request: CancelOrderDto, signal: CancellationToken): Task<OperationResultDto>",
+    "SourceFlows": "A3.1; E1.1"
+  },
+  {
+    "UseCase": "UC-C07",
+    "Page": 4,
+    "Operation": "ReorderAsync",
+    "Signature": "+ ReorderAsync(orderId: string, signal: CancellationToken): Task<CartResultDto>",
+    "SourceFlows": "A5.1; E2.1"
+  },
+  {
+    "UseCase": "UC-C07",
+    "Page": 5,
+    "Operation": "SubmitReviewAsync",
+    "Signature": "+ SubmitReviewAsync(request: OrderReviewDto, signal: CancellationToken): Task<OperationResultDto>",
+    "SourceFlows": "A5.2"
+  }
+]

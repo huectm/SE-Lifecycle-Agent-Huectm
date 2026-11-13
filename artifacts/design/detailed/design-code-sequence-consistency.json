@@ -1,0 +1,73 @@
+{
+  "model_level": "PIM",
+  "status": "CONSISTENT_WITH_EXPLICIT_REFINEMENTS_AND_DECLARED_DEFERRED_INTEGRATIONS",
+  "supersedes": "Literal PSM-signature equality audit; retained in baselines/mixed-psm-20261103",
+  "current_report": "pim-code-consistency.json",
+  "current_mapping": "pim-to-code-mapping.json",
+  "prior_finding_dispositions": [
+    {
+      "finding": "DCC-001",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-002",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-003",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-004",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-005",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-006",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-007",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-008",
+      "disposition": "Corrected PIM data/responsibility"
+    },
+    {
+      "finding": "DCC-009",
+      "disposition": "Corrected PIM data/responsibility"
+    },
+    {
+      "finding": "DCC-010",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-011",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-012",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-013",
+      "disposition": "Explicit deferred integration; upstream correlation/provider remains unresolved"
+    },
+    {
+      "finding": "DCC-014",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-015",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-016",
+      "disposition": "Corrected PIM interaction"
+    }
+  ]
+}

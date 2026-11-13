@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.1 on win32)" generated="2026-10-25T22:51:55.580829" rpa="false" schemaversion="5">
+<suite id="s1" name="Dantri Article Details" source="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\functional\dantri_article_details.robot">
+<test id="s1-t1" name="DT-001 Open Entertainment Article From Homepage" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-10-25T22:51:56.010515" level="INFO">Opening browser 'chrome' to base url 'https://dantri.com.vn/'.</msg>
+<arg>https://dantri.com.vn/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:51:56.010104" elapsed="6.761023"/>
+</kw>
+<kw name="Verify Article Detail">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-25T22:52:02.772393" level="INFO">${link} = xpath=(//h3//a[@data-prop="title" and @href="https://dantri.com.vn/giai-tri/khan-gia-viet-doi-co-dem-thu-3-o-ha-noi-va-cau-tra-loi-bat-ngo-cua-bigbang-20261025213107975.htm"])[1]</msg>
+<var>${link}</var>
+<arg>xpath=(//h3//a[@data-prop="title" and @href="${case}[url]"])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-25T22:52:02.771967" elapsed="0.000473"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<arg>20s</arg>
+<arg>DATA_STALE_OR_PAGE_CHANGED: snapshot article is not visible on homepage.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:02.772613" elapsed="0.070111"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:02.867310" level="INFO">${listing_title} = Khán giả Việt đòi có đêm thứ 3 ở Hà Nội và câu trả lời bất ngờ của BIGBANG</msg>
+<var>${listing_title}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:02.842988" elapsed="0.024406"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${listing_title}</arg>
+<arg>${case}[title]</arg>
+<arg>collapse_spaces=${True}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-25T22:52:02.867607" elapsed="0.000582"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:02.868543" level="INFO">Clicking element 'xpath=(//h3//a[@data-prop="title" and @href="https://dantri.com.vn/giai-tri/khan-gia-viet-doi-co-dem-thu-3-o-ha-noi-va-cau-tra-loi-bat-ngo-cua-bigbang-20261025213107975.htm"])[1]'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:02.868328" elapsed="4.198186"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:h1</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.066923" elapsed="0.025144"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:07.097332" level="INFO">Current location is 'https://dantri.com.vn/giai-tri/khan-gia-viet-doi-co-dem-thu-3-o-ha-noi-va-cau-tra-loi-bat-ngo-cua-bigbang-20261025213107975.htm'.</msg>
+<arg>${case}[url]</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.092250" elapsed="0.005170"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:07.110928" level="INFO">${detail_title} = Khán giả Việt đòi có đêm thứ 3 ở Hà Nội và câu trả lời bất ngờ của BIGBANG</msg>
+<var>${detail_title}</var>
+<arg>css:h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.097609" elapsed="0.013396"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${detail_title}</arg>
+<arg>${case}[title]</arg>
+<arg>collapse_spaces=${True}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.111214" elapsed="0.000375"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-25T22:52:07.111874" level="INFO">${body} = xpath=(//article[.//p]//p[normalize-space()])[1]</msg>
+<var>${body}</var>
+<arg>xpath=(//article[.//p]//p[normalize-space()])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.111692" elapsed="0.000205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${body}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.111978" elapsed="0.017754"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:07.156381" level="INFO">${body_text} = Trong đêm diễn thứ hai tại Hà Nội, BIGBANG khiến người hâm mộ phấn khích khi đáp lại lời đề nghị tổ chức thêm đêm diễn bằng câu nói: “Nóng hơn hôm qua thì chúng tôi sẽ quay lại”. G-Dragon cũng gây thí...</msg>
+<var>${body_text}</var>
+<arg>${body}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.130048" elapsed="0.026393"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-25T22:52:07.157093" level="INFO">Length is 275.</msg>
+<arg>${body_text}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.156611" elapsed="0.000533"/>
+</kw>
+<arg>${CASES}[0]</arg>
+<status status="PASS" start="2026-10-25T22:52:02.771560" elapsed="4.385662"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-25T22:52:07.157431" elapsed="2.216259"/>
+</kw>
+<tag>article-detail</tag>
+<tag>dantri</tag>
+<tag>functional</tag>
+<status status="PASS" start="2026-10-25T22:51:56.008258" elapsed="13.365592"/>
+</test>
+<test id="s1-t2" name="DT-002 Open Business Article From Homepage" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-10-25T22:52:09.375939" level="INFO">Opening browser 'chrome' to base url 'https://dantri.com.vn/'.</msg>
+<arg>https://dantri.com.vn/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:52:09.375710" elapsed="6.203601"/>
+</kw>
+<kw name="Verify Article Detail">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-25T22:52:15.580808" level="INFO">${link} = xpath=(//h3//a[@data-prop="title" and @href="https://dantri.com.vn/kinh-doanh/chuoi-california-fitness-dong-het-co-so-o-ha-noi-ca-nuoc-con-3-chi-nhanh-20261025211237614.htm"])[1]</msg>
+<var>${link}</var>
+<arg>xpath=(//h3//a[@data-prop="title" and @href="${case}[url]"])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-25T22:52:15.580373" elapsed="0.000474"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<arg>20s</arg>
+<arg>DATA_STALE_OR_PAGE_CHANGED: snapshot article is not visible on homepage.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:15.580997" elapsed="0.033119"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:15.632914" level="INFO">${listing_title} = Chuỗi California Fitness đóng hết cơ sở ở Hà Nội, cả nước còn 3 chi nhánh</msg>
+<var>${listing_title}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:15.614355" elapsed="0.018620"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${listing_title}</arg>
+<arg>${case}[title]</arg>
+<arg>collapse_spaces=${True}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-25T22:52:15.633224" elapsed="0.000473"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:15.634065" level="INFO">Clicking element 'xpath=(//h3//a[@data-prop="title" and @href="https://dantri.com.vn/kinh-doanh/chuoi-california-fitness-dong-het-co-so-o-ha-noi-ca-nuoc-con-3-chi-nhanh-20261025211237614.htm"])[1]'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:15.633860" elapsed="3.991152"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:h1</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.625203" elapsed="0.016497"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:19.647522" level="INFO">Current location is 'https://dantri.com.vn/kinh-doanh/chuoi-california-fitness-dong-het-co-so-o-ha-noi-ca-nuoc-con-3-chi-nhanh-20261025211237614.htm'.</msg>
+<arg>${case}[url]</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.641909" elapsed="0.005727"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:19.663767" level="INFO">${detail_title} = Chuỗi California Fitness đóng hết cơ sở ở Hà Nội, cả nước còn 3 chi nhánh</msg>
+<var>${detail_title}</var>
+<arg>css:h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.647848" elapsed="0.015966"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${detail_title}</arg>
+<arg>${case}[title]</arg>
+<arg>collapse_spaces=${True}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.663978" elapsed="0.000343"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-25T22:52:19.664584" level="INFO">${body} = xpath=(//article[.//p]//p[normalize-space()])[1]</msg>
+<var>${body}</var>
+<arg>xpath=(//article[.//p]//p[normalize-space()])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.664417" elapsed="0.000187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${body}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.664690" elapsed="0.016356"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:19.694660" level="INFO">${body_text} = Trong thông báo gửi tới khách hàng ngày 24-25/10, chuỗi phòng tập Califoria Fitness &amp; Yoga cho biết sẽ tạm dừng bốn cơ sở tại Hà Nội gồm Cali Hàng Da, Cali Mipec, Cali Centuryon Royal City và Cali Tim...</msg>
+<var>${body_text}</var>
+<arg>${body}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.681280" elapsed="0.013431"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-25T22:52:19.695143" level="INFO">Length is 294.</msg>
+<arg>${body_text}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.694868" elapsed="0.000313"/>
+</kw>
+<arg>${CASES}[1]</arg>
+<status status="PASS" start="2026-10-25T22:52:15.579717" elapsed="4.115535"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-25T22:52:19.695386" elapsed="2.202814"/>
+</kw>
+<tag>article-detail</tag>
+<tag>dantri</tag>
+<tag>functional</tag>
+<status status="PASS" start="2026-10-25T22:52:09.374748" elapsed="12.523632"/>
+</test>
+<test id="s1-t3" name="DT-003 Open World Article From Homepage" line="16">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-10-25T22:52:21.899648" level="INFO">Opening browser 'chrome' to base url 'https://dantri.com.vn/'.</msg>
+<arg>https://dantri.com.vn/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:52:21.899394" elapsed="5.909796"/>
+</kw>
+<kw name="Verify Article Detail">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-25T22:52:27.810160" level="INFO">${link} = xpath=(//h3//a[@data-prop="title" and @href="https://dantri.com.vn/the-gioi/nga-san-sang-dam-phan-3-ben-ve-ukraine-sau-ngay-411-20261025204118674.htm"])[1]</msg>
+<var>${link}</var>
+<arg>xpath=(//h3//a[@data-prop="title" and @href="${case}[url]"])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-25T22:52:27.809809" elapsed="0.000382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${link}</arg>
+<arg>20s</arg>
+<arg>DATA_STALE_OR_PAGE_CHANGED: snapshot article is not visible on homepage.</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:27.810300" elapsed="0.033307"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:27.862786" level="INFO">${listing_title} = Nga sẵn sàng đàm phán 3 bên về Ukraine sau ngày 4/11</msg>
+<var>${listing_title}</var>
+<arg>${link}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:27.843824" elapsed="0.019050"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${listing_title}</arg>
+<arg>${case}[title]</arg>
+<arg>collapse_spaces=${True}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-25T22:52:27.863172" elapsed="0.000447"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:27.863948" level="INFO">Clicking element 'xpath=(//h3//a[@data-prop="title" and @href="https://dantri.com.vn/the-gioi/nga-san-sang-dam-phan-3-ben-ve-ukraine-sau-ngay-411-20261025204118674.htm"])[1]'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:27.863750" elapsed="6.076578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:h1</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:33.940830" elapsed="0.032905"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:33.981287" level="INFO">Current location is 'https://dantri.com.vn/the-gioi/nga-san-sang-dam-phan-3-ben-ve-ukraine-sau-ngay-411-20261025204118674.htm'.</msg>
+<arg>${case}[url]</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-25T22:52:33.973988" elapsed="0.007406"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:34.003153" level="INFO">${detail_title} = Nga sẵn sàng đàm phán 3 bên về Ukraine sau ngày 4/11</msg>
+<var>${detail_title}</var>
+<arg>css:h1</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:33.981555" elapsed="0.021664"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${detail_title}</arg>
+<arg>${case}[title]</arg>
+<arg>collapse_spaces=${True}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-25T22:52:34.003460" elapsed="0.000522"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-10-25T22:52:34.004643" level="INFO">${body} = xpath=(//article[.//p]//p[normalize-space()])[1]</msg>
+<var>${body}</var>
+<arg>xpath=(//article[.//p]//p[normalize-space()])[1]</arg>
+<doc>Returns the given values which can then be assigned to a variable.</doc>
+<status status="PASS" start="2026-10-25T22:52:34.004156" elapsed="0.000606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${body}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-25T22:52:34.004899" elapsed="0.021711"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-25T22:52:34.043742" level="INFO">${body_text} = Trợ lý Điện Kremlin Yuri Ushakov (Ảnh: TASS).</msg>
+<var>${body_text}</var>
+<arg>${body}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-25T22:52:34.026847" elapsed="0.016958"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-25T22:52:34.044430" level="INFO">Length is 45.</msg>
+<arg>${body_text}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-25T22:52:34.044015" elapsed="0.000467"/>
+</kw>
+<arg>${CASES}[2]</arg>
+<status status="PASS" start="2026-10-25T22:52:27.809496" elapsed="6.235070"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-25T22:52:34.044720" elapsed="2.230038"/>
+</kw>
+<tag>article-detail</tag>
+<tag>dantri</tag>
+<tag>functional</tag>
+<status status="PASS" start="2026-10-25T22:52:21.898821" elapsed="14.376155"/>
+</test>
+<doc>DRAFT - Awaiting test design approval. Dantri article-detail functional tests.</doc>
+<status status="PASS" start="2026-10-25T22:51:55.582482" elapsed="40.693222"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">article-detail</stat>
+<stat pass="3" fail="0" skip="0">dantri</stat>
+<stat pass="3" fail="0" skip="0">functional</stat>
+</tag>
+<suite>
+<stat name="Dantri Article Details" id="s1" pass="3" fail="0" skip="0">Dantri Article Details</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

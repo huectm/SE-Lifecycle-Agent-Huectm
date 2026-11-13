@@ -1,0 +1,25 @@
+view,source,target,relationship,source_basis
+"Order, Payments and Delivery Fees",delivery_agents,orders,assigned 0..1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",orders,order_payments,records 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",orders,delivery_failures,failure 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",orders,shipping_fee_settlements,fee obligation 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",delivery_agents,shipping_fee_settlements,payee 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",order_payments,shipping_fee_settlements,collection evidence 0..1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",orders,return_receipts,return receipt 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",orders,refunds,refund obligation 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",return_receipts,return_receipt_items,received lines 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",return_receipts,refunds,1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",order_details,return_receipt_items,1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",return_receipt_items,return_inspections,staff decisions 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",delivery_agents,orders,assigned 0..1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",orders,order_payments,records 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",orders,delivery_failures,failure 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",orders,shipping_fee_settlements,fee obligation 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",delivery_agents,shipping_fee_settlements,payee 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Order, Payments and Delivery Fees",order_payments,shipping_fee_settlements,collection evidence 0..1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",orders,return_receipts,return receipt 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",orders,refunds,refund obligation 1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",return_receipts,return_receipt_items,received lines 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",return_receipts,refunds,1 : 0..1,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",order_details,return_receipt_items,1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary
+"Physical Return, Staff Inspection and Refund",return_receipt_items,return_inspections,staff decisions 1 : 0..*,Order lifecycle stakeholder decisions 2026-10-29; model JSON and database dictionary

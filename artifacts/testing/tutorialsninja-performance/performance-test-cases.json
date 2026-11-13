@@ -1,0 +1,112 @@
+[
+  {
+    "id": "PERF-01",
+    "title": "Baseline response time",
+    "workload": "1 user; 5 warm-up + 30 measured transactions",
+    "duration": "1 user; approximately 5 minutes",
+    "expected": "Mean successful registration transaction <6000 ms; report errors separately.",
+    "type": "Response time",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-02",
+    "title": "Daily registration capacity",
+    "workload": "1000 distinct guest sessions over 64800 seconds; 64.8-second mean inter-arrival",
+    "duration": "18 hours, 06:00 to 24:00 in the agreed service timezone",
+    "expected": "At least 1000 distinct successful sessions in the window; mean transaction <6000 ms.",
+    "type": "Daily capacity",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-03",
+    "title": "Stepped load within supported concurrency",
+    "workload": "25, 50, 75, 100 virtual users; 30-second ramp and 180-second measured hold per level",
+    "duration": "Proposed; 4 levels with 60-second warm-up per level",
+    "expected": "Mean transaction <6000 ms at each supported level; no hidden failed transactions.",
+    "type": "Load",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-04",
+    "title": "Sustained peak concurrency",
+    "workload": "100 active virtual users; 60-second ramp; 60-second warm-up; 15-minute measured hold",
+    "duration": "Proposed think time 5 seconds between transactions",
+    "expected": "100 users maintained during hold; mean transaction <6000 ms; collect achieved throughput and errors.",
+    "type": "Peak load",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-05",
+    "title": "Concurrent submission burst",
+    "workload": "100 separate guest sessions wait at a barrier then submit valid registrations",
+    "duration": "Three bursts with recovery between bursts; proposed",
+    "expected": "Verify 100 submissions dispatched together, response distribution, successful persistence and mean <6000 ms.",
+    "type": "Spike",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-06",
+    "title": "Stress beyond supported concurrency",
+    "workload": "100 -> 125 -> 150 -> 200 users; 3-minute holds; cap subject to owner approval",
+    "duration": "Proposed only; stop on approved error/latency/resource criteria",
+    "expected": "Find first sustained deterioration and recovery; no SLA guarantee above 100 users.",
+    "type": "Stress",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-07",
+    "title": "Recovery after stress",
+    "workload": "After PERF-06 reduce to 1 user then 25 users",
+    "duration": "Proposed 5-minute recovery observation",
+    "expected": "Record time to recover mean <6000 ms, errors and throughput; recovery-time threshold TBD.",
+    "type": "Recovery",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-08",
+    "title": "Endurance at peak",
+    "workload": "100 users maintained for 60 minutes; 5-second think time proposed",
+    "duration": "Proposed; monitor server memory/CPU/DB and generator",
+    "expected": "Mean <6000 ms in each measured window and overall; report trend/resource drift.",
+    "type": "Endurance",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-09",
+    "title": "Operating-window availability",
+    "workload": "Low-rate health probe at 06:00 and 23:59 and every 60 seconds inside window",
+    "duration": "18-hour observation; approved timezone required",
+    "expected": "Registration page usable throughout observed window; no inference that access must be denied outside it.",
+    "type": "Availability",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  },
+  {
+    "id": "PERF-10",
+    "title": "Mixed normal and validation workload",
+    "workload": "100 users; 80% valid registration and 20% invalid-form submissions",
+    "duration": "Proposed mix; 5-minute measured hold",
+    "expected": "Separate means for success and expected validation rejection; successful-registration mean <6000 ms.",
+    "type": "Mixed load",
+    "target_status": "NOT EXECUTED - target owner authorization not available",
+    "basis": "User performance request 2026-10-28; UC-REG-01",
+    "data": "Synthetic unique emails; owner-approved disposable mailbox domain; valid fields; account cleanup plan required."
+  }
+]

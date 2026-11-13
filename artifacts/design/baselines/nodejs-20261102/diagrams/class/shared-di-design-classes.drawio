@@ -1,0 +1,960 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="SE-Lifecycle-Agent" version="24.7.17">
+  <diagram id="shared-di-design-classes-1" name="01 Transaction and Gateway Adapters">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2051" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Transaction and Gateway Adapters&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IUnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IUnitOfWork&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ExecuteAsync(work: TransactionWork, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="UnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&lt;br&gt;UnitOfWork&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- session: IRepositorySession&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ UnitOfWork(session: IRepositorySession)&lt;br&gt;+ ExecuteAsync(work: TransactionWork, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="IRepositorySession" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IRepositorySession&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ BeginAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ CommitAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ RollbackAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="PostgreSqlSession" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&lt;br&gt;PostgreSqlSession&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- connection: DatabaseConnection&lt;br&gt;- transaction: DatabaseTransaction?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ PostgreSqlSession(connection: DatabaseConnection)&lt;br&gt;+ BeginAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ CommitAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ RollbackAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="787" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="ICurrentCustomer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICurrentCustomer&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RequireCustomerId(): EntityId&lt;br&gt;+ GetCartIdentity(): CartIdentityDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="787" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="CurrentCustomer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;class&amp;gt;&amp;gt;&lt;br&gt;CurrentCustomer&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- principal: AuthenticatedPrincipal&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CurrentCustomer(principal: AuthenticatedPrincipal)&lt;br&gt;+ RequireCustomerId(): EntityId&lt;br&gt;+ GetCartIdentity(): CartIdentityDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="787" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="CartIdentityDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartIdentityDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CustomerId: EntityId? {server resolved}&lt;br&gt;+ SessionId: string? {server resolved}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1430" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="UnitOfWork" target="IUnitOfWork" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="328.5" />
+              <mxPoint x="1128" y="290.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="UnitOfWork" target="IRepositorySession" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="328.5" />
+              <mxPoint x="1872" y="264.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="PostgreSqlSession" target="IRepositorySession" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="948.5" />
+              <mxPoint x="832" y="499" />
+              <mxPoint x="2168" y="499" />
+              <mxPoint x="2168" y="339.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CurrentCustomer" target="ICurrentCustomer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="879.3333333333334" />
+              <mxPoint x="2168" y="887.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="ICurrentCustomer" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="887.5" />
+              <mxPoint x="1128" y="1497.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="CurrentCustomer" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="971.6666666666666" />
+              <mxPoint x="2168" y="1564.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1961" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-2" name="02 External Adapter geocoding">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1408" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - External Adapter geocoding&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IGeocodingGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IGeocodingGateway&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ResolveAsync(address: string, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;GeoPointDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="GoogleMapsGeocodingAdapter" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;GoogleMapsGeocodingAdapter&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GoogleMapsGeocodingAdapter(http: HttpTransport)&lt;br&gt;+ ResolveAsync(address: string, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;GeoPointDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="GeoPointDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;GeoPointDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Latitude: number&lt;br&gt;+ Longitude: number&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="787" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="GoogleMapsGeocodingAdapter" target="IGeocodingGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="282.3333333333333" />
+              <mxPoint x="1128" y="290.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="IGeocodingGateway" target="GeoPointDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="GoogleMapsGeocodingAdapter" target="GeoPointDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="374.66666666666663" />
+              <mxPoint x="1128" y="887.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1318" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-3" name="03 External Adapter distance">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="887" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - External Adapter distance&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IDistanceGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IDistanceGateway&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ DrivingDistanceAsync(addressId: EntityId, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;number&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="GoogleMapsDistanceAdapter" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;GoogleMapsDistanceAdapter&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GoogleMapsDistanceAdapter(http: HttpTransport)&lt;br&gt;+ DrivingDistanceAsync(addressId: EntityId, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;number&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="GoogleMapsDistanceAdapter" target="IDistanceGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="328.5" />
+              <mxPoint x="1128" y="290.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="797" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-4" name="04 External Adapter payment">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="3270" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - External Adapter payment&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IPaymentGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IPaymentGateway&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CreateQrAsync(reference: string, amount: VndAmount, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;PaymentQrDto&amp;gt;&lt;br&gt;+ VerifyNoticeAsync(notice: PaymentNoticeDto, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;VerifiedPaymentDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="SePayPaymentAdapter" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;SePayPaymentAdapter&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ SePayPaymentAdapter(http: HttpTransport)&lt;br&gt;+ CreateQrAsync(reference: string, amount: VndAmount, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;PaymentQrDto&amp;gt;&lt;br&gt;+ VerifyNoticeAsync(notice: PaymentNoticeDto, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;VerifiedPaymentDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentNoticeHandler" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;PaymentNoticeHandler&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- checkout: ICheckoutService&lt;br&gt;- payment: IPaymentGateway&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ PaymentNoticeHandler(checkout: ICheckoutService, payment:&lt;br&gt;IPaymentGateway)&lt;br&gt;+ HandleAsync(notice: PaymentNoticeDto, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;PaymentResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="ICheckoutService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICheckoutService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ PrepareCheckoutAsync(request: CheckoutInputDto, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;CheckoutSummaryDto&amp;gt;&lt;br&gt;+ PlaceOrderAsync(request: PlaceOrderDto, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;OrderConfirmationDto&amp;gt;&lt;br&gt;+ CreatePaymentQrAsync(request: PaymentQrRequestDto, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;PaymentQrDto&amp;gt;&lt;br&gt;+ HandleVerifiedPaymentAsync(request: PaymentNoticeDto, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;PaymentResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="833" width="680" height="339" as="geometry" />
+        </mxCell>
+        <mxCell id="VerifiedPaymentDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;VerifiedPaymentDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProviderReference: string&lt;br&gt;+ CheckoutReference: string&lt;br&gt;+ GoodsAmount: VndAmountString&lt;br&gt;+ ShippingAmount: VndAmountString&lt;br&gt;+ VerifiedAt: IsoDateTime&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="833" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="CheckoutInputDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CheckoutInputDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ AddressId: EntityId&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="833" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="CheckoutSummaryDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CheckoutSummaryDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ SubTotal: VndAmountString&lt;br&gt;+ ShippingFee: VndAmountString&lt;br&gt;+ DistanceKm: number&lt;br&gt;+ Total: VndAmountString&lt;br&gt;+ Lines: ReadonlyArray&amp;lt;CheckoutLineDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1492" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="PlaceOrderDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PlaceOrderDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ AddressId: EntityId&lt;br&gt;+ PaymentMethod: PaymentMethod&lt;br&gt;+ CheckoutReference: string&lt;br&gt;+ IdempotencyKey: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1492" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderConfirmationDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;OrderConfirmationDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderId: EntityId&lt;br&gt;+ OrderNumber: string&lt;br&gt;+ Status: OrderStatus&lt;br&gt;+ PaymentStatus: PaymentStatus&lt;br&gt;+ Total: VndAmountString&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="1492" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentQrRequestDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PaymentQrRequestDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CheckoutReference: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="2082" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentQrDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PaymentQrDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ QrPayload: string&lt;br&gt;+ ExpiresAt: IsoDateTime&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="2082" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentNoticeDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PaymentNoticeDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RawBody: string&lt;br&gt;+ Signature: string&lt;br&gt;+ ProviderReference: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="2082" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PaymentResultDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Accepted: boolean&lt;br&gt;+ Duplicate: boolean&lt;br&gt;+ PaymentStatus: PaymentStatus&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="2626" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="SePayPaymentAdapter" target="IPaymentGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.2;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="351.5" />
+              <mxPoint x="1128" y="239.4" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="PaymentNoticeHandler" target="ICheckoutService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.16666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="297.66666666666663" />
+              <mxPoint x="2168" y="801" />
+              <mxPoint x="832" y="801" />
+              <mxPoint x="832" y="889.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="PaymentNoticeHandler" target="IPaymentGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.4;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="405.3333333333333" />
+              <mxPoint x="1872" y="545" />
+              <mxPoint x="832" y="545" />
+              <mxPoint x="832" y="288.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="IPaymentGateway" target="PaymentNoticeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="338.2" />
+              <mxPoint x="1100" y="2050" />
+              <mxPoint x="2168" y="2050" />
+              <mxPoint x="2168" y="2156.6666666666665" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="IPaymentGateway" target="PaymentQrDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.25;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460.0" y="469" />
+              <mxPoint x="1128" y="469" />
+              <mxPoint x="1128" y="2022" />
+              <mxPoint x="1330.0" y="2022" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="IPaymentGateway" target="VerifiedPaymentDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1072" y="387.6" />
+              <mxPoint x="1072" y="968.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="SePayPaymentAdapter" target="PaymentNoticeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.25;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330.0" y="773" />
+              <mxPoint x="2140" y="773" />
+              <mxPoint x="2140" y="2022" />
+              <mxPoint x="2426.6666666666665" y="2022" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="SePayPaymentAdapter" target="PaymentQrDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500.0" y="745" />
+              <mxPoint x="1872" y="745" />
+              <mxPoint x="1872" y="2022" />
+              <mxPoint x="1500.0" y="2022" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="SePayPaymentAdapter" target="VerifiedPaymentDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.75;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1670.0" y="717" />
+              <mxPoint x="1044" y="717" />
+              <mxPoint x="1044" y="745" />
+              <mxPoint x="1500.0" y="745" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="PaymentNoticeHandler" target="PaymentNoticeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2426.6666666666665" y="545" />
+              <mxPoint x="2912" y="545" />
+              <mxPoint x="2912" y="2050" />
+              <mxPoint x="2653.3333333333335" y="2050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="PaymentNoticeHandler" target="PaymentResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2653.3333333333335" y="745" />
+              <mxPoint x="1900" y="745" />
+              <mxPoint x="1900" y="2594" />
+              <mxPoint x="346.66666666666663" y="2594" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="ICheckoutService" target="CheckoutInputDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="946.0" />
+              <mxPoint x="832" y="1127" />
+              <mxPoint x="2168" y="1127" />
+              <mxPoint x="2168" y="922.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="ICheckoutService" target="CheckoutSummaryDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.2;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="256.0" y="1460" />
+              <mxPoint x="460.0" y="1460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" source="ICheckoutService" target="OrderConfirmationDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1072" y="1002.5" />
+              <mxPoint x="1072" y="1460" />
+              <mxPoint x="2168" y="1460" />
+              <mxPoint x="2168" y="1627.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" edge="1" parent="1" source="ICheckoutService" target="PaymentNoticeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1044" y="1059.0" />
+              <mxPoint x="1044" y="1994" />
+              <mxPoint x="2112" y="1994" />
+              <mxPoint x="2112" y="2231.3333333333335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="" edge="1" parent="1" source="ICheckoutService" target="PaymentQrDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.4;exitY=1;entryX=0.75;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="392.0" y="1204" />
+              <mxPoint x="1016" y="1204" />
+              <mxPoint x="1016" y="1966" />
+              <mxPoint x="1670.0" y="1966" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="" edge="1" parent="1" source="ICheckoutService" target="PaymentQrRequestDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="528.0" y="1460" />
+              <mxPoint x="832" y="1460" />
+              <mxPoint x="832" y="2050" />
+              <mxPoint x="460.0" y="2050" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="" edge="1" parent="1" source="ICheckoutService" target="PaymentResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.8;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="664.0" y="1432" />
+              <mxPoint x="860" y="1432" />
+              <mxPoint x="860" y="2566" />
+              <mxPoint x="573.3333333333333" y="2566" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="" edge="1" parent="1" source="ICheckoutService" target="PlaceOrderDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8333333333333334;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="944" y="1115.5" />
+              <mxPoint x="944" y="1615.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="3180" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-5" name="05 External Adapter notification">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1408" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - External Adapter notification&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="INotificationGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;INotificationGateway&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ PublishAsync(message: NotificationDto, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="NotificationAdapter" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;NotificationAdapter&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- publisher: INotificationPublisher&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ NotificationAdapter(publisher: INotificationPublisher)&lt;br&gt;+ PublishAsync(message: NotificationDto, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="NotificationDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;NotificationDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderId: EntityId&lt;br&gt;+ EventCode: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="787" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="NotificationAdapter" target="INotificationGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="282.3333333333333" />
+              <mxPoint x="1128" y="290.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="INotificationGateway" target="NotificationDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="NotificationAdapter" target="NotificationDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="374.66666666666663" />
+              <mxPoint x="1128" y="887.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1318" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-6" name="06 State Transition Dispatch">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="3853" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - State Transition Dispatch&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IOrderStateMachine" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IOrderStateMachine&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ processEvent(snapshot: TransitionSnapshot, event:&lt;br&gt;StateMachineEvent, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;StateMachineResult&amp;gt;&lt;br&gt;+ currentState(): OrderStateSnapshot?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderStateMachine" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;state machine&amp;gt;&amp;gt;&lt;br&gt;OrderStateMachine&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- repository: IOrderLifecycleRepository&lt;br&gt;- transitionTable: ReadonlyArray&amp;lt;object&amp;gt; {private; read only}&lt;br&gt;- snapshot: TransitionSnapshot? {server trusted; request scoped}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderStateMachine(repository: IOrderLifecycleRepository)&lt;br&gt;+ processEvent(snapshot: TransitionSnapshot, event:&lt;br&gt;StateMachineEvent, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;StateMachineResult&amp;gt;&lt;br&gt;+ currentState(): OrderStateSnapshot?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="IOrderLifecycleRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IOrderLifecycleRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ LockOrderAsync(orderId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;Order&amp;gt;&lt;br&gt;+ LoadLifecycleAsync(orderId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;OrderLifecycleRecords&amp;gt;&lt;br&gt;+ SaveAsync(order: Order, signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ RecordEventOnceAsync(aggregateId: EntityId, eventId: string,&lt;br&gt;transitionId: string, signal: AbortSignal): Promise&amp;lt;boolean&amp;gt;&lt;br&gt;+ SaveOrderLinesAsync(order: Order, lines:&lt;br&gt;ReadonlyArray&amp;lt;OrderDetail&amp;gt;, signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ SavePaymentOnceAsync(payment: OrderPayment, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;boolean&amp;gt;&lt;br&gt;+ SaveFailureAsync(failure: DeliveryFailure, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ SaveReceiptAsync(receipt: ReturnReceipt, items:&lt;br&gt;ReadonlyArray&amp;lt;ReturnReceiptItem&amp;gt;, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;br&gt;+ SaveRefundOnceAsync(refund: Refund, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;boolean&amp;gt;&lt;br&gt;+ SaveShippingSettlementAsync(settlement: ShippingFeeSettlement,&lt;br&gt;signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ LockReservedBatchesAsync(orderId: EntityId, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;ReadonlyArray&amp;lt;BatchInventory&amp;gt;&amp;gt;&lt;br&gt;+ SaveBatchesAsync(batches: ReadonlyArray&amp;lt;BatchInventory&amp;gt;,&lt;br&gt;signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ AppendAuditAsync(audit: AuditLog, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="753" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderLifecycleRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;OrderLifecycleRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- session: IRepositorySession&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderLifecycleRepository(session: IRepositorySession)&lt;br&gt;+ LockOrderAsync(orderId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;Order&amp;gt;&lt;br&gt;+ LoadLifecycleAsync(orderId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;OrderLifecycleRecords&amp;gt;&lt;br&gt;+ SaveAsync(order: Order, signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ RecordEventOnceAsync(aggregateId: EntityId, eventId: string,&lt;br&gt;transitionId: string, signal: AbortSignal): Promise&amp;lt;boolean&amp;gt;&lt;br&gt;+ SaveOrderLinesAsync(order: Order, lines:&lt;br&gt;ReadonlyArray&amp;lt;OrderDetail&amp;gt;, signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ SavePaymentOnceAsync(payment: OrderPayment, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;boolean&amp;gt;&lt;br&gt;+ SaveFailureAsync(failure: DeliveryFailure, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ SaveReceiptAsync(receipt: ReturnReceipt, items:&lt;br&gt;ReadonlyArray&amp;lt;ReturnReceiptItem&amp;gt;, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;br&gt;+ SaveRefundOnceAsync(refund: Refund, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;boolean&amp;gt;&lt;br&gt;+ SaveShippingSettlementAsync(settlement: ShippingFeeSettlement,&lt;br&gt;signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ LockReservedBatchesAsync(orderId: EntityId, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;ReadonlyArray&amp;lt;BatchInventory&amp;gt;&amp;gt;&lt;br&gt;+ SaveBatchesAsync(batches: ReadonlyArray&amp;lt;BatchInventory&amp;gt;,&lt;br&gt;signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ AppendAuditAsync(audit: AuditLog, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1263" width="680" height="829" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderLifecycleRecords" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;record&amp;gt;&amp;gt;&lt;br&gt;OrderLifecycleRecords&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Order: Order&lt;br&gt;+ Failure: DeliveryFailure?&lt;br&gt;+ Receipt: ReturnReceipt?&lt;br&gt;+ Refund: Refund?&lt;br&gt;+ Payments: ReadonlyArray&amp;lt;OrderPayment&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1263" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="IUnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IUnitOfWork&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ExecuteAsync(work: TransactionWork, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="1263" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="StateMachineEvent" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;StateMachineEvent&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Event: string&lt;br&gt;+ AggregateId: EntityId&lt;br&gt;+ EventId: string&lt;br&gt;+ Reason: string?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="2412" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="TransitionSnapshot" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;TransitionSnapshot&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ WorkflowNode: string {transient UML position}&lt;br&gt;+ AggregateId: EntityId&lt;br&gt;+ CheckoutReference: string?&lt;br&gt;+ CustomerId: EntityId {server resolved}&lt;br&gt;+ AddressId: EntityId?&lt;br&gt;+ PaymentMethod: PaymentMethod?&lt;br&gt;+ PlannedLines: ReadonlyArray&amp;lt;CheckoutLineDto&amp;gt;&lt;br&gt;+ FulfillmentState: string&lt;br&gt;+ PaymentState: string&lt;br&gt;+ RefundState: string?&lt;br&gt;+ ActorId: string {trusted server value}&lt;br&gt;+ GuardFacts: GuardFactsDto {trusted server value}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="2412" width="680" height="431" as="geometry" />
+        </mxCell>
+        <mxCell id="StateMachineResult" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;StateMachineResult&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Applied: boolean&lt;br&gt;+ Duplicate: boolean&lt;br&gt;+ TransitionIds: ReadonlyArray&amp;lt;string&amp;gt;&lt;br&gt;+ State: OrderStateSnapshot&lt;br&gt;+ Actions: ReadonlyArray&amp;lt;string&amp;gt; {selected action outputs}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="2412" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderStateSnapshot" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;OrderStateSnapshot&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ FulfillmentState: OrderStatus?&lt;br&gt;+ PaymentState: PaymentStatus?&lt;br&gt;+ RefundState: string?&lt;br&gt;+ WorkflowNode: string? {transient UML position}&lt;br&gt;+ FulfillmentCompleted: boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="3163" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="OrderStateMachine" target="IOrderStateMachine" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="374.5" />
+              <mxPoint x="1128" y="313.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="OrderStateMachine" target="IOrderLifecycleRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="374.5" />
+              <mxPoint x="1872" y="441.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="OrderLifecycleRepository" target="IOrderLifecycleRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1677.5" />
+              <mxPoint x="832" y="692.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="IOrderStateMachine" target="StateMachineEvent" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.2;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="256.0" y="469" />
+              <mxPoint x="88" y="469" />
+              <mxPoint x="88" y="2380" />
+              <mxPoint x="346.66666666666663" y="2380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="IOrderStateMachine" target="StateMachineResult" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.4;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="392.0" y="469" />
+              <mxPoint x="1128" y="469" />
+              <mxPoint x="1128" y="2380" />
+              <mxPoint x="2426.6666666666665" y="2380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="IOrderStateMachine" target="TransitionSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="528.0" y="1231" />
+              <mxPoint x="1100" y="1231" />
+              <mxPoint x="1100" y="2352" />
+              <mxPoint x="1386.6666666666667" y="2352" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="OrderStateMachine" target="StateMachineEvent" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.2;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1296.0" y="591" />
+              <mxPoint x="860" y="591" />
+              <mxPoint x="860" y="2380" />
+              <mxPoint x="573.3333333333333" y="2380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="OrderStateMachine" target="StateMachineResult" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.4;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1432.0" y="591" />
+              <mxPoint x="2168" y="591" />
+              <mxPoint x="2168" y="2352" />
+              <mxPoint x="2653.3333333333335" y="2352" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="OrderStateMachine" target="TransitionSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1568.0" y="1231" />
+              <mxPoint x="1872" y="1231" />
+              <mxPoint x="1872" y="2352" />
+              <mxPoint x="1613.3333333333333" y="2352" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="OrderStateMachine" target="OrderStateSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.8;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1704.0" y="1203" />
+              <mxPoint x="888" y="1203" />
+              <mxPoint x="888" y="3131" />
+              <mxPoint x="346.66666666666663" y="3131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="IOrderStateMachine" target="OrderStateSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.8;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="664.0" y="1175" />
+              <mxPoint x="916" y="1175" />
+              <mxPoint x="916" y="3103" />
+              <mxPoint x="573.3333333333333" y="3103" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="StateMachineResult" target="OrderStateSnapshot" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="2547.0" />
+              <mxPoint x="2168" y="3298.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="3763" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-7" name="07 Transition Command and Trusted Snapshot">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="2244" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Transition Command and Trusted Snapshot&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="StateMachineEvent" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;StateMachineEvent&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Event: string&lt;br&gt;+ AggregateId: EntityId&lt;br&gt;+ EventId: string&lt;br&gt;+ Reason: string?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="TransitionSnapshot" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;TransitionSnapshot&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ WorkflowNode: string {transient UML position}&lt;br&gt;+ AggregateId: EntityId&lt;br&gt;+ CheckoutReference: string?&lt;br&gt;+ CustomerId: EntityId {server resolved}&lt;br&gt;+ AddressId: EntityId?&lt;br&gt;+ PaymentMethod: PaymentMethod?&lt;br&gt;+ PlannedLines: ReadonlyArray&amp;lt;CheckoutLineDto&amp;gt;&lt;br&gt;+ FulfillmentState: string&lt;br&gt;+ PaymentState: string&lt;br&gt;+ RefundState: string?&lt;br&gt;+ ActorId: string {trusted server value}&lt;br&gt;+ GuardFacts: GuardFactsDto {trusted server value}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="431" as="geometry" />
+        </mxCell>
+        <mxCell id="GuardFactsDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;GuardFactsDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ FirstOrder: boolean&lt;br&gt;+ PhoneConfirmed: boolean&lt;br&gt;+ VerifiedPayment: boolean&lt;br&gt;+ CompleteReceipt: boolean&lt;br&gt;+ ConfirmedCause: string?&lt;br&gt;+ CapturedGoods: VndAmountString&lt;br&gt;+ CapturedShipping: VndAmountString&lt;br&gt;+ SettledRefund: VndAmountString&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="941" width="680" height="339" as="geometry" />
+        </mxCell>
+        <mxCell id="StateMachineResult" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;StateMachineResult&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Applied: boolean&lt;br&gt;+ Duplicate: boolean&lt;br&gt;+ TransitionIds: ReadonlyArray&amp;lt;string&amp;gt;&lt;br&gt;+ State: OrderStateSnapshot&lt;br&gt;+ Actions: ReadonlyArray&amp;lt;string&amp;gt; {selected action outputs}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="941" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="IPayoutPort" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IPayoutPort&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RequestAsync(refundId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;PayoutOutcomeDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1600" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="PayoutOutcomeDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PayoutOutcomeDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Outcome: string&lt;br&gt;+ ProviderReference: string?&lt;br&gt;+ SettledAmount: VndAmountString?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1600" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="TransitionSnapshot" target="GuardFactsDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="405.5" />
+              <mxPoint x="1128" y="1110.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="IPayoutPort" target="PayoutOutcomeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1700.5" />
+              <mxPoint x="832" y="1712.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2154" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-8" name="08 Unresolved Provider and Notification Seams">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="1952" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Unresolved Provider and Notification Seams&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IPayoutPort" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IPayoutPort&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RequestAsync(refundId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;PayoutOutcomeDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="UnconfiguredPayoutAdapter" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;UnconfiguredPayoutAdapter&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RequestAsync(refundId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;PayoutOutcomeDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="INotificationPublisher" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;INotificationPublisher&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ SendAsync(message: NotificationDto, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="ConfiguredNotificationPublisher" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;ConfiguredNotificationPublisher&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ConfiguredNotificationPublisher(http: HttpTransport)&lt;br&gt;+ SendAsync(message: NotificationDto, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="711" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="TransactionWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;delegate&amp;gt;&amp;gt;&lt;br&gt;TransactionWork&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ InvokeAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="711" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="NotificationDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;NotificationDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderId: EntityId&lt;br&gt;+ EventCode: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="711" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="PayoutOutcomeDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;PayoutOutcomeDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Outcome: string&lt;br&gt;+ ProviderReference: string?&lt;br&gt;+ SettledAmount: VndAmountString?&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1308" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="UnconfiguredPayoutAdapter" target="IPayoutPort" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="ConfiguredNotificationPublisher" target="INotificationPublisher" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.3333333333333333;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="803.3333333333334" />
+              <mxPoint x="832" y="423" />
+              <mxPoint x="2168" y="423" />
+              <mxPoint x="2168" y="290.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="IPayoutPort" target="PayoutOutcomeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460.0" y="423" />
+              <mxPoint x="88" y="423" />
+              <mxPoint x="88" y="1276" />
+              <mxPoint x="346.66666666666663" y="1276" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="UnconfiguredPayoutAdapter" target="PayoutOutcomeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1500.0" y="679" />
+              <mxPoint x="860" y="679" />
+              <mxPoint x="860" y="1276" />
+              <mxPoint x="573.3333333333333" y="1276" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="INotificationPublisher" target="NotificationDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ConfiguredNotificationPublisher" target="NotificationDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="895.6666666666666" />
+              <mxPoint x="832" y="921" />
+              <mxPoint x="2168" y="921" />
+              <mxPoint x="2168" y="811.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1862" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-9" name="09 Shared Results and Delivery Agent">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1424" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Shared Results and Delivery Agent&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="DeliveryAgent" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;DeliveryAgent&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ DeliveryAgentId: EntityId {private set}&lt;br&gt;+ DisplayName: string {private set}&lt;br&gt;+ ContactPhone: string {private set}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="NotificationDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;NotificationDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ OrderId: EntityId&lt;br&gt;+ EventCode: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="OperationResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;OperationResultDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Success: boolean&lt;br&gt;+ MessageCode: string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="734" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="VerifiedPaymentDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;VerifiedPaymentDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProviderReference: string&lt;br&gt;+ CheckoutReference: string&lt;br&gt;+ GoodsAmount: VndAmountString&lt;br&gt;+ ShippingAmount: VndAmountString&lt;br&gt;+ VerifiedAt: IsoDateTime&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="734" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1334" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-10" name="10 Composition Root and Domain Enumerations">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1539" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Composition Root and Domain Enumerations&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="ApiCompositionRoot" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;composition root&amp;gt;&amp;gt;&lt;br&gt;ApiCompositionRoot&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ConfigureServices(services: RegistrationMap): void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="OrderStatus" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;br&gt;OrderStatus&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;PendingUnpaid&lt;br&gt;PendingPaid&lt;br&gt;Confirmed&lt;br&gt;Packing&lt;br&gt;Shipping&lt;br&gt;Delivered&lt;br&gt;Cancelled&lt;br&gt;DeliveryFailed&lt;br&gt;Returned&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="362" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentStatus" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;br&gt;PaymentStatus&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;Unpaid&lt;br&gt;Paid&lt;br&gt;PartiallyRefunded&lt;br&gt;Refunded&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="872" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="PaymentMethod" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;br&gt;PaymentMethod&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;Cod&lt;br&gt;VietQr&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="872" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1449" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-11" name="11 Domain Policies and Exact VND Values">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="1883" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Domain Policies and Exact VND Values&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IBatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IBatchPricingPolicy&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Quote(batch: BatchInventory, asOf: Date): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;policy&amp;gt;&amp;gt;&lt;br&gt;BatchPricingPolicy&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Quote(batch: BatchInventory, asOf: Date): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="IDeliveryFeePolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IDeliveryFeePolicy&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Quote(distanceKm: number): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="DeliveryFeePolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;policy&amp;gt;&amp;gt;&lt;br&gt;DeliveryFeePolicy&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Quote(distanceKm: number): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="688" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="VndAmount" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;value object&amp;gt;&amp;gt;&lt;br&gt;VndAmount&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- units: bigint&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ FromUnits(units: bigint): VndAmount {static}&lt;br&gt;+ Add(other: VndAmount): VndAmount&lt;br&gt;+ ToWire(): string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="688" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="EntityId" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;datatype&amp;gt;&amp;gt;&lt;br&gt;EntityId&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;= opaque VndAmount identifier string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="688" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="LocalDate" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;datatype&amp;gt;&amp;gt;&lt;br&gt;LocalDate&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;= ISO calendar date string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1285" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="BatchPricingPolicy" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="DeliveryFeePolicy" target="IDeliveryFeePolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="777.0" />
+              <mxPoint x="832" y="400" />
+              <mxPoint x="2168" y="400" />
+              <mxPoint x="2168" y="279.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1793" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-12" name="12 Distance and FEFO Specification">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1998" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Distance and FEFO Specification&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="IDistanceCalculator" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IDistanceCalculator&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CalculateAsync(addressId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;number&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="DistanceCalculator" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;DistanceCalculator&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- gateway: IDistanceGateway&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ DistanceCalculator(gateway: IDistanceGateway)&lt;br&gt;+ CalculateAsync(addressId: EntityId, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;number&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="277" as="geometry" />
+        </mxCell>
+        <mxCell id="IDistanceGateway" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IDistanceGateway&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ DrivingDistanceAsync(addressId: EntityId, signal:&lt;br&gt;AbortSignal): Promise&amp;lt;number&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="787" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="IFefoBatchSpecification" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IFefoBatchSpecification&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Criteria(asOf: Date): BatchCriteria&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="787" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="FefoBatchSpecification" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;specification&amp;gt;&amp;gt;&lt;br&gt;FefoBatchSpecification&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Criteria(asOf: Date): BatchCriteria&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1308" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchCriteria" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;record&amp;gt;&amp;gt;&lt;br&gt;BatchCriteria&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ActiveProductsOnly: boolean&lt;br&gt;+ AsOf: Date&lt;br&gt;+ MinimumAvailable: number&lt;br&gt;+ SortKeys: ReadonlyArray&amp;lt;string&amp;gt;&lt;br&gt;+ LockForUpdate: boolean&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1308" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="DistanceCalculator" target="IDistanceCalculator" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.3333333333333333;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="282.3333333333333" />
+              <mxPoint x="1128" y="290.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="DistanceCalculator" target="IDistanceGateway" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="374.66666666666663" />
+              <mxPoint x="1128" y="887.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="FefoBatchSpecification" target="IFefoBatchSpecification" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1397.0" />
+              <mxPoint x="832" y="876.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1908" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="shared-di-design-classes-13" name="13 Node Runtime and Wire Contracts">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="1899" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;shared - Node Runtime and Wire Contracts&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="VndAmountString" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;datatype&amp;gt;&amp;gt;&lt;br&gt;VndAmountString&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;= VndAmount integer string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="IsoDateTime" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;datatype&amp;gt;&amp;gt;&lt;br&gt;IsoDateTime&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;= ISO timestamp string&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="AuthenticatedPrincipal" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;record&amp;gt;&amp;gt;&lt;br&gt;AuthenticatedPrincipal&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CustomerId: EntityId?&lt;br&gt;+ SessionId: string?&lt;br&gt;+ Roles: ReadonlyArray&amp;lt;string&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="DatabaseConnection" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;external protocol&amp;gt;&amp;gt;&lt;br&gt;DatabaseConnection&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ QueryAsync(sql: string, parameters: ReadonlyArray&amp;lt;unknown&amp;gt;,&lt;br&gt;signal: AbortSignal): Promise&amp;lt;unknown&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="734" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="DatabaseTransaction" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;external protocol&amp;gt;&amp;gt;&lt;br&gt;DatabaseTransaction&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CommitAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ RollbackAsync(signal: AbortSignal): Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="734" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="RegistrationMap" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;composition contract&amp;gt;&amp;gt;&lt;br&gt;RegistrationMap&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Bind(token: string, factory: () =&amp;gt; object): void&lt;br&gt;+ BindMany(token: string, factories: ReadonlyArray&amp;lt;() =&amp;gt;&lt;br&gt;object&amp;gt;): void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="734" width="680" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="HttpTransport" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;external protocol&amp;gt;&amp;gt;&lt;br&gt;HttpTransport&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ SendAsync(url: string, payload: unknown, signal: AbortSignal):&lt;br&gt;Promise&amp;lt;unknown&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1278" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1809" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

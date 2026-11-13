@@ -1,0 +1,1791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.15.1 on win32)" generated="2026-10-26T14:57:38.241924" rpa="false" schemaversion="5">
+<suite id="s1" name="Mathx Login" source="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\tests\functional\mathx_login.robot">
+<test id="s1-t1" name="MX-LG-001 Login page exposes the intended main form" line="19">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:38.475393" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:38.475089" elapsed="4.087597"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.563105" elapsed="0.030850"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.594316" elapsed="0.019172"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.621961" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.613787" elapsed="0.008362"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:57:38.473699" elapsed="4.148645"/>
+</kw>
+<kw name="Verify Main Form Controls">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.629960" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>${FORM}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.623136" elapsed="0.006918"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2026-10-26T14:57:42.630900" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${count}</arg>
+<arg>1</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.630366" elapsed="0.000615"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.645747" level="INFO">Element 'css:#main_box form#login_form input[name="e"]' is displayed.</msg>
+<arg>${IDENTIFIER}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.631145" elapsed="0.014739"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.646112" elapsed="0.025428"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.690291" level="INFO">Element 'css:#main_box form#login_form input[name="p"]' is displayed.</msg>
+<arg>${PASSWORD}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.671833" elapsed="0.018599"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.708320" level="INFO">Element 'css:#main_box form#login_form button[type="submit"]' is displayed.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.690674" elapsed="0.017795"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${SUBMIT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.708722" elapsed="0.018552"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.744392" level="INFO">Element 'css:#main_box form#login_form a[href="https://mathx.vn/quen-mat-khau.html"]' is displayed.</msg>
+<arg>css:#main_box form#login_form a[href="https://mathx.vn/quen-mat-khau.html"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.727559" elapsed="0.016972"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:42.760819" level="INFO">Element 'css:#main_box form#login_form a[href="https://mathx.vn/dang-ky.html"]' is displayed.</msg>
+<arg>css:#main_box form#login_form a[href="https://mathx.vn/dang-ky.html"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.744757" elapsed="0.016208"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:57:42.622744" elapsed="0.138374"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:57:42.761415" elapsed="2.141589"/>
+</kw>
+<doc>One main login form; identifier/password and submit visible; reset and registration links visible.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:57:38.472388" elapsed="6.430890"/>
+</test>
+<test id="s1-t2" name="MX-LG-002 Password is masked" line="23">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:44.907445" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:44.906832" elapsed="3.114650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.021698" elapsed="0.023282"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.045206" elapsed="0.018438"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:48.069383" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.063989" elapsed="0.005497"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:57:44.905554" elapsed="3.164040"/>
+</kw>
+<kw name="Verify Password Masking">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:48.086240" level="INFO">${type} = password</msg>
+<var>${type}</var>
+<arg>${PASSWORD}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.070092" elapsed="0.016204"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${type}</arg>
+<arg>password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.086547" elapsed="0.000377"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.087030" elapsed="0.018721"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:57:48.069815" elapsed="0.036054"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:57:48.106090" elapsed="2.105585"/>
+</kw>
+<doc>Input type is password; input enabled.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:57:44.904159" elapsed="5.307720"/>
+</test>
+<test id="s1-t3" name="MX-LG-003 Both required fields empty" line="27">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:50.214192" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:50.213819" elapsed="3.406986"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.621110" elapsed="0.023715"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.645113" elapsed="0.016320"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.666389" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.661719" elapsed="0.004805"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:57:50.213220" elapsed="3.453444"/>
+</kw>
+<kw name="Verify Required Fields">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.667629" level="INFO">Typing text '' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${case}[identifier]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.667362" elapsed="0.074021"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.742056" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:57:53.770421" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${case}[password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.741683" elapsed="0.080348"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.822734" level="INFO">Clicking button 'css:#main_box form#login_form button[type="submit"]'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.822396" elapsed="0.108439"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.931481" level="INFO">Executing JavaScript:
+return document.querySelector('#main_box form#login_form input[name="e"]').validity.valueMissing;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:57:53.938781" level="INFO">${missing} = True</msg>
+<var>${missing}</var>
+<arg>return document.querySelector('#main_box form#login_form input[name="${case}[missing]"]').validity.valueMissing;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.931143" elapsed="0.007701"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${missing}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.939194" elapsed="0.000462"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.940041" level="INFO">Executing JavaScript:
+return document.querySelector('#main_box form#login_form input[name="e"]').validationMessage;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:57:53.946238" level="INFO">${message} = Please fill out this field.</msg>
+<var>${message}</var>
+<arg>return document.querySelector('#main_box form#login_form input[name="${case}[missing]"]').validationMessage;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.939834" elapsed="0.006478"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-26T14:57:53.947536" level="INFO">Length is 27.</msg>
+<arg>${message}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.946564" elapsed="0.001041"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.947913" level="INFO">Executing JavaScript:
+return document.activeElement.name;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:57:53.956202" level="INFO">${focused} = e</msg>
+<var>${focused}</var>
+<arg>return document.activeElement.name;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.947780" elapsed="0.008542"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${focused}</arg>
+<arg>${case}[missing]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.956786" elapsed="0.000808"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:53.963923" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.957821" elapsed="0.006237"/>
+</kw>
+<arg>${CASES}[empty_both]</arg>
+<status status="PASS" start="2026-10-26T14:57:53.666983" elapsed="0.297215"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:57:53.964485" elapsed="2.137759"/>
+</kw>
+<doc>Browser blocks submission; specified field has valueMissing=true, nonempty validationMessage and focus; login URL retained.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:57:50.212432" elapsed="5.889979"/>
+</test>
+<test id="s1-t4" name="MX-LG-004 Identifier empty" line="31">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:56.104391" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:56.104109" elapsed="3.061139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.165531" elapsed="0.017598"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.183355" elapsed="0.014207"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.202663" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.197749" elapsed="0.004996"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:57:56.103568" elapsed="3.099257"/>
+</kw>
+<kw name="Verify Required Fields">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.203523" level="INFO">Typing text '' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${case}[identifier]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.203334" elapsed="0.061415"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.265334" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:57:59.291148" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${case}[password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.265043" elapsed="0.062660"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.328081" level="INFO">Clicking button 'css:#main_box form#login_form button[type="submit"]'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.327873" elapsed="0.071422"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.399712" level="INFO">Executing JavaScript:
+return document.querySelector('#main_box form#login_form input[name="e"]').validity.valueMissing;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:57:59.404214" level="INFO">${missing} = True</msg>
+<var>${missing}</var>
+<arg>return document.querySelector('#main_box form#login_form input[name="${case}[missing]"]').validity.valueMissing;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.399515" elapsed="0.004753"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${missing}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.404499" elapsed="0.000409"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.405289" level="INFO">Executing JavaScript:
+return document.querySelector('#main_box form#login_form input[name="e"]').validationMessage;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:57:59.409515" level="INFO">${message} = Please fill out this field.</msg>
+<var>${message}</var>
+<arg>return document.querySelector('#main_box form#login_form input[name="${case}[missing]"]').validationMessage;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.405097" elapsed="0.004456"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-26T14:57:59.409954" level="INFO">Length is 27.</msg>
+<arg>${message}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.409682" elapsed="0.000309"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.410243" level="INFO">Executing JavaScript:
+return document.activeElement.name;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:57:59.417312" level="INFO">${focused} = e</msg>
+<var>${focused}</var>
+<arg>return document.activeElement.name;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.410112" elapsed="0.007248"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${focused}</arg>
+<arg>${case}[missing]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.417578" elapsed="0.000330"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:57:59.422215" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.418010" elapsed="0.004273"/>
+</kw>
+<arg>${CASES}[empty_identifier]</arg>
+<status status="PASS" start="2026-10-26T14:57:59.203025" elapsed="0.219345"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:57:59.422546" elapsed="2.136082"/>
+</kw>
+<doc>Browser blocks submission; specified field has valueMissing=true, nonempty validationMessage and focus; login URL retained.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:57:56.102940" elapsed="5.455842"/>
+</test>
+<test id="s1-t5" name="MX-LG-005 Password empty" line="35">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:01.560450" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:01.560168" elapsed="3.114943"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.675398" elapsed="0.023402"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.699096" elapsed="0.017142"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.721178" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.716540" elapsed="0.004740"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:01.559727" elapsed="3.161667"/>
+</kw>
+<kw name="Verify Required Fields">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.722421" level="INFO">Typing text 'mathx.qa.20261026.5c93d7@example.invalid' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${case}[identifier]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.722118" elapsed="0.090894"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.813836" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:58:04.840674" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${case}[password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.813316" elapsed="0.055512"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.869388" level="INFO">Clicking button 'css:#main_box form#login_form button[type="submit"]'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.869112" elapsed="0.081245"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.950900" level="INFO">Executing JavaScript:
+return document.querySelector('#main_box form#login_form input[name="p"]').validity.valueMissing;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:58:04.957910" level="INFO">${missing} = True</msg>
+<var>${missing}</var>
+<arg>return document.querySelector('#main_box form#login_form input[name="${case}[missing]"]').validity.valueMissing;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.950636" elapsed="0.007359"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${missing}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.958370" elapsed="0.000437"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.959174" level="INFO">Executing JavaScript:
+return document.querySelector('#main_box form#login_form input[name="p"]').validationMessage;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:58:04.966646" level="INFO">${message} = Please fill out this field.</msg>
+<var>${message}</var>
+<arg>return document.querySelector('#main_box form#login_form input[name="${case}[missing]"]').validationMessage;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.958982" elapsed="0.007731"/>
+</kw>
+<kw name="Should Not Be Empty" owner="BuiltIn">
+<msg time="2026-10-26T14:58:04.967411" level="INFO">Length is 27.</msg>
+<arg>${message}</arg>
+<doc>Verifies that the given item is not empty.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.966950" elapsed="0.000528"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.967845" level="INFO">Executing JavaScript:
+return document.activeElement.name;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:58:04.975348" level="INFO">${focused} = p</msg>
+<var>${focused}</var>
+<arg>return document.activeElement.name;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.967684" elapsed="0.007795"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${focused}</arg>
+<arg>${case}[missing]</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.975842" elapsed="0.000825"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:04.982066" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.976918" elapsed="0.005276"/>
+</kw>
+<arg>${CASES}[empty_password]</arg>
+<status status="PASS" start="2026-10-26T14:58:04.721730" elapsed="0.260583"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:04.982575" elapsed="2.169788"/>
+</kw>
+<doc>Browser blocks submission; specified field has valueMissing=true, nonempty validationMessage and focus; login URL retained.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:01.559153" elapsed="5.593439"/>
+</test>
+<test id="s1-t6" name="MX-LG-006 Email identifier entry" line="39">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:07.154441" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:07.154140" elapsed="3.170270"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.324608" elapsed="0.018440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.343320" elapsed="0.012981"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:10.360714" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.356521" elapsed="0.004283"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:07.153675" elapsed="3.207212"/>
+</kw>
+<kw name="Verify Identifier Entry">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:10.361494" level="INFO">Typing text 'mathx.qa.20261026.5c93d7@example.invalid' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.361313" elapsed="0.088957"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:10.460584" level="INFO">${actual} = mathx.qa.20261026.5c93d7@example.invalid</msg>
+<var>${actual}</var>
+<arg>${IDENTIFIER}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.450538" elapsed="0.010086"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.460773" elapsed="0.000289"/>
+</kw>
+<arg>${CASES}[email][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:10.361052" elapsed="0.100068"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:10.461280" elapsed="2.158139"/>
+</kw>
+<doc>The typed value is preserved. This tests input handling, not authentication or account validity.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:07.153113" elapsed="5.466551"/>
+</test>
+<test id="s1-t7" name="MX-LG-007 Username identifier entry" line="43">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:12.621741" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:12.621451" elapsed="2.995283"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.616955" elapsed="0.023692"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.640836" elapsed="0.016057"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:15.662609" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.657125" elapsed="0.005586"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:12.620783" elapsed="3.042049"/>
+</kw>
+<kw name="Verify Identifier Entry">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:15.663587" level="INFO">Typing text 'mathx_qa_20261026_5c93d7' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.663322" elapsed="0.084914"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:15.762240" level="INFO">${actual} = mathx_qa_20261026_5c93d7</msg>
+<var>${actual}</var>
+<arg>${IDENTIFIER}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.748471" elapsed="0.013819"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.762455" elapsed="0.000320"/>
+</kw>
+<arg>${CASES}[username][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:15.663032" elapsed="0.099804"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:15.762970" elapsed="2.148682"/>
+</kw>
+<doc>The typed value is preserved. This tests input handling, not authentication or account validity.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:12.620278" elapsed="5.291566"/>
+</test>
+<test id="s1-t8" name="MX-LG-008 Phone identifier entry" line="47">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:17.913934" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:17.913604" elapsed="3.656530"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.570444" elapsed="0.021928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.592662" elapsed="0.018016"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:21.616070" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.610934" elapsed="0.005250"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:17.913065" elapsed="3.703234"/>
+</kw>
+<kw name="Verify Identifier Entry">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:21.617097" level="INFO">Typing text '0900000000' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.616869" elapsed="0.079113"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:21.713462" level="INFO">${actual} = 0900000000</msg>
+<var>${actual}</var>
+<arg>${IDENTIFIER}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.696271" elapsed="0.017263"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.713866" elapsed="0.000560"/>
+</kw>
+<arg>${CASES}[phone][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:21.616532" elapsed="0.097976"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:21.714726" elapsed="2.120705"/>
+</kw>
+<doc>The typed value is preserved. This tests input handling, not authentication or account validity.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:17.912390" elapsed="5.923245"/>
+</test>
+<test id="s1-t9" name="MX-LG-009 Unicode identifier entry" line="51">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:23.844743" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:23.844380" elapsed="3.157486"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.002187" elapsed="0.021810"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.024271" elapsed="0.017424"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:27.047884" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.041937" elapsed="0.006191"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:23.843667" elapsed="3.204696"/>
+</kw>
+<kw name="Verify Identifier Entry">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:27.049382" level="INFO">Typing text 'Người_dùng_thử_nghiệm' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.049067" elapsed="0.089677"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:27.154190" level="INFO">${actual} = Người_dùng_thử_nghiệm</msg>
+<var>${actual}</var>
+<arg>${IDENTIFIER}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.138996" elapsed="0.015266"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.154514" elapsed="0.000431"/>
+</kw>
+<arg>${CASES}[unicode_identifier][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:27.048650" elapsed="0.106361"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:27.155171" elapsed="2.160539"/>
+</kw>
+<doc>The typed value is preserved. This tests input handling, not authentication or account validity.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:23.836110" elapsed="5.479877"/>
+</test>
+<test id="s1-t10" name="MX-LG-010 One-character identifier entry" line="55">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:29.318514" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:29.318073" elapsed="3.145090"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.463476" elapsed="0.018741"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.482407" elapsed="0.013939"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:32.501589" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.496525" elapsed="0.005157"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:29.317470" elapsed="3.184310"/>
+</kw>
+<kw name="Verify Identifier Entry">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:32.502436" level="INFO">Typing text 'a' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.502247" elapsed="0.064853"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:32.579595" level="INFO">${actual} = a</msg>
+<var>${actual}</var>
+<arg>${IDENTIFIER}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.567331" elapsed="0.012322"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.579857" elapsed="0.000520"/>
+</kw>
+<arg>${CASES}[one_identifier][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:32.501977" elapsed="0.078481"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:32.580597" elapsed="2.143120"/>
+</kw>
+<doc>The typed value is preserved. This tests input handling, not authentication or account validity.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:29.316728" elapsed="5.407182"/>
+</test>
+<test id="s1-t11" name="MX-LG-011 256-character identifier entry" line="59">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:34.725977" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:34.725585" elapsed="3.337249"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.063128" elapsed="0.021583"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.084934" elapsed="0.016489"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:38.106032" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.101641" elapsed="0.004488"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:34.725139" elapsed="3.381095"/>
+</kw>
+<kw name="Verify Identifier Entry">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:38.106858" level="INFO">Typing text 'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.106674" elapsed="0.165437"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:38.284777" level="INFO">${actual} = qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq...</msg>
+<var>${actual}</var>
+<arg>${IDENTIFIER}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.272299" elapsed="0.012526"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.284988" elapsed="0.000294"/>
+</kw>
+<arg>${CASES}[long_identifier][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:38.106408" elapsed="0.178932"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:38.285464" elapsed="2.150691"/>
+</kw>
+<doc>The typed value is preserved. This tests input handling, not authentication or account validity.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:34.724518" elapsed="5.711909"/>
+</test>
+<test id="s1-t12" name="MX-LG-012 Special and Unicode password entry" line="63">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:40.438222" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:40.437929" elapsed="3.050391"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.488610" elapsed="0.022651"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.511521" elapsed="0.017502"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:43.536569" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.529322" elapsed="0.007378"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:40.437443" elapsed="3.099374"/>
+</kw>
+<kw name="Verify Password Entry">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:43.537635" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:58:43.570559" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${value}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.537402" elapsed="0.081459"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:43.631636" level="INFO">${actual} = Synthetic!@#  mật_khẩu_2026</msg>
+<var>${actual}</var>
+<arg>${PASSWORD}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.619144" elapsed="0.012603"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.632270" elapsed="0.000446"/>
+</kw>
+<kw name="Verify Password Masking">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:43.648446" level="INFO">${type} = password</msg>
+<var>${type}</var>
+<arg>${PASSWORD}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.633177" elapsed="0.015314"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${type}</arg>
+<arg>password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.648686" elapsed="0.000299"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.649082" elapsed="0.017831"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:43.632930" elapsed="0.034140"/>
+</kw>
+<arg>${CASES}[special_password][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:43.537059" elapsed="0.130070"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:43.667330" elapsed="2.108232"/>
+</kw>
+<doc>Typed value preserved and field remains type=password. No length policy inferred.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:40.436933" elapsed="5.338826"/>
+</test>
+<test id="s1-t13" name="MX-LG-013 One-character password entry" line="67">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:45.777727" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:45.777436" elapsed="3.135253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:48.912964" elapsed="0.025650"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:48.938906" elapsed="0.017226"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:48.961384" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:48.956420" elapsed="0.005088"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:45.776874" elapsed="3.184737"/>
+</kw>
+<kw name="Verify Password Entry">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:48.962439" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:58:49.001176" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${value}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:48.962197" elapsed="0.082283"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:49.061456" level="INFO">${actual} = x</msg>
+<var>${actual}</var>
+<arg>${PASSWORD}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:49.044745" elapsed="0.016791"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:49.061808" elapsed="0.000458"/>
+</kw>
+<kw name="Verify Password Masking">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:49.088992" level="INFO">${type} = password</msg>
+<var>${type}</var>
+<arg>${PASSWORD}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:49.062687" elapsed="0.026366"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${type}</arg>
+<arg>password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:58:49.089320" elapsed="0.000366"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-26T14:58:49.089780" elapsed="0.019085"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:49.062454" elapsed="0.046626"/>
+</kw>
+<arg>${CASES}[one_password][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:48.961857" elapsed="0.147298"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:49.109464" elapsed="2.125259"/>
+</kw>
+<doc>Typed value preserved and field remains type=password. No length policy inferred.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:45.776212" elapsed="5.458656"/>
+</test>
+<test id="s1-t14" name="MX-LG-014 256-character password entry" line="71">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:51.236367" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:51.236151" elapsed="3.040472"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.276944" elapsed="0.027888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.305187" elapsed="0.016086"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:54.327649" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.321636" elapsed="0.006202"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:51.235779" elapsed="3.092398"/>
+</kw>
+<kw name="Verify Password Entry">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:54.330328" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:58:54.371730" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${value}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.329676" elapsed="0.216374"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:54.562513" level="INFO">${actual} = QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ...</msg>
+<var>${actual}</var>
+<arg>${PASSWORD}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.546582" elapsed="0.015978"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual}</arg>
+<arg>${value}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.562735" elapsed="0.000502"/>
+</kw>
+<kw name="Verify Password Masking">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:54.573973" level="INFO">${type} = password</msg>
+<var>${type}</var>
+<arg>${PASSWORD}</arg>
+<arg>type</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.563619" elapsed="0.010409"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${type}</arg>
+<arg>password</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.574274" elapsed="0.000307"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.574667" elapsed="0.017426"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:54.563408" elapsed="0.028819"/>
+</kw>
+<arg>${CASES}[long_password][value]</arg>
+<status status="PASS" start="2026-10-26T14:58:54.328816" elapsed="0.263468"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:58:54.592457" elapsed="2.090045"/>
+</kw>
+<doc>Typed value preserved and field remains type=password. No length policy inferred.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:51.235213" elapsed="5.447447"/>
+</test>
+<test id="s1-t15" name="MX-LG-015 Keyboard focus sequence" line="75">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:56.684108" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:56.683843" elapsed="3.000279"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:59.684453" elapsed="0.023588"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:58:59.708300" elapsed="0.016937"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:59.730968" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:58:59.725541" elapsed="0.005540"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:56.683479" elapsed="3.047726"/>
+</kw>
+<kw name="Verify Keyboard Focus">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:59.732211" level="INFO">Clicking element 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:58:59.731946" elapsed="0.066395"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:58:59.799119" level="INFO">Sending key(s) ('TAB',) to css:#main_box form#login_form input[name="e"] element.</msg>
+<msg time="2026-10-26T14:59:00.084051" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2026-10-26T14:59:00.084205" level="INFO">Releasing special key TAB.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-10-26T14:58:59.798682" elapsed="0.292553"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:00.091903" level="INFO">Executing JavaScript:
+return document.activeElement.name;
+Without any arguments.</msg>
+<msg time="2026-10-26T14:59:00.097548" level="INFO">${name} = p</msg>
+<var>${name}</var>
+<arg>return document.activeElement.name;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:59:00.091606" elapsed="0.006020"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${name}</arg>
+<arg>p</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-10-26T14:59:00.097950" elapsed="0.000457"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:00.098826" level="INFO">Sending key(s) ('TAB',) to css:#main_box form#login_form input[name="p"] element.</msg>
+<msg time="2026-10-26T14:59:00.376532" level="INFO">Pressing special key TAB to element.</msg>
+<msg time="2026-10-26T14:59:00.376643" level="INFO">Releasing special key TAB.</msg>
+<arg>${PASSWORD}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-10-26T14:59:00.098568" elapsed="0.283808"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:00.382910" level="INFO">Executing JavaScript:
+return document.activeElement === document.querySelector('#main_box form#login_form button[type="submit"]');
+Without any arguments.</msg>
+<msg time="2026-10-26T14:59:00.387356" level="INFO">${focused} = True</msg>
+<var>${focused}</var>
+<arg>return document.activeElement === document.querySelector('#main_box form#login_form button[type="submit"]');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-10-26T14:59:00.382674" elapsed="0.004715"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${focused}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-10-26T14:59:00.387552" elapsed="0.000282"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:58:59.731571" elapsed="0.656327"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:00.388053" elapsed="2.126283"/>
+</kw>
+<doc>Focus moves to main password and then main submit button.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:58:56.683019" elapsed="5.831492"/>
+</test>
+<test id="s1-t16" name="MX-LG-016 Forgot password navigation" line="79">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:02.516251" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:02.515968" elapsed="3.054853"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.571473" elapsed="0.023123"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.594883" elapsed="0.018038"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:05.620268" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.613261" elapsed="0.007162"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:02.515530" elapsed="3.105015"/>
+</kw>
+<kw name="Verify Linked Form">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:05.621335" level="INFO">Clicking link 'css:#main_box form#login_form a[href="https://mathx.vn/quen-mat-khau.html"]'.</msg>
+<arg>css:#main_box form#login_form a[href="https://mathx.vn/${path}"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.621078" elapsed="0.310792"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://mathx.vn/${path}</arg>
+<arg>20s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.932146" elapsed="0.006450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:#main_box input:not([type="hidden"])</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.938874" elapsed="0.017314"/>
+</kw>
+<arg>quen-mat-khau.html</arg>
+<status status="PASS" start="2026-10-26T14:59:05.620788" elapsed="0.335564"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:05.956609" elapsed="2.123673"/>
+</kw>
+<doc>URL is https://mathx.vn/quen-mat-khau.html and destination has a visible input; do not submit reset.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:59:02.514985" elapsed="5.565537"/>
+</test>
+<test id="s1-t17" name="MX-LG-017 Registration navigation" line="83">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:08.082127" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:08.081854" elapsed="3.102838"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:11.185033" elapsed="0.021594"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:11.207032" elapsed="0.017701"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:11.230287" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:11.224980" elapsed="0.005450"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:08.081436" elapsed="3.149144"/>
+</kw>
+<kw name="Verify Linked Form">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:11.231412" level="INFO">Clicking link 'css:#main_box form#login_form a[href="https://mathx.vn/dang-ky.html"]'.</msg>
+<arg>css:#main_box form#login_form a[href="https://mathx.vn/${path}"]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:11.231160" elapsed="1.496560"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://mathx.vn/${path}</arg>
+<arg>20s</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2026-10-26T14:59:12.727997" elapsed="0.005449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:#main_box input:not([type="hidden"])</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:12.733769" elapsed="0.014223"/>
+</kw>
+<arg>dang-ky.html</arg>
+<status status="PASS" start="2026-10-26T14:59:11.230848" elapsed="1.517299"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:12.748391" elapsed="2.145669"/>
+</kw>
+<doc>URL is https://mathx.vn/dang-ky.html and destination has a visible input; do not create an account.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<status status="PASS" start="2026-10-26T14:59:08.080887" elapsed="6.813345"/>
+</test>
+<test id="s1-t18" name="MX-LG-018 Invalid credentials rejected by button" line="87">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:14.896158" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:14.895869" elapsed="3.097525"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:17.993710" elapsed="0.024701"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.018731" elapsed="0.017839"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.043312" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.036874" elapsed="0.006574"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:14.895331" elapsed="3.148235"/>
+</kw>
+<kw name="Verify Credential Rejection">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.049580" level="INFO">Typing text 'mathx.qa.20261026.5c93d7@example.invalid' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${case}[identifier]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.049241" elapsed="0.102354"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.152347" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:59:18.184980" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${case}[password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.151975" elapsed="0.085496"/>
+</kw>
+<if>
+<branch type="IF" condition="$method == 'button'">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.238899" level="INFO">Clicking button 'css:#main_box form#login_form button[type="submit"]'.</msg>
+<arg>${SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.238453" elapsed="0.416024"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:18.237821" elapsed="0.416799"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>${PASSWORD}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-10-26T14:59:18.655007" elapsed="0.000035"/>
+</kw>
+<status status="NOT RUN" start="2026-10-26T14:59:18.654717" elapsed="0.000369"/>
+</branch>
+<status status="PASS" start="2026-10-26T14:59:18.237753" elapsed="0.417371"/>
+</if>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Main Region Should Show Rejection">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.683672" level="INFO">${message} = MATHX ĐĂNG NHẬP
+Thông tin đăng nhập không chính xác?
+Email/Username/SĐT *
+Mật khẩu *
+Đăng nhập Quên mật khẩu?     Đăng ký tài khoản</msg>
+<var>${message}</var>
+<arg>css:#main_box</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.656620" elapsed="0.027136"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${REJECTION_PATTERN}</arg>
+<doc>Fails if the `string` does not match the regular expression `pattern`.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.684095" elapsed="0.000583"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:18.656305" elapsed="0.028440"/>
+</kw>
+<arg>20s</arg>
+<arg>1s</arg>
+<arg>Main Region Should Show Rejection</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.655437" elapsed="0.029350"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.701410" level="INFO">Element 'css:#main_box form#login_form' is displayed.</msg>
+<arg>${FORM}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.684877" elapsed="0.016690"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:18.708464" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.701773" elapsed="0.006848"/>
+</kw>
+<arg>${CASES}[invalid_button]</arg>
+<arg>button</arg>
+<status status="PASS" start="2026-10-26T14:59:18.043902" elapsed="0.664887"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:18.709124" elapsed="2.112797"/>
+</kw>
+<doc>Login form remains visible and main region shows explicit invalid-credentials feedback. No successful authentication. Exact message is TBD; proposed rejection regex is documented.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<tag>server-negative</tag>
+<status status="PASS" start="2026-10-26T14:59:14.894630" elapsed="5.927505"/>
+</test>
+<test id="s1-t19" name="MX-LG-019 Invalid credentials rejected by Enter" line="92">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:20.824440" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:20.823994" elapsed="3.478813"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:24.303214" elapsed="0.024017"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:24.327497" elapsed="0.015525"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:24.348194" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:24.343320" elapsed="0.004986"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:20.823400" elapsed="3.525008"/>
+</kw>
+<kw name="Verify Credential Rejection">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:24.349562" level="INFO">Typing text 'mathx.qa.20261026.5c93d7@example.invalid' into text field 'css:#main_box form#login_form input[name="e"]'.</msg>
+<arg>${IDENTIFIER}</arg>
+<arg>${case}[identifier]</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:24.349276" elapsed="0.088446"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:24.438455" level="INFO">Typing password into text field 'css:#main_box form#login_form input[name="p"]'.</msg>
+<msg time="2026-10-26T14:59:24.465933" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PASSWORD}</arg>
+<arg>${case}[password]</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:24.438070" elapsed="0.070534"/>
+</kw>
+<if>
+<branch type="IF" condition="$method == 'button'">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${SUBMIT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-10-26T14:59:24.509187" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-10-26T14:59:24.508863" elapsed="0.000394"/>
+</branch>
+<branch type="ELSE">
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:24.509792" level="INFO">Sending key(s) ('ENTER',) to css:#main_box form#login_form input[name="p"] element.</msg>
+<msg time="2026-10-26T14:59:24.786486" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-10-26T14:59:24.786598" level="INFO">Releasing special key ENTER.</msg>
+<arg>${PASSWORD}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-10-26T14:59:24.509419" elapsed="0.572815"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:24.509291" elapsed="0.573107"/>
+</branch>
+<status status="PASS" start="2026-10-26T14:59:24.508815" elapsed="0.573653"/>
+</if>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Main Region Should Show Rejection">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:25.110527" level="INFO">${message} = MATHX ĐĂNG NHẬP
+Thông tin đăng nhập không chính xác?
+Email/Username/SĐT *
+Mật khẩu *
+Đăng nhập Quên mật khẩu?     Đăng ký tài khoản</msg>
+<var>${message}</var>
+<arg>css:#main_box</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-10-26T14:59:25.083613" elapsed="0.026982"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${message}</arg>
+<arg>${REJECTION_PATTERN}</arg>
+<doc>Fails if the `string` does not match the regular expression `pattern`.</doc>
+<status status="PASS" start="2026-10-26T14:59:25.110847" elapsed="0.000377"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:25.083241" elapsed="0.028047"/>
+</kw>
+<arg>20s</arg>
+<arg>1s</arg>
+<arg>Main Region Should Show Rejection</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2026-10-26T14:59:25.082684" elapsed="0.028679"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:25.127237" level="INFO">Element 'css:#main_box form#login_form' is displayed.</msg>
+<arg>${FORM}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:25.111454" elapsed="0.015945"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:25.132118" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:25.127652" elapsed="0.004554"/>
+</kw>
+<arg>${CASES}[invalid_enter]</arg>
+<arg>enter</arg>
+<status status="PASS" start="2026-10-26T14:59:24.348819" elapsed="0.783484"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:25.132533" elapsed="2.138289"/>
+</kw>
+<doc>Login form remains visible and main region shows explicit invalid-credentials feedback. No successful authentication. Exact message is TBD; proposed rejection regex is documented.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<tag>server-negative</tag>
+<status status="PASS" start="2026-10-26T14:59:20.822646" elapsed="6.448414"/>
+</test>
+<test id="s1-t20" name="MX-LG-020 Successful login using registered email" line="97">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:27.273205" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:27.272830" elapsed="2.996330"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:30.269419" elapsed="0.019760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:30.289484" elapsed="0.017936"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:30.312879" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:30.307656" elapsed="0.005374"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:27.272281" elapsed="3.040873"/>
+</kw>
+<kw name="Skip" owner="BuiltIn">
+<msg time="2026-10-26T14:59:30.313768" level="SKIP">No authorized account or approved success oracle supplied.</msg>
+<arg>No authorized account or approved success oracle supplied.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="SKIP" start="2026-10-26T14:59:30.313330" elapsed="0.023522">No authorized account or approved success oracle supplied.</status>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:30.337577" elapsed="2.118912"/>
+</kw>
+<doc>Authenticated account identity and destination match approved expectations. TBD – Stakeholder confirmation required.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<tag>requires-account</tag>
+<status status="SKIP" start="2026-10-26T14:59:27.271546" elapsed="5.185166">No authorized account or approved success oracle supplied.</status>
+</test>
+<test id="s1-t21" name="MX-LG-021 Successful login using registered username" line="102">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:32.458813" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:32.458579" elapsed="3.168948"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:35.627854" elapsed="0.023525"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:35.651684" elapsed="0.020414"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:35.677586" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:35.672558" elapsed="0.005147"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:32.458160" elapsed="3.219678"/>
+</kw>
+<kw name="Skip" owner="BuiltIn">
+<msg time="2026-10-26T14:59:35.678538" level="SKIP">No authorized account or approved success oracle supplied.</msg>
+<arg>No authorized account or approved success oracle supplied.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="SKIP" start="2026-10-26T14:59:35.678048" elapsed="0.000602">No authorized account or approved success oracle supplied.</status>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:35.678874" elapsed="2.126814"/>
+</kw>
+<doc>Authenticated account identity and destination match approved expectations. TBD – Stakeholder confirmation required.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<tag>requires-account</tag>
+<status status="SKIP" start="2026-10-26T14:59:32.457371" elapsed="5.348535">No authorized account or approved success oracle supplied.</status>
+</test>
+<test id="s1-t22" name="MX-LG-022 Successful login using registered phone" line="107">
+<kw name="Open MathX Login" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:37.808690" level="INFO">Opening browser 'chrome' to base url 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>chrome</arg>
+<arg>options=add_argument("--headless=new");add_argument("--window-size=1440,1000")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:37.808494" elapsed="3.080306"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORM}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:40.889087" elapsed="0.019657"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${IDENTIFIER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-10-26T14:59:40.908960" elapsed="0.013295"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-10-26T14:59:40.926814" level="INFO">Current location is 'https://mathx.vn/dang-nhap.html'.</msg>
+<arg>${LOGIN_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-10-26T14:59:40.922462" elapsed="0.004437"/>
+</kw>
+<status status="PASS" start="2026-10-26T14:59:37.807903" elapsed="3.119117"/>
+</kw>
+<kw name="Skip" owner="BuiltIn">
+<msg time="2026-10-26T14:59:40.927463" level="SKIP">No authorized account or approved success oracle supplied.</msg>
+<arg>No authorized account or approved success oracle supplied.</arg>
+<doc>Stops the current test or task and sets its status to SKIP.</doc>
+<status status="SKIP" start="2026-10-26T14:59:40.927156" elapsed="0.000375">No authorized account or approved success oracle supplied.</status>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-10-26T14:59:40.927721" elapsed="2.122351"/>
+</kw>
+<doc>Authenticated account identity and destination match approved expectations. TBD – Stakeholder confirmation required.</doc>
+<tag>functional</tag>
+<tag>login</tag>
+<tag>mathx</tag>
+<tag>requires-account</tag>
+<status status="SKIP" start="2026-10-26T14:59:37.806816" elapsed="5.243462">No authorized account or approved success oracle supplied.</status>
+</test>
+<doc>DRAFT - Awaiting System Test Design approval. External MathX login functional assessment.</doc>
+<status status="PASS" start="2026-10-26T14:57:38.243234" elapsed="124.807951"/>
+</suite>
+<statistics>
+<total>
+<stat pass="19" fail="0" skip="3">All Tests</stat>
+</total>
+<tag>
+<stat pass="19" fail="0" skip="3">functional</stat>
+<stat pass="19" fail="0" skip="3">login</stat>
+<stat pass="19" fail="0" skip="3">mathx</stat>
+<stat pass="0" fail="0" skip="3">requires-account</stat>
+<stat pass="2" fail="0" skip="0">server-negative</stat>
+</tag>
+<suite>
+<stat name="Mathx Login" id="s1" pass="19" fail="0" skip="3">Mathx Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

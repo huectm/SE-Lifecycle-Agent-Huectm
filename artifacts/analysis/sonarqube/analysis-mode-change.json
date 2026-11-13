@@ -1,0 +1,9 @@
+{
+  "project": "huectm_SE-Lifecycle-Agent",
+  "key": "sonar.autoscan.enabled",
+  "before": "true",
+  "after": "false",
+  "changedBy": "Stakeholder confirmation in conversation",
+  "agentChangedSetting": false,
+  "restoreRequired": false
+}

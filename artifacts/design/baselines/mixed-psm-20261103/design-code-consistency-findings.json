@@ -1,0 +1,828 @@
+{
+  "date": "2026-11-03",
+  "status": "INCONSISTENCIES_CONFIRMED",
+  "basis": "Current C# semantic symbols, direct Draw.io inspection and manual source-flow review",
+  "summary": {
+    "backendClassifiers": 132,
+    "sourceTypes": 135,
+    "compiledSourceErrors": 0,
+    "workspaceDiagnostics": 0,
+    "sourceInvocations": 620,
+    "classSignatureMismatches": 5,
+    "parameterNameDifferences": 2,
+    "missingSourceTypes": 0,
+    "additionalPublicSourceMethods": 4,
+    "classesWithPropertyDifferences": 2,
+    "classModelToDrawioOperationDifferences": 0,
+    "sequenceTraceToDrawioDifferences": 0,
+    "backendSequenceCallsChecked": 172,
+    "backendMessageSignatureMismatches": 5,
+    "boundInterObjectCallsMatched": 138,
+    "interObjectCallPairsRequiringReview": 3
+  },
+  "findings": [
+    {
+      "id": "DCC-001",
+      "severity": "Medium",
+      "topic": "Class operation signature differs from C#",
+      "evidence": {
+        "class": "CartController",
+        "design": {
+          "text": "+ GetCartAsync(identity: CartIdentityDto, signal: CancellationToken): Task<CartResultDto>",
+          "name": "GetCartAsync",
+          "arity": 0,
+          "parameters": [
+            {
+              "name": "identity",
+              "type": "CartIdentityDto"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "visibility": "+"
+        },
+        "sourceCandidates": [
+          {
+            "name": "GetCartAsync",
+            "arity": 0,
+            "accessibility": "Public",
+            "isStatic": false,
+            "isConstructor": false,
+            "parameters": [
+              {
+                "name": "signal",
+                "type": "CancellationToken",
+                "optional": false,
+                "refKind": "None"
+              }
+            ],
+            "returnType": "Task<CartResultDto>",
+            "file": "src/FreshFood-API/Controllers/CartController.cs",
+            "line": 10
+          }
+        ],
+        "source": "src/FreshFood-API/Controllers/CartController.cs",
+        "line": 6
+      },
+      "impact": "HTTP adapter actions have different route/body parameters. This is diagram/transport-binding drift, not evidence of an invalid C# invocation.",
+      "proposed_resolution": "Reconcile the approved class signature and document HTTP route/body binding while retaining the DTO service contract.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-002",
+      "severity": "Medium",
+      "topic": "Class operation signature differs from C#",
+      "evidence": {
+        "class": "CartController",
+        "design": {
+          "text": "+ ChangeQuantityAsync(request: CartChangeDto, signal: CancellationToken): Task<CartResultDto>",
+          "name": "ChangeQuantityAsync",
+          "arity": 0,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "CartChangeDto"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "returnType": "Task<CartResultDto>",
+          "visibility": "+"
+        },
+        "sourceCandidates": [
+          {
+            "name": "ChangeQuantityAsync",
+            "arity": 0,
+            "accessibility": "Public",
+            "isStatic": false,
+            "isConstructor": false,
+            "parameters": [
+              {
+                "name": "productId",
+                "type": "string",
+                "optional": false,
+                "refKind": "None"
+              },
+              {
+                "name": "request",
+                "type": "CartChangeDto",
+                "optional": false,
+                "refKind": "None"
+              },
+              {
+                "name": "signal",
+                "type": "CancellationToken",
+                "optional": false,
+                "refKind": "None"
+              }
+            ],
+            "returnType": "Task<CartResultDto>",
+            "file": "src/FreshFood-API/Controllers/CartController.cs",
+            "line": 15
+          }
+        ],
+        "source": "src/FreshFood-API/Controllers/CartController.cs",
+        "line": 6
+      },
+      "impact": "HTTP adapter actions have different route/body parameters. This is diagram/transport-binding drift, not evidence of an invalid C# invocation.",
+      "proposed_resolution": "Reconcile the approved class signature and document HTTP route/body binding while retaining the DTO service contract.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-003",
+      "severity": "Medium",
+      "topic": "Class operation signature differs from C#",
+      "evidence": {
+        "class": "MyOrdersController",
+        "design": {
+          "text": "+ CancelOrderAsync(request: CancelOrderDto, signal: CancellationToken): Task<OperationResultDto>",
+          "name": "CancelOrderAsync",
+          "arity": 0,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "CancelOrderDto"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "returnType": "Task<OperationResultDto>",
+          "visibility": "+"
+        },
+        "sourceCandidates": [
+          {
+            "name": "CancelOrderAsync",
+            "arity": 0,
+            "accessibility": "Public",
+            "isStatic": false,
+            "isConstructor": false,
+            "parameters": [
+              {
+                "name": "orderId",
+                "type": "string",
+                "optional": false,
+                "refKind": "None"
+              },
+              {
+                "name": "request",
+                "type": "CancelOrderDto",
+                "optional": false,
+                "refKind": "None"
+              },
+              {
+                "name": "signal",
+                "type": "CancellationToken",
+                "optional": false,
+                "refKind": "None"
+              }
+            ],
+            "returnType": "Task<OperationResultDto>",
+            "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+            "line": 21
+          }
+        ],
+        "source": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+        "line": 6
+      },
+      "impact": "HTTP adapter actions have different route/body parameters. This is diagram/transport-binding drift, not evidence of an invalid C# invocation.",
+      "proposed_resolution": "Reconcile the approved class signature and document HTTP route/body binding while retaining the DTO service contract.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-004",
+      "severity": "Medium",
+      "topic": "Class operation signature differs from C#",
+      "evidence": {
+        "class": "MyOrdersController",
+        "design": {
+          "text": "+ SubmitReviewAsync(request: OrderReviewDto, signal: CancellationToken): Task<OperationResultDto>",
+          "name": "SubmitReviewAsync",
+          "arity": 0,
+          "parameters": [
+            {
+              "name": "request",
+              "type": "OrderReviewDto"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "returnType": "Task<OperationResultDto>",
+          "visibility": "+"
+        },
+        "sourceCandidates": [
+          {
+            "name": "SubmitReviewAsync",
+            "arity": 0,
+            "accessibility": "Public",
+            "isStatic": false,
+            "isConstructor": false,
+            "parameters": [
+              {
+                "name": "orderId",
+                "type": "string",
+                "optional": false,
+                "refKind": "None"
+              },
+              {
+                "name": "request",
+                "type": "OrderReviewDto",
+                "optional": false,
+                "refKind": "None"
+              },
+              {
+                "name": "signal",
+                "type": "CancellationToken",
+                "optional": false,
+                "refKind": "None"
+              }
+            ],
+            "returnType": "Task<OperationResultDto>",
+            "file": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+            "line": 32
+          }
+        ],
+        "source": "src/FreshFood-API/Controllers/MyOrdersController.cs",
+        "line": 6
+      },
+      "impact": "HTTP adapter actions have different route/body parameters. This is diagram/transport-binding drift, not evidence of an invalid C# invocation.",
+      "proposed_resolution": "Reconcile the approved class signature and document HTTP route/body binding while retaining the DTO service contract.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-005",
+      "severity": "Medium",
+      "topic": "Class operation signature differs from C#",
+      "evidence": {
+        "class": "PostgreSqlSession",
+        "design": {
+          "text": "+ QueryAsync(sql: string, parameters: Object[], signal: CancellationToken): Task<List<T>>",
+          "name": "QueryAsync",
+          "arity": 0,
+          "parameters": [
+            {
+              "name": "sql",
+              "type": "string"
+            },
+            {
+              "name": "parameters",
+              "type": "Object[]"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "returnType": "Task<List<T>>",
+          "visibility": "+"
+        },
+        "sourceCandidates": [],
+        "source": "src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.cs",
+        "line": 6
+      },
+      "impact": "The design declares a return containing T but omits the method generic parameter; source declares QueryAsync<T> and object?[] parameters.",
+      "proposed_resolution": "Show QueryAsync<T>(sql: string, parameters: object?[], signal: CancellationToken): Task<List<T>> and the generic constraint.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-006",
+      "severity": "Medium",
+      "topic": "Generic unit-of-work result overload missing from implementation class design",
+      "evidence": {
+        "class": "UnitOfWork",
+        "method": {
+          "name": "ExecuteAsync",
+          "arity": 1,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "work",
+              "type": "Func<CancellationToken, Task<T>>",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<T>",
+          "file": "src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs",
+          "line": 7
+        }
+      },
+      "impact": "Checkout and other services return callback values through ExecuteAsync<T>; the class view currently shows only Task-returning work.",
+      "proposed_resolution": "Show both non-generic and generic overloads; align the implementation-class view with its interface.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-007",
+      "severity": "Medium",
+      "topic": "Address update HTTP action missing from detailed design",
+      "evidence": {
+        "class": "ProfileController",
+        "method": {
+          "name": "UpdateAddressAsync",
+          "arity": 0,
+          "accessibility": "Public",
+          "isStatic": false,
+          "isConstructor": false,
+          "parameters": [
+            {
+              "name": "addressId",
+              "type": "string",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "request",
+              "type": "AddressInputDto",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "returnType": "Task<AddressDto>",
+          "file": "src/FreshFood-API/Controllers/ProfileController.cs",
+          "line": 26
+        }
+      },
+      "impact": "PUT address updates use UpdateAddressAsync(addressId, request, signal), while the diagram exposes SaveAddressAsync only.",
+      "proposed_resolution": "Document the update action or an explicit transport refinement of the SaveAddress use-case operation; do not introduce a new business use case.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-008",
+      "severity": "High",
+      "topic": "Snapshot trust boundary and shape differ",
+      "evidence": {
+        "class": "TransitionSnapshot",
+        "source": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+        "differences": [
+          {
+            "property": "WorkflowNode",
+            "kind": "property type/access/setter differs",
+            "design": "+ WorkflowNode: string {get; set;}",
+            "source": {
+              "name": "WorkflowNode",
+              "type": "string?",
+              "accessibility": "Internal",
+              "setter": "Internal",
+              "isReadOnly": false,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 16
+            }
+          },
+          {
+            "property": "AggregateId",
+            "kind": "property type/access/setter differs",
+            "design": "+ AggregateId: string {get; set;}",
+            "source": {
+              "name": "AggregateId",
+              "type": "string",
+              "accessibility": "Public",
+              "setter": null,
+              "isReadOnly": true,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 11
+            }
+          },
+          {
+            "property": "CheckoutReference",
+            "kind": "design-only property",
+            "design": "+ CheckoutReference: string? {get; set;}"
+          },
+          {
+            "property": "CustomerId",
+            "kind": "property type/access/setter differs",
+            "design": "+ CustomerId: string {get; set;}",
+            "source": {
+              "name": "CustomerId",
+              "type": "string",
+              "accessibility": "Public",
+              "setter": null,
+              "isReadOnly": true,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 12
+            }
+          },
+          {
+            "property": "AddressId",
+            "kind": "design-only property",
+            "design": "+ AddressId: string? {get; set;}"
+          },
+          {
+            "property": "PaymentMethod",
+            "kind": "design-only property",
+            "design": "+ PaymentMethod: PaymentMethod? {get; set;}"
+          },
+          {
+            "property": "PlannedLines",
+            "kind": "design-only property",
+            "design": "+ PlannedLines: List<CheckoutLineDto> {get; set;}"
+          },
+          {
+            "property": "FulfillmentState",
+            "kind": "design-only property",
+            "design": "+ FulfillmentState: string {get; set;}"
+          },
+          {
+            "property": "PaymentState",
+            "kind": "design-only property",
+            "design": "+ PaymentState: string {get; set;}"
+          },
+          {
+            "property": "RefundState",
+            "kind": "design-only property",
+            "design": "+ RefundState: string? {get; set;}"
+          },
+          {
+            "property": "ActorId",
+            "kind": "property type/access/setter differs",
+            "design": "+ ActorId: string {get; set;}",
+            "source": {
+              "name": "ActorId",
+              "type": "string",
+              "accessibility": "Public",
+              "setter": null,
+              "isReadOnly": true,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 13
+            }
+          },
+          {
+            "property": "GuardFacts",
+            "kind": "design-only property",
+            "design": "+ GuardFacts: GuardFactsDto {get; set;}"
+          },
+          {
+            "property": "Order",
+            "kind": "source-only property",
+            "source": {
+              "name": "Order",
+              "type": "Order",
+              "accessibility": "Internal",
+              "setter": null,
+              "isReadOnly": true,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 14
+            }
+          },
+          {
+            "property": "Batches",
+            "kind": "source-only property",
+            "source": {
+              "name": "Batches",
+              "type": "List<BatchInventory>",
+              "accessibility": "Internal",
+              "setter": null,
+              "isReadOnly": true,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 15
+            }
+          },
+          {
+            "property": "PaymentInitialized",
+            "kind": "source-only property",
+            "source": {
+              "name": "PaymentInitialized",
+              "type": "bool",
+              "accessibility": "Internal",
+              "setter": "Internal",
+              "isReadOnly": false,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 17
+            }
+          },
+          {
+            "property": "Initial",
+            "kind": "source-only property",
+            "source": {
+              "name": "Initial",
+              "type": "bool",
+              "accessibility": "Internal",
+              "setter": null,
+              "isReadOnly": true,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 18
+            }
+          },
+          {
+            "property": "FulfillmentCompleted",
+            "kind": "source-only property",
+            "source": {
+              "name": "FulfillmentCompleted",
+              "type": "bool",
+              "accessibility": "Internal",
+              "setter": "Internal",
+              "isReadOnly": false,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 19
+            }
+          },
+          {
+            "property": "VerifiedPayment",
+            "kind": "source-only property",
+            "source": {
+              "name": "VerifiedPayment",
+              "type": "bool",
+              "accessibility": "Internal",
+              "setter": "Internal",
+              "isReadOnly": false,
+              "file": "src/FreshFood-API/DTOs/TransitionSnapshot.cs",
+              "line": 20
+            }
+          }
+        ]
+      },
+      "impact": "The design shows mutable/public and obsolete snapshot fields, but source uses an internal constructor, read-only identities, an Order reference, Batches and internal execution flags.",
+      "proposed_resolution": "Review a server-only context model with accurate visibility and constructor; retain the trusted creation boundary rather than exposing setters to satisfy the old diagram.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-009",
+      "severity": "Low",
+      "topic": "Order detail projection members are undocumented",
+      "evidence": {
+        "class": "OrderDetail",
+        "source": "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+        "differences": [
+          {
+            "property": "ProductId",
+            "kind": "source-only property",
+            "source": {
+              "name": "ProductId",
+              "type": "string",
+              "accessibility": "Public",
+              "setter": "Public",
+              "isReadOnly": false,
+              "file": "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+              "line": 49
+            }
+          },
+          {
+            "property": "ProductName",
+            "kind": "source-only property",
+            "source": {
+              "name": "ProductName",
+              "type": "string",
+              "accessibility": "Public",
+              "setter": "Public",
+              "isReadOnly": false,
+              "file": "src/FreshFood.Reposistory/Entities/DomainBehavior.cs",
+              "line": 50
+            }
+          }
+        ]
+      },
+      "impact": "ProductId and ProductName are materialized join projections in the partial entity; they are absent from the detailed class attributes.",
+      "proposed_resolution": "Record derived read-projection attributes and their query provenance; do not add database columns.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-010",
+      "severity": "Low",
+      "topic": "State-machine parameter names differ",
+      "evidence": [
+        {
+          "class": "IOrderStateMachine",
+          "method": "ProcessEventAsync",
+          "designParameters": [
+            {
+              "name": "snapshot",
+              "type": "TransitionSnapshot"
+            },
+            {
+              "name": "event",
+              "type": "StateMachineEvent"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "sourceParameters": [
+            {
+              "name": "snapshot",
+              "type": "TransitionSnapshot",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "message",
+              "type": "StateMachineEvent",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "source": "src/FreshFood-API/Services/IOrderStateMachine.cs",
+          "line": 5
+        },
+        {
+          "class": "OrderStateMachine",
+          "method": "ProcessEventAsync",
+          "designParameters": [
+            {
+              "name": "snapshot",
+              "type": "TransitionSnapshot"
+            },
+            {
+              "name": "event",
+              "type": "StateMachineEvent"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken"
+            }
+          ],
+          "sourceParameters": [
+            {
+              "name": "context",
+              "type": "TransitionSnapshot",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "message",
+              "type": "StateMachineEvent",
+              "optional": false,
+              "refKind": "None"
+            },
+            {
+              "name": "signal",
+              "type": "CancellationToken",
+              "optional": false,
+              "refKind": "None"
+            }
+          ],
+          "source": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+          "line": 89
+        }
+      ],
+      "impact": "Types match, but design snapshot/event and source context/message names are inconsistent.",
+      "proposed_resolution": "Use consistent parameter names across IOrderStateMachine, OrderStateMachine, class specifications and message notation.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-011",
+      "severity": "Medium",
+      "topic": "Sequence contains a repository call absent from the source flow",
+      "evidence": {
+        "useCase": "UC-C05",
+        "pageTitle": "SaveAddress",
+        "number": 7,
+        "sender": "ProfileService",
+        "receiver": "ProfileRepository",
+        "message": "GetCustomerAsync(customerId, signal)",
+        "method": "GetCustomerAsync",
+        "arguments": [
+          "customerId",
+          "signal"
+        ],
+        "httpBoundary": false,
+        "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+        "page": 3,
+        "callerMethodContext": "SaveAddressAsync",
+        "reason": "no bound source call found in the corresponding method or same-class helpers"
+      },
+      "impact": "ProfileService does not call GetCustomerAsync from this operation or its same-class helper chain. Ownership is checked through the trusted customer and owned-address queries.",
+      "proposed_resolution": "Reconcile this message with the approved responsibility flow; do not add redundant database access merely to satisfy the diagram.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-012",
+      "severity": "Medium",
+      "topic": "Sequence contains a repository call absent from the source flow",
+      "evidence": {
+        "useCase": "UC-C05",
+        "pageTitle": "DeleteAddress",
+        "number": 7,
+        "sender": "ProfileService",
+        "receiver": "ProfileRepository",
+        "message": "GetCustomerAsync(customerId, signal)",
+        "method": "GetCustomerAsync",
+        "arguments": [
+          "customerId",
+          "signal"
+        ],
+        "httpBoundary": false,
+        "master": "artifacts/diagrams/sequence/uc-c05-profile-addresses-design-sequence.drawio",
+        "page": 5,
+        "callerMethodContext": "DeleteAddressAsync",
+        "reason": "no bound source call found in the corresponding method or same-class helpers"
+      },
+      "impact": "ProfileService does not call GetCustomerAsync from this operation or its same-class helper chain. Ownership is checked through the trusted customer and owned-address queries.",
+      "proposed_resolution": "Reconcile this message with the approved responsibility flow; do not add redundant database access merely to satisfy the diagram.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-013",
+      "severity": "High",
+      "topic": "QR interaction is designed but not enabled in the current implementation",
+      "evidence": {
+        "useCase": "UC-C06",
+        "pageTitle": "CreatePaymentQr",
+        "number": 7,
+        "sender": "CheckoutService",
+        "receiver": "SePayPaymentAdapter",
+        "message": "CreateQrAsync(reference, amount, signal)",
+        "method": "CreateQrAsync",
+        "arguments": [
+          "reference",
+          "amount",
+          "signal"
+        ],
+        "httpBoundary": false,
+        "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+        "page": 3,
+        "callerMethodContext": "CreatePaymentQrAsync",
+        "reason": "no bound source call found in the corresponding method or same-class helpers"
+      },
+      "impact": "The sequence calls SePayPaymentAdapter.CreateQrAsync, but CheckoutService.CreatePaymentQrAsync throws PRE_ACCEPTANCE_PAYMENT_CORRELATION_TBD (503) before any gateway call. This is an existing deferred integration, not a new payment policy decision.",
+      "proposed_resolution": "Mark the current implementation limitation explicitly in the sequence; enable the intended path only after the upstream correlation contract is resolved and approved.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-014",
+      "severity": "Medium",
+      "topic": "PrepareCheckout omits mapped pricing and allocation collaborations",
+      "evidence": {
+        "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+        "page": 1,
+        "source": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+        "line": 40
+      },
+      "impact": "Source PrepareCheckoutAsync calls Allocate, which invokes CheckoutRepository.LockFefoBatchesAsync and BatchPricingPolicy.Quote. The sequence represents the summary as a local computation and omits both collaborator messages.",
+      "proposed_resolution": "Expand the design sequence or add a linked allocation refinement covering repository access and batch pricing.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-015",
+      "severity": "Low",
+      "topic": "State-machine refinement shows an extra early CurrentState call",
+      "evidence": {
+        "masters": [
+          "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+          "artifacts/diagrams/sequence/uc-c07-my-orders-design-sequence.drawio"
+        ],
+        "pages": [
+          6,
+          7
+        ],
+        "source": "src/FreshFood-API/Services/Implements/OrderStateMachine.cs",
+        "lines": [
+          97,
+          98
+        ]
+      },
+      "impact": "Both refinements call CurrentState before table lookup and after processing. Source ProcessEventAsync uses private State/Process evaluation and calls CurrentState when constructing its final result.",
+      "proposed_resolution": "Align message order with the approved control responsibility; distinguish private state resolution from the public CurrentState result operation.",
+      "status": "Open for technical review"
+    },
+    {
+      "id": "DCC-016",
+      "severity": "Medium",
+      "topic": "Main checkout notification guard is broader than source replay behavior",
+      "evidence": {
+        "master": "artifacts/diagrams/sequence/uc-c06-checkout-design-sequence.drawio",
+        "page": 2,
+        "message": 36,
+        "source": "src/FreshFood-API/Services/Implements/CheckoutService.cs",
+        "line": 111
+      },
+      "impact": "The main sequence uses a commit-succeeded notification guard. Source additionally requires !result.Replay. The separate replay refinement correctly skips notifications, so the main view needs an explicit cross-reference/guard.",
+      "proposed_resolution": "Clarify that post-commit notification occurs for a newly accepted order only; preserve idempotent replay behavior.",
+      "status": "Open for technical review"
+    }
+  ],
+  "limitations": [
+    "Frontend implementations remain outside the C# backend scope; their messages were checked against the design only.",
+    "HTTP operation labels may abstract route/body binding. Such adaptation must be documented, not treated as a CLR call failure.",
+    "The automated call check establishes name/signature and same-class-helper reachability, not exhaustive branch, timing, exception or dynamic execution equivalence.",
+    "Differences in categories can refer to the same underlying defect; category counts must not be summed as independent findings."
+  ],
+  "source_and_design_modified": false
+}

@@ -1,0 +1,966 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="SE-Lifecycle-Agent" version="24.7.17">
+  <diagram id="uc-c03-manage-cart-design-classes-1" name="01 VOPC to Detailed Design Realization">
+    <mxGraphModel grid="1" page="1" pageWidth="5900" pageHeight="2430" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C03 - VOPC to Detailed Design Realization&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="5820" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="5820" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CartPage" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CartPage&lt;/b&gt;&lt;br&gt;VOPC: CartView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- api: CartApiClient&lt;br&gt;- state: CartResultDto?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Render(): ReactNode&lt;br&gt;+ OnGetCartAsync(identity: CartIdentityDto):&lt;br&gt;Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CartView" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CartView&lt;/b&gt;&lt;br&gt;VOPC: CartView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- model: CartViewModel&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Build(): Widget&lt;br&gt;+ OnGetCart(identity: CartIdentityDto):&lt;br&gt;Future&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="775" width="500" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="CartApiClient" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CartApiClient&lt;/b&gt;&lt;br&gt;VOPC: CartView&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto):&lt;br&gt;Promise&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request:&lt;br&gt;CartChangeDto): Promise&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="980" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CartViewModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;viewmodel&amp;gt;&amp;gt;&lt;br&gt;CartViewModel&lt;/b&gt;&lt;br&gt;VOPC: CartView&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- api: CartApiModel&lt;br&gt;- state: CartResultDto?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto):&lt;br&gt;Future&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request:&lt;br&gt;CartChangeDto): Future&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="980" y="775" width="500" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="CartApiModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CartApiModel&lt;/b&gt;&lt;br&gt;VOPC: CartView&lt;br&gt;Design: Adapter&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto):&lt;br&gt;Future&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request:&lt;br&gt;CartChangeDto): Future&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="980" y="1380" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CartController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CartController&lt;/b&gt;&lt;br&gt;VOPC: CartController&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- service: ICartService {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CartController(service: ICartService)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto,&lt;br&gt;signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1840" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="ICartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICartService&lt;/b&gt;&lt;br&gt;VOPC: CartService&lt;br&gt;Design: Backend DI contract&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto,&lt;br&gt;signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request:&lt;br&gt;CartChangeDto, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1840" y="775" width="500" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="CartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;CartService&lt;/b&gt;&lt;br&gt;VOPC: CartService&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- cartRepository: ICartRepository {get;&lt;br&gt;set;}&lt;br&gt;- currentCustomer: ICurrentCustomer {get;&lt;br&gt;set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CartService(cartRepository:&lt;br&gt;ICartRepository, currentCustomer:&lt;br&gt;ICurrentCustomer, unitOfWork: IUnitOfWork,&lt;br&gt;pricing: IBatchPricingPolicy)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto,&lt;br&gt;signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1840" y="1350" width="500" height="465" as="geometry" />
+        </mxCell>
+        <mxCell id="ICartRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICartRepository&lt;/b&gt;&lt;br&gt;VOPC: CartService&lt;br&gt;Design: Repository&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ GetAsync(customerId: string?, sessionId:&lt;br&gt;string?, signal: CancellationToken):&lt;br&gt;Task&amp;lt;Cart&amp;gt;&lt;br&gt;+ GetProductsAsync(ids: List&amp;lt;string&amp;gt;,&lt;br&gt;signal: CancellationToken):&lt;br&gt;Task&amp;lt;List&amp;lt;Product&amp;gt;&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2700" y="190" width="500" height="335" as="geometry" />
+        </mxCell>
+        <mxCell id="CartRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;CartRepository&lt;/b&gt;&lt;br&gt;VOPC: CartService&lt;br&gt;Design: Repository&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;- session: IRepositorySession {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CartRepository(session:&lt;br&gt;IRepositorySession)&lt;br&gt;+ GetAsync(customerId: string?, sessionId:&lt;br&gt;string?, signal: CancellationToken):&lt;br&gt;Task&amp;lt;Cart&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2700" y="765" width="500" height="365" as="geometry" />
+        </mxCell>
+        <mxCell id="Cart" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Cart&lt;/b&gt;&lt;br&gt;VOPC: Cart&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CartId: string {get; set;}&lt;br&gt;+ CustomerId: string {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ChangeQuantity(productId: string,&lt;br&gt;quantity: int): void&lt;br&gt;+ RemoveItem(productId: string): void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="3560" y="190" width="500" height="345" as="geometry" />
+        </mxCell>
+        <mxCell id="CartItem" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;CartItem&lt;/b&gt;&lt;br&gt;VOPC: CartItem&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CartItemId: string {get; set;}&lt;br&gt;+ CartId: string {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="3560" y="775" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="Product" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Product&lt;/b&gt;&lt;br&gt;VOPC: Product&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProductId: string {get; set;}&lt;br&gt;+ CategoryId: int {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="3560" y="1270" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchInventory" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;BatchInventory&lt;/b&gt;&lt;br&gt;VOPC: BatchInventory&lt;br&gt;Refined responsibility&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ BatchId: string {get; set;}&lt;br&gt;+ ProductId: string {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Reserve(quantity: int): void&lt;br&gt;+ ReleaseReservation(quantity: int): void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="3560" y="1765" width="500" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="IUnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IUnitOfWork&lt;/b&gt;&lt;br&gt;VOPC: design support&lt;br&gt;Design: Unit of Work / transaction boundary&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ExecuteAsync(work: Func&amp;lt;CancellationToken,&lt;br&gt;Task&amp;gt;, signal: CancellationToken): Task&lt;br&gt;+ ExecuteAsync&amp;lt;T&amp;gt;(work:&lt;br&gt;Func&amp;lt;CancellationToken, Task&amp;lt;T&amp;gt;&amp;gt;, signal:&lt;br&gt;CancellationToken): Task&amp;lt;T&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="4420" y="190" width="500" height="315" as="geometry" />
+        </mxCell>
+        <mxCell id="ICurrentCustomer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICurrentCustomer&lt;/b&gt;&lt;br&gt;VOPC: design support&lt;br&gt;Design: Backend DI contract&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ RequireCustomerId(): string&lt;br&gt;+ GetCartIdentity(): CartIdentityDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="4420" y="745" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="IBatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IBatchPricingPolicy&lt;/b&gt;&lt;br&gt;VOPC: CartService&lt;br&gt;Design: DI / pricing domain policy&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Quote(batch: BatchInventory, asOf:&lt;br&gt;DateTimeOffset): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="4420" y="1240" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;policy&amp;gt;&amp;gt;&lt;br&gt;BatchPricingPolicy&lt;/b&gt;&lt;br&gt;VOPC: CartService&lt;br&gt;Design: Domain policy&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Quote(batch: BatchInventory, asOf:&lt;br&gt;DateTimeOffset): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="4420" y="1735" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="CartIdentityDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartIdentityDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ CustomerId: string? {get; set;}&lt;br&gt;+ SessionId: string? {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="5280" y="190" width="500" height="286" as="geometry" />
+        </mxCell>
+        <mxCell id="CartChangeDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartChangeDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProductId: string {get; set;}&lt;br&gt;+ Quantity: int {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="5280" y="716" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="CartResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartResultDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ Lines: List&amp;lt;CartLineDto&amp;gt; {get; set;}&lt;br&gt;+ SubTotal: string {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="5280" y="1216" width="500" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="CartLineDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartLineDto&lt;/b&gt;&lt;br&gt;VOPC: design data contract&lt;br&gt;Design: DTO / API boundary data&lt;br&gt;&lt;i&gt;Member excerpt; full detail views follow&lt;/i&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:20px&quot;&gt;+ ProductId: string {get; set;}&lt;br&gt;+ Quantity: int {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=14;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="5280" y="1716" width="500" height="255" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CartPage" target="CartApiClient" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="259.0" />
+              <mxPoint x="652" y="362.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CartApiClient" target="CartController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1512" y="259.0" />
+              <mxPoint x="1512" y="362.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CartController" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2006.6666666666667" y="743" />
+              <mxPoint x="2090.0" y="743" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CartView" target="CartViewModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="856.25" />
+              <mxPoint x="652" y="957.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="CartViewModel" target="CartApiModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230.0" y="1348" />
+              <mxPoint x="1146.6666666666667" y="1348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="CartApiModel" target="CartController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.6666666666666666;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1313.3333333333333" y="1348" />
+              <mxPoint x="1808" y="1348" />
+              <mxPoint x="1808" y="567" />
+              <mxPoint x="2173.3333333333335" y="567" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="CartService" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2006.6666666666667" y="1142" />
+              <mxPoint x="2090.0" y="1142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="CartRepository" target="ICartRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.2;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2950.0" y="557" />
+              <mxPoint x="2800.0" y="557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="CartService" target="ICartRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=0;entryX=0.4;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2173.3333333333335" y="1318" />
+              <mxPoint x="2668" y="1318" />
+              <mxPoint x="2668" y="564" />
+              <mxPoint x="2900.0" y="564" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="CartService" target="ICurrentCustomer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.09090909090909091;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2372" y="1392.2727272727273" />
+              <mxPoint x="2372" y="1152" />
+              <mxPoint x="4388" y="1152" />
+              <mxPoint x="4388" y="872.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="CartService" target="IUnitOfWork" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.18181818181818182;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3528" y="1434.5454545454545" />
+              <mxPoint x="3528" y="557" />
+              <mxPoint x="4388" y="557" />
+              <mxPoint x="4388" y="347.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="CartService" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.2727272727272727;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2372" y="1476.8181818181818" />
+              <mxPoint x="2372" y="1555" />
+              <mxPoint x="4388" y="1555" />
+              <mxPoint x="4388" y="1325.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e13" value="" edge="1" parent="1" source="Cart" target="CartItem" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" edge="1" parent="1" source="Product" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.25;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3810.0" y="1733" />
+              <mxPoint x="3685.0" y="1733" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="" edge="1" parent="1" source="BatchPricingPolicy" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e16" value="" edge="1" parent="1" source="CartRepository" target="Cart" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3232" y="856.25" />
+              <mxPoint x="3232" y="276.25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e17" value="" edge="1" parent="1" source="CartRepository" target="CartItem" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3232" y="947.5" />
+              <mxPoint x="3232" y="860.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e18" value="" edge="1" parent="1" source="CartRepository" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3232" y="1038.75" />
+              <mxPoint x="3232" y="1355.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="" edge="1" parent="1" source="CartRepository" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2950.0" y="1162" />
+              <mxPoint x="4092" y="1162" />
+              <mxPoint x="4092" y="1733" />
+              <mxPoint x="3810.0" y="1733" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="" edge="1" parent="1" source="CartItem" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.3333333333333333;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3810.0" y="1238" />
+              <mxPoint x="3726.6666666666665" y="1238" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="" edge="1" parent="1" source="CartPage" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.4;entryX=0;entryY=0.1111111111111111;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="948" y="328.0" />
+              <mxPoint x="948" y="715" />
+              <mxPoint x="5248" y="715" />
+              <mxPoint x="5248" y="744.8888888888889" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e22" value="" edge="1" parent="1" source="CartPage" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6;entryX=0;entryY=0.1;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="397.0" />
+              <mxPoint x="920" y="158" />
+              <mxPoint x="5248" y="158" />
+              <mxPoint x="5248" y="218.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e23" value="" edge="1" parent="1" source="CartPage" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8;entryX=0;entryY=0.125;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="652" y="466.0" />
+              <mxPoint x="652" y="713" />
+              <mxPoint x="5220" y="713" />
+              <mxPoint x="5220" y="1248.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e24" value="" edge="1" parent="1" source="CartView" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.2222222222222222;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="920" y="937.5" />
+              <mxPoint x="920" y="705" />
+              <mxPoint x="5192" y="705" />
+              <mxPoint x="5192" y="773.7777777777778" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e25" value="" edge="1" parent="1" source="CartView" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.2;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="892" y="1018.75" />
+              <mxPoint x="892" y="572" />
+              <mxPoint x="5248" y="572" />
+              <mxPoint x="5248" y="247.2" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e26" value="" edge="1" parent="1" source="CartApiClient" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.4;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1780" y="328.0" />
+              <mxPoint x="1780" y="687" />
+              <mxPoint x="5164" y="687" />
+              <mxPoint x="5164" y="802.6666666666666" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e27" value="" edge="1" parent="1" source="CartApiClient" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6;entryX=0;entryY=0.3;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1808" y="397.0" />
+              <mxPoint x="1808" y="145" />
+              <mxPoint x="5220" y="145" />
+              <mxPoint x="5220" y="275.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e28" value="" edge="1" parent="1" source="CartApiClient" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1512" y="466.0" />
+              <mxPoint x="1512" y="1218" />
+              <mxPoint x="5248" y="1218" />
+              <mxPoint x="5248" y="1281.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e29" value="" edge="1" parent="1" source="CartViewModel" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.4444444444444444;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1752" y="866.25" />
+              <mxPoint x="1752" y="685" />
+              <mxPoint x="5136" y="685" />
+              <mxPoint x="5136" y="831.5555555555555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e30" value="" edge="1" parent="1" source="CartViewModel" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.4;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1724" y="957.5" />
+              <mxPoint x="1724" y="585" />
+              <mxPoint x="5220" y="585" />
+              <mxPoint x="5220" y="304.4" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e31" value="" edge="1" parent="1" source="CartViewModel" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.375;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1780" y="1048.75" />
+              <mxPoint x="1780" y="1216" />
+              <mxPoint x="5192" y="1216" />
+              <mxPoint x="5192" y="1313.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e32" value="" edge="1" parent="1" source="CartApiModel" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.5555555555555556;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1752" y="1466.25" />
+              <mxPoint x="1752" y="1170" />
+              <mxPoint x="5248" y="1170" />
+              <mxPoint x="5248" y="860.4444444444445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e33" value="" edge="1" parent="1" source="CartApiModel" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1724" y="1552.5" />
+              <mxPoint x="1724" y="1172" />
+              <mxPoint x="5064" y="1172" />
+              <mxPoint x="5064" y="333.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e34" value="" edge="1" parent="1" source="CartApiModel" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1696" y="1638.75" />
+              <mxPoint x="1696" y="1210" />
+              <mxPoint x="5164" y="1210" />
+              <mxPoint x="5164" y="1346.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e35" value="" edge="1" parent="1" source="CartController" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2372" y="276.25" />
+              <mxPoint x="2372" y="684" />
+              <mxPoint x="5036" y="684" />
+              <mxPoint x="5036" y="889.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e36" value="" edge="1" parent="1" source="CartController" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.6;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2640" y="362.5" />
+              <mxPoint x="2640" y="565" />
+              <mxPoint x="5192" y="565" />
+              <mxPoint x="5192" y="361.6" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e37" value="" edge="1" parent="1" source="CartController" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.625;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2612" y="448.75" />
+              <mxPoint x="2612" y="1208" />
+              <mxPoint x="5136" y="1208" />
+              <mxPoint x="5136" y="1378.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e38" value="" edge="1" parent="1" source="ICartService" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.7777777777777778;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2640" y="858.75" />
+              <mxPoint x="2640" y="679" />
+              <mxPoint x="5008" y="679" />
+              <mxPoint x="5008" y="918.2222222222222" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e39" value="" edge="1" parent="1" source="ICartService" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.7;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2584" y="942.5" />
+              <mxPoint x="2584" y="567" />
+              <mxPoint x="5164" y="567" />
+              <mxPoint x="5164" y="390.2" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e40" value="" edge="1" parent="1" source="ICartService" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2640" y="1026.25" />
+              <mxPoint x="2640" y="1206" />
+              <mxPoint x="5064" y="1206" />
+              <mxPoint x="5064" y="1411.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e41" value="" edge="1" parent="1" source="CartService" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.36363636363636365;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3528" y="1519.090909090909" />
+              <mxPoint x="3528" y="1927.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e42" value="" edge="1" parent="1" source="CartService" target="Cart" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.45454545454545453;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3500" y="1561.3636363636363" />
+              <mxPoint x="3500" y="362.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e43" value="" edge="1" parent="1" source="CartService" target="CartItem" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5454545454545454;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3472" y="1603.6363636363635" />
+              <mxPoint x="3472" y="945.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e44" value="" edge="1" parent="1" source="CartService" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6363636363636364;entryX=0;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3444" y="1645.909090909091" />
+              <mxPoint x="3444" y="1440.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e45" value="" edge="1" parent="1" source="CartService" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.7272727272727273;entryX=0;entryY=0.8888888888888888;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="5036" y="1688.1818181818182" />
+              <mxPoint x="5036" y="947.1111111111111" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e46" value="" edge="1" parent="1" source="CartService" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.8181818181818182;entryX=0;entryY=0.8;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2372" y="1730.4545454545455" />
+              <mxPoint x="2372" y="1647" />
+              <mxPoint x="4980" y="1647" />
+              <mxPoint x="4980" y="418.8" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e47" value="" edge="1" parent="1" source="CartService" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.9090909090909091;entryX=0;entryY=0.875;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3500" y="1772.7272727272727" />
+              <mxPoint x="3500" y="1703" />
+              <mxPoint x="5248" y="1703" />
+              <mxPoint x="5248" y="1443.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e48" value="" edge="1" parent="1" source="ICartRepository" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6;exitY=1;entryX=0.75;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3000.0" y="557" />
+              <mxPoint x="3416" y="557" />
+              <mxPoint x="3416" y="1557" />
+              <mxPoint x="3935.0" y="1557" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e49" value="" edge="1" parent="1" source="ICartRepository" target="Cart" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.75;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3528" y="357.5" />
+              <mxPoint x="3528" y="448.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e50" value="" edge="1" parent="1" source="ICartRepository" target="Product" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.8;exitY=1;entryX=0.6666666666666666;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3100.0" y="743" />
+              <mxPoint x="3444" y="743" />
+              <mxPoint x="3444" y="1236" />
+              <mxPoint x="3893.3333333333335" y="1236" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e51" value="" edge="1" parent="1" source="ICurrentCustomer" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.9;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4952" y="872.5" />
+              <mxPoint x="4952" y="447.40000000000003" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e52" value="" edge="1" parent="1" source="IBatchPricingPolicy" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4120" y="1410.0" />
+              <mxPoint x="4120" y="1873.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e53" value="" edge="1" parent="1" source="BatchPricingPolicy" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="4388" y="1862.5" />
+              <mxPoint x="4388" y="1981.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e54" value="" edge="1" parent="1" source="CartResultDto" target="CartLineDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1617.0" y="286.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label6" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="1644.0" y="1098.7" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label13" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="3832.0" y="640.0" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label14" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="3832.0" y="1572.4" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication. VOPC origin and applied solution are tagged on each classifier; full attributes/operations are in subsequent detail views." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2340" width="5780" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c03-manage-cart-design-classes-2" name="02 Web View Classes">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1622" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C03 - Web View Classes&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CartPage" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CartPage&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- api: CartApiClient&lt;br&gt;- state: CartResultDto?&lt;br&gt;- isBusy: boolean&lt;br&gt;- errorCode: string?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Render(): ReactNode&lt;br&gt;+ OnGetCartAsync(identity: CartIdentityDto): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ OnChangeQuantityAsync(request: CartChangeDto): Promise&amp;lt;void&amp;gt;&lt;br&gt;+ OnRemoveItemAsync(productId: EntityId): Promise&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CartController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CartController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICartService {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartController(service: ICartService)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CartApiClient" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CartApiClient&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto):&lt;br&gt;Promise&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto):&lt;br&gt;Promise&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: EntityId): Promise&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="879" width="680" height="323" as="geometry" />
+        </mxCell>
+        <mxCell id="ICartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICartService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="879" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CartPage" target="CartApiClient" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CartApiClient" target="CartController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1040.5" />
+              <mxPoint x="832" y="374.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CartController" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="854.0" y="692.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1532" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c03-manage-cart-design-classes-3" name="03 Mobile View Classes">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1668" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C03 - Mobile View Classes&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CartView" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;CartView&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- model: CartViewModel&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Build(): Widget&lt;br&gt;+ OnGetCart(identity: CartIdentityDto): Future&amp;lt;void&amp;gt;&lt;br&gt;+ OnChangeQuantity(request: CartChangeDto): Future&amp;lt;void&amp;gt;&lt;br&gt;+ OnRemoveItem(productId: EntityId): Future&amp;lt;void&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F3E5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="CartViewModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;viewmodel&amp;gt;&amp;gt;&lt;br&gt;CartViewModel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- api: CartApiModel&lt;br&gt;- state: CartResultDto?&lt;br&gt;- isBusy: bool&lt;br&gt;- errorCode: string?&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto): Future&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto):&lt;br&gt;Future&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: EntityId): Future&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CartApiModel" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;adapter&amp;gt;&amp;gt;&lt;br&gt;CartApiModel&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- http: HttpTransport&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto): Future&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto):&lt;br&gt;Future&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: EntityId): Future&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="879" width="680" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="CartController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CartController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICartService {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartController(service: ICartService)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="879" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CartView" target="CartViewModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="340.0" />
+              <mxPoint x="832" y="313.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CartViewModel" target="CartApiModel" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="436.0" />
+              <mxPoint x="1128" y="979.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CartApiModel" target="CartController" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1079.0" />
+              <mxPoint x="832" y="1063.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" value="HTTPS / JSON" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="937.0" y="1011.5" width="118" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1578" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c03-manage-cart-design-classes-4" name="04 Application Services and Constructor Injection">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2373" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C03 - Application Services and Constructor Injection&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CartController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CartController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICartService {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartController(service: ICartService)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="ICartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICartService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="CartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;CartService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- cartRepository: ICartRepository {get; set;}&lt;br&gt;- currentCustomer: ICurrentCustomer {get; set;}&lt;br&gt;- unitOfWork: IUnitOfWork {get; set;}&lt;br&gt;- pricing: IBatchPricingPolicy {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartService(cartRepository: ICartRepository, currentCustomer:&lt;br&gt;ICurrentCustomer, unitOfWork: IUnitOfWork, pricing:&lt;br&gt;IBatchPricingPolicy)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="484" as="geometry" />
+        </mxCell>
+        <mxCell id="ICartRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICartRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetAsync(customerId: string?, sessionId: string?, signal:&lt;br&gt;CancellationToken): Task&amp;lt;Cart&amp;gt;&lt;br&gt;+ GetProductsAsync(ids: List&amp;lt;string&amp;gt;, signal:&lt;br&gt;CancellationToken): Task&amp;lt;List&amp;lt;Product&amp;gt;&amp;gt;&lt;br&gt;+ GetSellableBatchesAsync(ids: List&amp;lt;string&amp;gt;, signal:&lt;br&gt;CancellationToken): Task&amp;lt;List&amp;lt;BatchInventory&amp;gt;&amp;gt;&lt;br&gt;+ SaveAsync(cart: Cart, signal: CancellationToken): Task&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="994" width="680" height="316" as="geometry" />
+        </mxCell>
+        <mxCell id="CartRepository" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;repository&amp;gt;&amp;gt;&lt;br&gt;CartRepository&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- session: IRepositorySession {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartRepository(session: IRepositorySession)&lt;br&gt;+ GetAsync(customerId: string?, sessionId: string?, signal:&lt;br&gt;CancellationToken): Task&amp;lt;Cart&amp;gt;&lt;br&gt;+ GetProductsAsync(ids: List&amp;lt;string&amp;gt;, signal:&lt;br&gt;CancellationToken): Task&amp;lt;List&amp;lt;Product&amp;gt;&amp;gt;&lt;br&gt;+ GetSellableBatchesAsync(ids: List&amp;lt;string&amp;gt;, signal:&lt;br&gt;CancellationToken): Task&amp;lt;List&amp;lt;BatchInventory&amp;gt;&amp;gt;&lt;br&gt;+ SaveAsync(cart: Cart, signal: CancellationToken): Task&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="994" width="680" height="392" as="geometry" />
+        </mxCell>
+        <mxCell id="ICurrentCustomer" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICurrentCustomer&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ RequireCustomerId(): string&lt;br&gt;+ GetCartIdentity(): CartIdentityDto&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="994" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="IUnitOfWork" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IUnitOfWork&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ExecuteAsync(work: Func&amp;lt;CancellationToken, Task&amp;gt;, signal:&lt;br&gt;CancellationToken): Task&lt;br&gt;+ ExecuteAsync&amp;lt;T&amp;gt;(work: Func&amp;lt;CancellationToken, Task&amp;lt;T&amp;gt;&amp;gt;,&lt;br&gt;signal: CancellationToken): Task&amp;lt;T&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1706" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="IBatchPricingPolicy" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;IBatchPricingPolicy&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Quote(batch: BatchInventory, asOf: DateTimeOffset): VndAmount&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="1706" width="680" height="178" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CartController" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="374.5" />
+              <mxPoint x="832" y="336.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CartService" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.25;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="311.0" />
+              <mxPoint x="2168" y="336.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CartRepository" target="ICartRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="1190.0" />
+              <mxPoint x="1128" y="1099.3333333333333" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CartService" target="ICartRepository" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="432.0" />
+              <mxPoint x="2168" y="962" />
+              <mxPoint x="832" y="962" />
+              <mxPoint x="832" y="1204.6666666666667" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="CartService" target="ICurrentCustomer" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.3333333333333333;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2426.6666666666665" y="962" />
+              <mxPoint x="2540.0" y="962" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="CartService" target="IUnitOfWork" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.75;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="553.0" />
+              <mxPoint x="860" y="1829.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="CartService" target="IBatchPricingPolicy" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.6666666666666666;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2653.3333333333335" y="706" />
+              <mxPoint x="1872" y="706" />
+              <mxPoint x="1872" y="1674" />
+              <mxPoint x="1500.0" y="1674" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2283" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c03-manage-cart-design-classes-5" name="05 Participating Entities 1">
+    <mxGraphModel grid="1" page="1" pageWidth="1960" pageHeight="1829" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C03 - Participating Entities 1&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="1880" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="1880" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="Cart" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Cart&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartId: string {get; set;}&lt;br&gt;+ CustomerId: string {get; set;}&lt;br&gt;+ SessionId: string {get; set;}&lt;br&gt;+ CreatedAt: DateTimeOffset {get; set;}&lt;br&gt;+ UpdatedAt: DateTimeOffset {get; set;}&lt;br&gt;+ Items: List&amp;lt;CartItem&amp;gt; {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ChangeQuantity(productId: string, quantity: int): void&lt;br&gt;+ RemoveItem(productId: string): void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="CartItem" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;CartItem&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartItemId: string {get; set;}&lt;br&gt;+ CartId: string {get; set;}&lt;br&gt;+ ProductId: string {get; set;}&lt;br&gt;+ Quantity: int {get; set;}&lt;br&gt;+ AddedAt: DateTimeOffset {get; set;}&lt;br&gt;+ Product: Product {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="Product" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;Product&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProductId: string {get; set;}&lt;br&gt;+ CategoryId: int {get; set;}&lt;br&gt;+ Sku: string {get; set;}&lt;br&gt;+ ProductName: string {get; set;}&lt;br&gt;+ UnitOfMeasure: string {get; set;}&lt;br&gt;+ Description: string {get; set;}&lt;br&gt;+ ImageUrl: string {get; set;}&lt;br&gt;+ IsActive: bool {get; set;}&lt;br&gt;+ CreatedAt: DateTimeOffset {get; set;}&lt;br&gt;+ Batches: List&amp;lt;BatchInventory&amp;gt; {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="120" y="879" width="680" height="385" as="geometry" />
+        </mxCell>
+        <mxCell id="BatchInventory" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;BatchInventory&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ BatchId: string {get; set;}&lt;br&gt;+ ProductId: string {get; set;}&lt;br&gt;+ ReceiptId: string {get; set;}&lt;br&gt;+ BatchNumber: string {get; set;}&lt;br&gt;+ ManufactureDate: DateOnly {get; set;}&lt;br&gt;+ ExpiryDate: DateOnly {get; set;}&lt;br&gt;+ ImportQuantity: int {get; set;}&lt;br&gt;+ CurrentStock: int {get; set;}&lt;br&gt;+ ReservedStock: int {get; set;}&lt;br&gt;+ ImportPrice: VndAmount {get; set;}&lt;br&gt;+ RetailPrice: VndAmount {get; set;}&lt;br&gt;+ DiscountRate: decimal {get; set;}&lt;br&gt;+ SaleStatus: string {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Reserve(quantity: int): void&lt;br&gt;+ ReleaseReservation(quantity: int): void&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F1F8E9;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="879" width="680" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="Cart" target="CartItem" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="374.5" />
+              <mxPoint x="832" y="336.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="Product" target="BatchInventory" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=none;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="1071.5" />
+              <mxPoint x="832" y="1144.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="951.0" y="284.5" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="label2" value="1 : 0..*" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=15;">
+          <mxGeometry x="951.0" y="1092.0" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="1739" width="1840" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="uc-c03-manage-cart-design-classes-6" name="06 DTO Contracts and Usage 1">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2251" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C03 - DTO Contracts and Usage 1&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=27;">
+          <mxGeometry x="40" y="20" width="2920" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="Revised design | 2026-11-02 | Backend DI only | Table-driven state machine" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=17;">
+          <mxGeometry x="40" y="85" width="2920" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="CartController" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;CartController&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- service: ICartService {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartController(service: ICartService)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="120" y="190" width="680" height="369" as="geometry" />
+        </mxCell>
+        <mxCell id="ICartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;interface&amp;gt;&amp;gt;&lt;br&gt;ICartService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="190" width="680" height="293" as="geometry" />
+        </mxCell>
+        <mxCell id="CartService" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;service&amp;gt;&amp;gt;&lt;br&gt;CartService&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;- cartRepository: ICartRepository {get; set;}&lt;br&gt;- currentCustomer: ICurrentCustomer {get; set;}&lt;br&gt;- unitOfWork: IUnitOfWork {get; set;}&lt;br&gt;- pricing: IBatchPricingPolicy {get; set;}&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CartService(cartRepository: ICartRepository, currentCustomer:&lt;br&gt;ICurrentCustomer, unitOfWork: IUnitOfWork, pricing:&lt;br&gt;IBatchPricingPolicy)&lt;br&gt;+ GetCartAsync(identity: CartIdentityDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ ChangeQuantityAsync(request: CartChangeDto, signal:&lt;br&gt;CancellationToken): Task&amp;lt;CartResultDto&amp;gt;&lt;br&gt;+ RemoveItemAsync(productId: string, signal: CancellationToken):&lt;br&gt;Task&amp;lt;CartResultDto&amp;gt;&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#E8F1FA;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="190" width="680" height="484" as="geometry" />
+        </mxCell>
+        <mxCell id="CartIdentityDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartIdentityDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ CustomerId: string? {get; set;}&lt;br&gt;+ SessionId: string? {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="994" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="CartChangeDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartChangeDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProductId: string {get; set;}&lt;br&gt;+ Quantity: int {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="1160" y="994" width="680" height="201" as="geometry" />
+        </mxCell>
+        <mxCell id="CartResultDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartResultDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ Lines: List&amp;lt;CartLineDto&amp;gt; {get; set;}&lt;br&gt;+ SubTotal: string {get; set;}&lt;br&gt;+ CanCheckout: bool {get; set;}&lt;br&gt;+ Warnings: List&amp;lt;string&amp;gt; {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="2200" y="994" width="680" height="247" as="geometry" />
+        </mxCell>
+        <mxCell id="CartLineDto" value="&lt;div style=&quot;font-size:13px;text-align:center&quot;&gt;&lt;b&gt;&amp;lt;&amp;lt;DTO&amp;gt;&amp;gt;&lt;br&gt;CartLineDto&lt;/b&gt;&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left;line-height:23px&quot;&gt;+ ProductId: string {get; set;}&lt;br&gt;+ Quantity: int {get; set;}&lt;br&gt;+ AvailableQuantity: int {get; set;}&lt;br&gt;+ CurrentPrice: string {get; set;}&lt;br&gt;+ LineTotal: string {get; set;}&lt;/div&gt;" vertex="1" parent="1" style="html=1;whiteSpace=wrap;rounded=0;align=left;verticalAlign=top;spacing=12;fontFamily=Arial;fontSize=17;fillColor=#F5F5F5;strokeColor=#455A64;">
+          <mxGeometry x="120" y="1561" width="680" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="CartController" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.25;entryX=0;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="282.25" />
+              <mxPoint x="832" y="287.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="CartService" target="ICartService" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.25;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="311.0" />
+              <mxPoint x="2168" y="287.66666666666663" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="CartController" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="832" y="374.5" />
+              <mxPoint x="832" y="1094.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="CartController" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="CartController" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.75;entryX=0;entryY=0.25;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1128" y="466.75" />
+              <mxPoint x="1128" y="962" />
+              <mxPoint x="2168" y="962" />
+              <mxPoint x="2168" y="1055.75" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ICartService" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="ICartService" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.6666666666666666;entryX=1;entryY=0.3333333333333333;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="385.3333333333333" />
+              <mxPoint x="860" y="1061.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="ICartService" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=1;exitY=0.6666666666666666;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1872" y="385.3333333333333" />
+              <mxPoint x="1872" y="1117.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="CartService" target="CartChangeDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1900" y="432.0" />
+              <mxPoint x="1900" y="1094.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e10" value="" edge="1" parent="1" source="CartService" target="CartIdentityDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.75;entryX=1;entryY=0.6666666666666666;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="888" y="553.0" />
+              <mxPoint x="888" y="1128.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" value="" edge="1" parent="1" source="CartService" target="CartResultDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;dashed=1;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e12" value="" edge="1" parent="1" source="CartResultDto" target="CartLineDto" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#455A64;strokeWidth=1.5;labelBackgroundColor=#ffffff;jumpStyle=arc;exitX=0;exitY=0.75;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;dashed=0;endArrow=open;endFill=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2168" y="1179.25" />
+              <mxPoint x="2168" y="1696.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="UML: solid line = association; dashed open arrow = DTO/entity usage dependency; dashed hollow triangle = realization.&lt;br&gt;Only backend classes use constructor DI. Frontend classes have ordinary references. HTTPS labels denote remote communication." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;fontFamily=Arial;fillColor=#ffffff;fontSize=16;">
+          <mxGeometry x="60" y="2161" width="2880" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

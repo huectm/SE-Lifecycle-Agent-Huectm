@@ -1,0 +1,441 @@
+[
+  {
+    "UseCase": "UC-C01",
+    "AnalysisClass": "CatalogView",
+    "DesignClasses": [
+      "CatalogPage",
+      "CatalogApiClient",
+      "CatalogView",
+      "CatalogViewModel",
+      "CatalogApiModel"
+    ],
+    "SelectedSolution": "Web Pages / CallService; mobile MVVM; no frontend DI"
+  },
+  {
+    "UseCase": "UC-C01",
+    "AnalysisClass": "CatalogController",
+    "DesignClasses": [
+      "CatalogController"
+    ],
+    "SelectedSolution": "API controller retained; service interface supplied by backend DI"
+  },
+  {
+    "UseCase": "UC-C01",
+    "AnalysisClass": "CatalogService",
+    "DesignClasses": [
+      "ICatalogService",
+      "CatalogService",
+      "ICatalogRepository",
+      "CatalogRepository",
+      "IBatchPricingPolicy",
+      "BatchPricingPolicy"
+    ],
+    "SelectedSolution": "Layered application logic + service interface extraction + Repository / domain policies / backend DI"
+  },
+  {
+    "UseCase": "UC-C01",
+    "AnalysisClass": "ProductCategory",
+    "DesignClasses": [
+      "ProductCategory"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C01",
+    "AnalysisClass": "Product",
+    "DesignClasses": [
+      "Product"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C01",
+    "AnalysisClass": "BatchInventory",
+    "DesignClasses": [
+      "BatchInventory"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "CartView",
+    "DesignClasses": [
+      "CartPage",
+      "CartApiClient",
+      "CartView",
+      "CartViewModel",
+      "CartApiModel"
+    ],
+    "SelectedSolution": "Web Pages / CallService; mobile MVVM; no frontend DI"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "CartController",
+    "DesignClasses": [
+      "CartController"
+    ],
+    "SelectedSolution": "API controller retained; service interface supplied by backend DI"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "CartService",
+    "DesignClasses": [
+      "ICartService",
+      "CartService",
+      "ICartRepository",
+      "CartRepository",
+      "IBatchPricingPolicy",
+      "BatchPricingPolicy"
+    ],
+    "SelectedSolution": "Layered application logic + service interface extraction + Repository / domain policies / backend DI"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "Cart",
+    "DesignClasses": [
+      "Cart"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "CartItem",
+    "DesignClasses": [
+      "CartItem"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "Product",
+    "DesignClasses": [
+      "Product"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C03",
+    "AnalysisClass": "BatchInventory",
+    "DesignClasses": [
+      "BatchInventory"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "ProfileAddressView",
+    "DesignClasses": [
+      "ProfilePage",
+      "ProfileApiClient",
+      "ProfileAddressView",
+      "ProfileViewModel",
+      "ProfileApiModel"
+    ],
+    "SelectedSolution": "Web Pages / CallService; mobile MVVM; no frontend DI"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "ProfileController",
+    "DesignClasses": [
+      "ProfileController"
+    ],
+    "SelectedSolution": "API controller retained; service interface supplied by backend DI"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "ProfileService",
+    "DesignClasses": [
+      "IProfileService",
+      "ProfileService",
+      "IProfileRepository",
+      "ProfileRepository"
+    ],
+    "SelectedSolution": "Layered application logic + service interface extraction + Repository / domain policies / backend DI"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "Customer",
+    "DesignClasses": [
+      "Customer"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "CustomerAddress",
+    "DesignClasses": [
+      "CustomerAddress"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "Order",
+    "DesignClasses": [
+      "Order"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C05",
+    "AnalysisClass": "GeocodingBoundary",
+    "DesignClasses": [
+      "IGeocodingGateway",
+      "GoogleMapsGeocodingAdapter"
+    ],
+    "SelectedSolution": "Adapter / backend DI"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "CheckoutView",
+    "DesignClasses": [
+      "CheckoutPage",
+      "CheckoutApiClient",
+      "CheckoutView",
+      "CheckoutViewModel",
+      "CheckoutApiModel"
+    ],
+    "SelectedSolution": "Web Pages / CallService; mobile MVVM; no frontend DI"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "CheckoutController",
+    "DesignClasses": [
+      "CheckoutController"
+    ],
+    "SelectedSolution": "API controller retained; service interface supplied by backend DI"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "CheckoutService",
+    "DesignClasses": [
+      "ICheckoutService",
+      "CheckoutService",
+      "ICheckoutRepository",
+      "CheckoutRepository",
+      "IBatchPricingPolicy",
+      "BatchPricingPolicy",
+      "IDeliveryFeePolicy",
+      "DeliveryFeePolicy",
+      "IFefoBatchSpecification",
+      "FefoBatchSpecification"
+    ],
+    "SelectedSolution": "Layered application logic + service interface extraction + Repository / domain policies / backend DI"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "Customer",
+    "DesignClasses": [
+      "Customer"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "CustomerAddress",
+    "DesignClasses": [
+      "CustomerAddress"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "Cart",
+    "DesignClasses": [
+      "Cart"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "CartItem",
+    "DesignClasses": [
+      "CartItem"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "Product",
+    "DesignClasses": [
+      "Product"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "BatchInventory",
+    "DesignClasses": [
+      "BatchInventory"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "Order",
+    "DesignClasses": [
+      "Order"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "OrderDetail",
+    "DesignClasses": [
+      "OrderDetail"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "DistanceBoundary",
+    "DesignClasses": [
+      "IDistanceCalculator",
+      "DistanceCalculator",
+      "IDistanceGateway",
+      "GoogleMapsDistanceAdapter"
+    ],
+    "SelectedSolution": "Adapter / backend DI"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "PaymentBoundary",
+    "DesignClasses": [
+      "IPaymentGateway",
+      "SePayPaymentAdapter",
+      "PaymentNoticeHandler"
+    ],
+    "SelectedSolution": "Adapter / backend DI"
+  },
+  {
+    "UseCase": "UC-C06",
+    "AnalysisClass": "NotificationBoundary",
+    "DesignClasses": [
+      "INotificationGateway",
+      "NotificationAdapter"
+    ],
+    "SelectedSolution": "Adapter / backend DI"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "MyOrdersView",
+    "DesignClasses": [
+      "MyOrdersPage",
+      "MyOrdersApiClient",
+      "MyOrdersView",
+      "MyOrdersViewModel",
+      "MyOrdersApiModel"
+    ],
+    "SelectedSolution": "Web Pages / CallService; mobile MVVM; no frontend DI"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "MyOrdersController",
+    "DesignClasses": [
+      "MyOrdersController"
+    ],
+    "SelectedSolution": "API controller retained; service interface supplied by backend DI"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "MyOrdersService",
+    "DesignClasses": [
+      "IMyOrdersService",
+      "MyOrdersService",
+      "IMyOrdersRepository",
+      "MyOrdersRepository",
+      "IBatchPricingPolicy",
+      "BatchPricingPolicy"
+    ],
+    "SelectedSolution": "Layered application logic + service interface extraction + Repository / domain policies / backend DI"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "Customer",
+    "DesignClasses": [
+      "Customer"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "Order",
+    "DesignClasses": [
+      "Order"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "OrderDetail",
+    "DesignClasses": [
+      "OrderDetail"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "CustomerAddress",
+    "DesignClasses": [
+      "CustomerAddress"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "BatchInventory",
+    "DesignClasses": [
+      "BatchInventory"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "Product",
+    "DesignClasses": [
+      "Product"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "Cart",
+    "DesignClasses": [
+      "Cart"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "CartItem",
+    "DesignClasses": [
+      "CartItem"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "OrderReview",
+    "DesignClasses": [
+      "OrderReview"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "AuditLog",
+    "DesignClasses": [
+      "AuditLog"
+    ],
+    "SelectedSolution": "Domain entity retained; navigations and invariants refined from data requirements"
+  },
+  {
+    "UseCase": "UC-C07",
+    "AnalysisClass": "OrderNotificationBoundary",
+    "DesignClasses": [
+      "INotificationGateway",
+      "NotificationAdapter"
+    ],
+    "SelectedSolution": "Adapter / backend DI"
+  }
+]

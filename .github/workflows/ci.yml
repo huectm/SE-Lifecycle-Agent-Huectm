@@ -52,7 +52,7 @@ jobs:
 
       - name: Verify Governing Lifecycle Skills (Tier 1)
         run: |
-          echo "=== Verifying Governing Skills (.agents/Skills) ==="
+          echo "=== Verifying Governing Skills (.agents/skills) ==="
           REQUIRED_SKILLS=(
             "requirements-engineering"
             "business-process-modeling"
@@ -67,10 +67,10 @@ jobs:
             "devops-release"
           )
           for skill in "${REQUIRED_SKILLS[@]}"; do
-            if [ -f ".agents/Skills/$skill/SKILL.md" ]; then
+            if [ -f ".agents/skills/$skill/SKILL.md" ]; then
               echo "✅ Governing skill present: $skill"
             else
-              echo "❌ Missing governing skill: .agents/Skills/$skill/SKILL.md" && exit 1
+              echo "❌ Missing governing skill: .agents/skills/$skill/SKILL.md" && exit 1
             fi
           done
 
@@ -93,7 +93,7 @@ jobs:
       - name: Check for .NET Projects
         id: check_dotnet
         run: |
-          if compgen -G "**/*.csproj" > /dev/null || compgen -G "**/*.sln" > /dev/null; then
+          if [ -f "src/FreshFood.sln" ]; then
             echo "has_dotnet=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_dotnet=false" >> "$GITHUB_OUTPUT"
@@ -103,19 +103,19 @@ jobs:
         if: steps.check_dotnet.outputs.has_dotnet == 'true'
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x'
+          dotnet-version: '10.0.401'
 
       - name: Restore Dependencies (.NET)
         if: steps.check_dotnet.outputs.has_dotnet == 'true'
-        run: dotnet restore
+        run: dotnet restore src/FreshFood.sln
 
       - name: Build (.NET)
         if: steps.check_dotnet.outputs.has_dotnet == 'true'
-        run: dotnet build --no-restore --configuration Release
+        run: dotnet build src/FreshFood.sln --no-restore --configuration Release
 
       - name: Run Unit & Integration Tests (.NET)
         if: steps.check_dotnet.outputs.has_dotnet == 'true'
-        run: dotnet test --no-build --configuration Release --verbosity normal
+        run: dotnet test src/FreshFood.sln --no-build --configuration Release --verbosity normal
 
       - name: Check for Node.js Projects
         id: check_node

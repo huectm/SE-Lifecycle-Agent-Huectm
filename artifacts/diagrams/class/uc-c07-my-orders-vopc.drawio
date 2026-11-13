@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" agent="SE-Lifecycle-Agent">
+  <diagram id="uc-c07-vopc" name="UC-C07 VOPC">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="2500" pageHeight="2720" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;UC-C07 | Manage My Orders&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=30;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="100" y="20" width="2300" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="VOPC - View of Participating Classes | Draft for Analysis Review" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=20;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="2300" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="boundary_role" value="&lt;b&gt;Boundary&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=24;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="180" y="140" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="controller_role" value="&lt;b&gt;Controller&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=24;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="720" y="140" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="application_role" value="&lt;b&gt;Application Logic&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=24;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="140" width="400" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="entity_role" value="&lt;b&gt;Entity&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=24;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="140" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UC-C07-MyOrdersView" value="&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MyOrdersView&lt;/b&gt;&lt;br&gt;&lt;br&gt;History, details and timeline; cancellation confirmation; re-order and review controls." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#E3F2FD;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="180" y="240" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="UC-C07-MyOrdersController" value="&amp;lt;&amp;lt;controller&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MyOrdersController&lt;/b&gt;&lt;br&gt;&lt;br&gt;Coordinates owned-order queries, cancellation, re-order and feedback requests." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#FFF2CC;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="720" y="240" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="UC-C07-MyOrdersService" value="&amp;lt;&amp;lt;application logic&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;MyOrdersService&lt;/b&gt;&lt;br&gt;&lt;br&gt;Enforce ownership and lifecycle guards; cancel and release stock atomically; restore available items to cart at current prices; validate and save reviews." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#E8F5E9;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="220" width="400" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="primary_actor" value="Customer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Arial;fontSize=17;" vertex="1" parent="1">
+          <mxGeometry x="35" y="285" width="60" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_ui" value="" edge="1" parent="1" source="primary_actor" target="UC-C07-MyOrdersView" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="340" />
+              <mxPoint x="130" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ui_controller" value="requests / results" edge="1" parent="1" source="UC-C07-MyOrdersView" target="UC-C07-MyOrdersController" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="controller_logic" value="coordinates" edge="1" parent="1" source="UC-C07-MyOrdersController" target="UC-C07-MyOrdersService" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UC-C07-Customer" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Customer&lt;/b&gt;&lt;br&gt;&lt;br&gt;Customer identity, profile and contact information." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="210" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_0" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-Customer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.11363636363636363;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1960" y="245.0" />
+              <mxPoint x="1960" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-Order" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Order&lt;/b&gt;&lt;br&gt;&lt;br&gt;Order owner, lifecycle, delivery, amounts and payment state." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="440" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_1" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-Order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.1994949494949496;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1940" y="263.8888888888889" />
+              <mxPoint x="1940" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-OrderDetail" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&amp;lt;&amp;lt;association class&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;OrderDetail&lt;/b&gt;&lt;br&gt;&lt;br&gt;Allocated batch, quantity and historical line amounts." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="670" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_2" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-OrderDetail" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.2853535353535353;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1920" y="282.77777777777777" />
+              <mxPoint x="1920" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-CustomerAddress" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CustomerAddress&lt;/b&gt;&lt;br&gt;&lt;br&gt;Recipient, geographic coordinates and default address." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="900" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_3" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-CustomerAddress" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.37121212121212127;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1900" y="301.6666666666667" />
+              <mxPoint x="1900" y="980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-BatchInventory" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;BatchInventory&lt;/b&gt;&lt;br&gt;&lt;br&gt;Available / reserved stock, batch price, clearance and expiry." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1130" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_4" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-BatchInventory" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.457070707070707;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1880" y="320.55555555555554" />
+              <mxPoint x="1880" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-Product" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Product&lt;/b&gt;&lt;br&gt;&lt;br&gt;Product details, unit and active catalog status." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1360" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_5" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-Product" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.542929292929293;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1860" y="339.44444444444446" />
+              <mxPoint x="1860" y="1440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-Cart" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Cart&lt;/b&gt;&lt;br&gt;&lt;br&gt;Current shopping basket and its customer/session context." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1590" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_6" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-Cart" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.628787878787879;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1840" y="358.33333333333337" />
+              <mxPoint x="1840" y="1670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-CartItem" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&amp;lt;&amp;lt;association class&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;CartItem&lt;/b&gt;&lt;br&gt;&lt;br&gt;Product quantity within a shopping cart." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="1820" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_7" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-CartItem" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.7146464646464646;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1820" y="377.22222222222223" />
+              <mxPoint x="1820" y="1900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-OrderReview" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;OrderReview&lt;/b&gt;&lt;br&gt;&lt;br&gt;Delivered-order rating and optional comment." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="2050" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_8" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-OrderReview" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.8005050505050504;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1800" y="396.1111111111111" />
+              <mxPoint x="1800" y="2130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-AuditLog" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;AuditLog&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cancellation audit event required by UC-C07." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#F3E5F5;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="2020" y="2280" width="320" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="logic_entity_9" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-AuditLog" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=1;exitY=0.8863636363636364;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1780" y="415.0" />
+              <mxPoint x="1780" y="2360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UC-C07-OrderNotificationBoundary" value="&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;OrderNotificationBoundary&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cancellation/status updates and staff-queue notification interaction." style="rounded=0;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;spacing=12;fontFamily=Arial;fontSize=18;fillColor=#E3F2FD;strokeColor=#455A64;strokeWidth=1.6;" vertex="1" parent="1">
+          <mxGeometry x="180" y="650" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="external_0" value="" edge="1" parent="1" source="UC-C07-MyOrdersService" target="UC-C07-OrderNotificationBoundary" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=0.125;exitY=1;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1310" y="725" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="secondary_0" value="Notification Service" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;fontFamily=Arial;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="35" y="670" width="60" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="secondary_edge_0" value="" edge="1" parent="1" source="UC-C07-OrderNotificationBoundary" target="secondary_0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;strokeColor=#455A64;strokeWidth=1.5;fontSize=16;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=7;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="725" />
+              <mxPoint x="130" y="712.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" value="Boundary: interaction | Controller: request coordination | Application Logic: use-case policy | Entity: domain information" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=18;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2600" width="2300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="caption" value="&lt;b&gt;Figure 4.5: VOPC - UC-C07 Manage My Orders&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fontFamily=Arial;fontSize=22;fontColor=#172B4D;" vertex="1" parent="1">
+          <mxGeometry x="100" y="2650" width="2300" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

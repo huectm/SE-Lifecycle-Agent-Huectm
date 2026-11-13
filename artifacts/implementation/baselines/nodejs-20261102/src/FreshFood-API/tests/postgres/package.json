@@ -1,0 +1,1 @@
+{"name":"freshfood-postgres-verification","private":true,"type":"module","devDependencies":{"@electric-sql/pglite":"0.5.14"}}

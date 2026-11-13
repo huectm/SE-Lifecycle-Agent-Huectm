@@ -1,0 +1,13 @@
+grn_test_id,receipt_date,supplier_code,supplier_name,product_code,batch_no,mfg_date,exp_date,days_shelf_life,quantity,unit_import_price,expected_line_total,initial_sale_status,expected_result,system_message,rule_reference
+TC-GR-DATA-01,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-CLAY-01,BAT-20261023-01,2026-10-22,2026-10-28,5,100,15000,1500000,Active,Success,Tạo phiếu nhập và cập nhật lô kho thành công,BR-GR-01 & BR-GR-02
+TC-GR-DATA-02,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,FRU-TOM-03,BAT-20261023-02,2026-10-22,2026-10-26,3,50,25000,1250000,Delayed,Success - Boundary (Exactly +3 days),HSD đúng 3 ngày - Được phép nhập,BR-GR-02 (Boundary)
+TC-GR-DATA-03,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-SPIN-02,BAT-20261023-03,2026-10-22,2026-10-25,2,40,12000,0,Delayed,Rejected - Expiry too short (+2 days),HSD rau tươi phải >= 3 ngày kể từ ngày nhập,BR-GR-02 (Perishable constraint)
+TC-GR-DATA-04,2026-10-23,SUP-002,Nông trại Hữu cơ Lâm Đồng,TUB-CAR-05,BAT-20261023-04,2026-10-20,2026-10-19,-1,80,18000,0,Active,Rejected - EXP earlier than MFG,Hạn sử dụng (EXP) phải lớn hơn Ngày sản xuất (MFG),BR-GR-02
+TC-GR-DATA-05,2026-10-23,SUP-002,Nông trại Hữu cơ Lâm Đồng,TUB-CAR-05,BAT-20261023-05,2026-10-20,2026-10-20,0,80,18000,0,Active,Rejected - EXP equal to MFG,Hạn sử dụng (EXP) phải lớn hơn Ngày sản xuất (MFG),BR-GR-02
+TC-GR-DATA-06,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-KALE-04,,2026-10-22,2026-10-28,5,50,30000,0,Delayed,Rejected - Missing Batch No,Số lô không được để trống,BR-GR-01
+TC-GR-DATA-07,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-KALE-04,BAT-20261023-06,2026-10-22,2026-10-28,5,0,30000,0,Delayed,Rejected - Zero quantity,Số lượng nhập phải lớn hơn 0,BR-GR-01
+TC-GR-DATA-08,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-KALE-04,BAT-20261023-07,2026-10-22,2026-10-28,5,-20,30000,0,Delayed,Rejected - Negative quantity,Số lượng nhập phải lớn hơn 0,BR-GR-01
+TC-GR-DATA-09,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-KALE-04,BAT-20261023-08,2026-10-22,2026-10-28,5,50,0,0,Delayed,Rejected - Zero import price,Đơn giá nhập phải lớn hơn 0,BR-GR-01
+TC-GR-DATA-10,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-KALE-04,BAT-20261023-09,2026-10-22,2026-10-28,5,50,-15000,0,Delayed,Rejected - Negative import price,Đơn giá nhập phải lớn hơn 0,BR-GR-01
+TC-GR-DATA-11,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-CLAY-01,BAT-20261020-01,2026-10-19,2026-10-27,4,50,15000,0,Active,Rejected - Duplicate Batch No,Số lô đã tồn tại trong hệ thống,Data Integrity
+TC-GR-DATA-12,2026-10-23,SUP-001,HTX Rau sạch Đà Lạt,VEG-CLAY-01,GRN-HIST-01,2026-10-19,2026-10-27,4,45,15000,675000,Active,Rejected modification - Immutability,Phiếu nhập đã phát sinh xuất bán không thể sửa hoặc xóa,BR-GR-04

@@ -1,0 +1,10 @@
+flow_id,flow_name,test_cases,end_to_end_status,observed_evidence,remaining_steps
+1.0,Basic registration,REG-001,Complete,"Form entry, submission, success page and stored profile/newsletter verified.",
+1.1,Subscribe to Newsletter,REG-002,Complete,Newsletter Yes submitted and persisted.,
+1.2,Already Have an Account,REG-038,Complete,Login link navigates to account/login.,
+1.0.E1,Missing Required Fields,REG-003 REG-009 REG-015 REG-022 REG-029 REG-034,Partial,Required-field rejection exercised.,Correct the missing value and resubmit in the same session; verify successful recovery.
+1.0.E2,Invalid E-Mail Format,REG-029 REG-030 REG-031 REG-032 REG-033,Partial,Email rejected by application or native browser validation.,Correct email on the same form and complete registration; distinguish browser and server validation.
+1.0.E3,Password Confirmation Mismatch,REG-034 REG-035,Partial,Mismatch warning verified.,Correct confirmation on the same form and complete registration.
+1.0.E4,Privacy Policy Not Accepted,REG-036,Partial,Consent warning verified.,Accept policy after rejection and resubmit successfully.
+1.0.E5,Existing E-Mail,REG-037,Partial,Self-contained duplicate account fixture and duplicate warning verified.,After duplicate rejection enter a different email or navigate to Login; policy remains subject to confirmation.
+1.0.E6,System/Network Error,REG-052,Not executed,Designed and skipped.,"Controlled fault environment; verify error, absence of committed account and safe retry."

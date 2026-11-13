@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-04",
+  "model_level": "PIM",
+  "status": "CONSISTENT_WITH_EXPLICIT_REFINEMENTS_AND_DECLARED_DEFERRED_INTEGRATIONS",
+  "checks": [
+    {
+      "check": "Model explicitly declares PIM",
+      "passed": true
+    },
+    {
+      "check": "Class notation is platform independent",
+      "passed": true
+    },
+    {
+      "check": "Every declared operation has an explicit source/refinement status",
+      "passed": true
+    },
+    {
+      "check": "Implemented refinements identify existing source members",
+      "passed": true
+    },
+    {
+      "check": "Source semantic extraction has no compile errors",
+      "passed": true
+    },
+    {
+      "check": "One table-driven state machine retained",
+      "passed": true
+    },
+    {
+      "check": "Logical snapshot is server-only data",
+      "passed": true
+    },
+    {
+      "check": "All executable receiver messages resolve to a PIM operation",
+      "passed": true
+    },
+    {
+      "check": "Editable sequence labels match trace records",
+      "passed": true
+    },
+    {
+      "check": "Address save/delete do not invent a customer reload",
+      "passed": true
+    },
+    {
+      "check": "Prepare checkout includes FEFO and price collaborators",
+      "passed": true
+    },
+    {
+      "check": "Checkout notification explicitly excludes replay",
+      "passed": true
+    },
+    {
+      "check": "QR planned integration and unavailable branch are explicit",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 state result is read after transition effects",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 state result is read after transition effects",
+      "passed": true
+    },
+    {
+      "check": "No result returns to an actor",
+      "passed": true
+    },
+    {
+      "check": "No local cancellation token leaks into logical messages",
+      "passed": true
+    },
+    {
+      "check": "PIM message argument counts match receiver operations",
+      "passed": true
+    },
+    {
+      "check": "All PIM operations appear in editable class masters",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "operation_mappings": 347,
+  "implemented_operation_refinements": 218,
+  "mapping_statuses": {
+    "Implemented": 218,
+    "DeferredIntegration": 8,
+    "FrontendDesignOnly": 114,
+    "FrameworkRefinement": 7
+  },
+  "sequence_messages": 514,
+  "sequence_pages": 29,
+  "deferred_operations": [
+    {
+      "class": "GoogleMapsGeocodingAdapter",
+      "operation": "+ ResolveAsync(address: Text): GeoPointDto",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "GoogleMapsDistanceAdapter",
+      "operation": "+ DrivingDistanceAsync(addressId: Text): Decimal",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "SePayPaymentAdapter",
+      "operation": "+ CreateQrAsync(reference: Text, amount: VndAmount): PaymentQrDto",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "SePayPaymentAdapter",
+      "operation": "+ VerifyNoticeAsync(notice: PaymentNoticeDto): VerifiedPaymentDto",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "CheckoutService",
+      "operation": "+ CreatePaymentQrAsync(request: PaymentQrRequestDto): PaymentQrDto",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "CheckoutService",
+      "operation": "+ HandleVerifiedPaymentAsync(request: PaymentNoticeDto): PaymentResultDto",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "ConfiguredNotificationPublisher",
+      "operation": "+ SendAsync(message: NotificationDto): Void",
+      "status": "DeferredIntegration"
+    },
+    {
+      "class": "UnconfiguredPayoutAdapter",
+      "operation": "+ RequestAsync(refundId: Text): PayoutOutcomeDto",
+      "status": "DeferredIntegration"
+    }
+  ],
+  "deferred_messages": [
+    {
+      "useCase": "UC-C05",
+      "page": "SaveAddress",
+      "receiver": "GoogleMapsGeocodingAdapter",
+      "message": "ResolveAsync(address)",
+      "status": "Declared deferred integration; not claimed implemented"
+    },
+    {
+      "useCase": "UC-C06",
+      "page": "CreatePaymentQr",
+      "receiver": "CheckoutService",
+      "message": "CreatePaymentQrAsync(request)",
+      "status": "Declared deferred integration; not claimed implemented"
+    },
+    {
+      "useCase": "UC-C06",
+      "page": "CreatePaymentQr",
+      "receiver": "SePayPaymentAdapter",
+      "message": "CreateQrAsync(reference, amount)",
+      "status": "Declared deferred integration; not claimed implemented"
+    },
+    {
+      "useCase": "UC-C06",
+      "page": "Verified payment webhook",
+      "receiver": "CheckoutService",
+      "message": "HandleVerifiedPaymentAsync(notice)",
+      "status": "Declared deferred integration; not claimed implemented"
+    },
+    {
+      "useCase": "UC-C06",
+      "page": "Verified payment webhook",
+      "receiver": "SePayPaymentAdapter",
+      "message": "VerifyNoticeAsync(notice)",
+      "status": "Declared deferred integration; not claimed implemented"
+    }
+  ],
+  "prior_finding_dispositions": [
+    {
+      "finding": "DCC-001",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-002",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-003",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-004",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-005",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-006",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-007",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-008",
+      "disposition": "Corrected PIM data/responsibility"
+    },
+    {
+      "finding": "DCC-009",
+      "disposition": "Corrected PIM data/responsibility"
+    },
+    {
+      "finding": "DCC-010",
+      "disposition": "Accepted PSM refinement"
+    },
+    {
+      "finding": "DCC-011",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-012",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-013",
+      "disposition": "Explicit deferred integration; upstream correlation/provider remains unresolved"
+    },
+    {
+      "finding": "DCC-014",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-015",
+      "disposition": "Corrected PIM interaction"
+    },
+    {
+      "finding": "DCC-016",
+      "disposition": "Corrected PIM interaction"
+    }
+  ],
+  "limits": [
+    "This verifies representation, declared refinements and selected business-ordering invariants; it is not exhaustive dynamic path equivalence.",
+    "FrontendDesignOnly entries are not claimed implemented.",
+    "Maps, payment correlation/verification, notifications and payouts retain their pre-existing deferred integration status.",
+    "The existing SonarCloud Quality Gate was not changed or reclassified by this PIM revision."
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "uc": "UC-C01",
+    "master": "artifacts\\diagrams\\class\\uc-c01-browse-search-vopc.drawio",
+    "png": "artifacts\\diagrams\\images\\uc-c01-browse-search-vopc.png",
+    "classes": 6,
+    "edges": 6,
+    "geometry_issues": [],
+    "visual_review": "PASS - inspected exported PNG; readable class labels, no unrelated-node crossings or clipped text",
+    "source_sha256": "087d317f34078b2f7a70e1526df0aaf6d36f51c1c0bca5ac5e2c759ff8453e55",
+    "png_sha256": "8efefd9da79629798896350fa4dab2081448523b135e7141f43216760f050c78",
+    "classification": "Analysis-level UML class diagram",
+    "relocation_verified": "2026-10-28; source and PNG hashes unchanged"
+  },
+  {
+    "uc": "UC-C03",
+    "master": "artifacts\\diagrams\\class\\uc-c03-manage-cart-vopc.drawio",
+    "png": "artifacts\\diagrams\\images\\uc-c03-manage-cart-vopc.png",
+    "classes": 7,
+    "edges": 7,
+    "geometry_issues": [],
+    "visual_review": "PASS - inspected exported PNG; readable class labels, no unrelated-node crossings or clipped text",
+    "source_sha256": "e8b3f2e7fa5a3520d5f67c0cae5592b91b9182bbbbdb0d7e5e39790b6b39c4e1",
+    "png_sha256": "3df771e4cb64a8220cefbd25dd80e8826727d709d1c073e228a762be3e57776a",
+    "classification": "Analysis-level UML class diagram",
+    "relocation_verified": "2026-10-28; source and PNG hashes unchanged"
+  },
+  {
+    "uc": "UC-C05",
+    "master": "artifacts\\diagrams\\class\\uc-c05-profile-addresses-vopc.drawio",
+    "png": "artifacts\\diagrams\\images\\uc-c05-profile-addresses-vopc.png",
+    "classes": 7,
+    "edges": 8,
+    "geometry_issues": [],
+    "visual_review": "PASS - inspected exported PNG; readable class labels, no unrelated-node crossings or clipped text",
+    "source_sha256": "e836a543241ce02c26c738f6dc7e88f97f6a5395cf7d26acbefe3bb768e5841b",
+    "png_sha256": "cdd80abebd3187e52b8434d513507bffea610bf4b74b5c2c2f167390359ea9da",
+    "classification": "Analysis-level UML class diagram",
+    "relocation_verified": "2026-10-28; source and PNG hashes unchanged"
+  },
+  {
+    "uc": "UC-C06",
+    "master": "artifacts\\diagrams\\class\\uc-c06-checkout-vopc.drawio",
+    "png": "artifacts\\diagrams\\images\\uc-c06-checkout-vopc.png",
+    "classes": 14,
+    "edges": 17,
+    "geometry_issues": [],
+    "visual_review": "PASS - revised PNG inspected; removed association absent, service-boundary association retained and labels readable",
+    "source_sha256": "61f10bf0d77ec64d4a12941bf66ec63bc29e82144be7cc3b5fa2f2f9d5bb4a37",
+    "png_sha256": "f616988cf87f47b7b6ab77ee048f4c911664866436bce1d5b87d923e3ec6fd03",
+    "classification": "Analysis-level UML class diagram",
+    "relocation_verified": "2026-10-28; source and PNG hashes unchanged",
+    "revision": "Removed PaymentBoundary to CheckoutController association on stakeholder instruction"
+  },
+  {
+    "uc": "UC-C07",
+    "master": "artifacts\\diagrams\\class\\uc-c07-my-orders-vopc.drawio",
+    "png": "artifacts\\diagrams\\images\\uc-c07-my-orders-vopc.png",
+    "classes": 14,
+    "edges": 15,
+    "geometry_issues": [],
+    "visual_review": "PASS - inspected exported PNG; readable class labels, no unrelated-node crossings or clipped text",
+    "source_sha256": "b957f2705240e96442a06278b921b57273dd8a0824bc5b7c2975e78d70137445",
+    "png_sha256": "2824012078e7e05c65537ad97a31add1d5291579c9286ae6ad8c675c9e652421",
+    "classification": "Analysis-level UML class diagram",
+    "relocation_verified": "2026-10-28; source and PNG hashes unchanged"
+  }
+]

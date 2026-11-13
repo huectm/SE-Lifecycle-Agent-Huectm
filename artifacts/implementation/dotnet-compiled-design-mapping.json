@@ -1,0 +1,1213 @@
+[
+  {
+    "Name": "IUnitOfWork",
+    "Symbol": "FreshFood.Reposistory.Repository.IUnitOfWork",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ExecuteAsync(work: Func\u003CCancellationToken, Task\u003E, signal: CancellationToken): Task",
+      "\u002B ExecuteAsync(work: Func\u003CCancellationToken, Task\u003CT\u003E\u003E, signal: CancellationToken): Task\u003CT\u003E"
+    ]
+  },
+  {
+    "Name": "UnitOfWork",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.UnitOfWork",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B UnitOfWork(session: IRepositorySession)",
+      "\u002B ExecuteAsync(work: Func\u003CCancellationToken, Task\u003E, signal: CancellationToken): Task",
+      "\u002B ExecuteAsync(work: Func\u003CCancellationToken, Task\u003CT\u003E\u003E, signal: CancellationToken): Task\u003CT\u003E"
+    ]
+  },
+  {
+    "Name": "IRepositorySession",
+    "Symbol": "FreshFood.Reposistory.Repository.IRepositorySession",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B BeginAsync(signal: CancellationToken): Task",
+      "\u002B CommitAsync(signal: CancellationToken): Task",
+      "\u002B RollbackAsync(signal: CancellationToken): Task",
+      "\u002B QueryAsync(sql: string, parameters: Object[], signal: CancellationToken): Task\u003CList\u003CT\u003E\u003E"
+    ]
+  },
+  {
+    "Name": "RepositorySession",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.PostgreSqlSession",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B RepositorySession(dataSource: NpgsqlDataSource)",
+      "\u002B BeginAsync(signal: CancellationToken): Task",
+      "\u002B CommitAsync(signal: CancellationToken): Task",
+      "\u002B RollbackAsync(signal: CancellationToken): Task",
+      "\u002B DisposeAsync(): ValueTask",
+      "\u002B QueryAsync(sql: string, parameters: Object[], signal: CancellationToken): Task\u003CList\u003CT\u003E\u003E"
+    ]
+  },
+  {
+    "Name": "ICurrentCustomer",
+    "Symbol": "FreshFood.Api.Services.ICurrentCustomer",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B RequireCustomerId(): string",
+      "\u002B GetCartIdentity(): CartIdentityDto"
+    ]
+  },
+  {
+    "Name": "CurrentCustomer",
+    "Symbol": "FreshFood.Api.Services.Implements.CurrentCustomer",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CurrentCustomer(accessor: IHttpContextAccessor, protection: IDataProtectionProvider)",
+      "\u002B RequireCustomerId(): string",
+      "\u002B GetCartIdentity(): CartIdentityDto"
+    ]
+  },
+  {
+    "Name": "OperationResultDto",
+    "Symbol": "FreshFood.Api.DTOs.OperationResultDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OperationResultDto()"
+    ]
+  },
+  {
+    "Name": "IGeocodingGateway",
+    "Symbol": "FreshFood.Api.Services.IGeocodingGateway",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ResolveAsync(address: string, signal: CancellationToken): Task\u003CGeoPointDto\u003E"
+    ]
+  },
+  {
+    "Name": "GoogleMapsGeocodingAdapter",
+    "Symbol": "FreshFood.Api.Services.Implements.GoogleMapsGeocodingAdapter",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GoogleMapsGeocodingAdapter()",
+      "\u002B ResolveAsync(address: string, signal: CancellationToken): Task\u003CGeoPointDto\u003E"
+    ]
+  },
+  {
+    "Name": "IDistanceGateway",
+    "Symbol": "FreshFood.Api.Services.IDistanceGateway",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B DrivingDistanceAsync(addressId: string, signal: CancellationToken): Task\u003Cdecimal\u003E"
+    ]
+  },
+  {
+    "Name": "GoogleMapsDistanceAdapter",
+    "Symbol": "FreshFood.Api.Services.Implements.GoogleMapsDistanceAdapter",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GoogleMapsDistanceAdapter()",
+      "\u002B DrivingDistanceAsync(addressId: string, signal: CancellationToken): Task\u003Cdecimal\u003E"
+    ]
+  },
+  {
+    "Name": "IPaymentGateway",
+    "Symbol": "FreshFood.Api.Services.IPaymentGateway",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CreateQrAsync(reference: string, amount: VndAmount, signal: CancellationToken): Task\u003CPaymentQrDto\u003E",
+      "\u002B VerifyNoticeAsync(notice: PaymentNoticeDto, signal: CancellationToken): Task\u003CVerifiedPaymentDto\u003E"
+    ]
+  },
+  {
+    "Name": "SePayPaymentAdapter",
+    "Symbol": "FreshFood.Api.Services.Implements.SePayPaymentAdapter",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B SePayPaymentAdapter()",
+      "\u002B CreateQrAsync(reference: string, amount: VndAmount, signal: CancellationToken): Task\u003CPaymentQrDto\u003E",
+      "\u002B VerifyNoticeAsync(notice: PaymentNoticeDto, signal: CancellationToken): Task\u003CVerifiedPaymentDto\u003E"
+    ]
+  },
+  {
+    "Name": "INotificationGateway",
+    "Symbol": "FreshFood.Api.Services.INotificationGateway",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PublishAsync(message: NotificationDto, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "NotificationAdapter",
+    "Symbol": "FreshFood.Api.Services.Implements.NotificationAdapter",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B NotificationAdapter(publisher: INotificationPublisher)",
+      "\u002B PublishAsync(message: NotificationDto, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "INotificationPublisher",
+    "Symbol": "FreshFood.Api.Services.INotificationPublisher",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B SendAsync(message: NotificationDto, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "NotificationDto",
+    "Symbol": "FreshFood.Api.DTOs.NotificationDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B NotificationDto()"
+    ]
+  },
+  {
+    "Name": "VerifiedPaymentDto",
+    "Symbol": "FreshFood.Api.DTOs.VerifiedPaymentDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B VerifiedPaymentDto()"
+    ]
+  },
+  {
+    "Name": "ProductCategory",
+    "Symbol": "FreshFood.Reposistory.Entities.ProductCategory",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProductCategory()"
+    ]
+  },
+  {
+    "Name": "Product",
+    "Symbol": "FreshFood.Reposistory.Entities.Product",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Product()"
+    ]
+  },
+  {
+    "Name": "BatchInventory",
+    "Symbol": "FreshFood.Reposistory.Entities.BatchInventory",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B BatchInventory()",
+      "\u002B Reserve(quantity: int): void",
+      "\u002B ReleaseReservation(quantity: int): void"
+    ]
+  },
+  {
+    "Name": "Customer",
+    "Symbol": "FreshFood.Reposistory.Entities.Customer",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Customer()"
+    ]
+  },
+  {
+    "Name": "CustomerAddress",
+    "Symbol": "FreshFood.Reposistory.Entities.CustomerAddress",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CustomerAddress()"
+    ]
+  },
+  {
+    "Name": "Cart",
+    "Symbol": "FreshFood.Reposistory.Entities.Cart",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Cart()",
+      "\u002B ChangeQuantity(productId: string, quantity: int): void",
+      "\u002B RemoveItem(productId: string): void"
+    ]
+  },
+  {
+    "Name": "CartItem",
+    "Symbol": "FreshFood.Reposistory.Entities.CartItem",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartItem()"
+    ]
+  },
+  {
+    "Name": "Order",
+    "Symbol": "FreshFood.Reposistory.Entities.Order",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Order()",
+      "\u002B ApplyFulfillment(expected: OrderStatus, target: OrderStatus): void",
+      "\u002B RecordPayment(expected: PaymentStatus, target: PaymentStatus): void",
+      "\u002B Cancel(expected: OrderStatus, reason: string): void"
+    ]
+  },
+  {
+    "Name": "OrderDetail",
+    "Symbol": "FreshFood.Reposistory.Entities.OrderDetail",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderDetail()"
+    ]
+  },
+  {
+    "Name": "OrderReview",
+    "Symbol": "FreshFood.Reposistory.Entities.OrderReview",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderReview()"
+    ]
+  },
+  {
+    "Name": "AuditLog",
+    "Symbol": "FreshFood.Reposistory.Entities.AuditLog",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B AuditLog()"
+    ]
+  },
+  {
+    "Name": "DeliveryAgent",
+    "Symbol": "FreshFood.Reposistory.Entities.DeliveryAgent",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B DeliveryAgent()"
+    ]
+  },
+  {
+    "Name": "OrderPayment",
+    "Symbol": "FreshFood.Reposistory.Entities.OrderPayment",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderPayment()"
+    ]
+  },
+  {
+    "Name": "DeliveryFailure",
+    "Symbol": "FreshFood.Reposistory.Entities.DeliveryFailure",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B DeliveryFailure()"
+    ]
+  },
+  {
+    "Name": "ReturnReceipt",
+    "Symbol": "FreshFood.Reposistory.Entities.ReturnReceipt",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ReturnReceipt()"
+    ]
+  },
+  {
+    "Name": "ReturnReceiptItem",
+    "Symbol": "FreshFood.Reposistory.Entities.ReturnReceiptItem",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ReturnReceiptItem()"
+    ]
+  },
+  {
+    "Name": "ReturnInspection",
+    "Symbol": "FreshFood.Reposistory.Entities.ReturnInspection",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ReturnInspection()"
+    ]
+  },
+  {
+    "Name": "Refund",
+    "Symbol": "FreshFood.Reposistory.Entities.Refund",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Refund()"
+    ]
+  },
+  {
+    "Name": "ShippingFeeSettlement",
+    "Symbol": "FreshFood.Reposistory.Entities.ShippingFeeSettlement",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ShippingFeeSettlement()"
+    ]
+  },
+  {
+    "Name": "OrderStatus",
+    "Symbol": "FreshFood.Reposistory.Entities.OrderStatus",
+    "Kind": "Compiled C#",
+    "Operations": []
+  },
+  {
+    "Name": "PaymentStatus",
+    "Symbol": "FreshFood.Reposistory.Entities.PaymentStatus",
+    "Kind": "Compiled C#",
+    "Operations": []
+  },
+  {
+    "Name": "PaymentMethod",
+    "Symbol": "FreshFood.Reposistory.Entities.PaymentMethod",
+    "Kind": "Compiled C#",
+    "Operations": []
+  },
+  {
+    "Name": "ICatalogService",
+    "Symbol": "FreshFood.Api.Services.ICatalogService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetCatalogAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B SearchAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B GetProductDetailsAsync(productId: string, signal: CancellationToken): Task\u003CProductDetailsDto\u003E",
+      "\u002B GetClearanceAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "CatalogService",
+    "Symbol": "FreshFood.Api.Services.Implements.CatalogService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CatalogService(catalogRepository: ICatalogRepository, pricing: IBatchPricingPolicy)",
+      "\u002B GetCatalogAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B SearchAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B GetClearanceAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B GetProductDetailsAsync(productId: string, signal: CancellationToken): Task\u003CProductDetailsDto\u003E"
+    ]
+  },
+  {
+    "Name": "CatalogController",
+    "Symbol": "FreshFood.Api.Controllers.CatalogController",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CatalogController(service: ICatalogService)",
+      "\u002B GetCatalogAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B SearchAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B GetClearanceAsync(query: CatalogQueryDto, signal: CancellationToken): Task\u003CCatalogResultDto\u003E",
+      "\u002B GetProductDetailsAsync(productId: string, signal: CancellationToken): Task\u003CProductDetailsDto\u003E"
+    ]
+  },
+  {
+    "Name": "ICatalogRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.ICatalogRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B FindActiveAsync(keyword: string, categoryId: int?, clearanceOnly: bool, signal: CancellationToken): Task\u003CList\u003CProduct\u003E\u003E",
+      "\u002B GetCategoriesAsync(signal: CancellationToken): Task\u003CList\u003CProductCategory\u003E\u003E",
+      "\u002B GetProductAsync(productId: string, signal: CancellationToken): Task\u003CProduct\u003E",
+      "\u002B GetSellableBatchesAsync(productIds: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B GetPopularAsync(limit: int, signal: CancellationToken): Task\u003CList\u003CProduct\u003E\u003E"
+    ]
+  },
+  {
+    "Name": "CatalogRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.CatalogRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CatalogRepository(session: IRepositorySession)",
+      "\u002B FindActiveAsync(keyword: string, categoryId: int?, clearanceOnly: bool, signal: CancellationToken): Task\u003CList\u003CProduct\u003E\u003E",
+      "\u002B GetCategoriesAsync(signal: CancellationToken): Task\u003CList\u003CProductCategory\u003E\u003E",
+      "\u002B GetProductAsync(productId: string, signal: CancellationToken): Task\u003CProduct\u003E",
+      "\u002B GetSellableBatchesAsync(productIds: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B GetPopularAsync(limit: int, signal: CancellationToken): Task\u003CList\u003CProduct\u003E\u003E"
+    ]
+  },
+  {
+    "Name": "CatalogQueryDto",
+    "Symbol": "FreshFood.Api.DTOs.CatalogQueryDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CatalogQueryDto()"
+    ]
+  },
+  {
+    "Name": "CatalogResultDto",
+    "Symbol": "FreshFood.Api.DTOs.CatalogResultDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CatalogResultDto()"
+    ]
+  },
+  {
+    "Name": "ProductDetailsDto",
+    "Symbol": "FreshFood.Api.DTOs.ProductDetailsDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProductDetailsDto()"
+    ]
+  },
+  {
+    "Name": "ProductSummaryDto",
+    "Symbol": "FreshFood.Api.DTOs.ProductSummaryDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProductSummaryDto()"
+    ]
+  },
+  {
+    "Name": "CategoryDto",
+    "Symbol": "FreshFood.Api.DTOs.CategoryDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CategoryDto()"
+    ]
+  },
+  {
+    "Name": "BatchOfferDto",
+    "Symbol": "FreshFood.Api.DTOs.BatchOfferDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B BatchOfferDto()"
+    ]
+  },
+  {
+    "Name": "ICartService",
+    "Symbol": "FreshFood.Api.Services.ICartService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetCartAsync(identity: CartIdentityDto, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B ChangeQuantityAsync(request: CartChangeDto, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B RemoveItemAsync(productId: string, signal: CancellationToken): Task\u003CCartResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "CartService",
+    "Symbol": "FreshFood.Api.Services.Implements.CartService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartService(cartRepository: ICartRepository, currentCustomer: ICurrentCustomer, unitOfWork: IUnitOfWork, pricing: IBatchPricingPolicy)",
+      "\u002B GetCartAsync(identity: CartIdentityDto, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B ChangeQuantityAsync(request: CartChangeDto, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B RemoveItemAsync(productId: string, signal: CancellationToken): Task\u003CCartResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "CartController",
+    "Symbol": "FreshFood.Api.Controllers.CartController",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartController(service: ICartService)",
+      "\u002B GetCartAsync(signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B ChangeQuantityAsync(productId: string, request: CartChangeDto, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B RemoveItemAsync(productId: string, signal: CancellationToken): Task\u003CCartResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "ICartRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.ICartRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetAsync(customerId: string, sessionId: string, signal: CancellationToken): Task\u003CCart\u003E",
+      "\u002B GetProductsAsync(ids: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CProduct\u003E\u003E",
+      "\u002B GetSellableBatchesAsync(ids: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveAsync(cart: Cart, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "CartRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.CartRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartRepository(session: IRepositorySession)",
+      "\u002B GetAsync(customerId: string, sessionId: string, signal: CancellationToken): Task\u003CCart\u003E",
+      "\u002B GetProductsAsync(ids: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CProduct\u003E\u003E",
+      "\u002B GetSellableBatchesAsync(ids: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveAsync(cart: Cart, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "CartIdentityDto",
+    "Symbol": "FreshFood.Api.DTOs.CartIdentityDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartIdentityDto()"
+    ]
+  },
+  {
+    "Name": "CartChangeDto",
+    "Symbol": "FreshFood.Api.DTOs.CartChangeDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartChangeDto()"
+    ]
+  },
+  {
+    "Name": "CartResultDto",
+    "Symbol": "FreshFood.Api.DTOs.CartResultDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartResultDto()"
+    ]
+  },
+  {
+    "Name": "CartLineDto",
+    "Symbol": "FreshFood.Api.DTOs.CartLineDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CartLineDto()"
+    ]
+  },
+  {
+    "Name": "IProfileService",
+    "Symbol": "FreshFood.Api.Services.IProfileService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetProfileAsync(signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B UpdateProfileAsync(request: ProfileUpdateDto, signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B SaveAddressAsync(request: AddressInputDto, signal: CancellationToken): Task\u003CAddressDto\u003E",
+      "\u002B SetDefaultAddressAsync(addressId: string, signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B DeleteAddressAsync(addressId: string, signal: CancellationToken): Task\u003COperationResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "ProfileService",
+    "Symbol": "FreshFood.Api.Services.Implements.ProfileService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProfileService(profileRepository: IProfileRepository, currentCustomer: ICurrentCustomer, unitOfWork: IUnitOfWork, geocodingGateway: IGeocodingGateway)",
+      "\u002B GetProfileAsync(signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B UpdateProfileAsync(request: ProfileUpdateDto, signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B SaveAddressAsync(request: AddressInputDto, signal: CancellationToken): Task\u003CAddressDto\u003E",
+      "\u002B SetDefaultAddressAsync(addressId: string, signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B DeleteAddressAsync(addressId: string, signal: CancellationToken): Task\u003COperationResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "ProfileController",
+    "Symbol": "FreshFood.Api.Controllers.ProfileController",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProfileController(service: IProfileService)",
+      "\u002B GetProfileAsync(signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B UpdateProfileAsync(request: ProfileUpdateDto, signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B SaveAddressAsync(request: AddressInputDto, signal: CancellationToken): Task\u003CAddressDto\u003E",
+      "\u002B UpdateAddressAsync(addressId: string, request: AddressInputDto, signal: CancellationToken): Task\u003CAddressDto\u003E",
+      "\u002B SetDefaultAddressAsync(addressId: string, signal: CancellationToken): Task\u003CProfileResultDto\u003E",
+      "\u002B DeleteAddressAsync(addressId: string, signal: CancellationToken): Task\u003COperationResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "IProfileRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.IProfileRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetCustomerAsync(customerId: string, signal: CancellationToken): Task\u003CCustomer\u003E",
+      "\u002B GetAddressesAsync(customerId: string, signal: CancellationToken): Task\u003CList\u003CCustomerAddress\u003E\u003E",
+      "\u002B HasActiveOrderAsync(customerId: string, addressId: string, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveCustomerAsync(customer: Customer, signal: CancellationToken): Task",
+      "\u002B SaveAddressAsync(address: CustomerAddress, signal: CancellationToken): Task",
+      "\u002B DeleteAddressAsync(customerId: string, addressId: string, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "ProfileRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.ProfileRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProfileRepository(session: IRepositorySession)",
+      "\u002B GetCustomerAsync(customerId: string, signal: CancellationToken): Task\u003CCustomer\u003E",
+      "\u002B GetAddressesAsync(customerId: string, signal: CancellationToken): Task\u003CList\u003CCustomerAddress\u003E\u003E",
+      "\u002B HasActiveOrderAsync(customerId: string, addressId: string, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveCustomerAsync(customer: Customer, signal: CancellationToken): Task",
+      "\u002B SaveAddressAsync(address: CustomerAddress, signal: CancellationToken): Task",
+      "\u002B DeleteAddressAsync(customerId: string, addressId: string, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "ProfileResultDto",
+    "Symbol": "FreshFood.Api.DTOs.ProfileResultDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProfileResultDto()"
+    ]
+  },
+  {
+    "Name": "ProfileUpdateDto",
+    "Symbol": "FreshFood.Api.DTOs.ProfileUpdateDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProfileUpdateDto()"
+    ]
+  },
+  {
+    "Name": "AddressInputDto",
+    "Symbol": "FreshFood.Api.DTOs.AddressInputDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B AddressInputDto()"
+    ]
+  },
+  {
+    "Name": "AddressDto",
+    "Symbol": "FreshFood.Api.DTOs.AddressDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B AddressDto()"
+    ]
+  },
+  {
+    "Name": "GeoPointDto",
+    "Symbol": "FreshFood.Api.DTOs.GeoPointDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GeoPointDto()"
+    ]
+  },
+  {
+    "Name": "ICheckoutService",
+    "Symbol": "FreshFood.Api.Services.ICheckoutService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PrepareCheckoutAsync(request: CheckoutInputDto, signal: CancellationToken): Task\u003CCheckoutSummaryDto\u003E",
+      "\u002B PlaceOrderAsync(request: PlaceOrderDto, signal: CancellationToken): Task\u003COrderConfirmationDto\u003E",
+      "\u002B CreatePaymentQrAsync(request: PaymentQrRequestDto, signal: CancellationToken): Task\u003CPaymentQrDto\u003E",
+      "\u002B HandleVerifiedPaymentAsync(request: PaymentNoticeDto, signal: CancellationToken): Task\u003CPaymentResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "CheckoutService",
+    "Symbol": "FreshFood.Api.Services.Implements.CheckoutService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CheckoutService(checkoutRepository: ICheckoutRepository, currentCustomer: ICurrentCustomer, unitOfWork: IUnitOfWork, distanceCalculator: IDistanceCalculator, paymentGateway: IPaymentGateway, notificationGateway: INotificationGateway, orderStateMachine: IOrderStateMachine, pricing: IBatchPricingPolicy, deliveryFeePolicy: IDeliveryFeePolicy, logger: ILogger\u003CCheckoutService\u003E)",
+      "\u002B PrepareCheckoutAsync(request: CheckoutInputDto, signal: CancellationToken): Task\u003CCheckoutSummaryDto\u003E",
+      "\u002B RequestHash(request: PlaceOrderDto): string",
+      "\u002B PlaceOrderAsync(request: PlaceOrderDto, signal: CancellationToken): Task\u003COrderConfirmationDto\u003E",
+      "\u002B CreatePaymentQrAsync(request: PaymentQrRequestDto, signal: CancellationToken): Task\u003CPaymentQrDto\u003E",
+      "\u002B HandleVerifiedPaymentAsync(request: PaymentNoticeDto, signal: CancellationToken): Task\u003CPaymentResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "CheckoutController",
+    "Symbol": "FreshFood.Api.Controllers.CheckoutController",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CheckoutController(service: ICheckoutService)",
+      "\u002B PrepareCheckoutAsync(request: CheckoutInputDto, signal: CancellationToken): Task\u003CCheckoutSummaryDto\u003E",
+      "\u002B PlaceOrderAsync(request: PlaceOrderDto, signal: CancellationToken): Task\u003COrderConfirmationDto\u003E",
+      "\u002B CreatePaymentQrAsync(request: PaymentQrRequestDto, signal: CancellationToken): Task\u003CPaymentQrDto\u003E"
+    ]
+  },
+  {
+    "Name": "ICheckoutRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.ICheckoutRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetCheckoutCartAsync(customerId: string, signal: CancellationToken): Task\u003CCart\u003E",
+      "\u002B GetOwnedAddressAsync(customerId: string, addressId: string, signal: CancellationToken): Task\u003CCustomerAddress\u003E",
+      "\u002B LockFefoBatchesAsync(productIds: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveOrderAsync(order: Order, signal: CancellationToken): Task",
+      "\u002B SavePaymentOnceAsync(payment: OrderPayment, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B ClearCartAsync(cartId: string, signal: CancellationToken): Task",
+      "\u002B ClaimCheckoutAsync(customerId: string, reference: string, key: string, requestHash: string, signal: CancellationToken): Task\u003CObject\u003E",
+      "\u002B CompleteCheckoutAsync(customerId: string, reference: string, key: string, response: Object, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "CheckoutRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.CheckoutRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CheckoutRepository(session: IRepositorySession, fefo: IFefoBatchSpecification)",
+      "\u002B GetCheckoutCartAsync(customerId: string, signal: CancellationToken): Task\u003CCart\u003E",
+      "\u002B GetOwnedAddressAsync(customerId: string, addressId: string, signal: CancellationToken): Task\u003CCustomerAddress\u003E",
+      "\u002B LockFefoBatchesAsync(productIds: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveOrderAsync(order: Order, signal: CancellationToken): Task",
+      "\u002B SavePaymentOnceAsync(payment: OrderPayment, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B ClearCartAsync(cartId: string, signal: CancellationToken): Task",
+      "\u002B ClaimCheckoutAsync(customerId: string, reference: string, key: string, requestHash: string, signal: CancellationToken): Task\u003CObject\u003E",
+      "\u002B CompleteCheckoutAsync(customerId: string, reference: string, key: string, response: Object, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "CheckoutInputDto",
+    "Symbol": "FreshFood.Api.DTOs.CheckoutInputDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CheckoutInputDto()"
+    ]
+  },
+  {
+    "Name": "CheckoutSummaryDto",
+    "Symbol": "FreshFood.Api.DTOs.CheckoutSummaryDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CheckoutSummaryDto()"
+    ]
+  },
+  {
+    "Name": "CheckoutLineDto",
+    "Symbol": "FreshFood.Api.DTOs.CheckoutLineDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CheckoutLineDto()"
+    ]
+  },
+  {
+    "Name": "PlaceOrderDto",
+    "Symbol": "FreshFood.Api.DTOs.PlaceOrderDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PlaceOrderDto()"
+    ]
+  },
+  {
+    "Name": "OrderConfirmationDto",
+    "Symbol": "FreshFood.Api.DTOs.OrderConfirmationDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderConfirmationDto()"
+    ]
+  },
+  {
+    "Name": "PaymentQrRequestDto",
+    "Symbol": "FreshFood.Api.DTOs.PaymentQrRequestDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PaymentQrRequestDto()"
+    ]
+  },
+  {
+    "Name": "PaymentQrDto",
+    "Symbol": "FreshFood.Api.DTOs.PaymentQrDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PaymentQrDto()"
+    ]
+  },
+  {
+    "Name": "PaymentNoticeDto",
+    "Symbol": "FreshFood.Api.DTOs.PaymentNoticeDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PaymentNoticeDto()"
+    ]
+  },
+  {
+    "Name": "PaymentResultDto",
+    "Symbol": "FreshFood.Api.DTOs.PaymentResultDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PaymentResultDto()"
+    ]
+  },
+  {
+    "Name": "IMyOrdersService",
+    "Symbol": "FreshFood.Api.Services.IMyOrdersService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GetOrdersAsync(signal: CancellationToken): Task\u003COrderListDto\u003E",
+      "\u002B GetOrderDetailsAsync(orderId: string, signal: CancellationToken): Task\u003COrderDetailsDto\u003E",
+      "\u002B CancelOrderAsync(request: CancelOrderDto, signal: CancellationToken): Task\u003COperationResultDto\u003E",
+      "\u002B ReorderAsync(orderId: string, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B SubmitReviewAsync(request: OrderReviewDto, signal: CancellationToken): Task\u003COperationResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "MyOrdersService",
+    "Symbol": "FreshFood.Api.Services.Implements.MyOrdersService",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B MyOrdersService(myOrdersRepository: IMyOrdersRepository, currentCustomer: ICurrentCustomer, unitOfWork: IUnitOfWork, notificationGateway: INotificationGateway, orderStateMachine: IOrderStateMachine, pricing: IBatchPricingPolicy, logger: ILogger\u003CMyOrdersService\u003E)",
+      "\u002B GetOrdersAsync(signal: CancellationToken): Task\u003COrderListDto\u003E",
+      "\u002B GetOrderDetailsAsync(orderId: string, signal: CancellationToken): Task\u003COrderDetailsDto\u003E",
+      "\u002B CancelOrderAsync(request: CancelOrderDto, signal: CancellationToken): Task\u003COperationResultDto\u003E",
+      "\u002B ReorderAsync(orderId: string, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B SubmitReviewAsync(request: OrderReviewDto, signal: CancellationToken): Task\u003COperationResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "MyOrdersController",
+    "Symbol": "FreshFood.Api.Controllers.MyOrdersController",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B MyOrdersController(service: IMyOrdersService)",
+      "\u002B GetOrdersAsync(signal: CancellationToken): Task\u003COrderListDto\u003E",
+      "\u002B GetOrderDetailsAsync(orderId: string, signal: CancellationToken): Task\u003COrderDetailsDto\u003E",
+      "\u002B CancelOrderAsync(orderId: string, request: CancelOrderDto, signal: CancellationToken): Task\u003COperationResultDto\u003E",
+      "\u002B ReorderAsync(orderId: string, signal: CancellationToken): Task\u003CCartResultDto\u003E",
+      "\u002B SubmitReviewAsync(orderId: string, request: OrderReviewDto, signal: CancellationToken): Task\u003COperationResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "IMyOrdersRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.IMyOrdersRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B FindOwnedAsync(customerId: string, signal: CancellationToken): Task\u003CList\u003COrder\u003E\u003E",
+      "\u002B LockOwnedAsync(customerId: string, orderId: string, signal: CancellationToken): Task\u003COrder\u003E",
+      "\u002B GetCurrentBatchesAsync(productIds: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveCartAsync(cart: Cart, signal: CancellationToken): Task",
+      "\u002B SaveReviewOnceAsync(review: OrderReview, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B GetReturnReceiptAsync(orderId: string, signal: CancellationToken): Task\u003CReturnReceipt\u003E",
+      "\u002B GetRefundAsync(orderId: string, signal: CancellationToken): Task\u003CRefund\u003E"
+    ]
+  },
+  {
+    "Name": "MyOrdersRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.MyOrdersRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B MyOrdersRepository(session: IRepositorySession)",
+      "\u002B FindOwnedAsync(customerId: string, signal: CancellationToken): Task\u003CList\u003COrder\u003E\u003E",
+      "\u002B LockOwnedAsync(customerId: string, orderId: string, signal: CancellationToken): Task\u003COrder\u003E",
+      "\u002B GetCurrentBatchesAsync(productIds: List\u003Cstring\u003E, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveCartAsync(cart: Cart, signal: CancellationToken): Task",
+      "\u002B SaveReviewOnceAsync(review: OrderReview, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B GetReturnReceiptAsync(orderId: string, signal: CancellationToken): Task\u003CReturnReceipt\u003E",
+      "\u002B GetRefundAsync(orderId: string, signal: CancellationToken): Task\u003CRefund\u003E"
+    ]
+  },
+  {
+    "Name": "OrderListDto",
+    "Symbol": "FreshFood.Api.DTOs.OrderListDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderListDto()"
+    ]
+  },
+  {
+    "Name": "OrderSummaryDto",
+    "Symbol": "FreshFood.Api.DTOs.OrderSummaryDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderSummaryDto()"
+    ]
+  },
+  {
+    "Name": "OrderDetailsDto",
+    "Symbol": "FreshFood.Api.DTOs.OrderDetailsDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderDetailsDto()"
+    ]
+  },
+  {
+    "Name": "OrderLineDto",
+    "Symbol": "FreshFood.Api.DTOs.OrderLineDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderLineDto()"
+    ]
+  },
+  {
+    "Name": "CancelOrderDto",
+    "Symbol": "FreshFood.Api.DTOs.CancelOrderDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CancelOrderDto()"
+    ]
+  },
+  {
+    "Name": "OrderReviewDto",
+    "Symbol": "FreshFood.Api.DTOs.OrderReviewDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderReviewDto()"
+    ]
+  },
+  {
+    "Name": "ReturnSummaryDto",
+    "Symbol": "FreshFood.Api.DTOs.ReturnSummaryDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ReturnSummaryDto()"
+    ]
+  },
+  {
+    "Name": "StateMachineEvent",
+    "Symbol": "FreshFood.Api.DTOs.StateMachineEvent",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B StateMachineEvent()"
+    ]
+  },
+  {
+    "Name": "TransitionSnapshot",
+    "Symbol": "FreshFood.Api.DTOs.TransitionSnapshot",
+    "Kind": "Compiled C#",
+    "Operations": []
+  },
+  {
+    "Name": "GuardFactsDto",
+    "Symbol": "FreshFood.Api.DTOs.GuardFactsDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B GuardFactsDto()"
+    ]
+  },
+  {
+    "Name": "StateMachineResult",
+    "Symbol": "FreshFood.Api.DTOs.StateMachineResult",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B StateMachineResult()"
+    ]
+  },
+  {
+    "Name": "OrderLifecycleRecords",
+    "Symbol": "FreshFood.Reposistory.Repository.OrderLifecycleRecords",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderLifecycleRecords()"
+    ]
+  },
+  {
+    "Name": "IOrderLifecycleRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.IOrderLifecycleRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B LockOrderAsync(orderId: string, signal: CancellationToken): Task\u003COrder\u003E",
+      "\u002B LoadLifecycleAsync(orderId: string, signal: CancellationToken): Task\u003COrderLifecycleRecords\u003E",
+      "\u002B SaveAsync(order: Order, signal: CancellationToken): Task",
+      "\u002B RecordEventOnceAsync(aggregateId: string, eventId: string, transitionId: string, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveOrderLinesAsync(order: Order, lines: List\u003COrderDetail\u003E, signal: CancellationToken): Task",
+      "\u002B SavePaymentOnceAsync(payment: OrderPayment, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveFailureAsync(failure: DeliveryFailure, signal: CancellationToken): Task",
+      "\u002B SaveReceiptAsync(receipt: ReturnReceipt, items: List\u003CReturnReceiptItem\u003E, signal: CancellationToken): Task",
+      "\u002B SaveRefundOnceAsync(refund: Refund, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveShippingSettlementAsync(settlement: ShippingFeeSettlement, signal: CancellationToken): Task",
+      "\u002B LockReservedBatchesAsync(orderId: string, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveBatchesAsync(batches: List\u003CBatchInventory\u003E, signal: CancellationToken): Task",
+      "\u002B AppendAuditAsync(audit: AuditLog, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "OrderLifecycleRepository",
+    "Symbol": "FreshFood.Reposistory.Repository.Implements.OrderLifecycleRepository",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderLifecycleRepository(session: IRepositorySession)",
+      "\u002B LockOrderAsync(orderId: string, signal: CancellationToken): Task\u003COrder\u003E",
+      "\u002B LoadLifecycleAsync(orderId: string, signal: CancellationToken): Task\u003COrderLifecycleRecords\u003E",
+      "\u002B SaveAsync(order: Order, signal: CancellationToken): Task",
+      "\u002B RecordEventOnceAsync(aggregateId: string, eventId: string, transitionId: string, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveOrderLinesAsync(order: Order, lines: List\u003COrderDetail\u003E, signal: CancellationToken): Task",
+      "\u002B SavePaymentOnceAsync(payment: OrderPayment, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveFailureAsync(failure: DeliveryFailure, signal: CancellationToken): Task",
+      "\u002B SaveReceiptAsync(receipt: ReturnReceipt, items: List\u003CReturnReceiptItem\u003E, signal: CancellationToken): Task",
+      "\u002B SaveRefundOnceAsync(refund: Refund, signal: CancellationToken): Task\u003Cbool\u003E",
+      "\u002B SaveShippingSettlementAsync(settlement: ShippingFeeSettlement, signal: CancellationToken): Task",
+      "\u002B LockReservedBatchesAsync(orderId: string, signal: CancellationToken): Task\u003CList\u003CBatchInventory\u003E\u003E",
+      "\u002B SaveBatchesAsync(batches: List\u003CBatchInventory\u003E, signal: CancellationToken): Task",
+      "\u002B AppendAuditAsync(audit: AuditLog, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "IPayoutPort",
+    "Symbol": "FreshFood.Api.Services.IPayoutPort",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B RequestAsync(refundId: string, signal: CancellationToken): Task\u003CPayoutOutcomeDto\u003E"
+    ]
+  },
+  {
+    "Name": "PayoutOutcomeDto",
+    "Symbol": "FreshFood.Api.DTOs.PayoutOutcomeDto",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PayoutOutcomeDto()"
+    ]
+  },
+  {
+    "Name": "PaymentNoticeHandler",
+    "Symbol": "FreshFood.Api.Services.Implements.PaymentNoticeHandler",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B PaymentNoticeHandler(checkout: ICheckoutService)",
+      "\u002B HandleAsync(notice: PaymentNoticeDto, signal: CancellationToken): Task\u003CPaymentResultDto\u003E"
+    ]
+  },
+  {
+    "Name": "TransactionWork",
+    "Symbol": "System.Func\u003CCancellationToken,Task\u003E",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "ConfiguredNotificationPublisher",
+    "Symbol": "FreshFood.Api.Services.Implements.ConfiguredNotificationPublisher",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ConfiguredNotificationPublisher()",
+      "\u002B SendAsync(message: NotificationDto, signal: CancellationToken): Task"
+    ]
+  },
+  {
+    "Name": "UnconfiguredPayoutAdapter",
+    "Symbol": "FreshFood.Api.Services.Implements.UnconfiguredPayoutAdapter",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B UnconfiguredPayoutAdapter()",
+      "\u002B RequestAsync(refundId: string, signal: CancellationToken): Task\u003CPayoutOutcomeDto\u003E"
+    ]
+  },
+  {
+    "Name": "ApiCompositionRoot",
+    "Symbol": "FreshFood.Api.ApiCompositionRoot",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ConfigureServices(services: IServiceCollection, configuration: IConfiguration): void"
+    ]
+  },
+  {
+    "Name": "IBatchPricingPolicy",
+    "Symbol": "FreshFood.Reposistory.Entities.IBatchPricingPolicy",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Quote(batch: BatchInventory, asOf: DateTimeOffset): VndAmount"
+    ]
+  },
+  {
+    "Name": "BatchPricingPolicy",
+    "Symbol": "FreshFood.Reposistory.Entities.BatchPricingPolicy",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B BatchPricingPolicy()",
+      "\u002B Quote(batch: BatchInventory, asOf: DateTimeOffset): VndAmount"
+    ]
+  },
+  {
+    "Name": "IDeliveryFeePolicy",
+    "Symbol": "FreshFood.Reposistory.Entities.IDeliveryFeePolicy",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Quote(distanceKm: decimal): VndAmount"
+    ]
+  },
+  {
+    "Name": "DeliveryFeePolicy",
+    "Symbol": "FreshFood.Reposistory.Entities.DeliveryFeePolicy",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B DeliveryFeePolicy()",
+      "\u002B Quote(distanceKm: decimal): VndAmount"
+    ]
+  },
+  {
+    "Name": "IDistanceCalculator",
+    "Symbol": "FreshFood.Api.Services.IDistanceCalculator",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B CalculateAsync(addressId: string, signal: CancellationToken): Task\u003Cdecimal\u003E"
+    ]
+  },
+  {
+    "Name": "DistanceCalculator",
+    "Symbol": "FreshFood.Api.Services.Implements.DistanceCalculator",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B DistanceCalculator(gateway: IDistanceGateway)",
+      "\u002B CalculateAsync(addressId: string, signal: CancellationToken): Task\u003Cdecimal\u003E"
+    ]
+  },
+  {
+    "Name": "IFefoBatchSpecification",
+    "Symbol": "FreshFood.Reposistory.Repository.IFefoBatchSpecification",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B Criteria(asOf: DateTimeOffset): BatchCriteria"
+    ]
+  },
+  {
+    "Name": "FefoBatchSpecification",
+    "Symbol": "FreshFood.Reposistory.Entities.FefoBatchSpecification",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B FefoBatchSpecification()",
+      "\u002B Criteria(asOf: DateTimeOffset): BatchCriteria"
+    ]
+  },
+  {
+    "Name": "BatchCriteria",
+    "Symbol": "FreshFood.Reposistory.Repository.BatchCriteria",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B BatchCriteria()"
+    ]
+  },
+  {
+    "Name": "VndAmount",
+    "Symbol": "FreshFood.Reposistory.Entities.VndAmount",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B VndAmount(units: decimal)",
+      "\u002B FromUnits(units: decimal): VndAmount",
+      "\u002B Add(other: VndAmount): VndAmount",
+      "\u002B ToWire(): string",
+      "\u002B ToString(): string",
+      "\u002B GetHashCode(): int",
+      "\u002B Equals(obj: Object): bool",
+      "\u002B Equals(other: VndAmount): bool"
+    ]
+  },
+  {
+    "Name": "EntityId",
+    "Symbol": "System.String",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "LocalDate",
+    "Symbol": "System.DateOnly",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "VndAmountString",
+    "Symbol": "System.String",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "IsoDateTime",
+    "Symbol": "System.DateTimeOffset",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "AuthenticatedPrincipal",
+    "Symbol": "System.Security.Claims.ClaimsPrincipal",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "DatabaseConnection",
+    "Symbol": "Npgsql.NpgsqlDataSource",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "DatabaseTransaction",
+    "Symbol": "Npgsql.NpgsqlTransaction",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "RegistrationMap",
+    "Symbol": "Microsoft.Extensions.DependencyInjection.IServiceCollection",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "HttpTransport",
+    "Symbol": "System.Net.Http.HttpClient",
+    "Kind": "Framework or type alias",
+    "Operations": []
+  },
+  {
+    "Name": "IOrderStateMachine",
+    "Symbol": "FreshFood.Api.Services.IOrderStateMachine",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B ProcessEventAsync(snapshot: TransitionSnapshot, message: StateMachineEvent, signal: CancellationToken): Task\u003CStateMachineResult\u003E",
+      "\u002B CurrentState(): OrderStateSnapshot"
+    ]
+  },
+  {
+    "Name": "OrderStateMachine",
+    "Symbol": "FreshFood.Api.Services.Implements.OrderStateMachine",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderStateMachine(repository: IOrderLifecycleRepository)",
+      "\u002B CurrentState(): OrderStateSnapshot",
+      "\u002B ProcessEventAsync(context: TransitionSnapshot, message: StateMachineEvent, signal: CancellationToken): Task\u003CStateMachineResult\u003E"
+    ]
+  },
+  {
+    "Name": "OrderStateSnapshot",
+    "Symbol": "FreshFood.Api.DTOs.OrderStateSnapshot",
+    "Kind": "Compiled C#",
+    "Operations": [
+      "\u002B OrderStateSnapshot()"
+    ]
+  }
+]

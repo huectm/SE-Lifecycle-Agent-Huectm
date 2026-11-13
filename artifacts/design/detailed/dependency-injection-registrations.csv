@@ -1,0 +1,26 @@
+Contract,Implementation,Lifetime,Composition Root,Status
+ICatalogService,CatalogService,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+ICatalogRepository,CatalogRepository,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IBatchPricingPolicy,BatchPricingPolicy,Singleton,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+ICartService,CartService,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+ICartRepository,CartRepository,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IProfileService,ProfileService,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IProfileRepository,ProfileRepository,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IGeocodingGateway,GoogleMapsGeocodingAdapter,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+ICheckoutService,CheckoutService,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+ICheckoutRepository,CheckoutRepository,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IOrderStateMachine,OrderStateMachine,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IDistanceGateway,GoogleMapsDistanceAdapter,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IPaymentGateway,SePayPaymentAdapter,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+INotificationGateway,NotificationAdapter,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IDeliveryFeePolicy,DeliveryFeePolicy,Singleton,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IDistanceCalculator,DistanceCalculator,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IFefoBatchSpecification,FefoBatchSpecification,Singleton,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IMyOrdersService,MyOrdersService,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IMyOrdersRepository,MyOrdersRepository,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IUnitOfWork,UnitOfWork,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IRepositorySession,PostgreSqlSession,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+ICurrentCustomer,CurrentCustomer,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IOrderLifecycleRepository,OrderLifecycleRepository,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+IPayoutPort,UnconfiguredPayoutAdapter,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review
+INotificationPublisher,ConfiguredNotificationPublisher,Scoped per API request / transaction,src/FreshFood-API/ApiCompositionRoot.cs,ASP.NET Core C#; stakeholder-requested migration; technical review

@@ -1,0 +1,119 @@
+[
+  {
+    "name": "checkout_idempotency",
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "BIGINT",
+        "constraint": "PK, NOT NULL, FK -> customers",
+        "description": "Server-authenticated customer; owner of the request key"
+      },
+      {
+        "name": "operation",
+        "type": "VARCHAR(32)",
+        "constraint": "PK, CHECK = PlaceOrder",
+        "description": "Operation namespace"
+      },
+      {
+        "name": "idempotency_key",
+        "type": "VARCHAR(128)",
+        "constraint": "PK, NOT NULL, nonblank",
+        "description": "Stable caller retry key"
+      },
+      {
+        "name": "checkout_reference",
+        "type": "VARCHAR(128)",
+        "constraint": "NOT NULL, customer/operation-scoped UNIQUE",
+        "description": "One accepted checkout intent per customer reference"
+      },
+      {
+        "name": "request_hash",
+        "type": "CHAR(64)",
+        "constraint": "NOT NULL, SHA-256 hex",
+        "description": "Fingerprint of AddressId, PaymentMethod and CheckoutReference"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NULL until completion, FK -> orders",
+        "description": "Accepted order; completed stored response references this ID"
+      },
+      {
+        "name": "response",
+        "type": "JSONB",
+        "constraint": "NULL until completion; JSON object; matching OrderId",
+        "description": "Original confirmation snapshot, not current order state"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Technical creation time"
+      },
+      {
+        "name": "completed_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NULL until completion",
+        "description": "Same transaction completion time"
+      }
+    ]
+  },
+  {
+    "name": "order_transition_events",
+    "columns": [
+      {
+        "name": "transition_event_id",
+        "type": "BIGINT IDENTITY",
+        "constraint": "PRIMARY KEY",
+        "description": "Technical evidence identifier"
+      },
+      {
+        "name": "aggregate_key",
+        "type": "VARCHAR(256)",
+        "constraint": "NOT NULL",
+        "description": "Namespaced checkout aggregate or existing order identifier"
+      },
+      {
+        "name": "event_id",
+        "type": "VARCHAR(128)",
+        "constraint": "NOT NULL",
+        "description": "Caller event identity"
+      },
+      {
+        "name": "transition_id",
+        "type": "VARCHAR(64)",
+        "constraint": "NOT NULL",
+        "description": "Existing registered transition ID; part of UNIQUE aggregate/event/transition"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT",
+        "constraint": "NULL initially, FK -> orders",
+        "description": "Linked to created order before acceptance transaction commits"
+      },
+      {
+        "name": "recorded_at",
+        "type": "TIMESTAMPTZ",
+        "constraint": "NOT NULL DEFAULT CURRENT_TIMESTAMP",
+        "description": "Technical execution evidence timestamp"
+      }
+    ]
+  },
+  {
+    "name": "audit_logs (extension)",
+    "columns": [
+      {
+        "name": "customer_id",
+        "type": "BIGINT",
+        "constraint": "NULL, FK -> customers",
+        "description": "Authenticated customer actor; mutually exclusive with staff_id"
+      },
+      {
+        "name": "actor_type",
+        "type": "VARCHAR(16)",
+        "constraint": "GENERATED ALWAYS STORED",
+        "description": "CUSTOMER when customer_id present, STAFF when staff_id present, SYSTEM when both NULL; legacy system entries retained"
+      }
+    ]
+  }
+]

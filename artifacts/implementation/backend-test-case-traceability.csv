@@ -1,0 +1,58 @@
+TestId,UseCase,ConditionGroup,Scenario,Result,TestSource,Environment
+BE-001,Shared,Boundary,delivery boundary 0,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-002,Shared,Boundary,delivery boundary 0.999,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-003,Shared,Boundary,delivery boundary 1,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-004,Shared,Boundary,delivery boundary 2.999,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-005,Shared,Boundary,delivery boundary 3,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-006,Shared,Boundary,delivery boundary 10,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-007,Shared,Abnormal,delivery rejects -1,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-008,Shared,Abnormal,delivery rejects NaN,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-009,Shared,Abnormal,delivery rejects Infinity,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-010,Shared,Abnormal,delivery rejects 10.001,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-011,Shared,Boundary,exact VND discount 0,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-012,Shared,Boundary,exact VND discount 10,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-013,Shared,Boundary,exact VND discount 50,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-014,Shared,Boundary,exact VND discount 10.25,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-015,Shared,Normal / module integration,fractional VND does not silently round,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-016,Shared,Abnormal,expired batch is rejected,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-017,Shared,Boundary,money beyond JS safe integer stays exact,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-018,Shared,Abnormal,transaction rolls back and preserves original error,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-019,Shared,Abnormal,aborted operation never starts transaction,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-020,UC-C01,Normal / module integration,catalog empty search returns six alternatives,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-021,UC-C01,Normal / module integration,catalog does not expose delisted product detail,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-022,UC-C03,Normal / module integration,cart clamps requested quantity to live stock,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-023,UC-C03,Abnormal,cart rejects quantity 0,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-024,UC-C03,Abnormal,cart rejects quantity -1,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-025,UC-C03,Abnormal,cart rejects quantity 1.5,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-026,UC-C03,Abnormal,cart rejects quantity NaN,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-027,UC-C03,Normal / module integration,cart identity is server resolved,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-028,UC-C03,Abnormal,cart marks expired or missing batch not check-outable,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-029,UC-C03,Normal / module integration,remove item returns recalculated empty cart,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-030,UC-C05,Normal / module integration,"profile updates only name/email, never trusted customer identity",Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-031,UC-C05,Abnormal,profile rejects malformed email before write,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-032,UC-C05,Abnormal,address ownership rejects another customers address,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-033,UC-C05,Abnormal,address used by active order cannot be deleted,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-034,UC-C06,Normal / module integration,checkout accepts COD through acceptOrder and independent unpaid branch,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-035,UC-C06,Normal / module integration,checkout FEFO splits quantities over ordered batches,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-036,UC-C06,Normal / module integration,checkout insufficient stock writes nothing,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-037,UC-C06,Abnormal,checkout persistence failure rolls back reservation and all transition evidence,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-038,UC-C06,Normal / module integration,prepaid flow fails closed while correlation policy remains TBD,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-039,Shared,Abnormal,forged transition snapshot is rejected,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-040,UC-C07,Abnormal,cancellation cannot run from Packing,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-041,UC-C07,Normal / module integration,review enforces Delivered and 1..5 rating,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-042,Shared,Normal / module integration,history and detail are restricted to authenticated owner,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-043,Shared,Normal / module integration,SQL search binds malicious keyword as data,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-044,Shared,Normal / module integration,DI resolves all five controllers and exactly 24 transition handlers,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-045,Shared,Abnormal,"HTTP exposes JSON, blocks malformed payload and does not trust identity fields",Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-046,UC-C01,Normal / module integration,catalog details and clearance expose typed batch offers,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-047,UC-C05,Normal / module integration,profile address add and default select preserve owned values,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-048,UC-C05,Abnormal,address geocoding error cannot persist a guessed coordinate,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-049,UC-C05,Normal / module integration,address delete succeeds only when no active order references it,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-050,UC-C03,Abnormal,profile and cart reject missing server identity,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-051,UC-C03,Abnormal,checkout rejects an empty cart and inaccessible address,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-052,UC-C06,Boundary,QR and later payment explicitly preserve unresolved correlation boundary,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-053,UC-C05,Normal / module integration,"order detail maps price strings, address and independent payment state",Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-054,UC-C07,Normal / module integration,reorder copies current availability and reports missing items,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-055,UC-C07,Abnormal,delivered order accepts one review and rejects duplicates,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-056,UC-C07,Normal / module integration,cancellation dispatch releases stock and records audit before commit,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB
+BE-057,Shared,Abnormal,entity setters cannot bypass stock guards,Passed,src/FreshFood-API/tests/backend.test.js,Node local; test doubles; no live provider/DB

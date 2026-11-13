@@ -1,0 +1,139 @@
+﻿{
+    "total":  2,
+    "p":  1,
+    "ps":  50,
+    "paging":  {
+                   "pageIndex":  1,
+                   "pageSize":  50,
+                   "total":  2
+               },
+    "effortTotal":  5,
+    "debtTotal":  5,
+    "issues":  [
+                   {
+                       "key":  "AaGbqizoPcVI_0Jmw1m6",
+                       "rule":  "csharpsquid:S6444",
+                       "severity":  "MINOR",
+                       "component":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/ProfileService.cs",
+                       "project":  "huectm_SE-Lifecycle-Agent",
+                       "hash":  "d32cb4a1c9a7fe0326728fa13d0ab641",
+                       "textRange":  {
+                                         "startLine":  15,
+                                         "endLine":  15,
+                                         "startOffset":  68,
+                                         "endOffset":  127
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "resolution":  "FIXED",
+                       "status":  "CLOSED",
+                       "message":  "Pass a timeout to limit the execution time.",
+                       "effort":  "5min",
+                       "debt":  "5min",
+                       "author":  "",
+                       "tags":  [
+                                    "cwe",
+                                    "former-hotspot",
+                                    "regex"
+                                ],
+                       "creationDate":  "2026-11-02T09:48:45+0000",
+                       "updateDate":  "2026-11-04T03:52:33+0000",
+                       "closeDate":  "2026-11-04T03:52:33+0000",
+                       "type":  "VULNERABILITY",
+                       "organization":  "huectm",
+                       "cleanCodeAttribute":  "TRUSTWORTHY",
+                       "cleanCodeAttributeCategory":  "RESPONSIBLE",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "SECURITY",
+                                           "severity":  "LOW"
+                                       }
+                                   ],
+                       "issueStatus":  "FIXED",
+                       "projectName":  "SE-Lifecycle-Agent",
+                       "internalTags":  [
+
+                                        ],
+                       "lastChangeAnalysisUuid":  "8b374749-5a88-44c0-94c9-8f226a423cf3",
+                       "lastChangeSource":  "ANALYSIS"
+                   },
+                   {
+                       "key":  "AaGbqizoPcVI_0Jmw1m8",
+                       "rule":  "external_roslyn:SYSLIB1045",
+                       "severity":  "INFO",
+                       "component":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/ProfileService.cs",
+                       "project":  "huectm_SE-Lifecycle-Agent",
+                       "hash":  "d32cb4a1c9a7fe0326728fa13d0ab641",
+                       "textRange":  {
+                                         "startLine":  15,
+                                         "endLine":  15,
+                                         "startOffset":  68,
+                                         "endOffset":  127
+                                     },
+                       "flows":  [
+
+                                 ],
+                       "resolution":  "FIXED",
+                       "status":  "CLOSED",
+                       "message":  "Use \u0027GeneratedRegexAttribute\u0027 to generate the regular expression implementation at compile-time.",
+                       "effort":  "0min",
+                       "debt":  "0min",
+                       "author":  "",
+                       "tags":  [
+
+                                ],
+                       "creationDate":  "2026-11-02T09:48:45+0000",
+                       "updateDate":  "2026-11-04T03:52:33+0000",
+                       "closeDate":  "2026-11-04T03:52:33+0000",
+                       "type":  "CODE_SMELL",
+                       "organization":  "huectm",
+                       "externalRuleEngine":  "roslyn",
+                       "cleanCodeAttribute":  "CONVENTIONAL",
+                       "cleanCodeAttributeCategory":  "CONSISTENT",
+                       "impacts":  [
+                                       {
+                                           "softwareQuality":  "MAINTAINABILITY",
+                                           "severity":  "MEDIUM"
+                                       }
+                                   ],
+                       "issueStatus":  "FIXED",
+                       "projectName":  "SE-Lifecycle-Agent",
+                       "internalTags":  [
+
+                                        ],
+                       "lastChangeAnalysisUuid":  "8b374749-5a88-44c0-94c9-8f226a423cf3",
+                       "lastChangeSource":  "ANALYSIS"
+                   }
+               ],
+    "components":  [
+                       {
+                           "organization":  "huectm",
+                           "key":  "huectm_SE-Lifecycle-Agent",
+                           "uuid":  "AaDSj93G8cH_KW6IC0xW",
+                           "enabled":  true,
+                           "qualifier":  "TRK",
+                           "name":  "SE-Lifecycle-Agent",
+                           "longName":  "SE-Lifecycle-Agent"
+                       },
+                       {
+                           "organization":  "huectm",
+                           "key":  "huectm_SE-Lifecycle-Agent:src/FreshFood-API/Services/Implements/ProfileService.cs",
+                           "uuid":  "AaGbqingPcVI_0Jmw1mI",
+                           "enabled":  true,
+                           "qualifier":  "FIL",
+                           "name":  "ProfileService.cs",
+                           "longName":  "src/FreshFood-API/Services/Implements/ProfileService.cs",
+                           "path":  "src/FreshFood-API/Services/Implements/ProfileService.cs"
+                       }
+                   ],
+    "organizations":  [
+                          {
+                              "key":  "huectm",
+                              "name":  "huectm"
+                          }
+                      ],
+    "facets":  [
+
+               ]
+}

@@ -1,0 +1,6 @@
+﻿Use Case,Web Pages Class,Web CallService Implementation,Mobile View,Mobile ViewModel,Mobile Model Implementation,Web Page,Mobile Page
+UC-C01,CatalogPage,CatalogApiClient,CatalogView,CatalogViewModel,CatalogApiModel,2,3
+UC-C03,CartPage,CartApiClient,CartView,CartViewModel,CartApiModel,2,3
+UC-C05,ProfilePage,ProfileApiClient,ProfileAddressView,ProfileViewModel,ProfileApiModel,2,3
+UC-C06,CheckoutPage,CheckoutApiClient,CheckoutView,CheckoutViewModel,CheckoutApiModel,2,3
+UC-C07,MyOrdersPage,MyOrdersApiClient,MyOrdersView,MyOrdersViewModel,MyOrdersApiModel,2,3

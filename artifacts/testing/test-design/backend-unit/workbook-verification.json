@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-04",
+  "templatePreserved": true,
+  "sheets": 202,
+  "executableMethods": 193,
+  "contracts": 85,
+  "nativeFunctionLinks": 278,
+  "passed": 0,
+  "failed": 0,
+  "untested": 1190,
+  "total": 1190,
+  "unusedTemplateResultsBlank": true,
+  "formulasVerifiedBy": "Excel per-sheet Calculate; live formula totals verified; native hyperlinks",
+  "backendTestsExecuted": false,
+  "excelCompatibilityRepair": false,
+  "workbook_sha256": "a8a1f52408069cee7b2130bb8ea75217362edf2ae5f71bc5685f5caa22725d31",
+  "template_sha256": "352c0088604a94743fae19306e399abb5241f0ab69704b729decde4c25d07f23"
+}

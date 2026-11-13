@@ -1,0 +1,29 @@
+{
+  "version": "0.2",
+  "template": "templates/Test Documents/Template_Unit Test Case.xls",
+  "notation": "O/blank matrix; left-side conditions and confirmation values",
+  "methodSheets": 193,
+  "unchangedTestCases": 1190,
+  "criterionRowsVerified": 6840,
+  "selectionMarkersVerified": 14840,
+  "allTestColumnsOOrBlank": true,
+  "inputAndExpectedValuesVerified": true,
+  "stableCaseIdsVerified": true,
+  "passed": 0,
+  "failed": 0,
+  "untested": 1190,
+  "actualExecutionRegionsBlank": true,
+  "dynamicResultFormulasVerified": true,
+  "backendTestsExecuted": false,
+  "workbookSha256": "aa4426ef71e0020b672f08466dc5c6445d01f92ab891a5263fb1b8d8440818e9",
+  "visualReview": {
+    "status": "Passed",
+    "areas": [
+      "Condition matrix",
+      "Confirm and Result matrix",
+      "Test Report totals"
+    ],
+    "previewDirectory": "scratch/unit-test-template"
+  },
+  "canonicalDesignSha256": "f8cef0ab40b9d46f768312aa16797605463c76c4d21a73d6dbc0e91ca15e6ceb"
+}

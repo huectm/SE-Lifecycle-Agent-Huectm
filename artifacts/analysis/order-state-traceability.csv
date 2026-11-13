@@ -1,0 +1,44 @@
+page,id,source,target,label,basis
+Order Fulfillment,I00,initial,payment_choice,acceptOrder / reserve stock atomically,FR-ORD-03; BR-ORD-01
+Order Fulfillment,T01u,payment_choice,pending_unpaid,[not paid at checkout],Stakeholder: independent initial unpaid state
+Order Fulfillment,T01p,payment_choice,pending_paid,[verified paid at checkout],Stakeholder: independent initial paid state
+Order Fulfillment,T02u,pending_unpaid,confirmed,"approveOrder
+[not first order OR phone confirmed]",BR-FUL-01; FR-FUL-02
+Order Fulfillment,T02p,pending_paid,confirmed,"approveOrder
+[staff approval]",FR-FUL-02; no mandatory call for paid first order
+Order Fulfillment,T03,confirmed,packing,startPacking,UC-C07
+Order Fulfillment,T04,packing,shipping,"dispatchOrder
+[documents and assigned agent]",BR-FUL-02; FR-DEL-01
+Order Fulfillment,T05,shipping,delivered,deliverySuccess,FR-DEL-02
+Order Fulfillment,T06,shipping,delivery_failed,"deliveryFailure
+[reason recorded]",FR-DEL-03
+Order Fulfillment,T07,delivery_failed,returned,"confirmReturnReceipt
+[all goods received]",FR-DEL-04
+Order Fulfillment,T08u,pending_unpaid,cancelled,"cancelOrder
+[customer OR staff cancels
+unconfirmed first unpaid order]",UC-C07; BR-FUL-01
+Order Fulfillment,T08p,pending_paid,cancelled,cancelOrder [customer confirms],UC-C07; paid cancellation refund policy TBD
+Order Fulfillment,T09,confirmed,cancelled,cancelOrder [customer confirms],UC-C07
+Order Fulfillment,F_delivered,delivered,final_delivered,,Stakeholder request: explicit UML final node for fulfillment completion
+Order Fulfillment,F_returned,returned,final_returned,,Stakeholder request: explicit UML final node for fulfillment completion
+Order Fulfillment,F_cancelled,cancelled,final_cancelled,,Stakeholder request: explicit UML final node for fulfillment completion
+Automatic Goods Refund,R01,refund_initial,awaiting,observe refund candidate,Stakeholder automatic-refund policy; proposed workflow milestone
+Automatic Goods Refund,R02,awaiting,processing,"receiptAndCauseConfirmed
+[paid goods AND complete return
+AND cause confirmed; no duplicate]
+/ refund original allocations by policy",Stakeholder confirmed eligibility and amount 2026-10-29; proposed duplicate-safety control
+Automatic Goods Refund,R03,processing,completed,"refundSettlementConfirmed
+/ record actual completed refund",Derived settlement integrity; provider integration TBD
+Automatic Goods Refund,R04,processing,unresolved,"refundRejected OR
+settlementUncertain
+/ do not mark refund completed",Exception representation proposed; retry/reconciliation policy TBD
+Payment Settlement,P01,pay_initial,unpaid,createOrder,UC-C06 COD/VietQR initial payment state
+Payment Settlement,P02,unpaid,paid,"verifiedSePayNotification
+[order matches AND amount >= total]
+/ record captured payment",BR-ORD-03; FR-PAY-02; UC-C06 A6.1
+Payment Settlement,P03,paid,partially_refunded,"refundSettlementConfirmed
+[0 < cumulative refund < captured]
+/ record retained fee and goods refund",Confirmed goods-only refund with retained delivery fee; proposed financial enum
+Payment Settlement,P04,paid,refunded,"refundSettlementConfirmed
+[cumulative refund = captured]
+/ record full refunded amount",BR-FUL-05; confirmed product-fault full refund

@@ -1,0 +1,1378 @@
+{
+  "status": "Draft for Design Review",
+  "scope": "Static model verification; not implementation or dynamic testing",
+  "pages": 29,
+  "messages": 514,
+  "checked_receiver_method_calls": 236,
+  "execution_occurrences": 291,
+  "checks": [
+    {
+      "check": "Exactly five use-case masters",
+      "passed": true
+    },
+    {
+      "check": "Named receiver methods exist in detailed class model",
+      "passed": true
+    },
+    {
+      "check": "No result message returns to a customer or external actor",
+      "passed": true
+    },
+    {
+      "check": "SePay callback calls CheckoutService, never CheckoutController",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 all service operations represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 Web and Mobile entry chains represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 all service operations represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 Web and Mobile entry chains represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 all service operations represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 Web and Mobile entry chains represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 all service operations represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 Web and Mobile entry chains represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 all service operations represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 Web and Mobile entry chains represented",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 master matches recorded hash",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 page 1 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/14",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/18",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/1/20",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 page 2 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/14",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/18",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/2/20",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 page 3 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/3/12",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 page 4 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/14",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/18",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/4/20",
+      "passed": true
+    },
+    {
+      "check": "UC-C01 page 5 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/5/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/5/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/5/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/5/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C01/5/5",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 master matches recorded hash",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 page 1 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/1/13",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 page 2 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/18",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/20",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/22",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/2/24",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 page 3 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/12",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/14",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/18",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/3/20",
+      "passed": true
+    },
+    {
+      "check": "UC-C03 page 4 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/4/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/4/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/4/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/4/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C03/4/5",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 master matches recorded hash",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 page 1 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/1/9",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 page 2 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/2/18",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 page 3 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/10",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/3/17",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 page 4 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/4/18",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 page 5 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/5/17",
+      "passed": true
+    },
+    {
+      "check": "UC-C05 page 6 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/6/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/6/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/6/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/6/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C05/6/5",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 master matches recorded hash",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 1 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/17",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/19",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/1/20",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 2 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/16",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/17",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/19",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/21",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/23",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/25",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/27",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/28",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/30",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/32",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/34",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/36",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/2/39",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 3 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/3/8",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 4 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/4/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/4/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/4/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/4/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/4/5",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 5 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/5/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/5/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/5/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/5/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/5/6",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 6 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/6",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/12",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/6/1",
+      "passed": true
+    },
+    {
+      "check": "UC-C06 page 7 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/6",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C06/7/10",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 master matches recorded hash",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 1 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/1/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/1/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/1/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/1/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/1/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/1/7",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 2 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/2/11",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 3 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/3/16",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 4 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/13",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/4/17",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 5 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/9",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/11",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/5/13",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 6 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/6/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/6/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/6/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/6/4",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/6/5",
+      "passed": true
+    },
+    {
+      "check": "UC-C07 page 7 PNG matches master export record",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/1",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/2",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/3",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/5",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/7",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/8",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/10",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/12",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/14",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/15",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/17",
+      "passed": true
+    },
+    {
+      "check": "Continuous activation UC-C07/7/1",
+      "passed": true
+    },
+    {
+      "check": "Message segments do not cross unrelated activations",
+      "passed": true
+    },
+    {
+      "check": "Label rectangles do not overlap participant headers or activations",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "method_errors": [],
+  "label_collisions": [],
+  "route_collisions": []
+}

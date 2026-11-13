@@ -1,0 +1,14 @@
+[
+  {
+    "path": "artifacts/Requirements_Analysis_Design_Specification.docx",
+    "rules": 5,
+    "requirements": 11,
+    "schema_tables": 9
+  },
+  {
+    "path": "artifacts/requirements/Software_Requirements_Specification.docx",
+    "rules": 5,
+    "requirements": 11,
+    "schema_tables": 0
+  }
+]

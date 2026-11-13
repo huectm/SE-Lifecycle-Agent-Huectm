@@ -1,0 +1,29 @@
+{
+  "case": {
+    "id": "REG-045",
+    "title": "Proposed UC password composition Abc12!xy",
+    "field": "password",
+    "value": "Abc12!xy",
+    "expected": "success",
+    "basis": "UC proposal; confirmation required",
+    "technique": "BVA/EP",
+    "flow": "Appendix",
+    "firstname": "Robot",
+    "lastname": "Tester",
+    "email": "rf1793178813186849400reg-045@example.com",
+    "telephone": "0812345678",
+    "password": "Abc12!xy",
+    "confirm": "Abc12!xy",
+    "newsletter": "0",
+    "agree": "1"
+  },
+  "status": "PASS",
+  "url": "https://tutorialsninja.com/demo/index.php?route=account/edit",
+  "title": "My Account Information",
+  "actual": {
+    "url": "https://tutorialsninja.com/demo/index.php?route=account/success",
+    "success": true,
+    "warnings": "",
+    "email_validity": null
+  }
+}

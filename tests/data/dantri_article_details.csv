@@ -1,0 +1,4 @@
+case_id,category,url,title,source,captured_on
+DT-001,Entertainment,https://dantri.com.vn/giai-tri/khan-gia-viet-doi-co-dem-thu-3-o-ha-noi-va-cau-tra-loi-bat-ngo-cua-bigbang-20261025213107975.htm,Khán giả Việt đòi có đêm thứ 3 ở Hà Nội và câu trả lời bất ngờ của BIGBANG,Live homepage DOM via SeleniumLibrary,2026-10-25
+DT-002,Business,https://dantri.com.vn/kinh-doanh/chuoi-california-fitness-dong-het-co-so-o-ha-noi-ca-nuoc-con-3-chi-nhanh-20261025211237614.htm,"Chuỗi California Fitness đóng hết cơ sở ở Hà Nội, cả nước còn 3 chi nhánh",Live homepage DOM via SeleniumLibrary,2026-10-25
+DT-003,World,https://dantri.com.vn/the-gioi/nga-san-sang-dam-phan-3-ben-ve-ukraine-sau-ngay-411-20261025204118674.htm,Nga sẵn sàng đàm phán 3 bên về Ukraine sau ngày 4/11,Live homepage DOM via SeleniumLibrary,2026-10-25

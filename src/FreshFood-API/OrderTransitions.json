@@ -1,0 +1,383 @@
+[
+  {
+    "Id": "I00",
+    "Region": "fulfillment",
+    "Source": "initial",
+    "Events": [
+      "acceptOrder"
+    ],
+    "Guard": "plannedStock",
+    "Action": "accept",
+    "Target": "payment_choice",
+    "FollowUps": [
+      {
+        "Event": "__completion",
+        "Region": "fulfillment"
+      }
+    ],
+    "Specification": "acceptOrder / reserve stock atomically",
+    "Basis": "FR-ORD-03; BR-ORD-01"
+  },
+  {
+    "Id": "T01u",
+    "Region": "fulfillment",
+    "Source": "payment_choice",
+    "Events": [
+      "__completion"
+    ],
+    "Guard": "unpaid",
+    "Action": "enterInitial",
+    "Target": "pending_unpaid",
+    "FollowUps": [
+      {
+        "Event": "createOrder",
+        "Region": "payment"
+      }
+    ],
+    "Specification": "[not paid at checkout]",
+    "Basis": "Stakeholder: independent initial unpaid state"
+  },
+  {
+    "Id": "T01p",
+    "Region": "fulfillment",
+    "Source": "payment_choice",
+    "Events": [
+      "__completion"
+    ],
+    "Guard": "paid",
+    "Action": "enterInitial",
+    "Target": "pending_paid",
+    "FollowUps": [
+      {
+        "Event": "createOrder",
+        "Region": "payment"
+      },
+      {
+        "Event": "verifiedSePayNotification",
+        "Region": "payment"
+      }
+    ],
+    "Specification": "[verified paid at checkout]",
+    "Basis": "Stakeholder: independent initial paid state"
+  },
+  {
+    "Id": "T02u",
+    "Region": "fulfillment",
+    "Source": "pending_unpaid",
+    "Events": [
+      "approveOrder"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "confirmed",
+    "FollowUps": [],
+    "Specification": "approveOrder\n[not first order OR phone confirmed]",
+    "Basis": "BR-FUL-01; FR-FUL-02"
+  },
+  {
+    "Id": "T02p",
+    "Region": "fulfillment",
+    "Source": "pending_paid",
+    "Events": [
+      "approveOrder"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "confirmed",
+    "FollowUps": [],
+    "Specification": "approveOrder\n[staff approval]",
+    "Basis": "FR-FUL-02; no mandatory call for paid first order"
+  },
+  {
+    "Id": "T03",
+    "Region": "fulfillment",
+    "Source": "confirmed",
+    "Events": [
+      "startPacking"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "packing",
+    "FollowUps": [],
+    "Specification": "startPacking",
+    "Basis": "UC-C07"
+  },
+  {
+    "Id": "T04",
+    "Region": "fulfillment",
+    "Source": "packing",
+    "Events": [
+      "dispatchOrder"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "shipping",
+    "FollowUps": [],
+    "Specification": "dispatchOrder\n[documents and assigned agent]",
+    "Basis": "BR-FUL-02; FR-DEL-01"
+  },
+  {
+    "Id": "T05",
+    "Region": "fulfillment",
+    "Source": "shipping",
+    "Events": [
+      "deliverySuccess"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "delivered",
+    "FollowUps": [
+      {
+        "Event": "__completion",
+        "Region": "fulfillment"
+      }
+    ],
+    "Specification": "deliverySuccess",
+    "Basis": "FR-DEL-02"
+  },
+  {
+    "Id": "T06",
+    "Region": "fulfillment",
+    "Source": "shipping",
+    "Events": [
+      "deliveryFailure"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "delivery_failed",
+    "FollowUps": [],
+    "Specification": "deliveryFailure\n[reason recorded]",
+    "Basis": "FR-DEL-03"
+  },
+  {
+    "Id": "T07",
+    "Region": "fulfillment",
+    "Source": "delivery_failed",
+    "Events": [
+      "confirmReturnReceipt"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "returned",
+    "FollowUps": [
+      {
+        "Event": "__completion",
+        "Region": "fulfillment"
+      }
+    ],
+    "Specification": "confirmReturnReceipt\n[all goods received]",
+    "Basis": "FR-DEL-04"
+  },
+  {
+    "Id": "T08u",
+    "Region": "fulfillment",
+    "Source": "pending_unpaid",
+    "Events": [
+      "cancelOrder"
+    ],
+    "Guard": "ownedCustomer",
+    "Action": "cancel",
+    "Target": "cancelled",
+    "FollowUps": [
+      {
+        "Event": "__completion",
+        "Region": "fulfillment"
+      }
+    ],
+    "Specification": "cancelOrder\n[customer OR staff cancels\nunconfirmed first unpaid order]",
+    "Basis": "UC-C07; BR-FUL-01"
+  },
+  {
+    "Id": "T08p",
+    "Region": "fulfillment",
+    "Source": "pending_paid",
+    "Events": [
+      "cancelOrder"
+    ],
+    "Guard": "ownedCustomer",
+    "Action": "cancel",
+    "Target": "cancelled",
+    "FollowUps": [
+      {
+        "Event": "__completion",
+        "Region": "fulfillment"
+      }
+    ],
+    "Specification": "cancelOrder [customer confirms]",
+    "Basis": "UC-C07; paid cancellation refund policy TBD"
+  },
+  {
+    "Id": "T09",
+    "Region": "fulfillment",
+    "Source": "confirmed",
+    "Events": [
+      "cancelOrder"
+    ],
+    "Guard": "ownedCustomer",
+    "Action": "cancel",
+    "Target": "cancelled",
+    "FollowUps": [
+      {
+        "Event": "__completion",
+        "Region": "fulfillment"
+      }
+    ],
+    "Specification": "cancelOrder [customer confirms]",
+    "Basis": "UC-C07"
+  },
+  {
+    "Id": "F_delivered",
+    "Region": "fulfillment",
+    "Source": "delivered",
+    "Events": [
+      "__completion"
+    ],
+    "Guard": "always",
+    "Action": "completeFulfillment",
+    "Target": "final_delivered",
+    "FollowUps": [],
+    "Specification": "",
+    "Basis": "Stakeholder request: explicit UML final node for fulfillment completion"
+  },
+  {
+    "Id": "F_returned",
+    "Region": "fulfillment",
+    "Source": "returned",
+    "Events": [
+      "__completion"
+    ],
+    "Guard": "always",
+    "Action": "completeFulfillment",
+    "Target": "final_returned",
+    "FollowUps": [],
+    "Specification": "",
+    "Basis": "Stakeholder request: explicit UML final node for fulfillment completion"
+  },
+  {
+    "Id": "F_cancelled",
+    "Region": "fulfillment",
+    "Source": "cancelled",
+    "Events": [
+      "__completion"
+    ],
+    "Guard": "always",
+    "Action": "completeFulfillment",
+    "Target": "final_cancelled",
+    "FollowUps": [],
+    "Specification": "",
+    "Basis": "Stakeholder request: explicit UML final node for fulfillment completion"
+  },
+  {
+    "Id": "R01",
+    "Region": "refund",
+    "Source": "refund_initial",
+    "Events": [
+      "observeRefundCandidate"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "awaiting",
+    "FollowUps": [],
+    "Specification": "observe refund candidate",
+    "Basis": "Stakeholder automatic-refund policy; proposed workflow milestone"
+  },
+  {
+    "Id": "R02",
+    "Region": "refund",
+    "Source": "awaiting",
+    "Events": [
+      "receiptAndCauseConfirmed"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "processing",
+    "FollowUps": [],
+    "Specification": "receiptAndCauseConfirmed\n[paid goods AND complete return\nAND cause confirmed; no duplicate]\n/ refund original allocations by policy",
+    "Basis": "Stakeholder confirmed eligibility and amount 2026-10-29; proposed duplicate-safety control"
+  },
+  {
+    "Id": "R03",
+    "Region": "refund",
+    "Source": "processing",
+    "Events": [
+      "refundSettlementConfirmed"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "completed",
+    "FollowUps": [],
+    "Specification": "refundSettlementConfirmed\n/ record actual completed refund",
+    "Basis": "Derived settlement integrity; provider integration TBD"
+  },
+  {
+    "Id": "R04",
+    "Region": "refund",
+    "Source": "processing",
+    "Events": [
+      "refundRejected",
+      "settlementUncertain"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "unresolved",
+    "FollowUps": [],
+    "Specification": "refundRejected OR\nsettlementUncertain\n/ do not mark refund completed",
+    "Basis": "Exception representation proposed; retry/reconciliation policy TBD"
+  },
+  {
+    "Id": "P01",
+    "Region": "payment",
+    "Source": "pay_initial",
+    "Events": [
+      "createOrder"
+    ],
+    "Guard": "initialPayment",
+    "Action": "initializePayment",
+    "Target": "unpaid",
+    "FollowUps": [],
+    "Specification": "createOrder",
+    "Basis": "UC-C06 COD/VietQR initial payment state"
+  },
+  {
+    "Id": "P02",
+    "Region": "payment",
+    "Source": "unpaid",
+    "Events": [
+      "verifiedSePayNotification"
+    ],
+    "Guard": "verifiedInitialPayment",
+    "Action": "recordVerifiedInitialPayment",
+    "Target": "paid",
+    "FollowUps": [],
+    "Specification": "verifiedSePayNotification\n[order matches AND amount >= total]\n/ record captured payment",
+    "Basis": "BR-ORD-03; FR-PAY-02; UC-C06 A6.1"
+  },
+  {
+    "Id": "P03",
+    "Region": "payment",
+    "Source": "paid",
+    "Events": [
+      "refundSettlementConfirmed"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "partially_refunded",
+    "FollowUps": [],
+    "Specification": "refundSettlementConfirmed\n[0 < cumulative refund < captured]\n/ record retained fee and goods refund",
+    "Basis": "Confirmed goods-only refund with retained delivery fee; proposed financial enum"
+  },
+  {
+    "Id": "P04",
+    "Region": "payment",
+    "Source": "paid",
+    "Events": [
+      "refundSettlementConfirmed"
+    ],
+    "Guard": "deferred",
+    "Action": "deferred",
+    "Target": "refunded",
+    "FollowUps": [],
+    "Specification": "refundSettlementConfirmed\n[cumulative refund = captured]\n/ record full refunded amount",
+    "Basis": "BR-FUL-05; confirmed product-fault full refund"
+  }
+]

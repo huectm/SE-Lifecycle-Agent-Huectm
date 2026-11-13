@@ -1,0 +1,10 @@
+{
+  "name": "@freshfood/data-access",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "FreshFood.Reposistory domain entities and repository contracts",
+  "engines": {
+    "node": ">=22"
+  }
+}

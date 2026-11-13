@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="SE-Lifecycle-Agent" version="24.7.17">
+  <diagram id="order-fulfillment" name="01 Order Fulfillment">
+    <mxGraphModel grid="1" page="1" pageWidth="1880" pageHeight="1450" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Order Fulfillment State Machine&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=28;">
+          <mxGeometry x="40" y="20" width="1800" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Independent initial states selected by verified payment at accepted checkout | Revision 2026-10-29" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=17;">
+          <mxGeometry x="40" y="75" width="1800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="initial" value="" vertex="1" parent="1" style="ellipse;fillColor=#263238;strokeColor=#263238;">
+          <mxGeometry x="916" y="135" width="28" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="payment_choice" value="" vertex="1" parent="1" style="rhombus;fillColor=#FFF8E1;strokeColor=#455A64;">
+          <mxGeometry x="900" y="220" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pending_unpaid" value="&lt;b&gt;Pending Unpaid&lt;/b&gt;&lt;hr&gt;Accepted order; unpaid at checkout" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E3F2FD;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="350" y="350" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="pending_paid" value="&lt;b&gt;Pending Paid&lt;/b&gt;&lt;hr&gt;Accepted order; verified payment&lt;br&gt;at checkout" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E8F5E9;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1200" y="350" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="confirmed" value="&lt;b&gt;Confirmed&lt;/b&gt;&lt;hr&gt;Staff approved; not yet packing" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E3F2FD;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="750" y="650" width="300" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="packing" value="&lt;b&gt;Packing&lt;/b&gt;&lt;hr&gt;Preparation in progress" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E3F2FD;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1250" y="650" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="shipping" value="&lt;b&gt;Shipping&lt;/b&gt;&lt;hr&gt;Assigned for delivery" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E3F2FD;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1250" y="1000" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="delivered" value="&lt;b&gt;Delivered&lt;/b&gt;&lt;hr&gt;Finalize revenue and&lt;br&gt;reserved stock deduction" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E8F5E9;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1600" y="1000" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="delivery_failed" value="&lt;b&gt;Delivery Failed&lt;/b&gt;&lt;hr&gt;Record reason; await physical return" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#FFF3E0;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="800" y="1000" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="returned" value="&lt;b&gt;Returned&lt;/b&gt;&lt;hr&gt;Warehouse confirms all goods received" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#FFF3E0;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="350" y="1000" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="cancelled" value="&lt;b&gt;Cancelled&lt;/b&gt;&lt;hr&gt;Release original reservations;&lt;br&gt;record cancellation" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#FFEBEE;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="100" y="650" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="I00" value="" edge="1" parent="1" source="initial" target="payment_choice" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="I00_label" value="acceptOrder / reserve stock atomically" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="980" y="145" width="450" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="T01u" value="" edge="1" parent="1" source="payment_choice" target="pending_unpaid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T01u_label" value="[not paid at checkout]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="510" y="185" width="330" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="T01p" value="" edge="1" parent="1" source="payment_choice" target="pending_paid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T01p_label" value="[verified paid at checkout]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1020" y="185" width="340" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="T02u" value="" edge="1" parent="1" source="pending_unpaid" target="confirmed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0.1;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="420" />
+              <mxPoint x="700" y="600" />
+              <mxPoint x="780" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T02u_label" value="approveOrder&lt;br&gt;[not first order OR phone confirmed]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="490" y="540" width="350" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="T02p" value="" edge="1" parent="1" source="pending_paid" target="confirmed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="570" />
+              <mxPoint x="900" y="570" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T02p_label" value="approveOrder&lt;br&gt;[staff approval]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1040" y="500" width="260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="T03" value="" edge="1" parent="1" source="confirmed" target="packing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T03_label" value="startPacking" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1060" y="645" width="180" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="T04" value="" edge="1" parent="1" source="packing" target="shipping" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T04_label" value="dispatchOrder&lt;br&gt;[documents and assigned agent]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1420" y="785" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="T05" value="" edge="1" parent="1" source="shipping" target="delivered" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T05_label" value="deliverySuccess" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1510" y="940" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="T06" value="" edge="1" parent="1" source="shipping" target="delivery_failed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T06_label" value="deliveryFailure&lt;br&gt;[reason recorded]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1065" y="925" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="T07" value="" edge="1" parent="1" source="delivery_failed" target="returned" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T07_label" value="confirmReturnReceipt&lt;br&gt;[all goods received]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="615" y="925" width="180" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="T08u" value="" edge="1" parent="1" source="pending_unpaid" target="cancelled" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T08u_label" value="cancelOrder&lt;br&gt;[customer OR staff cancels&lt;br&gt;unconfirmed first unpaid order]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="30" y="500" width="300" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="T08p" value="" edge="1" parent="1" source="pending_paid" target="cancelled" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1770" y="420" />
+              <mxPoint x="1770" y="870" />
+              <mxPoint x="230" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="T08p_label" value="cancelOrder [customer confirms]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="970" y="885" width="400" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="T09" value="" edge="1" parent="1" source="confirmed" target="cancelled" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="T09_label" value="cancelOrder [customer confirms]" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="375" y="720" width="360" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="final_delivered" value="" vertex="1" parent="1" style="ellipse;fillColor=#ffffff;strokeColor=#263238;strokeWidth=2;">
+          <mxGeometry x="1715" y="1160" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="final_delivered_center" value="" vertex="1" parent="1" style="ellipse;fillColor=#263238;strokeColor=#263238;">
+          <mxGeometry x="1722" y="1167" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="F_delivered" value="" edge="1" parent="1" source="delivered" target="final_delivered" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F_delivered_label" value="" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" />
+        </mxCell>
+        <mxCell id="final_delivered_caption" value="End fulfillment" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1650" y="1194" width="160" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="final_returned" value="" vertex="1" parent="1" style="ellipse;fillColor=#ffffff;strokeColor=#263238;strokeWidth=2;">
+          <mxGeometry x="465" y="1160" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="final_returned_center" value="" vertex="1" parent="1" style="ellipse;fillColor=#263238;strokeColor=#263238;">
+          <mxGeometry x="472" y="1167" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="F_returned" value="" edge="1" parent="1" source="returned" target="final_returned" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="F_returned_label" value="" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" />
+        </mxCell>
+        <mxCell id="final_returned_caption" value="End fulfillment" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="400" y="1194" width="160" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="final_cancelled" value="" vertex="1" parent="1" style="ellipse;fillColor=#ffffff;strokeColor=#263238;strokeWidth=2;">
+          <mxGeometry x="35" y="800" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="final_cancelled_center" value="" vertex="1" parent="1" style="ellipse;fillColor=#263238;strokeColor=#263238;">
+          <mxGeometry x="42" y="807" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="F_cancelled" value="" edge="1" parent="1" source="cancelled" target="final_cancelled" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0;exitY=0.5;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="710" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F_cancelled_label" value="" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="0" y="0" width="0" height="0" as="geometry" />
+        </mxCell>
+        <mxCell id="final_cancelled_caption" value="End fulfillment" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="0" y="834" width="160" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="notes" value="&lt;b&gt;Confirmed modeling decision&lt;/b&gt;&lt;br&gt;No Pending parent state and no Pending Unpaid -&gt; Pending Paid transition. Initial guards are mutually exclusive.&lt;br&gt;Both initial states require staff approval. First unpaid orders require telephone confirmation; an unsuccessful call does not automatically cancel.&lt;br&gt;Financial evidence remains independent after checkout. Later-payment fulfillment handling remains TBD; never infer a transition.&lt;br&gt;Final nodes end fulfillment only. Payment/refund and staff inventory disposition remain separately tracked." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=17;">
+          <mxGeometry x="90" y="1230" width="1700" height="160" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="automatic-goods-refund" name="02 Automatic Goods Refund">
+    <mxGraphModel grid="1" page="1" pageWidth="1880" pageHeight="1120" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Order - Automatic Goods Refund Workflow&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=28;">
+          <mxGeometry x="40" y="20" width="1800" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Behavior of the refund obligation | Draft analysis representation; not a new PaymentStatus enum" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=17;">
+          <mxGeometry x="40" y="80" width="1800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="refund_initial" value="" vertex="1" parent="1" style="ellipse;fillColor=#263238;strokeColor=#263238;">
+          <mxGeometry x="236" y="145" width="28" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="awaiting" value="&lt;b&gt;Awaiting Eligibility&lt;/b&gt;&lt;hr&gt;Payment and complete warehouse&lt;br&gt;return receipt must be confirmed" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E3F2FD;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="100" y="270" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="processing" value="&lt;b&gt;Processing&lt;/b&gt;&lt;hr&gt;entry / initiate automatic refund&lt;br&gt;of goods and any refundable ship" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#FFF3E0;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="750" y="270" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="completed" value="&lt;b&gt;Completed&lt;/b&gt;&lt;hr&gt;Settlement confirmed;&lt;br&gt;record refund amount/reference" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E8F5E9;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1400" y="270" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="unresolved" value="&lt;b&gt;Failed or Uncertain&lt;/b&gt;&lt;hr&gt;Refund not confirmed complete;&lt;br&gt;reconciliation remains necessary" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#FFEBEE;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="750" y="650" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="R01" value="" edge="1" parent="1" source="refund_initial" target="awaiting" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R01_label" value="observe refund candidate" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="35" y="175" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="R02" value="" edge="1" parent="1" source="awaiting" target="processing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R02_label" value="receiptAndCauseConfirmed&lt;br&gt;[paid goods AND complete return&lt;br&gt;AND cause confirmed; no duplicate]&lt;br&gt;/ refund original allocations by policy" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="415" y="165" width="320" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="R03" value="" edge="1" parent="1" source="processing" target="completed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R03_label" value="refundSettlementConfirmed&lt;br&gt;/ record actual completed refund" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1070" y="220" width="310" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="R04" value="" edge="1" parent="1" source="processing" target="unresolved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R04_label" value="refundRejected OR&lt;br&gt;settlementUncertain&lt;br&gt;/ do not mark refund completed" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1080" y="470" width="330" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rules" value="&lt;b&gt;Confirmed policy&lt;/b&gt;&lt;br&gt;Eligibility: paid goods + complete warehouse receipt + confirmed cause determining fee liability; no quality-inspection wait.&lt;br&gt;Product fault: refund original captured goods and shipping. Deliberate refusal: refund goods only; retain paid shipping.&lt;br&gt;Unpaid deliberate refusal: customer owes shipping directly to the delivery agent; shipping-only collection is not goods Paid." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=17;">
+          <mxGeometry x="85" y="865" width="1710" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="financial" value="&lt;b&gt;Financial representation for review&lt;/b&gt;&lt;br&gt;Before confirmed settlement, do not claim a completed refund. Record captured, refunded and retained amounts separately.&lt;br&gt;If refunded amount is below the original captured amount, Partially Refunded is the proposed financial state.&lt;br&gt;Use Refunded only for the full captured amount. Payout provider/API, partial returns and retry policy remain TBD." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=16;">
+          <mxGeometry x="85" y="1000" width="1710" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="payment-settlement" name="03 Payment Settlement">
+    <mxGraphModel grid="1" page="1" pageWidth="1880" pageHeight="1000" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Order - Payment Settlement States&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=28;">
+          <mxGeometry x="40" y="20" width="1800" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="Independent from fulfillment and refund request progress | Draft for Analysis Review" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=17;">
+          <mxGeometry x="40" y="80" width="1800" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pay_initial" value="" vertex="1" parent="1" style="ellipse;fillColor=#263238;strokeColor=#263238;">
+          <mxGeometry x="236" y="145" width="28" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="unpaid" value="&lt;b&gt;Unpaid&lt;/b&gt;&lt;hr&gt;Order created; no verified&lt;br&gt;captured payment recorded" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E3F2FD;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="100" y="280" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="paid" value="&lt;b&gt;Paid&lt;/b&gt;&lt;hr&gt;Verified captured payment;&lt;br&gt;no completed refund yet" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E8F5E9;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="750" y="280" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="partially_refunded" value="&lt;b&gt;Partially Refunded&lt;/b&gt;&lt;hr&gt;Goods refund settled;&lt;br&gt;delivery fee remains retained" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#FFF3E0;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1400" y="280" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="refunded" value="&lt;b&gt;Refunded&lt;/b&gt;&lt;hr&gt;Full captured payment refunded;&lt;br&gt;product-fault paid return" vertex="1" parent="1" style="html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=16;strokeColor=#455A64;rounded=1;arcSize=18;fillColor=#E8F5E9;align=center;verticalAlign=middle;spacing=10;">
+          <mxGeometry x="1400" y="600" width="300" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="P01" value="" edge="1" parent="1" source="pay_initial" target="unpaid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P01_label" value="createOrder" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="35" y="180" width="190" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="P02" value="" edge="1" parent="1" source="unpaid" target="paid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P02_label" value="verifiedSePayNotification&lt;br&gt;[order matches AND amount &amp;gt;= total]&lt;br&gt;/ record captured payment" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="415" y="175" width="320" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="P03" value="" edge="1" parent="1" source="paid" target="partially_refunded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P03_label" value="refundSettlementConfirmed&lt;br&gt;[0 &amp;lt; cumulative refund &amp;lt; captured]&lt;br&gt;/ record retained fee and goods refund" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="1070" y="175" width="310" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="P04" value="" edge="1" parent="1" source="paid" target="refunded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=1;strokeWidth=1.8;strokeColor=#37474F;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;labelBackgroundColor=#ffffff;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="510" />
+              <mxPoint x="1550" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P04_label" value="refundSettlementConfirmed&lt;br&gt;[cumulative refund = captured]&lt;br&gt;/ record full refunded amount" vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=14;">
+          <mxGeometry x="990" y="530" width="330" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="payment_notes" value="&lt;b&gt;Modeling boundaries&lt;/b&gt;&lt;br&gt;Verified checkout payment selects Pending Paid directly. Later payment never implies Pending Unpaid -&gt; Pending Paid.&lt;br&gt;During refund Processing or Failed/Uncertain, do not falsely claim that money has been refunded.&lt;br&gt;Partially Refunded is a proposed addition to the existing dictionary and needs model approval before implementation.&lt;br&gt;Product fault refunds captured goods and shipping. Deliberate refusal retains the delivery fee and usually settles partially.&lt;br&gt;Shipping-only cash collection does not mark goods Paid. Unclassified/other causes, partial payments and outgoing integration remain TBD." vertex="1" parent="1" style="text;html=1;whiteSpace=wrap;align=center;verticalAlign=middle;fillColor=#ffffff;fontFamily=Arial;fontSize=17;">
+          <mxGeometry x="90" y="780" width="1700" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

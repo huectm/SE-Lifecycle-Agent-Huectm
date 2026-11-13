@@ -1,0 +1,21 @@
+{
+  "name": "@freshfood/api",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Five customer use-case backend mapped from approved design",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-source.js",
+    "check:design": "node scripts/check-design.js",
+    "coverage": "node --test --experimental-test-coverage tests/*.test.js",
+    "test:postgres": "node --test tests/postgres/storage.test.js"
+  },
+  "dependencies": {
+    "@freshfood/data-access": "file:../FreshFood.Reposistory"
+  }
+}

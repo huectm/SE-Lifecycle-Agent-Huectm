@@ -1,0 +1,24 @@
+✔ migration preserves legacy STAFF/SYSTEM audit and validates CUSTOMER identity (2977.2767ms)
+✔ unused migration can roll back without changing legacy audit entries (2431.1589ms)
+✔ SQL checkout retry replays the original response after cart clear without duplicate effects (2381.4424ms)
+✔ same idempotency key with changed body is rejected instead of creating another order (2310.9694ms)
+✔ same checkout reference with a different key is rejected (2304.8771ms)
+✔ customer-scoped keys/references cannot collide across customers (2178.8465ms)
+✔ failed checkout rolls back claim, events, order, stock and cart as one unit and allows retry (2241.4504ms)
+✔ cancellation releases once, audits customer once and preserves original reason on retry (2857.6657ms)
+✔ another customer cannot cancel or append customer audit for an unowned order (2875.515ms)
+✔ audit failure rolls back cancellation, event and released reservation, then retry succeeds (3933.8228ms)
+✔ duplicate transition identity is rejected by unique storage independently of handler execution (2676.8586ms)
+✔ concurrent application retries serialize to one checkout on the embedded connection (2050.8107ms)
+✔ rollback migration refuses to discard nonempty idempotency/audit history (1615.5162ms)
+✔ a committed incomplete claim fails closed rather than repeating unknown effects (1566.4164ms)
+✔ stored response cannot point to a different order and completion checks customer ownership (1743.0875ms)
+✔ seeded paid cancellation completes fulfillment while leaving payment independently Paid (1866.4253ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38407.3559

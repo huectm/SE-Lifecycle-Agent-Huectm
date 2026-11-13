@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "basis": "Explicit stakeholder technology and pattern revision requests",
+  "master": "artifacts\\Requirements_Analysis_Design_Specification.docx",
+  "sha256": "af3c93dabe20bac9dadc32c13da8c5a3a23cec9160e440c79363adc69d2dffba",
+  "class_pages": 54,
+  "sequence_pages": 29,
+  "storage_pages": 3,
+  "audit_entity_pages": 1,
+  "backend_classifiers": 132,
+  "runtime": "ASP.NET Core 10 / C#",
+  "status": "Revision for technical review; not release approval"
+}

@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" agent="SE-Lifecycle-Agent">
+  <diagram id="freshfood-packages" name="Packages and Implementations">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="2360" pageHeight="1930" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;FreshFood | Package Diagram&lt;/b&gt;" vertex="1" parent="1" style="text;align=center;verticalAlign=middle;fontSize=32;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="100" y="20" width="2160" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="customer" value="" vertex="1" parent="1" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#F4F9FF;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="70" y="160" width="670" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_label" value="&lt;b&gt;FreshFood-Customer-Web&lt;/b&gt;" vertex="1" parent="customer" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="646" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_pages" value="" vertex="1" parent="customer" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="50" y="140" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_pages_label" value="&lt;b&gt;Pages&lt;/b&gt;" vertex="1" parent="customer_pages" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_calls" value="" vertex="1" parent="customer" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="390" y="140" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_calls_label" value="&lt;b&gt;CallService&lt;/b&gt;" vertex="1" parent="customer_calls" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="staff" value="" vertex="1" parent="1" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#F4F9FF;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="70" y="560" width="670" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="staff_label" value="&lt;b&gt;FreshFood-Web&lt;/b&gt;" vertex="1" parent="staff" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="646" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="staff_pages" value="" vertex="1" parent="staff" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="50" y="140" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="staff_pages_label" value="&lt;b&gt;Pages&lt;/b&gt;" vertex="1" parent="staff_pages" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="staff_calls" value="" vertex="1" parent="staff" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="390" y="140" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="staff_calls_label" value="&lt;b&gt;CallService&lt;/b&gt;" vertex="1" parent="staff_calls" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile" value="" vertex="1" parent="1" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#F4F9FF;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="70" y="1010" width="670" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="mobile_label" value="&lt;b&gt;FreshFood-App&lt;/b&gt;" vertex="1" parent="mobile" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="646" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="views" value="" vertex="1" parent="mobile" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="50" y="140" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="views_label" value="&lt;b&gt;Views&lt;/b&gt;" vertex="1" parent="views" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="viewmodels" value="" vertex="1" parent="mobile" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="390" y="140" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="viewmodels_label" value="&lt;b&gt;ViewModels&lt;/b&gt;" vertex="1" parent="viewmodels" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="models" value="" vertex="1" parent="mobile" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="390" y="380" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="models_label" value="&lt;b&gt;Models&lt;/b&gt;" vertex="1" parent="models" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="206" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="api" value="" vertex="1" parent="1" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#F4F9FF;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="1100" y="160" width="1060" height="650" as="geometry" />
+        </mxCell>
+        <mxCell id="api_label" value="&lt;b&gt;FreshFood-API&lt;/b&gt;" vertex="1" parent="api" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="1036" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="controllers" value="" vertex="1" parent="api" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="60" y="170" width="320" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="controllers_label" value="&lt;b&gt;Controllers&lt;/b&gt;" vertex="1" parent="controllers" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="296" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="services" value="" vertex="1" parent="api" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="500" y="170" width="500" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="services_label" value="&lt;b&gt;Services&lt;/b&gt;&lt;br&gt;Service interfaces" vertex="1" parent="services" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="476" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="service_impl" value="" vertex="1" parent="services" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="60" y="210" width="380" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="service_impl_label" value="&lt;b&gt;Implements&lt;/b&gt;&lt;br&gt;Business implementations" vertex="1" parent="service_impl" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="356" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="data" value="" vertex="1" parent="1" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#F4F9FF;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="1050" y="1030" width="1110" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="data_label" value="&lt;b&gt;FreshFood.Reposistory&lt;/b&gt;" vertex="1" parent="data" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;align=right;spacingRight=15;">
+          <mxGeometry x="12" y="42" width="1086" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="repository" value="" vertex="1" parent="data" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="490" y="130" width="560" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="repository_label" value="&lt;b&gt;Repository&lt;/b&gt;&lt;br&gt;Repository interfaces" vertex="1" parent="repository" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="536" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_impl" value="" vertex="1" parent="repository" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="60" y="170" width="470" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="repo_impl_label" value="&lt;b&gt;Implements&lt;/b&gt;&lt;br&gt;Persistence implementations" vertex="1" parent="repo_impl" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="446" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="entities" value="" vertex="1" parent="data" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="60" y="190" width="350" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="entities_label" value="&lt;b&gt;Entities&lt;/b&gt;&lt;br&gt;Domain entities" vertex="1" parent="entities" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="326" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="dtos" value="" vertex="1" parent="api" style="shape=folder;tabPosition=left;tabWidth=120;tabHeight=30;fillColor=#7ACDEB;strokeColor=#365878;strokeWidth=2;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="60" y="440" width="320" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dtos_label" value="&lt;b&gt;DTOs&lt;/b&gt;&lt;br&gt;Request / response contracts" vertex="1" parent="dtos" style="text;align=center;verticalAlign=middle;fontSize=22;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="12" y="42" width="296" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="customer_ui" value="" edge="1" parent="1" source="customer_pages" target="customer_calls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="staff_ui" value="" edge="1" parent="1" source="staff_pages" target="staff_calls" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mvvm_views" value="" edge="1" parent="1" source="views" target="viewmodels" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mvvm_models" value="" edge="1" parent="1" source="viewmodels" target="models" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="controllers_services" value="" edge="1" parent="1" source="controllers" target="services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.3;entryX=0;entryY=0.3;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="387" />
+              <mxPoint x="1540" y="456" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="customer_api" value="" edge="1" parent="1" source="customer_calls" target="controllers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.2;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="370" />
+              <mxPoint x="850" y="368" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="staff_api" value="" edge="1" parent="1" source="staff_calls" target="controllers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.7;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="770" />
+              <mxPoint x="950" y="463" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mobile_api" value="" edge="1" parent="1" source="models" target="controllers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=0;entryY=0.9;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="1460" />
+              <mxPoint x="820" y="920" />
+              <mxPoint x="1010" y="920" />
+              <mxPoint x="1010" y="501" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service_repository" value="" edge="1" parent="1" source="service_impl" target="repository" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;entryX=0.1;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="615" />
+              <mxPoint x="1510" y="900" />
+              <mxPoint x="1596" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service_dtos" value="" edge="1" parent="1" source="services" target="dtos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.9;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="708" />
+              <mxPoint x="1540" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="controller_dtos" value="" edge="1" parent="1" source="controllers" target="dtos" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0.5;exitY=1;entryX=0.3;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1320" y="560" />
+              <mxPoint x="1256" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service_entities" value="" edge="1" parent="1" source="service_impl" target="entities" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0.25;exitY=1;entryX=0.2;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1755" y="860" />
+              <mxPoint x="1180" y="860" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo_entities" value="" edge="1" parent="1" source="repo_impl" target="entities" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1510" y="1390" />
+              <mxPoint x="1510" y="1310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="service_contract" value="" edge="1" parent="1" source="service_impl" target="services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=0.15;exitY=0;entryX=0.1;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1717" y="475" />
+              <mxPoint x="2130" y="475" />
+              <mxPoint x="2130" y="270" />
+              <mxPoint x="1650" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repo_contract" value="" edge="1" parent="1" source="repo_impl" target="repository" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#344563;strokeWidth=2;labelBackgroundColor=#ffffff;jumpStyle=arc;jumpSize=8;exitX=1;exitY=0.5;entryX=1;entryY=0.25;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2210" y="1390" />
+              <mxPoint x="2210" y="1240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="use_services" value="&amp;lt;&amp;lt;use&amp;gt;&amp;gt;" vertex="1" parent="1" style="text;align=center;verticalAlign=middle;fontSize=18;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="1485" y="385" width="100" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="use_repository" value="Repository contracts" vertex="1" parent="1" style="text;align=center;verticalAlign=middle;fontSize=19;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="1150" y="970" width="270" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="use_entities" value="Domain entities" vertex="1" parent="1" style="text;align=center;verticalAlign=middle;fontSize=19;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="900" y="1120" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="Dashed open arrows denote package / contract dependencies.&lt;br&gt;Interfaces belong to the parent package; implementation classes belong to its Implements child." vertex="1" parent="1" style="text;align=center;verticalAlign=middle;fontSize=21;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="80" y="1660" width="850" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" value="DI registration occurs at application startup.&lt;br&gt;Entities belong to FreshFood.Reposistory; DTOs belong to FreshFood-API.&lt;br&gt;Frontend Models remain distinct from backend Entities and DTOs." vertex="1" parent="1" style="text;align=center;verticalAlign=middle;fontSize=21;fontFamily=Arial;html=1;whiteSpace=wrap;">
+          <mxGeometry x="180" y="1810" width="2000" height="75" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,56 @@
+id,title,field,value,expected,basis,technique,flow
+REG-001,Register with default Newsletter No,,,success,Observed UI,EP,Basic
+REG-002,Register with Newsletter Yes,newsletter,1,success,Observed UI,EP,Alt1.1
+REG-003,firstname length 0,firstname,,First Name must,Observed UI,BVA,E1
+REG-004,firstname length 1,firstname,A,success,Observed UI,BVA,Basic
+REG-005,firstname length 2,firstname,AA,success,Observed UI,BVA,Basic
+REG-006,firstname length 31,firstname,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,success,Observed UI,BVA,Basic
+REG-007,firstname length 32,firstname,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,success,Observed UI,BVA,Basic
+REG-008,firstname length 33,firstname,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,First Name must,Observed UI,BVA,E1
+REG-009,lastname length 0,lastname,,Last Name must,Observed UI,BVA,E1
+REG-010,lastname length 1,lastname,A,success,Observed UI,BVA,Basic
+REG-011,lastname length 2,lastname,AA,success,Observed UI,BVA,Basic
+REG-012,lastname length 31,lastname,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,success,Observed UI,BVA,Basic
+REG-013,lastname length 32,lastname,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,success,Observed UI,BVA,Basic
+REG-014,lastname length 33,lastname,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,Last Name must,Observed UI,BVA,E1
+REG-015,telephone length 0,telephone,,Telephone must,Observed UI,BVA,E1
+REG-016,telephone length 2,telephone,77,Telephone must,Observed UI,BVA,E1
+REG-017,telephone length 3,telephone,777,success,Observed UI,BVA,Basic
+REG-018,telephone length 4,telephone,7777,success,Observed UI,BVA,Basic
+REG-019,telephone length 31,telephone,7777777777777777777777777777777,success,Observed UI,BVA,Basic
+REG-020,telephone length 32,telephone,77777777777777777777777777777777,success,Observed UI,BVA,Basic
+REG-021,telephone length 33,telephone,777777777777777777777777777777777,Telephone must,Observed UI,BVA,E1
+REG-022,password length 0,password,,Password must,Observed UI,BVA,E1
+REG-023,password length 3,password,AAA,Password must,Observed UI,BVA,E1
+REG-024,password length 4,password,AAAA,success,Observed UI,BVA,Basic
+REG-025,password length 5,password,AAAAA,success,Observed UI,BVA,Basic
+REG-026,password length 19,password,AAAAAAAAAAAAAAAAAAA,success,Observed UI,BVA,Basic
+REG-027,password length 20,password,AAAAAAAAAAAAAAAAAAAA,success,Observed UI,BVA,Basic
+REG-028,password length 21,password,AAAAAAAAAAAAAAAAAAAAA,Password must,Observed UI,BVA,E1
+REG-029,Invalid email '',email,,email-invalid,Observed UI,EP,E2
+REG-030,Invalid email 'plainaddress',email,plainaddress,email-invalid,Observed UI,EP,E2
+REG-031,Invalid email 'a@',email,a@,email-invalid,Observed UI,EP,E2
+REG-032,Invalid email '@example.com',email,@example.com,email-invalid,Observed UI,EP,E2
+REG-033,Invalid email 'a b@example.com',email,a b@example.com,email-invalid,Observed UI,EP,E2
+REG-034,Confirmation empty or mismatch,confirm,,Password confirmation does not match,UC-REG-01 BR-02,EP,E3
+REG-035,Confirmation empty or mismatch,confirm,Different123!,Password confirmation does not match,UC-REG-01 BR-02,EP,E3
+REG-036,Privacy not accepted,agree,0,You must agree to the Privacy Policy,UC-REG-01 BR-03,EP,E4
+REG-037,Previously registered email,duplicate,,already registered,Observed UI,EP,E5
+REG-038,Login page link,login,,login,UC-REG-01 Alt1.2,EP,Alt1.2
+REG-039,Privacy policy dialog,policy,,policy,Observed UI,EP,UI
+REG-040,Proposed UC firstname maximum boundary 20,firstname,AAAAAAAAAAAAAAAAAAAA,success,UC proposal; confirmation required,BVA,Appendix
+REG-041,Proposed UC firstname maximum boundary 21,firstname,AAAAAAAAAAAAAAAAAAAAA,reject,UC proposal; confirmation required,BVA,Appendix
+REG-042,Proposed UC lastname maximum boundary 10,lastname,AAAAAAAAAA,success,UC proposal; confirmation required,BVA,Appendix
+REG-043,Proposed UC lastname maximum boundary 11,lastname,AAAAAAAAAAA,reject,UC proposal; confirmation required,BVA,Appendix
+REG-044,Proposed UC password composition Abc12!x,password,Abc12!x,reject,UC proposal; confirmation required,BVA/EP,Appendix
+REG-045,Proposed UC password composition Abc12!xy,password,Abc12!xy,success,UC proposal; confirmation required,BVA/EP,Appendix
+REG-046,Proposed UC password composition abc12!xy,password,abc12!xy,reject,UC proposal; confirmation required,BVA/EP,Appendix
+REG-047,Proposed UC password composition ABC12!XY,password,ABC12!XY,reject,UC proposal; confirmation required,BVA/EP,Appendix
+REG-048,Proposed UC password composition Abcdef!x,password,Abcdef!x,reject,UC proposal; confirmation required,BVA/EP,Appendix
+REG-049,Proposed UC password composition Abc123xy,password,Abc123xy,reject,UC proposal; confirmation required,BVA/EP,Appendix
+REG-050,Whitespace-only firstname,firstname,   ,reject,UC proposal; confirmation required,EP,Appendix
+REG-051,Whitespace-only lastname,lastname,   ,reject,UC proposal; confirmation required,EP,Appendix
+REG-052,Network/system failure recovery,network,,blocked,UC E6; controlled fault environment required,EP,E6
+REG-053,Proposed UC adjacent valid boundary firstname,firstname,AAAAAAAAAAAAAAAAAAA,success,UC proposal; confirmation required,BVA,Appendix
+REG-054,Proposed UC adjacent valid boundary lastname,lastname,AAAAAAAAA,success,UC proposal; confirmation required,BVA,Appendix
+REG-055,Proposed UC adjacent valid boundary password,password,Abc123!xy,success,UC proposal; confirmation required,BVA,Appendix

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { margin: 0; background: #ffffff; font-family: 'Segoe UI', Arial, sans-serif; display: flex; justify-content: center; align-items: center; padding: 20px; }
+  .canvas { width: 1720px; height: 1080px; background: #fafafa; border: 1.5px solid #cfd8dc; border-radius: 8px; position: relative; box-shadow: 0 4px 16px rgba(0,0,0,0.08); overflow: hidden; }
+  
+  .header { position: absolute; top: 12px; left: 0; right: 0; text-align: center; }
+  .title { font-size: 21px; font-weight: 800; color: #1b5e20; margin: 0; letter-spacing: 0.5px; }
+  .subtitle { font-size: 13px; color: #455a64; margin-top: 3px; font-style: italic; }
+
+  /* Domain Groups / Badges */
+  .domain-badge { position: absolute; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 3px 10px; border-radius: 12px; }
+  .bg-layer1 { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; top: 66px; left: 50px; }
+  .bg-layer2 { background: #fff8e1; color: #e65100; border: 1px solid #ffe082; top: 350px; left: 50px; }
+  .bg-layer3 { background: #eceff1; color: #37474f; border: 1px solid #b0bec5; top: 652px; left: 50px; }
+
+  /* Class box - STRICT UML ALIGNMENT: Class Name CENTERED, Attributes LEFT-ALIGNED */
+  .uml-class { position: absolute; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-size: 11px; box-sizing: border-box; overflow: hidden; background: #ffffff; }
+  .uml-head { padding: 6px 8px; font-weight: 700; text-align: center !important; font-size: 12px; border-bottom: 1.5px solid; letter-spacing: 0.3px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .uml-body { padding: 6px 10px; line-height: 1.45; font-family: 'Consolas', 'Segoe UI', monospace; font-size: 10.5px; text-align: left !important; }
+  .uml-body div { text-align: left !important; white-space: nowrap; margin: 2px 0; }
+
+  /* Association Class styling */
+  .assoc-class { position: absolute; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); font-size: 11px; box-sizing: border-box; overflow: hidden; background: #ffffff; border-style: solid; }
+  .assoc-tag { font-size: 9.5px; font-style: italic; font-weight: normal; opacity: 0.85; margin-bottom: 2px; text-align: center !important; }
+
+  /* Domain Specific Styles */
+  .c-cat { border: 1.8px solid #2e7d32; }
+  .c-cat .uml-head { background: #e8f5e9; color: #1b5e20; border-color: #2e7d32; }
+  
+  .c-sup { border: 1.8px solid #5d4037; }
+  .c-sup .uml-head { background: #efebe9; color: #3e2723; border-color: #5d4037; }
+
+  .c-inv { border: 1.8px solid #e65100; }
+  .c-inv .uml-head { background: #fff8e1; color: #bf360c; border-color: #e65100; }
+
+  .c-disp { border: 1.8px solid #c62828; }
+  .c-disp .uml-head { background: #ffebee; color: #b71c1c; border-color: #c62828; }
+
+  .c-cus { border: 1.8px solid #0288d1; }
+  .c-cus .uml-head { background: #e1f5fe; color: #01579b; border-color: #0288d1; }
+
+  .c-cart { border: 1.8px solid #00838f; }
+  .c-cart .uml-head { background: #e0f7fa; color: #006064; border-color: #00838f; }
+
+  .c-ord { border: 1.8px solid #7b1fa2; }
+  .c-ord .uml-head { background: #f3e5f5; color: #4a148c; border-color: #7b1fa2; }
+
+  .c-rev { border: 1.8px solid #f57f17; }
+  .c-rev .uml-head { background: #fffde7; color: #e65100; border-color: #f57f17; }
+
+  .c-adm { border: 1.8px solid #455a64; }
+  .c-adm .uml-head { background: #eceff1; color: #263238; border-color: #455a64; }
+
+  /* Association Class Specific Colors */
+  .ac-cartitem { border: 2px solid #00796b; }
+  .ac-cartitem .uml-head { background: #e0f2f1; color: #004d40; border-color: #00796b; }
+
+  .ac-orderdetail { border: 2px solid #512da8; }
+  .ac-orderdetail .uml-head { background: #ede7f6; color: #311b92; border-color: #512da8; }
+
+  /* Enumerations Box */
+  .enum-box { position: absolute; top: 700px; left: 1380px; width: 290px; height: 280px; background: #fffde7; border: 1.5px dashed #fbc02d; border-radius: 6px; padding: 10px 14px; box-sizing: border-box; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+  .enum-title { font-size: 11.5px; font-weight: 700; color: #e65100; margin-bottom: 6px; text-transform: uppercase; text-align: center; }
+  .enum-body { font-size: 10.5px; color: #37474f; line-height: 1.45; text-align: left; }
+  .enum-body b { color: #bf360c; }
+
+  /* SVG connectors and multiplicity labels */
+  .svg-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; }
+  .card-label { font-size: 10.5px; font-weight: 700; fill: #37474f; }
+  .assoc-name { font-size: 10px; font-style: italic; fill: #546e7a; font-weight: 600; }
+  .badge-bg { fill: #ffffff; opacity: 0.95; rx: 3px; ry: 3px; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="header">
+    <div class="title">UML CONCEPTUAL ENTITY CLASS DIAGRAM (REQUIREMENTS DATA MODEL)</div>
+    <div class="subtitle">FreshFood E-Commerce Platform — Domain-Aligned Staff Hierarchy & Standard Perpendicular Association Classes</div>
+  </div>
+
+  <!-- Domain Layer Badges -->
+  <div class="domain-badge bg-layer1">Catalog & Customer Shopping Domain</div>
+  <div class="domain-badge bg-layer2">Inventory Procurement & Order Fulfillment Domain</div>
+  <div class="domain-badge bg-layer3">Stock Waste Inspection & Staff Management Hierarchy</div>
+
+  <!-- SVG Connectors & Cardinalities -->
+  <svg class="svg-layer">
+    <!-- ======================================================== -->
+    <!-- LAYER 1 CONNECTORS: Catalog & Shopping                   -->
+    <!-- ======================================================== -->
+    <!-- 1. ProductCategory (1) --- (0..*) Product [STRAIGHT HORIZONTAL] -->
+    <path d="M 260 150 L 330 150" stroke="#2e7d32" stroke-width="1.8" fill="none" />
+    <text x="268" y="143" class="card-label">1</text>
+    <text x="305" y="143" class="card-label">0..*</text>
+    <rect x="272" y="153" width="46" height="15" class="badge-bg" />
+    <text x="274" y="164" class="assoc-name">contains</text>
+
+    <!-- 2. ASSOCIATION CLASS 1: Product (0..*) <---> (0..*) Cart via CartItem -->
+    <path d="M 550 150 L 880 150" stroke="#00796b" stroke-width="2.0" fill="none" />
+    <text x="558" y="142" class="card-label">0..*</text>
+    <text x="852" y="142" class="card-label">0..*</text>
+    <rect x="685" y="135" width="60" height="15" class="badge-bg" />
+    <text x="689" y="146" class="assoc-name" style="fill:#004d40;">selects into</text>
+
+    <!-- Strictly perpendicular dashed line from CartItem (center x=715, top=225) up to (715, 150) -->
+    <path d="M 715 225 L 715 150" stroke="#00796b" stroke-width="1.8" stroke-dasharray="4 4" fill="none" />
+
+    <!-- 3. Customer (1) --- (0..1) Cart [STRAIGHT HORIZONTAL] -->
+    <path d="M 1160 150 L 1080 150" stroke="#00838f" stroke-width="1.8" fill="none" />
+    <text x="1135" y="142" class="card-label">1</text>
+    <text x="1088" y="142" class="card-label">0..1</text>
+    <rect x="1100" y="153" width="35" height="15" class="badge-bg" />
+    <text x="1102" y="164" class="assoc-name">owns</text>
+
+    <!-- 4. Customer (1) --- (0..*) CustomerAddress [STRAIGHT HORIZONTAL] -->
+    <path d="M 1380 150 L 1450 150" stroke="#0288d1" stroke-width="1.8" fill="none" />
+    <text x="1388" y="142" class="card-label">1</text>
+    <text x="1425" y="142" class="card-label">0..*</text>
+    <rect x="1388" y="154" width="50" height="15" class="badge-bg" />
+    <text x="1390" y="165" class="assoc-name">maintains</text>
+
+    <!-- ======================================================== -->
+    <!-- LAYER 2 CONNECTORS: Inventory & Orders                   -->
+    <!-- ======================================================== -->
+    <!-- 5. Supplier (1) --- (0..*) GoodsReceipt [STRAIGHT HORIZONTAL] -->
+    <path d="M 260 450 L 330 450" stroke="#5d4037" stroke-width="1.8" fill="none" />
+    <text x="268" y="442" class="card-label">1</text>
+    <text x="305" y="442" class="card-label">0..*</text>
+    <rect x="272" y="454" width="46" height="15" class="badge-bg" />
+    <text x="274" y="465" class="assoc-name">supplies</text>
+
+    <!-- 6. GoodsReceipt (1) --- (1..*) BatchInventory [STRAIGHT HORIZONTAL] -->
+    <path d="M 550 450 L 630 450" stroke="#e65100" stroke-width="1.8" fill="none" />
+    <text x="558" y="442" class="card-label">1</text>
+    <text x="605" y="442" class="card-label">1..*</text>
+    <rect x="558" y="454" width="65" height="15" class="badge-bg" />
+    <text x="561" y="465" class="assoc-name">receives into</text>
+
+    <!-- 7. Product (1) --- (0..*) BatchInventory [CLEAN ORTHOGONAL STEP IN OPEN CHANNEL] -->
+    <path d="M 440 240 L 440 360 L 700 360 L 700 380" stroke="#2e7d32" stroke-width="1.8" fill="none" />
+    <text x="448" y="255" class="card-label">1</text>
+    <text x="706" y="375" class="card-label">0..*</text>
+    <rect x="540" y="352" width="44" height="15" class="badge-bg" />
+    <text x="543" y="363" class="assoc-name">batches</text>
+
+    <!-- 8. ASSOCIATION CLASS 2: BatchInventory (0..*) <---> (1..*) Order via OrderDetail -->
+    <path d="M 870 460 L 1160 460" stroke="#512da8" stroke-width="2.0" fill="none" />
+    <text x="878" y="452" class="card-label">0..*</text>
+    <text x="1135" y="452" class="card-label">1..*</text>
+    <rect x="980" y="445" width="75" height="15" class="badge-bg" />
+    <text x="983" y="456" class="assoc-name" style="fill:#311b92;">fulfills (FEFO)</text>
+
+    <!-- Strictly perpendicular dashed line from OrderDetail (center x=1015, top=515) up to (1015, 460) -->
+    <path d="M 1015 515 L 1015 460" stroke="#512da8" stroke-width="1.8" stroke-dasharray="4 4" fill="none" />
+
+    <!-- 9. Customer (1) --- (0..*) Order [STRICTLY VERTICAL STRAIGHT] -->
+    <path d="M 1270 250 L 1270 380" stroke="#7b1fa2" stroke-width="1.8" fill="none" />
+    <text x="1278" y="265" class="card-label">1</text>
+    <text x="1278" y="372" class="card-label">0..*</text>
+    <rect x="1250" y="305" width="40" height="15" class="badge-bg" />
+    <text x="1253" y="316" class="assoc-name">places</text>
+
+    <!-- 10. CustomerAddress (1) --- (0..*) Order [CLEAN ORTHOGONAL STEP IN OPEN CHANNEL] -->
+    <path d="M 1520 240 L 1520 360 L 1340 360 L 1340 380" stroke="#0288d1" stroke-width="1.8" fill="none" />
+    <text x="1526" y="255" class="card-label">1</text>
+    <text x="1348" y="372" class="card-label">0..*</text>
+    <rect x="1410" y="352" width="55" height="15" class="badge-bg" />
+    <text x="1413" y="363" class="assoc-name">delivers to</text>
+
+    <!-- 11. Order (1) --- (0..1) OrderReview [STRAIGHT HORIZONTAL] -->
+    <path d="M 1380 490 L 1450 490" stroke="#f57f17" stroke-width="1.8" fill="none" />
+    <text x="1388" y="482" class="card-label">1</text>
+    <text x="1425" y="482" class="card-label">0..1</text>
+    <rect x="1385" y="496" width="62" height="15" class="badge-bg" />
+    <text x="1387" y="507" class="assoc-name">evaluated by</text>
+
+    <!-- ======================================================== -->
+    <!-- LAYER 3 CONNECTORS: Stock Waste & Staff Operations       -->
+    <!-- ======================================================== -->
+    <!-- 12. BatchInventory (1) --- (0..*) StockDisposalRecord [STRICTLY VERTICAL STRAIGHT] -->
+    <path d="M 750 595 L 750 690" stroke="#c62828" stroke-width="1.8" fill="none" />
+    <text x="758" y="610" class="card-label">1</text>
+    <text x="758" y="682" class="card-label">0..*</text>
+    <rect x="725" y="632" width="50" height="15" class="badge-bg" />
+    <text x="727" y="643" class="assoc-name">condemns</text>
+
+    <!-- 13. GoodsReceipt (0..*) --- (1) WarehouseStaff [STRICTLY VERTICAL STRAIGHT] -->
+    <path d="M 440 515 L 440 690" stroke="#455a64" stroke-width="1.8" fill="none" />
+    <text x="448" y="530" class="card-label">0..*</text>
+    <text x="448" y="680" class="card-label">1</text>
+    <rect x="395" y="595" width="90" height="15" class="badge-bg" />
+    <text x="398" y="606" class="assoc-name">creates & receives</text>
+
+    <!-- 14. WarehouseStaff (1) --- (0..*) StockDisposalRecord [STRICTLY HORIZONTAL STRAIGHT] -->
+    <path d="M 550 730 L 630 730" stroke="#c62828" stroke-width="1.8" fill="none" />
+    <text x="558" y="722" class="card-label">1</text>
+    <text x="605" y="722" class="card-label">0..*</text>
+    <rect x="555" y="735" width="70" height="15" class="badge-bg" />
+    <text x="558" y="746" class="assoc-name">inspects & logs</text>
+
+    <!-- 15. StockDisposalRecord (0..*) --- (1) StoreOwner [STRICTLY HORIZONTAL STRAIGHT] -->
+    <path d="M 870 730 L 930 730" stroke="#c62828" stroke-width="1.8" fill="none" />
+    <text x="874" y="722" class="card-label">0..*</text>
+    <text x="918" y="722" class="card-label">1</text>
+    <rect x="880" y="735" width="46" height="15" class="badge-bg" />
+    <text x="883" y="746" class="assoc-name">approves</text>
+
+    <!-- 16. Order (0..*) --- (0..1) SaleStaff [STRICTLY VERTICAL STRAIGHT] -->
+    <path d="M 1255 605 L 1255 895" stroke="#7b1fa2" stroke-width="1.8" fill="none" />
+    <text x="1263" y="620" class="card-label">0..*</text>
+    <text x="1263" y="885" class="card-label">0..1</text>
+    <rect x="1200" y="745" width="110" height="15" class="badge-bg" />
+    <text x="1203" y="756" class="assoc-name">processes & confirms</text>
+
+    <!-- 17. Article (0..*) --- (1) Staff [STRICTLY HORIZONTAL STRAIGHT] -->
+    <path d="M 800 932 L 870 932" stroke="#455a64" stroke-width="1.8" fill="none" />
+    <text x="806" y="924" class="card-label">0..*</text>
+    <text x="852" y="924" class="card-label">1</text>
+    <rect x="815" y="937" width="44" height="15" class="badge-bg" />
+    <text x="818" y="948" class="assoc-name">authors</text>
+
+    <!-- ======================================================== -->
+    <!-- STAFF GENERALIZATION TREE (Canonical UML Unified Trunk)  -->
+    <!-- ======================================================== -->
+    <!-- Unified trunk for WarehouseStaff and StoreOwner into top of Staff -->
+    <path d="M 440 770 L 440 835 L 1020 835" stroke="#455a64" stroke-width="1.8" fill="none" />
+    <path d="M 1020 770 L 1020 835" stroke="#455a64" stroke-width="1.8" fill="none" />
+    <path d="M 985 835 L 985 848" stroke="#455a64" stroke-width="1.8" fill="none" />
+    <polygon points="985,850 979,838 991,838" fill="#ffffff" stroke="#455a64" stroke-width="1.8" />
+
+    <!-- Subclass 3: SaleStaff (x=1160..1350, y=895) ---> Staff (x=870..1100, y=850) [STRICTLY HORIZONTAL STRAIGHT] -->
+    <path d="M 1160 935 L 1112 935" stroke="#455a64" stroke-width="1.8" fill="none" />
+    <polygon points="1100,935 1112,929 1112,941" fill="#ffffff" stroke="#455a64" stroke-width="1.8" />
+  </svg>
+
+  <!-- ======================================================== -->
+  <!-- LAYER 1 HTML CLASSES: Catalog & Shopping                 -->
+  <!-- ======================================================== -->
+  <div class="uml-class c-cat" style="top:95px; left:50px; width:210px; height:110px;">
+    <div class="uml-head">ProductCategory</div>
+    <div class="uml-body">
+      <div>categoryName: String</div>
+      <div>description: String [0..1]</div>
+      <div>isActive: Boolean</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-cat" style="top:95px; left:330px; width:220px; height:145px;">
+    <div class="uml-head">Product</div>
+    <div class="uml-body">
+      <div>sku: String</div>
+      <div>productName: String</div>
+      <div>unitOfMeasure: String</div>
+      <div>description: String [0..1]</div>
+      <div>imageUrl: String [0..1]</div>
+      <div>isActive: Boolean</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-cart" style="top:95px; left:880px; width:200px; height:105px;">
+    <div class="uml-head">Cart</div>
+    <div class="uml-body">
+      <div>sessionId: String [0..1]</div>
+      <div>createdAt: DateTime</div>
+      <div>updatedAt: DateTime</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-cus" style="top:95px; left:1160px; width:220px; height:155px;">
+    <div class="uml-head">Customer</div>
+    <div class="uml-body">
+      <div>fullName: String</div>
+      <div>phone: String</div>
+      <div>email: String</div>
+      <div>authProvider: AuthProvider</div>
+      <div>providerUserId: String</div>
+      <div>isPhoneVerified: Boolean</div>
+      <div>createdAt: DateTime</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-cus" style="top:95px; left:1450px; width:210px; height:145px;">
+    <div class="uml-head">CustomerAddress</div>
+    <div class="uml-body">
+      <div>recipientName: String</div>
+      <div>recipientPhone: String</div>
+      <div>streetAddress: String</div>
+      <div>latitude: Decimal [0..1]</div>
+      <div>longitude: Decimal [0..1]</div>
+      <div>isDefault: Boolean</div>
+    </div>
+  </div>
+
+  <!-- Association Class 1: CartItem -->
+  <div class="assoc-class ac-cartitem" style="top:225px; left:620px; width:190px; height:90px;">
+    <div class="uml-head">
+      <div class="assoc-tag">&laquo;association class&raquo;</div>
+      CartItem
+    </div>
+    <div class="uml-body">
+      <div>quantity: Integer</div>
+      <div>addedAt: DateTime</div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- LAYER 2 HTML CLASSES: Inventory & Order Processing       -->
+  <!-- ======================================================== -->
+  <div class="uml-class c-sup" style="top:390px; left:50px; width:210px; height:135px;">
+    <div class="uml-head">Supplier</div>
+    <div class="uml-body">
+      <div>supplierName: String</div>
+      <div>phone: String</div>
+      <div>email: String [0..1]</div>
+      <div>address: String</div>
+      <div>isActive: Boolean</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-inv" style="top:390px; left:330px; width:220px; height:125px;">
+    <div class="uml-head">GoodsReceipt</div>
+    <div class="uml-body">
+      <div>receiptNumber: String</div>
+      <div>receiptDate: DateTime</div>
+      <div>totalAmount: Decimal</div>
+      <div>notes: String [0..1]</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-inv" style="top:380px; left:630px; width:240px; height:215px;">
+    <div class="uml-head">BatchInventory</div>
+    <div class="uml-body">
+      <div>batchNumber: String</div>
+      <div>manufactureDate: Date</div>
+      <div>expiryDate: Date</div>
+      <div>importQuantity: Integer</div>
+      <div>currentStock: Integer</div>
+      <div>reservedStock: Integer</div>
+      <div>importPrice: Decimal</div>
+      <div>retailPrice: Decimal</div>
+      <div>discountRate: Decimal</div>
+      <div>saleStatus: BatchSaleStatus</div>
+    </div>
+  </div>
+
+  <!-- Association Class 2: OrderDetail -->
+  <div class="assoc-class ac-orderdetail" style="top:515px; left:915px; width:200px; height:125px;">
+    <div class="uml-head">
+      <div class="assoc-tag">&laquo;association class&raquo;</div>
+      OrderDetail
+    </div>
+    <div class="uml-body">
+      <div>quantity: Integer</div>
+      <div>unitPrice: Decimal</div>
+      <div>discountAmount: Decimal</div>
+      <div>lineTotal: Decimal</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-ord" style="top:380px; left:1160px; width:220px; height:225px;">
+    <div class="uml-head">Order</div>
+    <div class="uml-body">
+      <div>orderNumber: String</div>
+      <div>orderDate: DateTime</div>
+      <div>subTotal: Decimal</div>
+      <div>deliveryDistance: Decimal</div>
+      <div>shippingFee: Decimal</div>
+      <div>totalAmount: Decimal</div>
+      <div>paymentMethod: PaymentMethod</div>
+      <div>paymentStatus: PaymentStatus</div>
+      <div>orderStatus: OrderStatus</div>
+      <div>isFirstOrder: Boolean</div>
+    </div>
+  </div>
+
+  <div class="uml-class c-rev" style="top:435px; left:1450px; width:210px; height:115px;">
+    <div class="uml-head">OrderReview</div>
+    <div class="uml-body">
+      <div>rating: Integer [1..5]</div>
+      <div>comment: String [0..1]</div>
+      <div>createdAt: DateTime</div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- LAYER 3 HTML CLASSES: Waste Inspection & Staff Hierarchy -->
+  <!-- ======================================================== -->
+  <div class="uml-class c-disp" style="top:690px; left:630px; width:240px; height:130px;">
+    <div class="uml-head">StockDisposalRecord</div>
+    <div class="uml-body">
+      <div>disposalDate: DateTime</div>
+      <div>disposalQuantity: Integer</div>
+      <div>disposalReason: String</div>
+      <div>financialLoss: Decimal</div>
+    </div>
+  </div>
+
+  <!-- Domain-Aligned WarehouseStaff directly under GoodsReceipt -->
+  <div class="uml-class c-adm" style="top:690px; left:330px; width:220px; height:80px;">
+    <div class="uml-head">WarehouseStaff</div>
+    <div class="uml-body">
+      <div>warehouseZone: String</div>
+    </div>
+  </div>
+
+  <!-- Domain-Aligned StoreOwner directly next to StockDisposalRecord -->
+  <div class="uml-class c-adm" style="top:690px; left:930px; width:180px; height:80px;">
+    <div class="uml-head">StoreOwner</div>
+    <div class="uml-body">
+      <div>businessLicense: String</div>
+    </div>
+  </div>
+
+  <!-- Staff Abstract Superclass Centered Below -->
+  <div class="uml-class c-adm" style="top:850px; left:870px; width:230px; height:175px;">
+    <div class="uml-head">
+      <div style="font-size:9.5px; font-style:italic; font-weight:normal; opacity:0.85; margin-bottom:2px;">{abstract}</div>
+      Staff
+    </div>
+    <div class="uml-body">
+      <div>username: String</div>
+      <div>passwordHash: String</div>
+      <div>fullName: String</div>
+      <div>phone: String</div>
+      <div>email: String [0..1]</div>
+      <div>isActive: Boolean</div>
+      <div>createdAt: DateTime</div>
+    </div>
+  </div>
+
+  <!-- Article directly next to Staff -->
+  <div class="uml-class c-adm" style="top:870px; left:590px; width:210px; height:125px;">
+    <div class="uml-head">Article</div>
+    <div class="uml-body">
+      <div>title: String</div>
+      <div>content: String</div>
+      <div>thumbnailUrl: String [0..1]</div>
+      <div>isHidden: Boolean</div>
+      <div>createdAt: DateTime</div>
+    </div>
+  </div>
+
+  <!-- Domain-Aligned SaleStaff directly under Order -->
+  <div class="uml-class c-adm" style="top:895px; left:1160px; width:190px; height:80px;">
+    <div class="uml-head">SaleStaff</div>
+    <div class="uml-body">
+      <div>shiftSchedule: String</div>
+    </div>
+  </div>
+
+  <!-- Enumerations Note Box -->
+  <div class="enum-box">
+    <div class="enum-title">&lt;&lt;enumeration&gt;&gt; Domain Types & Constants</div>
+    <div class="enum-body">
+      <div><b>BatchSaleStatus:</b> Active, Delayed, Delisted, Disposed</div>
+      <div style="margin-top:4px;"><b>PaymentMethod:</b> COD, VietQR</div>
+      <div style="margin-top:4px;"><b>PaymentStatus:</b> Unpaid, Paid, Refunded</div>
+      <div style="margin-top:4px;"><b>OrderStatus:</b> Pending, Processing, In Delivery, Delivered, Cancelled, Delivery Failed</div>
+      <div style="margin-top:4px;"><b>AuthProvider:</b> Google, Facebook</div>
+      <div style="margin-top:6px; font-style:italic; color:#546e7a;">*Staff Roles modeled via Polymorphic Generalization Hierarchy</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

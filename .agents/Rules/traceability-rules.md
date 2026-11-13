@@ -103,3 +103,7 @@ Report:
 
 ## 10. Human Verification Gate
 Traceability findings MUST be presented to the responsible project role before affected baselines are approved or changed. Significant gaps MUST NOT be silently repaired.
+
+## 11. Master Specification Document Consistency & Synchronization
+- Every requirement, analysis model, architecture driver, design class, and database schema element recorded in the RTM or intermediate artifact files MUST be verified for 100% synchronization against the official Master Specification Document (`artifacts/Requirements_Analysis_Design_Specification.docx`).
+- Any discrepancy between individual approved artifacts (e.g., Markdown files, `.drawio` diagrams, CSV sheets) and the Master Specification Document MUST be reported as a defect and synchronized immediately upon approval.

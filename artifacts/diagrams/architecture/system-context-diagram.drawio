@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron" version="24.7.17">
+  <diagram id="freshfood-context-diag" name="System Context Diagram">
+    <mxGraphModel grid="1" page="1" pageWidth="3000" pageHeight="2000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="context_title" value="&lt;b&gt;FreshFood | System Context Diagram&lt;/b&gt;" vertex="1" parent="1" style="rounded=1;html=1;whiteSpace=wrap;fontSize=18;fontFamily=Arial;strokeColor=#45644c;fillColor=#ffffff;strokeColor=none;fontSize=28;">
+          <mxGeometry x="200" y="25" width="2600" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="process_0_freshfood" value="0&lt;br&gt;&lt;br&gt;&lt;b&gt;FreshFood&lt;br&gt;E-Commerce Platform&lt;/b&gt;&lt;br&gt;&lt;br&gt;Central System" vertex="1" parent="1" style="ellipse;aspect=fixed;html=1;whiteSpace=wrap;fontSize=26;fontFamily=Arial;strokeColor=#2e7d32;strokeWidth=3;fillColor=#e8f5e9;align=center;verticalAlign=middle;">
+          <mxGeometry x="1300" y="800" width="400" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_guest" value="Guest&lt;br&gt;Web / Mobile App" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#e3f2fd;">
+          <mxGeometry x="760" y="135" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_customer" value="Customer&lt;br&gt;Web / Mobile App" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#e3f2fd;">
+          <mxGeometry x="1360" y="135" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_salestaff" value="Sales Staff" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#e3f2fd;">
+          <mxGeometry x="60" y="635" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_whstaff" value="Warehouse Staff" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#e3f2fd;">
+          <mxGeometry x="760" y="1735" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_owner" value="Store Owner" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#e3f2fd;">
+          <mxGeometry x="1360" y="1735" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_oauth" value="OAuth 2.0 Providers&lt;br&gt;Google / Facebook" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#fff3e0;">
+          <mxGeometry x="1960" y="135" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_sms" value="SMS Gateway&lt;br&gt;Viettel / Vina / Mobi" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#fff3e0;">
+          <mxGeometry x="2660" y="635" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_sepay" value="SePay&lt;br&gt;VietQR / Banking API" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#fff3e0;">
+          <mxGeometry x="60" y="1235" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_maps" value="Google Maps&lt;br&gt;Geocoding / Distance API" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#fff3e0;">
+          <mxGeometry x="2660" y="1235" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_printer" value="Thermal Printer&lt;br&gt;Receipt / Packing | ESC/POS" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;fontSize=20;fontFamily=Arial;strokeColor=#45644c;fillColor=#fff3e0;">
+          <mxGeometry x="1960" y="1735" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="cell_4" value="Search keyword, browse category,&lt;br&gt;read article request" edge="1" parent="1" source="ent_guest" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5892857142857143;exitY=1.0;entryX=0.3;entryY=0.041742430504415895;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.265886913967863" y="0">
+            <Array as="points">
+              <mxPoint x="925" y="680" />
+              <mxPoint x="1420" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_5" value="Catalog listings, active batch prices,&lt;br&gt;article contents" edge="1" parent="1" source="process_0_freshfood" target="ent_guest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.2;exitY=0.1;entryX=0.4107142857142857;entryY=1.0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.08796296296296291" y="0">
+            <Array as="points">
+              <mxPoint x="1380" y="600" />
+              <mxPoint x="875" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_6" value="Cart items, delivery address, order submission,&lt;br&gt;VietQR/COD selection, feedback rating, cancellation" edge="1" parent="1" source="ent_customer" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=400;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.6071428571428571;exitY=1.0;entryX=0.575;entryY=0.005657001667870247;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.023707577217398024" y="0" />
+        </mxCell>
+        <mxCell id="cell_7" value="Order confirmation, tracking status, dynamic VietQR,&lt;br&gt;stock availability, delivery alerts" edge="1" parent="1" source="process_0_freshfood" target="ent_customer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=400;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.425;exitY=0.005657001667870247;entryX=0.39285714285714285;entryY=1.0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.38577545366956123" y="0" />
+        </mxCell>
+        <mxCell id="cell_8" value="Staff account details, role assignments,&lt;br&gt;access revocation commands, report filters" edge="1" parent="1" source="ent_owner" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=400;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.6071428571428571;exitY=0.0;entryX=0.575;entryY=0.9943429983321295;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.7580327544758878" y="0" />
+        </mxCell>
+        <mxCell id="cell_9" value="Executive revenue reports, inventory shrinkage reports,&lt;br&gt;staff account audit lists" edge="1" parent="1" source="process_0_freshfood" target="ent_owner" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=400;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.425;exitY=0.9943429983321295;entryX=0.39285714285714285;entryY=0.0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.3485497235889288" y="0" />
+        </mxCell>
+        <mxCell id="cell_10" value="First-order phone confirmation, dispatch assignment,&lt;br&gt;delivery outcome (Delivered/Failed), news articles" edge="1" parent="1" source="ent_salestaff" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=1.0;exitY=0.6923076923076923;entryX=0.007715783312119698;entryY=0.4125;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.4571575571165969" y="0">
+            <Array as="points">
+              <mxPoint x="650" y="725" />
+              <mxPoint x="650" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_11" value="Incoming order queue, customer contact details,&lt;br&gt;delivery list, article management view" edge="1" parent="1" source="process_0_freshfood" target="ent_salestaff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.06698729810778048;exitY=0.25;entryX=1.0;entryY=0.3076923076923077;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.3754760750145687" y="0">
+            <Array as="points">
+              <mxPoint x="570" y="900" />
+              <mxPoint x="570" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_12" value="Category/Product data, supplier info, goods receipts&lt;br&gt;(Batch, MFG, EXP, Qty, Price), batch retail prices,&lt;br&gt;clearance discounts, disposal logs" edge="1" parent="1" source="ent_whstaff" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5892857142857143;exitY=0.0;entryX=0.3;entryY=0.9582575694955842;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.265886913967863" y="0">
+            <Array as="points">
+              <mxPoint x="925" y="1320" />
+              <mxPoint x="1420" y="1320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_13" value="Batch stock levels, low-stock &amp; expiry alerts,&lt;br&gt;inventory statistics, disposal reports" edge="1" parent="1" source="process_0_freshfood" target="ent_whstaff" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.2;exitY=0.9;entryX=0.4107142857142857;entryY=0.0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.08796296296296291" y="0">
+            <Array as="points">
+              <mxPoint x="1380" y="1400" />
+              <mxPoint x="875" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_14" value="OAuth authorization request,&lt;br&gt;client credentials &amp; redirect" edge="1" parent="1" source="process_0_freshfood" target="ent_oauth" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.8;exitY=0.1;entryX=0.4107142857142857;entryY=1.0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.09223300970873782" y="0">
+            <Array as="points">
+              <mxPoint x="1620" y="600" />
+              <mxPoint x="2075" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_15" value="Verified profile, email,&lt;br&gt;subject ID token" edge="1" parent="1" source="ent_oauth" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.5892857142857143;exitY=1.0;entryX=0.7;entryY=0.041742430504415895;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.2537647452782723" y="0">
+            <Array as="points">
+              <mxPoint x="2125" y="680" />
+              <mxPoint x="1580" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_16" value="SMS OTP dispatch request&lt;br&gt;(Phone number, 6-digit OTP)" edge="1" parent="1" source="process_0_freshfood" target="ent_sms" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.9330127018922195;exitY=0.25;entryX=0.0;entryY=0.3076923076923077;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.3754760750145689" y="0">
+            <Array as="points">
+              <mxPoint x="2430" y="900" />
+              <mxPoint x="2430" y="675" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_17" value="SMS delivery receipt&lt;br&gt;&amp; dispatch status" edge="1" parent="1" source="ent_sms" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.0;exitY=0.6923076923076923;entryX=0.9922842166878802;entryY=0.4125;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.45715755711659667" y="0">
+            <Array as="points">
+              <mxPoint x="2350" y="725" />
+              <mxPoint x="2350" y="965" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_18" value="VietQR code generation payload&lt;br&gt;(Account, Order ID, Amount)" edge="1" parent="1" source="process_0_freshfood" target="ent_sepay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.06698729810778048;exitY=0.75;entryX=1.0;entryY=0.3076923076923077;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.34859852913098466" y="0">
+            <Array as="points">
+              <mxPoint x="570" y="1100" />
+              <mxPoint x="570" y="1275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_19" value="Payment confirmation webhook&lt;br&gt;(Matched Order ID, Amount paid)" edge="1" parent="1" source="ent_sepay" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=1.0;exitY=0.6923076923076923;entryX=0.007715783312119698;entryY=0.5875;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.4788177746575204" y="0">
+            <Array as="points">
+              <mxPoint x="650" y="1325" />
+              <mxPoint x="650" y="1035" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_20" value="Transit distance request&lt;br&gt;(Store origin &amp; Customer address)" edge="1" parent="1" source="process_0_freshfood" target="ent_maps" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.9330127018922195;exitY=0.75;entryX=0.0;entryY=0.3076923076923077;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.3485985291309849" y="0">
+            <Array as="points">
+              <mxPoint x="2430" y="1100" />
+              <mxPoint x="2430" y="1275" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_21" value="Driving distance (d km)&lt;br&gt;&amp; address validation" edge="1" parent="1" source="ent_maps" target="process_0_freshfood" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.0;exitY=0.6923076923076923;entryX=0.9922842166878802;entryY=0.5875;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="0.4788177746575202" y="0">
+            <Array as="points">
+              <mxPoint x="2350" y="1325" />
+              <mxPoint x="2350" y="1035" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cell_22" value="ESC/POS print jobs (Customer Invoice,&lt;br&gt;Warehouse Packing Slip)" edge="1" parent="1" source="process_0_freshfood" target="ent_printer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;whiteSpace=wrap;labelWidth=490;fontSize=18;fontFamily=Arial;labelBackgroundColor=#ffffff;strokeColor=#455a64;strokeWidth=2;endArrow=block;endFill=1;exitX=0.8;exitY=0.9;entryX=0.4107142857142857;entryY=0.0;exitPerimeter=0;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" x="-0.09223300970873782" y="0">
+            <Array as="points">
+              <mxPoint x="1620" y="1400" />
+              <mxPoint x="2075" y="1400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

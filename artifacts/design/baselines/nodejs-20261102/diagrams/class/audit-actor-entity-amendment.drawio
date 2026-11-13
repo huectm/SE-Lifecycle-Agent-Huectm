@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Electron">
+  <diagram name="Customer audit entity amendment" id="audit-actor">
+    <mxGraphModel page="1" pageWidth="2060" pageHeight="900" background="#ffffff">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;b&gt;Audit actor entity amendment&lt;/b&gt;" vertex="1" parent="1" style="text;html=1;align=center;fontSize=30;fontFamily=Arial;">
+          <mxGeometry x="40" y="20" width="1980" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="UC-C07 | Proposed technical amendment | Existing entity relationships use associations | 2026-11-02" vertex="1" parent="1" style="text;html=1;align=center;fontSize=20;fontFamily=Arial;">
+          <mxGeometry x="40" y="90" width="1980" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="customer" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Customer&lt;/b&gt;&lt;br&gt;&lt;br&gt;+ CustomerId: EntityId {private set}" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=23;fillColor=#E8F5E9;strokeColor=#455A64;">
+          <mxGeometry x="60" y="200" width="420" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="audit" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;AuditLog&lt;/b&gt;&lt;br&gt;&lt;br&gt;+ LogId: EntityId {private set}&lt;br&gt;+ StaffId: number? {private set}&lt;br&gt;+ CustomerId: EntityId? {private set; new}&lt;br&gt;+ ActorType: string {derived; read only; new}&lt;br&gt;+ ActionType: string {private set}&lt;br&gt;+ RecordIdentifier: string {private set}&lt;br&gt;+ OldValues / NewValues: string&lt;br&gt;+ Timestamp: Date {private set}" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=23;fillColor=#E8F5E9;strokeColor=#455A64;">
+          <mxGeometry x="720" y="200" width="620" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="staff" value="&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;br&gt;&lt;b&gt;Staff {abstract}&lt;/b&gt;&lt;br&gt;&lt;br&gt;+ StaffId: number {private set}" vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;verticalAlign=top;spacing=20;fontFamily=Arial;fontSize=23;fillColor=#E8F5E9;strokeColor=#455A64;">
+          <mxGeometry x="1580" y="200" width="420" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="customer-audit" edge="1" source="customer" target="audit" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="audit-staff" edge="1" source="audit" target="staff" parent="1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;exitX=1;exitY=0.5;entryX=0;entryY=0.5;labelBackgroundColor=#ffffff;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" value="0..1" vertex="1" parent="1" style="text;html=1;fontFamily=Arial;fontSize=22;align=center;fillColor=#ffffff;labelBackgroundColor=#ffffff;">
+          <mxGeometry x="500" y="345" width="65" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="0..*" vertex="1" parent="1" style="text;html=1;fontFamily=Arial;fontSize=22;align=center;fillColor=#ffffff;labelBackgroundColor=#ffffff;">
+          <mxGeometry x="650" y="345" width="65" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="0..*" vertex="1" parent="1" style="text;html=1;fontFamily=Arial;fontSize=22;align=center;fillColor=#ffffff;labelBackgroundColor=#ffffff;">
+          <mxGeometry x="1360" y="345" width="65" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="0..1" vertex="1" parent="1" style="text;html=1;fontFamily=Arial;fontSize=22;align=center;fillColor=#ffffff;labelBackgroundColor=#ffffff;">
+          <mxGeometry x="1510" y="345" width="65" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="constraint" value="&lt;b&gt;Actor constraint&lt;/b&gt;&lt;br&gt;CustomerId and StaffId cannot both be present.&lt;br&gt;CustomerId present: CUSTOMER. StaffId present: STAFF. Both absent: SYSTEM.&lt;br&gt;The customer ID is resolved by the server; it is not accepted from the cancellation payload.&lt;br&gt;Member excerpts are shown; existing AuditLog fields and staff/system audit entries are retained." vertex="1" parent="1" style="rounded=0;html=1;whiteSpace=wrap;align=center;spacing=15;fontSize=23;fontFamily=Arial;fillColor=#FFF2CC;">
+          <mxGeometry x="120" y="660" width="1820" height="180" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

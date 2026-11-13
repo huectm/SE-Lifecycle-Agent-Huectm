@@ -1,0 +1,457 @@
+Owner,View,Consumer,Data Type,Relation
+UC-C01,VOPC to Detailed Design Realization,CatalogRepository,ProductCategory,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogRepository,Product,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogRepository,BatchInventory,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogPage,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogPage,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogView,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogApiClient,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogApiClient,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogApiClient,ProductDetailsDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogViewModel,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogViewModel,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogViewModel,ProductDetailsDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogApiModel,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogApiModel,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogApiModel,ProductDetailsDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogController,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogController,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogController,ProductDetailsDto,dependency
+UC-C01,VOPC to Detailed Design Realization,ICatalogService,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,ICatalogService,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,ICatalogService,ProductDetailsDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogService,BatchInventory,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogService,Product,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogService,ProductCategory,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogService,CatalogQueryDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogService,CatalogResultDto,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogService,ProductDetailsDto,dependency
+UC-C01,VOPC to Detailed Design Realization,ICatalogRepository,BatchInventory,dependency
+UC-C01,VOPC to Detailed Design Realization,ICatalogRepository,Product,dependency
+UC-C01,VOPC to Detailed Design Realization,ICatalogRepository,ProductCategory,dependency
+UC-C01,VOPC to Detailed Design Realization,IBatchPricingPolicy,BatchInventory,dependency
+UC-C01,VOPC to Detailed Design Realization,BatchPricingPolicy,BatchInventory,dependency
+UC-C01,VOPC to Detailed Design Realization,CatalogResultDto,CategoryDto,association
+UC-C01,VOPC to Detailed Design Realization,CatalogResultDto,ProductSummaryDto,association
+UC-C01,VOPC to Detailed Design Realization,ProductDetailsDto,Product,dependency
+UC-C01,VOPC to Detailed Design Realization,ProductDetailsDto,BatchOfferDto,association
+UC-C01,VOPC to Detailed Design Realization,ProductDetailsDto,ProductSummaryDto,association
+UC-C01,DTO Contracts and Usage 1,CatalogController,CatalogQueryDto,dependency
+UC-C01,DTO Contracts and Usage 1,CatalogController,CatalogResultDto,dependency
+UC-C01,DTO Contracts and Usage 1,CatalogController,ProductDetailsDto,dependency
+UC-C01,DTO Contracts and Usage 1,ICatalogService,CatalogQueryDto,dependency
+UC-C01,DTO Contracts and Usage 1,ICatalogService,CatalogResultDto,dependency
+UC-C01,DTO Contracts and Usage 1,ICatalogService,ProductDetailsDto,dependency
+UC-C01,DTO Contracts and Usage 1,CatalogService,CatalogQueryDto,dependency
+UC-C01,DTO Contracts and Usage 1,CatalogService,CatalogResultDto,dependency
+UC-C01,DTO Contracts and Usage 1,CatalogService,ProductDetailsDto,dependency
+UC-C01,DTO Contracts and Usage 1,CatalogResultDto,CategoryDto,association
+UC-C01,DTO Contracts and Usage 1,CatalogResultDto,ProductSummaryDto,association
+UC-C01,DTO Contracts and Usage 1,ProductDetailsDto,BatchOfferDto,association
+UC-C01,DTO Contracts and Usage 1,ProductDetailsDto,ProductSummaryDto,association
+UC-C03,VOPC to Detailed Design Realization,CartRepository,Cart,dependency
+UC-C03,VOPC to Detailed Design Realization,CartRepository,CartItem,dependency
+UC-C03,VOPC to Detailed Design Realization,CartRepository,Product,dependency
+UC-C03,VOPC to Detailed Design Realization,CartRepository,BatchInventory,dependency
+UC-C03,VOPC to Detailed Design Realization,CartPage,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartPage,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartPage,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartView,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartView,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartApiClient,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartApiClient,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartApiClient,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartViewModel,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartViewModel,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartViewModel,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartApiModel,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartApiModel,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartApiModel,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartController,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartController,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartController,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,ICartService,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,ICartService,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,ICartService,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,BatchInventory,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,Cart,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,CartItem,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,Product,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,CartChangeDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,CartService,CartResultDto,dependency
+UC-C03,VOPC to Detailed Design Realization,ICartRepository,BatchInventory,dependency
+UC-C03,VOPC to Detailed Design Realization,ICartRepository,Cart,dependency
+UC-C03,VOPC to Detailed Design Realization,ICartRepository,Product,dependency
+UC-C03,VOPC to Detailed Design Realization,ICurrentCustomer,CartIdentityDto,dependency
+UC-C03,VOPC to Detailed Design Realization,IBatchPricingPolicy,BatchInventory,dependency
+UC-C03,VOPC to Detailed Design Realization,BatchPricingPolicy,BatchInventory,dependency
+UC-C03,VOPC to Detailed Design Realization,CartResultDto,CartLineDto,association
+UC-C03,DTO Contracts and Usage 1,CartController,CartChangeDto,dependency
+UC-C03,DTO Contracts and Usage 1,CartController,CartIdentityDto,dependency
+UC-C03,DTO Contracts and Usage 1,CartController,CartResultDto,dependency
+UC-C03,DTO Contracts and Usage 1,ICartService,CartChangeDto,dependency
+UC-C03,DTO Contracts and Usage 1,ICartService,CartIdentityDto,dependency
+UC-C03,DTO Contracts and Usage 1,ICartService,CartResultDto,dependency
+UC-C03,DTO Contracts and Usage 1,CartService,CartChangeDto,dependency
+UC-C03,DTO Contracts and Usage 1,CartService,CartIdentityDto,dependency
+UC-C03,DTO Contracts and Usage 1,CartService,CartResultDto,dependency
+UC-C03,DTO Contracts and Usage 1,CartResultDto,CartLineDto,association
+UC-C05,VOPC to Detailed Design Realization,ProfileRepository,Customer,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileRepository,CustomerAddress,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileRepository,Order,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfilePage,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfilePage,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfilePage,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileAddressView,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileAddressView,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiClient,AddressDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiClient,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiClient,OperationResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiClient,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiClient,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileViewModel,AddressDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileViewModel,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileViewModel,OperationResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileViewModel,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileViewModel,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiModel,AddressDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiModel,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiModel,OperationResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiModel,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileApiModel,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileController,AddressDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileController,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileController,OperationResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileController,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileController,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileService,AddressDto,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileService,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileService,OperationResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileService,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileService,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,Customer,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,CustomerAddress,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,Order,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,AddressDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,AddressInputDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,OperationResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,ProfileResultDto,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileService,ProfileUpdateDto,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileRepository,Customer,dependency
+UC-C05,VOPC to Detailed Design Realization,IProfileRepository,CustomerAddress,dependency
+UC-C05,VOPC to Detailed Design Realization,ProfileResultDto,AddressDto,association
+UC-C05,DTO Contracts and Usage 1,ProfileController,AddressDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileController,AddressInputDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileController,ProfileResultDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileController,ProfileUpdateDto,dependency
+UC-C05,DTO Contracts and Usage 1,IProfileService,AddressDto,dependency
+UC-C05,DTO Contracts and Usage 1,IProfileService,AddressInputDto,dependency
+UC-C05,DTO Contracts and Usage 1,IProfileService,ProfileResultDto,dependency
+UC-C05,DTO Contracts and Usage 1,IProfileService,ProfileUpdateDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileService,AddressDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileService,AddressInputDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileService,ProfileResultDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileService,ProfileUpdateDto,dependency
+UC-C05,DTO Contracts and Usage 1,ProfileResultDto,AddressDto,association
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,Customer,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,CustomerAddress,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,Cart,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,CartItem,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,Product,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,BatchInventory,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,Order,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutRepository,OrderDetail,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutPage,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutPage,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutPage,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutPage,PaymentResultDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutPage,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutView,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutView,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutView,PaymentResultDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutView,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiClient,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiClient,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiClient,OrderConfirmationDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiClient,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiClient,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiClient,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutViewModel,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutViewModel,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutViewModel,OrderConfirmationDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutViewModel,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutViewModel,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutViewModel,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiModel,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiModel,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiModel,OrderConfirmationDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiModel,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiModel,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutApiModel,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutController,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutController,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutController,OrderConfirmationDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutController,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutController,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutController,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,OrderConfirmationDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,PaymentNoticeDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,PaymentResultDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutService,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,BatchInventory,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,Cart,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,CartItem,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,Customer,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,CustomerAddress,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,Order,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,OrderDetail,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,Product,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,CheckoutInputDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,CheckoutSummaryDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,OrderConfirmationDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,PaymentNoticeDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,PaymentQrRequestDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,PaymentResultDto,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutService,PlaceOrderDto,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutRepository,BatchInventory,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutRepository,Cart,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutRepository,CustomerAddress,dependency
+UC-C06,VOPC to Detailed Design Realization,ICheckoutRepository,Order,dependency
+UC-C06,VOPC to Detailed Design Realization,IPaymentGateway,PaymentNoticeDto,dependency
+UC-C06,VOPC to Detailed Design Realization,IPaymentGateway,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,SePayPaymentAdapter,PaymentNoticeDto,dependency
+UC-C06,VOPC to Detailed Design Realization,SePayPaymentAdapter,PaymentQrDto,dependency
+UC-C06,VOPC to Detailed Design Realization,PaymentNoticeHandler,PaymentNoticeDto,dependency
+UC-C06,VOPC to Detailed Design Realization,PaymentNoticeHandler,PaymentResultDto,dependency
+UC-C06,VOPC to Detailed Design Realization,IBatchPricingPolicy,BatchInventory,dependency
+UC-C06,VOPC to Detailed Design Realization,BatchPricingPolicy,BatchInventory,dependency
+UC-C06,VOPC to Detailed Design Realization,CheckoutSummaryDto,CheckoutLineDto,association
+UC-C06,VOPC to Detailed Design Realization,OrderStateMachine,TransitionSnapshot,dependency
+UC-C06,VOPC to Detailed Design Realization,OrderStateMachine,StateMachineEvent,dependency
+UC-C06,VOPC to Detailed Design Realization,OrderStateMachine,StateMachineResult,dependency
+UC-C06,VOPC to Detailed Design Realization,OrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,VOPC to Detailed Design Realization,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C06,VOPC to Detailed Design Realization,IOrderStateMachine,StateMachineEvent,dependency
+UC-C06,VOPC to Detailed Design Realization,IOrderStateMachine,StateMachineResult,dependency
+UC-C06,VOPC to Detailed Design Realization,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,VOPC to Detailed Design Realization,StateMachineResult,OrderStateSnapshot,association
+UC-C06,VOPC to Detailed Design Realization,TransitionSnapshot,Order,dependency
+UC-C06,VOPC to Detailed Design Realization,TransitionSnapshot,BatchInventory,dependency
+UC-C06,Application Services and Constructor Injection,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C06,Application Services and Constructor Injection,IOrderStateMachine,StateMachineEvent,dependency
+UC-C06,Application Services and Constructor Injection,IOrderStateMachine,StateMachineResult,dependency
+UC-C06,Application Services and Constructor Injection,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,Application Services and Constructor Injection,StateMachineResult,OrderStateSnapshot,association
+UC-C06,DTO Contracts and Usage 1,CheckoutController,CheckoutInputDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutController,CheckoutSummaryDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutController,OrderConfirmationDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutController,PaymentQrRequestDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutController,PlaceOrderDto,dependency
+UC-C06,DTO Contracts and Usage 1,ICheckoutService,CheckoutInputDto,dependency
+UC-C06,DTO Contracts and Usage 1,ICheckoutService,CheckoutSummaryDto,dependency
+UC-C06,DTO Contracts and Usage 1,ICheckoutService,OrderConfirmationDto,dependency
+UC-C06,DTO Contracts and Usage 1,ICheckoutService,PaymentQrRequestDto,dependency
+UC-C06,DTO Contracts and Usage 1,ICheckoutService,PlaceOrderDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutService,CheckoutInputDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutService,CheckoutSummaryDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutService,OrderConfirmationDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutService,PaymentQrRequestDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutService,PlaceOrderDto,dependency
+UC-C06,DTO Contracts and Usage 1,CheckoutSummaryDto,CheckoutLineDto,association
+UC-C06,DTO Contracts and Usage 2,CheckoutController,PaymentQrDto,dependency
+UC-C06,DTO Contracts and Usage 2,ICheckoutService,PaymentNoticeDto,dependency
+UC-C06,DTO Contracts and Usage 2,ICheckoutService,PaymentQrDto,dependency
+UC-C06,DTO Contracts and Usage 2,ICheckoutService,PaymentResultDto,dependency
+UC-C06,DTO Contracts and Usage 2,CheckoutService,PaymentNoticeDto,dependency
+UC-C06,DTO Contracts and Usage 2,CheckoutService,PaymentQrDto,dependency
+UC-C06,DTO Contracts and Usage 2,CheckoutService,PaymentResultDto,dependency
+UC-C06,State Transition Realizations 1,OrderStateMachine,TransitionSnapshot,dependency
+UC-C06,State Transition Realizations 1,OrderStateMachine,StateMachineEvent,dependency
+UC-C06,State Transition Realizations 1,OrderStateMachine,StateMachineResult,dependency
+UC-C06,State Transition Realizations 1,OrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,State Transition Realizations 1,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C06,State Transition Realizations 1,IOrderStateMachine,StateMachineEvent,dependency
+UC-C06,State Transition Realizations 1,IOrderStateMachine,StateMachineResult,dependency
+UC-C06,State Transition Realizations 1,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,State Transition Realizations 1,StateMachineResult,OrderStateSnapshot,association
+UC-C06,State Transition Realizations 2,OrderStateMachine,TransitionSnapshot,dependency
+UC-C06,State Transition Realizations 2,OrderStateMachine,StateMachineEvent,dependency
+UC-C06,State Transition Realizations 2,OrderStateMachine,StateMachineResult,dependency
+UC-C06,State Transition Realizations 2,OrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,State Transition Realizations 2,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C06,State Transition Realizations 2,IOrderStateMachine,StateMachineEvent,dependency
+UC-C06,State Transition Realizations 2,IOrderStateMachine,StateMachineResult,dependency
+UC-C06,State Transition Realizations 2,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C06,State Transition Realizations 2,StateMachineResult,OrderStateSnapshot,association
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,Customer,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,Order,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,OrderDetail,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,CustomerAddress,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,BatchInventory,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,Product,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,Cart,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,CartItem,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,OrderReview,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersRepository,AuditLog,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersPage,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersPage,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersPage,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersView,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersView,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiClient,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiClient,CartResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiClient,OperationResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiClient,OrderDetailsDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiClient,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiClient,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersViewModel,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersViewModel,CartResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersViewModel,OperationResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersViewModel,OrderDetailsDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersViewModel,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersViewModel,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiModel,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiModel,CartResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiModel,OperationResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiModel,OrderDetailsDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiModel,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersApiModel,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersController,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersController,CartResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersController,OperationResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersController,OrderDetailsDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersController,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersController,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersService,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersService,CartResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersService,OperationResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersService,OrderDetailsDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersService,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersService,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,AuditLog,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,BatchInventory,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,Cart,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,CartItem,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,Customer,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,CustomerAddress,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,Order,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,OrderDetail,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,OrderReview,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,Product,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,CancelOrderDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,CartResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,OperationResultDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,OrderDetailsDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,OrderListDto,dependency
+UC-C07,VOPC to Detailed Design Realization,MyOrdersService,OrderReviewDto,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersRepository,BatchInventory,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersRepository,Cart,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersRepository,Order,dependency
+UC-C07,VOPC to Detailed Design Realization,IMyOrdersRepository,OrderReview,dependency
+UC-C07,VOPC to Detailed Design Realization,IBatchPricingPolicy,BatchInventory,dependency
+UC-C07,VOPC to Detailed Design Realization,BatchPricingPolicy,BatchInventory,dependency
+UC-C07,VOPC to Detailed Design Realization,CartResultDto,CartLineDto,association
+UC-C07,VOPC to Detailed Design Realization,OrderListDto,OrderSummaryDto,association
+UC-C07,VOPC to Detailed Design Realization,OrderDetailsDto,Order,dependency
+UC-C07,VOPC to Detailed Design Realization,OrderDetailsDto,AddressDto,association
+UC-C07,VOPC to Detailed Design Realization,OrderDetailsDto,OrderLineDto,association
+UC-C07,VOPC to Detailed Design Realization,OrderDetailsDto,OrderSummaryDto,association
+UC-C07,VOPC to Detailed Design Realization,OrderDetailsDto,ReturnSummaryDto,association
+UC-C07,VOPC to Detailed Design Realization,OrderStateMachine,TransitionSnapshot,dependency
+UC-C07,VOPC to Detailed Design Realization,OrderStateMachine,StateMachineEvent,dependency
+UC-C07,VOPC to Detailed Design Realization,OrderStateMachine,StateMachineResult,dependency
+UC-C07,VOPC to Detailed Design Realization,OrderStateMachine,OrderStateSnapshot,dependency
+UC-C07,VOPC to Detailed Design Realization,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C07,VOPC to Detailed Design Realization,IOrderStateMachine,StateMachineEvent,dependency
+UC-C07,VOPC to Detailed Design Realization,IOrderStateMachine,StateMachineResult,dependency
+UC-C07,VOPC to Detailed Design Realization,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C07,VOPC to Detailed Design Realization,StateMachineResult,OrderStateSnapshot,association
+UC-C07,VOPC to Detailed Design Realization,TransitionSnapshot,Order,dependency
+UC-C07,VOPC to Detailed Design Realization,TransitionSnapshot,BatchInventory,dependency
+UC-C07,Application Services and Constructor Injection,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C07,Application Services and Constructor Injection,IOrderStateMachine,StateMachineEvent,dependency
+UC-C07,Application Services and Constructor Injection,IOrderStateMachine,StateMachineResult,dependency
+UC-C07,Application Services and Constructor Injection,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C07,Application Services and Constructor Injection,StateMachineResult,OrderStateSnapshot,association
+UC-C07,DTO Contracts and Usage 1,MyOrdersController,CancelOrderDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersController,OrderDetailsDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersController,OrderListDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersController,OrderReviewDto,dependency
+UC-C07,DTO Contracts and Usage 1,IMyOrdersService,CancelOrderDto,dependency
+UC-C07,DTO Contracts and Usage 1,IMyOrdersService,OrderDetailsDto,dependency
+UC-C07,DTO Contracts and Usage 1,IMyOrdersService,OrderListDto,dependency
+UC-C07,DTO Contracts and Usage 1,IMyOrdersService,OrderReviewDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersService,CancelOrderDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersService,OrderDetailsDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersService,OrderListDto,dependency
+UC-C07,DTO Contracts and Usage 1,MyOrdersService,OrderReviewDto,dependency
+UC-C07,DTO Contracts and Usage 1,OrderListDto,OrderSummaryDto,association
+UC-C07,DTO Contracts and Usage 1,OrderDetailsDto,OrderLineDto,association
+UC-C07,DTO Contracts and Usage 1,OrderDetailsDto,OrderSummaryDto,association
+UC-C07,DTO Contracts and Usage 2,MyOrdersController,OrderDetailsDto,dependency
+UC-C07,DTO Contracts and Usage 2,IMyOrdersService,OrderDetailsDto,dependency
+UC-C07,DTO Contracts and Usage 2,MyOrdersService,OrderDetailsDto,dependency
+UC-C07,DTO Contracts and Usage 2,OrderDetailsDto,ReturnSummaryDto,association
+UC-C07,State Transition Realizations 1,OrderStateMachine,TransitionSnapshot,dependency
+UC-C07,State Transition Realizations 1,OrderStateMachine,StateMachineEvent,dependency
+UC-C07,State Transition Realizations 1,OrderStateMachine,StateMachineResult,dependency
+UC-C07,State Transition Realizations 1,OrderStateMachine,OrderStateSnapshot,dependency
+UC-C07,State Transition Realizations 1,IOrderStateMachine,TransitionSnapshot,dependency
+UC-C07,State Transition Realizations 1,IOrderStateMachine,StateMachineEvent,dependency
+UC-C07,State Transition Realizations 1,IOrderStateMachine,StateMachineResult,dependency
+UC-C07,State Transition Realizations 1,IOrderStateMachine,OrderStateSnapshot,dependency
+UC-C07,State Transition Realizations 1,StateMachineResult,OrderStateSnapshot,association
+shared,Transaction and Gateway Adapters,ICurrentCustomer,CartIdentityDto,dependency
+shared,Transaction and Gateway Adapters,CurrentCustomer,CartIdentityDto,dependency
+shared,External Adapter geocoding,IGeocodingGateway,GeoPointDto,dependency
+shared,External Adapter geocoding,GoogleMapsGeocodingAdapter,GeoPointDto,dependency
+shared,External Adapter payment,IPaymentGateway,PaymentNoticeDto,dependency
+shared,External Adapter payment,IPaymentGateway,PaymentQrDto,dependency
+shared,External Adapter payment,IPaymentGateway,VerifiedPaymentDto,dependency
+shared,External Adapter payment,SePayPaymentAdapter,PaymentNoticeDto,dependency
+shared,External Adapter payment,SePayPaymentAdapter,PaymentQrDto,dependency
+shared,External Adapter payment,SePayPaymentAdapter,VerifiedPaymentDto,dependency
+shared,External Adapter payment,PaymentNoticeHandler,PaymentNoticeDto,dependency
+shared,External Adapter payment,PaymentNoticeHandler,PaymentResultDto,dependency
+shared,External Adapter payment,ICheckoutService,CheckoutInputDto,dependency
+shared,External Adapter payment,ICheckoutService,CheckoutSummaryDto,dependency
+shared,External Adapter payment,ICheckoutService,OrderConfirmationDto,dependency
+shared,External Adapter payment,ICheckoutService,PaymentNoticeDto,dependency
+shared,External Adapter payment,ICheckoutService,PaymentQrDto,dependency
+shared,External Adapter payment,ICheckoutService,PaymentQrRequestDto,dependency
+shared,External Adapter payment,ICheckoutService,PaymentResultDto,dependency
+shared,External Adapter payment,ICheckoutService,PlaceOrderDto,dependency
+shared,External Adapter notification,INotificationGateway,NotificationDto,dependency
+shared,External Adapter notification,NotificationAdapter,NotificationDto,dependency
+shared,State Transition Dispatch,IOrderStateMachine,StateMachineEvent,dependency
+shared,State Transition Dispatch,IOrderStateMachine,StateMachineResult,dependency
+shared,State Transition Dispatch,IOrderStateMachine,TransitionSnapshot,dependency
+shared,State Transition Dispatch,OrderStateMachine,StateMachineEvent,dependency
+shared,State Transition Dispatch,OrderStateMachine,StateMachineResult,dependency
+shared,State Transition Dispatch,OrderStateMachine,TransitionSnapshot,dependency
+shared,State Transition Dispatch,OrderStateMachine,OrderStateSnapshot,dependency
+shared,State Transition Dispatch,IOrderStateMachine,OrderStateSnapshot,dependency
+shared,State Transition Dispatch,StateMachineResult,OrderStateSnapshot,association
+shared,Transition Command and Trusted Snapshot,TransitionSnapshot,GuardFactsDto,association
+shared,Transition Command and Trusted Snapshot,IPayoutPort,PayoutOutcomeDto,dependency
+shared,Unresolved Provider and Notification Seams,IPayoutPort,PayoutOutcomeDto,dependency
+shared,Unresolved Provider and Notification Seams,UnconfiguredPayoutAdapter,PayoutOutcomeDto,dependency
+shared,Unresolved Provider and Notification Seams,INotificationPublisher,NotificationDto,dependency
+shared,Unresolved Provider and Notification Seams,ConfiguredNotificationPublisher,NotificationDto,dependency
+transitions,Order State Machine Control and Private Transition Table,OrderStateMachine,TransitionSnapshot,dependency
+transitions,Order State Machine Control and Private Transition Table,OrderStateMachine,StateMachineEvent,dependency
+transitions,Order State Machine Control and Private Transition Table,OrderStateMachine,StateMachineResult,dependency
+transitions,Order State Machine Control and Private Transition Table,OrderStateMachine,OrderStateSnapshot,dependency
+transitions,Order State Machine Control and Private Transition Table,OrderStateMachine,Order,dependency
+transitions,Order State Machine Control and Private Transition Table,StateMachineResult,OrderStateSnapshot,association
+transitions,Order State Machine Control and Private Transition Table,IOrderStateMachine,TransitionSnapshot,dependency
+transitions,Order State Machine Control and Private Transition Table,IOrderStateMachine,StateMachineEvent,dependency
+transitions,Order State Machine Control and Private Transition Table,IOrderStateMachine,StateMachineResult,dependency
+transitions,Order State Machine Control and Private Transition Table,IOrderStateMachine,OrderStateSnapshot,dependency
+transitions,Order State Machine Control and Private Transition Table,TransitionSnapshot,Order,dependency

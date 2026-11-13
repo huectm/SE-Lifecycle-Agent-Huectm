@@ -1,0 +1,290 @@
+UseCase,Page,Number,PIM Sender,PIM Receiver,Logical Message,Mapping Status,Source Class,Source Members
+UC-C01,GetCatalog,1,Customer,CatalogPage,OnGetCatalogAsync(query),FrontendDesignOnly,CatalogPage,
+UC-C01,GetCatalog,2,CatalogPage,CatalogApiClient,GetCatalogAsync(query),FrontendDesignOnly,CatalogApiClient,
+UC-C01,GetCatalog,3,CatalogApiClient,CatalogController,HTTPS GetCatalogAsync(query),Implemented,CatalogController,GetCatalogAsync @ src/FreshFood-API/Controllers/CatalogController.cs:10
+UC-C01,GetCatalog,4,CatalogController,CatalogService,GetCatalogAsync(query),Implemented,CatalogService,GetCatalogAsync @ src/FreshFood-API/Services/Implements/CatalogService.cs:21
+UC-C01,GetCatalog,5,CatalogService,CatalogRepository,"FindActiveAsync(keyword, categoryId, clearanceOnly)",Implemented,CatalogRepository,FindActiveAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:5
+UC-C01,GetCatalog,7,CatalogService,CatalogRepository,GetCategoriesAsync(),Implemented,CatalogRepository,GetCategoriesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:7
+UC-C01,GetCatalog,9,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,GetCatalog,11,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,GetCatalog,13,CatalogService,CatalogService,[local] map entities to response DTO (local computation),Local/delegate/actor responsibility,,
+UC-C01,GetCatalog,14,CatalogService,CatalogRepository,GetPopularAsync(limit),Implemented,CatalogRepository,GetPopularAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:10
+UC-C01,GetCatalog,16,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,GetCatalog,18,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,GetCatalog,20,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,Local/delegate/actor responsibility,,
+UC-C01,Search,1,Customer,CatalogPage,OnSearchAsync(query),FrontendDesignOnly,CatalogPage,
+UC-C01,Search,2,CatalogPage,CatalogApiClient,SearchAsync(query),FrontendDesignOnly,CatalogApiClient,
+UC-C01,Search,3,CatalogApiClient,CatalogController,HTTPS SearchAsync(query),Implemented,CatalogController,SearchAsync @ src/FreshFood-API/Controllers/CatalogController.cs:15
+UC-C01,Search,4,CatalogController,CatalogService,SearchAsync(query),Implemented,CatalogService,SearchAsync @ src/FreshFood-API/Services/Implements/CatalogService.cs:32
+UC-C01,Search,5,CatalogService,CatalogRepository,"FindActiveAsync(keyword, categoryId, clearanceOnly)",Implemented,CatalogRepository,FindActiveAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:5
+UC-C01,Search,7,CatalogService,CatalogRepository,GetCategoriesAsync(),Implemented,CatalogRepository,GetCategoriesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:7
+UC-C01,Search,9,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,Search,11,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,Search,13,CatalogService,CatalogService,[local] map entities to response DTO (local computation),Local/delegate/actor responsibility,,
+UC-C01,Search,14,CatalogService,CatalogRepository,GetPopularAsync(limit),Implemented,CatalogRepository,GetPopularAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:10
+UC-C01,Search,16,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,Search,18,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,Search,20,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,Local/delegate/actor responsibility,,
+UC-C01,GetProductDetails,1,Customer,CatalogPage,OnGetProductDetailsAsync(productId),FrontendDesignOnly,CatalogPage,
+UC-C01,GetProductDetails,2,CatalogPage,CatalogApiClient,GetProductDetailsAsync(productId),FrontendDesignOnly,CatalogApiClient,
+UC-C01,GetProductDetails,3,CatalogApiClient,CatalogController,HTTPS GetProductDetailsAsync(productId),Implemented,CatalogController,GetProductDetailsAsync @ src/FreshFood-API/Controllers/CatalogController.cs:25
+UC-C01,GetProductDetails,4,CatalogController,CatalogService,GetProductDetailsAsync(productId),Implemented,CatalogService,GetProductDetailsAsync @ src/FreshFood-API/Services/Implements/CatalogService.cs:34
+UC-C01,GetProductDetails,5,CatalogService,CatalogRepository,GetProductAsync(productId),Implemented,CatalogRepository,GetProductAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:8
+UC-C01,GetProductDetails,7,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,GetProductDetails,9,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,GetProductDetails,11,CatalogService,CatalogService,[local] map entities to response DTO (local computation),Local/delegate/actor responsibility,,
+UC-C01,GetProductDetails,12,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,Local/delegate/actor responsibility,,
+UC-C01,GetClearance,1,Customer,CatalogPage,OnGetClearanceAsync(query),FrontendDesignOnly,CatalogPage,
+UC-C01,GetClearance,2,CatalogPage,CatalogApiClient,GetClearanceAsync(query),FrontendDesignOnly,CatalogApiClient,
+UC-C01,GetClearance,3,CatalogApiClient,CatalogController,HTTPS GetClearanceAsync(query),Implemented,CatalogController,GetClearanceAsync @ src/FreshFood-API/Controllers/CatalogController.cs:20
+UC-C01,GetClearance,4,CatalogController,CatalogService,GetClearanceAsync(query),Implemented,CatalogService,GetClearanceAsync @ src/FreshFood-API/Services/Implements/CatalogService.cs:33
+UC-C01,GetClearance,5,CatalogService,CatalogRepository,"FindActiveAsync(keyword, categoryId, clearanceOnly)",Implemented,CatalogRepository,FindActiveAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:5
+UC-C01,GetClearance,7,CatalogService,CatalogRepository,GetCategoriesAsync(),Implemented,CatalogRepository,GetCategoriesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:7
+UC-C01,GetClearance,9,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,GetClearance,11,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,GetClearance,13,CatalogService,CatalogService,[local] map entities to response DTO (local computation),Local/delegate/actor responsibility,,
+UC-C01,GetClearance,14,CatalogService,CatalogRepository,GetPopularAsync(limit),Implemented,CatalogRepository,GetPopularAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:10
+UC-C01,GetClearance,16,CatalogService,CatalogRepository,GetSellableBatchesAsync(productIds),Implemented,CatalogRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.cs:9
+UC-C01,GetClearance,18,CatalogService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C01,GetClearance,20,CatalogService,CatalogService,[local] map existing empty/unavailable outcome and alternatives where applicable,Local/delegate/actor responsibility,,
+UC-C01,Mobile entry refinement,1,Customer,CatalogView,user action: GetCatalog,Local/delegate/actor responsibility,,
+UC-C01,Mobile entry refinement,2,CatalogView,CatalogViewModel,GetCatalogAsync(query),FrontendDesignOnly,CatalogViewModel,
+UC-C01,Mobile entry refinement,3,CatalogViewModel,CatalogApiModel,GetCatalogAsync(query),FrontendDesignOnly,CatalogApiModel,
+UC-C01,Mobile entry refinement,4,CatalogApiModel,CatalogController,HTTPS GetCatalogAsync(query),Implemented,CatalogController,GetCatalogAsync @ src/FreshFood-API/Controllers/CatalogController.cs:10
+UC-C01,Mobile entry refinement,5,CatalogController,CatalogService,GetCatalogAsync(query),Implemented,CatalogService,GetCatalogAsync @ src/FreshFood-API/Services/Implements/CatalogService.cs:21
+UC-C03,GetCart,1,Customer,CartPage,OnGetCartAsync(),FrontendDesignOnly,CartPage,
+UC-C03,GetCart,2,CartPage,CartApiClient,GetCartAsync(),FrontendDesignOnly,CartApiClient,
+UC-C03,GetCart,3,CartApiClient,CartController,HTTPS GetCartAsync(),Implemented,CartController,GetCartAsync @ src/FreshFood-API/Controllers/CartController.cs:10
+UC-C03,GetCart,4,CartController,CartService,GetCartAsync(),Implemented,CartService,GetCartAsync @ src/FreshFood-API/Services/Implements/CartService.cs:22
+UC-C03,GetCart,5,CartService,CurrentCustomer,GetCartIdentity(),Implemented,CurrentCustomer,GetCartIdentity @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:14
+UC-C03,GetCart,7,CartService,CartRepository,"GetAsync(customerId, sessionId)",Implemented,CartRepository,GetAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:5
+UC-C03,GetCart,9,CartService,CartRepository,GetProductsAsync(ids),Implemented,CartRepository,GetProductsAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:6
+UC-C03,GetCart,11,CartService,CartRepository,GetSellableBatchesAsync(ids),Implemented,CartRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:7
+UC-C03,GetCart,13,CartService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C03,ChangeQuantity,1,Customer,CartPage,OnChangeQuantityAsync(request),FrontendDesignOnly,CartPage,
+UC-C03,ChangeQuantity,2,CartPage,CartApiClient,ChangeQuantityAsync(request),FrontendDesignOnly,CartApiClient,
+UC-C03,ChangeQuantity,3,CartApiClient,CartController,HTTPS ChangeQuantityAsync(request),Implemented,CartController,ChangeQuantityAsync @ src/FreshFood-API/Controllers/CartController.cs:15
+UC-C03,ChangeQuantity,4,CartController,CartService,ChangeQuantityAsync(request),Implemented,CartService,ChangeQuantityAsync @ src/FreshFood-API/Services/Implements/CartService.cs:23
+UC-C03,ChangeQuantity,5,CartService,CurrentCustomer,GetCartIdentity(),Implemented,CurrentCustomer,GetCartIdentity @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:14
+UC-C03,ChangeQuantity,7,CartService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C03,ChangeQuantity,8,UnitOfWork,CartService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C03,ChangeQuantity,9,CartService,CartRepository,"GetAsync(customerId, sessionId)",Implemented,CartRepository,GetAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:5
+UC-C03,ChangeQuantity,11,CartService,CartRepository,GetProductsAsync(ids),Implemented,CartRepository,GetProductsAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:6
+UC-C03,ChangeQuantity,13,CartService,CartRepository,GetSellableBatchesAsync(ids),Implemented,CartRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:7
+UC-C03,ChangeQuantity,15,CartService,CartService,"[local] change absolute quantity, clamp if necessary, or remove selected item",Local/delegate/actor responsibility,,
+UC-C03,ChangeQuantity,16,CartService,CartRepository,SaveAsync(cart),Implemented,CartRepository,SaveAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:8
+UC-C03,ChangeQuantity,18,CartService,CartRepository,GetProductsAsync(ids),Implemented,CartRepository,GetProductsAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:6
+UC-C03,ChangeQuantity,20,CartService,CartRepository,GetSellableBatchesAsync(ids),Implemented,CartRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:7
+UC-C03,ChangeQuantity,22,CartService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C03,ChangeQuantity,24,CartService,CartService,[local] reject mutation; transaction rolls back,Local/delegate/actor responsibility,,
+UC-C03,RemoveItem,1,Customer,CartPage,OnRemoveItemAsync(productId),FrontendDesignOnly,CartPage,
+UC-C03,RemoveItem,2,CartPage,CartApiClient,RemoveItemAsync(productId),FrontendDesignOnly,CartApiClient,
+UC-C03,RemoveItem,3,CartApiClient,CartController,HTTPS RemoveItemAsync(productId),Implemented,CartController,RemoveItemAsync @ src/FreshFood-API/Controllers/CartController.cs:20
+UC-C03,RemoveItem,4,CartController,CartService,RemoveItemAsync(productId),Implemented,CartService,RemoveItemAsync @ src/FreshFood-API/Services/Implements/CartService.cs:37
+UC-C03,RemoveItem,5,CartService,CurrentCustomer,GetCartIdentity(),Implemented,CurrentCustomer,GetCartIdentity @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:14
+UC-C03,RemoveItem,7,CartService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C03,RemoveItem,8,UnitOfWork,CartService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C03,RemoveItem,9,CartService,CartRepository,"GetAsync(customerId, sessionId)",Implemented,CartRepository,GetAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:5
+UC-C03,RemoveItem,11,CartService,CartService,"[local] change absolute quantity, clamp if necessary, or remove selected item",Local/delegate/actor responsibility,,
+UC-C03,RemoveItem,12,CartService,CartRepository,SaveAsync(cart),Implemented,CartRepository,SaveAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:8
+UC-C03,RemoveItem,14,CartService,CartRepository,GetProductsAsync(ids),Implemented,CartRepository,GetProductsAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:6
+UC-C03,RemoveItem,16,CartService,CartRepository,GetSellableBatchesAsync(ids),Implemented,CartRepository,GetSellableBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CartRepository.cs:7
+UC-C03,RemoveItem,18,CartService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C03,RemoveItem,20,CartService,CartService,[local] reject mutation; transaction rolls back,Local/delegate/actor responsibility,,
+UC-C03,Mobile entry refinement,1,Customer,CartView,user action: GetCart,Local/delegate/actor responsibility,,
+UC-C03,Mobile entry refinement,2,CartView,CartViewModel,GetCartAsync(),FrontendDesignOnly,CartViewModel,
+UC-C03,Mobile entry refinement,3,CartViewModel,CartApiModel,GetCartAsync(),FrontendDesignOnly,CartApiModel,
+UC-C03,Mobile entry refinement,4,CartApiModel,CartController,HTTPS GetCartAsync(),Implemented,CartController,GetCartAsync @ src/FreshFood-API/Controllers/CartController.cs:10
+UC-C03,Mobile entry refinement,5,CartController,CartService,GetCartAsync(),Implemented,CartService,GetCartAsync @ src/FreshFood-API/Services/Implements/CartService.cs:22
+UC-C05,GetProfile,1,Customer,ProfilePage,OnGetProfileAsync(),FrontendDesignOnly,ProfilePage,
+UC-C05,GetProfile,2,ProfilePage,ProfileApiClient,GetProfileAsync(),FrontendDesignOnly,ProfileApiClient,
+UC-C05,GetProfile,3,ProfileApiClient,ProfileController,HTTPS GetProfileAsync(),Implemented,ProfileController,GetProfileAsync @ src/FreshFood-API/Controllers/ProfileController.cs:11
+UC-C05,GetProfile,4,ProfileController,ProfileService,GetProfileAsync(),Implemented,ProfileService,GetProfileAsync @ src/FreshFood-API/Services/Implements/ProfileService.cs:7
+UC-C05,GetProfile,5,ProfileService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C05,GetProfile,7,ProfileService,ProfileRepository,GetCustomerAsync(customerId),Implemented,ProfileRepository,GetCustomerAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:5
+UC-C05,GetProfile,9,ProfileService,ProfileRepository,GetAddressesAsync(customerId),Implemented,ProfileRepository,GetAddressesAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:6
+UC-C05,UpdateProfile,1,Customer,ProfilePage,OnUpdateProfileAsync(request),FrontendDesignOnly,ProfilePage,
+UC-C05,UpdateProfile,2,ProfilePage,ProfileApiClient,UpdateProfileAsync(request),FrontendDesignOnly,ProfileApiClient,
+UC-C05,UpdateProfile,3,ProfileApiClient,ProfileController,HTTPS UpdateProfileAsync(request),Implemented,ProfileController,UpdateProfileAsync @ src/FreshFood-API/Controllers/ProfileController.cs:16
+UC-C05,UpdateProfile,4,ProfileController,ProfileService,UpdateProfileAsync(request),Implemented,ProfileService,UpdateProfileAsync @ src/FreshFood-API/Services/Implements/ProfileService.cs:12
+UC-C05,UpdateProfile,5,ProfileService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C05,UpdateProfile,7,ProfileService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C05,UpdateProfile,8,UnitOfWork,ProfileService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C05,UpdateProfile,9,ProfileService,ProfileRepository,GetCustomerAsync(customerId),Implemented,ProfileRepository,GetCustomerAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:5
+UC-C05,UpdateProfile,11,ProfileService,ProfileRepository,SaveCustomerAsync(customer),Implemented,ProfileRepository,SaveCustomerAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:8
+UC-C05,UpdateProfile,15,ProfileService,ProfileService,[local] reject change without partial persistence,Local/delegate/actor responsibility,,
+UC-C05,UpdateProfile,16,ProfileService,ProfileRepository,GetCustomerAsync(customerId),Implemented,ProfileRepository,GetCustomerAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:5
+UC-C05,UpdateProfile,18,ProfileService,ProfileRepository,GetAddressesAsync(customerId),Implemented,ProfileRepository,GetAddressesAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:6
+UC-C05,SaveAddress,1,Customer,ProfilePage,OnSaveAddressAsync(request),FrontendDesignOnly,ProfilePage,
+UC-C05,SaveAddress,2,ProfilePage,ProfileApiClient,SaveAddressAsync(request),FrontendDesignOnly,ProfileApiClient,
+UC-C05,SaveAddress,3,ProfileApiClient,ProfileController,HTTPS SaveAddressAsync(request),Implemented,ProfileController,SaveAddressAsync @ src/FreshFood-API/Controllers/ProfileController.cs:21; UpdateAddressAsync @ src/FreshFood-API/Controllers/ProfileController.cs:26
+UC-C05,SaveAddress,4,ProfileController,ProfileService,SaveAddressAsync(request),Implemented,ProfileService,SaveAddressAsync @ src/FreshFood-API/Services/Implements/ProfileService.cs:26
+UC-C05,SaveAddress,5,ProfileService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C05,SaveAddress,7,ProfileService,GoogleMapsGeocodingAdapter,ResolveAsync(address),DeferredIntegration,GoogleMapsGeocodingAdapter,ResolveAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:7
+UC-C05,SaveAddress,9,ProfileService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C05,SaveAddress,10,UnitOfWork,ProfileService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C05,SaveAddress,11,ProfileService,ProfileRepository,[editing existing address] GetAddressesAsync(customerId),Implemented,ProfileRepository,GetAddressesAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:6
+UC-C05,SaveAddress,13,ProfileService,ProfileRepository,SaveAddressAsync(address),Implemented,ProfileRepository,SaveAddressAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:9
+UC-C05,SaveAddress,17,ProfileService,ProfileService,[local] reject change without partial persistence,Local/delegate/actor responsibility,,
+UC-C05,SetDefaultAddress,1,Customer,ProfilePage,OnSetDefaultAddressAsync(addressId),FrontendDesignOnly,ProfilePage,
+UC-C05,SetDefaultAddress,2,ProfilePage,ProfileApiClient,SetDefaultAddressAsync(addressId),FrontendDesignOnly,ProfileApiClient,
+UC-C05,SetDefaultAddress,3,ProfileApiClient,ProfileController,HTTPS SetDefaultAddressAsync(addressId),Implemented,ProfileController,SetDefaultAddressAsync @ src/FreshFood-API/Controllers/ProfileController.cs:32
+UC-C05,SetDefaultAddress,4,ProfileController,ProfileService,SetDefaultAddressAsync(addressId),Implemented,ProfileService,SetDefaultAddressAsync @ src/FreshFood-API/Services/Implements/ProfileService.cs:46
+UC-C05,SetDefaultAddress,5,ProfileService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C05,SetDefaultAddress,7,ProfileService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C05,SetDefaultAddress,8,UnitOfWork,ProfileService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C05,SetDefaultAddress,9,ProfileService,ProfileRepository,GetAddressesAsync(customerId),Implemented,ProfileRepository,GetAddressesAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:6
+UC-C05,SetDefaultAddress,11,ProfileService,ProfileRepository,SaveAddressAsync(address),Implemented,ProfileRepository,SaveAddressAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:9
+UC-C05,SetDefaultAddress,15,ProfileService,ProfileService,[local] reject change without partial persistence,Local/delegate/actor responsibility,,
+UC-C05,SetDefaultAddress,16,ProfileService,ProfileRepository,GetCustomerAsync(customerId),Implemented,ProfileRepository,GetCustomerAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:5
+UC-C05,SetDefaultAddress,18,ProfileService,ProfileRepository,GetAddressesAsync(customerId),Implemented,ProfileRepository,GetAddressesAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:6
+UC-C05,DeleteAddress,1,Customer,ProfilePage,OnDeleteAddressAsync(addressId),FrontendDesignOnly,ProfilePage,
+UC-C05,DeleteAddress,2,ProfilePage,ProfileApiClient,DeleteAddressAsync(addressId),FrontendDesignOnly,ProfileApiClient,
+UC-C05,DeleteAddress,3,ProfileApiClient,ProfileController,HTTPS DeleteAddressAsync(addressId),Implemented,ProfileController,DeleteAddressAsync @ src/FreshFood-API/Controllers/ProfileController.cs:37
+UC-C05,DeleteAddress,4,ProfileController,ProfileService,DeleteAddressAsync(addressId),Implemented,ProfileService,DeleteAddressAsync @ src/FreshFood-API/Services/Implements/ProfileService.cs:52
+UC-C05,DeleteAddress,5,ProfileService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C05,DeleteAddress,7,ProfileService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C05,DeleteAddress,8,UnitOfWork,ProfileService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C05,DeleteAddress,9,ProfileService,ProfileRepository,GetAddressesAsync(customerId),Implemented,ProfileRepository,GetAddressesAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:6
+UC-C05,DeleteAddress,11,ProfileService,ProfileRepository,"HasActiveOrderAsync(customerId, addressId)",Implemented,ProfileRepository,HasActiveOrderAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:7
+UC-C05,DeleteAddress,13,ProfileService,ProfileRepository,"DeleteAddressAsync(customerId, addressId)",Implemented,ProfileRepository,DeleteAddressAsync @ src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.cs:20
+UC-C05,DeleteAddress,17,ProfileService,ProfileService,[local] reject change without partial persistence,Local/delegate/actor responsibility,,
+UC-C05,Mobile entry refinement,1,Customer,ProfileAddressView,user action: GetProfile,Local/delegate/actor responsibility,,
+UC-C05,Mobile entry refinement,2,ProfileAddressView,ProfileViewModel,GetProfileAsync(),FrontendDesignOnly,ProfileViewModel,
+UC-C05,Mobile entry refinement,3,ProfileViewModel,ProfileApiModel,GetProfileAsync(),FrontendDesignOnly,ProfileApiModel,
+UC-C05,Mobile entry refinement,4,ProfileApiModel,ProfileController,HTTPS GetProfileAsync(),Implemented,ProfileController,GetProfileAsync @ src/FreshFood-API/Controllers/ProfileController.cs:11
+UC-C05,Mobile entry refinement,5,ProfileController,ProfileService,GetProfileAsync(),Implemented,ProfileService,GetProfileAsync @ src/FreshFood-API/Services/Implements/ProfileService.cs:7
+UC-C06,PrepareCheckout,1,Customer,CheckoutPage,OnPrepareCheckoutAsync(request),FrontendDesignOnly,CheckoutPage,
+UC-C06,PrepareCheckout,2,CheckoutPage,CheckoutApiClient,PrepareCheckoutAsync(request),FrontendDesignOnly,CheckoutApiClient,
+UC-C06,PrepareCheckout,3,CheckoutApiClient,CheckoutController,HTTPS PrepareCheckoutAsync(request),Implemented,CheckoutController,PrepareCheckoutAsync @ src/FreshFood-API/Controllers/CheckoutController.cs:11
+UC-C06,PrepareCheckout,4,CheckoutController,CheckoutService,PrepareCheckoutAsync(request),Implemented,CheckoutService,PrepareCheckoutAsync @ src/FreshFood-API/Services/Implements/CheckoutService.cs:38
+UC-C06,PrepareCheckout,5,CheckoutService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C06,PrepareCheckout,7,CheckoutService,CheckoutRepository,GetCheckoutCartAsync(customerId),Implemented,CheckoutRepository,GetCheckoutCartAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:10
+UC-C06,PrepareCheckout,9,CheckoutService,CheckoutRepository,"GetOwnedAddressAsync(customerId, addressId)",Implemented,CheckoutRepository,GetOwnedAddressAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:11
+UC-C06,PrepareCheckout,11,CheckoutService,DistanceCalculator,CalculateAsync(addressId),Implemented,DistanceCalculator,CalculateAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:15
+UC-C06,PrepareCheckout,13,CheckoutService,DeliveryFeePolicy,Quote(distanceKm),Implemented,DeliveryFeePolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:65
+UC-C06,PrepareCheckout,15,CheckoutService,CheckoutRepository,LockFefoBatchesAsync(productIds),Implemented,CheckoutRepository,LockFefoBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:13
+UC-C06,PrepareCheckout,17,CheckoutService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C06,PrepareCheckout,19,CheckoutService,CheckoutService,[local] allocate all lines and calculate summary,Local/delegate/actor responsibility,,
+UC-C06,PrepareCheckout,20,CheckoutService,CheckoutService,[local] validation result; no order created,Local/delegate/actor responsibility,,
+UC-C06,PlaceOrder,1,Customer,CheckoutPage,OnPlaceOrderAsync(request),FrontendDesignOnly,CheckoutPage,
+UC-C06,PlaceOrder,2,CheckoutPage,CheckoutApiClient,PlaceOrderAsync(request),FrontendDesignOnly,CheckoutApiClient,
+UC-C06,PlaceOrder,3,CheckoutApiClient,CheckoutController,HTTPS PlaceOrderAsync(request),Implemented,CheckoutController,PlaceOrderAsync @ src/FreshFood-API/Controllers/CheckoutController.cs:16
+UC-C06,PlaceOrder,4,CheckoutController,CheckoutService,PlaceOrderAsync(request),Implemented,CheckoutService,PlaceOrderAsync @ src/FreshFood-API/Services/Implements/CheckoutService.cs:71
+UC-C06,PlaceOrder,5,CheckoutService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C06,PlaceOrder,7,CheckoutService,CheckoutRepository,GetCheckoutCartAsync(customerId),Implemented,CheckoutRepository,GetCheckoutCartAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:10
+UC-C06,PlaceOrder,9,CheckoutService,CheckoutRepository,"GetOwnedAddressAsync(customerId, addressId)",Implemented,CheckoutRepository,GetOwnedAddressAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:11
+UC-C06,PlaceOrder,11,CheckoutService,DistanceCalculator,CalculateAsync(addressId),Implemented,DistanceCalculator,CalculateAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:15
+UC-C06,PlaceOrder,13,CheckoutService,DeliveryFeePolicy,Quote(distanceKm),Implemented,DeliveryFeePolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:65
+UC-C06,PlaceOrder,15,CheckoutService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C06,PlaceOrder,16,UnitOfWork,CheckoutService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C06,PlaceOrder,17,CheckoutService,CheckoutRepository,"ClaimCheckoutAsync(customerId, reference, key, requestHash)",Implemented,CheckoutRepository,ClaimCheckoutAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:38
+UC-C06,PlaceOrder,19,CheckoutService,CheckoutRepository,GetCheckoutCartAsync(customerId),Implemented,CheckoutRepository,GetCheckoutCartAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:10
+UC-C06,PlaceOrder,21,CheckoutService,CheckoutRepository,"GetOwnedAddressAsync(customerId, addressId)",Implemented,CheckoutRepository,GetOwnedAddressAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:11
+UC-C06,PlaceOrder,23,CheckoutService,CheckoutRepository,LockFefoBatchesAsync(productIds),Implemented,CheckoutRepository,LockFefoBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:13
+UC-C06,PlaceOrder,25,CheckoutService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C06,PlaceOrder,27,CheckoutService,CheckoutService,"[local] reuse original confirmation; skip state, stock and cart writes",Local/delegate/actor responsibility,,
+UC-C06,PlaceOrder,28,CheckoutService,OrderStateMachine,"ProcessEventAsync(snapshot, acceptOrderEvent)",Implemented,OrderStateMachine,ProcessEventAsync @ src/FreshFood-API/Services/Implements/OrderStateMachine.cs:89
+UC-C06,PlaceOrder,30,CheckoutService,CheckoutRepository,SaveOrderAsync(order),Implemented,CheckoutRepository,SaveOrderAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:15
+UC-C06,PlaceOrder,32,CheckoutService,CheckoutRepository,ClearCartAsync(cartId),Implemented,CheckoutRepository,ClearCartAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:30
+UC-C06,PlaceOrder,34,CheckoutService,CheckoutRepository,"CompleteCheckoutAsync(customerId, reference, key, response)",Implemented,CheckoutRepository,CompleteCheckoutAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:49
+UC-C06,PlaceOrder,36,CheckoutService,CheckoutService,"[local] throw; roll back all order, payment, reservation and cart effects",Local/delegate/actor responsibility,,
+UC-C06,PlaceOrder,39,CheckoutService,NotificationAdapter,PublishAsync(message),Implemented,NotificationAdapter,PublishAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:28
+UC-C06,CreatePaymentQr,1,Customer,CheckoutPage,OnCreatePaymentQrAsync(request),FrontendDesignOnly,CheckoutPage,
+UC-C06,CreatePaymentQr,2,CheckoutPage,CheckoutApiClient,CreatePaymentQrAsync(request),FrontendDesignOnly,CheckoutApiClient,
+UC-C06,CreatePaymentQr,3,CheckoutApiClient,CheckoutController,HTTPS CreatePaymentQrAsync(request),Implemented,CheckoutController,CreatePaymentQrAsync @ src/FreshFood-API/Controllers/CheckoutController.cs:21
+UC-C06,CreatePaymentQr,4,CheckoutController,CheckoutService,CreatePaymentQrAsync(request),DeferredIntegration,CheckoutService,CreatePaymentQrAsync @ src/FreshFood-API/Services/Implements/CheckoutService.cs:116
+UC-C06,CreatePaymentQr,5,CheckoutService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C06,CreatePaymentQr,7,CheckoutService,CheckoutService,[local] report payment unavailable; do not invoke payment creation,Local/delegate/actor responsibility,,
+UC-C06,CreatePaymentQr,8,CheckoutService,SePayPaymentAdapter,"CreateQrAsync(reference, amount)",DeferredIntegration,SePayPaymentAdapter,CreateQrAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:19
+UC-C06,Mobile entry refinement,1,Customer,CheckoutView,user action: PrepareCheckout,Local/delegate/actor responsibility,,
+UC-C06,Mobile entry refinement,2,CheckoutView,CheckoutViewModel,PrepareCheckoutAsync(request),FrontendDesignOnly,CheckoutViewModel,
+UC-C06,Mobile entry refinement,3,CheckoutViewModel,CheckoutApiModel,PrepareCheckoutAsync(request),FrontendDesignOnly,CheckoutApiModel,
+UC-C06,Mobile entry refinement,4,CheckoutApiModel,CheckoutController,HTTPS PrepareCheckoutAsync(request),Implemented,CheckoutController,PrepareCheckoutAsync @ src/FreshFood-API/Controllers/CheckoutController.cs:11
+UC-C06,Mobile entry refinement,5,CheckoutController,CheckoutService,PrepareCheckoutAsync(request),Implemented,CheckoutService,PrepareCheckoutAsync @ src/FreshFood-API/Services/Implements/CheckoutService.cs:38
+UC-C06,Verified payment webhook,1,SePay,PaymentNoticeHandler,HandleAsync(notice),Implemented,PaymentNoticeHandler,HandleAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:36
+UC-C06,Verified payment webhook,2,PaymentNoticeHandler,CheckoutService,HandleVerifiedPaymentAsync(notice),DeferredIntegration,CheckoutService,HandleVerifiedPaymentAsync @ src/FreshFood-API/Services/Implements/CheckoutService.cs:118
+UC-C06,Verified payment webhook,3,CheckoutService,SePayPaymentAdapter,VerifyNoticeAsync(notice),DeferredIntegration,SePayPaymentAdapter,VerifyNoticeAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:20
+UC-C06,Verified payment webhook,5,CheckoutService,CheckoutService,[local] reject unsigned notice,Local/delegate/actor responsibility,,
+UC-C06,Verified payment webhook,6,CheckoutService,CheckoutService,[local] explicit correlation error; P02 capture remains disabled,Local/delegate/actor responsibility,,
+UC-C06,OrderStateMachine acceptance,1,CheckoutService,OrderStateMachine,"ProcessEventAsync(snapshot, acceptOrderEvent)",Implemented,OrderStateMachine,ProcessEventAsync @ src/FreshFood-API/Services/Implements/OrderStateMachine.cs:89
+UC-C06,OrderStateMachine acceptance,2,OrderStateMachine,OrderStateMachine,[local] resolve current state + event + trusted guard in private table,Local/delegate/actor responsibility,,
+UC-C06,OrderStateMachine acceptance,3,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",Implemented,OrderLifecycleRepository,RecordEventOnceAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:10
+UC-C06,OrderStateMachine acceptance,5,OrderStateMachine,OrderStateMachine,[local] apply acceptance and follow completion to guarded initial branch,Local/delegate/actor responsibility,,
+UC-C06,OrderStateMachine acceptance,6,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",Implemented,OrderLifecycleRepository,RecordEventOnceAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:10
+UC-C06,OrderStateMachine acceptance,8,OrderStateMachine,OrderStateMachine,[local] set Pending Unpaid; internal createOrder event selects P01,Local/delegate/actor responsibility,,
+UC-C06,OrderStateMachine acceptance,9,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",Implemented,OrderLifecycleRepository,RecordEventOnceAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:10
+UC-C06,OrderStateMachine acceptance,11,OrderStateMachine,OrderStateMachine,[local] table selects T01p; required P02 remains disabled until payment correlation is resolved,Local/delegate/actor responsibility,,
+UC-C06,OrderStateMachine acceptance,12,OrderStateMachine,OrderStateMachine,CurrentState(),Implemented,OrderStateMachine,CurrentState @ src/FreshFood-API/Services/Implements/OrderStateMachine.cs:20
+UC-C06,Idempotent checkout replay,1,Customer,CheckoutPage,OnPlaceOrderAsync(request),FrontendDesignOnly,CheckoutPage,
+UC-C06,Idempotent checkout replay,2,CheckoutPage,CheckoutApiClient,PlaceOrderAsync(request),FrontendDesignOnly,CheckoutApiClient,
+UC-C06,Idempotent checkout replay,3,CheckoutApiClient,CheckoutController,HTTPS PlaceOrderAsync(request),Implemented,CheckoutController,PlaceOrderAsync @ src/FreshFood-API/Controllers/CheckoutController.cs:16
+UC-C06,Idempotent checkout replay,4,CheckoutController,CheckoutService,PlaceOrderAsync(request),Implemented,CheckoutService,PlaceOrderAsync @ src/FreshFood-API/Services/Implements/CheckoutService.cs:71
+UC-C06,Idempotent checkout replay,5,CheckoutService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C06,Idempotent checkout replay,6,UnitOfWork,CheckoutService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C06,Idempotent checkout replay,7,CheckoutService,CheckoutRepository,"ClaimCheckoutAsync(customerId, reference, key, requestHash)",Implemented,CheckoutRepository,ClaimCheckoutAsync @ src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.cs:38
+UC-C06,Idempotent checkout replay,9,CheckoutService,CheckoutService,"[local] replay original confirmation; skip state machine, reservation, cart writes and notification",Local/delegate/actor responsibility,,
+UC-C06,Idempotent checkout replay,10,CheckoutService,CheckoutService,[local] reject conflict; preserve earlier successful outcome,Local/delegate/actor responsibility,,
+UC-C07,GetOrders,1,Customer,MyOrdersPage,OnGetOrdersAsync(),FrontendDesignOnly,MyOrdersPage,
+UC-C07,GetOrders,2,MyOrdersPage,MyOrdersApiClient,GetOrdersAsync(),FrontendDesignOnly,MyOrdersApiClient,
+UC-C07,GetOrders,3,MyOrdersApiClient,MyOrdersController,HTTPS GetOrdersAsync(),Implemented,MyOrdersController,GetOrdersAsync @ src/FreshFood-API/Controllers/MyOrdersController.cs:11
+UC-C07,GetOrders,4,MyOrdersController,MyOrdersService,GetOrdersAsync(),Implemented,MyOrdersService,GetOrdersAsync @ src/FreshFood-API/Services/Implements/MyOrdersService.cs:6
+UC-C07,GetOrders,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C07,GetOrders,7,MyOrdersService,MyOrdersRepository,FindOwnedAsync(customerId),Implemented,MyOrdersRepository,FindOwnedAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:5
+UC-C07,GetOrderDetails,1,Customer,MyOrdersPage,OnGetOrderDetailsAsync(orderId),FrontendDesignOnly,MyOrdersPage,
+UC-C07,GetOrderDetails,2,MyOrdersPage,MyOrdersApiClient,GetOrderDetailsAsync(orderId),FrontendDesignOnly,MyOrdersApiClient,
+UC-C07,GetOrderDetails,3,MyOrdersApiClient,MyOrdersController,HTTPS GetOrderDetailsAsync(orderId),Implemented,MyOrdersController,GetOrderDetailsAsync @ src/FreshFood-API/Controllers/MyOrdersController.cs:16
+UC-C07,GetOrderDetails,4,MyOrdersController,MyOrdersService,GetOrderDetailsAsync(orderId),Implemented,MyOrdersService,GetOrderDetailsAsync @ src/FreshFood-API/Services/Implements/MyOrdersService.cs:7
+UC-C07,GetOrderDetails,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C07,GetOrderDetails,7,MyOrdersService,MyOrdersRepository,FindOwnedAsync(customerId),Implemented,MyOrdersRepository,FindOwnedAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:5
+UC-C07,GetOrderDetails,9,MyOrdersService,MyOrdersRepository,GetReturnReceiptAsync(orderId),Implemented,MyOrdersRepository,GetReturnReceiptAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:20
+UC-C07,GetOrderDetails,11,MyOrdersService,MyOrdersRepository,GetRefundAsync(orderId),Implemented,MyOrdersRepository,GetRefundAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:21
+UC-C07,CancelOrder,1,Customer,MyOrdersPage,OnCancelOrderAsync(request),FrontendDesignOnly,MyOrdersPage,
+UC-C07,CancelOrder,2,MyOrdersPage,MyOrdersApiClient,CancelOrderAsync(request),FrontendDesignOnly,MyOrdersApiClient,
+UC-C07,CancelOrder,3,MyOrdersApiClient,MyOrdersController,HTTPS CancelOrderAsync(request),Implemented,MyOrdersController,CancelOrderAsync @ src/FreshFood-API/Controllers/MyOrdersController.cs:21
+UC-C07,CancelOrder,4,MyOrdersController,MyOrdersService,CancelOrderAsync(request),Implemented,MyOrdersService,CancelOrderAsync @ src/FreshFood-API/Services/Implements/MyOrdersService.cs:29
+UC-C07,CancelOrder,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C07,CancelOrder,7,MyOrdersService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C07,CancelOrder,8,UnitOfWork,MyOrdersService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C07,CancelOrder,9,MyOrdersService,MyOrdersRepository,"LockOwnedAsync(customerId, orderId)",Implemented,MyOrdersRepository,LockOwnedAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:6
+UC-C07,CancelOrder,11,MyOrdersService,OrderStateMachine,"ProcessEventAsync(snapshot, cancelOrderEvent)",Implemented,OrderStateMachine,ProcessEventAsync @ src/FreshFood-API/Services/Implements/OrderStateMachine.cs:89
+UC-C07,CancelOrder,13,MyOrdersService,MyOrdersService,[local] reject or return existing outcome; no unauthorized mutation,Local/delegate/actor responsibility,,
+UC-C07,CancelOrder,16,MyOrdersService,NotificationAdapter,PublishAsync(message),Implemented,NotificationAdapter,PublishAsync @ src/FreshFood-API/Services/Implements/Gateways.cs:28
+UC-C07,Reorder,1,Customer,MyOrdersPage,OnReorderAsync(orderId),FrontendDesignOnly,MyOrdersPage,
+UC-C07,Reorder,2,MyOrdersPage,MyOrdersApiClient,ReorderAsync(orderId),FrontendDesignOnly,MyOrdersApiClient,
+UC-C07,Reorder,3,MyOrdersApiClient,MyOrdersController,HTTPS ReorderAsync(orderId),Implemented,MyOrdersController,ReorderAsync @ src/FreshFood-API/Controllers/MyOrdersController.cs:27
+UC-C07,Reorder,4,MyOrdersController,MyOrdersService,ReorderAsync(orderId),Implemented,MyOrdersService,ReorderAsync @ src/FreshFood-API/Services/Implements/MyOrdersService.cs:44
+UC-C07,Reorder,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C07,Reorder,7,MyOrdersService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C07,Reorder,8,UnitOfWork,MyOrdersService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C07,Reorder,9,MyOrdersService,MyOrdersRepository,"LockOwnedAsync(customerId, orderId)",Implemented,MyOrdersRepository,LockOwnedAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:6
+UC-C07,Reorder,11,MyOrdersService,MyOrdersRepository,GetCurrentBatchesAsync(productIds),Implemented,MyOrdersRepository,GetCurrentBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:12
+UC-C07,Reorder,13,MyOrdersService,BatchPricingPolicy,"Quote(batch, asOf)",Implemented,BatchPricingPolicy,Quote @ src/FreshFood.Reposistory/Entities/DomainBehavior.cs:54
+UC-C07,Reorder,15,MyOrdersService,MyOrdersRepository,SaveCartAsync(cart),Implemented,MyOrdersRepository,SaveCartAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:13
+UC-C07,Reorder,17,MyOrdersService,MyOrdersService,[local] reject or return existing outcome; no unauthorized mutation,Local/delegate/actor responsibility,,
+UC-C07,SubmitReview,1,Customer,MyOrdersPage,OnSubmitReviewAsync(request),FrontendDesignOnly,MyOrdersPage,
+UC-C07,SubmitReview,2,MyOrdersPage,MyOrdersApiClient,SubmitReviewAsync(request),FrontendDesignOnly,MyOrdersApiClient,
+UC-C07,SubmitReview,3,MyOrdersApiClient,MyOrdersController,HTTPS SubmitReviewAsync(request),Implemented,MyOrdersController,SubmitReviewAsync @ src/FreshFood-API/Controllers/MyOrdersController.cs:32
+UC-C07,SubmitReview,4,MyOrdersController,MyOrdersService,SubmitReviewAsync(request),Implemented,MyOrdersService,SubmitReviewAsync @ src/FreshFood-API/Services/Implements/MyOrdersService.cs:64
+UC-C07,SubmitReview,5,MyOrdersService,CurrentCustomer,RequireCustomerId(),Implemented,CurrentCustomer,RequireCustomerId @ src/FreshFood-API/Services/Implements/CurrentCustomer.cs:7
+UC-C07,SubmitReview,7,MyOrdersService,UnitOfWork,ExecuteAsync(work),Implemented,UnitOfWork,ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:5; ExecuteAsync @ src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.cs:7
+UC-C07,SubmitReview,8,UnitOfWork,MyOrdersService,TransactionWork callback (same transaction),Local/delegate/actor responsibility,,
+UC-C07,SubmitReview,9,MyOrdersService,MyOrdersRepository,"LockOwnedAsync(customerId, orderId)",Implemented,MyOrdersRepository,LockOwnedAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:6
+UC-C07,SubmitReview,11,MyOrdersService,MyOrdersRepository,SaveReviewOnceAsync(review),Implemented,MyOrdersRepository,SaveReviewOnceAsync @ src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.cs:19
+UC-C07,SubmitReview,13,MyOrdersService,MyOrdersService,[local] reject or return existing outcome; no unauthorized mutation,Local/delegate/actor responsibility,,
+UC-C07,Mobile entry refinement,1,Customer,MyOrdersView,user action: GetOrders,Local/delegate/actor responsibility,,
+UC-C07,Mobile entry refinement,2,MyOrdersView,MyOrdersViewModel,GetOrdersAsync(),FrontendDesignOnly,MyOrdersViewModel,
+UC-C07,Mobile entry refinement,3,MyOrdersViewModel,MyOrdersApiModel,GetOrdersAsync(),FrontendDesignOnly,MyOrdersApiModel,
+UC-C07,Mobile entry refinement,4,MyOrdersApiModel,MyOrdersController,HTTPS GetOrdersAsync(),Implemented,MyOrdersController,GetOrdersAsync @ src/FreshFood-API/Controllers/MyOrdersController.cs:11
+UC-C07,Mobile entry refinement,5,MyOrdersController,MyOrdersService,GetOrdersAsync(),Implemented,MyOrdersService,GetOrdersAsync @ src/FreshFood-API/Services/Implements/MyOrdersService.cs:6
+UC-C07,OrderStateMachine cancellation,1,MyOrdersService,OrderStateMachine,"ProcessEventAsync(snapshot, cancelOrderEvent)",Implemented,OrderStateMachine,ProcessEventAsync @ src/FreshFood-API/Services/Implements/OrderStateMachine.cs:89
+UC-C07,OrderStateMachine cancellation,2,OrderStateMachine,OrderStateMachine,[local] select exactly one source-state / event / guard row,Local/delegate/actor responsibility,,
+UC-C07,OrderStateMachine cancellation,3,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",Implemented,OrderLifecycleRepository,RecordEventOnceAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:10
+UC-C07,OrderStateMachine cancellation,5,OrderStateMachine,OrderLifecycleRepository,LockReservedBatchesAsync(orderId),Implemented,OrderLifecycleRepository,LockReservedBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:22
+UC-C07,OrderStateMachine cancellation,7,OrderStateMachine,OrderStateMachine,[local] release reservations once; set Cancelled; retain independent payment state,Local/delegate/actor responsibility,,
+UC-C07,OrderStateMachine cancellation,8,OrderStateMachine,OrderLifecycleRepository,SaveBatchesAsync(batches),Implemented,OrderLifecycleRepository,SaveBatchesAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:30
+UC-C07,OrderStateMachine cancellation,10,OrderStateMachine,OrderLifecycleRepository,SaveAsync(order),Implemented,OrderLifecycleRepository,SaveAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:8
+UC-C07,OrderStateMachine cancellation,12,OrderStateMachine,OrderLifecycleRepository,AppendAuditAsync(audit),Implemented,OrderLifecycleRepository,AppendAuditAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:32
+UC-C07,OrderStateMachine cancellation,14,OrderStateMachine,OrderStateMachine,[local] completion lookup selects F_cancelled without adding a persistent status,Local/delegate/actor responsibility,,
+UC-C07,OrderStateMachine cancellation,15,OrderStateMachine,OrderLifecycleRepository,"RecordEventOnceAsync(aggregateId, eventId, transitionId)",Implemented,OrderLifecycleRepository,RecordEventOnceAsync @ src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.cs:10
+UC-C07,OrderStateMachine cancellation,17,OrderStateMachine,OrderStateMachine,CurrentState(),Implemented,OrderStateMachine,CurrentState @ src/FreshFood-API/Services/Implements/OrderStateMachine.cs:20

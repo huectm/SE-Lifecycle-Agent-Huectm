@@ -1,0 +1,1065 @@
+{
+  "IUnitOfWork": {
+    "file": "src/FreshFood.Reposistory/Repository/IUnitOfWork.js",
+    "role": "interface",
+    "operations": [
+      "ExecuteAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "UnitOfWork": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/UnitOfWork.js",
+    "role": "class",
+    "operations": [
+      "ExecuteAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IRepositorySession": {
+    "file": "src/FreshFood.Reposistory/Repository/IRepositorySession.js",
+    "role": "interface",
+    "operations": [
+      "BeginAsync",
+      "CommitAsync",
+      "RollbackAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PostgreSqlSession": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/PostgreSqlSession.js",
+    "role": "class",
+    "operations": [
+      "BeginAsync",
+      "CommitAsync",
+      "RollbackAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICurrentCustomer": {
+    "file": "src/FreshFood-API/Services/ICurrentCustomer.js",
+    "role": "interface",
+    "operations": [
+      "RequireCustomerId",
+      "GetCartIdentity"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CurrentCustomer": {
+    "file": "src/FreshFood-API/Services/Implements/CurrentCustomer.js",
+    "role": "class",
+    "operations": [
+      "RequireCustomerId",
+      "GetCartIdentity"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OperationResultDto": {
+    "file": "src/FreshFood-API/DTOs/OperationResultDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IGeocodingGateway": {
+    "file": "src/FreshFood-API/Services/IGeocodingGateway.js",
+    "role": "interface",
+    "operations": [
+      "ResolveAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "GoogleMapsGeocodingAdapter": {
+    "file": "src/FreshFood-API/Services/Implements/GoogleMapsGeocodingAdapter.js",
+    "role": "adapter",
+    "operations": [
+      "ResolveAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IDistanceGateway": {
+    "file": "src/FreshFood-API/Services/IDistanceGateway.js",
+    "role": "interface",
+    "operations": [
+      "DrivingDistanceAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "GoogleMapsDistanceAdapter": {
+    "file": "src/FreshFood-API/Services/Implements/GoogleMapsDistanceAdapter.js",
+    "role": "adapter",
+    "operations": [
+      "DrivingDistanceAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IPaymentGateway": {
+    "file": "src/FreshFood-API/Services/IPaymentGateway.js",
+    "role": "interface",
+    "operations": [
+      "CreateQrAsync",
+      "VerifyNoticeAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "SePayPaymentAdapter": {
+    "file": "src/FreshFood-API/Services/Implements/SePayPaymentAdapter.js",
+    "role": "adapter",
+    "operations": [
+      "CreateQrAsync",
+      "VerifyNoticeAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "INotificationGateway": {
+    "file": "src/FreshFood-API/Services/INotificationGateway.js",
+    "role": "interface",
+    "operations": [
+      "PublishAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "NotificationAdapter": {
+    "file": "src/FreshFood-API/Services/Implements/NotificationAdapter.js",
+    "role": "adapter",
+    "operations": [
+      "PublishAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "INotificationPublisher": {
+    "file": "src/FreshFood-API/Services/INotificationPublisher.js",
+    "role": "interface",
+    "operations": [
+      "SendAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "NotificationDto": {
+    "file": "src/FreshFood-API/DTOs/NotificationDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "VerifiedPaymentDto": {
+    "file": "src/FreshFood-API/DTOs/VerifiedPaymentDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProductCategory": {
+    "file": "src/FreshFood.Reposistory/Entities/ProductCategory.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "Product": {
+    "file": "src/FreshFood.Reposistory/Entities/Product.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "BatchInventory": {
+    "file": "src/FreshFood.Reposistory/Entities/BatchInventory.js",
+    "role": "entity",
+    "operations": [
+      "Reserve",
+      "ReleaseReservation"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "Customer": {
+    "file": "src/FreshFood.Reposistory/Entities/Customer.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CustomerAddress": {
+    "file": "src/FreshFood.Reposistory/Entities/CustomerAddress.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "Cart": {
+    "file": "src/FreshFood.Reposistory/Entities/Cart.js",
+    "role": "entity",
+    "operations": [
+      "ChangeQuantity",
+      "RemoveItem"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartItem": {
+    "file": "src/FreshFood.Reposistory/Entities/CartItem.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "Order": {
+    "file": "src/FreshFood.Reposistory/Entities/Order.js",
+    "role": "entity",
+    "operations": [
+      "ApplyFulfillment",
+      "RecordPayment",
+      "Cancel"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderDetail": {
+    "file": "src/FreshFood.Reposistory/Entities/OrderDetail.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderReview": {
+    "file": "src/FreshFood.Reposistory/Entities/OrderReview.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "AuditLog": {
+    "file": "src/FreshFood.Reposistory/Entities/AuditLog.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "DeliveryAgent": {
+    "file": "src/FreshFood.Reposistory/Entities/DeliveryAgent.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderPayment": {
+    "file": "src/FreshFood.Reposistory/Entities/OrderPayment.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "DeliveryFailure": {
+    "file": "src/FreshFood.Reposistory/Entities/DeliveryFailure.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ReturnReceipt": {
+    "file": "src/FreshFood.Reposistory/Entities/ReturnReceipt.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ReturnReceiptItem": {
+    "file": "src/FreshFood.Reposistory/Entities/ReturnReceiptItem.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ReturnInspection": {
+    "file": "src/FreshFood.Reposistory/Entities/ReturnInspection.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "Refund": {
+    "file": "src/FreshFood.Reposistory/Entities/Refund.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ShippingFeeSettlement": {
+    "file": "src/FreshFood.Reposistory/Entities/ShippingFeeSettlement.js",
+    "role": "entity",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderStatus": {
+    "file": "src/FreshFood.Reposistory/Entities/OrderStatus.js",
+    "role": "enumeration",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentStatus": {
+    "file": "src/FreshFood.Reposistory/Entities/PaymentStatus.js",
+    "role": "enumeration",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentMethod": {
+    "file": "src/FreshFood.Reposistory/Entities/PaymentMethod.js",
+    "role": "enumeration",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICatalogService": {
+    "file": "src/FreshFood-API/Services/ICatalogService.js",
+    "role": "interface",
+    "operations": [
+      "GetCatalogAsync",
+      "SearchAsync",
+      "GetProductDetailsAsync",
+      "GetClearanceAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CatalogService": {
+    "file": "src/FreshFood-API/Services/Implements/CatalogService.js",
+    "role": "service",
+    "operations": [
+      "GetCatalogAsync",
+      "SearchAsync",
+      "GetProductDetailsAsync",
+      "GetClearanceAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CatalogController": {
+    "file": "src/FreshFood-API/Controllers/CatalogController.js",
+    "role": "controller",
+    "operations": [
+      "GetCatalogAsync",
+      "SearchAsync",
+      "GetProductDetailsAsync",
+      "GetClearanceAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICatalogRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/ICatalogRepository.js",
+    "role": "interface",
+    "operations": [
+      "FindActiveAsync",
+      "GetCategoriesAsync",
+      "GetProductAsync",
+      "GetSellableBatchesAsync",
+      "GetPopularAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CatalogRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/CatalogRepository.js",
+    "role": "repository",
+    "operations": [
+      "FindActiveAsync",
+      "GetCategoriesAsync",
+      "GetProductAsync",
+      "GetSellableBatchesAsync",
+      "GetPopularAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CatalogQueryDto": {
+    "file": "src/FreshFood-API/DTOs/CatalogQueryDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CatalogResultDto": {
+    "file": "src/FreshFood-API/DTOs/CatalogResultDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProductDetailsDto": {
+    "file": "src/FreshFood-API/DTOs/ProductDetailsDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProductSummaryDto": {
+    "file": "src/FreshFood-API/DTOs/ProductSummaryDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CategoryDto": {
+    "file": "src/FreshFood-API/DTOs/CategoryDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "BatchOfferDto": {
+    "file": "src/FreshFood-API/DTOs/BatchOfferDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICartService": {
+    "file": "src/FreshFood-API/Services/ICartService.js",
+    "role": "interface",
+    "operations": [
+      "GetCartAsync",
+      "ChangeQuantityAsync",
+      "RemoveItemAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartService": {
+    "file": "src/FreshFood-API/Services/Implements/CartService.js",
+    "role": "service",
+    "operations": [
+      "GetCartAsync",
+      "ChangeQuantityAsync",
+      "RemoveItemAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartController": {
+    "file": "src/FreshFood-API/Controllers/CartController.js",
+    "role": "controller",
+    "operations": [
+      "GetCartAsync",
+      "ChangeQuantityAsync",
+      "RemoveItemAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICartRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/ICartRepository.js",
+    "role": "interface",
+    "operations": [
+      "GetAsync",
+      "GetProductsAsync",
+      "GetSellableBatchesAsync",
+      "SaveAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/CartRepository.js",
+    "role": "repository",
+    "operations": [
+      "GetAsync",
+      "GetProductsAsync",
+      "GetSellableBatchesAsync",
+      "SaveAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartIdentityDto": {
+    "file": "src/FreshFood-API/DTOs/CartIdentityDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartChangeDto": {
+    "file": "src/FreshFood-API/DTOs/CartChangeDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartResultDto": {
+    "file": "src/FreshFood-API/DTOs/CartResultDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CartLineDto": {
+    "file": "src/FreshFood-API/DTOs/CartLineDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IProfileService": {
+    "file": "src/FreshFood-API/Services/IProfileService.js",
+    "role": "interface",
+    "operations": [
+      "GetProfileAsync",
+      "UpdateProfileAsync",
+      "SaveAddressAsync",
+      "SetDefaultAddressAsync",
+      "DeleteAddressAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProfileService": {
+    "file": "src/FreshFood-API/Services/Implements/ProfileService.js",
+    "role": "service",
+    "operations": [
+      "GetProfileAsync",
+      "UpdateProfileAsync",
+      "SaveAddressAsync",
+      "SetDefaultAddressAsync",
+      "DeleteAddressAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProfileController": {
+    "file": "src/FreshFood-API/Controllers/ProfileController.js",
+    "role": "controller",
+    "operations": [
+      "GetProfileAsync",
+      "UpdateProfileAsync",
+      "SaveAddressAsync",
+      "SetDefaultAddressAsync",
+      "DeleteAddressAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IProfileRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/IProfileRepository.js",
+    "role": "interface",
+    "operations": [
+      "GetCustomerAsync",
+      "GetAddressesAsync",
+      "HasActiveOrderAsync",
+      "SaveCustomerAsync",
+      "SaveAddressAsync",
+      "DeleteAddressAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProfileRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/ProfileRepository.js",
+    "role": "repository",
+    "operations": [
+      "GetCustomerAsync",
+      "GetAddressesAsync",
+      "HasActiveOrderAsync",
+      "SaveCustomerAsync",
+      "SaveAddressAsync",
+      "DeleteAddressAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProfileResultDto": {
+    "file": "src/FreshFood-API/DTOs/ProfileResultDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ProfileUpdateDto": {
+    "file": "src/FreshFood-API/DTOs/ProfileUpdateDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "AddressInputDto": {
+    "file": "src/FreshFood-API/DTOs/AddressInputDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "AddressDto": {
+    "file": "src/FreshFood-API/DTOs/AddressDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "GeoPointDto": {
+    "file": "src/FreshFood-API/DTOs/GeoPointDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICheckoutService": {
+    "file": "src/FreshFood-API/Services/ICheckoutService.js",
+    "role": "interface",
+    "operations": [
+      "PrepareCheckoutAsync",
+      "PlaceOrderAsync",
+      "CreatePaymentQrAsync",
+      "HandleVerifiedPaymentAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CheckoutService": {
+    "file": "src/FreshFood-API/Services/Implements/CheckoutService.js",
+    "role": "service",
+    "operations": [
+      "PrepareCheckoutAsync",
+      "PlaceOrderAsync",
+      "CreatePaymentQrAsync",
+      "HandleVerifiedPaymentAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CheckoutController": {
+    "file": "src/FreshFood-API/Controllers/CheckoutController.js",
+    "role": "controller",
+    "operations": [
+      "PrepareCheckoutAsync",
+      "PlaceOrderAsync",
+      "CreatePaymentQrAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ICheckoutRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/ICheckoutRepository.js",
+    "role": "interface",
+    "operations": [
+      "GetCheckoutCartAsync",
+      "GetOwnedAddressAsync",
+      "LockFefoBatchesAsync",
+      "SaveOrderAsync",
+      "SavePaymentOnceAsync",
+      "ClearCartAsync",
+      "ClaimCheckoutAsync",
+      "CompleteCheckoutAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CheckoutRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/CheckoutRepository.js",
+    "role": "repository",
+    "operations": [
+      "GetCheckoutCartAsync",
+      "GetOwnedAddressAsync",
+      "LockFefoBatchesAsync",
+      "SaveOrderAsync",
+      "SavePaymentOnceAsync",
+      "ClearCartAsync",
+      "ClaimCheckoutAsync",
+      "CompleteCheckoutAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CheckoutInputDto": {
+    "file": "src/FreshFood-API/DTOs/CheckoutInputDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CheckoutSummaryDto": {
+    "file": "src/FreshFood-API/DTOs/CheckoutSummaryDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CheckoutLineDto": {
+    "file": "src/FreshFood-API/DTOs/CheckoutLineDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PlaceOrderDto": {
+    "file": "src/FreshFood-API/DTOs/PlaceOrderDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderConfirmationDto": {
+    "file": "src/FreshFood-API/DTOs/OrderConfirmationDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentQrRequestDto": {
+    "file": "src/FreshFood-API/DTOs/PaymentQrRequestDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentQrDto": {
+    "file": "src/FreshFood-API/DTOs/PaymentQrDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentNoticeDto": {
+    "file": "src/FreshFood-API/DTOs/PaymentNoticeDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentResultDto": {
+    "file": "src/FreshFood-API/DTOs/PaymentResultDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IMyOrdersService": {
+    "file": "src/FreshFood-API/Services/IMyOrdersService.js",
+    "role": "interface",
+    "operations": [
+      "GetOrdersAsync",
+      "GetOrderDetailsAsync",
+      "CancelOrderAsync",
+      "ReorderAsync",
+      "SubmitReviewAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "MyOrdersService": {
+    "file": "src/FreshFood-API/Services/Implements/MyOrdersService.js",
+    "role": "service",
+    "operations": [
+      "GetOrdersAsync",
+      "GetOrderDetailsAsync",
+      "CancelOrderAsync",
+      "ReorderAsync",
+      "SubmitReviewAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "MyOrdersController": {
+    "file": "src/FreshFood-API/Controllers/MyOrdersController.js",
+    "role": "controller",
+    "operations": [
+      "GetOrdersAsync",
+      "GetOrderDetailsAsync",
+      "CancelOrderAsync",
+      "ReorderAsync",
+      "SubmitReviewAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IMyOrdersRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/IMyOrdersRepository.js",
+    "role": "interface",
+    "operations": [
+      "FindOwnedAsync",
+      "LockOwnedAsync",
+      "GetCurrentBatchesAsync",
+      "SaveCartAsync",
+      "SaveReviewOnceAsync",
+      "GetReturnReceiptAsync",
+      "GetRefundAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "MyOrdersRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/MyOrdersRepository.js",
+    "role": "repository",
+    "operations": [
+      "FindOwnedAsync",
+      "LockOwnedAsync",
+      "GetCurrentBatchesAsync",
+      "SaveCartAsync",
+      "SaveReviewOnceAsync",
+      "GetReturnReceiptAsync",
+      "GetRefundAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderListDto": {
+    "file": "src/FreshFood-API/DTOs/OrderListDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderSummaryDto": {
+    "file": "src/FreshFood-API/DTOs/OrderSummaryDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderDetailsDto": {
+    "file": "src/FreshFood-API/DTOs/OrderDetailsDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderLineDto": {
+    "file": "src/FreshFood-API/DTOs/OrderLineDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "CancelOrderDto": {
+    "file": "src/FreshFood-API/DTOs/CancelOrderDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderReviewDto": {
+    "file": "src/FreshFood-API/DTOs/OrderReviewDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ReturnSummaryDto": {
+    "file": "src/FreshFood-API/DTOs/ReturnSummaryDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "StateMachineEvent": {
+    "file": "src/FreshFood-API/DTOs/StateMachineEvent.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "TransitionSnapshot": {
+    "file": "src/FreshFood-API/DTOs/TransitionSnapshot.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "GuardFactsDto": {
+    "file": "src/FreshFood-API/DTOs/GuardFactsDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "StateMachineResult": {
+    "file": "src/FreshFood-API/DTOs/StateMachineResult.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderLifecycleRecords": {
+    "file": "src/FreshFood.Reposistory/Repository/OrderLifecycleRecords.js",
+    "role": "record",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IOrderLifecycleRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/IOrderLifecycleRepository.js",
+    "role": "interface",
+    "operations": [
+      "LockOrderAsync",
+      "LoadLifecycleAsync",
+      "SaveAsync",
+      "RecordEventOnceAsync",
+      "SaveOrderLinesAsync",
+      "SavePaymentOnceAsync",
+      "SaveFailureAsync",
+      "SaveReceiptAsync",
+      "SaveRefundOnceAsync",
+      "SaveShippingSettlementAsync",
+      "LockReservedBatchesAsync",
+      "SaveBatchesAsync",
+      "AppendAuditAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderLifecycleRepository": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/OrderLifecycleRepository.js",
+    "role": "repository",
+    "operations": [
+      "LockOrderAsync",
+      "LoadLifecycleAsync",
+      "SaveAsync",
+      "RecordEventOnceAsync",
+      "SaveOrderLinesAsync",
+      "SavePaymentOnceAsync",
+      "SaveFailureAsync",
+      "SaveReceiptAsync",
+      "SaveRefundOnceAsync",
+      "SaveShippingSettlementAsync",
+      "LockReservedBatchesAsync",
+      "SaveBatchesAsync",
+      "AppendAuditAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IPayoutPort": {
+    "file": "src/FreshFood-API/Services/IPayoutPort.js",
+    "role": "interface",
+    "operations": [
+      "RequestAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PayoutOutcomeDto": {
+    "file": "src/FreshFood-API/DTOs/PayoutOutcomeDto.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "PaymentNoticeHandler": {
+    "file": "src/FreshFood-API/Services/Implements/PaymentNoticeHandler.js",
+    "role": "adapter",
+    "operations": [
+      "HandleAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "TransactionWork": {
+    "file": "src/FreshFood.Reposistory/Repository/TransactionWork.js",
+    "role": "delegate",
+    "operations": [
+      "InvokeAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ConfiguredNotificationPublisher": {
+    "file": "src/FreshFood-API/Services/Implements/ConfiguredNotificationPublisher.js",
+    "role": "adapter",
+    "operations": [
+      "SendAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "UnconfiguredPayoutAdapter": {
+    "file": "src/FreshFood-API/Services/Implements/UnconfiguredPayoutAdapter.js",
+    "role": "adapter",
+    "operations": [
+      "RequestAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "ApiCompositionRoot": {
+    "file": "src/FreshFood-API/ApiCompositionRoot.js",
+    "role": "composition root",
+    "operations": [
+      "ConfigureServices"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IBatchPricingPolicy": {
+    "file": "src/FreshFood.Reposistory/Entities/IBatchPricingPolicy.js",
+    "role": "interface",
+    "operations": [
+      "Quote"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "BatchPricingPolicy": {
+    "file": "src/FreshFood.Reposistory/Entities/BatchPricingPolicy.js",
+    "role": "policy",
+    "operations": [
+      "Quote"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IDeliveryFeePolicy": {
+    "file": "src/FreshFood.Reposistory/Entities/IDeliveryFeePolicy.js",
+    "role": "interface",
+    "operations": [
+      "Quote"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "DeliveryFeePolicy": {
+    "file": "src/FreshFood.Reposistory/Entities/DeliveryFeePolicy.js",
+    "role": "policy",
+    "operations": [
+      "Quote"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IDistanceCalculator": {
+    "file": "src/FreshFood-API/Services/IDistanceCalculator.js",
+    "role": "interface",
+    "operations": [
+      "CalculateAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "DistanceCalculator": {
+    "file": "src/FreshFood-API/Services/Implements/DistanceCalculator.js",
+    "role": "service",
+    "operations": [
+      "CalculateAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IFefoBatchSpecification": {
+    "file": "src/FreshFood.Reposistory/Repository/IFefoBatchSpecification.js",
+    "role": "interface",
+    "operations": [
+      "Criteria"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "FefoBatchSpecification": {
+    "file": "src/FreshFood.Reposistory/Repository/Implements/FefoBatchSpecification.js",
+    "role": "specification",
+    "operations": [
+      "Criteria"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "BatchCriteria": {
+    "file": "src/FreshFood.Reposistory/Repository/BatchCriteria.js",
+    "role": "record",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "VndAmount": {
+    "file": "src/FreshFood.Reposistory/Entities/VndAmount.js",
+    "role": "value object",
+    "operations": [
+      "FromUnits",
+      "Add",
+      "ToWire"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "EntityId": {
+    "file": "src/FreshFood.Reposistory/Entities/EntityId.js",
+    "role": "datatype",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "LocalDate": {
+    "file": "src/FreshFood.Reposistory/Entities/LocalDate.js",
+    "role": "datatype",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "VndAmountString": {
+    "file": "src/FreshFood-API/DTOs/VndAmountString.js",
+    "role": "datatype",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IsoDateTime": {
+    "file": "src/FreshFood-API/DTOs/IsoDateTime.js",
+    "role": "datatype",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "AuthenticatedPrincipal": {
+    "file": "src/FreshFood-API/Services/AuthenticatedPrincipal.js",
+    "role": "record",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "DatabaseConnection": {
+    "file": "src/FreshFood.Reposistory/Repository/DatabaseConnection.js",
+    "role": "external protocol",
+    "operations": [
+      "QueryAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "DatabaseTransaction": {
+    "file": "src/FreshFood.Reposistory/Repository/DatabaseTransaction.js",
+    "role": "external protocol",
+    "operations": [
+      "CommitAsync",
+      "RollbackAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "RegistrationMap": {
+    "file": "src/FreshFood-API/RegistrationMap.js",
+    "role": "composition contract",
+    "operations": [
+      "Bind",
+      "BindMany"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "HttpTransport": {
+    "file": "src/FreshFood-API/Services/HttpTransport.js",
+    "role": "external protocol",
+    "operations": [
+      "SendAsync"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "IOrderStateMachine": {
+    "file": "src/FreshFood-API/Services/IOrderStateMachine.js",
+    "role": "interface",
+    "operations": [
+      "processEvent",
+      "currentState"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderStateMachine": {
+    "file": "src/FreshFood-API/Services/Implements/OrderStateMachine.js",
+    "role": "state-machine control",
+    "operations": [
+      "processEvent",
+      "currentState"
+    ],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  },
+  "OrderStateSnapshot": {
+    "file": "src/FreshFood-API/DTOs/OrderStateSnapshot.js",
+    "role": "DTO",
+    "operations": [],
+    "revision": "2026-11-02 table-driven state-machine replacement"
+  }
+}

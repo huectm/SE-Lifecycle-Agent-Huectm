@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="a26e4385-8725-46a6-96d6-76347a2e1d56" name="huect@LAPTOP-6SN65NCS 2026-11-02 12:15:06" runUser="LAPTOP-6SN65NCS\huect" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-02T12:15:06.5721375+07:00" queuing="2026-11-02T12:15:06.5721378+07:00" start="2026-11-02T12:15:04.2254247+07:00" finish="2026-11-02T12:15:06.5854216+07:00" />
+  <TestSettings name="default" id="051b0ce9-9b4d-4a94-b6c1-0e8a9e89657e">
+    <Deployment runDeploymentRoot="huect_LAPTOP-6SN65NCS_2026-11-02_12_15_06" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="104d6e6c-8ba3-4c55-936b-b3520b7026e0" testId="f8c08413-dca7-6724-3f3b-5dac460b80fa" testName="FreshFood.Api.Tests.PostgreSqlTests.IsolatedSchema_VerifiesFiveUseCasesAndAtomicCheckoutCancellation" computerName="LAPTOP-6SN65NCS" duration="00:00:00.8311442" startTime="2026-11-02T12:15:05.6312532+07:00" endTime="2026-11-02T12:15:06.4722505+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="104d6e6c-8ba3-4c55-936b-b3520b7026e0" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="FreshFood.Api.Tests.PostgreSqlTests.IsolatedSchema_VerifiesFiveUseCasesAndAtomicCheckoutCancellation" storage="d:\1. giang day\genai\se-lifecycle-agent\src\freshfood-api.tests\bin\debug\net10.0\freshfood.api.tests.dll" id="f8c08413-dca7-6724-3f3b-5dac460b80fa">
+      <Execution id="104d6e6c-8ba3-4c55-936b-b3520b7026e0" />
+      <TestMethod codeBase="D:\1. Giang Day\GenAI\SE-Lifecycle-Agent\src\FreshFood-API.Tests\bin\Debug\net10.0\FreshFood.Api.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="FreshFood.Api.Tests.PostgreSqlTests" name="IsolatedSchema_VerifiesFiveUseCasesAndAtomicCheckoutCancellation" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f8c08413-dca7-6724-3f3b-5dac460b80fa" executionId="104d6e6c-8ba3-4c55-936b-b3520b7026e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.12)&#xD;
+[xUnit.net 00:00:00.73]   Discovering: FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:00.82]   Discovered:  FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:00.85]   Starting:    FreshFood.Api.Tests&#xD;
+[xUnit.net 00:00:01.73]   Finished:    FreshFood.Api.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

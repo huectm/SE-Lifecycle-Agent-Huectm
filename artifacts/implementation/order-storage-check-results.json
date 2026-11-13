@@ -1,0 +1,26 @@
+{
+  "node": "v24.22.1",
+  "checks": [
+    {
+      "command": "node src/FreshFood-API/scripts/check-source.js",
+      "exitCode": 0,
+      "output": "Syntax/import checks passed: 146 JavaScript files\n"
+    },
+    {
+      "command": "node src/FreshFood-API/scripts/check-design.js",
+      "exitCode": 0,
+      "output": "Design mapping verified: 132 backend classifiers, 205 modeled operations; frontend excluded\n"
+    },
+    {
+      "command": "node --test src/FreshFood-API/tests/backend.test.js",
+      "exitCode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --test src/FreshFood-API/tests/postgres/storage.test.js",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "scope": "Local unit checks and temporary single-connection embedded PostgreSQL SQL tests. Production migration and multi-connection server contention not executed."
+}
